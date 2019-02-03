@@ -1,0 +1,2792 @@
+ungerdaler_reunion = {
+	
+	HLZ_restore_the_union = {
+		
+		icon = GFX_decision_category_wiederherstellung
+		
+		allowed = {
+			original_tag = HLZ
+			NOT = {
+				country_exists = UNG
+			}
+		}
+		
+		available = {
+			custom_trigger_tooltip = {
+			tooltip = restore_the_union_requirements_tt
+			is_subject = no
+			original_tag = HLZ
+							OR = {
+								controls_state = 228
+								NOC = {
+									is_subject_of = HLZ
+								}
+							}
+							OR = {
+								controls_state = 227
+								SVT = {
+									is_subject_of = HLZ
+								}
+							}
+							OR = {
+								controls_state = 192
+								STA = {
+									is_subject_of = HLZ
+								}
+							}
+							OR = {
+								controls_state = 284
+								NRK = {
+									is_subject_of = HLZ
+								}
+							}
+							OR = {
+								controls_state = 226
+								SPW = {
+									is_subject_of = HLZ
+								}
+							}
+							OR = {
+								controls_state = 225
+								TEI = {
+									is_subject_of = HLZ
+								}
+							}
+							OR = {
+								controls_state = 206
+								ARK = {
+									is_subject_of = HLZ
+								}
+							}
+							OR = {
+								controls_state = 233
+								FAU = {
+									is_subject_of = HLZ
+								}
+							}
+							OR = {
+								controls_state = 224
+								SNF = {
+									is_subject_of = HLZ
+								}
+							}
+							OR = {
+								controls_state = 234
+								WIS = {
+									is_subject_of = HLZ
+								}
+							}
+							OR = {
+								controls_state = 235
+								WSZ = {
+									is_subject_of = HLZ
+								}
+							}
+							OR = {
+								controls_state = 236
+								FTH = {
+									is_subject_of = HLZ
+								}
+							}
+			}
+		}
+		visible = {
+			original_tag = HLZ
+			NOT = {
+				country_exists = UNG
+			}
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		complete_effect = {
+			custom_effect_tooltip = restore_the_union_effects_tt
+			hidden_effect = {
+				UNG = {
+					transfer_state = 293
+				}
+				UNG = {
+					change_tag_from = HLZ
+				}
+				every_state = {
+					limit = {
+						OR = {
+							is_core_of = HLZ
+							is_core_of = NOC
+							is_core_of = SVT
+							is_core_of = STA
+							is_core_of = SPW
+							is_core_of = TEI
+							is_core_of = FAU
+							is_core_of = NRK
+							is_core_of = SNF
+							is_core_of = ARK
+							is_core_of = WIS
+							is_core_of = WSZ
+							is_core_of = FTH
+						}
+					}
+					UNG = {
+						transfer_state = PREV
+					}
+					remove_core_of = HLZ
+					remove_core_of = NOC
+					remove_core_of = SVT
+					remove_core_of = STA
+					remove_core_of = SPW
+					remove_core_of = TEI
+					remove_core_of = FAU
+					remove_core_of = NRK
+					remove_core_of = SNF
+					remove_core_of = ARK
+					remove_core_of = WIS
+					remove_core_of = WSZ
+					remove_core_of = FTH
+					add_core_of = UNG
+				}
+			UNG = {
+				set_capital = 232
+			}
+			UNG = {
+				create_country_leader = {
+					name = "Kaspar Rosenblut"
+					desc = "politics_HLZ_rosenblut_desc"
+					picture = "gfx/leaders/HLZ/Portrait_HLZ_Rosenblut.dds"
+					ideology = monarchy_absolute_ideology
+					traits = {
+					}
+				}
+			}
+			UNG = {
+				create_country_leader = {
+					name = "Konrad Beckenbauer"
+					desc = "politics_HLZ_beckenbauer_desc"
+					picture = "gfx/leaders/HLZ/Portrait_HLZ_Beckenbauer.dds"
+					ideology = monarchy_constitutional_ideology
+					traits = {
+					}
+				}
+			}
+			UNG = {
+				create_country_leader = {
+					name = "Konrad Beckenbauer"
+					desc = "politics_HLZ_beckenbauer_desc"
+					picture = "gfx/leaders/HLZ/Portrait_HLZ_Beckenbauer.dds"
+					ideology = republic_aristocrat_ideology
+					traits = {
+					}
+				}
+			}
+			UNG = {
+				set_party_name = {
+					ideology = monarchy_absolute
+					name = HLZ_monarchy_absolute_party
+				}
+			}
+			UNG = {
+				set_party_name = {
+					ideology = monarchy_constitutional
+					name = HLZ_monarchy_constitutional_party
+				}
+			}
+			UNG = {
+				set_party_name = {
+					ideology = republic_aristocrat
+					name = HLZ_monarchy_constitutional_party 
+				}
+			}
+		}
+	}
+}
+	NOC_restore_the_union = {
+		
+		icon = GFX_decision_restore_ungerdaler_union
+		
+		allowed = {
+			original_tag = NOC
+			has_dlc = "Waking the Tiger"
+			NOT = {
+				country_exists = UNG
+			}
+		}
+		
+		available = {
+			custom_trigger_tooltip = {
+			tooltip = restore_the_union_requirements_tt
+			is_subject = no
+			original_tag = NOC
+							OR = {
+								controls_state = 232
+								HLZ = {
+									is_subject_of = NOC
+								}
+							}
+							OR = {
+								controls_state = 227
+								SVT = {
+									is_subject_of = NOC
+								}
+							}
+							OR = {
+								controls_state = 192
+								STA = {
+									is_subject_of = NOC
+								}
+							}
+							OR = {
+								controls_state = 284
+								NRK = {
+									is_subject_of = NOC
+								}
+							}
+							OR = {
+								controls_state = 226
+								SPW = {
+									is_subject_of = NOC
+								}
+							}
+							OR = {
+								controls_state = 225
+								TEI = {
+									is_subject_of = NOC
+								}
+							}
+							OR = {
+								controls_state = 206
+								ARK = {
+									is_subject_of = NOC
+								}
+							}
+							OR = {
+								controls_state = 233
+								FAU = {
+									is_subject_of = NOC
+								}
+							}
+							OR = {
+								controls_state = 224
+								SNF = {
+									is_subject_of = NOC
+								}
+							}
+							OR = {
+								controls_state = 234
+								WIS = {
+									is_subject_of = NOC
+								}
+							}
+							OR = {
+								controls_state = 235
+								WSZ = {
+									is_subject_of = NOC
+								}
+							}
+							OR = {
+								controls_state = 236
+								FTH = {
+									is_subject_of = NOC
+								}
+							}
+			}
+		}
+		visible = {
+			original_tag = NOC
+			NOT = {
+				country_exists = UNG
+			}
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		complete_effect = {
+		custom_effect_tooltip = restore_the_union_effects_tt
+		hidden_effect = {
+			UNG = {
+					transfer_state = 293
+				}
+				UNG = {
+					change_tag_from = NOC
+				}
+				every_state = {
+					limit = {
+						OR = {
+							is_core_of = HLZ
+							is_core_of = NOC
+							is_core_of = SVT
+							is_core_of = STA
+							is_core_of = SPW
+							is_core_of = TEI
+							is_core_of = FAU
+							is_core_of = NRK
+							is_core_of = SNF
+							is_core_of = ARK
+							is_core_of = WIS
+							is_core_of = WSZ
+							is_core_of = FTH
+						}
+					}
+					UNG = {
+						transfer_state = PREV
+					}
+					remove_core_of = HLZ
+					remove_core_of = NOC
+					remove_core_of = SVT
+					remove_core_of = STA
+					remove_core_of = SPW
+					remove_core_of = TEI
+					remove_core_of = FAU
+					remove_core_of = NRK
+					remove_core_of = SNF
+					remove_core_of = ARK
+					remove_core_of = WIS
+					remove_core_of = WSZ
+					remove_core_of = FTH
+					add_core_of = UNG
+				}
+				UNG = {
+					set_capital = 228
+				}
+		UNG = {
+create_country_leader = {
+	name = "Marko Eichmann"
+	desc = "politics_NOC_eichmann_desc"
+	picture = "gfx/leaders/NOC/Portrait_NOC_Eichmann.dds"
+	ideology = monarchy_constitutional_ideology
+	traits = {
+	}
+}
+	}
+	UNG = {
+create_country_leader = {
+	name = "Marko Eichmann"
+	desc = "politics_NOC_eichmann_desc"
+	picture = "gfx/leaders/NOC/Portrait_NOC_Eichmann.dds"
+	ideology = monarchy_absolute_ideology
+	traits = {
+	}
+}
+	}
+	UNG = {
+create_country_leader = {
+	name = "Marko Eichmann"
+	desc = "politics_NOC_eichmann_desc"
+	picture = "gfx/leaders/NOC/Portrait_NOC_Eichmann.dds"
+	ideology = republic_aristocrat_ideology
+	traits = {
+	}
+}
+	}
+	UNG = {
+set_party_name = {
+    ideology = monarchy_absolute
+    name = NOC_monarchy_constitutional_party
+}
+	}
+	UNG = {
+set_party_name = {
+    ideology = monarchy_constitutional
+    name = NOC_monarchy_constitutional_party
+}
+	}
+	UNG = {
+set_party_name = {
+    ideology = republic_aristocrat
+    name = NOC_monarchy_constitutional_party 
+}
+	}
+	}
+}
+}
+
+	SVT_restore_the_union = {
+		
+		icon = GFX_decision_restore_ungerdaler_union
+		
+		allowed = {
+			original_tag = SVT
+			has_dlc = "Waking the Tiger"
+			NOT = {
+				country_exists = UNG
+			}
+		}
+		
+		available = {
+			custom_trigger_tooltip = {
+			tooltip = restore_the_union_requirements_tt
+			is_subject = no
+			original_tag = SVT
+							OR = {
+								controls_state = 228
+								NOC = {
+									is_subject_of = SVT
+								}
+							}
+							OR = {
+								controls_state = 232
+								HLZ = {
+									is_subject_of = SVT
+								}
+							}
+							OR = {
+								controls_state = 192
+								STA = {
+									is_subject_of = SVT
+								}
+							}
+							OR = {
+								controls_state = 284
+								NRK = {
+									is_subject_of = SVT
+								}
+							}
+							OR = {
+								controls_state = 226
+								SPW = {
+									is_subject_of = SVT
+								}
+							}
+							OR = {
+								controls_state = 225
+								TEI = {
+									is_subject_of = SVT
+								}
+							}
+							OR = {
+								controls_state = 206
+								ARK = {
+									is_subject_of = SVT
+								}
+							}
+							OR = {
+								controls_state = 233
+								FAU = {
+									is_subject_of = SVT
+								}
+							}
+							OR = {
+								controls_state = 224
+								SNF = {
+									is_subject_of = SVT
+								}
+							}
+							OR = {
+								controls_state = 234
+								WIS = {
+									is_subject_of = SVT
+								}
+							}
+							OR = {
+								controls_state = 235
+								WSZ = {
+									is_subject_of = SVT
+								}
+							}
+							OR = {
+								controls_state = 236
+								FTH = {
+									is_subject_of = SVT
+								}
+							}
+			}
+		}
+		visible = {
+			original_tag = SVT
+			NOT = {
+				country_exists = UNG
+			}
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		complete_effect = {
+		custom_effect_tooltip = restore_the_union_effects_tt
+		hidden_effect = {
+			UNG = {
+					transfer_state = 293
+				}
+				UNG = {
+					change_tag_from = SVT
+				}
+				every_state = {
+					limit = {
+						OR = {
+							is_core_of = HLZ
+							is_core_of = NOC
+							is_core_of = SVT
+							is_core_of = STA
+							is_core_of = SPW
+							is_core_of = TEI
+							is_core_of = FAU
+							is_core_of = NRK
+							is_core_of = SNF
+							is_core_of = ARK
+							is_core_of = WIS
+							is_core_of = WSZ
+							is_core_of = FTH
+						}
+					}
+					UNG = {
+						transfer_state = PREV
+					}
+					remove_core_of = HLZ
+					remove_core_of = NOC
+					remove_core_of = SVT
+					remove_core_of = STA
+					remove_core_of = SPW
+					remove_core_of = TEI
+					remove_core_of = FAU
+					remove_core_of = NRK
+					remove_core_of = SNF
+					remove_core_of = ARK
+					remove_core_of = WIS
+					remove_core_of = WSZ
+					remove_core_of = FTH
+					add_core_of = UNG
+				}
+		UNG = {
+			set_capital = 227
+		}
+		UNG = {
+create_country_leader = {
+	name = "Gabriela Schober"
+	desc = "politics_SVT_schober_desc"
+	picture = "gfx/leaders/SVT/Portrait_SVT_Schober.dds"
+	ideology = monarchy_constitutional_ideology
+	traits = {
+	}
+}
+	}
+	UNG = {
+create_country_leader = {
+	name = "Gabriela Schober"
+	desc = "politics_SVT_schober_desc"
+	picture = "gfx/leaders/SVT/Portrait_SVT_Schober.dds"
+	ideology = monarchy_absolute_ideology
+	traits = {
+	}
+}
+	}
+	UNG = {
+create_country_leader = {
+	name = "Gabriela Schober"
+	desc = "politics_SVT_schober_desc"
+	picture = "gfx/leaders/SVT/Portrait_SVT_Schober.dds"
+	ideology = republic_aristocrat_ideology
+	traits = {
+	}
+}
+	UNG = {
+create_country_leader = {
+	name = "Dietlind Rosenstock"
+	desc = "politics_SVT_rosenstock_desc"
+	picture = "gfx/leaders/SVT/Portrait_SVT_Rosenstock.dds"
+	ideology = theocrat_ideology
+	traits = {
+	}
+}
+}
+	}
+	UNG = {
+set_party_name = {
+    ideology = monarchy_absolute
+    name = SVT_monarchy_constitutional_party
+}
+	}
+	UNG = {
+set_party_name = {
+    ideology = monarchy_constitutional
+    name = SVT_monarchy_constitutional_party
+}
+	}
+	UNG = {
+set_party_name = {
+    ideology = republic_aristocrat
+    name = SVT_monarchy_constitutional_party 
+}
+	}
+	}
+}
+}
+	SPW_restore_the_union = {
+		
+		icon = GFX_decision_restore_ungerdaler_union
+		
+		allowed = {
+			original_tag = SPW
+			has_dlc = "Waking the Tiger"
+			NOT = {
+				country_exists = UNG
+			}
+		}
+		
+		available = {
+			custom_trigger_tooltip = {
+			tooltip = restore_the_union_requirements_tt
+			is_subject = no
+			original_tag = SPW
+							OR = {
+								controls_state = 228
+								NOC = {
+									is_subject_of = SPW
+								}
+							}
+							OR = {
+								controls_state = 232
+								HLZ = {
+									is_subject_of = SPW
+								}
+							}
+							OR = {
+								controls_state = 192
+								STA = {
+									is_subject_of = SPW
+								}
+							}
+							OR = {
+								controls_state = 284
+								NRK = {
+									is_subject_of = SPW
+								}
+							}
+							OR = {
+								controls_state = 227
+								SVT = {
+									is_subject_of = SPW
+								}
+							}
+							OR = {
+								controls_state = 225
+								TEI = {
+									is_subject_of = SPW
+								}
+							}
+							OR = {
+								controls_state = 206
+								ARK = {
+									is_subject_of = SPW
+								}
+							}
+							OR = {
+								controls_state = 233
+								FAU = {
+									is_subject_of = SPW
+								}
+							}
+							OR = {
+								controls_state = 224
+								SNF = {
+									is_subject_of = SPW
+								}
+							}
+							OR = {
+								controls_state = 234
+								WIS = {
+									is_subject_of = SPW
+								}
+							}
+							OR = {
+								controls_state = 235
+								WSZ = {
+									is_subject_of = SPW
+								}
+							}
+							OR = {
+								controls_state = 236
+								FTH = {
+									is_subject_of = SPW
+								}
+							}
+			}
+		}
+		visible = {
+			original_tag = SPW
+			NOT = {
+				country_exists = UNG
+			}
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		complete_effect = {
+		custom_effect_tooltip = restore_the_union_effects_tt
+		hidden_effect = {
+			UNG = {
+					transfer_state = 293
+				}
+				UNG = {
+					change_tag_from = SPW
+				}
+				every_state = {
+					limit = {
+						OR = {
+							is_core_of = HLZ
+							is_core_of = NOC
+							is_core_of = SVT
+							is_core_of = STA
+							is_core_of = SPW
+							is_core_of = TEI
+							is_core_of = FAU
+							is_core_of = NRK
+							is_core_of = SNF
+							is_core_of = ARK
+							is_core_of = WIS
+							is_core_of = WSZ
+							is_core_of = FTH
+						}
+					}
+					UNG = {
+						transfer_state = PREV
+					}
+					remove_core_of = HLZ
+					remove_core_of = NOC
+					remove_core_of = SVT
+					remove_core_of = STA
+					remove_core_of = SPW
+					remove_core_of = TEI
+					remove_core_of = FAU
+					remove_core_of = NRK
+					remove_core_of = SNF
+					remove_core_of = ARK
+					remove_core_of = WIS
+					remove_core_of = WSZ
+					remove_core_of = FTH
+					add_core_of = UNG
+				}
+		UNG = {
+			set_capital = 226
+		}
+		UNG = {
+create_country_leader = {
+	name = "Wilhelm Weisz"
+	desc = "politics_SPW_weisz_desc"
+	picture = "gfx/leaders/SPW/Portrait_SPW_Weisz.dds"
+	ideology = monarchy_constitutional_ideology
+	traits = {
+	}
+}
+	}
+	UNG = {
+create_country_leader = {
+	name = "Wilhelm Weisz"
+	desc = "politics_SPW_weisz_desc"
+	picture = "gfx/leaders/SPW/Portrait_SPW_Weisz.dds"
+	ideology = monarchy_absolute_ideology
+	traits = {
+	}
+}
+	}
+	UNG = {
+create_country_leader = {
+	name = "Wilhelm Weisz"
+	desc = "politics_SPW_weisz_desc"
+	picture = "gfx/leaders/SPW/Portrait_SPW_Weisz.dds"
+	ideology = republic_aristocrat_ideology
+	traits = {
+	}
+}
+	}
+	UNG = {
+set_party_name = {
+    ideology = monarchy_absolute
+    name = SPW_monarchy_constitutional_party
+}
+	}
+	UNG = {
+set_party_name = {
+    ideology = monarchy_constitutional
+    name = SPW_monarchy_constitutional_party
+}
+	}
+	UNG = {
+set_party_name = {
+    ideology = republic_aristocrat
+    name = SPW_monarchy_constitutional_party 
+}
+	}
+	}
+}
+}
+
+	TEI_restore_the_union = {
+		
+		icon = GFX_decision_restore_ungerdaler_union
+		
+		allowed = {
+			original_tag = TEI
+			has_dlc = "Waking the Tiger"
+			NOT = {
+				country_exists = UNG
+			}
+		}
+		
+		available = {
+			custom_trigger_tooltip = {
+			tooltip = restore_the_union_requirements_tt
+			is_subject = no
+			original_tag = TEI
+							OR = {
+								controls_state = 228
+								NOC = {
+									is_subject_of = TEI
+								}
+							}
+							OR = {
+								controls_state = 232
+								HLZ = {
+									is_subject_of = TEI
+								}
+							}
+							OR = {
+								controls_state = 192
+								STA = {
+									is_subject_of = TEI
+								}
+							}
+							OR = {
+								controls_state = 284
+								NRK = {
+									is_subject_of = TEI
+								}
+							}
+							OR = {
+								controls_state = 227
+								SVT = {
+									is_subject_of = TEI
+								}
+							}
+							OR = {
+								controls_state = 226
+								SPW = {
+									is_subject_of = TEI
+								}
+							}
+							OR = {
+								controls_state = 206
+								ARK = {
+									is_subject_of = TEI
+								}
+							}
+							OR = {
+								controls_state = 233
+								FAU = {
+									is_subject_of = TEI
+								}
+							}
+							OR = {
+								controls_state = 224
+								SNF = {
+									is_subject_of = TEI
+								}
+							}
+							OR = {
+								controls_state = 234
+								WIS = {
+									is_subject_of = TEI
+								}
+							}
+							OR = {
+								controls_state = 235
+								WSZ = {
+									is_subject_of = TEI
+								}
+							}
+							OR = {
+								controls_state = 236
+								FTH = {
+									is_subject_of = TEI
+								}
+							}
+			}
+		}
+		visible = {
+			original_tag = TEI
+			NOT = {
+				country_exists = UNG
+			}
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		complete_effect = {
+		custom_effect_tooltip = restore_the_union_effects_tt
+		hidden_effect = {
+			UNG = {
+					transfer_state = 293
+				}
+				UNG = {
+					change_tag_from = TEI
+				}
+				every_state = {
+					limit = {
+						OR = {
+							is_core_of = HLZ
+							is_core_of = NOC
+							is_core_of = SVT
+							is_core_of = STA
+							is_core_of = SPW
+							is_core_of = TEI
+							is_core_of = FAU
+							is_core_of = NRK
+							is_core_of = SNF
+							is_core_of = ARK
+							is_core_of = WIS
+							is_core_of = WSZ
+							is_core_of = FTH
+						}
+					}
+					UNG = {
+						transfer_state = PREV
+					}
+					remove_core_of = HLZ
+					remove_core_of = NOC
+					remove_core_of = SVT
+					remove_core_of = STA
+					remove_core_of = SPW
+					remove_core_of = TEI
+					remove_core_of = FAU
+					remove_core_of = NRK
+					remove_core_of = SNF
+					remove_core_of = ARK
+					remove_core_of = WIS
+					remove_core_of = WSZ
+					remove_core_of = FTH
+					add_core_of = UNG
+				}
+				}
+		UNG = {
+			set_capital = 225
+		}
+		UNG = {
+create_country_leader = {
+	name = "Adalbrecht Krukenberg"
+	desc = "politics_TEI_krukenberg_desc"
+	picture = "gfx/leaders/TEI/Portrait_TEI_Krukenberg.dds"
+	ideology = monarchy_constitutional_ideology
+	traits = {
+	}
+}
+	}
+	UNG = {
+create_country_leader = {
+	name = "Adalbrecht Krukenberg"
+	desc = "politics_TEI_krukenberg_desc"
+	picture = "gfx/leaders/TEI/Portrait_TEI_Krukenberg.dds"
+	ideology = monarchy_absolute_ideology
+	traits = {
+	}
+}
+	}
+	UNG = {
+create_country_leader = {
+	name = "Adalbrecht Krukenberg"
+	desc = "politics_TEI_krukenberg_desc"
+	picture = "gfx/leaders/TEI/Portrait_TEI_Krukenberg.dds"
+	ideology = republic_aristocrat_ideology
+	traits = {
+	}
+}
+	}
+	UNG = {
+set_party_name = {
+    ideology = monarchy_absolute
+    name = TEI_monarchy_constitutional_party
+}
+	}
+	UNG = {
+set_party_name = {
+    ideology = monarchy_constitutional
+    name = TEI_monarchy_constitutional_party
+}
+	}
+	UNG = {
+set_party_name = {
+    ideology = republic_aristocrat
+    name = TEI_monarchy_constitutional_party 
+}
+	}
+	}
+}
+
+	NRK_restore_the_union = {
+		
+		icon = GFX_decision_restore_ungerdaler_union
+		
+		allowed = {
+			original_tag = NRK
+			has_dlc = "Waking the Tiger"
+			NOT = {
+				country_exists = UNG
+			}
+		}
+		
+		available = {
+			custom_trigger_tooltip = {
+			tooltip = restore_the_union_requirements_tt
+			is_subject = no
+			original_tag = NRK
+							OR = {
+								controls_state = 228
+								NOC = {
+									is_subject_of = NRK
+								}
+							}
+							OR = {
+								controls_state = 232
+								HLZ = {
+									is_subject_of = NRK
+								}
+							}
+							OR = {
+								controls_state = 192
+								STA = {
+									is_subject_of = NRK
+								}
+							}
+							OR = {
+								controls_state = 225
+								TEI = {
+									is_subject_of = NRK
+								}
+							}
+							OR = {
+								controls_state = 227
+								SVT = {
+									is_subject_of = NRK
+								}
+							}
+							OR = {
+								controls_state = 226
+								SPW = {
+									is_subject_of = NRK
+								}
+							}
+							OR = {
+								controls_state = 206
+								ARK = {
+									is_subject_of = NRK
+								}
+							}
+							OR = {
+								controls_state = 233
+								FAU = {
+									is_subject_of = NRK
+								}
+							}
+							OR = {
+								controls_state = 224
+								SNF = {
+									is_subject_of = NRK
+								}
+							}
+							OR = {
+								controls_state = 234
+								WIS = {
+									is_subject_of = NRK
+								}
+							}
+							OR = {
+								controls_state = 235
+								WSZ = {
+									is_subject_of = NRK
+								}
+							}
+							OR = {
+								controls_state = 236
+								FTH = {
+									is_subject_of = NRK
+								}
+							}
+			}
+		}
+		visible = {
+			original_tag = NRK
+			NOT = {
+				country_exists = UNG
+			}
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		complete_effect = {
+		custom_effect_tooltip = restore_the_union_effects_tt
+		hidden_effect = {
+			UNG = {
+					transfer_state = 293
+				}
+				UNG = {
+					change_tag_from = NRK
+				}
+				every_state = {
+					limit = {
+						OR = {
+							is_core_of = HLZ
+							is_core_of = NOC
+							is_core_of = SVT
+							is_core_of = STA
+							is_core_of = SPW
+							is_core_of = TEI
+							is_core_of = FAU
+							is_core_of = NRK
+							is_core_of = SNF
+							is_core_of = ARK
+							is_core_of = WIS
+							is_core_of = WSZ
+							is_core_of = FTH
+						}
+					}
+					UNG = {
+						transfer_state = PREV
+					}
+					remove_core_of = HLZ
+					remove_core_of = NOC
+					remove_core_of = SVT
+					remove_core_of = STA
+					remove_core_of = SPW
+					remove_core_of = TEI
+					remove_core_of = FAU
+					remove_core_of = NRK
+					remove_core_of = SNF
+					remove_core_of = ARK
+					remove_core_of = WIS
+					remove_core_of = WSZ
+					remove_core_of = FTH
+					add_core_of = UNG
+				}
+		UNG = {
+			set_capital = 284
+		}
+		UNG = {
+create_country_leader = {
+	name = "Fabian Hassler"
+	desc = "politics_NRK_hassler_desc"
+	picture = "gfx/leaders/NRK/Portrait_NRK_Hassler.dds"
+	ideology = monarchy_constitutional_ideology
+	traits = {
+	}
+}
+	}
+	UNG = {
+create_country_leader = {
+	name = "Fabian Hassler"
+	desc = "politics_NRK_hassler_desc"
+	picture = "gfx/leaders/NRK/Portrait_NRK_Hassler.dds"
+	ideology = monarchy_absolute_ideology
+	traits = {
+	}
+}
+	}
+	UNG = {
+create_country_leader = {
+	name = "Fabian Hassler"
+	desc = "politics_NRK_hassler_desc"
+	picture = "gfx/leaders/NRK/Portrait_NRK_Hassler.dds"
+	ideology = republic_aristocrat_ideology
+	traits = {
+	}
+}
+	}
+	UNG = {
+set_party_name = {
+    ideology = monarchy_absolute
+    name = NRK_monarchy_constitutional_party
+}
+	}
+	UNG = {
+set_party_name = {
+    ideology = monarchy_constitutional
+    name = NRK_monarchy_constitutional_party
+}
+	}
+	UNG = {
+set_party_name = {
+    ideology = republic_aristocrat
+    name = NRK_monarchy_constitutional_party 
+}
+	}
+	}
+}
+}
+
+	STA_restore_the_union = {
+		
+		icon = GFX_decision_restore_ungerdaler_union
+		
+		allowed = {
+			original_tag = STA
+			has_dlc = "Waking the Tiger"
+			NOT = {
+				country_exists = UNG
+			}
+		}
+		
+		available = {
+			custom_trigger_tooltip = {
+			tooltip = restore_the_union_requirements_tt
+			is_subject = no
+			original_tag = STA
+							OR = {
+								controls_state = 228
+								NOC = {
+									is_subject_of = STA
+								}
+							}
+							OR = {
+								controls_state = 232
+								HLZ = {
+									is_subject_of = STA
+								}
+							}
+							OR = {
+								controls_state = 284
+								NRK = {
+									is_subject_of = STA
+								}
+							}
+							OR = {
+								controls_state = 225
+								TEI = {
+									is_subject_of = STA
+								}
+							}
+							OR = {
+								controls_state = 227
+								SVT = {
+									is_subject_of = STA
+								}
+							}
+							OR = {
+								controls_state = 226
+								SPW = {
+									is_subject_of = STA
+								}
+							}
+							OR = {
+								controls_state = 206
+								ARK = {
+									is_subject_of = STA
+								}
+							}
+							OR = {
+								controls_state = 233
+								FAU = {
+									is_subject_of = STA
+								}
+							}
+							OR = {
+								controls_state = 224
+								SNF = {
+									is_subject_of = STA
+								}
+							}
+							OR = {
+								controls_state = 234
+								WIS = {
+									is_subject_of = STA
+								}
+							}
+							OR = {
+								controls_state = 235
+								WSZ = {
+									is_subject_of = STA
+								}
+							}
+							OR = {
+								controls_state = 236
+								FTH = {
+									is_subject_of = STA
+								}
+							}
+			}
+		}
+		visible = {
+			original_tag = STA
+			NOT = {
+				country_exists = UNG
+			}
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		complete_effect = {
+		custom_effect_tooltip = restore_the_union_effects_tt
+		hidden_effect = {
+			UNG = {
+					transfer_state = 293
+				}
+				UNG = {
+					change_tag_from = STA
+				}
+				every_state = {
+					limit = {
+						OR = {
+							is_core_of = HLZ
+							is_core_of = NOC
+							is_core_of = SVT
+							is_core_of = STA
+							is_core_of = SPW
+							is_core_of = TEI
+							is_core_of = FAU
+							is_core_of = NRK
+							is_core_of = SNF
+							is_core_of = ARK
+							is_core_of = WIS
+							is_core_of = WSZ
+							is_core_of = FTH
+						}
+					}
+					UNG = {
+						transfer_state = PREV
+					}
+					remove_core_of = HLZ
+					remove_core_of = NOC
+					remove_core_of = SVT
+					remove_core_of = STA
+					remove_core_of = SPW
+					remove_core_of = TEI
+					remove_core_of = FAU
+					remove_core_of = NRK
+					remove_core_of = SNF
+					remove_core_of = ARK
+					remove_core_of = WIS
+					remove_core_of = WSZ
+					remove_core_of = FTH
+					add_core_of = UNG
+				}
+		UNG = {
+			set_capital = 192
+		}
+		UNG = {
+create_country_leader = {
+	name = "Ferdinand Schwarzenbach"
+	desc = "politics_STA_schwarzenbach_desc"
+	picture = "gfx/leaders/STA/Portrait_STA_Schwarzenbach.dds"
+	ideology = monarchy_absolute_ideology
+	traits = {
+	}
+}
+	}
+	UNG = {
+create_country_leader = {
+	name = "Ferdinand Schwarzenbach"
+	desc = "politics_STA_schwarzenbach_desc"
+	picture = "gfx/leaders/STA/Portrait_STA_Schwarzenbach.dds"
+	ideology = monarchy_constitutional_ideology
+	traits = {
+	}
+}
+	}
+	UNG = {
+create_country_leader = {
+	name = "Ferdinand Schwarzenbach"
+	desc = "politics_STA_schwarzenbach_desc"
+	picture = "gfx/leaders/STA/Portrait_STA_Schwarzenbach.dds"
+	ideology = republic_aristocrat_ideology
+	traits = {
+	}
+}
+	}
+	UNG = {
+set_party_name = {
+    ideology = monarchy_absolute
+    name = STA_monarchy_constitutional_party
+}
+	}
+	UNG = {
+set_party_name = {
+    ideology = monarchy_constitutional
+    name = STA_monarchy_constitutional_party
+}
+	}
+	UNG = {
+set_party_name = {
+    ideology = republic_aristocrat
+    name = STA_monarchy_constitutional_party 
+}
+	}
+	}
+}
+}
+
+	STA_installed_as_hochprinz = {
+		
+		icon = GFX_decision_generic_submission
+		
+		allowed = {
+			original_tag = STA
+			has_dlc = "Waking the Tiger"
+			NOT = {
+				country_exists = UNG
+			}
+		}
+		
+		available = {
+			custom_trigger_tooltip = {
+			tooltip = stahlhof_installed_tt
+			is_subject_of = ORD
+			original_tag = STA
+							OR = {
+								controls_state = 228
+								NOC = {
+									is_subject_of = STA
+								}
+							}
+							OR = {
+								controls_state = 232
+								HLZ = {
+									is_subject_of = STA
+								}
+							}
+							OR = {
+								controls_state = 284
+								NRK = {
+									is_subject_of = STA
+								}
+							}
+							OR = {
+								controls_state = 225
+								TEI = {
+									is_subject_of = STA
+								}
+							}
+							OR = {
+								controls_state = 227
+								SVT = {
+									is_subject_of = STA
+								}
+							}
+							OR = {
+								controls_state = 226
+								SPW = {
+									is_subject_of = STA
+								}
+							}
+							OR = {
+								controls_state = 206
+								ARK = {
+									is_subject_of = STA
+								}
+							}
+							OR = {
+								controls_state = 233
+								FAU = {
+									is_subject_of = STA
+								}
+							}
+							OR = {
+								controls_state = 224
+								SNF = {
+									is_subject_of = STA
+								}
+							}
+							OR = {
+								controls_state = 234
+								WIS = {
+									is_subject_of = STA
+								}
+							}
+							OR = {
+								controls_state = 235
+								WSZ = {
+									is_subject_of = STA
+								}
+							}
+							OR = {
+								controls_state = 236
+								FTH = {
+									is_subject_of = STA
+								}
+							}
+			}
+		}
+		visible = {
+			original_tag = STA
+			NOT = {
+				country_exists = UNG
+			}
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		complete_effect = {
+			custom_effect_tooltip = restore_the_union_effects_tt
+			hidden_effect = {
+				UNG = {
+					transfer_state = 293
+				}
+				UNG = {
+					change_tag_from = STA
+				}
+				every_state = {
+					limit = {
+						OR = {
+							is_core_of = HLZ
+							is_core_of = NOC
+							is_core_of = SVT
+							is_core_of = STA
+							is_core_of = SPW
+							is_core_of = TEI
+							is_core_of = FAU
+							is_core_of = NRK
+							is_core_of = SNF
+							is_core_of = ARK
+							is_core_of = WIS
+							is_core_of = WSZ
+							is_core_of = FTH
+						}
+					}
+					UNG = {
+						transfer_state = PREV
+					}
+					remove_core_of = HLZ
+					remove_core_of = NOC
+					remove_core_of = SVT
+					remove_core_of = STA
+					remove_core_of = SPW
+					remove_core_of = TEI
+					remove_core_of = FAU
+					remove_core_of = NRK
+					remove_core_of = SNF
+					remove_core_of = ARK
+					remove_core_of = WIS
+					remove_core_of = WSZ
+					remove_core_of = FTH
+					add_core_of = UNG
+				}
+				UNG = {
+					set_capital = 192
+				}
+				UNG = {
+					create_country_leader = {
+						name = "Ferdinand Schwarzenbach"
+						desc = "politics_STA_schwarzenbach_desc"
+						picture = "gfx/leaders/STA/Portrait_STA_Schwarzenbach.dds"
+						ideology = monarchy_absolute_ideology
+						traits = {
+						}
+					}
+						}
+				UNG = {
+					create_country_leader = {
+						name = "Ferdinand Schwarzenbach"
+						desc = "politics_STA_schwarzenbach_desc"
+						picture = "gfx/leaders/STA/Portrait_STA_Schwarzenbach.dds"
+						ideology = monarchy_constitutional_ideology
+						traits = {
+						}
+					}
+						}
+				UNG = {
+					create_country_leader = {
+						name = "Ferdinand Schwarzenbach"
+						desc = "politics_STA_schwarzenbach_desc"
+						picture = "gfx/leaders/STA/Portrait_STA_Schwarzenbach.dds"
+						ideology = republic_aristocrat_ideology
+						traits = {
+						}
+					}
+						}
+				UNG = {
+					set_party_name = {
+						ideology = monarchy_absolute
+						name = STA_monarchy_constitutional_party
+					}
+						}
+				UNG = {
+					set_party_name = {
+						ideology = monarchy_constitutional
+						name = STA_monarchy_constitutional_party
+					}
+						}
+				UNG = {
+					set_party_name = {
+						ideology = republic_aristocrat
+						name = STA_monarchy_constitutional_party 
+					}
+				}
+				ORD = {
+					puppet = UNG
+				}
+				UNG = {
+					set_politics = {
+						parties = {
+							monarchy_absolute= { 
+								popularity = 57
+							}
+							monarchy_constitutional = {
+								popularity = 0
+							}
+							
+							republic_peasant = {
+								popularity = 9
+							}
+							republic_aristocrat = {
+								popularity = 0
+							}
+							republic_merchant = {
+								popularity = 6
+							}
+							theocrat = {
+								popularity = 12
+							}
+							puritan = {
+								popularity = 16
+							}
+						}
+						ruling_party = monarchy_absolute
+					}
+				}
+			}
+		}
+	}
+
+	SNF_restore_the_union = {
+		
+		icon = GFX_decision_restore_ungerdaler_union
+		
+		allowed = {
+			original_tag = SNF
+			has_dlc = "Waking the Tiger"
+			NOT = {
+				country_exists = UNG
+			}
+		}
+		
+		available = {
+			custom_trigger_tooltip = {
+			tooltip = restore_the_union_requirements_tt
+			is_subject = no
+			original_tag = SNF
+							OR = {
+								controls_state = 228
+								NOC = {
+									is_subject_of = SNF
+								}
+							}
+							OR = {
+								controls_state = 232
+								HLZ = {
+									is_subject_of = SNF
+								}
+							}
+							OR = {
+								controls_state = 284
+								NRK = {
+									is_subject_of = SNF
+								}
+							}
+							OR = {
+								controls_state = 225
+								TEI = {
+									is_subject_of = SNF
+								}
+							}
+							OR = {
+								controls_state = 227
+								SVT = {
+									is_subject_of = SNF
+								}
+							}
+							OR = {
+								controls_state = 226
+								SPW = {
+									is_subject_of = SNF
+								}
+							}
+							OR = {
+								controls_state = 206
+								ARK = {
+									is_subject_of = SNF
+								}
+							}
+							OR = {
+								controls_state = 233
+								FAU = {
+									is_subject_of = SNF
+								}
+							}
+							OR = {
+								controls_state = 192
+								STA = {
+									is_subject_of = SNF
+								}
+							}
+							OR = {
+								controls_state = 234
+								WIS = {
+									is_subject_of = SNF
+								}
+							}
+							OR = {
+								controls_state = 235
+								WSZ = {
+									is_subject_of = SNF
+								}
+							}
+							OR = {
+								controls_state = 236
+								FTH = {
+									is_subject_of = SNF
+								}
+							}
+			}
+		}
+		visible = {
+			original_tag = SNF
+			NOT = {
+				country_exists = UNG
+			}
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		complete_effect = {
+		custom_effect_tooltip = restore_the_union_effects_tt
+		hidden_effect = {
+			UNG = {
+					transfer_state = 293
+				}
+				UNG = {
+					change_tag_from = SNF
+				}
+				every_state = {
+					limit = {
+						OR = {
+							is_core_of = HLZ
+							is_core_of = NOC
+							is_core_of = SVT
+							is_core_of = STA
+							is_core_of = SPW
+							is_core_of = TEI
+							is_core_of = FAU
+							is_core_of = NRK
+							is_core_of = SNF
+							is_core_of = ARK
+							is_core_of = WIS
+							is_core_of = WSZ
+							is_core_of = FTH
+						}
+					}
+					UNG = {
+						transfer_state = PREV
+					}
+					remove_core_of = HLZ
+					remove_core_of = NOC
+					remove_core_of = SVT
+					remove_core_of = STA
+					remove_core_of = SPW
+					remove_core_of = TEI
+					remove_core_of = FAU
+					remove_core_of = NRK
+					remove_core_of = SNF
+					remove_core_of = ARK
+					remove_core_of = WIS
+					remove_core_of = WSZ
+					remove_core_of = FTH
+					add_core_of = UNG
+				}
+		UNG = {
+			set_capital = 224
+		}
+		UNG = {
+create_country_leader = {
+	name = "Otto Kolb"
+	desc = "politics_SNF_kolb_desc"
+	picture = "gfx/leaders/SNF/Portrait_SNF_Kolb.dds"
+	ideology = monarchy_absolute_ideology
+	traits = {
+	}
+}
+	}
+	UNG = {
+create_country_leader = {
+	name = "Otto Kolb"
+	desc = "politics_SNF_kolb_desc"
+	picture = "gfx/leaders/SNF/Portrait_SNF_Kolb.dds"
+	ideology = monarchy_constitutional_ideology
+	traits = {
+	}
+}
+	}
+	UNG = {
+create_country_leader = {
+	name = "Otto Kolb"
+	desc = "politics_SNF_kolb_desc"
+	picture = "gfx/leaders/SNF/Portrait_SNF_Kolb.dds"
+	ideology = republic_aristocrat_ideology
+	traits = {
+	}
+}
+	}
+	UNG = {
+set_party_name = {
+    ideology = monarchy_absolute
+    name = SNF_monarchy_constitutional_party
+}
+	}
+	UNG = {
+set_party_name = {
+    ideology = monarchy_constitutional
+    name = SNF_monarchy_constitutional_party
+}
+	}
+	UNG = {
+set_party_name = {
+    ideology = republic_aristocrat
+    name = SNF_monarchy_constitutional_party 
+}
+	}
+	}
+}
+}
+
+	FAU_restore_the_union = {
+		
+		icon = GFX_decision_restore_ungerdaler_union
+		
+		allowed = {
+			original_tag = FAU
+			has_dlc = "Waking the Tiger"
+			NOT = {
+				country_exists = UNG
+			}
+		}
+		
+		available = {
+			custom_trigger_tooltip = {
+			tooltip = restore_the_union_requirements_tt
+			is_subject = no
+			original_tag = FAU
+							OR = {
+								controls_state = 228
+								NOC = {
+									is_subject_of = FAU
+								}
+							}
+							OR = {
+								controls_state = 232
+								HLZ = {
+									is_subject_of = FAU
+								}
+							}
+							OR = {
+								controls_state = 284
+								NRK = {
+									is_subject_of = FAU
+								}
+							}
+							OR = {
+								controls_state = 225
+								TEI = {
+									is_subject_of = FAU
+								}
+							}
+							OR = {
+								controls_state = 227
+								SVT = {
+									is_subject_of = FAU
+								}
+							}
+							OR = {
+								controls_state = 226
+								SPW = {
+									is_subject_of = FAU
+								}
+							}
+							OR = {
+								controls_state = 206
+								ARK = {
+									is_subject_of = FAU
+								}
+							}
+							OR = {
+								controls_state = 224
+								SNF = {
+									is_subject_of = FAU
+								}
+							}
+							OR = {
+								controls_state = 192
+								STA = {
+									is_subject_of = FAU
+								}
+							}
+							OR = {
+								controls_state = 234
+								WIS = {
+									is_subject_of = FAU
+								}
+							}
+							OR = {
+								controls_state = 235
+								WSZ = {
+									is_subject_of = FAU
+								}
+							}
+							OR = {
+								controls_state = 236
+								FTH = {
+									is_subject_of = FAU
+								}
+							}
+			}
+		}
+		visible = {
+			original_tag = FAU
+			NOT = {
+				country_exists = UNG
+			}
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		complete_effect = {
+		custom_effect_tooltip = restore_the_union_effects_tt
+		hidden_effect = {
+			UNG = {
+					transfer_state = 293
+				}
+				UNG = {
+					change_tag_from = FAU
+				}
+				every_state = {
+					limit = {
+						OR = {
+							is_core_of = HLZ
+							is_core_of = NOC
+							is_core_of = SVT
+							is_core_of = STA
+							is_core_of = SPW
+							is_core_of = TEI
+							is_core_of = FAU
+							is_core_of = NRK
+							is_core_of = SNF
+							is_core_of = ARK
+							is_core_of = WIS
+							is_core_of = WSZ
+							is_core_of = FTH
+						}
+					}
+					UNG = {
+						transfer_state = PREV
+					}
+					remove_core_of = HLZ
+					remove_core_of = NOC
+					remove_core_of = SVT
+					remove_core_of = STA
+					remove_core_of = SPW
+					remove_core_of = TEI
+					remove_core_of = FAU
+					remove_core_of = NRK
+					remove_core_of = SNF
+					remove_core_of = ARK
+					remove_core_of = WIS
+					remove_core_of = WSZ
+					remove_core_of = FTH
+					add_core_of = UNG
+				}
+		UNG = {
+			set_capital = 233
+		}
+	}
+}
+}
+
+	ARK_restore_the_union = {
+		
+		icon = GFX_decision_restore_ungerdaler_union
+		
+		allowed = {
+			original_tag = ARK
+			has_dlc = "Waking the Tiger"
+			NOT = {
+				country_exists = UNG
+			}
+		}
+		
+		available = {
+			custom_trigger_tooltip = {
+			tooltip = restore_the_union_requirements_tt
+			is_subject = no
+			original_tag = ARK
+							OR = {
+								controls_state = 228
+								NOC = {
+									is_subject_of = ARK
+								}
+							}
+							OR = {
+								controls_state = 232
+								HLZ = {
+									is_subject_of = ARK
+								}
+							}
+							OR = {
+								controls_state = 284
+								NRK = {
+									is_subject_of = ARK
+								}
+							}
+							OR = {
+								controls_state = 225
+								TEI = {
+									is_subject_of = ARK
+								}
+							}
+							OR = {
+								controls_state = 227
+								SVT = {
+									is_subject_of = ARK
+								}
+							}
+							OR = {
+								controls_state = 226
+								SPW = {
+									is_subject_of = ARK
+								}
+							}
+							OR = {
+								controls_state = 233
+								FAU = {
+									is_subject_of = ARK
+								}
+							}
+							OR = {
+								controls_state = 224
+								SNF = {
+									is_subject_of = ARK
+								}
+							}
+							OR = {
+								controls_state = 192
+								STA = {
+									is_subject_of = ARK
+								}
+							}
+							OR = {
+								controls_state = 234
+								WIS = {
+									is_subject_of = ARK
+								}
+							}
+							OR = {
+								controls_state = 235
+								WSZ = {
+									is_subject_of = ARK
+								}
+							}
+							OR = {
+								controls_state = 236
+								FTH = {
+									is_subject_of = ARK
+								}
+							}
+			}
+		}
+		visible = {
+			original_tag = ARK
+			NOT = {
+				country_exists = UNG
+			}
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		complete_effect = {
+		custom_effect_tooltip = restore_the_union_effects_tt
+		hidden_effect = {
+			UNG = {
+					transfer_state = 293
+				}
+				UNG = {
+					change_tag_from = ARK
+				}
+				every_state = {
+					limit = {
+						OR = {
+							is_core_of = HLZ
+							is_core_of = NOC
+							is_core_of = SVT
+							is_core_of = STA
+							is_core_of = SPW
+							is_core_of = TEI
+							is_core_of = FAU
+							is_core_of = NRK
+							is_core_of = SNF
+							is_core_of = ARK
+							is_core_of = WIS
+							is_core_of = WSZ
+							is_core_of = FTH
+						}
+					}
+					UNG = {
+						transfer_state = PREV
+					}
+					remove_core_of = HLZ
+					remove_core_of = NOC
+					remove_core_of = SVT
+					remove_core_of = STA
+					remove_core_of = SPW
+					remove_core_of = TEI
+					remove_core_of = FAU
+					remove_core_of = NRK
+					remove_core_of = SNF
+					remove_core_of = ARK
+					remove_core_of = WIS
+					remove_core_of = WSZ
+					remove_core_of = FTH
+					add_core_of = UNG
+				}
+		UNG = {
+			set_capital = 206
+		}
+		UNG = {
+create_country_leader = {
+	name = "Falstinnion Resmayer"
+	desc = "politics_ARK_resmayer_desc"
+	picture = "gfx/leaders/ARK/Portrait_ARK_Resmayer.dds"
+	ideology = monarchy_absolute_ideology
+	traits = {
+	}
+}
+	}
+	UNG = {
+create_country_leader = {
+	name = "Jithe Lafdaren"
+	desc = "politics_ARK_lafdaren_desc"
+	picture = "gfx/leaders/ARK/Portrait_ARK_Lafdaren.dds"
+	ideology = monarchy_constitutional_ideology
+	traits = {
+	}
+}
+	}
+	UNG = {
+create_country_leader = {
+	name = "Jithe Lafdaren"
+	desc = "politics_ARK_lafdaren_desc"
+	picture = "gfx/leaders/ARK/Portrait_ARK_Lafdaren.dds"
+	ideology = republic_aristocrat_ideology
+	traits = {
+	}
+}
+	}
+	UNG = {
+set_party_name = {
+    ideology = monarchy_absolute
+    name = ARK_monarchy_absolute_party
+}
+	}
+	UNG = {
+set_party_name = {
+    ideology = monarchy_constitutional
+    name = ARK_monarchy_constitutional_party
+}
+	}
+	UNG = {
+set_party_name = {
+    ideology = republic_aristocrat
+    name = ARK_monarchy_constitutional_party 
+}
+	}
+	}
+}
+}
+
+	WIS_restore_the_union = {
+		
+		icon = GFX_decision_restore_ungerdaler_union
+		
+		allowed = {
+			original_tag = WIS
+			has_dlc = "Waking the Tiger"
+			NOT = {
+				country_exists = UNG
+			}
+		}
+		
+		available = {
+			custom_trigger_tooltip = {
+			tooltip = restore_the_union_requirements_tt
+			is_subject = no
+			original_tag = WIS
+							OR = {
+								controls_state = 228
+								NOC = {
+									is_subject_of = WIS
+								}
+							}
+							OR = {
+								controls_state = 232
+								HLZ = {
+									is_subject_of = WIS
+								}
+							}
+							OR = {
+								controls_state = 284
+								NRK = {
+									is_subject_of = WIS
+								}
+							}
+							OR = {
+								controls_state = 225
+								TEI = {
+									is_subject_of = WIS
+								}
+							}
+							OR = {
+								controls_state = 227
+								SVT = {
+									is_subject_of = WIS
+								}
+							}
+							OR = {
+								controls_state = 226
+								SPW = {
+									is_subject_of = WIS
+								}
+							}
+							OR = {
+								controls_state = 233
+								FAU = {
+									is_subject_of = WIS
+								}
+							}
+							OR = {
+								controls_state = 224
+								SNF = {
+									is_subject_of = WIS
+								}
+							}
+							OR = {
+								controls_state = 192
+								STA = {
+									is_subject_of = WIS
+								}
+							}
+							OR = {
+								controls_state = 206
+								ARK = {
+									is_subject_of = WIS
+								}
+							}
+							OR = {
+								controls_state = 235
+								WSZ = {
+									is_subject_of = WIS
+								}
+							}
+							OR = {
+								controls_state = 236
+								FTH = {
+									is_subject_of = WIS
+								}
+							}
+			}
+		}
+		visible = {
+			original_tag = WIS
+			NOT = {
+				country_exists = UNG
+			}
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		complete_effect = {
+		custom_effect_tooltip = restore_the_union_effects_tt
+		hidden_effect = {
+			UNG = {
+					transfer_state = 293
+				}
+				UNG = {
+					change_tag_from = WIS
+				}
+				every_state = {
+					limit = {
+						OR = {
+							is_core_of = HLZ
+							is_core_of = NOC
+							is_core_of = SVT
+							is_core_of = STA
+							is_core_of = SPW
+							is_core_of = TEI
+							is_core_of = FAU
+							is_core_of = NRK
+							is_core_of = SNF
+							is_core_of = ARK
+							is_core_of = WIS
+							is_core_of = WSZ
+							is_core_of = FTH
+						}
+					}
+					UNG = {
+						transfer_state = PREV
+					}
+					remove_core_of = HLZ
+					remove_core_of = NOC
+					remove_core_of = SVT
+					remove_core_of = STA
+					remove_core_of = SPW
+					remove_core_of = TEI
+					remove_core_of = FAU
+					remove_core_of = NRK
+					remove_core_of = SNF
+					remove_core_of = ARK
+					remove_core_of = WIS
+					remove_core_of = WSZ
+					remove_core_of = FTH
+					add_core_of = UNG
+				}
+		UNG = {
+			set_capital = 234
+		}
+	UNG = {
+create_country_leader = {
+	name = "Lotte Treitschke"
+	desc = "politics_WIS_treitschke_desc"
+	picture = "gfx/leaders/WIS/Portrait_WIS_Treitschke.dds"
+	ideology = monarchy_constitutional_ideology
+	traits = {
+	}
+}
+	}
+	UNG = {
+create_country_leader = {
+	name = "Lotte Treitschke"
+	desc = "politics_WIS_treitschke_desc"
+	picture = "gfx/leaders/WIS/Portrait_WIS_Treitschke.dds"
+	ideology = monarchy_absolute_ideology
+	traits = {
+	}
+}
+	}
+	UNG = {
+create_country_leader = {
+	name = "Lotte Treitschke"
+	desc = "politics_WIS_treitschke_desc"
+	picture = "gfx/leaders/WIS/Portrait_WIS_Treitschke.dds"
+	ideology = republic_aristocrat_ideology
+	traits = {
+	}
+}
+	}
+	UNG = {
+set_party_name = {
+    ideology = monarchy_absolute
+    name = WIS_monarchy_absolute_party 
+}
+	}
+	UNG = {
+set_party_name = {
+    ideology = monarchy_constitutional
+    name = WIS_monarchy_constitutional_party
+}
+	}
+	UNG = {
+set_party_name = {
+    ideology = republic_aristocrat
+    name = WIS_monarchy_constitutional_party 
+}
+	}
+	}
+}
+}
+
+	FTH_restore_the_union = {
+		
+		icon = GFX_decision_restore_ungerdaler_union
+		
+		allowed = {
+			original_tag = FTH
+			has_dlc = "Waking the Tiger"
+			NOT = {
+				country_exists = UNG
+			}
+		}
+		
+		available = {
+			custom_trigger_tooltip = {
+			tooltip = restore_the_union_requirements_tt
+			is_subject = no
+			original_tag = FTH
+							OR = {
+								controls_state = 228
+								NOC = {
+									is_subject_of = FTH
+								}
+							}
+							OR = {
+								controls_state = 232
+								HLZ = {
+									is_subject_of = FTH
+								}
+							}
+							OR = {
+								controls_state = 284
+								NRK = {
+									is_subject_of = FTH
+								}
+							}
+							OR = {
+								controls_state = 225
+								TEI = {
+									is_subject_of = FTH
+								}
+							}
+							OR = {
+								controls_state = 227
+								SVT = {
+									is_subject_of = FTH
+								}
+							}
+							OR = {
+								controls_state = 226
+								SPW = {
+									is_subject_of = FTH
+								}
+							}
+							OR = {
+								controls_state = 233
+								FAU = {
+									is_subject_of = FTH
+								}
+							}
+							OR = {
+								controls_state = 224
+								SNF = {
+									is_subject_of = FTH
+								}
+							}
+							OR = {
+								controls_state = 192
+								STA = {
+									is_subject_of = FTH
+								}
+							}
+							OR = {
+								controls_state = 234
+								WIS = {
+									is_subject_of = FTH
+								}
+							}
+							OR = {
+								controls_state = 235
+								WSZ = {
+									is_subject_of = FTH
+								}
+							}
+							OR = {
+								controls_state = 206
+								ARK = {
+									is_subject_of = FTH
+								}
+							}
+			}
+		}
+		visible = {
+			original_tag = FTH
+			NOT = {
+				country_exists = UNG
+			}
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		complete_effect = {
+		custom_effect_tooltip = restore_the_union_effects_tt
+		hidden_effect = {
+			UNG = {
+					transfer_state = 293
+				}
+				UNG = {
+					change_tag_from = FTH
+				}
+				every_state = {
+					limit = {
+						OR = {
+							is_core_of = HLZ
+							is_core_of = NOC
+							is_core_of = SVT
+							is_core_of = STA
+							is_core_of = SPW
+							is_core_of = TEI
+							is_core_of = FAU
+							is_core_of = NRK
+							is_core_of = SNF
+							is_core_of = ARK
+							is_core_of = WIS
+							is_core_of = WSZ
+							is_core_of = FTH
+						}
+					}
+					UNG = {
+						transfer_state = PREV
+					}
+					remove_core_of = HLZ
+					remove_core_of = NOC
+					remove_core_of = SVT
+					remove_core_of = STA
+					remove_core_of = SPW
+					remove_core_of = TEI
+					remove_core_of = FAU
+					remove_core_of = NRK
+					remove_core_of = SNF
+					remove_core_of = ARK
+					remove_core_of = WIS
+					remove_core_of = WSZ
+					remove_core_of = FTH
+					add_core_of = UNG
+				}
+		UNG = {
+			set_capital = 236
+		}
+		UNG = {
+create_country_leader = {
+	name = "Alois Ehrenbaum"
+	desc = "politics_FTH_ehrenbaum_desc"
+	picture = "gfx/leaders/FTH/Portrait_FTH_Ehrenbaum.dds"
+	ideology = monarchy_constitutional_ideology
+	traits = {
+	}
+}
+	}
+	UNG = {
+create_country_leader = {
+	name = "Alois Ehrenbaum"
+	desc = "politics_FTH_ehrenbaum_desc"
+	picture = "gfx/leaders/FTH/Portrait_FTH_Ehrenbaum.dds"
+	ideology = monarchy_absolute_ideology
+	traits = {
+	}
+}
+	}
+	UNG = {
+create_country_leader = {
+	name = "Alois Ehrenbaum"
+	desc = "politics_FTH_ehrenbaum_desc"
+	picture = "gfx/leaders/FTH/Portrait_FTH_Ehrenbaum.dds"
+	ideology = republic_aristocrat_ideology
+	traits = {
+	}
+}
+	}
+	UNG = {
+set_party_name = {
+    ideology = monarchy_absolute
+    name = FTH_monarchy_absolute_party
+}
+	}
+	UNG = {
+set_party_name = {
+    ideology = monarchy_constitutional
+    name = FTH_monarchy_constitutional_party
+}
+	}
+	UNG = {
+set_party_name = {
+    ideology = republic_aristocrat
+    name = FTH_monarchy_constitutional_party 
+}
+	}
+	}
+}
+}
+
+	WSZ_restore_the_union = {
+		
+		icon = GFX_decision_restore_ungerdaler_union
+		
+		allowed = {
+			original_tag = WSZ
+			has_dlc = "Waking the Tiger"
+			NOT = {
+				country_exists = UNG
+			}
+		}
+		
+		available = {
+			custom_trigger_tooltip = {
+			tooltip = restore_the_union_requirements_tt
+			is_subject = no
+			original_tag = WSZ
+							OR = {
+								controls_state = 228
+								NOC = {
+									is_subject_of = WSZ
+								}
+							}
+							OR = {
+								controls_state = 232
+								HLZ = {
+									is_subject_of = WSZ
+								}
+							}
+							OR = {
+								controls_state = 284
+								NRK = {
+									is_subject_of = WSZ
+								}
+							}
+							OR = {
+								controls_state = 225
+								TEI = {
+									is_subject_of = WSZ
+								}
+							}
+							OR = {
+								controls_state = 227
+								SVT = {
+									is_subject_of = WSZ
+								}
+							}
+							OR = {
+								controls_state = 226
+								SPW = {
+									is_subject_of = WSZ
+								}
+							}
+							OR = {
+								controls_state = 233
+								FAU = {
+									is_subject_of = WSZ
+								}
+							}
+							OR = {
+								controls_state = 224
+								SNF = {
+									is_subject_of = WSZ
+								}
+							}
+							OR = {
+								controls_state = 192
+								STA = {
+									is_subject_of = WSZ
+								}
+							}
+							OR = {
+								controls_state = 234
+								WIS = {
+									is_subject_of = WSZ
+								}
+							}
+							OR = {
+								controls_state = 236
+								FTH = {
+									is_subject_of = WSZ
+								}
+							}
+							OR = {
+								controls_state = 206
+								ARK = {
+									is_subject_of = WSZ
+								}
+							}
+			}
+		}
+		visible = {
+			original_tag = WSZ
+			NOT = {
+				country_exists = UNG
+			}
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		complete_effect = {
+		custom_effect_tooltip = restore_the_union_effects_tt
+		hidden_effect = {
+			UNG = {
+					transfer_state = 293
+				}
+				UNG = {
+					change_tag_from = WSZ
+				}
+				every_state = {
+					limit = {
+						OR = {
+							is_core_of = HLZ
+							is_core_of = NOC
+							is_core_of = SVT
+							is_core_of = STA
+							is_core_of = SPW
+							is_core_of = TEI
+							is_core_of = FAU
+							is_core_of = NRK
+							is_core_of = SNF
+							is_core_of = ARK
+							is_core_of = WIS
+							is_core_of = WSZ
+							is_core_of = FTH
+						}
+					}
+					UNG = {
+						transfer_state = PREV
+					}
+					remove_core_of = HLZ
+					remove_core_of = NOC
+					remove_core_of = SVT
+					remove_core_of = STA
+					remove_core_of = SPW
+					remove_core_of = TEI
+					remove_core_of = FAU
+					remove_core_of = NRK
+					remove_core_of = SNF
+					remove_core_of = ARK
+					remove_core_of = WIS
+					remove_core_of = WSZ
+					remove_core_of = FTH
+					add_core_of = UNG
+				}
+		UNG = {
+			set_capital = 235
+		}
+		UNG = {
+create_country_leader = {
+	name = "Kristin Kindl"
+	desc = "politics_WSZ_kindl_desc"
+	picture = "gfx/leaders/WSZ/Portrait_WSZ_Kindl.dds"
+	ideology = monarchy_constitutional_ideology
+	traits = {
+	}
+}
+	}
+	UNG = {
+create_country_leader = {
+	name = "Kristin Kindl"
+	desc = "politics_WSZ_kindl_desc"
+	picture = "gfx/leaders/WSZ/Portrait_WSZ_Kindl.dds"
+	ideology = monarchy_absolute_ideology
+	traits = {
+	}
+}
+	}
+	UNG = {
+create_country_leader = {
+	name = "Kristin Kindl"
+	desc = "politics_WSZ_kindl_desc"
+	picture = "gfx/leaders/WSZ/Portrait_WSZ_Kindl.dds"
+	ideology = republic_aristocrat_ideology
+	traits = {
+	}
+}
+	}
+	UNG = {
+set_party_name = {
+    ideology = monarchy_absolute
+    name = WSZ_monarchy_absolute_party
+}
+	}
+	UNG = {
+set_party_name = {
+    ideology = monarchy_constitutional
+    name = WSZ_monarchy_constitutional_party
+}
+	}
+	UNG = {
+set_party_name = {
+    ideology = republic_aristocrat
+    name = WSZ_monarchy_constitutional_party 
+}
+	}
+	}
+}
+}

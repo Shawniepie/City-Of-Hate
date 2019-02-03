@@ -1,0 +1,483 @@
+# Written by Henrik "Groogy" Hansson
+
+# befriend
+# conquer
+# antagonize
+# build_ship
+# build_army
+# unit_ratio
+# build_building
+# research_tech
+# garrison
+# protect
+# influence
+# contain
+# area_priority
+
+default_mountaineers_production = {
+	enable = {
+		NOT = { original_tag = SKA }
+		ai_wants_divisions > 11 #Decreasing the amount of mountaineers the AI wants
+	}
+	abort = {
+		ai_wants_divisions < 12 #Decreasing the amount of mountaineers the AI wants
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = mountaineers
+		value = 3
+	}
+}
+
+#Force the AI to actually have an army
+build_army = {
+	enable = {
+		has_manpower > 0
+		num_divisions < 31
+		is_major = no
+	}
+
+	ai_strategy = {
+		type = build_army
+		id = infantry
+		value = 5000
+	}
+	
+	abort = {
+		has_manpower < 1
+		num_divisions > 29
+		is_major = yes
+	}
+}
+
+#Force AI majors to actually have a significant army
+build_army = {
+	enable = {
+		has_manpower > 0
+		num_divisions < 61
+		is_major = yes
+	}
+
+	ai_strategy = {
+		type = build_army
+		id = infantry
+		value = 5000
+	}
+	
+	abort = {
+		has_manpower < 1
+		num_divisions > 59
+		is_major = no
+	}
+}
+
+#Freiprinzen will war each other if there's no Hochprinz or Hochprinzessin to keep them in line
+unify_ungerdal = {
+	enable = {
+		NOT = {
+			country_exists = UNG
+		}
+		is_puppet = no
+		OR = {
+			tag = HLZ
+			tag = NOC
+			tag = SVT
+			tag = SPW
+			tag = TEI
+			tag = NRK
+			tag = STA
+			tag = FAU
+			tag = SNF
+			tag = ARK
+			tag = WIS
+			tag = WSZ
+			tag = FTH
+		}
+	}
+	
+	abort = {
+		OR = {
+			is_puppet = yes
+			country_exists = UNG
+		}
+	}
+	
+		ai_strategy = {
+		type = declare_war
+		tag = HLZ
+		value = 150
+	}
+	
+	ai_strategy = {
+		type = conquer
+		tag = HLZ
+		value = 150
+	}
+	
+	ai_strategy = {
+		type = invade
+		tag = HLZ
+		value = 150
+	}
+	
+	ai_strategy = {
+		type = declare_war
+		tag = NOC
+		value = 150
+	}
+	
+	ai_strategy = {
+		type = conquer
+		tag = NOC
+		value = 150
+	}
+	
+	ai_strategy = {
+		type = invade
+		tag = NOC
+		value = 150
+	}
+	
+	ai_strategy = {
+		type = declare_war
+		tag = SVT
+		value = 150
+	}
+	
+	ai_strategy = {
+		type = invade
+		tag = SVT
+		value = 150
+	}
+	
+	ai_strategy = {
+		type = conquer
+		tag = SVT
+		value = 150
+	}
+	ai_strategy = {
+		type = declare_war
+		tag = SPW
+		value = 150
+	}
+	
+	ai_strategy = {
+		type = invade
+		tag = SPW
+		value = 150
+	}
+	
+	ai_strategy = {
+		type = conquer
+		tag = SPW
+		value = 150
+	}
+	
+	ai_strategy = {
+		type = declare_war
+		tag = TEI
+		value = 150
+	}
+	
+	ai_strategy = {
+		type = invade
+		tag = TEI
+		value = 150
+	}
+	
+	ai_strategy = {
+		type = conquer
+		tag = TEI
+		value = 150
+	}
+	
+	ai_strategy = {
+		type = declare_war
+		tag = NRK
+		value = 150
+	}
+	
+	ai_strategy = {
+		type = invade
+		tag = NRK
+		value = 150
+	}
+	
+	ai_strategy = {
+		type = conquer
+		tag = NRK
+		value = 150
+	}
+	
+	ai_strategy = {
+		type = declare_war
+		tag = STA
+		value = 150
+	}
+	
+	ai_strategy = {
+		type = invade
+		tag = STA
+		value = 150
+	}
+	
+	ai_strategy = {
+		type = conquer
+		tag = STA
+		value = 150
+	}
+	
+	ai_strategy = {
+		type = declare_war
+		tag = FAU
+		value = 150
+	}
+	
+	ai_strategy = {
+		type = invade
+		tag = FAU
+		value = 150
+	}
+	
+	ai_strategy = {
+		type = conquer
+		tag = FAU
+		value = 150
+	}
+	
+	ai_strategy = {
+		type = declare_war
+		tag = SNF
+		value = 150
+	}
+	
+	ai_strategy = {
+		type = invade
+		tag = SNF
+		value = 150
+	}
+	
+	ai_strategy = {
+		type = conquer
+		tag = SNF
+		value = 150
+	}
+	
+	ai_strategy = {
+		type = declare_war
+		tag = ARK
+		value = 150
+	}
+
+	ai_strategy = {
+		type = conquer
+		tag = ARK
+		value = 150
+	}
+	
+	ai_strategy = {
+		type = invade
+		tag = ARK
+		value = 150
+	}
+	
+	ai_strategy = {
+		type = declare_war
+		tag = WIS
+		value = 150
+	}
+	
+	ai_strategy = {
+		type = conquer
+		tag = WIS
+		value = 150
+	}
+	
+	ai_strategy = {
+		type = invade
+		tag = WIS
+		value = 150
+	}
+	
+	ai_strategy = {
+		type = declare_war
+		tag = WSZ
+		value = 150
+	}
+	
+	ai_strategy = {
+		type = conquer
+		tag = WSZ
+		value = 150
+	}
+	
+	ai_strategy = {
+		type = invade
+		tag = WSZ
+		value = 150
+	}
+	
+	ai_strategy = {
+		type = declare_war
+		tag = FTH
+		value = 150
+	}
+	
+	ai_strategy = {
+		type = conquer
+		tag = FTH
+		value = 150
+	}
+	
+	ai_strategy = {
+		type = invade
+		tag = FTH
+		value = 150
+	}
+}
+
+#Some vanilla AI behaviour that seemed smart to keep around
+default_stockpile_management = {
+	enable = {
+		num_divisions > 150
+	}
+
+	abort = {
+		num_divisions < 130
+	}
+
+	ai_strategy = {
+		type = equipment_stockpile_surplus_ratio
+		value = 35 # double base stockpile #from 25 to 35
+	}
+}
+
+save_admiral_pp_for_later = {
+	enable = {
+		has_war = no
+		threat < 0.3
+		has_political_power < 200		
+	}
+	abort = {
+		OR = {
+			has_war = yes	
+			threat > 0.3
+			has_political_power > 200
+		}
+	}
+
+	ai_strategy = { # dont burn PP on admirals (can still get free ones)
+		type = pp_spend_priority
+		id = admiral
+		value = -100
+	}
+}
+
+do_not_waste_pp_if_saving_for_manpower_laws = {
+
+	enable = {
+		manpower_per_military_factory < 500
+		has_war = yes
+	}
+	abort = {
+		OR = {
+			manpower_per_military_factory > 500
+			has_war = no
+		}
+	}
+
+	ai_strategy = {
+		type = pp_spend_priority
+		id = relation
+		value = -9999
+	}
+
+	ai_strategy = {
+		type = pp_spend_priority
+		id = guarantee
+		value = -9999
+	}
+}
+
+default_unit_production = {
+	enable = {
+		always = yes
+		NOT = { original_tag = SKA }
+	}
+	
+	ai_strategy = {
+		type = role_ratio
+		id = paratroopers
+		value = 0
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = mountaineers
+		value = 0
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = cavalry
+		value = 10
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = garrison
+		value = 30
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = men_at_arms
+		value = 60
+	}
+}
+	
+	
+	# Naval unit factors
+	ai_strategy = {
+		type = unit_ratio
+		id = capital_ship
+		value = 20
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = submarine
+		value = 10
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = screen_ship
+		value = 30
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = convoy
+		value = 15
+	}
+}
+
+default_pp_spend_amount = {
+	enable = {
+		always = yes
+	}
+	
+	ai_strategy = {
+		type = pp_spend_amount
+		id = idea
+		value = 100
+	}
+	
+	ai_strategy = {
+		type = pp_spend_amount
+		id = decision
+		value = 100
+	}
+}

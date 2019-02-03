@@ -1,0 +1,44 @@
+commissiaries = {
+
+	icon = GFX_decision_category_commissiaries
+
+	allowed = {
+		always = yes
+	}
+}
+
+ORD_slave_economy = {
+	
+	icon = GFX_decision_category_subject_opposition
+	
+	allowed = {
+		always = yes
+	}
+}
+
+ORD_race_riots = {
+	
+	icon = GFX_decision_category_generic_fascism
+	
+	allowed = {
+		always = yes
+	}
+}
+
+ORD_noble_riots = {
+	
+	icon = GFX_decision_category_generic_monarchism
+	
+	allowed = {
+		always = yes
+	}
+}
+
+rally_princes = {
+
+	icon = GFX_decision_category_wiederherstellung
+
+	allowed = {
+		always = yes
+	}
+}

@@ -1,0 +1,27 @@
+# befriend
+# conquer
+# antagonize
+# build_ship
+# build_army
+# unit_ratio
+# build_building
+# research_tech
+# garrison
+# protect
+# influence
+
+viva_la_revolucion = {
+	enable = {
+		original_tag = HLZ
+		has_government = republic_peasant
+		country_exists = RTH
+		RTH = {
+			has_government = republic_peasant
+		}
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "RTH"
+		value = 200
+	}
+}

@@ -1,0 +1,232 @@
+#AI peace deal logic, the real peace deals happen in the events.
+#Eat as much as possible without making the map ugly
+#Bastardized KR code since they know what they're doing, unlike me. Massive shoutout to the Kaiserreich devs for being competent and wise sages of code.
+peace_default = {
+	enable = {
+		always = yes
+	}
+	
+	annex_randomness = 0
+	liberate_randomness = 0
+	puppet_randomness = 0
+	take_states_randomness = 0
+	force_government_randomness = 0
+	
+	# ROOT = Taker, FROM = Giver
+	annex = {
+		factor = 500
+	}
+	liberate = {
+		factor = 0
+	}
+	puppet = {
+		factor = 0
+	}
+	take_states = {
+		factor = 50
+		
+		#Leave Rthauiaur to the Ordorians
+		modifier = {
+			factor = 0
+			OR = {
+				tag = UNG
+				tag = GMR
+				is_puppet_of = UNG
+			}
+			has_war_with = RTH
+			is_in_faction_with = ORD
+		}
+		
+		#Skaelinger doesn't take Rthaur land
+		modifier = {
+			factor = 0
+			tag = SKA
+			has_war_with = ORD
+		}
+		
+		#Leave ordoria to the Rthaur
+		modifier = {
+			factor = 0
+			OR = {
+				tag = SKA
+			}
+			has_war_with = ORD
+			RTH = {
+				has_war_with = ORD
+			}
+		}
+		
+		# prioritize cores and claims
+		modifier = {
+			factor = 25
+			FROM = { 
+				is_core_of = ROOT
+			}
+		}
+		modifier = {
+			factor = 15
+			FROM = {
+				NOT = { 
+					is_core_of = ROOT
+				}
+				is_claimed_by = ROOT
+			}
+		}
+		
+		# prioritize neighboring states
+		modifier = {
+			factor = 20
+			FROM = {
+				num_owned_neighbour_states = {
+					count > 0
+					owner = ROOT
+				}
+			}
+		}
+
+		# prefer states next to ones we've already claimed
+		modifier = {
+			factor = 20
+			FROM = {
+				num_claimed_peace_conference_neighbour_states = {
+					count > 0
+					owner = ROOT
+				}
+			}
+		}
+
+		# prioritize states closer to capital
+		modifier = {
+			factor = 5.0
+			capital_scope = {
+				distance_to = {
+					target = FROM
+					value < 25
+				}
+			}
+		}
+		modifier = {
+			factor = 4.0
+			capital_scope = {
+				NOT = { 
+					distance_to = { 
+						target = FROM 
+						value < 25
+					}
+				}
+				distance_to = {
+					target = FROM
+					value < 50
+				}
+			}
+		}
+		modifier = {
+			factor = 3.0
+			capital_scope = {
+				NOT = { 
+					distance_to = { 
+						target = FROM 
+						value < 50
+					}
+				}
+				distance_to = {
+					target = FROM
+					value < 75
+				}
+			}
+		}
+		modifier = {
+			factor = 2.0
+			capital_scope = {
+				NOT = { 
+					distance_to = { 
+						target = FROM 
+						value < 75
+					}
+				}
+				distance_to = {
+					target = FROM
+					value < 100
+				}
+			}
+		}
+		modifier = {
+			factor = 1.5
+			capital_scope = {
+				NOT = { 
+					distance_to = { 
+						target = FROM 
+						value < 100
+					}
+				}
+				distance_to = {
+					target = FROM
+					value < 150
+				}
+			}
+		}
+		modifier = {
+			factor = 1.25
+			capital_scope = {
+				NOT = { 
+					distance_to = { 
+						target = FROM 
+						value < 150
+					}
+				}
+				distance_to = {
+					target = FROM
+					value < 200
+				}
+			}
+		}
+		modifier = {
+			factor = 0.75
+			capital_scope = {
+				NOT = { 
+					distance_to = { 
+						target = FROM 
+						value > 400
+					}
+				}
+				distance_to = {
+					target = FROM
+					value < 300
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			capital_scope = {
+				distance_to = {
+					target = FROM
+					value > 400
+				}
+			}
+		}
+	}
+	# prioritize controlled states
+	modifier = {
+		factor = 1.5
+		FROM = { 
+			is_controlled_by = ROOT
+		}
+	}
+	force_government = {
+		factor = 0
+	}
+	# de-prioritize states on a different continent unless it's important or we already own land there
+	modifier = {
+		factor = 0.5
+		FROM = {
+			NOT = { 
+				is_in_home_area = yes
+			}
+			NOT = {
+				num_owned_neighbour_states = {
+					count > 0 owner = ROOT
+				}
+			}
+		}
+	}
+}

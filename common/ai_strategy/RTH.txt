@@ -1,0 +1,32 @@
+# befriend
+# conquer
+# antagonize
+# build_ship
+# build_army
+# unit_ratio
+# build_building
+# research_tech
+# garrison
+# protect
+# influence
+
+skaelinger_buddies = {
+	enable = {
+		original_tag = RTH
+		NOT = {
+			has_government = puritan
+		}
+		country_exists = SKA
+		has_opinion_modifier = staunch_allies
+	}
+	ai_strategy = {
+		type = befriend
+		id = "SKA"			
+		value = 200
+	}
+	ai_strategy = {
+		type = alliance
+		id = "SKA"			
+		value = 200
+	}
+}

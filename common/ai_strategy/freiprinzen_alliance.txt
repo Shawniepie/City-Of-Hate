@@ -1,0 +1,193 @@
+# befriend
+# conquer
+# antagonize
+# build_ship
+# build_army
+# unit_ratio
+# build_building
+# research_tech
+# garrison
+# protect
+# influence
+
+HLZ_freiprinzen_buddies = {
+	enable = {
+		has_country_flag = joined_freiprinzer_alliance
+		HLZ = {
+			is_faction_leader = yes
+		}
+	}
+	ai_strategy = {
+		type = alliance
+		id = "HLZ"			
+		value = 200
+	}
+}
+
+NOC_freiprinzen_buddies = {
+	enable = {
+		has_country_flag = joined_freiprinzer_alliance
+		NOC = {
+			is_faction_leader = yes
+		}
+	}
+	ai_strategy = {
+		type = alliance
+		id = "NOC"			
+		value = 200
+	}
+}
+
+SPW_freiprinzen_buddies = {
+	enable = {
+		has_country_flag = joined_freiprinzer_alliance
+		SPW = {
+			is_faction_leader = yes
+		}
+	}
+	ai_strategy = {
+		type = alliance
+		id = "SPW"			
+		value = 200
+	}
+}
+
+SVT_freiprinzen_buddies = {
+	enable = {
+		has_country_flag = joined_freiprinzer_alliance
+		SVT = {
+			is_faction_leader = yes
+		}
+	}
+	ai_strategy = {
+		type = alliance
+		id = "SVT"			
+		value = 200
+	}
+}
+
+STA_freiprinzen_buddies = {
+	enable = {
+		has_country_flag = joined_freiprinzer_alliance
+		STA = {
+			is_faction_leader = yes
+		}
+	}
+	ai_strategy = {
+		type = alliance
+		id = "STA"			
+		value = 200
+	}
+}
+
+NRK_freiprinzen_buddies = {
+	enable = {
+		has_country_flag = joined_freiprinzer_alliance
+		NRK = {
+			is_faction_leader = yes
+		}
+	}
+	ai_strategy = {
+		type = alliance
+		id = "NRK"			
+		value = 200
+	}
+}
+
+TEI_freiprinzen_buddies = {
+	enable = {
+		has_country_flag = joined_freiprinzer_alliance
+		TEI = {
+			is_faction_leader = yes
+		}
+	}
+	ai_strategy = {
+		type = alliance
+		id = "TEI"			
+		value = 200
+	}
+}
+
+SNF_freiprinzen_buddies = {
+	enable = {
+		has_country_flag = joined_freiprinzer_alliance
+		SNF = {
+			is_faction_leader = yes
+		}
+	}
+	ai_strategy = {
+		type = alliance
+		id = "SNF"			
+		value = 200
+	}
+}
+
+FAU_freiprinzen_buddies = {
+	enable = {
+		has_country_flag = joined_freiprinzer_alliance
+		FAU = {
+			is_faction_leader = yes
+		}
+	}
+	ai_strategy = {
+		type = alliance
+		id = "FAU"			
+		value = 200
+	}
+}
+
+ARK_freiprinzen_buddies = {
+	enable = {
+		has_country_flag = joined_freiprinzer_alliance
+		ARK = {
+			is_faction_leader = yes
+		}
+	}
+	ai_strategy = {
+		type = alliance
+		id = "ARK"			
+		value = 200
+	}
+}
+
+WIS_freiprinzen_buddies = {
+	enable = {
+		has_country_flag = joined_freiprinzer_alliance
+		WIS = {
+			is_faction_leader = yes
+		}
+	}
+	ai_strategy = {
+		type = alliance
+		id = "WIS"			
+		value = 200
+	}
+}
+
+WSZ_freiprinzen_buddies = {
+	enable = {
+		has_country_flag = joined_freiprinzer_alliance
+		WSZ = {
+			is_faction_leader = yes
+		}
+	}
+	ai_strategy = {
+		type = alliance
+		id = "WSZ"			
+		value = 200
+	}
+}
+
+FTH_freiprinzen_buddies = {
+	enable = {
+		has_country_flag = joined_freiprinzer_alliance
+		FTH = {
+			is_faction_leader = yes
+		}
+	}
+	ai_strategy = {
+		type = alliance
+		id = "FTH"			
+		value = 200
+	}
+}

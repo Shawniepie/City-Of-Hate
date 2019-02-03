@@ -1,0 +1,40 @@
+leader_traits = {
+	
+	power_behind_throne = {
+		random = no
+		political_power_factor = 0.15
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	unyielding_defender = {
+		random = no
+		ai_focus_defense_factor = 0.3
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	zealous_crusader = {
+		random = no
+		ai_focus_aggressive_factor = 0.3
+		ai_badass_factor = 0.70
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	hero_of_the_revolution = {
+		random = no
+		army_core_attack_factor = 0.05
+		army_core_defence_factor = 0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

@@ -1,0 +1,8 @@
+ungerdaler_reunion = {
+
+	icon = GFX_decision_category_wiederherstellung
+
+	allowed = {
+		always = yes
+	}
+}

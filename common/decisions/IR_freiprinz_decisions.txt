@@ -1,0 +1,2927 @@
+rally_princes = {
+	
+	HLZ_rally_princes = {
+		
+		icon = GFX_decision_restore_ungerdaler_union
+		
+		fire_only_once = yes
+		
+		allowed = {
+			tag = HLZ
+			NOT = {
+				country_exists = UNG
+			}
+		}
+		
+		available = {
+			is_subject = no
+			has_capitulated = no
+			tag = HLZ
+			NOT = {
+				country_exists = UNG
+			}
+			NOT = {
+				any_country = {
+					has_country_flag = freiprinzen_allied
+				}
+			}
+			NOT = {
+				ORD = {
+					has_country_flag = ORD_union_shattered
+				}
+			}
+		}
+		visible = {
+			tag = HLZ
+			NOT = {
+				country_exists = UNG
+			}
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		complete_effect = {
+			create_faction = "freiprinztum_alliance"
+			set_country_flag = freiprinzen_allied
+			
+			if = {
+				limit = {
+					STA = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				STA = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					NOC = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				NOC = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					SVT = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				SVT = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					SPW = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				SPW = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					NRK = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				NRK = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					TEI = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				TEI = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					FAU = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				FAU = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					ARK = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				ARK = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					SNF = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				SNF = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					WIS = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				WIS = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					FTH = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				FTH = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			if = {
+				limit = {
+					WSZ = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				WSZ = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+		}
+	}
+	
+	STA_rally_princes = {
+		
+		icon = GFX_decision_restore_ungerdaler_union
+		
+		fire_only_once = yes
+		
+		allowed = {
+			tag = STA
+			NOT = {
+				country_exists = UNG
+			}
+		}
+		
+		available = {
+			is_subject = no
+			has_capitulated = no
+			tag = STA
+			NOT = {
+				country_exists = UNG
+			}
+			NOT = {
+				any_country = {
+					has_country_flag = freiprinzen_allied
+				}
+			}
+			NOT = {
+				ORD = {
+					has_country_flag = ORD_union_shattered
+				}
+			}
+		}
+		visible = {
+			tag = STA
+			NOT = {
+				country_exists = UNG
+			}
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		complete_effect = {
+			create_faction = "freiprinztum_alliance"
+			set_country_flag = freiprinzen_allied
+
+			if = {
+				limit = {
+					HLZ = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				HLZ = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					NOC = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				NOC = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					SVT = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				SVT = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					SPW = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				SPW = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					NRK = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				NRK = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					TEI = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				TEI = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					FAU = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				FAU = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					ARK = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				ARK = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					SNF = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				SNF = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					WIS = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				WIS = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					FTH = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				FTH = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			if = {
+				limit = {
+					WSZ = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				WSZ = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+		}
+	}
+	
+	NOC_rally_princes = {
+		
+		icon = GFX_decision_restore_ungerdaler_union
+		
+		fire_only_once = yes
+		
+		allowed = {
+			tag = NOC
+			NOT = {
+				country_exists = UNG
+			}
+		}
+		
+		available = {
+			is_subject = no
+			has_capitulated = no
+			tag = NOC
+			NOT = {
+				country_exists = UNG
+			}
+			NOT = {
+				any_country = {
+					has_country_flag = freiprinzen_allied
+				}
+			}
+			NOT = {
+				ORD = {
+					has_country_flag = ORD_union_shattered
+				}
+			}
+		}
+		visible = {
+			tag = NOC
+			NOT = {
+				country_exists = UNG
+			}
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		complete_effect = {
+			create_faction = "freiprinztum_alliance"
+			set_country_flag = freiprinzen_allied
+			
+			if = {
+				limit = {
+					STA = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				STA = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					HLZ = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				HLZ = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					SVT = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				SVT = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					SPW = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				SPW = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					NRK = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				NRK = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					TEI = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				TEI = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					FAU = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				FAU = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					ARK = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				ARK = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					SNF = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				SNF = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					WIS = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				WIS = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					FTH = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				FTH = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			if = {
+				limit = {
+					WSZ = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				WSZ = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+		}
+	}
+	
+	SVT_rally_princes = {
+		
+		icon = GFX_decision_restore_ungerdaler_union
+		
+		fire_only_once = yes
+		
+		allowed = {
+			tag = SVT
+			NOT = {
+				country_exists = UNG
+			}
+		}
+		
+		available = {
+			is_subject = no
+			has_capitulated = no
+			tag = SVT
+			NOT = {
+				country_exists = UNG
+			}
+			NOT = {
+				any_country = {
+					has_country_flag = freiprinzen_allied
+				}
+			}
+			NOT = {
+				ORD = {
+					has_country_flag = ORD_union_shattered
+				}
+			}
+		}
+		visible = {
+			tag = SVT
+			NOT = {
+				country_exists = UNG
+			}
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		complete_effect = {
+			create_faction = "freiprinztum_alliance"
+			set_country_flag = freiprinzen_allied
+			
+			if = {
+				limit = {
+					STA = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				STA = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					NOC = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				NOC = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					HLZ = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				HLZ = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					SPW = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				SPW = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					NRK = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				NRK = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					TEI = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				TEI = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					FAU = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				FAU = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					ARK = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				ARK = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					SNF = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				SNF = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					WIS = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				WIS = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					FTH = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				FTH = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			if = {
+				limit = {
+					WSZ = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				WSZ = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+		}
+	}
+	
+	SPW_rally_princes = {
+		
+		icon = GFX_decision_restore_ungerdaler_union
+		
+		fire_only_once = yes
+		
+		allowed = {
+			tag = SPW
+			NOT = {
+				country_exists = UNG
+			}
+		}
+		
+		available = {
+			is_subject = no
+			has_capitulated = no
+			tag = SPW
+			NOT = {
+				country_exists = UNG
+			}
+			NOT = {
+				any_country = {
+					has_country_flag = freiprinzen_allied
+				}
+			}
+			NOT = {
+				ORD = {
+					has_country_flag = ORD_union_shattered
+				}
+			}
+		}
+		visible = {
+			tag = SPW
+			NOT = {
+				country_exists = UNG
+			}
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		complete_effect = {
+			create_faction = "freiprinztum_alliance"
+			set_country_flag = freiprinzen_allied
+			
+			if = {
+				limit = {
+					STA = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				STA = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					NOC = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				NOC = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					SVT = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				SVT = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					HLZ = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				HLZ = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					NRK = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				NRK = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					TEI = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				TEI = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					FAU = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				FAU = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					ARK = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				ARK = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					SNF = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				SNF = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					WIS = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				WIS = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					FTH = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				FTH = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			if = {
+				limit = {
+					WSZ = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				WSZ = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+		}
+	}
+	
+	NRK_rally_princes = {
+		
+		icon = GFX_decision_restore_ungerdaler_union
+		
+		fire_only_once = yes
+		
+		allowed = {
+			tag = NRK
+			NOT = {
+				country_exists = UNG
+			}
+		}
+		
+		available = {
+			is_subject = no
+			has_capitulated = no
+			tag = NRK
+			NOT = {
+				country_exists = UNG
+			}
+			NOT = {
+				any_country = {
+					has_country_flag = freiprinzen_allied
+				}
+			}
+			NOT = {
+				ORD = {
+					has_country_flag = ORD_union_shattered
+				}
+			}
+		}
+		visible = {
+			tag = NRK
+			NOT = {
+				country_exists = UNG
+			}
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		complete_effect = {
+			create_faction = "freiprinztum_alliance"
+			set_country_flag = freiprinzen_allied
+			
+			if = {
+				limit = {
+					STA = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				STA = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					NOC = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				NOC = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					SVT = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				SVT = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					SPW = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				SPW = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					HLZ = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				HLZ = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					TEI = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				TEI = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					FAU = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				FAU = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					ARK = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				ARK = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					SNF = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				SNF = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					WIS = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				WIS = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					FTH = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				FTH = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			if = {
+				limit = {
+					WSZ = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				WSZ = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+		}
+	}
+	
+	TEI_rally_princes = {
+		
+		icon = GFX_decision_restore_ungerdaler_union
+		
+		fire_only_once = yes
+
+		allowed = {
+			tag = TEI
+			NOT = {
+				country_exists = UNG
+			}
+		}
+		
+		available = {
+			is_subject = no
+			has_capitulated = no
+			tag = TEI
+			NOT = {
+				country_exists = UNG
+			}
+			NOT = {
+				any_country = {
+					has_country_flag = freiprinzen_allied
+				}
+			}
+			NOT = {
+				ORD = {
+					has_country_flag = ORD_union_shattered
+				}
+			}
+		}
+		visible = {
+			tag = TEI
+			NOT = {
+				country_exists = UNG
+			}
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		complete_effect = {
+			create_faction = "freiprinztum_alliance"
+			set_country_flag = freiprinzen_allied
+			
+			if = {
+				limit = {
+					STA = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				STA = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					NOC = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				NOC = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					SVT = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				SVT = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					SPW = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				SPW = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					NRK = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				NRK = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					HLZ = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				HLZ = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					FAU = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				FAU = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					ARK = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				ARK = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					SNF = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				SNF = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					WIS = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				WIS = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					FTH = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				FTH = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			if = {
+				limit = {
+					WSZ = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				WSZ = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+		}
+	}
+	
+	FAU_rally_princes = {
+		
+		icon = GFX_decision_restore_ungerdaler_union
+		
+		fire_only_once = yes
+		
+		allowed = {
+			tag = FAU
+			NOT = {
+				country_exists = UNG
+			}
+		}
+		
+		available = {
+			is_subject = no
+			has_capitulated = no
+			tag = FAU
+			NOT = {
+				country_exists = UNG
+			}
+			NOT = {
+				any_country = {
+					has_country_flag = freiprinzen_allied
+				}
+			}
+			NOT = {
+				ORD = {
+					has_country_flag = ORD_union_shattered
+				}
+			}
+		}
+		visible = {
+			tag = FAU
+			NOT = {
+				country_exists = UNG
+			}
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		complete_effect = {
+			create_faction = "freiprinztum_alliance"
+			set_country_flag = freiprinzen_allied
+			
+			if = {
+				limit = {
+					STA = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				STA = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					NOC = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				NOC = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					SVT = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				SVT = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					SPW = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				SPW = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					NRK = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				NRK = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					HLZ = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				HLZ = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					HLZ = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				HLZ = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					ARK = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				ARK = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					SNF = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				SNF = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					WIS = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				WIS = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					FTH = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				FTH = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			if = {
+				limit = {
+					WSZ = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				WSZ = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+		}
+	}
+	
+	ARK_rally_princes = {
+		
+		icon = GFX_decision_restore_ungerdaler_union
+		
+		fire_only_once = yes
+		
+		allowed = {
+			tag = ARK
+			NOT = {
+				country_exists = UNG
+			}
+		}
+		
+		available = {
+			is_subject = no
+			has_capitulated = no
+			tag = ARK
+			NOT = {
+				country_exists = UNG
+			}
+			NOT = {
+				any_country = {
+					has_country_flag = freiprinzen_allied
+				}
+			}
+			NOT = {
+				ORD = {
+					has_country_flag = ORD_union_shattered
+				}
+			}
+		}
+		visible = {
+			tag = ARK
+			NOT = {
+				country_exists = UNG
+			}
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		complete_effect = {
+			create_faction = "freiprinztum_alliance"
+			set_country_flag = freiprinzen_allied
+			
+			if = {
+				limit = {
+					STA = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				STA = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					NOC = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				NOC = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					SVT = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				SVT = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					SPW = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				SPW = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					NRK = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				NRK = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					HLZ = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				HLZ = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					FAU = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				FAU = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					HLZ = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				HLZ = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					SNF = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				SNF = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					WIS = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				WIS = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					FTH = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				FTH = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			if = {
+				limit = {
+					WSZ = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				WSZ = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+		}
+	}
+	
+	SNF_rally_princes = {
+		
+		icon = GFX_decision_restore_ungerdaler_union
+		
+		fire_only_once = yes
+		
+		allowed = {
+			tag = SNF
+			NOT = {
+				country_exists = UNG
+			}
+		}
+		
+		available = {
+			is_subject = no
+			has_capitulated = no
+			tag = SNF
+			NOT = {
+				country_exists = UNG
+			}
+			NOT = {
+				any_country = {
+					has_country_flag = freiprinzen_allied
+				}
+			}
+			NOT = {
+				ORD = {
+					has_country_flag = ORD_union_shattered
+				}
+			}
+		}
+		visible = {
+			tag = SNF
+			NOT = {
+				country_exists = UNG
+			}
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		complete_effect = {
+			create_faction = "freiprinztum_alliance"
+			set_country_flag = freiprinzen_allied
+			
+			if = {
+				limit = {
+					STA = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				STA = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					NOC = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				NOC = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					SVT = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				SVT = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					SPW = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				SPW = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					NRK = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				NRK = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					HLZ = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				HLZ = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					FAU = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				FAU = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					ARK = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				ARK = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					HLZ = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				HLZ = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					WIS = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				WIS = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					FTH = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				FTH = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			if = {
+				limit = {
+					WSZ = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				WSZ = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+		}
+	}
+	
+	WIS_rally_princes = {
+		
+		icon = GFX_decision_restore_ungerdaler_union
+		
+		fire_only_once = yes
+		
+		allowed = {
+			tag = WIS
+			NOT = {
+				country_exists = UNG
+			}
+		}
+		
+		available = {
+			is_subject = no
+			has_capitulated = no
+			tag = WIS
+			NOT = {
+				country_exists = UNG
+			}
+			NOT = {
+				any_country = {
+					has_country_flag = freiprinzen_allied
+				}
+			}
+			NOT = {
+				ORD = {
+					has_country_flag = ORD_union_shattered
+				}
+			}
+		}
+		visible = {
+			tag = WIS
+			NOT = {
+				country_exists = UNG
+			}
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		complete_effect = {
+			create_faction = "freiprinztum_alliance"
+			set_country_flag = freiprinzen_allied
+			
+			if = {
+				limit = {
+					STA = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				STA = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					NOC = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				NOC = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					SVT = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				SVT = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					SPW = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				SPW = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					NRK = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				NRK = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					HLZ = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				HLZ = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					FAU = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				FAU = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					ARK = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				ARK = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					SNF = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				SNF = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					HLZ = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				HLZ = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					FTH = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				FTH = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			if = {
+				limit = {
+					WSZ = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				WSZ = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+		}
+	}
+	
+	FTH_rally_princes = {
+		
+		icon = GFX_decision_restore_ungerdaler_union
+		
+		fire_only_once = yes
+		
+		allowed = {
+			tag = FTH
+			NOT = {
+				country_exists = UNG
+			}
+		}
+		
+		available = {
+			is_subject = no
+			has_capitulated = no
+			tag = FTH
+			NOT = {
+				country_exists = UNG
+			}
+			NOT = {
+				any_country = {
+					has_country_flag = freiprinzen_allied
+				}
+			}
+			NOT = {
+				ORD = {
+					has_country_flag = ORD_union_shattered
+				}
+			}
+		}
+		visible = {
+			tag = FTH
+			NOT = {
+				country_exists = UNG
+			}
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		complete_effect = {
+			create_faction = "freiprinztum_alliance"
+			set_country_flag = freiprinzen_allied
+			
+			if = {
+				limit = {
+					STA = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				STA = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					NOC = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				NOC = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					SVT = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				SVT = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					SPW = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				SPW = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					NRK = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				NRK = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					HLZ = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				HLZ = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					FAU = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				FAU = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					ARK = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				ARK = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					SNF = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				SNF = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					WIS = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				WIS = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					HLZ = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				HLZ = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			if = {
+				limit = {
+					WSZ = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				WSZ = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+		}
+	}
+	
+	WSZ_rally_princes = {
+		
+		icon = GFX_decision_restore_ungerdaler_union
+		
+		fire_only_once = yes
+		
+		allowed = {
+			tag = WSZ
+			NOT = {
+				country_exists = UNG
+			}
+		}
+		
+		available = {
+			is_subject = no
+			has_capitulated = no
+			tag = WSZ
+			NOT = {
+				country_exists = UNG
+			}
+			NOT = {
+				any_country = {
+					has_country_flag = freiprinzen_allied
+				}
+			}
+			NOT = {
+				ORD = {
+					has_country_flag = ORD_union_shattered
+				}
+			}
+		}
+		visible = {
+			tag = WSZ
+			NOT = {
+				country_exists = UNG
+			}
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		complete_effect = {
+			create_faction = "freiprinztum_alliance"
+			set_country_flag = freiprinzen_allied
+			
+			if = {
+				limit = {
+					STA = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				STA = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					NOC = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				NOC = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					SVT = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				SVT = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					SPW = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				SPW = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					NRK = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				NRK = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					HLZ = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				HLZ = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					FAU = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				FAU = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					ARK = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				ARK = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					SNF = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				SNF = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					WIS = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				WIS = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					FTH = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				FTH = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+			if = {
+				limit = {
+					HLZ = {
+						has_capitulated = no
+						is_subject = no
+					}
+				}
+				HLZ = {
+					country_event = {
+						id = alliance.1
+						days = 3
+					}
+				}
+			}
+		}
+	}
+}

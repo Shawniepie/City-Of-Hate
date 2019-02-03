@@ -1,0 +1,85 @@
+bookmarks = {
+	bookmark = {
+		name = "CITY_OF_HATE_NAME"
+		desc = "CITY_OF_HATE_DESC"
+		date = 1936.1.1.12
+		picture = "GFX_select_date_1936"
+		default_country = "ORD"
+		default = yes
+		
+		"GMR"={
+			history = "GMR_CITY_OF_HATE_DESC"
+			ideology = monarchy_absolute	 
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+		
+		"UNG"={
+			history = "UNG_CITY_OF_HATE_DESC"
+			ideology = monarchy_constitutional
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+
+		"ORD"={
+			history = "ORD_CITY_OF_HATE_DESC"
+			ideology = 	puritan
+			ideas = {
+				ORD_rthaur_rebellion
+				ORD_disrupted_industry
+			}
+			focuses = {
+				ORD_manifest_destiny
+				ORD_dominance
+				ORD_destabilize_south
+			}
+		}
+		
+		
+		
+		#Minors
+		"SKA"={
+			history = "SKA_CITY_OF_HATE_DESC"
+			ideology = monarchy_constitutional	 
+			minor = yes
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+		
+		"RTH"={
+			history = "RTH_CITY_OF_HATE_DESC"
+			ideology = republic_peasant	 
+			minor = yes
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+		
+		"HLZ"={
+			history = "HLZ_CITY_OF_HATE_DESC"
+			ideology = puritan
+			minor = yes
+			ideas = {
+				rosenbluts_evil
+				widespread_famine
+			}
+			focuses = {
+				HLZ_last_straw
+				HLZ_aristocrats_in_soup_kitchens
+				HLZ_co_government
+			}
+		}
+		
+		effect = {
+			randomize_weather = 22345 # <- Obligatory in every bookmark !
+			#123 = { rain_light = yes }
+		}
+	}
+}

@@ -1,0 +1,37 @@
+# befriend
+# conquer
+# antagonize
+# build_ship
+# build_army
+# unit_ratio
+# build_building
+# research_tech
+# garrison
+# protect
+# influence
+
+ordorian_buddies = {
+	enable = {
+		original_tag = UNG
+		country_exists = ORD
+		ORD = {
+			has_country_flag = ORD_pact_with_union
+		}
+	}
+	abort = {
+		ORD = {
+			has_country_flag = ordoria_backstab
+		}
+	}
+	
+	ai_strategy = {
+		type = befriend
+		id = "ORD"			
+		value = 200
+	}
+	ai_strategy = {
+		type = alliance
+		id = "ORD"			
+		value = 200
+	}	
+}

@@ -1,0 +1,35 @@
+
+SKA_OSG = {
+	color = rgb { 170 213 31 }
+	color_ui = rgb { 179 219 39 }
+}
+
+STA_OSG = {
+	color = rgb { 170 213 31 }
+	color_ui = rgb { 179 219 39 }
+}
+
+NOC_OSG = {
+	color = rgb { 170 213 31 }
+	color_ui = rgb { 179 219 39 }
+}
+
+WIS_OSG = {
+	color = rgb { 170 213 31 }
+	color_ui = rgb { 179 219 39 }
+}
+
+NAS_OSG = {
+	color = rgb { 170 213 31 }
+	color_ui = rgb { 179 219 39 }
+}
+
+TRI_OSG = {
+	color = rgb { 170 213 31 }
+	color_ui = rgb { 179 219 39 }
+}
+
+IRT_OSG = {
+	color = rgb { 170 213 31 }
+	color_ui = rgb { 179 219 39 }
+}
