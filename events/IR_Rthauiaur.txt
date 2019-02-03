@@ -1,0 +1,536 @@
+﻿### RTHAUR EVENTS
+
+add_namespace = rth
+
+### ORDORIAN MEDDLING EVENTS
+
+country_event = {#Ordorian Influence
+	id = rth.1
+	title = rth.1.t
+	desc = rth.1.d
+	picture = GFX_report_event_fascist_militia
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {#Damn
+		name = rth.1.a
+		add_timed_idea = {
+			idea = RTH_ordorian_influence_idea
+			days = 150
+		}
+		add_stability = -0.05
+		add_political_power = -20
+	}
+}
+
+country_event = {#Pro-Ordorian Coup
+	id = rth.2
+	title = rth.2.t
+	desc = rth.2.d
+	picture = GFX_report_event_ger_civil_war
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { #Rosite
+		name = rth.2.a
+		ai_chance = {
+			factor = 0
+		}
+		add_stability = -0.15
+		add_war_support = 0.15
+		add_popularity = {
+			ideology = puritan
+			popularity = -0.35
+		}
+		hidden_effect = {
+			delete_unit_template_and_units = {
+				division_template = "Rose Wardens"
+			}
+			delete_unit_template_and_units = {
+				division_template = "Peasant's Guard"
+			}
+			delete_unit_template_and_units = {
+				division_template = "Outrider Watchers"
+			}
+			load_oob = "RTH_civilwar"
+		}
+		
+		hidden_effect = {
+
+			EOR = {
+				add_state_core = 122
+				add_state_core = 131
+				add_state_core = 142
+				add_state_core = 139
+				add_state_core = 123
+				add_state_core = 125
+				add_state_core = 126
+				add_state_core = 127
+				add_state_core = 129
+				add_state_core = 130
+				add_state_core = 124
+				
+				add_state_core = 141
+				add_state_core = 133
+				add_state_core = 134
+				add_state_core = 132
+				add_state_core = 118
+				add_state_core = 140
+				add_state_core = 138
+				add_state_core = 137
+				add_state_core = 145
+				add_state_core = 128
+				add_state_core = 143
+				add_state_core = 144
+				add_state_core = 135
+				add_state_core = 136
+				add_state_core = 119
+				
+				transfer_state = 122
+				transfer_state = 131
+				transfer_state = 142
+				transfer_state = 139
+				transfer_state = 123
+				transfer_state = 125
+				transfer_state = 126
+				transfer_state = 127
+				transfer_state = 129
+				transfer_state = 130
+				transfer_state = 124
+				
+				load_oob = "EOR_civilwar"
+			}
+		}
+		hidden_effect = {
+			ORD = {
+				puppet = EOR
+			}
+			EOR = {
+				set_politics = {
+					parties = {
+						monarchy_absolute= { 
+							popularity = 15
+						}
+
+						monarchy_constitutional = {
+							popularity = 4
+						}
+		
+						republic_peasant = {
+							popularity = 0
+						}
+						republic_aristocrat = {
+							popularity = 15
+						}
+						republic_merchant = {
+							popularity = 0
+						}
+						theocrat = {
+							popularity = 2
+						}
+						puritan = {
+							popularity = 64
+						}
+					}
+					ruling_party = puritan
+				}
+			}
+		}
+		
+		EOR = {
+			declare_war_on = {
+				target = RTH
+				type = annex_everything
+			}
+		}
+	}
+	
+	option = { #Puritan
+		name = rth.2.b
+		ai_chance = {
+			factor = 0
+		}
+		custom_effect_tooltip = rthaur_ordorian_domination
+		add_stability = -0.15
+		add_war_support = 0.15
+		add_popularity = {
+			ideology = puritan
+			popularity = -0.35
+		}
+		hidden_effect = {
+			delete_unit_template_and_units = {
+				division_template = "Rose Wardens"
+			}
+			delete_unit_template_and_units = {
+				division_template = "Peasant's Guard"
+			}
+			delete_unit_template_and_units = {
+				division_template = "Outrider Watchers"
+			}
+			load_oob = "RTH_civilwar"
+		}
+		
+		hidden_effect = {
+			remove_state_core = 122
+			remove_state_core = 131
+			remove_state_core = 142
+			remove_state_core = 139
+			remove_state_core = 123
+			remove_state_core = 125
+			remove_state_core = 126
+			remove_state_core = 127
+			remove_state_core = 129
+			remove_state_core = 130
+			remove_state_core = 124
+
+			EOR = {
+				add_state_core = 122
+				add_state_core = 131
+				add_state_core = 142
+				add_state_core = 139
+				add_state_core = 123
+				add_state_core = 125
+				add_state_core = 126
+				add_state_core = 127
+				add_state_core = 129
+				add_state_core = 130
+				add_state_core = 124
+				
+				transfer_state = 122
+				transfer_state = 131
+				transfer_state = 142
+				transfer_state = 139
+				transfer_state = 123
+				transfer_state = 125
+				transfer_state = 126
+				transfer_state = 127
+				transfer_state = 129
+				transfer_state = 130
+				transfer_state = 124
+				
+				load_oob = "EOR_civilwar"
+			}
+			
+			EOR = {
+				change_tag_from = RTH
+			}
+		}
+		ORD = {
+			puppet = EOR
+		}
+		hidden_effect = {
+			set_politics = {
+				parties = {
+					monarchy_absolute= { 
+						popularity = 15
+					}
+					monarchy_constitutional = {
+						popularity = 4
+					}	
+					republic_peasant = {
+						popularity = 0
+					}
+					republic_aristocrat = {
+						popularity = 15
+					}
+					republic_merchant = {
+						popularity = 0
+					}
+					theocrat = {
+						popularity = 2
+					}
+					puritan = {
+						popularity = 64
+					}
+				}
+				ruling_party = puritan
+			}
+		}
+		declare_war_on = {
+			target = RTH
+			type = annex_everything
+		}
+	}
+}
+
+country_event = { #Skaelinger Abandons Us
+	id = rth.3
+	title = rth.3.t
+	desc = rth.3.d
+	picture = GFX_report_event_german_inspect_troops
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { #Fuck
+		name = rth.3.a
+		add_stability = -0.05
+		add_war_support = -0.1
+		add_political_power = -10
+		diplomatic_relation = {
+			country = SKA
+			relation = guarantee
+			active = no
+		}
+		diplomatic_relation = {
+			country = SKA
+			relation = military_access
+			active = no
+		}	
+	remove_opinion_modifier = {
+			target = SKA
+			modifier = staunch_allies
+		}
+	}
+}
+
+country_event = { #Claim Ordoria
+	id = rth.4
+	title = rth.4.t
+	desc = rth.4.d
+	picture = GFX_report_event_generic_battle
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = RTH
+		has_war_with = ORD
+	}
+	
+	option = { #Let's wreck shit
+		name = rth.4.a
+		hidden_effect = {
+			every_state = {
+				limit = {
+					is_core_of = ORD
+				}
+				add_claim_by = RTH
+			}
+		}
+	}
+}
+
+country_event = { #Annex Ordoria
+	id = rth.5
+	title = rth.5.t
+	desc = rth.5.d
+	picture = GFX_report_event_french_resistance_02
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = RTH
+		OR = {
+			AND = {
+				owns_state = 85
+				owns_state = 111
+				owns_state = 112
+				owns_state = 84
+				NOT = {
+					country_exists = ORD
+				}
+			}
+			ORD = {
+				is_puppet_of = RTH
+			}
+		}
+	}
+	
+	option = { #Celebrate!
+		name = rth.5.a
+		custom_effect_tooltip = rthaur_cores
+		hidden_effect = {
+			every_state = {
+				limit = {
+					is_core_of = ORD
+				}
+				add_core_of = RTH
+				remove_core_of = ORD
+			}
+		}
+	}
+}
+
+country_event = {#Loris Pass Lost
+	id = rth.6
+	title = rth.6.t
+	desc = rth.6.d
+	picture = GFX_report_event_ger_civil_war
+	
+	
+	mean_time_to_happen = {
+		days = 7
+	}
+	
+	trigger = {
+		original_tag = RTH
+		NOT = {
+			controls_state = 131
+		}
+		NOT = {
+			has_country_flag = loris_pass_lost
+		}
+		controls_state = 118
+		controls_state = 136
+		controls_state = 119
+		controls_state = 122
+	}
+	
+	option = {#Damn
+		name = rth.6.a
+		add_ideas = RTH_loris_pass_lost
+		set_country_flag = loris_pass_lost
+	}
+}
+
+country_event = {#Loris Pass Regained
+	id = rth.7
+	title = rth.7.t
+	desc = rth.7.d
+	picture = GFX_report_event_french_resistance_01
+	
+	mean_time_to_happen = {
+		days = 7
+	}
+	
+	trigger = {
+		original_tag = RTH
+		has_country_flag = loris_pass_lost
+		controls_state = 131
+	}
+	
+	option = {#Good
+		name = rth.7.a
+		remove_ideas = RTH_loris_pass_lost
+		clr_country_flag = loris_pass_lost
+	}
+}
+
+country_event = {#Loris Pass Unnecessary
+	id = rth.8
+	title = rth.8.t
+	desc = rth.8.d
+	picture = GFX_report_event_chinese_soldiers_city_ruin
+	
+	mean_time_to_happen = {
+		days = 7
+	}
+	
+	trigger = {
+		original_tag = RTH
+		has_country_flag = loris_pass_lost
+		OR = {
+			NOT = {	controls_state = 122 }
+			AND = {
+				NOT = { controls_state = 118 }
+				NOT = { controls_state = 136 }
+				NOT = { controls_state = 119 }
+			}
+		}
+	}
+	
+	option = {#...good?
+		name = rth.8.a
+		remove_ideas = RTH_loris_pass_lost
+		clr_country_flag = loris_pass_lost
+	}
+}
+
+country_event = {#Alucien Found Dead!
+	id = rth.9
+	title = rth.9.t
+	desc = rth.9.d
+	picture = GFX_report_event_europe_funeral
+	
+	is_triggered_only = yes
+	
+	option = {#Alas!
+		name = rth.9.a
+		kill_country_leader = yes
+		add_stability = -0.1
+		add_political_power = -75
+		add_timed_idea = {
+			idea = RTH_demoralized
+			days = 100
+		}
+	}
+}
+
+country_event = {#Alucien Murdered!
+	id = rth.10
+	title = rth.10.t
+	desc = rth.10.d
+	picture = GFX_report_event_soviet_purge_speech
+	
+	is_triggered_only = yes
+	
+	option = {#Death to Ordoria!
+		name = rth.10.a
+		kill_country_leader = yes
+		add_stability = 0.1
+		add_political_power = 50
+		add_war_support = 0.3
+		add_manpower = 5000
+		add_timed_idea = {
+			idea = RTH_vengeful
+			days = 100
+		}
+	}
+}
+country_event = {#Second Rthaur Revolution - Skaelinger Joins!
+	id = rth.11
+	title = rth.11.t
+	desc = rth.11.d
+	picture = GFX_report_event_communists_cheer
+	
+	is_triggered_only = yes
+	
+	option = {#Great
+		name = rth.11.a
+		add_stability = 0.05
+		if = {
+			limit = {
+				NOT = {
+					has_opinion_modifier = staunch_allies
+				}
+			}
+			add_opinion_modifier = {
+				target = SKA
+				modifier = staunch_allies
+			}
+		}
+	}
+}
+
+country_event = {#Second Rthaur Revolution - Skaelinger Refuses!
+	id = rth.12
+	title = rth.12.t
+	desc = rth.12.d
+	picture = GFX_report_event_bose_meeting
+	
+	is_triggered_only = yes
+	
+	option = {#We're on our own
+		name = rth.12.a
+		add_stability = -0.05
+	}
+}
+
+country_event = {#Second Rthaur Revolution - Skaelinger Can't!
+	id = rth.13
+	title = rth.13.t
+	desc = rth.13.d
+	picture = GFX_report_event_bose_meeting
+	
+	is_triggered_only = yes
+	
+	option = {#We're on our own
+		name = rth.13.a
+		add_stability = -0.01
+	}
+}

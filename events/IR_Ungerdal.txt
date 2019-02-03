@@ -1,0 +1,518 @@
+﻿### UNGERDALER EVENTS
+
+add_namespace = ung
+
+### ORDORIAN THAW EVENTS
+
+country_event = {# Ordorian Overtures
+	id = ung.1
+	title = ung.1.t
+	desc = ung.1.d
+	picture = GFX_report_event_french_british_officers
+
+	is_triggered_only = yes
+
+	option = { # Let's hear them out
+		name = ung.1.a
+		ai_chance = {
+			factor = 5
+		}
+		hidden_effect = {
+			ORD = {
+				country_event = {
+					id = ord.9
+					days = 5
+				}
+			}
+		}
+	}
+
+	option = { # Hell no
+		name = ung.1.b
+		ai_chance = {
+			factor = 3
+		}
+		add_stability = 0.05
+		hidden_effect = {
+			ORD = {
+				country_event = {
+					id = ord.10
+					days = 5
+				}
+			}
+		}
+	}
+}
+
+country_event = {# Negotiations - Heavy Demands
+	id = ung.2
+	title = ung.2.t
+	desc = ung.2.d
+	picture = GFX_report_event_molotov_signing_pact
+
+	is_triggered_only = yes
+
+	option = { # Accept
+		name = ung.2.a
+		diplomatic_relation = {
+			country = ORD
+			relation = non_aggression_pact
+		}
+		ai_chance = {
+			factor = 3
+			}
+		STA = {
+			country_event = {
+				id = sta.1
+				days = 5
+			}
+		}
+		STA = {
+			add_opinion_modifier = {
+				target = UNG
+				modifier = UNG_heavy_concessions
+			}
+		}
+		add_stability = -0.10
+		hidden_effect = {
+			ORD = {
+				country_event = {
+					id = ord.11
+					days = 5
+				}
+			}
+		}
+	}
+
+	option = { # Reject
+		name = ung.2.b
+		ai_chance = {
+			factor = 10
+		}
+		hidden_effect = {
+			ORD = {
+				country_event = {
+					id = ord.12
+					days = 5
+				}
+			}
+		}
+	}
+}
+
+country_event = {# Negotiations - Medium Demands
+	id = ung.3
+	title = ung.3.t
+	desc = ung.3.d
+	picture = GFX_report_event_molotov_signing_pact
+
+	is_triggered_only = yes
+
+	option = { # Accept
+		name = ung.3.a
+		diplomatic_relation = {
+			country = ORD
+			relation = non_aggression_pact
+		}
+		ai_chance = {
+			factor = 6
+		}
+		add_stability = -0.05
+		STA = {
+			country_event = {
+				id = sta.2
+				days = 5
+			}
+		}
+		STA = {
+			add_opinion_modifier = {
+				target = UNG
+				modifier = UNG_medium_concessions
+			}
+		}
+		hidden_effect = {
+			ORD = {
+				country_event = {
+					id = ord.13
+					days = 5
+				}
+			}
+		}
+	}
+
+	option = { # Reject
+		name = ung.3.b
+		ai_chance = {
+			factor = 4
+		}
+		hidden_effect = {
+			ORD = {
+				country_event = {
+					id = ord.14
+					days = 5
+				}
+			}
+		}
+	}
+}
+
+country_event = {# Negotiations - Exchange
+	id = ung.4
+	title = ung.4.t
+	desc = ung.4.d
+	picture = GFX_report_event_molotov_signing_pact
+
+	is_triggered_only = yes
+
+	option = { # Accept
+		STA = {
+			country_event = {
+				id = sta.3
+				days = 5
+			}
+		}
+		STA = {
+			add_opinion_modifier = {
+				target = UNG
+				modifier = UNG_exchange
+			}
+		}
+		name = ung.4.a
+		ai_chance = {
+			factor = 7
+			}
+		diplomatic_relation = {
+			country = ORD
+			relation = non_aggression_pact
+		}
+		hidden_effect = {
+			ORD = {
+				country_event = {
+					id = ord.15
+					days = 5
+				}
+			}
+		}
+	}
+
+	option = { # Reject
+		name = ung.4.b
+		ai_chance = {
+			factor = 3
+			}
+		hidden_effect = {
+			ORD = {
+				country_event = {
+					id = ord.16
+					days = 5
+				}
+			}
+		}
+	}
+}
+
+country_event = { # Ordoria Breaks Pact
+	id = ung.5
+	title = ung.5.t
+	desc = ung.5.d
+	picture = GFX_report_event_fascist_gathering
+	
+	is_triggered_only = yes
+	
+	option = { # Damn them!
+		name = ung.5.a
+		add_stability = -0.05
+	}
+}
+
+country_event = { # Ythelmare Pact
+	id = ung.6
+	title = ung.6.t
+	desc = ung.6.d
+	picture = GFX_report_event_generic_sign_treaty3
+	
+	is_triggered_only = yes
+	
+	option = { # We stand together
+		name = ung.6.a
+		ORD = {
+			add_to_faction = ROOT
+		}
+	}
+}
+
+country_event = { # Ordorian Raids
+	id = ung.7
+	title = ung.7.t
+	desc = ung.7.d
+	picture = GFX_report_event_chinese_soldiers_01
+	
+	is_triggered_only = yes
+	
+	option = { #Damn
+		name = ung.7.a
+		STA = {
+			country_event = {
+				id = sta.4
+			}
+		}
+	}
+}
+
+country_event = { # Ordoria Assassinates Noble!
+	id = ung.8
+	title = ung.8.t
+	desc = ung.8.d
+	picture = GFX_report_event_usa_funeral
+	
+	is_triggered_only = yes
+	
+	option = { #Tragic
+		name = ung.8.a
+		add_stability = -0.05
+		add_political_power = -175
+		random_owned_state = {
+			add_manpower = -1
+		}
+	}
+}
+
+country_event = { # Ordorian Terrorism
+	id = ung.9
+	title = ung.9.t
+	desc = ung.9.d
+	picture = GFX_report_event_soldiers_in_france
+	
+	is_triggered_only = yes
+	
+	option = { #Damn
+		name = ung.9.a
+		add_stability = -0.25
+		add_political_power = -15
+		random_owned_state = {
+			add_manpower = -16
+		}
+	}
+}
+
+country_event = { #Ordorian Meddling
+	id = ung.10
+	title = ung.10.t
+	desc = ung.10.d
+	picture = GFX_report_event_romania_poland_visit
+	
+	is_triggered_only = yes
+
+	option = { #Damn
+		name = ung.10.a
+		add_timed_idea = {
+			idea = UNG_ordorian_meddling
+			days = 210
+		}
+	}
+}
+
+country_event = { #The Union Shattered
+	id = ung.11
+	title = ung.11.t
+	desc = ung.11.d
+	picture = GFX_
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		if = {
+			limit = {
+				has_idea = UNG_trade_realm
+			}
+			remove_ideas = UNG_trade_realm
+		}
+		if = {
+			limit = {
+				GMR = {
+					has_idea = GMR_trade_union
+				}
+			}
+			GMR = {
+				remove_ideas = GMR_trade_union
+			}
+		}
+	}
+	
+	option = {#Broken Dreams so Grand
+		name = ung.11.a
+		hidden_effect = {
+			end_puppet = HLZ
+			end_puppet = NOC
+			end_puppet = SVT
+			end_puppet = STA
+			end_puppet = SPW
+			end_puppet = TEI
+			end_puppet = NRK
+			end_puppet = ARK
+			end_puppet = SNF
+			end_puppet = WIS
+			end_puppet = WSZ
+			end_puppet = FTH
+			remove_state_core = 264
+			remove_state_core = 323
+			remove_state_core = 276
+			remove_state_core = 322
+			remove_state_core = 312
+			remove_state_core = 274
+			remove_state_core = 233
+			remove_state_core = 313
+			remove_state_core = 312
+			remove_state_core = 315
+			remove_state_core = 317
+			remove_state_core = 275
+			remove_state_core = 314
+			remove_state_core = 314
+			remove_state_core = 251
+			remove_state_core = 250
+			remove_state_core = 233
+			remove_state_core = 221
+			remove_state_core = 249
+			remove_state_core = 326
+			remove_state_core = 245
+			remove_state_core = 327
+			remove_state_core = 328
+			remove_state_core = 246
+			remove_state_core = 247
+			remove_state_core = 330
+			remove_state_core = 243
+			remove_state_core = 244
+			remove_state_core = 343
+			remove_state_core = 342
+			remove_state_core = 341
+			remove_state_core = 331
+		}
+		hidden_effect = {
+			FAU = {
+				add_state_core = 264
+				set_state_owner = 264
+				set_state_controller = 264
+			}
+			FAU = {
+				change_tag_from = UNG
+			}
+			FAU = {
+				annex_country = {
+					target = UNG
+					transfer_troops = yes
+				}
+			}
+		}
+		hidden_effect = {
+			FAU = {
+				add_state_core = 323
+				add_state_core = 276
+				add_state_core = 322
+				add_state_core = 312
+				add_state_core = 274
+				add_state_core = 233
+				add_state_core = 313
+				add_state_core = 312
+				add_state_core = 315
+				add_state_core = 317
+				add_state_core = 275
+				add_state_core = 314
+				add_state_core = 314
+				add_state_core = 251
+				add_state_core = 250
+				add_state_core = 233
+				add_state_core = 221
+				add_state_core = 249
+				add_state_core = 326
+				add_state_core = 245
+				add_state_core = 327
+				add_state_core = 328
+				add_state_core = 246
+				add_state_core = 247
+				add_state_core = 330
+				add_state_core = 243
+				add_state_core = 244
+				add_state_core = 343
+				add_state_core = 342
+				add_state_core = 341
+				add_state_core = 331
+				
+			}
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					STA = {
+						has_country_flag = STA_defect
+					}
+				}
+				ORD = {
+					puppet = STA
+				}
+				STA = {
+					set_politics = {
+						parties = {
+							monarchy_absolute= { 
+								popularity = 57
+							}
+							monarchy_constitutional = {
+								popularity = 0
+							}
+							
+							republic_peasant = {
+								popularity = 9
+							}
+							republic_aristocrat = {
+								popularity = 0
+							}
+							republic_merchant = {
+								popularity = 6
+							}
+							theocrat = {
+								popularity = 12
+							}
+							puritan = {
+								popularity = 16
+							}
+						}
+						ruling_party = monarchy_absolute
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = {#Ordorian Raid
+	id = ung.12
+	title = ung.12.t
+	desc = ung.12.d
+	picture = GFX_report_event_usa_destroyers
+	
+	trigger = {
+		has_country_flag = UNG_trade_harassment
+		NOT = {
+			has_idea = UNG_trade_harassed
+		}
+		OR = {
+			NOT = {
+				country_exists = ORD
+			}
+			ORD = {
+				is_puppet = yes
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 350
+	}
+	
+	option = {#Damn
+		name = ung.12.a
+		add_timed_idea = {
+			idea = UNG_trade_harassed
+			days = 50
+		}
+	}
+}

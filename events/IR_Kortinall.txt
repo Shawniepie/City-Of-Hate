@@ -1,0 +1,32 @@
+﻿### KORTINALL EVENTS
+
+add_namespace = krt
+
+country_event = { #Sothane Seized
+	id = krt.1
+	title = krt.1.t
+	desc = krt.1.d
+	picture = GFX_report_event_german_troops
+	
+	is_triggered_only = yes
+	
+	option = { # Unacceptable!
+		name = krt.1.a
+		ai_chance = {
+			factor = 3
+		}
+		declare_war_on = {
+			target = ORD
+			type = annex_everything
+		}
+	}
+	
+	option = { #Back Down
+		name = krt.1.b
+		ai_chance = {
+			factor = 7
+		}
+		add_stability = -0.1
+		add_political_power = -75
+	}
+}

@@ -1,0 +1,128 @@
+﻿###########################
+# News Events
+###########################
+
+add_namespace = news
+
+# AUTUMN DEBATE OUTCOME
+news_event = { #Moderates
+	id = news.1
+	title = news.1.t
+	desc = news.1.d
+	picture = GFX_news_event_001
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.1.a
+		trigger = {
+			NOT = {
+				TAG = ORD
+				TAG = RTH
+			}
+		}
+	}
+	option = {
+		name = news.1.b
+		trigger = { TAG = ORD }
+	}
+	option = {
+		name = news.1.c
+		trigger = { TAG = RTH }
+	}
+}
+
+news_event = { #Traditonalists
+	id = news.2
+	title = news.2.t
+	desc = news.2.d
+	picture = GFX_news_event_001
+	
+	major = yes
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.2.a
+		trigger = {
+			NOT = {
+				TAG = ORD
+				TAG = RTH
+			}
+		}
+	}
+	option = {
+		name = news.2.b
+		trigger = { TAG = ORD }
+	}
+	option = {
+		name = news.2.c
+		trigger = { TAG = RTH }
+	}
+}
+
+news_event = { #Faithful
+	id = news.3
+	title = news.3.t
+	desc = news.3.d
+	picture = GFX_news_event_001
+	
+	major = yes
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.3.a
+		trigger = {
+			NOT = {
+				TAG = ORD
+				TAG = RTH
+			}
+		}
+	}
+	option = {
+		name = news.3.b
+		trigger = { TAG = ORD }
+	}
+	option = {
+		name = news.3.c
+		trigger = { TAG = RTH }
+	}
+}
+
+news_event = { #Traditonalist-Faithful Alliance
+	id = news.4
+	title = news.4.t
+	desc = news.4.d
+	picture = GFX_news_event_001
+	
+	major = yes
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.4.a
+		trigger = {
+			NOT = {
+				TAG = ORD
+				TAG = RTH
+			}
+		}
+	}
+	option = {
+		name = news.4.b
+		trigger = { TAG = ORD }
+	}
+	option = {
+		name = news.4.c
+		trigger = { TAG = RTH }
+	}
+}

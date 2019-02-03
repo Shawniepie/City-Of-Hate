@@ -1,0 +1,200 @@
+﻿### HOLZBRENNER EVENTS
+
+add_namespace = hlz
+
+### ROSENBLUT'S ACTIONS EVENTS
+
+
+
+### MAD PRINCE FOCI EVENTS
+
+country_event = { # Carpenter's strike
+	id = hlz.1
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event hlz.1"
+	}
+	title = hlz.1.t
+	desc = hlz.1.d
+	picture = GFX_report_event_generic_rally2
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = hlz.1.a
+		add_timed_idea = {
+			idea = carpenters_strike
+			days = 105
+		}
+		add_popularity = {
+			ideology = republic_peasant
+			popularity = 0.03
+		}
+		add_popularity = {
+			ideology = republic_merchant
+			popularity = 0.03
+		}
+	}
+}
+
+country_event = { # Last Straw
+	id = hlz.2
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event hlz.2"
+	}
+	title = hlz.2.t
+	desc = hlz.2.d
+	picture = GFX_report_event_generic_riot
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = hlz.2.a
+		remove_ideas = carpenters_strike
+		add_stability = -0.15
+		add_political_power = -135
+		hidden_effect = {
+			country_event = {
+				id = hlz.3
+				days = 7
+			}
+		}
+	}
+}
+
+country_event = { # Rosenblut Deposed
+	id = hlz.3
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event hlz.3"
+	}
+	title = hlz.3.t
+	desc = hlz.3.d
+	picture = GFX_report_event_worker_protests
+	
+	is_triggered_only = yes
+	
+	option = { # Aristocratic Path
+		name = hlz.3.a
+		add_popularity = {
+			ideology = monarchy_constitutional
+			popularity = 0.1
+		}
+		add_popularity = {
+			ideology = republic_aristocrat
+			popularity = 0.1
+		}
+		add_stability = 0.15
+		add_political_power = 50
+		hidden_effect = {
+			set_country_flag = HLZ_wholesome_nobles
+			set_country_flag = HLZ_depose_tyrants
+		}
+	}
+	
+	option = { # Republican Path
+		name = hlz.3.b
+		add_popularity = {
+			ideology = republic_peasant
+			popularity = 0.1
+		}
+		add_popularity = {
+			ideology = republic_merchant
+			popularity = 0.1
+		}
+		add_stability = 0.15
+		add_political_power = 50
+		hidden_effect = {
+			set_country_flag = HLZ_wholesome_people
+			set_country_flag = HLZ_depose_tyrants
+		}
+	}
+}
+
+country_event = { # Nobility Steps In
+	id = hlz.4
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event hlz.4"
+	}
+	title = hlz.4.t
+	desc = hlz.4.d
+	picture = GFX_report_event_albanian_king_zog
+	
+	is_triggered_only = yes
+	
+	option = { # Constitutional Monarchy
+		name = hlz.4.a
+		set_politics = {
+			ruling_party = monarchy_constitutional
+			elections_allowed = no
+		}
+			add_popularity = {
+			ideology = monarchy_constitutional
+			popularity = 0.05
+			}
+		add_stability = 0.05
+		add_political_power = 25
+		hidden_effect = {
+			set_country_flag = HLZ_wholesome_king
+		}
+	}
+	option = { # Aristocratic Republic
+		name = hlz.4.b
+		set_politics = {
+			ruling_party = republic_aristocrat
+			elections_allowed = no
+		}
+		add_popularity = {
+			ideology = republic_aristocrat
+			popularity = 0.05
+			}
+		add_stability = 0.05
+		add_political_power = 25
+		hidden_effect = {
+			set_country_flag = HLZ_wholesome_nobles
+		}
+	}
+}
+
+country_event = { # Kirschenrevolution
+	id = hlz.5
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event hlz.5"
+	}
+	title = hlz.5.t
+	desc = hlz.5.d
+	picture = GFX_report_event_communists_cheer
+	
+	is_triggered_only = yes
+	
+	option = { # Libertines
+		name = hlz.5.a
+		set_politics = {
+			ruling_party = republic_merchant
+			elections_allowed = no
+		}
+		add_popularity = {
+			ideology = republic_merchant
+			popularity = 0.05
+			}
+		add_stability = 0.05
+		add_political_power = 25
+		hidden_effect = {
+			set_country_flag = HLZ_wholesome_liberals
+		}
+	}
+	option = { # Solidarity League
+		name = hlz.5.b
+		set_politics = { 
+			ruling_party = republic_peasant
+			elections_allowed = no
+		}
+		add_popularity = {
+			ideology = republic_peasant
+			popularity = 0.05
+			}
+		add_stability = 0.05
+		add_political_power = 25
+		hidden_effect = {
+			set_country_flag = HLZ_wholesome_socdems
+		}
+	}
+}

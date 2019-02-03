@@ -1,0 +1,408 @@
+﻿### SKAELINGER EVENTS
+
+add_namespace = ska
+
+### ORDORIAN WAR EVENTS
+
+country_event = { #Ordoria Threatens Us
+	id = ska.1
+	title = ska.1.t
+	desc = ska.1.d
+	picture = GFX_report_event_generic_sign_treaty3
+	
+	is_triggered_only = yes
+	
+	option = {#Cave In
+		name = ska.1.a
+		ai_chance = {
+			factor = 3
+		}
+		add_stability = -0.1
+		add_war_support = -0.15
+		add_political_power = -20
+		
+		diplomatic_relation = {
+			country = RTH
+			relation = guarantee
+			active = no
+		}
+		
+		diplomatic_relation = {
+			country = RTH
+			relation = military_access
+			active = no
+		}
+		
+		remove_opinion_modifier = {
+			target = RTH
+			modifier = staunch_allies
+		}
+		
+		RTH = {
+			country_event = {
+				id = rth.3
+				days = 1
+			
+			}
+		}
+	}
+	
+	option = {#Piss Off
+		name = ska.1.b
+		ai_chance = {
+			factor = 5
+		}
+		add_stability = 0.05
+		add_war_support = 0.1
+		add_political_power = 20
+	}
+}
+
+country_event = { #Ordoria Offers Peace
+	id = ska.2
+	title = ska.2.t
+	desc = ska.2.d
+	picture = GFX_report_event_german_italian_pact
+	
+	is_triggered_only = yes
+	
+	option = {#Very Well
+		name = ska.2.a
+		ai_chance = {
+			factor = 3
+		}
+		add_stability = -0.1
+		add_war_support = -0.15
+		add_political_power = -20
+		white_peace = ORD
+	}
+	
+	option = {#Piss Off
+		name = ska.2.b
+		ai_chance = {
+			factor = 5
+		}
+		add_stability = 0.05
+		add_war_support = 0.1
+		add_political_power = 20
+	}
+}
+
+country_event = { #Offer Peace to Ordoria?
+	id = ska.3
+	title = ska.3.t
+	desc = ska.3.d
+	picture = GFX_report_event_german_reichstag_gathering
+	
+	mean_time_to_happen = {
+		days = 4
+	}
+	
+	trigger = {
+		tag = SKA
+		has_war_with = ORD
+		NOT = {
+			country_exists = RTH
+		}
+		NOT = {
+			controls_state = 146
+		}
+	}
+	
+	fire_only_once = yes
+	
+	option = {#Very Well
+		name = ska.3.a
+		ai_chance = {
+			factor = 4
+		}
+		add_stability = -0.1
+		add_war_support = -0.15
+		add_political_power = -20
+		hidden_effect = {
+			ORD = {
+				country_event = {
+					id = ord.30
+					days = 1
+				}
+			}
+		}
+	}
+	
+	option = {#Piss Off
+		name = ska.3.b
+		ai_chance = {
+			factor = 6
+		}
+		add_stability = 0.05
+		add_war_support = 0.1
+		add_political_power = 20
+	}
+}
+
+country_event = { #Ordoria Accepts
+	id = ska.4
+	title = ska.4.t
+	desc = ska.4.d
+	picture = GFX_report_event_king_speech
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ska.4.a
+		white_peace = ORD
+		add_political_power = -25
+	}
+}
+
+country_event = { #Ordoria Demands Concessions
+	id = ska.5
+	title = ska.5.t
+	desc = ska.5.d
+	picture = GFX_report_event_german_reichstag_bombed
+	
+	is_triggered_only = yes
+	
+	option = { # Yes
+		name = ska.5.a
+		ai_chance = {
+			factor = 6
+		}
+		white_peace = ORD
+		ORD = {
+			transfer_state = 190
+			transfer_state = 191
+			transfer_state = 148
+			transfer_state = 147
+			transfer_state = 120
+			transfer_state = 171
+			transfer_state = 189
+			transfer_state = 175
+			transfer_state = 184
+		}
+		hidden_effect = {
+			ORD = {
+				country_event = {
+					id = ord.31
+					days = 1
+				}
+			}
+		}
+		add_political_power = -35
+	}
+	
+	option = { # No
+		name = ska.5.b
+		ai_chance = {
+			factor = 4
+		}
+		hidden_effect = {
+			ORD = {
+				country_event = {
+					id = ord.32
+					days = 1
+				}
+			}
+		}
+	}
+}
+
+country_event = { #Ordoria Declines
+	id = ska.6
+	title = ska.6.t
+	desc = ska.6.d
+	picture = GFX_report_event_king_speech
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ska.6.a
+		add_political_power = -50
+	}
+}
+
+country_event = { #Ordoria Demands Vassalization
+	id = ska.7
+	title = ska.7.t
+	desc = ska.7.d
+	picture = GFX_report_event_czech_soldiers_01
+	
+	is_triggered_only = yes
+	
+	option = { # Yes
+		name = ska.7.a
+		ai_chance = {
+			factor = 6
+		}
+		hidden_effect = {
+			ORD = {
+				country_event = {
+					id = ord.33
+					days = 1
+				}
+			}
+		}
+		add_political_power = -50
+	}
+	
+	option = { # No
+		name = ska.7.b
+		ai_chance = {
+			factor = 5
+		}
+		hidden_effect = {
+			ORD = {
+				country_event = {
+					id = ord.34
+					days = 1
+				}
+			}
+		}
+		add_political_power = -50
+	}
+}
+
+country_event = { #Second Rthaur Revolution
+	id = ska.8
+	title = ska.8.t
+	desc = ska.8.d
+	picture = GFX_report_event_czech_soldiers_01
+	
+	is_triggered_only = yes
+	
+	option = { # Yes
+		trigger = {
+			if = {
+				limit = {
+					NOT = {
+						is_puppet_of = ORD
+					}
+				}
+				is_puppet = no
+			}
+		}
+		name = ska.8.a
+		ai_chance = {
+			factor = 9
+		}
+		if = {
+			limit = {
+				is_puppet_of = ORD
+			}
+			set_autonomy =  {
+				target = SKA
+				autonomy_state = autonomy_free
+			}
+			drop_cosmetic_tag = yes
+			kill_country_leader = yes
+			set_politics = {
+				parties = {
+					monarchy_absolute= { 
+						popularity = 0
+					}
+
+					monarchy_constitutional = {
+						popularity = 65
+					}
+					
+					republic_peasant = {
+						popularity = 15
+					}
+					republic_aristocrat = {
+						popularity = 10
+					}
+					republic_merchant = {
+						popularity = 5
+					}
+					theocrat = {
+						popularity = 5
+					}
+					puritan = {
+						popularity = 0
+					}
+				}
+				ruling_party = monarchy_constitutional
+			}
+		}
+		
+		create_faction = "brotherhood_alliance"
+		add_to_faction = SKA
+		add_to_faction = RTH
+		add_war_support = 0.1
+		load_oob = "SKA_ii_rev"
+		add_to_war = {
+			targeted_alliance = RTH
+			enemy = ORD
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_opinion_modifier = staunch_allies
+				}
+			}
+			add_opinion_modifier = {
+				target = RTH
+				modifier = staunch_allies
+			}
+		}
+		RTH = {
+			country_event = {
+				id = rth.11
+				days = 2
+			}
+		}
+	}
+	
+	option = { # No
+		trigger = {
+			if = {
+				limit = {
+					NOT = {
+						is_puppet_of = ORD
+					}
+				}
+				is_puppet = no
+			}
+		}
+		name = ska.8.b
+		ai_chance = {
+			factor = 1
+		}
+		add_political_power = -50
+		
+		RTH = {
+			country_event = {
+				id = rth.12
+				days = 2
+			}
+		}
+	}
+	
+	option = { # We can't
+		trigger = {
+			if = {
+				limit = {
+					NOT = {
+						is_puppet_of = ORD
+					}
+				}
+				is_puppet = yes
+			}
+			NOT = {
+				is_puppet_of = ORD
+			}
+		}
+		name = ska.8.c
+		ai_chance = {
+			factor = 1
+		}
+		add_political_power = -5
+		
+		RTH = {
+			country_event = {
+				id = rth.13
+				days = 2
+			}
+		}
+	}
+}

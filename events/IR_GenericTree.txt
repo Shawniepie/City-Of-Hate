@@ -1,0 +1,497 @@
+﻿	### GENERIC FOCUS TREE EVENTS ###
+
+add_namespace = generic
+
+country_event = {#Domestic Unrest
+	id = generic.1
+	title = generic.1.t
+	desc = generic.1.d
+	picture = GFX_report_event_worker_protests
+	
+	is_triggered_only = yes
+	
+	option = {#Puritan
+		name = generic.1.a
+		ai_chance = {
+			factor = 1
+			modifier = {
+				has_government = puritan
+				factor = 30
+			}
+			modifier = {
+				tag = RTH
+				factor = 0
+			}
+			modifier = {
+				is_puppet_of = ORD
+				factor = 1.5
+			}
+		}
+		add_stability = -0.05
+		add_popularity = {
+			ideology = puritan
+			popularity = 0.05
+		}
+		hidden_effect = {
+			set_country_flag = generic_puritan_path
+		}
+	}
+	
+	option = {#Nobility
+		name = generic.1.b
+		ai_chance = {
+			factor = 1
+			modifier = {
+				has_government = monarchy_absolute
+				factor = 30
+			}
+			modifier = {
+				has_government = monarchy_constitutional
+				factor = 30
+			}	
+			modifier = {
+				has_government = republic_aristocrat
+				factor = 30
+			}
+			
+			modifier = {
+				tag = RTH
+				factor = 0.5
+			}
+			
+			modifier = {
+				is_puppet_of = ORD
+				factor = 0.8
+			}
+		}
+		add_stability = -0.05
+		add_popularity = {
+			ideology = monarchy_absolute
+			popularity = 0.05
+		}
+		add_popularity = {
+			ideology = monarchy_constitutional
+			popularity = 0.05
+		}
+		add_popularity = {
+			ideology = republic_aristocrat
+			popularity = 0.05
+		}
+		hidden_effect = {
+			set_country_flag = generic_nobility_path
+		}
+	}
+	
+	option = {#Republic
+		name = generic.1.c
+		ai_chance = {	
+			factor = 1
+			modifier = {
+				has_government = republic_merchant
+				factor = 30
+			}
+			modifier = {
+				has_government = republic_peasant
+				factor = 30
+			}
+			modifier = {
+				tag = RTH
+				factor = 2
+			}
+			modifier = {
+				is_puppet_of = ORD
+				factor = 0
+			}
+		}
+		add_stability = -0.05
+		add_popularity = {
+			ideology = republic_merchant
+			popularity = 0.05
+		}
+		add_popularity = {
+			ideology = republic_peasant
+			popularity = 0.05
+		}
+		hidden_effect = {
+			set_country_flag = generic_republican_path
+		}
+	}
+	
+	option = {#Theocrat
+		name = generic.1.e
+		ai_chance = {	
+			factor = 1
+			modifier = {
+				has_government = theocrat
+				factor = 30
+			}
+			modifier = {
+				is_puppet_of = ORD
+				factor = 1
+			}
+		}
+		add_stability = -0.05
+		add_popularity = {
+			ideology = theocrat
+			popularity = 0.05
+		}
+		hidden_effect = {
+			set_country_flag = generic_theocratic_path
+		}
+	}
+}
+	
+
+country_event = {#Puritan Coup
+	id = generic.2
+	title = generic.2.t
+	desc = generic.2.d
+	picture = GFX_report_event_generic_army
+	
+	is_triggered_only = yes
+	
+	option = {#Outsiders out!
+		name = generic.2.a
+		set_politics = {
+			ruling_party = puritan
+			elections_allowed = no
+		}
+		add_popularity = {
+			ideology = puritan
+			popularity = 0.1
+		}
+	}
+	
+}
+
+country_event = {#Order Maintained
+	id = generic.3
+	title = generic.3.t
+	desc = generic.3.d
+	picture = GFX_report_event_german_italian_pact
+	
+	is_triggered_only = yes
+	
+	option = {#Absolute Monarchy
+		name = generic.3.a
+		ai_chance = {	
+			factor = 1
+			modifier = {
+				has_government = monarchy_absolute
+				factor = 30
+			}
+		}
+		set_politics = {
+			ruling_party = monarchy_absolute
+			elections_allowed = no
+		}
+		add_popularity = {
+			ideology = monarchy_absolute
+			popularity = 0.1
+		}
+		set_country_flag = generic_absolutist_path
+	}
+	
+	option = {#Constitutional Monarchy
+		name = generic.3.b
+		ai_chance = {	
+			factor = 1
+			modifier = {
+				has_government = monarchy_constitutional
+				factor = 30
+			}
+			modifier = {
+				is_puppet_of = ORD
+				factor = 0
+			}
+		}
+		set_politics = {
+			ruling_party = monarchy_constitutional
+			elections_allowed = no
+		}
+		add_popularity = {
+			ideology = monarchy_constitutional
+			popularity = 0.1
+		}
+		
+		set_country_flag = generic_constitutional_path
+	}
+	
+	option = {#Aristocratic Republic
+		name = generic.3.c
+		ai_chance = {	
+			factor = 1
+			modifier = {
+				has_government = republic_aristocrat
+				factor = 30
+			}
+			modifier = {
+				is_puppet_of = ORD
+				factor = 0
+			}
+		}
+		set_politics = {
+			ruling_party = republic_aristocrat
+			elections_allowed = no
+		}
+		add_popularity = {
+			ideology = republic_aristocrat
+			popularity = 0.1
+		}		
+		set_country_flag = generic_aristocratic_path
+	}
+	
+}
+
+country_event = {#Demand Elections
+	id = generic.4
+	title = generic.4.t
+	desc = generic.4.d
+	picture = GFX_report_event_generic_rally2
+	
+	is_triggered_only = yes
+	
+	option = {#Merchant Republic
+		name = generic.4.a
+		ai_chance = {	
+			factor = 1
+			modifier = {
+				has_government = republic_merchant
+				factor = 30
+			}
+		}
+		set_politics = {
+			ruling_party = republic_merchant
+			elections_allowed = no
+		}
+		add_popularity = {
+			ideology = republic_merchant
+			popularity = 0.1
+		}
+		set_country_flag = generic_guildist_path
+	}
+
+	option = {#Radical Republic
+		name = generic.4.b
+		ai_chance = {	
+			factor = 1
+			modifier = {
+				has_government = republic_peasant
+				factor = 30
+			}
+			modifier = {
+				tag = RTH
+				factor = 2
+			}
+		}
+		set_politics = {
+			ruling_party = republic_peasant
+			elections_allowed = no
+		}
+		add_popularity = {
+			ideology = republic_peasant
+			popularity = 0.1
+		}
+		set_country_flag = generic_rosite_path
+	}
+	
+}
+
+country_event = {#Assume Temporal Power
+	id = generic.5
+	title = generic.5.t
+	desc = generic.5.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = {#Deus Vult
+		name = generic.5.a
+		ai_chance = {	
+			factor = 5
+			modifier = {
+				has_country_flag = generic_theocratic_path
+				factor = 2
+			}
+		}
+		set_politics = {
+			ruling_party = theocrat
+			elections_allowed = no
+		}
+		add_popularity = {
+			ideology = theocrat
+			popularity = 0.1
+		}
+	}
+}
+
+country_event = {#Royal Front
+	id = generic.6
+	title = generic.6.t
+	desc = generic.6.d
+	picture = GFX_report_event_german_reichstag_gathering
+	
+	is_triggered_only = yes
+	
+	option = {#Temporary Alliance
+		name = generic.6.a
+		ai_chance = {	
+			factor = 5
+			modifier = {
+				has_country_flag = generic_nobility_path
+				factor = 2
+			}
+		}
+		add_popularity = {
+			ideology = monarchy_absolute
+			popularity = 0.05
+		}
+		add_popularity = {
+			ideology = monarchy_constitutional
+			popularity = 0.05
+		}
+		add_popularity = {
+			ideology = republic_aristocrat
+			popularity = 0.05
+		}
+	}	
+}
+
+country_event = {#Republican Front
+	id = generic.7
+	title = generic.7.t
+	desc = generic.7.d
+	picture = GFX_report_event_poland_rejects
+
+	is_triggered_only = yes
+	
+	option = {#Temporary Alliance
+		name = generic.7.a
+		ai_chance = {	
+			factor = 5
+			modifier = {
+				has_country_flag = generic_republican_path
+				factor = 2
+			}
+		}
+		add_popularity = {
+			ideology = republic_merchant
+			popularity = 0.05
+		}
+		add_popularity = {
+			ideology = republic_peasant
+			popularity = 0.05
+		}
+	}	
+}
+
+country_event = {#Choose Economic Policy
+	id = generic.8
+	title = generic.8.t
+	desc = generic.8.d
+	picture = GFX_report_event_molotov_ribbentrop_stalin_pact
+	
+	is_triggered_only = yes
+	
+	option = {#Pro-Guild
+		name = generic.8.a
+		ai_chance = {
+			factor = 5
+		}
+		set_country_flag = GENERIC_support_guilds
+		add_stability = 0.05
+	}
+	
+	option = {#Anti-Guild
+		name = generic.8.b
+		ai_chance = {
+			factor = 5
+		}
+		set_country_flag = GENERIC_break_guilds
+		add_political_power = 25
+	}
+}
+
+country_event = {#Choose Military Policy
+	id = generic.9
+	title = generic.9.t
+	desc = generic.9.d
+	picture = GFX_report_event_german_detained_china
+	
+	is_triggered_only = yes
+	
+	option = {#Prioritize Army
+		name = generic.9.a
+		ai_chance = {
+			factor = 6
+			modifier = {
+				has_government = puritan
+				factor = 2
+			}
+		}
+		set_country_flag = generic_army_prioritized
+		add_war_support = 0.05
+	}
+	
+	option = {#Prioritize Navy
+		name = generic.9.b
+		ai_chance = {
+			factor = 4
+			modifier = {#let's not if we're landlocked
+				NOT = {
+					any_owned_state = {
+						is_coastal = yes
+					}
+				}
+				factor = 0
+			}
+			modifier = {
+				has_government = republic_merchant
+				factor = 3
+			}
+		}
+		set_country_flag = generic_navy_prioritized
+		add_political_power = 25
+	}
+}
+
+country_event = {#Choose Land Doctrine
+	id = generic.10
+	title = generic.10.t
+	desc = generic.10.d
+	picture = GFX_report_event_saf_civil_war
+	
+	is_triggered_only = yes
+	
+	option = {#Mobile Warfare
+		name  = generic.10.a
+		ai_chance = {
+			factor = 3
+		}
+		set_country_flag = generic_cavalry_army
+	}
+	
+	option = {#Superior Firepower
+		name = generic.10.b
+		ai_chance = {
+			factor = 5
+		}
+		set_country_flag = generic_professionalized_army
+	}
+	
+	option = {#Mass Assault
+		name = generic.10.c
+		ai_chance = {
+			factor = 4
+		}
+		set_country_flag = generic_large_army
+	}
+	
+	option = {#Grand Battleplan
+		name = generic.10.e
+		ai_chance = {
+			factor = 6
+		}
+		set_country_flag = generic_organized_army
+	}
+}

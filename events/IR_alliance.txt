@@ -1,0 +1,172 @@
+﻿### ALLIANCE EVENTS
+
+add_namespace = alliance
+
+
+country_event = {#Ungerdaler United Front
+	id = alliance.1
+	title = alliance.1.t
+	desc = alliance.1.d
+	picture = GFX_report_event_pierre_laval
+	
+	is_triggered_only = yes
+	
+	option = {#Join
+		name = alliance.1.a
+		ai_chance = {
+			factor = 7
+		}
+		if = {
+			limit = {
+				HLZ = {
+					is_faction_leader = yes
+				}
+			}
+			HLZ = {
+				add_to_faction = ROOT
+			}
+		}
+		
+		if = {
+			limit = {
+				STA = {
+					is_faction_leader = yes
+				}
+			}
+			STA = {
+				add_to_faction = ROOT
+			}
+		}
+		
+		if = {
+			limit = {
+				NOC = {
+					is_faction_leader = yes
+				}
+			}
+			NOC = {
+				add_to_faction = ROOT
+			}
+		}
+		
+		if = {
+			limit = {
+				SVT = {
+					is_faction_leader = yes
+				}
+			}
+			SVT = {
+				add_to_faction = ROOT
+			}
+		}
+		
+		if = {
+			limit = {
+				SPW = {
+					is_faction_leader = yes
+				}
+			}
+			SPW = {
+				add_to_faction = ROOT
+			}
+		}
+		
+		if = {
+			limit = {
+				NRK = {
+					is_faction_leader = yes
+				}
+			}
+			NRK = {
+				add_to_faction = ROOT
+			}
+		}
+		
+		if = {
+			limit = {
+				TEI = {
+					is_faction_leader = yes
+				}
+			}
+			TEI = {
+				add_to_faction = ROOT
+			}
+		}
+		
+		if = {
+			limit = {
+				FAU = {
+					is_faction_leader = yes
+				}
+			}
+			FAU = {
+				add_to_faction = ROOT
+			}
+		}
+		
+		if = {
+			limit = {
+				ARK = {
+					is_faction_leader = yes
+				}
+			}
+			ARK = {
+				add_to_faction = ROOT
+			}
+		}
+		
+		if = {
+			limit = {
+				SNF = {
+					is_faction_leader = yes
+				}
+			}
+			SNF = {
+				add_to_faction = ROOT
+			}
+		}
+		
+		if = {
+			limit = {
+				WIS = {
+					is_faction_leader = yes
+				}
+			}
+			WIS = {
+				add_to_faction = ROOT
+			}
+		}
+		
+		if = {
+			limit = {
+				WSZ = {
+					is_faction_leader = yes
+				}
+			}
+			WSZ = {
+				add_to_faction = ROOT
+			}
+		}
+		
+		if = {
+			limit = {
+				FTH = {
+					is_faction_leader = yes
+				}
+			}
+			FTH = {
+				add_to_faction = ROOT
+			}
+		}
+		
+		set_country_flag = joined_freiprinzer_alliance
+	}
+	
+	option = {#Die
+		name = alliance.1.b
+		ai_chance = {
+			factor = 3
+		}
+		add_political_power = -25
+	}
+}

@@ -1,0 +1,2704 @@
+﻿### ORDORIAN EVENTS
+
+add_namespace = ord
+
+### AUTUMN DEBATE
+
+country_event = {# Autumn Debate Begins
+	id = ord.1
+	title = ord.1.t
+	desc = ord.1.d
+	picture = GFX_report_event_fascist_gathering
+
+	is_triggered_only = yes
+
+	option = {
+		name = ord.1.a
+		hidden_effect = {
+			set_country_flag = {
+				flag = ORD_autumn_moderate
+				value = 0
+			}
+			set_country_flag = {
+				flag = ORD_autumn_imperialist
+				value = 0
+			}
+			set_country_flag = {
+				flag = ORD_autumn_theocrat
+				value = 0
+			}
+			country_event = {
+				id = ord.2
+				days = 5
+			}
+		}
+	}
+}
+
+country_event = {#Domestic-Economic Policy
+	id = ord.2
+	title = ord.2.t
+	desc = ord.2.d
+	picture = GFX_report_event_fascist_speech
+
+	is_triggered_only = yes
+
+	option = {#Moderate
+		name = ord.2.a
+		ai_chance = {	
+			factor = 5
+			}
+				add_stability = -0.05
+		add_popularity = {
+			ideology = monarchy_absolute 
+			popularity = 0.05
+			}
+		set_country_flag = ORD_domestic_moderate
+		hidden_effect = {
+			modify_country_flag = {
+				flag = ORD_autumn_moderate
+				value = 1
+			}
+			country_event = {
+				id = ord.3
+				days = 4
+			}
+		}
+	}
+	option = {#Imperialist
+		name = ord.2.b
+		ai_chance = {
+			factor = 8
+			}
+		set_country_flag = ORD_domestic_imperialist
+		add_popularity = {
+			ideology = puritan
+			popularity = 0.05
+			}
+		hidden_effect = {
+			modify_country_flag = {
+				flag = ORD_autumn_imperialist
+				value = 1
+			}
+			country_event = {
+				id = ord.3
+				days = 4
+			}
+		}
+	}
+	option = {#Theocrat
+		name = ord.2.c
+		ai_chance = {
+			factor = 10
+		}
+		set_country_flag = ORD_domestic_theocrat
+		add_stability = 0.05
+		add_popularity = {
+			ideology = theocrat
+			popularity = 0.05
+			}
+		hidden_effect = {
+			modify_country_flag = {
+				flag = ORD_autumn_theocrat
+				value = 1
+			}
+			country_event = {
+				id = ord.3 
+				days = 4
+			}
+		}
+	}
+}
+
+country_event = {#Foreign Policy
+	id = ord.3
+	title = ord.3.t
+	desc = ord.3.d
+	picture = GFX_report_event_fascists_posing
+
+	is_triggered_only = yes
+
+	option = {#Moderate
+		name = ord.3.a
+		ai_chance = {
+			factor = 9
+			}
+		add_stability = 0.05
+		add_popularity = {
+			ideology = monarchy_absolute popularity = 0.05
+			}
+		set_country_flag = ORD_foreign_moderate
+		hidden_effect = {
+			modify_country_flag = {
+				flag = ORD_autumn_moderate
+				value = 1
+			}
+			country_event = {
+				id = ord.4
+				days = 4
+			}
+		}
+	}
+	option = {#Imperialist
+		name = ord.3.b
+		ai_chance = {
+			factor = 7
+			}
+		set_country_flag = ORD_foreign_imperialist
+		add_popularity = {
+			ideology = puritan
+			popularity = 0.05
+			}
+		hidden_effect = {
+			modify_country_flag = {
+				flag = ORD_autumn_imperialist
+				value = 1
+			}
+			country_event = {
+				id = ord.4
+				days = 4
+			}
+		}
+	}
+	option = {#Theocrat
+		name = ord.3.c
+		ai_chance = {
+			factor = 4
+		}
+		set_country_flag = ORD_foreign_theocrat
+		add_stability = -0.05
+		add_popularity = {
+			ideology = theocrat
+			popularity = 0.05
+			}
+		hidden_effect = {
+			modify_country_flag = {
+				flag = ORD_autumn_theocrat
+				value = 1
+			}
+			country_event = {
+				id = ord.4 
+				days = 4
+			}
+		}
+	}
+}
+
+country_event = {#Military Policy
+	id = ord.4
+	title = ord.4.t
+	desc = ord.4.d
+	picture = GFX_report_event_generic_army
+
+	is_triggered_only = yes
+
+	option = {#Moderate
+		name = ord.4.a
+		ai_chance = {
+			factor = 4
+			}
+		add_popularity = {
+			ideology = monarchy_absolute popularity = 0.05
+			}
+		add_tech_bonus = {
+				name = ORD_moderate_plan
+				bonus = 0.15
+				uses = 1
+				category = cat_mobile_warfare
+			}
+		set_country_flag = ORD_military_moderate
+		hidden_effect = {
+			modify_country_flag = {
+				flag = ORD_autumn_moderate
+				value = 1
+			}
+			if = {
+				limit = { 
+					has_country_flag = { 
+					flag = ORD_autumn_moderate
+					value > 1 
+					}
+				}
+				country_event = { 
+					id = ord.5
+					days = 5
+					}
+			}
+			if = {
+				limit = { 
+					has_country_flag = { 
+					flag = ORD_autumn_imperialist
+					value > 1 
+					}
+				}
+				country_event = { 
+					id = ord.6
+					days = 5
+					}
+			}
+			if = {
+				limit = { 
+					has_country_flag = { 
+					flag = ORD_autumn_theocrat
+					value > 1 
+					}
+				}
+				country_event = { 
+					id = ord.7
+					days = 5
+					}
+			}
+			if = {
+				limit = {
+					has_country_flag = { 
+						flag = ORD_autumn_moderate
+						value < 2
+						}
+					has_country_flag = { 
+						flag = ORD_autumn_imperialist
+						value < 2
+						}
+					has_country_flag = {
+						flag = ORD_autumn_theocrat
+						value < 2
+						}
+				}
+				country_event = {
+					id = ord.8
+					days = 10
+					}
+			}
+		}
+	}
+	option = {#Imperialist
+		name = ord.4.b
+		ai_chance = {
+			factor = 8
+			}
+		set_country_flag = ORD_military_imperialist
+		add_stability = 0.05
+		add_popularity = {
+			ideology = puritan
+			popularity = 0.05
+			}
+		add_tech_bonus = {
+				name = ORD_traditionalist_plan
+				bonus = 0.15
+				uses = 1
+				category = cat_grand_battle_plan
+			}
+		hidden_effect = {
+			modify_country_flag = {
+				flag = ORD_autumn_imperialist
+				value = 1
+			}
+			if = {
+				limit = { 
+					has_country_flag = { 
+					flag = ORD_autumn_moderate
+					value > 1 
+					}
+				}
+				country_event = { 
+					id = ord.5
+					days = 5
+					}
+			}
+			
+			if = {
+				limit = { 
+					has_country_flag = { 
+					flag = ORD_autumn_imperialist
+					value > 1 
+					}
+				}
+				country_event = { 
+					id = ord.6
+					days = 5
+					}
+			}
+			if = {
+				limit = { 
+					has_country_flag = { 
+					flag = ORD_autumn_theocrat
+					value > 1 
+					}
+				}
+				country_event = { 
+					id = ord.7
+					days = 5
+					}
+			}
+			if = {
+				limit = {
+					has_country_flag = { 
+						flag = ORD_autumn_moderate
+						value < 2
+						}
+					has_country_flag = { 
+						flag = ORD_autumn_imperialist
+						value < 2
+						}
+					has_country_flag = {
+						flag = ORD_autumn_theocrat
+						value < 2
+						}
+				}
+				country_event = {
+					id = ord.8
+					days = 10
+					}
+			}
+		}
+	}
+	option = {#Theocrat
+		name = ord.4.c
+		ai_chance = {
+			factor = 5
+		}
+		set_country_flag = ORD_military_theocrat
+
+		add_popularity = {
+			ideology = theocrat
+			popularity = 0.05
+			}
+		add_tech_bonus = {
+				name = ORD_faithful_plan
+				bonus = 0.15
+				uses = 1
+				category = cat_superior_firepower
+			}
+		hidden_effect = {
+			modify_country_flag = {
+				flag = ORD_autumn_theocrat
+				value = 1
+			}
+			
+			if = {
+				limit = { 
+					has_country_flag = { 
+					flag = ORD_autumn_moderate
+					value > 1 
+					}
+				}
+				country_event = { 
+					id = ord.5
+					days = 5
+					}
+			}
+			
+			if = {
+				limit = { 
+					has_country_flag = { 
+					flag = ORD_autumn_imperialist
+					value > 1 
+					}
+				}
+				country_event = { 
+					id = ord.6
+					days = 5
+					}
+			}
+			if = {
+				limit = { 
+					has_country_flag = { 
+					flag = ORD_autumn_theocrat
+					value > 1 
+					}
+				}
+				country_event = { 
+					id = ord.7
+					days = 5
+					}
+			}
+			if = {
+				limit = {
+					has_country_flag = { 
+						flag = ORD_autumn_moderate
+						value < 2
+						}
+					has_country_flag = { 
+						flag = ORD_autumn_imperialist
+						value < 2
+						}
+					has_country_flag = {
+						flag = ORD_autumn_theocrat
+						value < 2
+						}
+				}
+				country_event = {
+					id = ord.8
+					days = 10
+					}
+			}
+		}
+	}
+}
+
+country_event = {# Moderate Victory
+	id = ord.5
+	title = ord.5.t
+	desc = ord.5.d
+	picture = GFX_report_event_election_vote
+
+	is_triggered_only = yes
+
+	immediate = {
+		clr_country_flag = ORD_autumn_moderate
+		clr_country_flag = ORD_autumn_imperialist
+		clr_country_flag = ORD_autumn_theocrat
+		set_country_flag = ORD_autumn_debate_done
+	}
+
+	option = {
+		name = ord.5.a
+		set_politics = {
+			ruling_party = monarchy_absolute
+			}
+		add_popularity = {
+			ideology = monarchy_absolute
+			popularity = 0.15
+			}
+		hidden_effect = {
+			set_country_flag = ORD_ordorian_thaw
+			random_country = {
+				limit = { 
+					NOT = {
+						TAG = ORD
+					}
+				}
+				news_event = {
+					id = news.1
+					days = 2
+				}
+			}
+		}
+		hidden_effect = {
+			set_country_flag = {
+				flag = ORD_moderate_success
+				value = 0
+			}
+			set_country_flag = {
+				flag = ORD_moderate_failure
+				value = 0
+			}
+		}
+	}
+}
+
+country_event = {# Imperialist Victory
+	id = ord.6
+	title = ord.6.t
+	desc = ord.6.d
+	picture = GFX_report_event_election_vote
+
+	is_triggered_only = yes
+
+	immediate = {
+		clr_country_flag = ORD_autumn_moderate
+		clr_country_flag = ORD_autumn_imperialist
+		clr_country_flag = ORD_autumn_theocrat
+		set_country_flag = ORD_autumn_debate_done
+	}
+
+	option = {
+		name = ord.6.a
+		add_popularity = {
+			ideology = puritan
+			popularity = 0.15
+			}
+		hidden_effect = {
+			set_country_flag = ORD_empire_purity
+			random_country = {
+				limit = { 
+					NOT = {
+						TAG = ORD
+					}
+				}
+				news_event = {
+					id = news.2
+					days = 2
+				}
+			}
+		}
+	}
+}
+
+country_event = {# Theocrat Victory
+	id = ord.7
+	title = ord.7.t
+	desc = ord.7.d
+	picture = GFX_report_event_election_vote
+
+	is_triggered_only = yes
+
+	immediate = {
+		clr_country_flag = ORD_autumn_moderate
+		clr_country_flag = ORD_autumn_imperialist
+		clr_country_flag = ORD_autumn_theocrat
+		set_country_flag = ORD_autumn_debate_done
+	}
+
+	option = {
+		name = ord.7.a
+		set_politics = {
+			ruling_party = theocrat
+			}
+		add_popularity = {
+			ideology = theocrat
+			popularity = 0.15
+			}
+		hidden_effect = {
+			set_country_flag = ORD_pure_priests_flag
+			random_country = {
+				limit = { 
+					NOT = {
+						TAG = ORD
+					}
+				}
+				news_event = {
+					id = news.3
+					days = 2
+				}
+			}
+		}
+	}
+}
+
+country_event = {# A House Divided
+	id = ord.8
+	title = ord.8.t
+	desc = ord.8.d
+	picture = GFX_report_event_election_vote
+
+	is_triggered_only = yes
+
+	immediate = {
+		clr_country_flag = ORD_autumn_moderate
+		clr_country_flag = ORD_autumn_imperialist
+		clr_country_flag = ORD_autumn_theocrat
+		set_country_flag = ORD_autumn_debate_done
+	}
+
+	option = {# Theocrat-Puritan Alliance
+		name = ord.8.a
+		add_stability = -0.15
+		add_popularity = {
+		ideology = puritan
+		popularity = 0.10
+		}
+		add_popularity = {
+		ideology = theocrat
+		popularity = 0.10
+		}
+		hidden_effect = {
+			set_global_flag = worldnews_ord_well_shit
+			random_country = {
+				limit = {
+					NOT = { 
+						TAG = ORD
+						}
+					}
+				news_event = {
+					id = news.4
+					days = 2
+				}
+			}
+		}
+	}
+}
+
+### ORDORIAN THAW EVENTS
+
+country_event = {# The Union hears us out
+	id = ord.9
+	title = ord.9.t
+	desc = ord.9.d
+	picture = GFX_report_event_hitler_handshake
+
+	is_triggered_only = yes
+		
+	option = { # Demand all lost territory!
+		name = ord.9.a
+		ai_chance = {
+			factor = 3
+		}
+		add_popularity = {
+			ideology = monarchy_absolute
+			popularity = 0.05
+		}
+		hidden_effect = {
+			UNG = {
+				country_event = {
+					id = ung.2
+					days = 5
+				}
+			}
+		}
+		hidden_effect = {
+			modify_country_flag = {
+					flag = ORD_moderate_success
+					value = 1
+			}
+		}
+	}
+
+	option = { # Demand some of the lost territory
+		name = ord.9.b
+		ai_chance = {
+			factor = 5
+		}
+		add_popularity = {
+			ideology = monarchy_absolute
+			popularity = 0.05
+		}
+		hidden_effect = {
+			UNG = {
+				country_event = {
+					id = ung.3
+					days = 5
+				}
+			}
+		}
+		hidden_effect = {
+			modify_country_flag = {
+					flag = ORD_moderate_success
+					value = 1
+			}
+		}
+	}
+
+	option = { # Exchange some lands
+		name = ord.9.c
+		ai_chance = {
+			factor = 4
+		}
+		add_popularity = {
+			ideology = monarchy_absolute
+			popularity = 0.05
+		}
+		hidden_effect = {
+			UNG = {
+				country_event = {
+					id = ung.4
+					days = 5
+				}
+			}
+		}
+		hidden_effect = {
+			modify_country_flag = {
+					flag = ORD_moderate_success
+					value = 1
+			}
+		}
+	}
+}
+
+country_event = { #The Union rejects our overtures
+	id = ord.10
+	title = ord.10.t
+	desc = ord.10.d
+	picture = GFX_report_event_military_planning
+
+	is_triggered_only = yes
+
+	option = { # Damn them!
+		name = ord.10.a
+		add_stability = -0.05
+		add_popularity = {
+			ideology = puritan
+			popularity = 0.05
+		}
+		hidden_effect = {
+			modify_country_flag = {
+					flag = ORD_moderate_failure
+					value = 3
+			}
+		}
+	}
+}
+
+country_event = { # Heavy Demands - the Union Complies
+	id = ord.11
+	title = ord.11.t
+	desc = ord.11.d
+	picture = GFX_report_event_communists_cheer
+	
+	is_triggered_only = yes
+	
+	option = { # Let's hope Stahlhof complies
+		name = ord.11.a
+		add_popularity = {
+			ideology = monarchy_absolute
+			popularity = 0.15
+		}
+		hidden_effect = {
+			set_country_flag = ORD_pact_with_union
+		}
+		hidden_effect = {
+			modify_country_flag = {
+					flag = ORD_moderate_success
+					value = 3
+			}
+		}
+	}
+}
+
+country_event = { # Heavy Demands - the Union Refuses
+	id = ord.12
+	title = ord.12.t
+	desc = ord.12.d
+	picture = GFX_report_event_fascist_gathering
+	
+	is_triggered_only = yes
+	
+	option = { # Damnation!
+		name = ord.12.a
+		add_stability = -0.05
+		add_popularity = {
+			ideology = puritan
+			popularity = 0.05
+		}
+		hidden_effect = {
+			modify_country_flag = {
+					flag = ORD_moderate_failure
+					value = 2
+			}
+		}
+	}
+}
+
+country_event = { # Medium Demands - the Union Complies
+	id = ord.13
+	title = ord.13.t
+	desc = ord.13.d
+	picture = GFX_report_event_communists_cheer
+	
+	is_triggered_only = yes
+	
+	option = { # Let's hope Stahlhof complies
+		name = ord.13.a
+		add_popularity = {
+			ideology = monarchy_absolute
+			popularity = 0.10
+		}
+		hidden_effect = {
+			set_country_flag = ORD_pact_with_union
+		}
+		hidden_effect = {
+			modify_country_flag = {
+					flag = ORD_moderate_success
+					value = 1
+			}
+		}
+	}
+}
+
+country_event = { # Medium Demands - the Union Refuses
+	id = ord.14
+	title = ord.14.t
+	desc = ord.14.d
+	picture = GFX_report_event_fascist_gathering
+	
+	is_triggered_only = yes
+	
+	option = { # Damnation!
+		name = ord.14.a
+		add_stability = -0.05
+		add_popularity = {
+			ideology = puritan
+			popularity = 0.10
+		}
+		hidden_effect = {
+			modify_country_flag = {
+					flag = ORD_moderate_failure
+					value = 1
+			}
+		}
+	}
+}
+
+country_event = { # Exchange - the Union Complies
+	id = ord.15
+	title = ord.15.t
+	desc = ord.15.d
+	picture = GFX_report_event_communists_cheer
+	
+	is_triggered_only = yes
+	
+	option = { # Let's hope Stahlhof complies
+		name = ord.15.a
+		add_popularity = {
+			ideology = monarchy_absolute
+			popularity = 0.05
+		}
+		hidden_effect = {
+			set_country_flag = ORD_pact_with_union
+		}
+		hidden_effect = {
+			modify_country_flag = {
+					flag = ORD_moderate_success
+					value = 1
+			}
+		}
+	}
+}
+
+country_event = { # Arthenon Accepts Pact
+	id = ord.16
+	title = ord.16.t
+	desc = ord.16.d
+	picture = GFX_report_event_communists_cheer
+	
+	is_triggered_only = yes
+	
+	option = { # Excellent
+		name = ord.16.a
+		add_popularity = {
+			ideology = monarchy_absolute
+			popularity = 0.05
+		}
+		hidden_effect = {
+			modify_country_flag = {
+					flag = ORD_moderate_success
+					value = 1
+			}
+		}
+		hidden_effect = {
+			set_country_flag = ORD_moderate_path_over
+		}
+		hidden_effect = {
+			set_country_flag = ORD_pact_with_realm
+		}
+	}
+}
+	
+country_event = { # Arthenon Rejects Pact
+	id = ord.17
+	title = ord.17.t
+	desc = ord.17.d
+	picture = GFX_report_event_fascist_gathering
+	
+	is_triggered_only = yes
+	
+	option = { # Damn him!
+		name = ord.17.a
+		add_stability = -0.05
+		add_popularity = {
+			ideology = puritan
+			popularity = 0.05
+		}
+		hidden_effect = {
+			modify_country_flag = {
+					flag = ORD_moderate_failure
+					value = 2
+			}
+		}
+		hidden_effect = {
+			set_country_flag = ORD_moderate_path_over
+		}
+	}
+}
+
+country_event = { # Heavy Demands - Stahlhof Complies
+	id = ord.18
+	immediate = {
+		hidden_effect = {
+			set_country_flag = ORD_southern_lands_taken
+		}
+	}
+	title = ord.18.t
+	desc = ord.18.d
+	picture = GFX_report_event_communists_cheer
+	
+	is_triggered_only = yes
+	
+	option = { # Excellent
+		name = ord.18.a
+		add_stability = 0.10
+		ORD = {
+			if = {
+				limit = {
+					STA = {
+						owns_state = 193
+						controls_state = 193
+					}
+				}
+			}
+			transfer_state = 193
+		}
+		ORD = {
+			if = {
+				limit = {
+					STA = {
+						owns_state = 194
+						controls_state = 194
+					}
+				}
+				transfer_state = 194
+			}
+		}
+		ORD = {
+			if = {
+				limit = {
+					STA = {
+						owns_state = 195
+						controls_state = 195
+					}
+				}
+			transfer_state = 195
+		}
+			if = {
+				limit = {
+					STA = {
+						owns_state = 198
+						controls_state = 198
+					}
+				}
+				transfer_state = 198
+			}
+			add_state_core = 194
+			194= {
+				set_state_name = "Ythlycthis"
+			}
+			add_state_core = 193
+			193= {
+				set_state_name = "Utrocyle"
+			}
+			add_state_core = 198
+			198= {
+				set_state_name = "Sothoryn"
+			}
+			add_state_core = 195
+			195= {
+				set_state_name = "Quenthyne"
+			}
+		}
+		hidden_effect = {
+			set_country_flag = ORD_southern_lands_taken
+		}
+	}
+}
+
+country_event = { # Heavy Demands - Stahlhof Refuses
+	id = ord.19
+	title = ord.19.t
+	desc = ord.19.d
+	picture = GFX_report_event_fascist_gathering
+	
+	is_triggered_only = yes
+
+	option = { # Teach them a lesson!
+		ai_chance = {
+			factor = 10
+		}
+		set_autonomy = {
+			target = STA
+			autonomy_state = autonomy_free
+		}
+		name = ord.19.a
+		declare_war_on = {
+			target = STA
+			type = annex_everything
+		}
+	}
+	
+	option = { # Back down
+		name = ord.19.b
+		ai_chance = {
+			factor = 3
+		}
+		add_stability = -0.15
+		add_opinion_modifier = {
+			target = STA
+			modifier = ORD_demand_land_modifier
+		}
+		STA = {
+				add_opinion_modifier = {
+					target = ORD
+					modifier = ORD_demand_land_modifier
+				}
+		}
+	}
+}
+
+country_event = { # Medium Demands - Stahlhof Complies
+	id = ord.20
+	title = ord.20.t
+	desc = ord.20.d
+	picture = GFX_report_event_communists_cheer
+	
+	is_triggered_only = yes
+	
+	option = { # Excellent
+		name = ord.20.a
+		ORD = {
+			if = {
+				limit = {
+					STA = {
+						owns_state = 193
+						controls_state = 193
+					}
+				}
+			}
+			transfer_state = 193
+		}
+		ORD = {
+			if = {
+				limit = {
+					STA = {
+						owns_state = 194
+						controls_state = 194
+						}
+					}
+				transfer_state = 194
+			}
+		}
+		add_stability = 0.05
+		add_state_core = 194
+		194= {
+			set_state_name = "Ythlycthis"
+		}
+		add_state_core = 193
+		193= {
+			set_state_name = "Utrocyle"
+		}
+	}
+}
+
+country_event = { # Medium Demands - Stahlhof Refuses
+	id = ord.21
+	title = ord.21.t
+	desc = ord.21.d
+	picture = GFX_report_event_fascist_gathering
+	
+	is_triggered_only = yes
+
+	option = { # Teach them a lesson!
+		ai_chance = {
+			factor = 10
+		}
+		name = ord.21.a
+		set_autonomy = {
+			target = STA
+			autonomy_state = autonomy_free
+		}
+		declare_war_on = {
+			target = STA
+			type = annex_everything
+		}
+	}
+	option = { # Back down
+		ai_chance = {
+			factor = 2
+		}
+		name = ord.21.b
+		add_stability = -0.15
+		add_opinion_modifier = {
+			target = STA
+			modifier = ORD_demand_land_modifier
+		}
+		STA = {
+				add_opinion_modifier = {
+					target = ORD
+					modifier = ORD_demand_land_modifier
+				}
+		}
+	}
+}
+country_event = { # Exchange - Stahlhof Complies
+	id = ord.22
+	title = ord.22.t
+	desc = ord.22.d
+	picture = GFX_report_event_communists_cheer
+	
+	is_triggered_only = yes
+	
+	option = { # Excellent
+		name = ord.22.a
+		ORD = {
+			if = {
+				limit = {
+					STA = {
+						owns_state = 193
+						controls_state = 193
+				}
+			}
+			transfer_state = 193
+			}
+			if = {
+				limit = {
+					STA = {
+						owns_state = 194
+						controls_state = 194
+					}
+				}
+			transfer_state = 194
+			}
+		}
+		remove_state_core = 103
+		remove_state_core = 104
+		add_state_core = 194
+		194= {
+			set_state_name = "Ythlycthis"
+		}
+		add_state_core = 193
+		193= {
+			set_state_name = "Utrocyle"
+		}
+	}
+}
+
+country_event = { # Exchange - Stahlhof Refuses
+	id = ord.23
+	title = ord.23.t
+	desc = ord.23.d
+	picture = GFX_report_event_fascist_gathering
+	
+	is_triggered_only = yes
+
+	option = { # Teach them a lesson!
+		ai_chance = {
+			factor = 10
+		}
+		set_autonomy = {
+			target = STA
+			autonomy_state = autonomy_free
+		}
+		name = ord.23.a
+		declare_war_on = {
+			target = STA
+			type = annex_everything
+		}
+	}
+	
+	option = { # Back down
+		ai_chance = {
+			factor = 2
+		}
+		name = ord.23.b
+		add_stability = -0.20
+		add_opinion_modifier = {
+			target = STA
+			modifier = ORD_demand_land_modifier
+		}
+		STA = {
+				add_opinion_modifier = {
+					target = ORD
+					modifier = ORD_demand_land_modifier
+				}
+		}
+	}
+}
+
+country_event = { # Exchange - the Union Refuses
+	id = ord.25
+	title = ord.25.t
+	desc = ord.25.d
+	picture = GFX_report_event_fascist_gathering
+	
+	is_triggered_only = yes
+	
+	option = { # Damnation!
+		name = ord.25.a
+		add_stability = -0.05
+		add_popularity = {
+			ideology = puritan
+			popularity = 0.15
+		}
+		hidden_effect = {
+			modify_country_flag = {
+					flag = ORD_moderate_failure
+					value = 3
+			}
+		}
+	}
+}
+
+###TRADITIONALIST COUP
+
+country_event = { # Traditionalist Coup Fails
+	id = ord.26
+	title = ord.26.t
+	desc = ord.26.d
+	picture = GFX_report_event_saf_coup
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = ORD
+		ORD = {
+			has_country_flag = ORD_moderate_path_over
+			has_country_flag = {
+				flag = ORD_moderate_success
+				value > 3
+			}
+		}
+	}
+	
+	option = { # We shall not go back to the genocidal insanity of the past!
+		name = ord.26.a
+		add_stability = 0.25
+		add_popularity = {
+			ideology = puritan
+			popularity = -0.35
+		}
+	}
+}
+
+country_event = { # Traditionalist Coup Succeeds
+	id = ord.27
+	title = ord.27.t
+	desc = ord.27.d
+	picture = GFX_report_event_lithuania_army
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = ORD
+		ORD = {
+			has_country_flag = ORD_moderate_path_over
+			has_country_flag = { 
+				flag = ORD_moderate_failure
+				value > 3
+			}
+		}
+	}
+	
+	option = { # An end to this appeasement of vermin!
+		name = ord.27.a
+		add_stability = 0.25
+		add_popularity = {
+			ideology = puritan
+			popularity = 0.35
+		}
+		set_politics = {
+			ruling_party = puritan
+			elections_allowed = no
+		}
+		hidden_effect = {
+			clr_country_flag = ORD_military_moderate
+			clr_country_flag = ORD_foreign_moderate
+			clr_country_flag = ORD_domestic_moderate
+			set_country_flag = ORD_military_imperialist
+			set_country_flag = ORD_foreign_imperialist
+			set_country_flag = ORD_domestic_imperialist
+		}
+	}
+}
+
+country_event = { # Traditionalist Civil War
+	id = ord.28
+	title = ord.28.t
+	desc = ord.28.d
+	picture = GFX_report_event_spain_civil_war_volunteers_02
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = ORD
+		ORD = {
+			AND = {
+				has_country_flag = ORD_moderate_path_over
+				has_country_flag = { 
+					flag = ORD_moderate_success
+					value < 4
+				}
+				has_country_flag = { 
+					flag = ORD_moderate_failure
+					value < 4
+				}
+			}
+		}
+	}
+	
+	option = { # A fine excuse to rid ourselves of the Traditionalist scum!
+		name = ord.28.a
+		add_stability = -0.25
+		add_popularity = {
+			ideology = puritan
+			popularity = -0.35
+		}
+		ai_chance = {
+			factor = 100
+		}
+		hidden_effect = {
+			ORD = {
+				set_capital = 111
+			}
+		}
+		start_civil_war = {
+			ideology = puritan
+			size = 0.5
+			capital = 85
+			states = {
+				85
+				99
+				100
+				101
+				198
+				193
+				195
+				194
+				106
+				105
+				104
+				103
+				102
+				92
+				98
+				97
+				100
+				80
+				81
+				91
+				107
+				84
+				88
+				87
+				83
+			}
+		}
+		hidden_effect = {
+			set_equipment_fraction = 0.7
+		}
+		hidden_effect = {
+			random_other_country = {
+				limit = {
+					original_tag = ORD
+					has_government =  puritan
+				}
+				set_equipment_fraction = 0.7
+				set_country_flag = ORD_autumn_debate_done
+				set_country_flag = ORD_foreign_imperialist
+				set_country_flag = ORD_military_imperialist
+				set_country_flag = ORD_domestic_imperialist
+				clr_country_flag = ORD_foreign_moderate
+				clr_country_flag = ORD_military_moderate
+				clr_country_flag = ORD_domestic_moderate
+			}
+		}
+	}
+	option = { # Rid our people of this Moderate insanity!
+		name = ord.28.b
+		add_stability = -0.25
+		add_popularity = {
+			ideology = puritan
+			popularity = 0.35
+		}
+		ai_chance = {
+			factor = 0
+		}
+		set_politics = {
+			ruling_party = puritan
+			elections_allowed = no
+		}
+		start_civil_war = {
+			ideology = monarchy_absolute
+			size = 0.5
+			capital = 111
+			states = {
+				111
+				108
+				94
+				95
+				117
+				110
+				90
+				76
+				93
+				89
+				116
+				115
+				77
+				112
+				114
+				113
+				86
+				78
+				79
+				82
+				109
+				108
+				96
+				101
+			}
+		}
+		
+		hidden_effect = {
+			load_oob = "ORD_Civil_War"
+			set_equipment_fraction = 0.7
+			set_country_flag = ORD_foreign_imperialist
+			set_country_flag = ORD_military_imperialist
+			set_country_flag = ORD_domestic_imperialist
+			clr_country_flag = ORD_foreign_moderate
+			clr_country_flag = ORD_military_moderate
+			clr_country_flag = ORD_domestic_moderate
+		}
+		
+		hidden_effect = {
+			random_other_country = {
+				limit = {
+					original_tag = ORD
+					has_government =  monarchy_absolute
+				}
+				set_equipment_fraction = 0.7
+				set_country_flag = ORD_autumn_debate_done
+			}
+		}
+	}
+}
+
+### RECLAMATION EVENTS
+
+country_event = { # Southern Lands Reclaimed
+	id = ord.24
+	title = ord.24.t
+	desc = ord.24.d
+	picture = GFX_report_event_fascist_gathering
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	trigger = {
+		tag = ORD
+		ORD = {
+			OR = {
+			controls_state = 193
+			owns_state = 193
+			}
+		}
+		ORD = {
+			OR = {
+			controls_state = 194
+			owns_state = 194
+			}
+		}
+		ORD = {
+			OR = {
+			controls_state = 195
+			owns_state = 195
+			}
+		}
+		ORD = {
+			OR = {
+			controls_state = 198
+			owns_state = 198
+			}
+		}
+		NOT = {
+			has_country_flag = ORD_southern_lands_taken
+		}
+	}
+	option = { # Reunited at last!
+		name = ord.24.a
+		add_stability = 0.05
+		add_state_core = 194
+		STA = {
+			remove_state_core = 193
+			remove_state_core = 194
+			remove_state_core = 195
+			remove_state_core = 198
+		}
+		194= {
+			set_state_name = "Ythlycthis"
+		}
+		add_state_core = 193
+		193= {
+			set_state_name = "Utrocyle"
+		}
+		add_state_core = 198
+		198= {
+			set_state_name = "Sothoryn"
+		}
+		add_state_core = 195
+		195= {
+			set_state_name = "Quenthyne"
+		}
+		hidden_effect = {
+			set_country_flag = ORD_southern_lands_taken
+			}
+		}
+}
+
+country_event = {#East Reclaimed
+	id = ord.29
+	title = ord.29.t
+	desc = ord.29.d
+	picture = GFX_report_event_fascist_gathering
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {#Direct Rule
+		trigger = {
+			OR = {
+				has_country_flag = ORD_domestic_imperialist
+				has_country_flag = ORD_domestic_theocrat
+			}
+		}
+		name = ord.29.a
+		ai_chance = {
+			factor = 12
+		}
+		hidden_effect = {
+			set_country_flag = ORD_directly_rule_east
+		}
+	}
+	
+	option = {#Indirect Rule
+		trigger = {
+			OR = {
+				has_country_flag = ORD_domestic_imperialist
+				has_country_flag = ORD_domestic_moderate
+			}
+		}
+		name = ord.29.b
+		ai_chance = {
+			factor = 6
+		}
+		hidden_effect = {
+			set_country_flag = ORD_indirectly_rule_east
+		}
+	}
+}
+
+country_event = {#Skaelinger Offers Peace
+	id = ord.30
+	title = ord.30.t
+	desc = ord.30.d
+	picture = GFX_report_event_hungary_refused
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {#Accept
+		name = ord.30.a
+		ai_chance = {
+			factor = 5
+		}
+		hidden_effect = {
+			SKA = {
+				country_event = {
+					id = ska.4
+					days = 1
+				}
+			}
+		}
+	}
+	
+	option = {#Accept for Concessions
+		name = ord.30.b
+		ai_chance = {
+			factor = 35
+		}
+		hidden_effect = {
+			SKA = {
+				country_event = {
+					id = ska.5
+					days = 1
+				}
+			}
+		}
+	}
+	
+	option = {#Decline
+		name = ord.30.c
+		ai_chance = {
+			factor = 30
+		}
+		hidden_effect = {
+			SKA = {
+				country_event = {
+					id = ska.6
+					days = 1
+				}
+			}
+		}
+	}
+	
+	option = {#Demand they submit to our rule as a vassal state!
+		name = ord.30.e
+		trigger = {
+			has_government = monarchy_absolute
+		}
+		ai_chance = {
+			factor = 100
+		}
+		hidden_effect = {
+			SKA = {
+				country_event = {
+					id = ska.7
+					days = 1
+				}
+			}
+		}
+	}
+}
+
+country_event = { #Concessions - Skaelinger Accepts
+	id = ord.31
+	title = ord.31.t
+	desc = ord.31.d
+	picture = GFX_report_event_fascists_posing
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {#Good
+		name = ord.31.a
+		add_state_core = 190
+		add_state_core = 191
+		add_state_core = 148
+		add_state_core = 147
+		add_state_core = 120
+		add_state_core = 171
+		add_state_core = 189
+		add_state_core = 175
+		add_state_core = 184
+	}
+}
+
+country_event = { #Concessions - Skaelinger Declines
+	id = ord.32
+	title = ord.32.t
+	desc = ord.32.d
+	picture = GFX_report_event_communist_leader
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {#Their loss
+		name = ord.32.a
+	}
+}
+
+country_event = { #Vassalization - Skaelinger Accepts
+	id = ord.33
+	title = ord.33.t
+	desc = ord.33.d
+	picture = GFX_report_event_fascists_posing
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {#Good
+		name = ord.33.a
+		puppet = SKA
+	}
+}
+
+country_event = { #Concessions - Skaelinger Declines
+	id = ord.34
+	title = ord.34.t
+	desc = ord.34.d
+	picture = GFX_report_event_communist_leader
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {#Their loss
+		name = ord.34.a
+	}
+}
+
+country_event = { #Punish Stahlhof
+	id = ord.35
+	title = ord.35.t
+	desc = ord.35.d
+	picture = GFX_report_event_fascists_posing
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = { #Back in Control
+		name = ord.35.a
+		ORD = {
+			if = {
+				limit = {
+					STA = {
+						owns_state = 193
+						controls_state = 193
+					}
+				}
+			}
+			transfer_state = 193
+		}
+		ORD = {
+			if = {
+				limit = {
+					STA = {
+						owns_state = 194
+						controls_state = 194
+					}
+				}
+				transfer_state = 194
+			}
+		}
+		ORD = {
+			if = {
+				limit = {
+					STA = {
+						owns_state = 195
+						controls_state = 195
+					}
+				}
+			transfer_state = 195
+			}
+			if = {
+				limit = {
+					STA = {
+						owns_state = 198
+						controls_state = 198
+					}
+				}
+				transfer_state = 198
+			}
+			add_state_core = 194
+			194= {
+				set_state_name = "Ythlycthis"
+			}
+			add_state_core = 193
+			193= {
+				set_state_name = "Utrocyle"
+			}
+			add_state_core = 198
+			198= {
+				set_state_name = "Sothoryn"
+			}
+			add_state_core = 195
+			195= {
+				set_state_name = "Quenthyne"
+			}
+		}
+		hidden_effect = {
+			set_country_flag = ORD_southern_lands_taken
+		}
+		STA = {
+			country_event = {
+				id = sta.5
+				days = 1
+			}
+		}
+	}
+}
+
+country_event = { #Stahlhof Agrees
+	id = ord.36
+	title = ord.36.t
+	desc = ord.36.d
+	picture = GFX_report_event_communists_cheer
+	
+	is_triggered_only = yes
+	
+	option = { #Good
+		name = ord.36.a
+		add_political_power = 15
+	}
+}
+
+country_event = { #Stahlhof Rejects the Deal
+	id = ord.37
+	title = ord.37.t
+	desc = ord.37.d
+	picture = GFX_report_event_japan_europe_pact
+	
+	is_triggered_only = yes
+	
+	option = { #Damn
+		name = ord.37.a
+		add_political_power = -15
+	}
+}
+
+country_event = { #Gamble on Stahlhof?
+	id = ord.38
+	title = ord.38.t
+	desc = ord.38.d
+	picture = GFX_report_event_pierre_laval
+	
+	is_triggered_only = yes
+	
+	option = { #Alea iacta est
+		name = ord.38.a
+		STA = {
+			country_event = {
+			id = sta.6
+			days = 1
+			}
+		}
+	}
+	
+	option = { #No
+		name = ord.38.b
+		add_political_power = 50
+	}
+}
+
+country_event = { #Rthaur Resistance
+	id = ord.39
+	title = ord.39.t
+	desc = ord.39.d
+	picture = GFX_report_event_french_resistance_02
+	
+	fire_only_once = yes
+	
+	trigger = {
+		original_tag = ORD
+		NOT = {
+			country_exists = RTH
+		}
+		NOT = {
+			has_government = republic_peasant
+		}
+		owns_state = 118
+	}
+	
+	mean_time_to_happen = {
+		days = 27
+	}
+	
+	option = { #Worrying
+		name = ord.39.a
+		add_ideas = ORD_rthaur_propaganda
+		set_party_name = {
+			ideology = republic_peasant
+			name = ORD_republic_peasant_party_resistance
+			long_name = ORD_republic_peasant_party_resistance
+		}
+		add_popularity = {
+			ideology = republic_peasant
+			popularity = 0.15
+		}
+		hidden_effect = {
+			every_state = {
+				limit = {
+					is_core_of = RTH
+				}
+				ORD = {
+					remove_state_claim = PREV
+				}
+				EOR = {
+					add_state_core = PREV
+				}
+			}
+		}
+		hidden_effect = {
+			every_state = {
+				limit = {
+					is_core_of = ORD
+				}
+				remove_state_claim = RTH
+			}
+		}
+		hidden_effect = {
+			every_state = {
+				RTH = {
+					remove_state_claim = PREV
+					remove_state_core = PREV
+				}
+			}
+		}
+	}
+}
+
+country_event = { #Second Rthaur Rebellion!
+	id = ord.40
+	title = ord.40.t
+	desc = ord.40.d
+	picture = GFX_report_event_soviet_purge_speech
+	
+	fire_only_once = yes
+	
+	trigger = {
+		original_tag = ORD
+		NOT = {
+			country_exists = RTH
+		}
+		NOT = {
+			has_government = republic_peasant
+		}
+		owns_state = 118
+		has_idea = ORD_rthaur_propaganda
+		republic_peasant > 0.4
+	}
+	
+	mean_time_to_happen = {
+		days = 8
+	}
+	
+	option = { #Crush them!
+		name = ord.40.a
+		remove_ideas = ORD_rthaur_propaganda
+		set_party_name = {
+			ideology = republic_peasant
+			long_name = ORD_republic_peasant_party
+			name = ORD_republic_peasant_party
+		}
+		add_popularity = {
+			ideology = republic_peasant
+			popularity = -0.5
+		}
+		
+		hidden_effect = {
+			delete_unit_template_and_units = {
+				division_template = "Grove Guards"
+			}
+			delete_unit_template_and_units = {
+				division_template = "Bladesingers"
+			}
+			delete_unit_template_and_units = {
+				division_template = "Rangers"
+			}
+			load_oob = "ORD_ii_rev"
+		}
+		
+		hidden_effect = {
+			if = {
+				limit = {
+					RTH = {
+						is_puppet = yes
+					}
+				}
+				set_autonomy =  {
+					target = RTH
+					autonomy_state = autonomy_free
+				}
+			}
+			RTH = {
+				transfer_state = 118
+				transfer_state = 132
+				transfer_state = 140
+				transfer_state = 137
+				transfer_state = 145
+				transfer_state = 143
+				transfer_state = 128
+				transfer_state = 103
+				transfer_state = 104
+				transfer_state = 105
+				transfer_state = 106
+				transfer_state = 133
+				transfer_state = 119
+				transfer_state = 135
+				transfer_state = 144
+				transfer_state = 107
+				transfer_state = 84
+				transfer_state = 93
+				transfer_state = 90
+				transfer_state = 76
+				transfer_state = 88
+				transfer_state = 89
+				transfer_state = 114
+				transfer_state = 113
+				transfer_state = 77
+				transfer_state = 86
+				transfer_state = 78
+				transfer_state = 115
+				
+				add_state_core = 118
+				add_state_core = 132
+				add_state_core = 140
+				add_state_core = 137
+				add_state_core = 145
+				add_state_core = 143
+				add_state_core = 128
+				add_state_core = 103
+				add_state_core = 104
+				add_state_core = 105
+				add_state_core = 106
+				add_state_core = 133
+				add_state_core = 119
+				add_state_core = 135
+				add_state_core = 144
+				add_state_core = 107
+				add_state_core = 84
+				add_state_core = 93
+				add_state_core = 90
+				add_state_core = 76
+				add_state_core = 88
+				add_state_core = 89
+				add_state_core = 114
+				add_state_core = 113
+				add_state_core = 77
+				add_state_core = 86
+				add_state_core = 78
+				add_state_core = 115
+				
+				load_oob = "RTH_ii_rev"
+			}
+			declare_war_on = {
+				target = RTH
+				type = annex_everything
+			}
+			if = {
+				limit = {
+					country_exists = SKA
+				}
+				SKA = {
+					country_event = {
+						id = ska.8
+						days = 5
+					}
+				}
+			}
+		}
+	}
+	
+	option = { #Hasta la Siempre!
+		name = ord.40.b
+		remove_ideas = ORD_rthaur_propaganda
+		set_party_name = {
+			ideology = republic_peasant_party
+			long_name = ORD_republic_peasant_party
+			name = ORD_republic_peasant_party
+		}
+		add_popularity = {
+			ideology = republic_peasant
+			popularity = -0.5
+		}
+		
+		hidden_effect = {
+			delete_unit_template_and_units = {
+				division_template = "Grove Guards"
+			}
+			delete_unit_template_and_units = {
+				division_template = "Bladesingers"
+			}
+			delete_unit_template_and_units = {
+				division_template = "Rangers"
+			}
+			load_oob = "ORD_ii_rev"
+		}
+		
+		hidden_effect = {
+			if = {
+				limit = {
+					RTH = {
+						is_puppet = yes
+					}
+				}
+				set_autonomy =  {
+					target = RTH
+					autonomy_state = autonomy_free
+				}
+			}
+			RTH = {
+				transfer_state = 118
+				transfer_state = 132
+				transfer_state = 140
+				transfer_state = 137
+				transfer_state = 145
+				transfer_state = 143
+				transfer_state = 128
+				transfer_state = 103
+				transfer_state = 104
+				transfer_state = 105
+				transfer_state = 106
+				transfer_state = 133
+				transfer_state = 119
+				transfer_state = 135
+				transfer_state = 144
+				transfer_state = 107
+				transfer_state = 84
+				transfer_state = 93
+				transfer_state = 90
+				transfer_state = 76
+				transfer_state = 88
+				transfer_state = 89
+				transfer_state = 114
+				transfer_state = 113
+				transfer_state = 77
+				transfer_state = 86
+				transfer_state = 78
+				transfer_state = 115
+				
+				add_state_core = 118
+				add_state_core = 132
+				add_state_core = 140
+				add_state_core = 137
+				add_state_core = 145
+				add_state_core = 143
+				add_state_core = 128
+				add_state_core = 103
+				add_state_core = 104
+				add_state_core = 105
+				add_state_core = 106
+				add_state_core = 133
+				add_state_core = 119
+				add_state_core = 135
+				add_state_core = 144
+				add_state_core = 107
+				add_state_core = 84
+				add_state_core = 93
+				add_state_core = 90
+				add_state_core = 76
+				add_state_core = 88
+				add_state_core = 89
+				add_state_core = 114
+				add_state_core = 113
+				add_state_core = 77
+				add_state_core = 86
+				add_state_core = 78
+				add_state_core = 115
+				
+				RTH = {
+					change_tag_from = ORD
+				}
+				load_oob = "RTH_ii_rev"
+			}
+			RTH = {
+				declare_war_on = {
+						target = ORD
+						type = annex_everything
+				}
+			}
+			if = {
+				limit = {
+					country_exists = SKA
+				}
+				SKA = {
+					country_event = {
+						id = ska.8
+						days = 5
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = { # Slave Revolt!
+	id = ord.41
+	title = ord.41.t
+	desc = ord.41.d
+	picture = GFX_report_event_generic_riot
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_country_flag = ORD_unlock_slave_events
+	}
+	
+	mean_time_to_happen = {
+		days = 200
+	}
+
+	option = { # Concessions
+		ai_chance = {
+			factor = 2
+		}
+		name = ord.41.a
+		add_timed_idea = {
+			idea = ORD_slave_concessions
+			days = 200
+		}
+		add_political_power = -15
+	}
+	
+	option = { # Crackdown
+		ai_chance = {
+			factor = 8
+		}
+		name = ord.41.b
+		random_list = { #Will it work?
+			50 = {
+				country_event = { #Revolt Crushed
+					days = 2
+					id = ord.43
+				}
+			}
+			50 = {
+				country_event = { #Revolt Grows
+					days = 2
+					id = ord.42
+				}
+			}
+		}
+
+	}
+}
+
+country_event = { # Slave Revolt Grows!
+	id = ord.42
+	title = ord.42.t
+	desc = ord.42.d
+	picture = GFX_report_event_generic_riot
+	
+	is_triggered_only = yes
+
+	option = { # Law Enforcement
+		ai_chance = {
+			factor = 2
+			modifier = {
+				has_war = yes
+				factor = 100
+			}
+		}
+		name = ord.42.a
+		add_timed_idea = {
+			idea = ORD_slave_revolt
+			days = 365
+		}
+		add_political_power = -35
+	}
+	
+	option = { # Army
+		name = ord.42.b
+		custom_effect_tooltip = ORD_slave_army_explanation_tt
+		ai_chance = {
+			factor = 8
+		}
+		add_ideas = ORD_slave_leader
+		set_country_flag = ORD_slave_revolt_leader
+		add_political_power = -50
+		add_stability = -0.05
+	}
+}
+
+country_event = { #Slave Revolt Crushed
+	id = ord.43
+	title = ord.43.t
+	desc = ord.43.d
+	picture = GFX_report_event_generic_military_parade
+	
+	is_triggered_only = yes
+	
+	option = {#Good
+		name = ord.43.a
+		add_political_power = 15
+		add_stability = 0.05
+		if = {
+			limit = {
+				has_idea = ORD_slave_leader
+			}
+			remove_ideas = ORD_slave_leader
+		}
+	}
+}
+
+country_event = { #Race Riot
+	id = ord.44
+	title = ord.44.t
+	desc = ord.44.d
+	picture = GFX_report_event_generic_riot
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_country_flag = ORD_unlock_race_riot_events
+	}
+	
+	mean_time_to_happen = {
+		days = 200
+	}
+
+	option = { # Concessions
+		ai_chance = {
+			factor = 2
+		}
+		name = ord.44.a
+		add_timed_idea = {
+			idea = ORD_race_riot_concessions
+			days = 200
+		}
+		add_political_power = -15
+		add_popularity = {
+			ideology = puritan
+			popularity = 0.05
+		}
+	}
+	
+	option = { # Crackdown
+		ai_chance = {
+			factor = 8
+		}
+		name = ord.44.b
+		random_list = { #Will it work?
+			50 = {
+				country_event = { #Riot Crushed
+					days = 2
+					id = ord.46
+				}
+			}
+			50 = {
+				country_event = { #Riot Grows
+					days = 2
+					id = ord.45
+				}
+			}
+		}
+	}
+}
+
+country_event = { # Race Riot Grows!
+	id = ord.45
+	title = ord.45.t
+	desc = ord.45.d
+	picture = GFX_report_event_generic_riot
+	
+	is_triggered_only = yes
+
+	option = { # Law Enforcement
+		ai_chance = {
+			factor = 2
+			modifier = {
+				has_war = yes
+				factor = 100
+			}
+		}
+		name = ord.45.a
+		add_timed_idea = {
+			idea = ORD_race_riot_escalating
+			days = 365
+		}
+		add_political_power = -35
+	}
+	
+	option = { # Army
+		name = ord.45.b
+		custom_effect_tooltip = ORD_race_riot_explanation_tt
+		ai_chance = {
+			factor = 8
+		}
+		add_ideas = ORD_race_riot_escalated
+		set_country_flag = ORD_race_riot_escalated
+		add_political_power = -50
+		add_stability = -0.05
+	}
+}
+
+country_event = { #Race Riot Halted
+	id = ord.46
+	title = ord.46.t
+	desc = ord.46.d
+	picture = GFX_report_event_generic_military_parade
+	
+	is_triggered_only = yes
+	
+	option = {#Good
+		name = ord.46.a
+		add_political_power = 15
+		add_stability = 0.05
+		if = {
+			limit = {
+				has_idea = ORD_race_riot_escalated
+			}
+			remove_ideas = ORD_race_riot_escalated
+		}
+	}
+}
+
+country_event = { #Nobles Protest
+	id = ord.47
+	title = ord.47.t
+	desc = ord.47.d
+	picture = GFX_report_event_molotov_signing_pact
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_country_flag = ORD_unlock_austerity_events
+	}
+	
+	mean_time_to_happen = {
+		days = 200
+	}
+
+	option = { # Concessions
+		ai_chance = {
+			factor = 2
+		}
+		name = ord.47.a
+		add_timed_idea = {
+			idea = ORD_austerity_concessions
+			days = 200
+		}
+		add_political_power = -15
+		add_popularity = {
+			ideology = puritan
+			popularity = 0.05
+		}
+	}
+	
+	option = { # Crackdown
+		ai_chance = {
+			factor = 8
+		}
+		name = ord.47.b
+		random_list = { #Will it work?
+			50 = {
+				country_event = { #Riot Crushed
+					days = 2
+					id = ord.49
+				}
+			}
+			50 = {
+				country_event = { #Riot Grows
+					days = 2
+					id = ord.48
+				}
+			}
+		}
+	}
+}
+
+country_event = { # Noble Riot Grows!
+	id = ord.48
+	title = ord.48.t
+	desc = ord.48.d
+	picture = GFX_report_event_saf_soldiers_2
+	
+	is_triggered_only = yes
+
+	option = { # Law Enforcement
+		ai_chance = {
+			factor = 2
+			modifier = {
+				has_war = yes
+				factor = 100
+			}
+		}
+		name = ord.48.a
+		add_timed_idea = {
+			idea = ORD_austerity_riot_escalating
+			days = 365
+		}
+		add_political_power = -35
+	}
+	
+	option = { # Army
+		name = ord.48.b
+		custom_effect_tooltip = ORD_austerity_riot_explanation_tt
+		ai_chance = {
+			factor = 8
+		}
+		add_ideas = ORD_austerity_riot_escalated
+		set_country_flag = ORD_noble_riot_escalated
+		add_political_power = -50
+		add_stability = -0.05
+	}
+}
+
+country_event = { #Noble Riot Halted
+	id = ord.49
+	title = ord.49.t
+	desc = ord.49.d
+	picture = GFX_report_event_generic_military_parade
+	
+	is_triggered_only = yes
+	
+	option = {#Good
+		name = ord.49.a
+		add_political_power = 15
+		add_stability = 0.05
+		if = {
+			limit = {
+				has_idea = ORD_noble_riot_escalated
+			}
+			remove_ideas = ORD_noble_riot_escalated
+		}
+	}
+}
+
+country_event = { #The Hofmeyer Question
+	id = ord.50
+	title = ord.50.t
+	desc = ord.50.d
+	picture = GFX_report_event_romania_parliament
+	
+	trigger = {
+		has_completed_focus = ORD_ensure_loyalty
+	}
+	
+	mean_time_to_happen = {
+		days = 150
+	}
+	
+	fire_only_once = yes
+	
+	option = { #Promote Hofmeyer
+		name = ord.50.a
+		ai_chance = {
+			factor = 6
+			modifier = {
+				has_government = monarchy_absolute
+				factor = 2
+			}
+		}
+		set_country_flag = ORD_hofmeyer_promoted
+		add_popularity = {
+			ideology = monarchy_absolute
+			popularity = 0.05
+		}
+	}
+	
+	option = { #Fuck Hofmeyer
+		name = ord.50.b
+		ai_chance = {
+			factor = 4
+			modifier = {
+				OR = {
+					has_government = puritan
+					has_government = theocrat
+				}
+				factor = 3
+			}
+		}
+		set_country_flag = ORD_hofmeyer_fucked
+		add_popularity = {
+			ideology = puritan
+			popularity = 0.05
+		}
+	}
+}
+
+country_event = { #Trial of the Five
+	id = ord.51
+	title = ord.51.t
+	desc = ord.51.d
+	picture = GFX_report_event_romania_parliament
+	
+	trigger = {
+		has_completed_focus = ORD_puritan_propaganda
+	}
+	
+	mean_time_to_happen = {
+		days = 150
+	}
+	
+	fire_only_once = yes
+	
+	option = { #Acquit 'Em
+		name = ord.51.a
+		ai_chance = {
+			factor = 4
+			modifier = {
+				has_government = monarchy_absolute
+				factor = 3
+			}
+		}
+		set_country_flag = ORD_five_acquitted
+		add_popularity = {
+			ideology = republic_aristocrat
+			popularity = 0.05
+		}
+	}
+	
+	option = { #Kill 'Em
+		name = ord.51.b
+		ai_chance = {
+			factor = 6
+			modifier = {
+				OR = {
+					has_government = puritan
+					has_government = theocrat
+				}
+				factor = 2
+			}
+		}
+		set_country_flag = ORD_five_guilty
+		add_popularity = {
+			ideology = puritan
+			popularity = 0.05
+		}
+	}
+}
+
+country_event = { #Resderin Conclave
+	id = ord.52
+	title = ord.52.t
+	desc = ord.52.d
+	picture = GFX_report_event_romania_parliament
+	
+	trigger = {
+		has_completed_focus = ORD_hunt_heretics
+	}
+	
+	mean_time_to_happen = {
+		days = 150
+	}
+	
+	fire_only_once = yes
+	
+	option = { #HERESY *BLAM*
+		name = ord.52.a
+		ai_chance = {
+			factor = 1
+			modifier = {
+				has_government = theocrat
+				factor = 5
+			}
+		}
+		set_country_flag = ORD_moderates_heretical
+		add_popularity = {
+			ideology = theocrat
+			popularity = 0.05
+		}
+	}
+	
+	option = { #Codex Elfstartes does not support this action
+		name = ord.52.b
+		ai_chance = {
+			factor = 6
+			modifier = {
+				OR = {
+					has_government = puritan
+					has_government = monarchy_absolute
+				}
+				factor = 3
+			}
+		}
+		set_country_flag = ORD_moderates_tolerated
+		add_popularity = {
+			ideology = monarchy_absolute
+			popularity = 0.05
+		}
+	}
+}
+
+country_event = {#Succesful Raid
+	id = ord.53
+	title = ord.53.t
+	desc = ord.53.d
+	picture = GFX_report_event_usa_destroyers
+	
+	trigger = {
+		has_country_flag = ORD_jolly_roger
+		NOT = {
+			has_idea = ORD_privateer_spoils
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 350
+	}
+	
+	option = {#Yay
+		name = ord.53.a
+		add_timed_idea = {
+			idea = ORD_privateer_spoils
+			days = 50
+		}
+	}
+}

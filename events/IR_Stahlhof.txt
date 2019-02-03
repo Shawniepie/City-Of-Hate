@@ -1,0 +1,252 @@
+﻿### STAHLHOFFER EVENTS
+
+add_namespace = sta
+
+### ORDORIAN DEMANDS
+
+country_event = {# Negotiations - Heavy Demands
+	id = sta.1
+	title = sta.1.t
+	desc = sta.1.d
+	picture = GFX_report_event_generic_army
+
+	is_triggered_only = yes
+
+	option = { # Accept
+		name = sta.1.a
+		add_stability = -0.3
+		ai_chance = {
+			factor = 10
+			}
+		remove_state_core = 193
+		remove_state_core = 194
+		remove_state_core = 195
+		remove_state_core = 198
+		hidden_effect = {
+			ORD = {
+				country_event = {
+					id = ord.18
+					days = 5
+				}
+			}
+		}
+	}
+
+	option = { # Reject
+		name = sta.1.b
+		ai_chance = {
+			factor = 5
+			}
+		hidden_effect = {
+			ORD = {
+				country_event = {
+					id = ord.19
+					days = 5
+				}
+			}
+		}
+	}
+}
+
+country_event = {# Negotiations - Medium Demands
+	id = sta.2
+	title = sta.2.t
+	desc = sta.2.d
+	picture = GFX_report_event_generic_army
+
+	is_triggered_only = yes
+
+	option = { # Accept
+		name = sta.2.a
+		add_stability = -0.15
+		ai_chance = {
+			factor = 10
+			}
+		remove_state_core = 193
+		remove_state_core = 194
+		hidden_effect = {
+			ORD = {
+				country_event = {
+					id = ord.20
+					days = 5
+				}
+			}
+		}
+	}
+
+	option = { # Reject
+		name = sta.2.b
+		ai_chance = {
+			factor = 3
+			}
+		hidden_effect = {
+			ORD = {
+				country_event = {
+					id = ord.21
+					days = 5
+				}
+			}
+		}
+	}
+}
+
+country_event = {# Negotiations - Exchange
+	id = sta.3
+	title = sta.3.t
+	desc = sta.3.d
+	picture = GFX_report_event_generic_army
+
+	is_triggered_only = yes
+
+	option = { # Accept
+		name = sta.3.a
+		ai_chance = {
+			factor = 10
+			}
+		STA = {
+			if = {
+				limit = {
+					ORD = {
+						owns_state = 103
+						controls_state = 103
+					}
+				}
+			transfer_state = 103
+			}
+			if = {
+				limit = {
+					ORD = {
+						owns_state = 104
+						controls_state = 104
+					}
+				}
+			transfer_state = 104
+			}
+		}
+		remove_state_core = 193
+		remove_state_core = 194
+		add_state_core = 103
+		103= {
+			set_state_name = "Elfstein"
+		}
+		add_state_core = 104
+		104= {
+			set_state_name = "Elfwald"
+		}
+		hidden_effect = {
+			ORD = {
+				country_event = {
+					id = ord.22
+					days = 5
+				}
+			}
+		}
+	}
+
+	option = { # Reject
+		name = sta.3.b
+		ai_chance = {
+			factor = 1
+			}
+		hidden_effect = {
+			ORD = {
+				country_event = {
+					id = ord.23
+					days = 5
+				}
+			}
+		}
+	}
+}
+
+country_event = {# Ordorian Raids
+	id = sta.4
+	title = sta.4.t
+	desc = sta.4.d
+	picture = GFX_report_event_chinese_soldiers_city_ruin
+	
+	is_triggered_only = yes
+	
+	option = { #Damn
+		name = sta.4.a
+		209 = {
+			damage_building = {
+				type = infrastructure
+				damage = 2
+			}
+			damage_building = {
+				type = industrial_complex
+				damage = 1
+			}
+			add_manpower = -23
+		}
+	}
+}
+
+country_event = {#Ordoria Seizes Northlands
+	id = sta.5
+	title = sta.5.t
+	desc = sta.5.d
+	picture = GFX_report_event_generic_army
+	
+	is_triggered_only = yes
+	
+	option = { #Back Down
+		name = sta.5.a
+		add_stability = -0.05
+	}
+	
+	option = { # To Arms!
+		name = sta.5.b
+		declare_war_on = {
+			target = ORD
+			type = annex_everything
+		}
+	}
+}
+
+country_event = {#Ordorian Proposal
+	id = sta.6
+	title = sta.6.t
+	desc = sta.6.d
+	picture = GFX_report_event_pierre_laval
+	
+	is_triggered_only = yes
+	
+	option = { #Yes
+		name = sta.6.a
+		ai_chance = {
+			factor = 11
+		}
+		hidden_effect = {
+			set_country_flag = STA_defect
+		}
+		custom_effect_tooltip = stahlhof_ordorian_domination
+		ORD = {
+			country_event = {
+				id = ord.36
+				days = 1
+			}
+		}
+	}
+	
+	option = { #No
+		name = sta.6.b
+		ai_chance = {
+			factor = 9
+			modifier = {
+				is_puppet_of = ORD
+				factor = 0
+			}
+		}
+		hidden_effect = {
+			set_country_flag = STA_independent
+		}
+		ORD = {
+			country_event = {
+				id = ord.37
+				days = 1
+			}
+		}
+	}
+}
