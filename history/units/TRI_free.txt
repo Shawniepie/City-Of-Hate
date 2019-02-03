@@ -1,0 +1,63 @@
+﻿division_template = {
+	name = "City Guard"	
+	
+	regiments = {
+		garrison = { x = 0 y = 0 }
+		garrison = { x = 0 y = 1 }
+		garrison = { x = 0 y = 2 }
+	}
+}
+
+division_template = {
+	name = "King's Men"
+
+	regiments = {
+		men_at_arms = { x = 0 y = 0 }
+		men_at_arms = { x = 0 y = 1 }
+		men_at_arms = { x = 0 y = 2 }
+        men_at_arms = { x = 1 y = 0 }
+		men_at_arms = { x = 1 y = 1 }
+		men_at_arms = { x = 1 y = 2 }
+	}
+}
+
+units = {
+
+	division = {
+		name = "Trifell Guard"
+		location = 8702
+		division_template = "City Guard"
+		start_experience_factor = 0.3
+
+	}
+	
+	division = {
+		name = "Hyctis Guard"
+		location = 5480
+		division_template = "City Guard"
+		start_experience_factor = 0.3
+
+	}
+	
+	division = {
+		name = "King's Guard"
+		location = 8514
+		division_template = "King's Men"
+		start_experience_factor = 0.7
+	}
+
+	division = {
+		name = "1st King's Men"
+		location = 8915
+		division_template = "King's Men"
+		start_experience_factor = 0.5
+	}
+
+	division = {
+		name = "2nd King's Men"
+		location = 62
+		division_template = "King's Men"
+		start_experience_factor = 0.5
+	}
+
+}

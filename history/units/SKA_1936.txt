@@ -1,0 +1,161 @@
+﻿division_template = {
+	name = "Hearthguards"	
+	regiments = {
+		garrison = { x = 0 y = 0 }
+		garrison = { x = 0 y = 1 }
+		garrison = { x = 0 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Tunnel Fighters"
+	regiments = {
+		men_at_arms = { x = 0 y = 0 }
+		men_at_arms = { x = 0 y = 1 }
+		men_at_arms = { x = 0 y = 2 }
+        men_at_arms = { x = 1 y = 0 }
+		men_at_arms = { x = 1 y = 1 }
+		men_at_arms = { x = 1 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Mountainbreakers"
+	regiments = {
+		dwarven_warriors = { x = 0 y = 0 }
+		dwarven_warriors = { x = 0 y = 1 }
+		dwarven_warriors = { x = 0 y = 2 }
+        dwarven_warriors = { x = 1 y = 0 }
+		dwarven_warriors = { x = 1 y = 1 }
+		dwarven_warriors = { x = 1 y = 2 }
+	}
+	support = 	{
+		engineer = { x = 0 y = 0 }
+	}
+}
+
+units = {
+
+	division = {
+		name = "Clan Hafahlíf"
+		location = 284
+		division_template = "Mountainbreakers"
+		start_experience_factor = 0.8
+
+	}
+
+	division = {
+		name = "Clan Hraustr"
+		location = 2059
+		division_template = "Mountainbreakers"
+		start_experience_factor = 0.8
+
+	}
+
+	division = {
+		name = "Clan Hvassøx"
+		location = 2061
+		division_template = "Mountainbreakers"
+		start_experience_factor = 0.8
+
+	}
+
+	division = {
+		name = "Clan Stinnrstál"
+		location = 8562
+		division_template = "Mountainbreakers"
+		start_experience_factor = 0.8
+
+	}
+	
+	division = {
+		name = "Clan Hellirfast"
+		location = 5969
+		division_template = "Mountainbreakers"
+		start_experience_factor = 1.0
+
+	}
+
+	division = {
+		name = "Jolskane Hearthguards"
+		location = 4063
+		division_template = "Hearthguards"
+		start_experience_factor = 0.6
+
+	}
+
+	division = {
+		name = "Skaeskind Pass Watch"
+		location = 287
+		division_template = "Hearthguards"
+		start_experience_factor = 0.6
+
+	}
+	
+	division = {
+		name = "Alstur Border Garrison"
+		location = 8260
+		division_template = "Hearthguards"
+		start_experience_factor = 0.6
+
+	}
+	
+	division = {
+		name = "Vintalr Southguard"
+		location = 1033
+		division_template = "Hearthguards"
+		start_experience_factor = 0.7
+
+	}
+	
+	division = {
+		name = "Asdringr Southguard"
+		location = 1499
+		division_template = "Hearthguards"
+		start_experience_factor = 0.7
+
+	}
+	
+	division = {
+		name = "Kjallger Southguard"
+		location = 3696
+		division_template = "Hearthguards"
+		start_experience_factor = 0.7
+
+	}
+	
+	division = {
+		name = "Eastpoint Watch"
+		location = 3244
+		division_template = "Hearthguards"
+		start_experience_factor = 0.7
+
+	}
+	
+}
+
+
+
+
+### STARTING PRODUCTION ###
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "SKA"
+		}
+		requested_factories = 4
+		progress = 0.48
+		efficiency = 37
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+			creator = "SKA" 
+		}
+		requested_factories = 2
+		progress = 0.3
+		efficiency = 12
+	}
+}

@@ -1,0 +1,122 @@
+﻿division_template = {
+	name = "Town Watch"
+	
+	regiments = {
+		garrison = { x = 0 y = 0 }
+		garrison = { x = 0 y = 1 }
+		garrison = { x = 0 y = 2 }
+	}
+}
+
+division_template = {
+	name = "King's Guard"
+	
+	regiments = {
+		men_at_arms = { x = 0 y = 0 }
+		men_at_arms = { x = 0 y = 1 }
+		men_at_arms = { x = 0 y = 2 }
+        men_at_arms = { x = 1 y = 0 }
+		men_at_arms = { x = 1 y = 1 }
+		men_at_arms = { x = 1 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Dawn Riders"
+	
+	regiments = {
+		heavy_cavalry = { x = 0 y = 0 }
+        heavy_cavalry = { x = 0 y = 1 }
+        heavy_cavalry = { x = 1 y = 0 }
+		heavy_cavalry = { x = 1 y = 1 }
+	}
+}
+
+division_template = {
+	name = "Sunset Riders"
+	
+	regiments = {
+		light_cavalry = { x = 0 y = 0 }
+        light_cavalry = { x = 0 y = 1 }
+        light_cavalry = { x = 1 y = 0 }
+		light_cavalry = { x = 1 y = 1 }
+	}
+	support = {
+	    recon = { x = 0 y = 0 }
+	}
+}
+
+units = {
+
+	division = {
+		name = "Anzer Militia"
+		location = 1810
+		division_template = "Town Watch"
+		start_experience_factor = 0.1
+
+	}
+	
+	division = {
+		name = "Dorissus Militia"
+		location = 2285
+		division_template = "Town Watch"
+		start_experience_factor = 0.1
+
+	}
+
+	division = {
+		name = "Quent Militia"
+		location = 6502
+		division_template = "Town Watch"
+		start_experience_factor = 0.1
+
+	}
+	
+	division = {
+		name = "Westrenne Militia"
+		location = 4363
+		division_template = "Town Watch"
+		start_experience_factor = 0.1
+
+	}
+	
+	division = {
+		name = "Naxgolin Militia"
+		location = 1784
+		division_template = "Town Watch"
+		start_experience_factor = 0.1
+
+	}
+
+	division = {
+		name = "Nastrodoge King's Guard"
+		location = 4931
+		division_template = "King's Guard"
+		start_experience_factor = 1.2
+
+	}
+	
+	division = {
+		name = "Kortinall King's Guard"
+		location = 7830
+		division_template = "King's Guard"
+		start_experience_factor = 1.2
+
+	}
+	
+	division = {
+		name = "Kaltire King's Guard"
+		location = 3863
+		division_template = "King's Guard"
+		start_experience_factor = 1.2
+
+	}
+	
+	division = {
+		name = "Trifell King's Guard"
+		location = 8702
+		division_template = "King's Guard"
+		start_experience_factor = 1.2
+
+	}
+}

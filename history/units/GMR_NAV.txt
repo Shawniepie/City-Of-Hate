@@ -1,0 +1,37 @@
+﻿units = {
+
+	division = {
+		name = "Vernass Enforcers"
+		location = 7235
+		division_template = "Enforcers"
+		start_experience_factor = 0.3
+	}
+	
+	division = {
+		name = "Splythwass Enforcers"
+		location = 5037
+		division_template = "Enforcers"
+		start_experience_factor = 0.3
+	}
+	
+	division = {
+		name = "Navandon Black Gargoyles"
+		location = 1334
+		division_template = "Black Gargoyles"
+		start_experience_factor = 0.5
+	}
+
+	division = {
+		name = "Frecter Black Gargoyles"
+		location = 1104
+		division_template = "Black Gargoyles"
+		start_experience_factor = 0.5
+	}
+
+	division = {
+		name = "Raelon Black Gargoyles"
+		location = 2862
+		division_template = "Black Gargoyles"
+		start_experience_factor = 0.5
+	}
+}

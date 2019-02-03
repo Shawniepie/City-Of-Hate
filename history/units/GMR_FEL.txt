@@ -1,0 +1,40 @@
+﻿units = {
+
+	division = {
+		name = "Felwerin Enforcers"
+		location = 3966
+		division_template = "Enforcers"
+		start_experience_factor = 0.3
+
+	}
+	
+	division = {
+		name = "Visleth Enforcers"
+		location = 5991
+		division_template = "Enforcers"
+		start_experience_factor = 0.3
+
+	}
+	
+	division = {
+		name = "Countryside Enforcers"
+		location = 6452
+		division_template = "Enforcers"
+		start_experience_factor = 0.3
+
+	}
+
+	division = {
+		name = "1st Felwerin Black Gargoyles"
+		location = 7643
+		division_template = "Black Gargoyles"
+		start_experience_factor = 0.4
+	}	
+
+	division = {
+		name = "2nd Felwerin Black Gargoyles"
+		location = 1971
+		division_template = "Black Gargoyles"
+		start_experience_factor = 0.4
+	}	
+}

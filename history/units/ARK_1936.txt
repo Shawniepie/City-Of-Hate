@@ -1,0 +1,80 @@
+﻿division_template = {
+	name = "Turmwache"	
+	regiments = {
+		garrison = { x = 0 y = 0 }
+		garrison = { x = 0 y = 1 }
+		garrison = { x = 0 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Zaubertruppen"
+	regiments = {
+		men_at_arms = { x = 0 y = 0 }
+		men_at_arms = { x = 0 y = 1 }
+		men_at_arms = { x = 0 y = 2 }
+        men_at_arms = { x = 1 y = 0 }
+		men_at_arms = { x = 1 y = 1 }
+		men_at_arms = { x = 1 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Einhorn-Kavallerie"
+	regiments = {
+		heavy_cavalry = { x = 0 y = 0 }
+        heavy_cavalry = { x = 0 y = 1 }
+        heavy_cavalry = { x = 0 y = 2 }
+		heavy_cavalry = { x = 1 y = 0 }
+		heavy_cavalry = { x = 1 y = 1 }
+		heavy_cavalry = { x = 1 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Zauberspäher"
+	regiments = {
+		light_cavalry = { x = 0 y = 0 }
+        light_cavalry = { x = 0 y = 1 }
+        light_cavalry = { x = 1 y = 0 }
+		light_cavalry = { x = 1 y = 1 }
+	}
+	support = {
+	    recon = { x = 0 y = 0 }
+	}
+}
+
+units = {
+
+	division = {
+		name = "1st Regiment 'Magier'"
+		location = 1237
+		division_template = "Zaubertruppen"
+		start_experience_factor = 0.5
+
+	}
+	
+	division = {
+		name = "2nd Regiment 'Zaubermänner'"
+		location = 6607
+		division_template = "Zaubertruppen"
+		start_experience_factor = 0.5
+
+	}
+	
+	division = {
+		name = "1st Cavalry 'Einhornritter'"
+		location = 4338
+		division_template = "Einhorn-Kavallerie"
+		start_experience_factor = 0.7
+
+	}
+	
+	division = {
+		name = "Tower Guard"
+		location = 5870
+		division_template = "Turmwache"
+		start_experience_factor = 0.05
+
+	}
+}

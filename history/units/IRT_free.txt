@@ -1,0 +1,62 @@
+﻿division_template = {
+	name = "Freewatch"	
+
+	regiments = {
+		garrison = { x = 0 y = 0 }
+		garrison = { x = 0 y = 1 }
+		garrison = { x = 0 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Silver Gargoyles"
+
+	regiments = {
+		men_at_arms = { x = 0 y = 0 }
+		men_at_arms = { x = 0 y = 1 }
+		men_at_arms = { x = 0 y = 2 }
+        men_at_arms = { x = 1 y = 0 }
+		men_at_arms = { x = 1 y = 1 }
+		men_at_arms = { x = 1 y = 2 }
+	}
+}
+
+units = {
+
+	division = {
+		name = "Ierethayne Freewatch"
+		location = 3109
+		division_template = "Freewatch"
+		start_experience_factor = 0.3
+
+	}
+	
+	division = {
+		name = "Rothanar Freewatch"
+		location = 6038
+		division_template = "Freewatch"
+		start_experience_factor = 0.3
+
+	}
+
+	division = {
+		name = "1st Silver Gargoyles"
+		location = 3110
+		division_template = "Silver Gargoyles"
+		start_experience_factor = 0.5
+	}
+	
+	division = {
+		name = "2nd Silver Gargoyles"
+		location = 3217
+		division_template = "Silver Gargoyles"
+		start_experience_factor = 0.5
+	}
+
+	division = {
+		name = "3rd Silver Gargoyles"
+		location = 7537
+		division_template = "Silver Gargoyles"
+		start_experience_factor = 0.5
+	}
+}

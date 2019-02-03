@@ -1,0 +1,40 @@
+﻿units = {
+
+	division = {
+		name = "Trifersi Enforcers"
+		location = 8702
+		division_template = "Enforcers"
+		start_experience_factor = 0.3
+
+	}
+	
+	division = {
+		name = "Hyctis Enforcers"
+		location = 5480
+		division_template = "Enforcers"
+		start_experience_factor = 0.3
+
+	}
+	
+	division = {
+		name = "1st Trifersi Black Gargoyles"
+		location = 8514
+		division_template = "Black Gargoyles"
+		start_experience_factor = 0.7
+	}
+
+	division = {
+		name = "2nd Trifersi Black Gargoyles"
+		location = 8915
+		division_template = "Black Gargoyles"
+		start_experience_factor = 0.5
+	}
+
+	division = {
+		name = "3rd Trifersi Black Gargoyles"
+		location = 62
+		division_template = "Black Gargoyles"
+		start_experience_factor = 0.5
+	}
+
+}

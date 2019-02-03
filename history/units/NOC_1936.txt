@@ -1,0 +1,80 @@
+﻿division_template = {
+	name = "Stadtwache"	
+	regiments = {
+		garrison = { x = 0 y = 0 }
+		garrison = { x = 0 y = 1 }
+		garrison = { x = 0 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Prinztruppen"
+	regiments = {
+		men_at_arms = { x = 0 y = 0 }
+		men_at_arms = { x = 0 y = 1 }
+		men_at_arms = { x = 0 y = 2 }
+        men_at_arms = { x = 1 y = 0 }
+		men_at_arms = { x = 1 y = 1 }
+		men_at_arms = { x = 1 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Prinzritter"
+	regiments = {
+		heavy_cavalry = { x = 0 y = 0 }
+        heavy_cavalry = { x = 0 y = 1 }
+        heavy_cavalry = { x = 0 y = 2 }
+		heavy_cavalry = { x = 1 y = 0 }
+		heavy_cavalry = { x = 1 y = 1 }
+		heavy_cavalry = { x = 1 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Späher"
+	regiments = {
+		light_cavalry = { x = 0 y = 0 }
+        light_cavalry = { x = 0 y = 1 }
+        light_cavalry = { x = 1 y = 0 }
+		light_cavalry = { x = 1 y = 1 }
+	}
+	support = {
+	    recon = { x = 0 y = 0 }
+	}
+}
+
+units = {
+
+	division = {
+		name = "1st Regiment 'Echimanns Hellebarde'"
+		location = 4314
+		division_template = "Prinztruppen"
+		start_experience_factor = 0.5
+
+	}
+	
+	division = {
+		name = "2nd Regiment 'Die Speere von Nistringer'"
+		location = 4823
+		division_template = "Prinztruppen"
+		start_experience_factor = 0.5
+
+	}
+	
+	division = {
+		name = "1st Cavalry 'Waldritter'"
+		location = 1097
+		division_template = "Prinzritter"
+		start_experience_factor = 0.7
+
+	}
+	
+	division = {
+		name = "Nochwald City Watch"
+		location = 1101
+		division_template = "Stadtwache"
+		start_experience_factor = 0.05
+
+	}
+}

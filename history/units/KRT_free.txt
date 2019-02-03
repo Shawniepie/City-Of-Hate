@@ -1,0 +1,62 @@
+﻿division_template = {
+	name = "Circle Guards"	
+
+	regiments = {
+		garrison = { x = 0 y = 0 }
+		garrison = { x = 0 y = 1 }
+		garrison = { x = 0 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Freegrove Warriors"
+	
+	regiments = {
+		men_at_arms = { x = 0 y = 0 }
+		men_at_arms = { x = 0 y = 1 }
+		men_at_arms = { x = 0 y = 2 }
+        men_at_arms = { x = 1 y = 0 }
+		men_at_arms = { x = 1 y = 1 }
+		men_at_arms = { x = 1 y = 2 }
+	}
+}
+
+units = {
+
+	division = {
+		name = "Dorissus Militia"
+		location = 2285
+		division_template = "Circle Guards"
+		start_experience_factor = 0.3
+
+	}
+	
+	division = {
+		name = "Berinthe Circle Guards"
+		location = 1564
+		division_template = "Circle Guards"
+		start_experience_factor = 0.3
+
+	}
+	
+	division = {
+		name = "Kortinall Freegrove Warriors"
+		location = 7830
+		division_template = "Freegrove Warriors"
+		start_experience_factor = 0.5
+	}
+
+	division = {
+		name = "Gerneth Freegrove Warriors"
+		location = 5987
+		division_template = "Freegrove Warriors"
+		start_experience_factor = 0.5
+	}
+
+	division = {
+		name = "Heswith Freegrove Warriors"
+		location = 827
+		division_template = "Freegrove Warriors"
+		start_experience_factor = 0.5
+	}
+}

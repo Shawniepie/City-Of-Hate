@@ -1,0 +1,39 @@
+﻿units = {
+
+	division = {
+		name = "Ierethayne Enforcers"
+		location = 3109
+		division_template = "Enforcers"
+		start_experience_factor = 0.3
+
+	}
+	
+	division = {
+		name = "Rothanar Enforcers"
+		location = 6038
+		division_template = "Enforcers"
+		start_experience_factor = 0.3
+
+	}
+
+	division = {
+		name = "1st Irenthar Black Gargoyles"
+		location = 3110
+		division_template = "Black Gargoyles"
+		start_experience_factor = 0.5
+	}
+	
+	division = {
+		name = "2nd Irenthar Black Gargoyles"
+		location = 3217
+		division_template = "Black Gargoyles"
+		start_experience_factor = 0.5
+	}
+
+	division = {
+		name = "3rd Irenthar Black Gargoyles"
+		location = 7537
+		division_template = "Black Gargoyles"
+		start_experience_factor = 0.5
+	}
+}

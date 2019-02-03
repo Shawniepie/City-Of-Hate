@@ -1,0 +1,255 @@
+﻿division_template = {
+	name = "Enforcers"	
+	
+	division_names_group = GMR_INF_01
+	
+	regiments = {
+		garrison = { x = 0 y = 0 }
+		garrison = { x = 0 y = 1 }
+		garrison = { x = 0 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Black Gargoyles"
+	
+	division_names_group = GMR_INF_02
+	
+	regiments = {
+		men_at_arms = { x = 0 y = 0 }
+		men_at_arms = { x = 0 y = 1 }
+		men_at_arms = { x = 0 y = 2 }
+        men_at_arms = { x = 1 y = 0 }
+		men_at_arms = { x = 1 y = 1 }
+		men_at_arms = { x = 1 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Sail Knights"
+	
+	division_names_group = GMR_CAV_01
+	
+	regiments = {
+		heavy_cavalry = { x = 0 y = 0 }
+        heavy_cavalry = { x = 0 y = 1 }
+        heavy_cavalry = { x = 1 y = 0 }
+		heavy_cavalry = { x = 1 y = 1 }
+	}
+}
+
+division_template = {
+	name = "Outrider Scouts"
+	
+	division_names_group = GMR_CAV_02
+	
+	regiments = {
+		light_cavalry = { x = 0 y = 0 }
+        light_cavalry = { x = 0 y = 1 }
+        light_cavalry = { x = 1 y = 0 }
+		light_cavalry = { x = 1 y = 1 }
+	}
+	support = {
+	    recon = { x = 0 y = 0 }
+	}
+}
+
+units = {
+
+	division = {
+		name = "Irenthar Enforcers"
+		location = 3109
+		division_template = "Enforcers"
+		start_experience_factor = 0.3
+
+	}
+
+	division = {
+		name = "Felwerin Enforcers"
+		location = 3966
+		division_template = "Enforcers"
+		start_experience_factor = 0.3
+
+	}
+
+	division = {
+		name = "Cortineal Enforcers"
+		location = 7830
+		division_template = "Enforcers"
+		start_experience_factor = 0.3
+
+	}
+
+	division = {
+		name = "Nastrogdar Enforcers"
+		location = 4931
+		division_template = "Enforcers"
+		start_experience_factor = 0.3
+
+	}
+
+	division = {
+		name = "Caltireth Enforcers"
+		location = 3863
+		division_template = "Enforcers"
+		start_experience_factor = 0.3
+
+	}
+
+	division = {
+		name = "Trifersi Enforcers"
+		location = 8702
+		division_template = "Enforcers"
+		start_experience_factor = 0.3
+
+	}
+
+	division = {
+		name = "Navandon Enforcers"
+		location = 1334
+		division_template = "Enforcers"
+		start_experience_factor = 0.3
+
+	}
+
+	division = {
+		name = "Blacksteel Bodyguards"
+		location = 3109
+		division_template = "Black Gargoyles"
+		start_experience_factor = 1.2
+
+	}
+
+	division = {
+		name = "1st Black Gargoyles"
+		location = 8794
+		division_template = "Black Gargoyles"
+		start_experience_factor = 0.5
+	}
+	
+	division = {
+		name = "2nd Black Gargoyles"
+		location = 5752
+		division_template = "Black Gargoyles"
+		start_experience_factor = 0.5
+	}
+
+	division = {
+		name = "3rd Black Gargoyles"
+		location = 7359
+		division_template = "Black Gargoyles"
+		start_experience_factor = 0.5
+
+	}
+
+	division = {
+		name = "4th Black Gargoyles"
+		location = 3668
+		division_template = "Black Gargoyles"
+		start_experience_factor = 0.5
+	}
+
+	division = {
+		name = "5th Black Gargoyles"
+		location = 241
+		division_template = "Black Gargoyles"
+		start_experience_factor = 0.5
+	}
+
+	division = {
+		name = "6th Black Gargoyles"
+		location = 2650
+		division_template = "Black Gargoyles"
+		start_experience_factor = 0.5
+	}
+
+	division = {
+		name = "7th Black Gargoyles"
+		location = 5767
+		division_template = "Black Gargoyles"
+		start_experience_factor = 0.5
+	}
+
+	division = {
+		name = "8th Black Gargoyles"
+		location = 5037
+		division_template = "Black Gargoyles"
+		start_experience_factor = 0.5
+	}
+
+	division = {
+		name = "9th Black Gargoyles"
+		location = 8609
+		division_template = "Black Gargoyles"
+		start_experience_factor = 0.5
+	}
+	
+	division = {
+		name = "10th Black Gargoyles"
+		location = 4111
+		division_template = "Black Gargoyles"
+		start_experience_factor = 0.5
+	}	
+
+	division = {
+		name = "11th Black Gargoyles"
+		location = 4600
+		division_template = "Black Gargoyles"
+		start_experience_factor = 0.5
+	}	
+
+	division = {
+		name = "12th Black Gargoyles"
+		location = 3193
+		division_template = "Black Gargoyles"
+		start_experience_factor = 0.5
+	}
+	
+	division = {
+		name = "1st Sail Knights"
+		location = 8882
+		division_template = "Sail Knights"
+		start_experience_factor = 0.4
+	}
+
+	division = {
+		name = "2nd Sail Knights"
+		location = 5048
+		division_template = "Sail Knights"
+		start_experience_factor = 0.4
+	}
+
+	division = {
+		name = "1st Outriders"
+		location = 5586
+		division_template = "Outrider Scouts"
+		start_experience_factor = 0.4
+	}	
+	
+}
+
+
+
+
+### STARTING PRODUCTION ###
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_0
+			creator = "GMR"
+		}
+		requested_factories = 4
+		progress = 0.48
+		efficiency = 37
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+			creator = "GMR" 
+		}
+		requested_factories = 2
+		progress = 0.3
+		efficiency = 12
+	}
+}
