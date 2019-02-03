@@ -1,0 +1,127 @@
+﻿capital = 85
+
+oob = "ORD_1936"
+
+set_technology = {
+	infantry_weapons = 1
+	tech_support = 1
+	tech_recon = 1
+	early_submarine = 1
+	early_destroyer = 1
+	early_light_cruiser = 1
+	early_heavy_cruiser = 1
+}
+
+1939.1.1 = {
+}
+
+set_politics = {
+
+	parties = {
+		monarchy_absolute= { 
+			popularity = 16
+		}
+
+		monarchy_constitutional = {
+			popularity = 3
+		}
+		
+		republic_peasant = {
+			popularity = 0
+		}
+		republic_aristocrat = {
+			popularity = 4
+		}
+		republic_merchant = {
+			popularity = 0
+		}
+		theocrat = {
+			popularity = 29
+		}
+		puritan = {
+			popularity = 47
+		}
+	}
+	
+	ruling_party = puritan
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+	add_opinion_modifier = {
+		target = RTH
+		modifier = bitter_rivals
+	}
+	
+	add_ideas = {
+	closed_economy
+	ORD_rthaur_rebellion
+	ORD_disrupted_industry
+	}
+	
+create_country_leader = {
+	name = "Isvenith Lothinnys"
+	desc = "politics_ORD_lothinnys_desc"
+	picture = "gfx/leaders/ORD/Portrait_ORD_Lothinnys.dds"
+	ideology = puritan_ideology
+	traits = {
+		power_behind_throne
+		unyielding_defender
+	}
+}
+
+create_country_leader = {
+	name = "Galerin Valinthir"
+	desc = "politics_ORD_galerin_desc"
+	picture = "gfx/leaders/ORD/Portrait_ORD_Valinthir.dds"
+	ideology = monarchy_absolute_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Larennis Valinthir"
+	desc = "politics_ORD_valinthir_ii_desc"
+	picture = "gfx/leaders/ORD/Portrait_ORD_Valinthir_ii.dds"
+	ideology = monarchy_constitutional_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Histarine Vernythe"
+	desc = "politics_ORD_vernythe_desc"
+	picture = "gfx/leaders/ORD/Portrait_ORD_Vernythe.dds"
+	ideology = theocrat_ideology
+	traits = {
+		zealous_crusader
+	}
+}
+
+create_country_leader = {
+	name = "Larennis Valinthir"
+	desc = "politics_ORD_valinthir_ii_desc"
+	picture = "gfx/leaders/ORD/Portrait_ORD_Valinthir_ii.dds"
+	ideology = republic_aristocrat_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Vernusa Jiseyne"
+	desc = "politics_ORD_jiseyne_desc"
+	picture = "gfx/leaders/ORD/Portrait_ORD_Jiseyne.dds"
+	ideology = republic_peasant_ideology
+		traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Wenaura Feryd"
+	desc = "politics_ORD_feryd_desc"
+	picture = "gfx/leaders/ORD/Portrait_ORD_Feryd.dds"
+	ideology = republic_merchant_ideology
+		traits = {
+	}
+}

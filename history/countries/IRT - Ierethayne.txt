@@ -1,0 +1,108 @@
+﻿capital = 1
+
+oob = "empty"
+set_research_slots = 3
+
+set_technology = {
+	infantry_weapons = 1
+	tech_support = 1
+	tech_recon = 1
+	early_submarine = 1
+	early_destroyer = 1
+	early_light_cruiser = 1
+	early_heavy_cruiser = 1
+}
+
+1939.1.1 = {
+}
+
+set_politics = {
+
+	parties = {
+		monarchy_absolute= { 
+			popularity = 9
+		}
+
+		monarchy_constitutional = {
+			popularity = 14
+		}
+		
+		republic_peasant = {
+			popularity = 15
+		}
+		republic_aristocrat = {
+			popularity = 26
+		}
+		republic_merchant = {
+			popularity = 18
+		}
+		theocrat = {
+			popularity = 10
+		}
+		puritan = {
+			popularity = 8
+		}
+	}
+	
+	ruling_party = republic_aristocrat
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+create_country_leader = {
+	name = "Lascryne Osnith"
+	desc = "politics_IRT_osnith_desc"
+	picture = "gfx/leaders/IRT/Portrait_IRT_Osnith.dds"
+	ideology = monarchy_absolute_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Lascryne Osnith"
+	desc = "politics_IRT_osnith_desc"
+	picture = "gfx/leaders/IRT/Portrait_IRT_Osnith.dds"
+	ideology = monarchy_constitutional_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Venthoris Grinnon"
+	desc = "politics_IRT_grinnon_desc"
+	picture = "gfx/leaders/IRT/Portrait_IRT_Grinnon.dds"
+	ideology = theocrat_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Tholsinder Wascine"
+	desc = "politics_IRT_wascine_desc"
+	picture = "gfx/leaders/IRT/Portrait_IRT_Wascine.dds"
+	ideology = republic_aristocrat_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Mennis Nieler"
+	desc = "politics_IRT_nieler_desc"
+	picture = "gfx/leaders/IRT/Portrait_IRT_Nieler.dds"
+	ideology = republic_peasant_ideology
+}
+
+create_country_leader = {
+	name = "Rasmana Loth"
+	desc = "politics_IRT_loth_desc"
+	picture = "gfx/leaders/IRT/Portrait_IRT_Loth.dds"
+	ideology = republic_merchant_ideology
+}
+
+create_country_leader = {
+	name = "Tinia Ecthis"
+	desc = "politics_IRT_ecthis_desc"
+	picture = "gfx/leaders/IRT/Portrait_IRT_Ecthis.dds"
+	ideology = puritan_ideology
+}

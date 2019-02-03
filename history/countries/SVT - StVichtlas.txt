@@ -1,0 +1,114 @@
+﻿capital = 227
+
+oob = "SVT_1936"
+
+
+set_technology = {
+	infantry_weapons = 1
+	tech_support = 1
+	tech_recon = 1
+	early_submarine = 1
+	early_destroyer = 1
+	early_light_cruiser = 1
+	early_heavy_cruiser = 1
+}
+
+1939.1.1 = {
+}
+
+set_politics = {
+
+	parties = {
+		monarchy_absolute= { 
+			popularity = 3
+		}
+
+		monarchy_constitutional = {
+			popularity = 19
+		}
+		
+		republic_peasant = {
+			popularity = 8
+		}
+		republic_aristocrat = {
+			popularity = 13
+		}
+		republic_merchant = {
+			popularity = 17
+		}
+		theocrat = {
+			popularity = 40
+		}
+		puritan = {
+			popularity = 0
+		}
+	}
+	
+	ruling_party = theocrat
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+create_country_leader = {
+	name = "Gabriela Schober"
+	desc = "politics_SVT_schober_desc"
+	picture = "gfx/leaders/SVT/Portrait_SVT_Schober.dds"
+	ideology = monarchy_constitutional_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Gunther Grasshoff"
+	desc = "politics_SVT_grasshoff_desc"
+	picture = "gfx/leaders/SVT/Portrait_SVT_Grasshoff.dds"
+	ideology = republic_peasant_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Isabelle Beckmann"
+	desc = "politics_SVT_beckmann_desc"
+	picture = "gfx/leaders/SVT/Portrait_SVT_Beckmann.dds"
+	ideology = puritan_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Gabriela Schober"
+	desc = "politics_SVT_schober_desc"
+	picture = "gfx/leaders/SVT/Portrait_SVT_Schober.dds"
+	ideology = monarchy_absolute_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Dietlind Rosenstock"
+	desc = "politics_SVT_rosenstock_desc"
+	picture = "gfx/leaders/SVT/Portrait_SVT_Rosenstock.dds"
+	ideology = theocrat_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Artur Kehlmann"
+	desc = "politics_SVT_kehlmann_desc"
+	picture = "gfx/leaders/SVT/Portrait_SVT_Kehlmann.dds"
+	ideology = republic_aristocrat_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Lucas Gessler"
+	desc = "politics_SVT_gessler_desc"
+	picture = "gfx/leaders/SVT/Portrait_SVT_Gessler.dds"
+	ideology = republic_merchant_ideology
+	traits = {
+	}
+}

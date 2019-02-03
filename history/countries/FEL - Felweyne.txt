@@ -1,0 +1,108 @@
+﻿capital = 28
+
+oob = "empty"
+set_research_slots = 3
+
+set_technology = {
+	infantry_weapons = 1
+	tech_support = 1
+	tech_recon = 1
+	early_submarine = 1
+	early_destroyer = 1
+	early_light_cruiser = 1
+	early_heavy_cruiser = 1
+}
+
+1939.1.1 = {
+}
+
+set_politics = {
+
+	parties = {
+		monarchy_absolute= { 
+			popularity = 6
+		}
+
+		monarchy_constitutional = {
+			popularity = 11
+		}
+		
+		republic_peasant = {
+			popularity = 17
+		}
+		republic_aristocrat = {
+			popularity = 14
+		}
+		republic_merchant = {
+			popularity = 42
+		}
+		theocrat = {
+			popularity = 8
+		}
+		puritan = {
+			popularity = 2
+		}
+	}
+	
+	ruling_party = republic_merchant
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+create_country_leader = {
+	name = "Velwys Benthorin"
+	desc = "politics_FEL_benthorin_desc"
+	picture = "gfx/leaders/FEL/Portrait_FEL_Benthorin.dds"
+	ideology = monarchy_absolute_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Velwys Benthorin"
+	desc = "politics_FEL_benthorin_desc"
+	picture = "gfx/leaders/FEL/Portrait_FEL_Benthorin.dds"
+	ideology = monarchy_constitutional_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Yslana Hencune"
+	desc = "politics_FEL_hencune_desc"
+	picture = "gfx/leaders/FEL/Portrait_FEL_Hencune.dds"
+	ideology = theocrat_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Wactunse Laharis"
+	desc = "politics_FEL_laharis_desc"
+	picture = "gfx/leaders/FEL/Portrait_FEL_Laharis.dds"
+	ideology = republic_aristocrat_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Tolte Host"
+	desc = "politics_FEL_host_desc"
+	picture = "gfx/leaders/FEL/Portrait_FEL_Host.dds"
+	ideology = republic_peasant_ideology
+}
+
+create_country_leader = {
+	name = "Tellania Posanth"
+	desc = "politics_FEL_posanth_desc"
+	picture = "gfx/leaders/FEL/Portrait_FEL_Posanth.dds"
+	ideology = republic_merchant_ideology
+}
+
+create_country_leader = {
+	name = "Iston Lagrude"
+	desc = "politics_FEL_lagrude_desc"
+	picture = "gfx/leaders/FEL/Portrait_FEL_Lagrude.dds"
+	ideology = puritan_ideology
+}

@@ -1,0 +1,113 @@
+﻿capital = 232
+
+oob = "HLZ_1936"
+
+
+set_technology = {
+	infantry_weapons = 1
+	tech_support = 1
+	tech_recon = 1
+	early_submarine = 1
+	early_destroyer = 1
+	early_light_cruiser = 1
+	early_heavy_cruiser = 1
+}
+
+1939.1.1 = {
+}
+
+set_politics = {
+
+	parties = {
+		monarchy_absolute= { 
+			popularity = 3
+		}
+
+		monarchy_constitutional = {
+			popularity = 2
+		}
+		
+		republic_peasant = {
+			popularity = 23
+		}
+		republic_aristocrat = {
+			popularity = 9
+		}
+		republic_merchant = {
+			popularity = 24
+		}
+		theocrat = {
+			popularity = 15
+		}
+		puritan = {
+			popularity = 24
+		}
+	}
+	
+	ruling_party = puritan
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+	add_ideas = {
+	rosenbluts_evil
+	widespread_famine
+	}
+
+create_country_leader = {
+	name = "Kaspar Rosenblut"
+	desc = "politics_HLZ_rosenblut_desc"
+	picture = "gfx/leaders/HLZ/Portrait_HLZ_Rosenblut.dds"
+	ideology = monarchy_absolute_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Konrad Beckenbauer"
+	desc = "politics_HLZ_beckenbauer_desc"
+	picture = "gfx/leaders/HLZ/Portrait_HLZ_Beckenbauer.dds"
+	ideology = monarchy_constitutional_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Bernd Beck"
+	desc = "politics_HLZ_beck_desc"
+	picture = "gfx/leaders/HLZ/Portrait_HLZ_Beck.dds"
+	ideology = theocrat_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Konrad Beckenbauer"
+	desc = "politics_HLZ_beckenbauer_desc"
+	picture = "gfx/leaders/HLZ/Portrait_HLZ_Beckenbauer.dds"
+	ideology = republic_aristocrat_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Eva Katzmann"
+	desc = "politics_HLZ_katzmann_desc"
+	picture = "gfx/leaders/HLZ/Portrait_HLZ_Katzmann.dds"
+	ideology = republic_peasant_ideology
+}
+
+create_country_leader = {
+	name = "Melchior Speidel"
+	desc = "politics_HLZ_speidel_desc"
+	picture = "gfx/leaders/HLZ/Portrait_HLZ_Speidel.dds"
+	ideology = republic_merchant_ideology
+}
+
+create_country_leader = {
+	name = "Kaspar Rosenblut"
+	desc = "politics_HLZ_rosenblut_desc"
+	picture = "gfx/leaders/HLZ/Portrait_HLZ_Rosenblut.dds"
+	ideology = puritan_ideology
+}

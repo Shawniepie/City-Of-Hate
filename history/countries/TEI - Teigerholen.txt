@@ -1,0 +1,114 @@
+﻿capital = 225
+
+oob = "TEI_1936"
+
+
+set_technology = {
+	infantry_weapons = 1
+	tech_support = 1
+	tech_recon = 1
+	early_submarine = 1
+	early_destroyer = 1
+	early_light_cruiser = 1
+	early_heavy_cruiser = 1
+}
+
+1939.1.1 = {
+}
+
+set_politics = {
+
+	parties = {
+		monarchy_absolute= { 
+			popularity = 2
+		}
+
+		monarchy_constitutional = {
+			popularity = 17
+		}
+		
+		republic_peasant = {
+			popularity = 9
+		}
+		republic_aristocrat = {
+			popularity = 23
+		}
+		republic_merchant = {
+			popularity = 19
+		}
+		theocrat = {
+			popularity = 17
+		}
+		puritan = {
+			popularity = 13
+		}
+	}
+	
+	ruling_party = republic_aristocrat
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+create_country_leader = {
+	name = "Adalbrecht Krukenberg"
+	desc = "politics_TEI_krukenberg_desc"
+	picture = "gfx/leaders/TEI/Portrait_TEI_Krukenberg.dds"
+	ideology = monarchy_constitutional_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Eckhard Wächtler"
+	desc = "politics_TEI_wachtler_desc"
+	picture = "gfx/leaders/TEI/Portrait_TEI_Wachtler.dds"
+	ideology = republic_peasant_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Florian Grohl"
+	desc = "politics_TEI_grohl_desc"
+	picture = "gfx/leaders/TEI/Portrait_TEI_Grohl.dds"
+	ideology = puritan_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Adalbrecht Krukenberg"
+	desc = "politics_TEI_krukenberg_desc"
+	picture = "gfx/leaders/TEI/Portrait_TEI_Krukenberg.dds"
+	ideology = monarchy_absolute_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Franz Saxer"
+	desc = "politics_TEI_saxer_desc"
+	picture = "gfx/leaders/TEI/Portrait_TEI_Saxer.dds"
+	ideology = theocrat_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Clara Schillinger"
+	desc = "politics_TEI_schillinger_desc"
+	picture = "gfx/leaders/TEI/Portrait_TEI_Schillinger.dds"
+	ideology = republic_aristocrat_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Sylvia Kehrer"
+	desc = "politics_TEI_kehrer_desc"
+	picture = "gfx/leaders/TEI/Portrait_TEI_Kehrer.dds"
+	ideology = republic_merchant_ideology
+	traits = {
+	}
+}

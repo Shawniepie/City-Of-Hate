@@ -1,0 +1,17 @@
+state={
+	id=103
+	name="STATE_103"
+	provinces={
+		202 3402 4219 5200 6610 8560 
+	}
+	state_category = pastoral
+	manpower=1092
+	buildings_max_level_factor=1.000
+		history={	
+		owner = ORD
+		buildings = {	
+		infrastructure = 1
+		}	
+		add_core_of = ORD
+		}
+}

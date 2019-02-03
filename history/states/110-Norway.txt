@@ -1,0 +1,18 @@
+state={
+	id=110
+	name="STATE_110"
+	provinces={
+		360 3292 3772 6276 8028 
+	}
+	state_category = rural
+	manpower=2492
+	buildings_max_level_factor=1.000
+		history={	
+		owner = ORD
+		buildings = {	
+		infrastructure = 3
+		arms_factory = 1
+		}
+		add_core_of = ORD
+		}
+}

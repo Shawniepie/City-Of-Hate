@@ -1,0 +1,18 @@
+state={
+	id=145
+	name="STATE_145"
+	provinces={
+		2945 4670 5113 6347 
+	}
+	state_category = pastoral
+	manpower=1192
+	buildings_max_level_factor=1.000
+	history={	
+		owner = RTH
+		buildings = {	
+		infrastructure = 2
+		}	
+		add_core_of = RTH
+
+		}
+}

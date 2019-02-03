@@ -1,0 +1,127 @@
+﻿capital = 122
+
+oob = "empty"
+
+set_technology = {
+	infantry_weapons = 1
+	tech_support = 1
+	tech_recon = 1
+}
+
+1939.1.1 = {
+}
+
+set_politics = {
+
+	parties = {
+		monarchy_absolute= { 
+			popularity = 15
+		}
+
+		monarchy_constitutional = {
+			popularity = 4
+		}
+		
+		republic_peasant = {
+			popularity = 0
+		}
+		republic_aristocrat = {
+			popularity = 15
+		}
+		republic_merchant = {
+			popularity = 0
+		}
+		theocrat = {
+			popularity = 2
+		}
+		puritan = {
+			popularity = 64
+		}
+	}
+	
+	ruling_party = puritan
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+	add_opinion_modifier = {
+		target = ORD
+		modifier = staunch_allies
+	}
+	
+	add_opinion_modifier = {
+		target = RTH
+		modifier = bitter_rivals
+	}
+	
+create_country_leader = {
+	name = "Faryson Sellevin"
+	desc = "politics_EOR_sellevin_desc"
+	picture = "gfx/leaders/EOR/Portrait_EOR_Sellevin.dds"
+	ideology = republic_peasant_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Larennis Valinthir"
+	desc = "politics_EOR_valinthir_desc"
+	picture = "gfx/leaders/EOR/Portrait_EOR_Valinthir.dds"
+	ideology = puritan_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Farnaur Ithinis"
+	desc = "politics_EOR_itihnis_desc"
+	picture = "gfx/leaders/EOR/Portrait_EOR_Ithinis.dds"
+	ideology = puritan_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Larennis Valinthir"
+	desc = "politics_EOR_valinthir_desc"
+	picture = "gfx/leaders/EIR/Portrait_EOR_Valinthir.dds"
+	ideology = monarchy_absolute_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Larennis Valinthir"
+	desc = "politics_EOR_valinthir_desc"
+	picture = "gfx/leaders/EIR/Portrait_EOR_Valinthir.dds"
+	ideology = monarchy_constitutional_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Sangevyn Isthellis"
+	desc = "politics_EOR_isthellis_desc"
+	picture = "gfx/leaders/EOR/Portrait_EOR_isthellis.dds"
+	ideology = theocrat_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Larennis Valinthir"
+	desc = "politics_EOR_valinthir_desc"
+	picture = "gfx/leaders/EOR/Portrait_EOR_Valinthir.dds"
+	ideology = republic_aristocrat_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Gerdaurin Varinnis"
+	desc = "politics_EOR_varinnis_desc"
+	picture = "gfx/leaders/EOR/Portrait_EOR_Varinnis.dds"
+	ideology = republic_merchant_ideology
+	traits = {
+	}
+}

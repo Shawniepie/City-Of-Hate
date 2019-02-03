@@ -1,0 +1,21 @@
+state={
+	id=122
+	name="STATE_122"
+	provinces={
+		1141 1142 3420 3421 3559 7634 8136 8891 
+	}
+	state_category = city
+	manpower=497602
+	buildings_max_level_factor=1.000
+		history={
+		victory_points = {3420 37}
+		owner = RTH
+		buildings = {	
+		infrastructure = 6
+		industrial_complex = 3
+		arms_factory = 3
+		}	
+		add_core_of = RTH
+
+		}
+	}

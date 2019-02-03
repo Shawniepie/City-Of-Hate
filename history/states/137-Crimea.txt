@@ -1,0 +1,18 @@
+state={
+	id=137
+	name="STATE_137"
+	provinces={
+		1258 4546 7264 7278 7568 8113 
+	}
+	state_category = rural
+	manpower=4991
+	buildings_max_level_factor=1.000
+		history={	
+		owner = RTH
+		buildings = {	
+		infrastructure = 3
+		}	
+		add_core_of = RTH
+
+		}
+}

@@ -1,0 +1,110 @@
+﻿capital = 224
+
+oob = "SNF_1936"
+
+
+set_technology = {
+	infantry_weapons = 1
+	tech_support = 1
+	tech_recon = 1
+}
+
+1939.1.1 = {
+}
+
+set_politics = {
+
+	parties = {
+		monarchy_absolute= { 
+			popularity = 52
+		}
+
+		monarchy_constitutional = {
+			popularity = 13
+		}
+		
+		republic_peasant = {
+			popularity = 1
+		}
+		republic_aristocrat = {
+			popularity = 4
+		}
+		republic_merchant = {
+			popularity = 3
+		}
+		theocrat = {
+			popularity = 17
+		}
+		puritan = {
+			popularity = 2
+		}
+	}
+	
+	ruling_party = monarchy_absolute
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+create_country_leader = {
+	name = "Otto Kolb"
+	desc = "politics_SNF_kolb_desc"
+	picture = "gfx/leaders/SNF/Portrait_SNF_Kolb.dds"
+	ideology = monarchy_constitutional_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Andrea Schiefer"
+	desc = "politics_SNF_schiefer_desc"
+	picture = "gfx/leaders/SNF/Portrait_SNF_Schiefer.dds"
+	ideology = republic_peasant_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Louise Straussler"
+	desc = "politics_SNF_straussler_desc"
+	picture = "gfx/leaders/SNF/Portrait_SNF_Straussler.dds"
+	ideology = puritan_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Otto Kolb"
+	desc = "politics_SNF_kolb_desc"
+	picture = "gfx/leaders/SNF/Portrait_SNF_Kolb.dds"
+	ideology = monarchy_absolute_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Hans Werthner"
+	desc = "politics_SNF_werthner_desc"
+	picture = "gfx/leaders/SNF/Portrait_SNF_Werthner.dds"
+	ideology = theocrat_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Lennart Schechter"
+	desc = "politics_SNF_Schechter_desc"
+	picture = "gfx/leaders/SNF/Portrait_SNF_Schechter.dds"
+	ideology = republic_aristocrat_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Madlen Bodenheimer"
+	desc = "politics_SNF_bodenheimer_desc"
+	picture = "gfx/leaders/SNF/Portrait_SNF_Bodenheimer.dds"
+	ideology = republic_merchant_ideology
+	traits = {
+	}
+}

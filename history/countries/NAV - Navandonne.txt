@@ -1,0 +1,108 @@
+﻿capital = 	72
+
+oob = "empty"
+set_research_slots = 3
+
+set_technology = {
+	infantry_weapons = 1
+	tech_support = 1
+	tech_recon = 1
+	early_submarine = 1
+	early_destroyer = 1
+	early_light_cruiser = 1
+	early_heavy_cruiser = 1
+}
+
+1939.1.1 = {
+}
+
+set_politics = {
+
+	parties = {
+		monarchy_absolute= { 
+			popularity = 6
+		}
+
+		monarchy_constitutional = {
+			popularity = 11
+		}
+		
+		republic_peasant = {
+			popularity = 2
+		}
+		republic_aristocrat = {
+			popularity = 2
+		}
+		republic_merchant = {
+			popularity = 1
+		}
+		theocrat = {
+			popularity = 1
+		}
+		puritan = {
+			popularity = 15
+		}
+	}
+	
+	ruling_party = monarchy_absolute
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+create_country_leader = {
+	name = "Céline Boisclair"
+	desc = "politics_NAV_boisclair_desc"
+	picture = "gfx/leaders/NAV/Portrait_NAV_Boisclair.dds"
+	ideology = monarchy_absolute_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Céline Boisclair"
+	desc = "politics_NAV_boisclair_desc"
+	picture = "gfx/leaders/NAV/Portrait_NAV_Boisclair.dds"
+	ideology = monarchy_constitutional_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Antoine Jacobe"
+	desc = "politics_NAV_jacobe_desc"
+	picture = "gfx/leaders/NAV/Portrait_NAV_Jacobe.dds"
+	ideology = theocrat_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Sylvester Niscarne"
+	desc = "politics_NAV_niscarne_desc"
+	picture = "gfx/leaders/NAV/Portrait_NAV_Niscarne.dds"
+	ideology = republic_aristocrat_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Jacquelin Lasondre"
+	desc = "politics_NAV_lasondre_desc"
+	picture = "gfx/leaders/NAV/Portrait_NAV_Lasondre.dds"
+	ideology = republic_peasant_ideology
+}
+
+create_country_leader = {
+	name = "Gasconder Hinousse"
+	desc = "politics_NAV_hinousse_desc"
+	picture = "gfx/leaders/NAV/Portrait_NAV_Hinousse.dds"
+	ideology = republic_merchant_ideology
+}
+
+create_country_leader = {
+	name = "Solgorin Ousinne"
+	desc = "politics_NAV_ousinne_desc"
+	picture = "gfx/leaders/NAV/Portrait_NAV_Ousinne.dds"
+	ideology = puritan_ideology
+}

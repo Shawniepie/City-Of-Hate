@@ -1,0 +1,125 @@
+﻿capital = 146
+
+oob = "SKA_1936"
+set_research_slots = 3
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	dwarven_warriors = 1
+	tech_support = 1
+	tech_recon = 1
+	tech_engineers = 1
+}
+
+1939.1.1 = {
+}
+
+set_politics = {
+
+	parties = {
+		monarchy_absolute= { 
+			popularity = 8
+		}
+
+		monarchy_constitutional = {
+			popularity = 70
+		}
+		
+		republic_peasant = {
+			popularity = 3
+		}
+		republic_aristocrat = {
+			popularity = 12
+		}
+		republic_merchant = {
+			popularity = 5
+		}
+		theocrat = {
+			popularity = 2
+		}
+		puritan = {
+			popularity = 0
+		}
+	}
+	
+	ruling_party = monarchy_constitutional
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+	give_guarantee = RTH
+
+	add_opinion_modifier = {
+		target = RTH
+		modifier = staunch_allies
+	}
+	diplomatic_relation = {
+		country = RTH
+		relation = military_access
+		active = yes
+	}
+	
+create_country_leader = {
+	name = "Ystvigg Hellirfast"
+	desc = "politics_SKA_hellirfast_desc"
+	picture = "gfx/leaders/SKA/Portrait_SKA_Hellirfast.dds"
+	ideology = monarchy_constitutional_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Yngvild Rettrdaga"
+	desc = "politics_SKA_rettrdaga_desc"
+	picture = "gfx/leaders/SKA/Portrait_SKA_Rettrdaga.dds"
+	ideology = republic_peasant_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Halstigg Urkbani"
+	desc = "politics_SKA_urkbani_desc"
+	picture = "gfx/leaders/SKA/Portrait_SKA_Urkbani.dds"
+	ideology = puritan_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Ystvigg Hellirfast"
+	desc = "politics_SKA_hellirfast_desc"
+	picture = "gfx/leaders/SKA/Portrait_SKA_Hellirfast.dds"
+	ideology = monarchy_absolute_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Banskr Salmogr"
+	desc = "politics_SKA_salmogr_desc"
+	picture = "gfx/leaders/SKA/Portrait_SKA_Salmogr.dds"
+	ideology = theocrat_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Brynhild Lasengra"
+	desc = "politics_SKA_lasengra_desc"
+	picture = "gfx/leaders/SKA/Portrait_SKA_Lasengra.dds"
+	ideology = republic_aristocrat_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Freydis Vantangr"
+	desc = "politics_SKA_vantangr_desc"
+	picture = "gfx/leaders/SKA/Portrait_SKA_Vantangr.dds"
+	ideology = republic_merchant_ideology
+	traits = {
+	}
+}

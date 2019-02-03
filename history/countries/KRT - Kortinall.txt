@@ -1,0 +1,108 @@
+﻿capital = 17
+
+oob = "empty"
+set_research_slots = 3
+
+set_technology = {
+	infantry_weapons = 1
+	tech_support = 1
+	tech_recon = 1
+	early_submarine = 1
+	early_destroyer = 1
+	early_light_cruiser = 1
+	early_heavy_cruiser = 1
+}
+
+1939.1.1 = {
+}
+
+set_politics = {
+
+	parties = {
+		monarchy_absolute= { 
+			popularity = 4
+		}
+
+		monarchy_constitutional = {
+			popularity = 5
+		}
+		
+		republic_peasant = {
+			popularity = 11
+		}
+		republic_aristocrat = {
+			popularity = 9
+		}
+		republic_merchant = {
+			popularity = 24
+		}
+		theocrat = {
+			popularity = 43
+		}
+		puritan = {
+			popularity = 4
+		}
+	}
+	
+	ruling_party = theocrat
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+create_country_leader = {
+	name = "Thisterin Gysmine"
+	desc = "politics_KRT_gysmine_desc"
+	picture = "gfx/leaders/KRT/Portrait_KRT_Gysmine.dds"
+	ideology = monarchy_absolute_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Thisterin Gysmine"
+	desc = "politics_KRT_gysmine_desc"
+	picture = "gfx/leaders/KRT/Portrait_KRT_Gysmine.dds"
+	ideology = monarchy_constitutional_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Verysda Solwyne"
+	desc = "politics_KRT_solwyne_desc"
+	picture = "gfx/leaders/KRT/Portrait_KRT_Solwyne.dds"
+	ideology = theocrat_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Solsore Laharis"
+	desc = "politics_KRT_laharis_desc"
+	picture = "gfx/leaders/KRT/Portrait_KRT_Laharis.dds"
+	ideology = republic_aristocrat_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Larke Nonth"
+	desc = "politics_KRT_nonth_desc"
+	picture = "gfx/leaders/KRT/Portrait_KRT_Nonth.dds"
+	ideology = republic_peasant_ideology
+}
+
+create_country_leader = {
+	name = "Ivryna Hith"
+	desc = "politics_KRT_hith_desc"
+	picture = "gfx/leaders/KRT/Portrait_KRT_Hith.dds"
+	ideology = republic_merchant_ideology
+}
+
+create_country_leader = {
+	name = "Vorren Lithas"
+	desc = "politics_KRT_lithas_desc"
+	picture = "gfx/leaders/KRT/Portrait_KRT_Lithas.dds"
+	ideology = puritan_ideology
+}

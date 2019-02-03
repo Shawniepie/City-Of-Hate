@@ -1,0 +1,128 @@
+﻿capital = 192
+
+oob = "STA_1936"
+
+
+set_technology = {
+	infantry_weapons = 1
+	tech_support = 1
+	tech_recon = 1
+}
+
+1939.1.1 = {
+}
+
+set_politics = {
+
+	parties = {
+		monarchy_absolute= { 
+			popularity = 54
+		}
+
+		monarchy_constitutional = {
+			popularity = 0
+		}
+		
+		republic_peasant = {
+			popularity = 0
+		}
+		republic_aristocrat = {
+			popularity = 1
+		}
+		republic_merchant = {
+			popularity = 6
+		}
+		theocrat = {
+			popularity = 10
+		}
+		puritan = {
+			popularity = 29
+		}
+	}
+	
+	ruling_party = monarchy_absolute
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+create_country_leader = {
+	name = "Alcanthyre Losennys"
+	desc = "politics_STA_losennys_desc"
+	picture = "gfx/leaders/STA/Portrait_STA_Losennys.dds"
+	ideology = puritan_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Alcanthyre Losennys"
+	desc = "politics_STA_losennys_desc"
+	picture = "gfx/leaders/STA/Portrait_STA_Losennys.dds"
+	ideology = theocrat_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Ferdinand Schwarzenbach"
+	desc = "politics_STA_schwarzenbach_desc"
+	picture = "gfx/leaders/STA/Portrait_STA_Schwarzenbach.dds"
+	ideology = monarchy_constitutional_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Florentin Stieler"
+	desc = "politics_STA_stieler_desc"
+	picture = "gfx/leaders/STA/Portrait_STA_Stieler.dds"
+	ideology = republic_peasant_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Christine Brockhaus"
+	desc = "politics_STA_brockhaus_desc"
+	picture = "gfx/leaders/STA/Portrait_STA_Brockhaus.dds"
+	ideology = puritan_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Ferdinand Schwarzenbach"
+	desc = "politics_STA_schwarzenbach_desc"
+	picture = "gfx/leaders/STA/Portrait_STA_Schwarzenbach.dds"
+	ideology = monarchy_absolute_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Celine Quattlebaum"
+	desc = "politics_STA_Quattlebaum_desc"
+	picture = "gfx/leaders/STA/Portrait_STA_Quattlebaum.dds"
+	ideology = theocrat_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Rosemarie Hornberger"
+	desc = "politics_STA_hornberger_desc"
+	picture = "gfx/leaders/STA/Portrait_STA_Hornberger.dds"
+	ideology = republic_aristocrat_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {	
+	name = "Jeremias Niedermeyer"
+	desc = "politics_STA_niedermeyer_desc"
+	picture = "gfx/leaders/STA/Portrait_STA_Niedermeyer.dds"
+	ideology = republic_merchant_ideology
+	traits = {
+	}
+}

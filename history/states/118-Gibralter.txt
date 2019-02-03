@@ -1,0 +1,21 @@
+state={
+	id=118
+	name="STATE_118"
+	provinces={
+		5815 6247 6392 6393 6394 6395 8841 
+	}
+	state_category = large_city
+	manpower=1024390
+	buildings_max_level_factor=1.000
+		history={
+		victory_points = { 6393 50 }
+		owner = RTH
+		buildings = {	
+		infrastructure = 6
+		arms_factory = 3
+		industrial_complex = 4
+		}	
+		add_core_of = RTH
+
+		}
+}

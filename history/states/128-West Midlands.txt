@@ -1,0 +1,19 @@
+state={
+	id=128
+	name="STATE_128"
+	provinces={
+		1717 1718 1720 1721 8361 
+	}
+	state_category = pastoral
+	manpower=1092
+	resources = { steel = 4 }
+	buildings_max_level_factor=1.000
+		history={	
+		owner = RTH
+		buildings = {	
+		infrastructure = 1
+		}	
+		add_core_of = RTH
+
+		}
+}

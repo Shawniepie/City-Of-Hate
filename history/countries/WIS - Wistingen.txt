@@ -1,0 +1,110 @@
+﻿capital = 234
+
+oob = "WIS_1936"
+
+
+set_technology = {
+	infantry_weapons = 1
+	tech_support = 1
+	tech_recon = 1
+}
+
+1939.1.1 = {
+}
+
+set_politics = {
+
+	parties = {
+		monarchy_absolute= { 
+			popularity = 23
+		}
+
+		monarchy_constitutional = {
+			popularity = 54
+		}
+		
+		republic_peasant = {
+			popularity = 11
+		}
+		republic_aristocrat = {
+			popularity = 7
+		}
+		republic_merchant = {
+			popularity = 5
+		}
+		theocrat = {
+			popularity = 0
+		}
+		puritan = {
+			popularity = 0
+		}
+	}
+	
+	ruling_party = monarchy_constitutional
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+create_country_leader = {
+	name = "Lotte Treitschke"
+	desc = "politics_WIS_treitschke_desc"
+	picture = "gfx/leaders/WIS/Portrait_WIS_Treitschke.dds"
+	ideology = monarchy_constitutional_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Natali Wittich"
+	desc = "politics_WIS_wittich_desc"
+	picture = "gfx/leaders/WIS/Portrait_WIS_Wittich.dds"
+	ideology = republic_peasant_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Tobias Schwender"
+	desc = "politics_WIS_swchender_desc"
+	picture = "gfx/leaders/WIS/Portrait_WIS_Schwender.dds"
+	ideology = puritan_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Lotte Treitschke"
+	desc = "politics_WIS_treitschke_desc"
+	picture = "gfx/leaders/WIS/Portrait_WIS_Treitschke.dds"
+	ideology = monarchy_absolute_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Tizian Drach"
+	desc = "politics_WIS_drach_desc"
+	picture = "gfx/leaders/WIS/Portrait_WIS_Drach.dds"
+	ideology = theocrat_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Hildebrand Strobel"
+	desc = "politics_WIS_strobel_desc"
+	picture = "gfx/leaders/WIS/Portrait_WIS_Strobel.dds"
+	ideology = republic_aristocrat_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Karl Sperl"
+	desc = "politics_WIS_sperl_desc"
+	picture = "gfx/leaders/WIS/Portrait_WIS_Sperl.dds"
+	ideology = republic_merchant_ideology
+	traits = {
+	}
+}

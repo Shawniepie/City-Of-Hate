@@ -1,0 +1,24 @@
+state={
+	id=119
+	name="STATE_119"
+	provinces={
+		294 2093 2094 2095 3934 4555 6379 8785 
+	}
+	state_category = town
+	manpower=17438
+	buildings_max_level_factor=1.000
+	
+	resources = { aluminium = 8}
+	
+		history={
+		victory_points = {6379 14}
+		owner = RTH
+		buildings = {	
+		infrastructure = 5
+		industrial_complex = 2
+		arms_factory = 1
+		}	
+		add_core_of = RTH
+
+		}
+}

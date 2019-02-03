@@ -1,0 +1,17 @@
+state={
+	id=100
+	name="STATE_100"
+	provinces={
+		3411 4147 5302 5303 6345 
+	}
+	state_category = rural
+	manpower=8791
+	buildings_max_level_factor=1.000
+		history={	
+		owner = ORD
+		buildings = {	
+		infrastructure = 3
+		}	
+		add_core_of = ORD
+		}
+}

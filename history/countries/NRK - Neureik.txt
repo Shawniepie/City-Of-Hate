@@ -1,0 +1,110 @@
+﻿capital = 284
+
+oob = "NRK_1936"
+
+
+set_technology = {
+	infantry_weapons = 1
+	tech_support = 1
+	tech_recon = 1
+}
+
+1939.1.1 = {
+}
+
+set_politics = {
+
+	parties = {
+		monarchy_absolute= { 
+			popularity = 28
+		}
+
+		monarchy_constitutional = {
+			popularity = 62
+		}
+		
+		republic_peasant = {
+			popularity = 0
+		}
+		republic_aristocrat = {
+			popularity = 10
+		}
+		republic_merchant = {
+			popularity = 0
+		}
+		theocrat = {
+			popularity = 0
+		}
+		puritan = {
+			popularity = 0
+		}
+	}
+	
+	ruling_party = monarchy_constitutional
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+create_country_leader = {
+	name = "Fabian Hassler"
+	desc = "politics_NRK_hassler_desc"
+	picture = "gfx/leaders/NRK/Portrait_NRK_Hassler.dds"
+	ideology = monarchy_constitutional_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Saskia Stier"
+	desc = "politics_NRK_stier_desc"
+	picture = "gfx/leaders/NRK/Portrait_NRK_Stier.dds"
+	ideology = republic_peasant_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Stephanie Eisenstein"
+	desc = "politics_NRK_eisenstein_desc"
+	picture = "gfx/leaders/NRK/Portrait_NRK_Eisenstein.dds"
+	ideology = puritan_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Fabian Hassler"
+	desc = "politics_NRK_hassler_desc"
+	picture = "gfx/leaders/NRK/Portrait_NRK_Hassler.dds"
+	ideology = monarchy_absolute_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Lilly Hofmeister"
+	desc = "politics_NRK_Hofmeister_desc"
+	picture = "gfx/leaders/NRK/Portrait_NRK_Hofmeister.dds"
+	ideology = theocrat_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Lars Friedberger"
+	desc = "politics_NRK_friedberger_desc"
+	picture = "gfx/leaders/NRK/Portrait_NRK_Friedberger.dds"
+	ideology = republic_aristocrat_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Eberhart Emmerich"
+	desc = "politics_NRK_emmerich_desc"
+	picture = "gfx/leaders/NRK/Portrait_NRK_Emmerich.dds"
+	ideology = republic_merchant_ideology
+	traits = {
+	}
+}

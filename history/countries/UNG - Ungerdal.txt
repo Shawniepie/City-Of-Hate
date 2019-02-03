@@ -1,0 +1,195 @@
+﻿capital = 233
+
+oob = "UNG_1936"
+set_research_slots = 3
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1
+	tech_recon = 1
+}
+
+1939.1.1 = {
+}
+
+set_politics = {
+
+	parties = {
+		monarchy_absolute= { 
+			popularity = 8
+		}
+
+		monarchy_constitutional = {
+			popularity = 82
+		}
+		
+		republic_peasant = {
+			popularity = 2
+		}
+		republic_aristocrat = {
+			popularity = 5
+		}
+		republic_merchant = {
+			popularity = 1
+		}
+		theocrat = {
+			popularity = 1
+		}
+		puritan = {
+			popularity = 1
+		}
+	}
+	
+	ruling_party = monarchy_constitutional
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+add_ideas = {
+	UNG_trade_realm
+}
+
+if = {
+	limit = {
+		has_dlc = "Together for Victory"
+	}
+	set_autonomy = {
+		target = STA
+		autonomous_state = autonomy_IR_freiprinztum
+		freedom_level = 0.4
+	}
+	set_autonomy = {
+		target = HLZ
+		autonomous_state = autonomy_IR_freiprinztum
+		freedom_level = 0.4
+	}
+	set_autonomy = {
+		target = NOC
+		autonomous_state = autonomy_IR_freiprinztum
+		freedom_level = 0.4
+	}
+	set_autonomy = {
+		target = SPW
+		autonomous_state = autonomy_IR_freiprinztum
+		freedom_level = 0.4
+	}
+	set_autonomy = {
+		target = SVT
+		autonomous_state = autonomy_IR_freiprinztum
+		freedom_level = 0.4
+	}
+	set_autonomy = {
+		target = TEI
+		autonomous_state = autonomy_IR_freiprinztum
+		freedom_level = 0.4
+	}
+	set_autonomy = {
+		target = SNF
+		autonomous_state = autonomy_IR_freiprinztum
+		freedom_level = 0.4
+	}
+	set_autonomy = {
+		target = WIS
+		autonomous_state = autonomy_IR_freiprinztum
+		freedom_level = 0.4
+	}
+	set_autonomy = {
+		target = WSZ
+		autonomous_state = autonomy_IR_freiprinztum
+		freedom_level = 0.4
+	}
+	set_autonomy = {
+		target = FTH
+		autonomous_state = autonomy_IR_freiprinztum
+		freedom_level = 0.4
+	}
+	set_autonomy = {
+		target = ARK
+		autonomous_state = autonomy_IR_freiprinztum
+		freedom_level = 0.4
+	}
+	set_autonomy = {
+		target = NRK
+		autonomous_state = autonomy_IR_freiprinztum
+		freedom_level = 0.4
+	}
+	else = {
+		puppet = ARK
+		puppet = FTH
+		puppet = NOC
+		puppet = STA
+		puppet = SPW
+		puppet = SNF
+		puppet = NRK
+		puppet = WSZ
+		puppet = WIS
+		puppet = TEI
+		puppet = SVT
+		puppet = HLZ
+		}
+}
+
+create_country_leader = {
+	name = "Adelina Vlussinger"
+	desc = "politics_UNG_vlussinger_desc"
+	picture = "gfx/leaders/UNG/Portrait_UNG_Vlussinger.dds"
+	ideology = monarchy_constitutional_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Thirza Lichtenfels"
+	desc = "politics_UNG_lichtenfels_desc"
+	picture = "gfx/leaders/UNG/Portrait_UNG_Lichtenfels.dds"
+	ideology = republic_peasant_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Severin Tauber"
+	desc = "politics_UNG_tauber_desc"
+	picture = "gfx/leaders/UNG/Portrait_UNG_Tauber.dds"
+	ideology = puritan_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Adelina Vlussinger"
+	desc = "politics_UNG_vlussinger_desc"
+	picture = "gfx/leaders/UNG/Portrait_UNG_Vlussinger.dds"
+	ideology = monarchy_absolute_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Achimer Kümmel"
+	desc = "politics_UNG_kummel_desc"
+	picture = "gfx/leaders/UNG/Portrait_UNG_Kummel.dds"
+	ideology = theocrat_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Adelina Vlussinger"
+	desc = "politics_UNG_vlussinger_desc"
+	picture = "gfx/leaders/UNG/Portrait_UNG_Vlussinger.dds"	
+	ideology = republic_aristocrat_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Ferdinand Holzer"
+	desc = "politics_UNG_holzer_desc"
+	picture = "gfx/leaders/UNG/Portrait_UNG_Holzer.dds"
+	ideology = republic_merchant_ideology
+	traits = {
+	}
+}

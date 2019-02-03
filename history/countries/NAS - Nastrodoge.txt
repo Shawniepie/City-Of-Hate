@@ -1,0 +1,105 @@
+﻿capital = 20
+
+oob = "empty"
+set_research_slots = 3
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1
+	tech_recon = 1
+}
+
+1939.1.1 = {
+}
+
+set_politics = {
+
+	parties = {
+		monarchy_absolute= { 
+			popularity = 2
+		}
+
+		monarchy_constitutional = {
+			popularity = 4
+		}
+		
+		republic_peasant = {
+			popularity = 61
+		}
+		republic_aristocrat = {
+			popularity = 6
+		}
+		republic_merchant = {
+			popularity = 14
+		}
+		theocrat = {
+			popularity = 9
+		}
+		puritan = {
+			popularity = 4
+		}
+	}
+	
+	ruling_party = republic_peasant
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+create_country_leader = {
+	name = "Vancion Anguiquille"
+	desc = "politics_NAS_anguiquille_desc"
+	picture = "gfx/leaders/NAS/Portrait_NAS_Anguiquille.dds"
+	ideology = monarchy_absolute_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Vancion Anguiquille"
+	desc = "politics_NAS_anguiquille_desc"
+	picture = "gfx/leaders/NAS/Portrait_NAS_Anguiquille.dds"
+	ideology = monarchy_constitutional_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Golhora Asmenthe"
+	desc = "politics_NAS_asmenthe_desc"
+	picture = "gfx/leaders/NAS/Portrait_NAS_Asmenthe.dds"
+	ideology = theocrat_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Vincine Astillion"
+	desc = "politics_NAS_astillion_desc"
+	picture = "gfx/leaders/NAS/Portrait_NAS_Astillion.dds"
+	ideology = republic_aristocrat_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Ystven Berth"
+	desc = "politics_NAS_berth_desc"
+	picture = "gfx/leaders/NAS/Portrait_NAS_Berth.dds"
+	ideology = republic_peasant_ideology
+}
+
+create_country_leader = {
+	name = "Laster Visange"
+	desc = "politics_NAS_visange_desc"
+	picture = "gfx/leaders/NAS/Portrait_NAS_Visange.dds"
+	ideology = republic_merchant_ideology
+}
+
+create_country_leader = {
+	name = "Astelle Tolsin"
+	desc = "politics_NAS_tolsin_desc"
+	picture = "gfx/leaders/NAS/Portrait_NAS_Tolsin.dds"
+	ideology = puritan_ideology
+}

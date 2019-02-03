@@ -1,0 +1,108 @@
+﻿capital = 29
+
+oob = "empty"
+set_research_slots = 3
+
+set_technology = {
+	infantry_weapons = 1
+	tech_support = 1
+	tech_recon = 1
+	early_submarine = 1
+	early_destroyer = 1
+	early_light_cruiser = 1
+	early_heavy_cruiser = 1
+}
+
+1939.1.1 = {
+}
+
+set_politics = {
+
+	parties = {
+		monarchy_absolute= {
+			popularity = 67
+		}
+
+		monarchy_constitutional = {
+			popularity = 13
+		}
+		
+		republic_peasant = {
+			popularity = 1
+		}
+		republic_aristocrat = {
+			popularity = 9
+		}
+		republic_merchant = {
+			popularity = 4
+		}
+		theocrat = {
+			popularity = 3
+		}
+		puritan = {
+			popularity = 3
+		}
+	}
+	
+	ruling_party = monarchy_absolute
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+create_country_leader = {
+	name = "Falion Enstlas"
+	desc = "politics_KRT_enstlas_desc"
+	picture = "gfx/leaders/KRT/Portrait_KRT_Enstlas.dds"
+	ideology = monarchy_absolute_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Falion Enstlas"
+	desc = "politics_KRT_enstlas_desc"
+	picture = "gfx/leaders/KRT/Portrait_KRT_Enstlas.dds"
+	ideology = monarchy_constitutional_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Sevorn Tholiss"
+	desc = "politics_KRT_tholiss_desc"
+	picture = "gfx/leaders/KRT/Portrait_KRT_Tholiss.dds"
+	ideology = theocrat_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Falion Enstlas"
+	desc = "politics_KRT_enstlas_desc"
+	picture = "gfx/leaders/KRT/Portrait_KRT_Enstlas.dds"
+	ideology = republic_aristocrat_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Ginty Marle"
+	desc = "politics_KRT_marle_desc"
+	picture = "gfx/leaders/KRT/Portrait_KRT_Marle.dds"
+	ideology = republic_peasant_ideology
+}
+
+create_country_leader = {
+	name = "Fersin Dolgonne"
+	desc = "politics_KRT_dolgonne_desc"
+	picture = "gfx/leaders/KRT/Portrait_KRT_Dolgonne.dds"
+	ideology = republic_merchant_ideology
+}
+
+create_country_leader = {
+	name = "Solgorn Vorne"
+	desc = "politics_KRT_vorne_desc"
+	picture = "gfx/leaders/KRT/Portrait_KRT_Vorne.dds"
+	ideology = puritan_ideology
+}

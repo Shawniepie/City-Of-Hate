@@ -1,0 +1,114 @@
+﻿capital = 236
+
+oob = "FTH_1936"
+
+
+set_technology = {
+	infantry_weapons = 1
+	tech_support = 1
+	tech_recon = 1
+	early_submarine = 1
+	early_destroyer = 1
+	early_light_cruiser = 1
+	early_heavy_cruiser = 1
+}
+
+1939.1.1 = {
+}
+
+set_politics = {
+
+	parties = {
+		monarchy_absolute= { 
+			popularity = 27
+		}
+
+		monarchy_constitutional = {
+			popularity = 32
+		}
+		
+		republic_peasant = {
+			popularity = 1
+		}
+		republic_aristocrat = {
+			popularity = 12
+		}
+		republic_merchant = {
+			popularity = 40
+		}
+		theocrat = {
+			popularity = 0
+		}
+		puritan = {
+			popularity = 0
+		}
+	}
+	
+	ruling_party = republic_merchant
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+create_country_leader = {
+	name = "Alois Ehrenbaum"
+	desc = "politics_FTH_ehrenbaum_desc"
+	picture = "gfx/leaders/FTH/Portrait_FTH_Ehrenbaum.dds"
+	ideology = monarchy_constitutional_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Petrus Rothenstein"
+	desc = "politics_FTH_rothenstein_desc"
+	picture = "gfx/leaders/FTH/Portrait_FTH_Rothenstein.dds"
+	ideology = republic_peasant_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Seraphine Bodenfeld"
+	desc = "politics_FTH_bodenfeld_desc"
+	picture = "gfx/leaders/FTH/Portrait_FTH_Bodenfeld.dds"
+	ideology = puritan_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Alois Ehrenbaum"
+	desc = "politics_FTH_ehrenbaum_desc"
+	picture = "gfx/leaders/FTH/Portrait_FTH_Ehrenbaum.dds"
+	ideology = monarchy_absolute_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Lucie Gartner"
+	desc = "politics_FTH_gartner_desc"
+	picture = "gfx/leaders/FTH/Portrait_FTH_Gartner.dds"
+	ideology = theocrat_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Nicola Schauerte"
+	desc = "politics_FTH_schauerte_desc"
+	picture = "gfx/leaders/FTH/Portrait_FTH_Schauerte.dds"
+	ideology = republic_aristocrat_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Dorothea Feininger"
+	desc = "politics_FTH_feininger_desc"
+	picture = "gfx/leaders/FTH/Portrait_FTH_Feininger.dds"
+	ideology = republic_merchant_ideology
+	traits = {
+	}
+}

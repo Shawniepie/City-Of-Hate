@@ -1,0 +1,114 @@
+﻿capital = 228
+
+oob = "NOC_1936"
+
+
+set_technology = {
+	infantry_weapons = 1
+	tech_support = 1
+	tech_recon = 1
+	early_submarine = 1
+	early_destroyer = 1
+	early_light_cruiser = 1
+	early_heavy_cruiser = 1
+}
+
+1939.1.1 = {
+}
+
+set_politics = {
+
+	parties = {
+		monarchy_absolute= { 
+			popularity = 5
+		}
+
+		monarchy_constitutional = {
+			popularity = 17
+		}
+		
+		republic_peasant = {
+			popularity = 22
+		}
+		republic_aristocrat = {
+			popularity = 12
+		}
+		republic_merchant = {
+			popularity = 9
+		}
+		theocrat = {
+			popularity = 14
+		}
+		puritan = {
+			popularity = 19
+		}
+	}
+	
+	ruling_party = monarchy_constitutional
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+create_country_leader = {
+	name = "Marko Eichmann"
+	desc = "politics_NOC_eichmann_desc"
+	picture = "gfx/leaders/NOC/Portrait_NOC_Eichmann.dds"
+	ideology = monarchy_constitutional_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Jasper Fischmann"
+	desc = "politics_NOC_fischmann_desc"
+	picture = "gfx/leaders/NOC/Portrait_NOC_Fischmann.dds"
+	ideology = republic_peasant_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Ari Linzt"
+	desc = "politics_NOC_linzt_desc"
+	picture = "gfx/leaders/NOC/Portrait_NOC_Linzt.dds"
+	ideology = puritan_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Adalwin Wehinger"
+	desc = "politics_NOC_wehinger_desc"
+	picture = "gfx/leaders/NOC/Portrait_NOC_Wehinger.dds"
+	ideology = monarchy_absolute_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Arthur Arntzbaum"
+	desc = "politics_NOC_arntzbaum_desc"
+	picture = "gfx/leaders/NOC/Portrait_NOC_Artnzbaum.dds"
+	ideology = theocrat_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Marko Eichmann"
+	desc = "politics_NOC_eichmann_desc"
+	picture = "gfx/leaders/NOC/Portrait_NOC_Eichmann.dds"
+	ideology = republic_aristocrat_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Gunther Hartmann"
+	desc = "politics_NOC_hartmann_desc"
+	picture = "gfx/leaders/NOC/Portrait_NOC_Hartmann.dds"
+	ideology = republic_merchant_ideology
+	traits = {
+	}
+}

@@ -1,0 +1,137 @@
+﻿capital = 118
+
+oob = "RTH_1936"
+
+set_technology = {
+	infantry_weapons = 1
+	tech_support = 1
+	tech_recon = 1
+}
+
+1939.1.1 = {
+}
+
+set_politics = {
+
+	parties = {
+		monarchy_absolute= { 
+			popularity = 5
+		}
+
+		monarchy_constitutional = {
+			popularity = 6
+		}
+		
+		republic_peasant = {
+			popularity = 56
+		}
+		republic_aristocrat = {
+			popularity = 10
+		}
+		republic_merchant = {
+			popularity = 12
+		}
+		theocrat = {
+			popularity = 8
+		}
+		puritan = {
+			popularity = 3
+		}
+	}
+	
+	ruling_party = republic_peasant
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+	give_guarantee = SKA
+	
+	diplomatic_relation = {
+		country = SKA
+		relation = military_access
+		active = yes
+	}
+	
+	add_opinion_modifier = {
+		target = SKA
+		modifier = staunch_allies
+	}
+
+	add_opinion_modifier = {
+		target = ORD
+		modifier = bitter_rivals
+	}
+	
+create_country_leader = {
+	name = "Kastyne Solverin"
+	desc = "politics_RTH_solverin_desc"
+	picture = "gfx/leaders/RTH/Portrait_RTH_Solverin.dds"
+	ideology = republic_peasant_ideology
+	traits = {
+	}
+}
+	
+create_country_leader = {
+	name = "Alucien Derathur"
+	desc = "politics_RTH_derathur_desc"
+	picture = "gfx/leaders/RTH/Portrait_RTH_Derathur.dds"
+	ideology = republic_peasant_ideology
+	traits = {
+		hero_of_the_revolution
+	}
+}
+
+create_country_leader = {
+	name = "Farnaur Ithinis"
+	desc = "politics_RTH_itihnis_desc"
+	picture = "gfx/leaders/RTH/Portrait_RTH_Ithinis.dds"
+	ideology = puritan_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Ternise Locthorin"
+	desc = "politics_RTH_locthorin_desc"
+	picture = "gfx/leaders/RTH/Portrait_RTH_Locthorin.dds"
+	ideology = monarchy_absolute_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Ternise Locthorin"
+	desc = "politics_RTH_locthorin_desc"
+	picture = "gfx/leaders/RTH/Portrait_RTH_Locthorin.dds"
+	ideology = monarchy_constitutional_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Sacrene Hinassus"
+	desc = "politics_RTH_hinassus_desc"
+	picture = "gfx/leaders/RTH/Portrait_RTH_Hinassus.dds"
+	ideology = theocrat_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Burthys Vrinther"
+	desc = "politics_RTH_vrinther_desc"
+	picture = "gfx/leaders/RTH/Portrait_RTH_Vrinther.dds"
+	ideology = republic_aristocrat_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Gerdaurin Varinnis"
+	desc = "politics_RTH_varinnis_desc"
+	picture = "gfx/leaders/RTH/Portrait_RTH_Varinnis.dds"
+	ideology = republic_merchant_ideology
+	traits = {
+	}
+}

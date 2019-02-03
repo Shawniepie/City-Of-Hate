@@ -1,0 +1,22 @@
+state={
+	id=112
+	name="STATE_112"
+	provinces={
+		362 363 3658 6451 6905 7919 
+	}
+	state_category = metropolis
+	manpower=904219
+	buildings_max_level_factor=1.000
+		history={
+		owner = ORD
+		victory_points = { 363 49 }
+		buildings = {
+		363 = { naval_base = 8 }
+		dockyard = 5
+		industrial_complex = 2
+		arms_factory = 3
+		infrastructure = 7
+		}
+		add_core_of = ORD
+		}
+}

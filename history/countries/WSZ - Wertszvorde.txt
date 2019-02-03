@@ -1,0 +1,114 @@
+﻿capital = 235
+
+oob = "WSZ_1936"
+
+
+set_technology = {
+	infantry_weapons = 1
+	tech_support = 1
+	tech_recon = 1
+	early_submarine = 1
+	early_destroyer = 1
+	early_light_cruiser = 1
+	early_heavy_cruiser = 1
+}
+
+1939.1.1 = {
+}
+
+set_politics = {
+
+	parties = {
+		monarchy_absolute= { 
+			popularity = 73
+		}
+
+		monarchy_constitutional = {
+			popularity = 7
+		}
+		
+		republic_peasant = {
+			popularity = 0
+		}
+		republic_aristocrat = {
+			popularity = 12
+		}
+		republic_merchant = {
+			popularity = 0
+		}
+		theocrat = {
+			popularity = 8
+		}
+		puritan = {
+			popularity = 0
+		}
+	}
+	
+	ruling_party = monarchy_absolute
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+create_country_leader = {
+	name = "Kristin Kindl"
+	desc = "politics_WSZ_kindl_desc"
+	picture = "gfx/leaders/WSZ/Portrait_WSZ_Kindl.dds"
+	ideology = monarchy_constitutional_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Anton Beckmann"
+	desc = "politics_WSZ_Beckmann_desc"
+	picture = "gfx/leaders/WSZ/Portrait_WSZ_Beckmann.dds"
+	ideology = republic_peasant_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Thorsten Weingand"
+	desc = "politics_WSZ_weingand_desc"
+	picture = "gfx/leaders/WSZ/Portrait_WSZ_Weingand.dds"
+	ideology = puritan_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Kristin Kindl"
+	desc = "politics_WSZ_kindl_desc"
+	picture = "gfx/leaders/WSZ/Portrait_WSZ_Kindl.dds"
+	ideology = monarchy_absolute_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Rupprecht Pelzer"
+	desc = "politics_WSZ_pelzer_desc"
+	picture = "gfx/leaders/WSZ/Portrait_WSZ_Pelzer.dds"
+	ideology = theocrat_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Karin Söllner"
+	desc = "politics_WSZ_sollner_desc"
+	picture = "gfx/leaders/WSZ/Portrait_WSZ_Sollner.dds"
+	ideology = republic_aristocrat_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Tanja Spitz"
+	desc = "politics_WSZ_spitz_desc"
+	picture = "gfx/leaders/WSZ/Portrait_WSZ_Spitz.dds"
+	ideology = republic_merchant_ideology
+	traits = {
+	}
+}
