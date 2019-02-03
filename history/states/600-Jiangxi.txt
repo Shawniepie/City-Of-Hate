@@ -1,0 +1,9 @@
+state={
+	id=600
+	name="STATE_600"
+	provinces={
+		221 222 1845 5064 6665 7392 8033 8034 
+	}
+	manpower=0
+	buildings_max_level_factor=1.000
+}
