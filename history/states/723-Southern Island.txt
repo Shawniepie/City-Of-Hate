@@ -1,0 +1,23 @@
+state={
+	id=723
+	name="STATE_723"
+	provinces={
+		1782 1783 1784 2315 3729 6948 7493 
+	}
+	state_category = town
+	manpower=8671
+	buildings_max_level_factor=1.000
+	
+	history={
+		owner = GMR
+		victory_points = {1784 14 }
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 2
+		}
+		add_core_of = GMR
+	}
+	resources = {
+		steel = 53
+	}
+}
