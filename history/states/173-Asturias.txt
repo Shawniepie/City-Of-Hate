@@ -1,0 +1,18 @@
+state={
+	id=173
+	name="STATE_173"
+	provinces={
+		1359 1360 4437 4438 7666 
+	}
+	state_category = town
+	manpower=1000000
+	buildings_max_level_factor=1.000
+	history={
+		buildings = {
+			infrastructure = 5
+
+
+		}
+
+	}
+}

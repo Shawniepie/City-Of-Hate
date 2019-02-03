@@ -1,0 +1,23 @@
+state={
+	id=256
+	name="STATE_256"
+	provinces={
+		1614 1858 3401 3827 4106 5713 7665 8040 
+	}
+	state_category = town
+	manpower=10492
+	buildings_max_level_factor=1.000
+	history={
+		victory_points = { 4106 12 }
+		owner = TEI
+		buildings = {
+			infrastructure = 5
+			dockyard = 1
+			industrial_complex = 1
+			4106 = {
+				naval_base = 2
+			}
+		}
+		add_core_of = TEI
+	}
+}

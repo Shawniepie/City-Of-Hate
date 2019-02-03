@@ -1,0 +1,18 @@
+state={
+	id=180
+	name="STATE_180"
+	provinces={
+		1028 2667 2668 4442 4444 6459 
+	}
+	state_category = rural
+	manpower=6402
+	buildings_max_level_factor=1.000
+	history={
+		owner = SKA
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = SKA
+
+	}
+}

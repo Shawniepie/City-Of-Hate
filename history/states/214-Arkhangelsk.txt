@@ -1,0 +1,17 @@
+state={
+	id=214
+	name="STATE_214"
+	provinces={
+		777 780 781 782 1566 3394 3396 3397 3399 3776 3777 7103 
+	}
+	state_category = rural
+	manpower=9824
+	buildings_max_level_factor=1.000
+	history={
+		owner = STA
+		buildings = {
+			infrastructure = 5
+		}
+		add_core_of = STA
+	}
+}

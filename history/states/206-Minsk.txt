@@ -1,0 +1,21 @@
+state={
+	id=206
+	name="STATE_206"
+	provinces={
+		1239 1240 3612 4337 4712 5869 5870 5871 8072 
+	}
+	state_category = large_city
+	manpower=872291
+	buildings_max_level_factor=1.000
+	history={
+		victory_points = { 5870 52 }
+		owner = ARK
+		buildings = {
+			infrastructure = 7
+			arms_factory = 3
+			industrial_complex = 4
+		}
+		add_core_of = ARK
+
+	}
+}

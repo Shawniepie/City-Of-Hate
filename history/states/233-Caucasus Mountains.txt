@@ -1,0 +1,20 @@
+state={
+	id=233
+	name="STATE_233"
+	provinces={
+		347 420 421 839 840 841 842 843 5836 6359 7240 7971 8091 8188 8189 
+	}
+	state_category = megalopolis
+	manpower=1859912
+	buildings_max_level_factor=1.000
+	history={
+		victory_points = { 842 55 }
+		owner = UNG
+		buildings = {
+			infrastructure = 8	
+			arms_factory = 3
+			industrial_complex = 4
+		}
+		add_core_of = UNG
+	}
+}

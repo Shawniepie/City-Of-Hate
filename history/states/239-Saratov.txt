@@ -1,0 +1,17 @@
+state={
+	id=239
+	name="STATE_239"
+	provinces={
+		605 606 607 4711 4713 6009 6884 
+	}
+	state_category = rural
+	manpower=6069
+	buildings_max_level_factor=1.000
+	history={
+		owner = ARK
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = ARK
+		}
+}

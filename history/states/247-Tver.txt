@@ -1,0 +1,17 @@
+state={
+	id=247
+	name="STATE_247"
+	provinces={
+		2379 3608 3609 3610 7079 7867 8559 
+	}
+	state_category = pastoral
+	manpower=1002
+	buildings_max_level_factor=1.000
+	history={
+		owner = UNG
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = UNG
+		}
+}

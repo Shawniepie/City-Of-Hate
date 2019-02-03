@@ -1,0 +1,17 @@
+state={
+	id=200
+	name="STATE_200"
+	provinces={
+		2423 2424 3265 3267 5827 6112 6113 8369 8909 
+	}
+	state_category = rural
+	manpower=1929
+	buildings_max_level_factor=1.000
+	history={
+		owner = STA
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = STA
+	}
+}

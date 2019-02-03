@@ -1,0 +1,21 @@
+state={
+	id=234
+	name="STATE_234"
+	provinces={
+		329 3766 3767 4224 4639 4640 4641 7547 8222 
+	}
+	state_category = city
+	manpower=452871
+	buildings_max_level_factor=1.000
+	history={
+		victory_points = { 4641 37 }
+		owner = WIS
+		buildings = {
+			infrastructure = 6
+			arms_factory = 2
+			industrial_complex = 3
+
+		}
+		add_core_of = WIS
+	}
+}

@@ -1,0 +1,22 @@
+state={
+	id=226
+	name="STATE_226"
+	provinces={
+		502 510 1076 1077 1078 6212 6213 8712 
+	}
+	state_category = city
+	manpower=592551
+	buildings_max_level_factor=1.000
+	history={
+		victory_points = { 1077 46 }
+		owner = SPW
+		buildings = {
+			infrastructure = 5	
+			arms_factory = 2
+			industrial_complex = 3
+
+		}
+		add_core_of = SPW
+
+	}
+}

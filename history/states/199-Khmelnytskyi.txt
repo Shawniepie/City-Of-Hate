@@ -1,0 +1,17 @@
+state={
+	id=199
+	name="STATE_199"
+	provinces={
+		333 2425 2426 3439 5247 7842 
+	}
+	state_category = pastoral
+	manpower=2029
+	buildings_max_level_factor=1.000
+	history={
+		owner = STA
+		buildings = {
+			infrastructure = 2	
+		}
+		add_core_of = STA
+	}
+}
