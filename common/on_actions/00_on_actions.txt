@@ -1,0 +1,83 @@
+on_actions = {
+
+	# country random events
+	#on_bi_yearly_pulse = {
+	#
+	#}
+
+	#on_five_year_pulse = {
+	#
+	#}
+	
+	on_daily = {
+		every_country = {
+			limit = {
+				has_idea = 	closed_economy
+			}
+		}
+		every_country = {
+			add_opinion_modifier = {
+				modifier = closed_economy_trade_modifier
+				target = ROOT
+			}
+		}
+	}
+	
+	on_daily = {
+		every_country = {
+			limit = {
+				AND = {
+					NOT = {
+						has_idea = closed_economy
+					}
+					any_country = {
+						has_opinion_modifier = {
+							modifier = closed_economy_trade_modifier
+							target = ROOT
+						}
+					}
+				}
+			}
+		}
+		every_country = {
+			remove_opinion_modifier = {
+				modifier = closed_economy_trade_modifier
+				target = ROOT
+			}
+		}
+	}
+	
+	on_leave_faction = {
+		effect = {
+			FROM = {
+				add_opinion_modifier = {
+					modifier = faction_traitor
+					target = ROOT
+					days = 365
+				}
+			
+				add_opinion_modifier = {
+					modifier = faction_traitor_trade
+					target = ROOT
+					days = 365
+				}
+			}
+		}
+	}
+
+	#Army Stuff
+	on_unit_leader_level_up = {
+		effect = {
+			
+		}
+	}
+	
+	on_army_leader_promoted = {
+		effect = {
+			add_timed_unit_leader_trait = {
+				trait = recently_promoted
+				days = 100
+			}
+		}
+	}
+}

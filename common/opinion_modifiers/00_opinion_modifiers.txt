@@ -1,0 +1,137 @@
+#########################################################################
+# OPINION MODIFIERS
+##########################################################################
+# value
+# min_trust
+# max_trust
+# decay
+# months/years/days = timer
+# trade = yes/no
+
+opinion_modifiers = {
+
+	### VANILLA STFF ###
+
+	holds_our_cores = {
+		value = -30
+	}
+	holds_our_claims = {
+		value = -15
+	}
+	claims_on_us = { 
+		value = -10
+	}
+	at_war_with_faction = {
+		value = -25
+	}
+	
+	attache_sent = {
+		value = 30
+	}
+	
+	attache_sent_to_enemy = {
+		value = -20
+	}
+
+	at_war = {
+		value = -75
+	}
+	
+	justifying_war_goal = {
+		value = -10
+		min_trust = -10
+		days = 10
+		decay = 1
+	}
+	
+	in_faction = {
+		value = 50
+	}
+	
+	military_access = {
+		value = 30
+	}
+	
+	non_aggression_pact = {
+		value = 25
+	}
+	
+	similar_ruling_party = {
+		value = 10
+	}
+	
+	different_party_types = {
+		value = -10
+	}
+	
+	long_term_trade_partner = {
+		value = 1
+	}
+
+	same_ruling_party = {
+		value = 0
+	}
+	
+	similar_ruling_party = {
+		value = 0
+	}
+	
+	different_party_types = {
+		value = 0
+	}
+	
+	in_faction = {
+		value = 100
+	}
+	
+	### MOD STUFF ###
+
+	staunch_allies = {
+		value = 100
+	}
+	
+	bitter_rivals = {
+		value = -100
+	}
+	
+	puppet_opinion = {
+		value = 75
+	}
+	
+	in_faction = {
+		value = 100
+	}
+	
+	closed_economy_trade_modifier = {
+		trade = yes
+		value = -250
+	}
+	
+	limited_exports_trade_modifier = {
+		trade = yes
+		value = -50
+	}
+	
+	export_focus_trade_modifier = {
+		trade = yes
+		value = -15
+	}
+	
+	free_trade_trade_modifier = {
+		trade = yes
+		value = 15
+	}
+	
+	UNG_heavy_concessions = {
+		value = -50
+	}
+	
+	UNG_medium_concessions = {
+		value = -15
+	}
+	
+	UNG_exchange = {
+		value = 5
+	}
+	
+}	
