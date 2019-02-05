@@ -1,0 +1,2308 @@
+### GENERIC FOCUS TREE
+
+focus_tree = {
+	id = generic_focus
+	country = {
+		factor = 1	
+	}
+	default = yes
+	
+### POLITICAL TREE
+
+	focus = {#Domestic Unrest
+		id = GENERIC_domestic_unrest
+		icon = GFX_goal_generic_political_pressure
+		cost = 6.8
+		x = 7
+		y = 0
+		ai_will_do = {
+			factor = 15
+		}
+		completion_reward = {
+			add_stability = -0.05
+			country_event = {
+				id = generic.1
+				days = 1
+			}
+		}
+	}
+
+	focus = {#Blame Foreigners
+		id = GENERIC_blame_foreigners
+		icon = GFX_goal_support_fascism
+		cost = 6.8
+		x = 0
+		y = 1
+		ai_will_do = {
+			factor = 15
+			modifier = {
+				factor = 0
+				has_country_flag = generic_aristocratic_path
+			}
+			modifier = {
+				factor = 0
+				has_country_flag = generic_republican_path
+			}
+			modifier = {
+				factor = 0
+				has_country_flag = generic_theocratic_path
+			}
+		}
+		prerequisite = {
+			focus = GENERIC_domestic_unrest
+		}
+		available = {
+			OR = {
+				has_country_flag = generic_puritan_path
+				has_government = puritan
+			}
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = puritan
+				popularity = 0.10
+			}
+		}
+	}
+
+	focus = {#Intimidate the Opposition
+		id = GENERIC_intimidate_opposition
+		icon = GFX_goal_generic_propaganda
+		cost = 6.8
+		x = 0
+		y = 2
+		ai_will_do = {
+			factor = 15
+			modifier = {
+				factor = 0
+				has_country_flag = generic_aristocratic_path
+			}
+			modifier = {
+				factor = 0
+				has_country_flag = generic_republican_path
+			}
+			modifier = {
+				factor = 0
+				has_country_flag = generic_theocratic_path
+			}
+		}
+		prerequisite = {
+			focus = GENERIC_blame_foreigners
+		}
+		available = {
+			OR = {
+				has_country_flag = generic_puritan_path
+				has_government = puritan
+			}
+		}
+		completion_reward = {
+			add_stability = -0.10
+			add_political_power = 75
+		}
+	}
+
+	focus = {#Puritan Coup
+		id = GENERIC_puritan_coup
+		icon = GFX_goal_generic_major_war
+		cost = 1
+		x = 0
+		y = 3
+		ai_will_do = {
+			factor = 15
+			modifier = {
+				factor = 0
+				has_country_flag = generic_aristocratic_path
+			}
+			modifier = {
+				factor = 0
+				has_country_flag = generic_republican_path
+			}
+			modifier = {
+				factor = 0
+				has_country_flag = generic_theocratic_path
+			}
+		}
+		prerequisite = {
+			focus = GENERIC_intimidate_opposition
+		}
+		available = {
+			OR = {
+				has_country_flag = generic_puritan_path
+				has_government = puritan
+			}
+		}
+		bypass = {
+			has_government = puritan
+		}
+		completion_reward = {
+			country_event = {
+				id = generic.2
+				days = 1
+			}
+			clr_country_flag = generic_puritan_path
+		}
+	}
+
+	focus = {#Expel Outsiders
+		id = GENERIC_expel_outsiders
+		icon = GFX_goal_generic_attack_allies
+		cost = 15
+		x = 0
+		y = 4
+		ai_will_do = {
+			factor = 15
+		}
+		prerequisite = {
+			focus = GENERIC_puritan_coup
+		}
+		available = {
+			has_government = puritan
+		}
+		completion_reward = {
+		
+			hidden_effect = {
+				remove_ideas = GENERIC_loyalty_monarch_idea
+				remove_ideas = GENERIC_nepotism_idea
+				remove_ideas = GENERIC_limited_freedoms_idea
+				remove_ideas = GENERIC_benevolent_monarchy_idea
+				remove_ideas = GENERIC_figurehead_monarch_idea
+				remove_ideas = GENERIC_academy_elites_idea
+				remove_ideas = GENERIC_constitutionalism_idea
+				remove_ideas = GENERIC_mercantile_freedom_idea
+				remove_ideas = GENERIC_standardize_currency_idea
+				remove_ideas = GENERIC_grain_dole_idea
+				remove_ideas = GENERIC_land_redistribution_idea
+				remove_ideas = GENERIC_republicanism_idea
+				remove_ideas = GENERIC_state_religion_idea
+				remove_ideas = GENERIC_religious_fervour_idea
+				remove_ideas = GENERIC_ecclesiocratism_idea
+			}
+			
+			hidden_effect = {
+				random_owned_controlled_state = {
+					add_manpower = -500
+				}
+				
+				random_owned_controlled_state = {
+					add_manpower = -500
+				}
+				
+				random_owned_controlled_state = {
+					add_manpower = -500
+				}
+
+				random_owned_controlled_state = {
+					add_manpower = -500
+				}
+			}
+			
+			add_ideas = GENERIC_ban_foreigners
+		}
+	}
+
+	focus = {#National Unity
+		id = GENERIC_national_unity
+		icon = GFX_focus_ger_reichskommisariats
+		cost = 10
+		x = 0
+		y = 5
+		ai_will_do = {
+			factor = 15
+		}
+		prerequisite = {
+			focus = GENERIC_expel_outsiders
+		}
+		available = {
+			has_government = puritan
+		}
+		completion_reward = {
+			add_stability = 0.15
+			add_war_support = 0.10
+			add_political_power = 85
+			add_ideas = GENERIC_national_unity_idea
+		}
+	}
+
+	focus = {#Trust in Tradition
+		id = GENERIC_trust_tradition
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		cost = 6.8
+		x = 4
+		y = 1
+		ai_will_do = {
+			factor = 15
+			modifier = {
+				factor = 0
+				has_country_flag = generic_puritan_path
+			}
+			modifier = {
+				factor = 0
+				has_country_flag = generic_republican_path
+			}
+			modifier = {
+				factor = 0
+				has_country_flag = generic_theocratic_path
+			}
+		}
+		prerequisite = {
+			focus = GENERIC_domestic_unrest
+		}
+		available = {
+			OR = {
+				has_country_flag = generic_nobility_path
+				has_government = monarchy_absolute
+				has_government = monarchy_constitutional
+				has_government = republic_aristocrat
+			}
+		}
+		completion_reward = {
+			add_stability = 0.10
+			add_political_power = -25
+			add_popularity = {
+				ideology = monarchy_absolute
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = monarchy_constitutional
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = republic_aristocrat
+				popularity = 0.05
+			}
+			country_event = {
+				id = generic.6
+				days = 1
+			}
+		}
+	}
+
+	focus = {#Order Maintained
+		id = GENERIC_order_maintained
+		icon = GFX_focus_generic_diplomatic_treaty
+		cost = 6.8
+		x = 4
+		y = 2
+		ai_will_do = {
+			factor = 15
+			modifier = {
+				factor = 0
+				has_country_flag = generic_puritan_path
+			}
+			modifier = {
+				factor = 0
+				has_country_flag = generic_republican_path
+			}
+			modifier = {
+				factor = 0
+				has_country_flag = generic_theocratic_path
+			}
+		}
+		prerequisite = {
+			focus = GENERIC_trust_tradition
+		}
+		available = {
+			OR = {
+				has_country_flag = generic_nobility_path
+				has_government = monarchy_absolute
+				has_government = monarchy_constitutional
+				has_government = republic_aristocrat
+			}
+		}
+		completion_reward = {
+			add_stability = 0.20
+			country_event = {
+				id = generic.3
+				days = 1
+			}
+			clr_country_flag = generic_nobility_path
+		}
+	}
+
+	focus = {#Outmaneuver Nobles
+		id = GENERIC_outmaneuver_nobility
+		icon = GFX_focus_rom_royal_dictatorship
+		cost = 1
+		x = 2
+		y = 3
+		ai_will_do = {
+			factor = 15
+		}
+		prerequisite = {
+			focus = GENERIC_order_maintained
+		}
+		available = {
+			OR = {
+				has_government = monarchy_absolute
+				has_country_flag = generic_absolutist_path
+			}
+		}
+		completion_reward = {
+			add_stability = -0.15
+			add_political_power = 75
+			add_popularity = {
+				ideology = monarchy_absolute
+				popularity = 0.10
+			}
+			hidden_effect = {
+				remove_ideas = GENERIC_ban_foreigners
+				remove_ideas = GENERIC_national_unity_idea
+				remove_ideas = GENERIC_limited_freedoms_idea
+				remove_ideas = GENERIC_benevolent_monarchy_idea
+				remove_ideas = GENERIC_figurehead_monarch_idea
+				remove_ideas = GENERIC_academy_elites_idea
+				remove_ideas = GENERIC_constitutionalism_idea
+				remove_ideas = GENERIC_mercantile_freedom_idea
+				remove_ideas = GENERIC_standardize_currency_idea
+				remove_ideas = GENERIC_grain_dole_idea
+				remove_ideas = GENERIC_land_redistribution_idea
+				remove_ideas = GENERIC_republicanism_idea
+				remove_ideas = GENERIC_state_religion_idea
+				remove_ideas = GENERIC_religious_fervour_idea
+				remove_ideas = GENERIC_ecclesiocratism_idea
+			}
+		}
+	}
+
+	focus = {#Loyalty to Monarch
+		id = GENERIC_loyalty_monarch
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		x = 2
+		y = 4
+		ai_will_do = {
+			factor = 15
+		}
+		prerequisite = {
+			focus = GENERIC_outmaneuver_nobility
+		}
+		available = {
+			has_government = monarchy_absolute
+		}
+		completion_reward = {
+			add_ideas = GENERIC_loyalty_monarch_idea
+			add_war_support = 0.05
+			add_political_power = 15
+		}
+	}
+
+	focus = {#Nepotism
+		id = GENERIC_nepotism
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 6.8
+		x = 2
+		y = 5
+		ai_will_do = {
+			factor = 15
+		}
+		prerequisite = {
+			focus = GENERIC_loyalty_monarch
+		}
+		available = {
+			has_government = monarchy_absolute
+		}
+		completion_reward = {
+			add_ideas = GENERIC_nepotism_idea
+			add_political_power = 175
+		}
+	}
+
+	focus = {#Authoritarianism
+		id = GENERIC_authoritarianism
+		icon = GFX_focus_CZE_german_puppet
+		cost = 15
+		x = 1
+		y = 6
+		ai_will_do = {
+			factor = 15
+		}
+		prerequisite = {
+			focus = GENERIC_national_unity
+			focus = GENERIC_nepotism
+		}
+		available = {
+			OR = {
+				has_government = puritan
+				has_government = monarchy_absolute
+			}
+		}
+		completion_reward = {
+			add_stability = -0.05
+			add_war_support = 0.1
+			add_political_power = 50
+			add_ideas = GENERIC_authoritarianism_idea
+		}
+	}
+
+	focus = {#Royal Compromise
+		id = GENERIC_royal_compromise
+		icon = GFX_focus_rom_handle_king
+		cost = 1
+		x = 4
+		y = 3
+		ai_will_do = {
+			factor = 15
+		}
+		prerequisite = {
+			focus = GENERIC_order_maintained
+		}
+		available = {
+			OR = {
+				has_government = monarchy_constitutional
+				has_country_flag = generic_constitutional_path
+			}
+		}
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 35
+			add_popularity = {
+				ideology = monarchy_constitutional
+				popularity = 0.10
+			}
+			hidden_effect = {
+				remove_ideas = GENERIC_loyalty_monarch_idea
+				remove_ideas = GENERIC_nepotism_idea
+				remove_ideas = GENERIC_ban_foreigners
+				remove_ideas = GENERIC_national_unity_idea
+				remove_ideas = GENERIC_figurehead_monarch_idea
+				remove_ideas = GENERIC_academy_elites_idea
+				remove_ideas = GENERIC_authoritarianism_idea
+				remove_ideas = GENERIC_mercantile_freedom_idea
+				remove_ideas = GENERIC_standardize_currency_idea
+				remove_ideas = GENERIC_grain_dole_idea
+				remove_ideas = GENERIC_land_redistribution_idea
+				remove_ideas = GENERIC_republicanism_idea
+				remove_ideas = GENERIC_state_religion_idea
+				remove_ideas = GENERIC_religious_fervour_idea
+				remove_ideas = GENERIC_ecclesiocratism_idea
+			}
+		}
+	}
+
+	focus = {#Limited Freedoms
+		id = GENERIC_limited_freedoms
+		icon = GFX_focus_generic_diplomatic_treaty
+		cost = 6.8
+		x = 4
+		y = 4
+		ai_will_do = {
+			factor = 15
+		}
+		prerequisite = {
+			focus = GENERIC_royal_compromise
+		}
+		available = {
+			has_government = monarchy_constitutional
+		}
+		completion_reward = {
+			add_ideas = GENERIC_limited_freedoms_idea
+			add_stability = 0.15
+			add_political_power = 25
+		}
+	}
+
+	focus = {#Benevolent Monarchy
+		id = GENERIC_benevolent_monarchy
+		icon = GFX_focus_hun_elect_a_king
+		cost = 6.8
+		x = 4
+		y = 5
+		ai_will_do = {
+			factor = 15
+		}
+		prerequisite = {
+			focus = GENERIC_limited_freedoms
+		}
+		available = {
+			has_government = monarchy_constitutional
+		}
+		completion_reward = {
+			add_ideas = GENERIC_benevolent_monarchy_idea
+			add_stability = 0.1
+			add_political_power = 50
+		}
+	}
+
+	focus = {#The Aristocrats' Ultimatum
+		id = GENERIC_aristocrat_ultimatum
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 1
+		x = 6
+		y = 3
+		ai_will_do = {
+			factor = 15
+		}
+		prerequisite = {
+			focus = GENERIC_order_maintained
+		}
+		available = {
+			OR = {
+				has_government = republic_aristocrat
+				has_country_flag = generic_aristocratic_path
+			}
+		}
+		completion_reward = {
+			add_stability = 0.2
+			add_political_power = -35
+			add_popularity = {
+				ideology = republic_aristocrat
+				popularity = 0.10
+			}
+			hidden_effect = {
+				remove_ideas = GENERIC_loyalty_monarch_idea
+				remove_ideas = GENERIC_nepotism_idea
+				remove_ideas = GENERIC_limited_freedoms_idea
+				remove_ideas = GENERIC_benevolent_monarchy_idea
+				remove_ideas = GENERIC_ban_foreigners
+				remove_ideas = GENERIC_national_unity_idea
+				remove_ideas = GENERIC_authoritarianism_idea
+				remove_ideas = GENERIC_mercantile_freedom_idea
+				remove_ideas = GENERIC_standardize_currency_idea
+				remove_ideas = GENERIC_grain_dole_idea
+				remove_ideas = GENERIC_land_redistribution_idea
+				remove_ideas = GENERIC_republicanism_idea
+				remove_ideas = GENERIC_state_religion_idea
+				remove_ideas = GENERIC_religious_fervour_idea
+				remove_ideas = GENERIC_ecclesiocratism_idea
+			}
+		}
+	}
+
+	focus = {#Figurehead Monarch
+		id = GENERIC_figurehead_monarch
+		icon = GFX_focus_generic_home_defense
+		cost = 6.8
+		x = 6
+		y = 4
+		ai_will_do = {
+			factor = 15
+		}
+		prerequisite = {
+			focus = GENERIC_aristocrat_ultimatum
+		}
+		available = {
+			has_government = republic_aristocrat
+		}
+		completion_reward = {
+			add_ideas = GENERIC_figurehead_monarch_idea
+			add_stability = 0.1
+			add_political_power = -15
+		}
+	}
+
+	focus = {#Academies for Elites
+		id = GENERIC_academy_elites
+		icon = GFX_focus_generic_military_academy
+		cost = 6.8
+		x = 6
+		y = 5
+		ai_will_do = {
+			factor = 15
+		}
+		prerequisite = {
+			focus = GENERIC_figurehead_monarch
+		}
+		available = {
+			has_government = republic_aristocrat
+		}
+		completion_reward = {
+			add_ideas = GENERIC_academy_elites_idea
+		}
+	}
+
+	focus = {#Constitutionalism
+		id = GENERIC_constitutionalism
+		icon = GFX_focus_generic_treaty
+		cost = 15
+		x = 5
+		y = 6
+		ai_will_do = {
+			factor = 15
+		}
+		prerequisite = {
+			focus = GENERIC_benevolent_monarchy
+			focus = GENERIC_academy_elites
+		}
+		available = {
+			OR = {
+				has_government = monarchy_constitutional
+				has_government = republic_aristocrat
+			}
+		}
+		completion_reward = {
+			add_ideas = GENERIC_constitutionalism_idea
+			add_stability = 0.15
+			add_political_power = 75
+		}
+	}
+
+	focus = {#Protests in the Streets
+		id = GENERIC_protests_streets
+		icon = GFX_goal_tfv_sever_ties_with_uk
+		cost = 6.8
+		x = 10
+		y = 1
+		ai_will_do = {
+			factor = 15
+			modifier = {
+				factor = 0
+				has_country_flag = generic_puritan_path
+			}
+			modifier = {
+				factor = 0
+				has_country_flag = generic_aristocratic_path
+			}
+			modifier = {
+				factor = 0
+				has_country_flag = generic_theocratic_path
+			}
+		}
+		prerequisite = {
+			focus = GENERIC_domestic_unrest
+		}
+		available = {
+			OR = {
+				has_country_flag = generic_republican_path
+				has_government = republic_merchant
+				has_government = republic_peasant
+			}
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = republic_merchant
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = republic_peasant
+				popularity = 0.05
+			}
+			add_stability = -0.2
+			add_political_power = -50
+			country_event = {
+				id = generic.7
+				days = 1
+			}
+		}
+	}
+
+	focus = {#Demand Elections
+		id = GENERIC_demand_elections
+		icon = GFX_goal_generic_demand_territory
+		cost = 6.8
+		x = 10
+		y = 2
+		ai_will_do = {
+			factor = 15
+			modifier = {
+				factor = 0
+				has_country_flag = generic_puritan_path
+			}
+			modifier = {
+				factor = 0
+				has_country_flag = generic_aristocratic_path
+			}
+			modifier = {
+				factor = 0
+				has_country_flag = generic_theocratic_path
+			}
+		}
+		prerequisite = {
+			focus = GENERIC_protests_streets
+		}
+		available = {
+			OR = {
+				has_country_flag = generic_republican_path
+				has_government = republic_merchant
+				has_government = republic_peasant
+			}
+		}
+		completion_reward = {
+			add_stability = -0.5
+			add_political_power = -25
+			country_event = {
+				id = generic.4
+				days = 1
+			}
+			clr_country_flag = generic_republican_path
+		}
+	}
+
+	focus = {#Guildist Victory
+		id = GENERIC_guildist_victory
+		icon = GFX_goal_continuous_boost_freedom
+		cost = 1
+		x = 9
+		y = 3
+		ai_will_do = {
+			factor = 15
+		}
+		prerequisite = {
+			focus = GENERIC_demand_elections
+		}
+		available = {
+			OR = {
+				has_government = republic_merchant
+				has_country_flag = generic_guildist_path
+			}
+		}
+		completion_reward = {
+			add_stability = 0.10
+			add_political_power = 50
+			add_popularity = {
+				ideology = republic_merchant
+				popularity = 0.15
+			}
+			hidden_effect = {
+				remove_ideas = GENERIC_loyalty_monarch_idea
+				remove_ideas = GENERIC_nepotism_idea
+				remove_ideas = GENERIC_limited_freedoms_idea
+				remove_ideas = GENERIC_benevolent_monarchy_idea
+				remove_ideas = GENERIC_figurehead_monarch_idea
+				remove_ideas = GENERIC_academy_elites_idea
+				remove_ideas = GENERIC_constitutionalism_idea
+				remove_ideas = GENERIC_ban_foreigners
+				remove_ideas = GENERIC_national_unity_idea
+				remove_ideas = GENERIC_grain_dole_idea
+				remove_ideas = GENERIC_land_redistribution_idea
+				remove_ideas = GENERIC_authoritarianism_idea
+				remove_ideas = GENERIC_state_religion_idea
+				remove_ideas = GENERIC_religious_fervour_idea
+				remove_ideas = GENERIC_ecclesiocratism_idea
+			}
+		}
+	}
+
+	focus = {#Mercantile Freedom
+		id = GENERIC_mercantile_freedom
+		icon = GFX_goal_generic_positive_trade_relations
+		cost = 6.8
+		x = 9
+		y = 4
+		ai_will_do = {
+			factor = 15
+		}
+		prerequisite = {
+			focus = GENERIC_guildist_victory
+		}
+		available = { 
+			has_government = republic_merchant
+		}
+		completion_reward = {
+			add_political_power = 35
+			add_ideas = GENERIC_mercantile_freedom_idea
+		}
+	}
+
+	focus = {#Standardize Currency
+		id = GENERIC_standardize_currency
+		icon = GFX_goal_generic_production
+		cost = 6.8
+		x = 9
+		y = 5
+		ai_will_do = {
+			factor = 15
+		}
+		prerequisite = {
+			focus = GENERIC_mercantile_freedom
+		}
+		available = {
+			has_government = republic_merchant
+		}
+		completion_reward = {
+			add_political_power = 50
+			add_ideas = GENERIC_standardize_currency_idea
+		}
+	}
+
+	focus = {#Rosite Victory
+		id = GENERIC_rosite_victory
+		icon = GFX_focus_generic_rosite
+		cost = 1
+		x = 11
+		y = 3
+		ai_will_do = {
+			factor = 15
+		}
+		prerequisite = {
+			focus = GENERIC_demand_elections
+		}
+		available = {
+			OR = {
+				has_government = republic_peasant
+				has_country_flag = generic_rosite_path
+			}
+		}
+		completion_reward = {
+			add_stability = 0.20
+			add_political_power = 25
+			add_popularity = {
+				ideology = republic_peasant
+				popularity = 0.15
+			}
+			hidden_effect = {
+				remove_ideas = GENERIC_loyalty_monarch_idea
+				remove_ideas = GENERIC_nepotism_idea
+				remove_ideas = GENERIC_limited_freedoms_idea
+				remove_ideas = GENERIC_benevolent_monarchy_idea
+				remove_ideas = GENERIC_figurehead_monarch_idea
+				remove_ideas = GENERIC_academy_elites_idea
+				remove_ideas = GENERIC_constitutionalism_idea
+				remove_ideas = GENERIC_mercantile_freedom_idea
+				remove_ideas = GENERIC_standardize_currency_idea
+				remove_ideas = GENERIC_ban_foreigners
+				remove_ideas = GENERIC_national_unity_idea
+				remove_ideas = GENERIC_authoritarianism_idea
+				remove_ideas = GENERIC_state_religion_idea
+				remove_ideas = GENERIC_religious_fervour_idea
+				remove_ideas = GENERIC_ecclesiocratism_idea
+			}
+		}
+	}
+
+	focus = {#Grain Dole
+		id = GENERIC_grain_dole
+		icon = GFX_focus_generic_concessions
+		cost = 6.8
+		x = 11
+		y = 4
+		ai_will_do = {
+			factor = 15
+		}
+		prerequisite = {
+			focus = GENERIC_rosite_victory
+		}
+		available = {
+			has_government = republic_peasant
+		}
+		completion_reward = {
+			add_stability = 0.05
+			add_ideas = GENERIC_grain_dole_idea
+		}
+	}
+
+	focus = {#Land Redistribution
+		id = GENERIC_land_redistribution
+		icon = GFX_focus_prc_agrarian_socialism
+		cost = 6.8
+		x = 11
+		y = 5
+		ai_will_do = {
+			factor = 15
+		}
+		prerequisite = {
+			focus = GENERIC_grain_dole
+		}
+		available = {
+			has_government = republic_peasant
+		}
+		completion_reward = {
+			add_stability = 0.1
+			add_ideas = GENERIC_land_redistribution_idea
+		}
+	}
+
+	focus = {#Republicanism
+		id = GENERIC_republicanism
+		icon = GFX_goal_support_democracy
+		cost = 15
+		x = 10
+		y = 6
+		ai_will_do = {
+			factor = 15
+		}
+		prerequisite = {
+			focus = GENERIC_standardize_currency
+			focus = GENERIC_land_redistribution
+		}
+		available = {
+			OR = {
+				has_government = republic_merchant
+				has_government = republic_peasant
+			}
+		}
+		completion_reward = {
+			add_ideas = GENERIC_republicanism_idea
+			add_stability = 0.15
+			add_political_power = 25
+		}
+	}
+
+	focus = {#Find Salvation
+		id = GENERIC_find_salvation
+		icon = GFX_focus_generic_temple
+		cost = 6.8
+		x = 14
+		y = 1
+		ai_will_do = {
+			factor = 15
+			modifier = {
+				factor = 0
+				has_country_flag = generic_puritan_path
+			}
+			modifier = {
+				factor = 0
+				has_country_flag = generic_aristocratic_path
+			}
+			modifier = {
+				factor = 0
+				has_country_flag = generic_republican_path
+			}
+		}
+		prerequisite = {
+			focus = GENERIC_domestic_unrest
+		}
+		available = {
+			OR = {
+			has_country_flag = generic_theocratic_path
+			has_government = theocrat
+			}
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = theocrat
+				popularity = 0.1
+				add_stability = 0.05
+				add_war_support = 0.05
+			}
+		}
+	}
+
+	focus = {#Promote the Faith
+		id = GENERIC_promote_faith
+		icon = GFX_goal_generic_national_unity
+		cost = 6.8
+		x = 14
+		y = 2
+		ai_will_do = {
+			factor = 15
+			modifier = {
+				factor = 0
+				has_country_flag = generic_puritan_path
+			}
+			modifier = {
+				factor = 0
+				has_country_flag = generic_aristocratic_path
+			}
+			modifier = {
+				factor = 0
+				has_country_flag = generic_republican_path
+			}
+		}
+		prerequisite = {
+			focus = GENERIC_find_salvation
+		}
+		available = {
+			OR = {
+				has_country_flag = generic_theocratic_path
+				has_government = theocrat
+			}
+		}
+		completion_reward = {
+			add_stability = 0.1
+			add_war_support = 0.1
+			add_political_power = 20
+		}
+	}
+
+	focus = {#Assume Temporal Power
+		id = GENERIC_assume_temporal_power
+		icon = GFX_focus_generic_self_management
+		cost = 1
+		x = 14
+		y = 3
+		ai_will_do = {
+			factor = 15
+			modifier = {
+				factor = 0
+				has_country_flag = generic_puritan_path
+			}
+			modifier = {
+				factor = 0
+				has_country_flag = generic_aristocratic_path
+			}
+			modifier = {
+				factor = 0
+				has_country_flag = generic_republican_path
+			}
+		}
+		available = {
+			OR = {
+				has_country_flag = generic_theocratic_path
+				has_government = theocrat
+			}
+		}	
+		prerequisite = {
+			focus = GENERIC_promote_faith
+		}
+		bypass = {
+			has_government = theocrat
+		}
+		completion_reward = {
+			country_event = {
+				id = generic.5
+				days = 1
+			}
+			add_stability = 0.15
+			clr_country_flag = generic_theocratic_path
+		}
+	}
+
+	focus = {#State Religion
+		id = GENERIC_state_religion
+		icon = GFX_focus_smiling_buddha
+		cost = 6.8
+		x = 14
+		y = 4
+		ai_will_do = {
+			factor = 15
+		}
+		prerequisite = {
+			focus = GENERIC_assume_temporal_power
+		}
+		available = {
+			has_government = theocrat
+		}
+		completion_reward = {
+		
+			hidden_effect = {
+				remove_ideas = GENERIC_loyalty_monarch_idea
+				remove_ideas = GENERIC_nepotism_idea
+				remove_ideas = GENERIC_limited_freedoms_idea
+				remove_ideas = GENERIC_benevolent_monarchy_idea
+				remove_ideas = GENERIC_figurehead_monarch_idea
+				remove_ideas = GENERIC_academy_elites_idea
+				remove_ideas = GENERIC_constitutionalism_idea
+				remove_ideas = GENERIC_mercantile_freedom_idea
+				remove_ideas = GENERIC_standardize_currency_idea
+				remove_ideas = GENERIC_grain_dole_idea
+				remove_ideas = GENERIC_land_redistribution_idea
+				remove_ideas = GENERIC_republicanism_idea
+				remove_ideas = GENERIC_ban_foreigners
+				remove_ideas = GENERIC_national_unity_idea
+				remove_ideas = GENERIC_authoritarianism_idea
+			}
+			
+			add_ideas = GENERIC_state_religion_idea
+			add_stability = 0.05
+			add_war_support = 0.05
+			add_popularity = {
+				ideology = theocrat
+				popularity = 0.2
+			}
+		}
+	}
+
+	focus = {#Religious Fervour
+		id = GENERIC_religious_fervour
+		icon = GFX_goal_generic_wolf_pack
+		cost = 6.8
+		x = 14
+		y = 5
+		ai_will_do = {
+			factor = 15
+		}
+		prerequisite = {
+			focus = GENERIC_state_religion
+		}
+		available = {
+			has_government = theocrat
+		}
+		completion_reward = {
+			add_ideas = GENERIC_religious_fervour_idea
+			add_war_support = 0.15
+		}
+	}
+
+	focus = {#Ecclesiocratism
+		id = GENERIC_ecclesiocratism
+		icon = GFX_goal_generic_religion
+		cost = 15
+		x = 14
+		y = 6
+		ai_will_do = {
+			factor = 15
+		}
+		prerequisite = {
+			focus = GENERIC_religious_fervour
+		}
+		available = {
+			has_government = theocrat
+		}
+		completion_reward = {
+			add_ideas = GENERIC_ecclesiocratism_idea
+			add_war_support = 0.5
+			add_stability = 0.5
+			add_political_power = 25
+		}
+	}
+
+### ECONOMIC TREE
+
+	focus = {#Assess Economy
+		id = GENERIC_assess_economy
+		icon = GFX_goal_generic_production
+		cost = 10
+		x = 18
+		y = 0
+		ai_will_do = {
+			factor = 14
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = industry
+			}
+			country_event = {
+				id = generic.8
+				days = 1
+			}
+				
+		}
+	}
+
+	focus = {#Empower Guilds
+		id = GENERIC_empower_guilds
+		icon = GFX_goal_generic_consumer_goods
+		cost = 10
+		x = 17
+		y = 1
+		ai_will_do = {
+			factor = 14
+		}
+		prerequisite = {
+			focus = GENERIC_assess_economy
+		}
+		available = {
+			has_country_flag = generic_support_guilds
+		}
+		mutually_exclusive = {
+			focus = GENERIC_curtail_guilds
+		}
+		completion_reward ={
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = industry_concentrated
+			}
+		}
+	}
+
+	focus = {#Urban Workshops
+		id = GENERIC_urban_workshops
+		icon = GFX_focus_generic_industry_3
+		cost = 10
+		x = 17
+		y = 2
+		ai_will_do = {
+			factor = 14
+		}
+		prerequisite = {
+			focus = GENERIC_empower_guilds
+		}
+		completion_reward = {
+			random_owned_controlled_state= {
+				limit = {
+					OR = {
+						has_state_category = city
+						has_state_category = large_city
+						has_state_category = metropolis
+						has_state_category = megalopolis
+					}
+				}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 4
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state= {
+				limit = {
+					OR = {
+						has_state_category = city
+						has_state_category = large_city
+						has_state_category = metropolis
+						has_state_category = megalopolis
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {#Centralized Production
+		id = GENERIC_centralized_production
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10
+		x = 17
+		y = 3
+		ai_will_do = {
+			factor = 14
+		}
+		prerequisite = {
+			focus = GENERIC_urban_workshops
+		}
+		completion_reward = {
+			add_ideas = GENERIC_economies_of_scale
+			add_tech_bonus = {
+				bonus = 0.35
+				uses = 1
+				category = industry_concentrated
+			}
+		}
+	}
+
+	focus = {#Import Raw Resources
+		id = GENERIC_import_resources
+		icon = GFX_goal_generic_trade
+		cost = 10
+		x = 17
+		y = 4
+		ai_will_do = {
+			factor = 14
+		}
+		prerequisite = {
+			focus = GENERIC_centralized_production
+		}
+		completion_reward = {
+			add_ideas = {
+				GENERIC_import_resources_idea
+			}
+		}
+	}
+
+	focus = {#Improve City Infrastructure
+		id = GENERIC_city_infrastructure
+		icon = GFX_goal_generic_construct_civilian
+		cost = 10
+		x = 17
+		y = 5
+		ai_will_do = {
+			factor = 14
+		}
+		prerequisite = {
+			focus = GENERIC_import_resources
+		}
+		completion_reward = {
+			random_owned_controlled_state= {
+				limit = {
+					OR = {
+						has_state_category = city
+						has_state_category = large_city
+						has_state_category = metropolis
+						has_state_category = megalopolis
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 5
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state= {
+				limit = {
+					OR = {
+						has_state_category = city
+						has_state_category = large_city
+						has_state_category = metropolis
+						has_state_category = megalopolis
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 4
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {#Curtail Guilds
+		id = GENERIC_curtail_guilds
+		icon = GFX_goal_generic_production2
+		cost = 10
+		x = 19
+		y = 1
+		ai_will_do = {
+			factor = 14
+		}
+		prerequisite = {
+			focus = GENERIC_assess_economy
+		}
+		available = {
+			has_country_flag = generic_break_guilds
+		}
+		mutually_exclusive = {
+			focus = GENERIC_curtail_guilds
+		}
+		completion_reward ={
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = industry_dispersed
+			}
+		}
+	}
+
+	focus = {#Rural Farmlands
+		id = GENERIC_rural_farmlands
+		icon = GFX_focus_generic_industry_1
+		cost = 10
+		x = 19
+		y = 2
+		ai_will_do = {
+			factor = 14
+		}
+		prerequisite = {
+			focus = GENERIC_curtail_guilds
+		}
+		completion_reward = {
+			random_owned_controlled_state= {
+				limit = {
+					OR = {
+						has_state_category = rural
+						has_state_category = pastoral
+						has_state_category = town
+						has_state_category = large_town
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state= {
+				limit = {
+					OR = {
+						has_state_category = rural
+						has_state_category = pastoral
+						has_state_category = town
+						has_state_category = large_town
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state= {
+				limit = {
+					OR = {
+						has_state_category = rural
+						has_state_category = pastoral
+						has_state_category = town
+						has_state_category = large_town
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state= {
+				limit = {
+					OR = {
+						has_state_category = rural
+						has_state_category = pastoral
+						has_state_category = town
+						has_state_category = large_town
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state= {
+				limit = {
+					OR = {
+						has_state_category = rural
+						has_state_category = pastoral
+						has_state_category = town
+						has_state_category = large_town
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {#Decentralized Production
+		id = GENERIC_decentralized_production
+		icon = GFX_goal_generic_construction2
+		cost = 10
+		x = 19
+		y = 3
+		ai_will_do = {
+			factor = 14
+		}
+		prerequisite = {
+			focus = GENERIC_rural_farmlands
+		}
+		completion_reward = {
+			add_ideas = GENERIC_diverse_economy
+			add_tech_bonus = {
+				bonus = 0.35
+				uses = 1
+				category = industry_dispersed
+			}
+		}
+	}
+
+	focus = {#Produce Raw Resources
+		id = GENERIC_produce_resources
+		icon = GFX_focus_generic_steel
+		cost = 10
+		x = 19
+		y = 4
+		ai_will_do = {
+			factor = 14
+		}
+		prerequisite = {
+			focus = GENERIC_decentralized_production
+		}
+		completion_reward = {
+			random_owned_controlled_state= {
+				limit = {
+					OR = {
+						has_state_category = rural
+						has_state_category = pastoral
+						has_state_category = town
+						has_state_category = large_town
+					}
+				}
+				add_resource = {
+					type = steel
+					amount = 25
+				}
+			}
+			random_owned_controlled_state= {
+				limit = {
+					OR = {
+						has_state_category = rural
+						has_state_category = pastoral
+						has_state_category = town
+						has_state_category = large_town
+					}
+				}
+				add_resource = {
+					type = steel
+					amount = 13
+				}
+			}
+			random_owned_controlled_state= {
+				limit = {
+					OR = {
+						has_state_category = rural
+						has_state_category = pastoral
+						has_state_category = town
+						has_state_category = large_town
+					}
+				}
+				add_resource = {
+					type = aluminium
+					amount = 16
+				}
+			}
+			random_owned_controlled_state= {
+				limit = {
+					OR = {
+						has_state_category = rural
+						has_state_category = pastoral
+						has_state_category = town
+						has_state_category = large_town
+					}
+				}
+				add_resource = {
+					type = aluminium
+					amount = 7
+				}
+			}
+			random_owned_controlled_state= {
+				limit = {
+					OR = {
+						has_state_category = rural
+						has_state_category = pastoral
+						has_state_category = town
+						has_state_category = large_town
+					}
+				}
+				add_resource = {
+					type = tungsten
+					amount = 15
+				}
+			}
+			random_owned_controlled_state= {
+				limit = {
+					OR = {
+						has_state_category = rural
+						has_state_category = pastoral
+						has_state_category = town
+						has_state_category = large_town
+					}
+				}
+				add_resource = {
+					type = tungsten
+					amount = 6
+				}
+			}
+		}
+	}
+
+	focus = {#Thousand Paths Plan
+		id = GENERIC_thousand_paths_plan
+		icon = GFX_goal_generic_paths	
+		cost = 10
+		x = 19
+		y = 5
+		ai_will_do = {
+			factor = 14
+		}
+		prerequisite = {
+			focus = GENERIC_produce_resources
+		}
+		completion_reward = {
+			random_owned_controlled_state= {
+				limit = {
+					OR = {
+						has_state_category = rural
+						has_state_category = pastoral
+						has_state_category = town
+						has_state_category = large_town
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state= {
+				limit = {
+					OR = {
+						has_state_category = rural
+						has_state_category = pastoral
+						has_state_category = town
+						has_state_category = large_town
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state= {
+				limit = {
+					OR = {
+						has_state_category = rural
+						has_state_category = pastoral
+						has_state_category = town
+						has_state_category = large_town
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state= {
+				limit = {
+					OR = {
+						has_state_category = rural
+						has_state_category = pastoral
+						has_state_category = town
+						has_state_category = large_town
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state= {
+				limit = {
+					OR = {
+						has_state_category = rural
+						has_state_category = pastoral
+						has_state_category = town
+						has_state_category = large_town
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = { #Expand Universities
+		id = GENERIC_expand_universities
+		icon = GFX_focus_research
+		x = 18
+		y = 6
+		cost = 10
+		prerequisite = {
+			focus = GENERIC_city_infrastructure
+			focus = GENERIC_thousand_paths_plan
+		}
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+### MILITARY TREE
+
+	focus = { #Military Path
+		id = GENERIC_military_industry
+		icon = GFX_focus_generic_combined_arms
+		
+		ai_will_do = {
+			factor = 14
+		}
+		
+		x = 9
+		y = 7
+		cost = 5
+		
+		completion_reward = {
+			country_event = {
+				id = generic.9
+				days = 1
+			}
+		}
+	}
+
+	focus = { #Military Factories 1
+		id = GENERIC_arm_troops
+		icon = GFX_goal_generic_allies_build_infantry
+		
+		ai_will_do = {
+			factor = 15
+		}
+		
+		prerequisite = {
+			focus = GENERIC_military_industry
+		}
+		
+		x = 8
+		y = 8
+		cost = 10
+		
+		completion_reward = {
+			random_owned_controlled_state= {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			
+			random_owned_controlled_state= {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			army_experience = 15
+		}
+	}
+	
+	focus = { #Military Factories 2
+		id = GENERIC_expand_forges
+		icon = GFX_goal_generic_small_arms
+		
+		ai_will_do = {
+			factor = 14
+		}
+		
+		prerequisite = {
+			focus = GENERIC_arm_troops
+		}
+		
+		x = 8
+		y = 9
+		cost = 7
+		
+		completion_reward = {
+			random_owned_controlled_state= {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			army_experience = 10
+		}
+	}
+	
+	focus = { #Military Production Boost
+		id = GENERIC_armourers_guild
+		icon = GFX_goal_generic_construct_mil_factory
+		
+		ai_will_do = {
+			factor = 13
+		}
+		
+		prerequisite = {
+			focus = GENERIC_expand_forges
+		}
+		
+		x = 8
+		y = 10
+		cost = 12
+		
+		completion_reward = {
+			add_ideas = GENERIC_armourers_guild_idea
+		}
+	}
+	
+	focus = { #Commit to Land
+		id = GENERIC_dominate_land
+		icon = GFX_goal_generic_military_sphere
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		prerequisite = {
+			focus = GENERIC_armourers_guild
+		}
+		available = {
+			has_country_flag = generic_army_prioritized
+		}
+		mutually_exclusive = {
+			focus = GENERIC_dominate_sea
+		}
+		
+		x = 8
+		y = 11
+		cost = 15
+		
+		completion_reward = {
+			add_war_support = 0.15
+			add_ideas = GENERIC_army_superiority
+			army_experience = 25
+			random_owned_controlled_state= {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = { #Dockyards 1
+		id = GENERIC_rule_waves
+		icon = GFX_goal_generic_construct_naval_dockyard
+		
+		ai_will_do = {
+			factor = 14
+		}
+		prerequisite = {
+			focus = GENERIC_military_industry
+		}
+		available = {
+			any_owned_state = {
+				is_coastal = yes
+			}
+		}
+		
+		x = 10
+		y = 8
+		cost = 10
+		
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_coastal = yes
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_coastal = yes
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+			navy_experience = 15
+		}
+	}
+	
+	focus = { #Dockyards 2
+		id = GENERIC_expand_dockyards
+		icon = GFX_goal_generic_build_navy
+		
+		ai_will_do = {
+			factor = 13
+		}
+		prerequisite = {
+			focus = GENERIC_rule_waves
+		}
+		available = {
+			any_owned_state = {
+				is_coastal = yes
+			}
+		}
+		
+		x = 10
+		y = 9
+		cost = 7
+		
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_coastal = yes
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			navy_experience = 10
+		}
+	}
+	
+	focus = { #Naval Production Boost
+		id = GENERIC_standardize_ships
+		icon = GFX_focus_generic_destroyer
+		
+		ai_will_do = {
+			factor = 12
+		}
+		prerequisite = {
+			focus = GENERIC_expand_dockyards
+		}
+		available = {
+			any_owned_state = {
+				is_coastal = yes
+			}
+		}
+		
+		x = 10
+		y = 10
+		cost = 12
+		
+		completion_reward = {
+			add_ideas = GENERIC_standardized_ships
+		}
+	}
+	
+	focus = { #Commit to Sea
+		id = GENERIC_dominate_sea
+		icon = GFX_goal_generic_navy_battleship
+		
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = GENERIC_standardize_ships
+		}
+		available = {
+			has_country_flag = generic_navy_prioritized
+			any_owned_state = {
+				is_coastal = yes
+			}
+		}
+		mutually_exclusive = {
+			focus = GENERIC_dominate_land
+		}
+		
+		x = 10
+		y = 11
+		cost = 15
+		
+		completion_reward = {
+			add_political_power = 125
+			add_ideas = GENERIC_naval_superiority
+			navy_experience = 25
+			random_owned_controlled_state = {
+				limit = {
+					is_coastal = yes
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+		
+	
+### ARMY TREE
+
+	focus = { #Choose Doctrine
+		id = GENERIC_officers_curriculum
+		icon = GFX_focus_secret_rearmament
+		
+		ai_will_do = {
+			factor = 15
+		}
+		
+		x = 15
+		y = 7
+		cost = 10
+		completion_reward = {
+			country_event = {
+				id = generic.10
+				days = 1
+			}
+		}
+	}
+	
+	focus = { #Mobile Warfare
+		id = GENERIC_trust_cavalry
+		icon = GFX_goal_generic_cavalry
+		
+		ai_will_do = {
+			factor = 14
+		}
+		
+		prerequisite = {
+			focus = GENERIC_officers_curriculum
+		}
+		
+		available = {
+			has_country_flag = generic_cavalry_army
+		}
+		
+		mutually_exclusive = {
+			focus = GENERIC_professional_army
+			focus = GENERIC_levies
+			focus = GENERIC_superior_organisation
+		}
+		
+		x = 12
+		y = 8
+		cost = 8
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.35
+				uses = 2
+				category = cat_mobile_warfare
+			}
+		}
+	}
+	
+	focus = { #Outriders
+		id = GENERIC_outriders
+		icon = GFX_goal_generic_position_armies
+		
+		ai_will_do = {
+			factor = 13
+		}
+		
+		prerequisite = {
+			focus = GENERIC_trust_cavalry
+		}
+		
+		x = 12
+		y = 9
+		cost = 10
+		completion_reward = {
+			add_ideas = GENERIC_outrider_corps
+		}
+	}
+	
+	focus = { #Support Weapons
+		id = GENERIC_hammers_anvils
+		icon = GFX_goal_generic_fortify_city
+		
+		ai_will_do = {
+			factor = 12
+		}
+		
+		prerequisite = {
+			focus = GENERIC_outriders
+		}
+		
+		x = 12
+		y = 10
+		cost = 12
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.25
+				uses = 1
+				category = infantry_weapons
+			}
+			add_ideas = GENERIC_anvil_infantry
+		}
+	}
+	
+	focus = { #Superior Firepower
+		id = GENERIC_professional_army
+		icon = GFX_focus_generic_military_mission
+		
+		ai_will_do = {
+			factor = 14
+		}
+		
+		prerequisite = {
+			focus = GENERIC_officers_curriculum
+		}
+		
+		available = {
+			has_country_flag = generic_professionalized_army
+		}
+		
+		mutually_exclusive = {
+			focus = GENERIC_trust_cavalry
+			focus = GENERIC_levies
+			focus = GENERIC_superior_organisation
+		}
+		
+		x = 14
+		y = 8
+		cost = 8
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.35
+				uses = 2
+				category = cat_superior_firepower
+			}
+		}
+	}
+	
+	focus = { #Uniforms
+		id = GENERIC_uniforms
+		icon = GFX_focus_generic_little_entente
+		
+		ai_will_do = {
+			factor = 13
+		}
+		
+		prerequisite = {
+			focus = GENERIC_professional_army
+		}
+		
+		x = 14
+		y = 9
+		cost = 10
+		completion_reward = {
+			add_ideas = GENERIC_supply_uniforms
+		}
+	}
+	
+	focus = { #Regiments
+		id = GENERIC_regiments
+		icon = GFX_goal_generic_alliance
+		
+		ai_will_do = {
+			factor = 12
+		}
+		
+		prerequisite = {
+			focus = GENERIC_uniforms
+		}
+		
+		x = 14
+		y = 10
+		cost = 12
+		completion_reward = {
+			add_ideas = GENERIC_regimental_pride
+			add_tech_bonus = {
+				bonus = 0.25
+				uses = 1
+				category = infantry_weapons
+			}
+		}
+	}
+	
+	focus = { #Mass Assault
+		id = GENERIC_levies
+		icon = GFX_goal_generic_axis_build_infantry
+		
+		ai_will_do = {
+			factor = 14
+		}
+		
+		prerequisite = {
+			focus = GENERIC_officers_curriculum
+		}
+		
+		available = {
+			has_country_flag = generic_large_army
+		}
+		
+		mutually_exclusive = {
+			focus = GENERIC_trust_cavalry
+			focus = GENERIC_professional_army
+			focus = GENERIC_superior_organisation
+		}
+		
+		x = 16
+		y = 8
+		cost = 8
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.35
+				uses = 2
+				category = cat_mass_assault
+			}
+		}
+	}
+	
+	focus = { #Cheap Arms
+		id = GENERIC_massproduce_weapons
+		icon = GFX_goal_generic_secret_weapon
+		
+		ai_will_do = {
+			factor = 13
+		}
+		
+		prerequisite = {
+			focus = GENERIC_levies
+		}
+		
+		x = 16
+		y = 9
+		cost = 10
+		completion_reward = {
+			add_ideas = GENERIC_mass_produced_arms
+		}
+	}
+	
+	focus = { #
+		id = GENERIC_supply_wagons
+		icon = GFX_goal_generic_construct_infrastructure
+		
+		ai_will_do = {
+			factor = 12
+		}
+		
+		prerequisite = {
+			focus = GENERIC_massproduce_weapons
+		}
+		
+		x = 16
+		y = 10
+		cost = 12
+		completion_reward = {
+			add_ideas = GENERIC_supply_trains
+		}
+	}
+	
+	focus = { #Grand Battleplan
+		id = GENERIC_superior_organisation
+		icon = GFX_focus_generic_home_defense
+		
+		ai_will_do = {
+			factor = 14
+		}
+		
+		prerequisite = {
+			focus = GENERIC_officers_curriculum
+		}
+		
+		available = {
+			has_country_flag = generic_organized_army
+		}
+		
+		mutually_exclusive = {
+			focus = GENERIC_trust_cavalry
+			focus = GENERIC_professional_army
+			focus = GENERIC_levies
+		}
+		
+		x = 18
+		y = 8
+		cost = 8
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.35
+				uses = 2
+				category = cat_grand_battle_plan
+			}
+		}
+	}
+	
+	focus = { #Officers
+		id = GENERIC_officers
+		icon = GFX_focus_generic_commonwealth_build_infantry
+		
+		ai_will_do = {
+			factor = 13
+		}
+		
+		prerequisite = {
+			focus = GENERIC_superior_organisation
+		}
+		
+		x = 18
+		y = 9
+		cost = 10
+		completion_reward = {
+			add_ideas = GENERIC_superior_officers
+		}
+	}
+	
+	focus = { #Chain of Command
+		id = GENERIC_chain_command
+		icon = GFX_goal_generic_build_tank
+		
+		ai_will_do = {
+			factor = 12
+		}
+		
+		prerequisite = {
+			focus = GENERIC_officers
+		}
+		
+		x = 18
+		y = 10
+		cost = 12
+		completion_reward = {
+			add_ideas = GENERIC_chain_of_command
+		}
+	}
+}

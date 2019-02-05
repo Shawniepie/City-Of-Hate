@@ -1,0 +1,4158 @@
+### ORDORIAN FOCUS TREE ###
+
+focus_tree = {
+	id = ordorian_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = ORD
+		}
+		modifier = {
+			add = 10
+			original_tag = ORD
+		}
+	}
+
+	#focus = { #
+	#	id = 
+	#	icon = GFX_
+	#	cost = 
+	#	prerequisite = {
+	#		focus = 
+	#	}
+	#	ai_will_do = {
+	#		factor = 5
+	#	}
+	#	x = 
+	#	y = 
+	#	completion_reward = {
+	#		
+	#	}
+	#}
+	
+	
+### AUTUMN DEBATE ###
+
+	focus = {#Autumn Debate Start
+		id = ORD_autumn
+		icon = GFX_focus_ord_autumn_debate
+		cost = 15
+		x = 2
+		y = 0
+		ai_will_do = {
+			factor = 15
+		}
+		completion_reward = {
+			country_event = {
+				id = ord.1
+				days = 1
+				}
+			}
+		}
+	
+	focus = {#Absolutist
+		id = ORD_thaw
+		icon = GFX_goal_tripartite_pact
+		cost = 10
+		prerequisite = {
+			focus = ORD_autumn
+			}
+			
+		available = {
+			OR = {
+				AND = {
+			has_country_flag = ORD_autumn_debate_done
+			has_country_flag = ORD_ordorian_thaw
+				}
+				AND = {
+				is_puppet = yes
+					NOT = {
+						OR = {
+						has_government = puritan
+						has_government = theocrat
+							}
+						}
+					}
+				}
+			}
+			x = 0
+			y = 1
+			ai_will_do = {
+				factor = 15
+				}		
+			completion_reward = {
+				#news_event = news_event.1
+				add_political_power = -150
+				add_stability = -0.25
+						GMR = {
+				add_opinion_modifier = {
+					target = ORD
+					modifier = ORD_thaw_modifier
+						}
+					}
+						UNG = {
+				add_opinion_modifier = {
+					target = ORD
+					modifier = ORD_thaw_modifier
+						}
+					}
+						STA = {
+				add_opinion_modifier = {
+					target = ORD
+					modifier = ORD_thaw_modifier
+						}
+					}
+						HLZ = {
+				add_opinion_modifier = {
+					target = ORD
+					modifier = ORD_thaw_modifier
+						}
+					}
+				hidden_effect = {
+					set_country_flag = {
+						flag = ORD_moderate_success
+						value = 0
+					}
+					set_country_flag = {
+						flag = ORD_moderate_failure
+						value = 0
+					}
+				}
+			}
+		}
+				
+	focus = {#Approach Adelina
+		id = ORD_approach_union
+		icon = GFX_focus_generic_treaty
+		cost = 8.6
+		prerequisite = {
+			focus = ORD_thaw
+		}
+		x = 0
+		y = 2
+		available = {
+			has_government = monarchy_absolute
+			is_subject = no
+		}
+		ai_will_do = {
+			factor = 15
+		}
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.05
+			UNG = {
+				country_event = {
+					id = ung.1
+					days = 3
+					}
+				}
+			}
+		}
+	
+	focus = {#Approach Arthenon
+		id = ORD_approach_realm
+		icon = GFX_focus_generic_diplomatic_treaty
+		cost = 8.6
+		prerequisite = {
+			focus = ORD_approach_union
+		}
+		x = 0
+		y = 3
+		available = {
+			has_government = monarchy_absolute
+			is_subject = no
+		}
+		ai_will_do = {
+			factor = 15
+		}
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.05
+			GMR = {
+				country_event = { 
+					id = gmr.1
+					days = 3
+					}
+				}
+			}
+		}
+	
+	focus = {#Cordon Sanitaire
+		id = ORD_anti_radical_pact
+		icon = GFX_goal_generic_major_alliance
+		cost = 15
+		prerequisite = {
+			focus = ORD_approach_realm
+		}
+		available = {
+			has_government = monarchy_absolute
+			is_subject = no
+		}
+		available = {
+			ORD = {
+				OR = {
+				has_country_flag = ORD_pact_with_realm
+				has_country_flag = ORD_pact_with_union
+				}
+			}
+		}				
+		x = 0
+		y = 4
+		ai_will_do = {
+			factor = 15
+		}
+		completion_reward = {
+		#news_event = news_event.2
+		set_country_flag = ordoria_nice
+		create_faction = "ythelmare_pact"
+		add_political_power = -80
+		add_stability = -0.15
+		if = {
+			limit = {
+				has_country_flag = ORD_pact_with_union
+			}
+			UNG = {
+				country_event = { 
+					id = ung.6
+					days = 3
+					}
+				}
+		}
+		if = {
+			limit = {
+				has_country_flag = ORD_pact_with_realm
+			}
+			GMR = {
+				country_event = { 
+					id = gmr.2
+					days = 3
+					}
+				}
+		}
+		hidden_effect = {
+				set_country_flag = ORD_fight_rthauiaur
+			}
+		}
+	}
+	
+	focus = {#Break the Pact
+		id = ORD_break_pact
+		icon = GFX_focus_renounce_the_treaty_of_trianon
+		cost = 1
+		prerequisite = {
+			focus = ORD_anti_radical_pact
+		}
+		available = {
+			is_subject = no
+			NOT = {
+				has_war_together_with = UNG
+				}
+			NOT = {
+				has_war_together_with = GMR
+			}
+			OR = {
+				RTH = {
+					OR = {
+						is_puppet_of = ORD
+						has_government = puritan
+					}
+				}
+				AND = {
+					RTH = {
+						exists = no
+					}
+					EOR = {
+						exists = yes
+					}
+				}
+				AND = {
+					RTH = {
+						exists = no
+					}
+					owns_state = 118
+					owns_state = 122
+				}
+			}
+		}
+		x = 0
+		y = 5
+		ai_will_do = {
+			factor = 15
+		}
+		completion_reward = {
+		#news_event = news_event.3
+		dismantle_faction = yes
+		add_political_power = 30
+		add_stability = 0.2
+		clr_country_flag = ordoria_nice
+		set_country_flag = ordoria_backstab
+		hidden_effect = {
+				set_country_flag = ORD_unlock_wars
+				clr_country_flag = ORD_pact_with_realm
+				clr_country_flag = ORD_pact_with_union
+			}
+			UNG = {
+				country_event = {
+					id = ung.5
+					days = 3
+				}
+			}
+			GMR = {
+				country_event = {
+					id = gmr.3
+					days = 3
+				}
+			}
+		}
+	}
+	
+	focus = {#Puritan
+		id = ORD_pure_empire
+		icon = GFX_goal_support_fascism
+		cost = 10
+		prerequisite = {
+			focus = ORD_autumn
+		}
+		available = {
+			has_country_flag = ORD_autumn_debate_done
+			OR = {
+				has_country_flag =	ORD_empire_purity
+				has_government = puritan	
+			}
+		}
+		x = 4
+		y = 1
+		ai_will_do = {
+			factor = 15
+		}
+		
+		completion_reward = {
+			add_political_power = 100
+			add_stability = 0.05
+		}
+	}
+	
+	focus = {#Supremacy
+		id = ORD_elven_supremacy
+		icon = GFX_goal_generic_wolf_pack
+		cost = 6.8
+		prerequisite = {
+			focus = ORD_pure_empire
+		}
+		available = {
+			has_government = puritan
+		}
+		x = 4
+		y = 2
+		ai_will_do = {
+			factor = 15
+		}
+		completion_reward = {
+			add_ideas = ORD_supremacy_idea
+			add_war_support = 0.10
+		}
+	}
+	
+	focus = {#Self-Reliance
+		id = ORD_self_reliance
+		icon = GFX_goal_generic_construction2
+		cost = 6.8
+		prerequisite = {
+			focus = ORD_elven_supremacy
+		}
+		available = {
+			has_government = puritan
+		}
+		x = 4
+		y = 3
+		ai_will_do = {
+			factor = 15
+		}
+		completion_reward = {
+			add_political_power = 50
+			add_ideas = ORD_selfreliance_idea
+			random_owned_state= {
+	limit = {
+		OR = {
+			has_state_category = rural
+			has_state_category = pastoral
+			has_state_category = town
+			has_state_category = large_town
+		}
+	}
+	add_resource = {
+		type = steel
+		amount = 22
+	}
+}
+random_owned_state= {
+	limit = {
+		OR = {
+			has_state_category = rural
+			has_state_category = pastoral
+			has_state_category = town
+			has_state_category = large_town
+		}
+	}
+	add_resource = {
+		type = steel
+		amount = 32
+	}
+}
+random_owned_state= {
+	limit = {
+		OR = {
+			has_state_category = rural
+			has_state_category = pastoral
+			has_state_category = town
+			has_state_category = large_town
+		}
+	}
+	add_resource = {
+		type = aluminium
+		amount = 21
+	}
+}
+random_owned_state= {
+	limit = {
+		OR = {
+			has_state_category = rural
+			has_state_category = pastoral
+			has_state_category = town
+			has_state_category = large_town
+		}
+	}
+	add_resource = {
+		type = aluminium
+		amount = 19
+	}
+}
+random_owned_state= {
+	limit = {
+		OR = {
+			has_state_category = rural
+			has_state_category = pastoral
+			has_state_category = town
+			has_state_category = large_town
+		}
+	}
+	add_resource = {
+		type = tungsten
+		amount = 23
+	}
+}
+random_owned_state= {
+	limit = {
+		OR = {
+			has_state_category = rural
+			has_state_category = pastoral
+			has_state_category = town
+			has_state_category = large_town
+		}
+	}
+	add_resource = {
+		type = tungsten
+		amount = 16
+	}
+}
+			}
+	}
+	
+	focus = {#Manifest Destiny
+		id = ORD_manifest_destiny
+		icon = GFX_focus_generic_hegemony
+		cost = 20
+		prerequisite = {
+			focus = ORD_self_reliance
+		}
+		available = {
+			has_government = puritan
+		}
+		x = 4
+		y = 4
+		ai_will_do = {
+			factor = 15
+		}
+		completion_reward = {
+			set_country_flag = ORD_manifest_destiny_flag
+			add_political_power = 100
+			add_stability = 0.10
+			add_war_support = 0.15
+			hidden_effect = {
+				set_country_flag = ORD_unlock_wars
+			}
+		}
+	}
+	
+	focus = {#Theocrat
+		id = ORD_pure_priests
+		icon = GFX_focus_generic_temple
+		cost = 10
+		prerequisite = {
+			focus = ORD_autumn
+		}
+		available = {
+			OR = {
+				AND = {
+			has_country_flag = ORD_autumn_debate_done
+			has_country_flag = ORD_pure_priests_flag
+				}
+			has_government = theocrat	
+			}
+		}
+		x = 2
+		y = 1
+		ai_will_do = {
+			factor = 15
+		}
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.10
+		}
+	}	
+	
+	focus = {#Holy Superiority
+		id = ORD_holy_superiority
+		icon = GFX_focus_generic_strike_at_democracy1
+		cost = 6.8
+		prerequisite = {
+			focus = ORD_pure_priests
+		}
+		available = {
+			has_government = theocrat
+		}
+		x = 2
+		y = 2
+		ai_will_do = {
+			factor = 15
+		}
+		completion_reward = {
+			add_ideas = ORD_religious_zeal_idea
+			add_political_power = 25
+			add_war_support = 0.10
+		}
+	}
+	
+	focus = {#Puritan Crusade
+		id = ORD_puritan_crusade
+		icon = GFX_goal_generic_secret_weapon
+		cost = 6.8
+		prerequisite = {
+			focus = ORD_holy_superiority
+		}
+		available = {
+			has_government = theocrat
+		}
+		x = 2
+		y = 3
+		ai_will_do = {
+			factor = 15
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ORD_religious_zeal_idea
+				add_idea = ORD_holy_crusade_idea
+			}
+			add_war_support = 0.10
+		}
+	}
+	
+	focus = {#Divine Right
+		id = ORD_divine_right
+		icon = GFX_focus_generic_strike_at_democracy2
+		cost = 15
+		prerequisite = {
+			focus = ORD_puritan_crusade
+		}
+		available = {
+			has_government = theocrat
+		}
+		x = 2
+		y = 4
+		ai_will_do = {
+			factor = 15
+		}
+		completion_reward = {
+			set_country_flag = ORD_divine_right_flag
+			add_political_power = 50
+			add_stability = 0.15
+			add_war_support = 0.10
+			hidden_effect = {
+				set_country_flag = ORD_unlock_wars
+			}
+		}
+	}
+	
+###RECLAIM RTHAUIAUR PATH ###
+
+	focus = { # Deal With Rthauiaur Path
+		id = ORD_reassert_eastern_claims
+		icon = GFX_goal_generic_position_armies
+		cost = 10
+		available = {
+			OR = {
+				has_country_flag = ORD_fight_rthauiaur
+				has_country_flag = ORD_unlock_wars
+			}
+		}
+		x = 10
+		y = 0
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			custom_effect_tooltip = ordoria_claims
+			hidden_effect = {
+				add_state_claim = 128
+				add_state_claim = 143
+				add_state_claim = 145
+				add_state_claim = 137
+				add_state_claim = 135
+				add_state_claim = 144
+				add_state_claim = 140
+				add_state_claim = 138
+				add_state_claim = 136
+				add_state_claim = 135
+				add_state_claim = 119
+				add_state_claim = 134
+				add_state_claim = 118
+				add_state_claim = 132
+				add_state_claim = 131
+				add_state_claim = 133
+				add_state_claim = 142
+				add_state_claim = 141
+				add_state_claim = 139
+				add_state_claim = 129
+				add_state_claim = 130
+				add_state_claim = 127
+				add_state_claim = 126
+				add_state_claim = 122
+				add_state_claim = 124
+				add_state_claim = 123
+				add_state_claim = 125
+			}
+		}
+	}
+
+	focus = { # Shadow War
+		id = ORD_shadow_war
+		icon = GFX_focus_prc_infiltration
+		cost = 6.8
+		prerequisite = {
+			focus = ORD_reassert_eastern_claims
+		}
+		available = {
+			has_country_flag = ORD_military_moderate
+		}
+		mutually_exclusive = {
+			focus = ORD_fortify_the_border
+			focus = ORD_slay_heresiarch
+		}
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 2
+				has_government = monarchy_absolute
+			}
+		}
+		x = 8
+		y = 1
+		completion_reward = {
+			RTH = {
+				country_event = rth.1
+			}
+		}
+	}
+	
+	focus = { #Intimidate Skaelinger
+		id = ORD_intimidate_skaelinger
+		icon = GFX_focus_smiling_buddha
+		cost = 6.8
+		prerequisite = {
+			focus = ORD_shadow_war
+		}
+		bypass = {
+			OR = {
+				NOT = {
+					country_exists = SKA
+				}
+				has_war_with = SKA
+				SKA = {
+					is_puppet_of = ORD
+				}
+				NOT = {
+					SKA = {
+						has_opinion_modifier = staunch_allies
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 2
+				has_government = monarchy_absolute
+			}
+		}
+		x = 8
+		y = 2
+		completion_reward = {
+			SKA = {
+				country_event = ska.1
+			}
+		}
+	}
+	
+	focus = { #Support Sympathisers
+		id = ORD_support_sympathisers
+		icon = GFX_goal_molotov_ribbentrop_pact
+		cost = 15
+		prerequisite = {
+			focus = ORD_intimidate_skaelinger
+		}
+		mutually_exclusive = {
+			focus = ORD_direct_strike
+		}
+		ai_will_do = {
+			factor = 20
+			modifier = {
+				factor = 2
+				has_government = monarchy_absolute
+			}
+		}
+		x = 7
+		y = 3
+		completion_reward = {
+			RTH = {
+				country_event = rth.2
+			}
+		}
+	}
+	
+	focus = { #Direct Strike
+		id = ORD_direct_strike
+		icon = GFX_goal_generic_territory_or_war
+		cost = 1
+		prerequisite = {
+			focus = ORD_intimidate_skaelinger
+			focus = ORD_crusade_for_quellion
+		}
+		bypass = {
+			OR = {
+				NOT = {
+					country_exists = RTH
+				}
+				has_war_with = RTH
+				RTH = {
+					is_puppet_of = ORD
+				}
+			}
+		}
+		mutually_exclusive = {
+			focus = ORD_support_sympathisers
+		}
+		ai_will_do = {
+			factor = 20
+			modifier = {
+				factor = 2
+				OR = {
+					has_government = puritan
+					has_government = theocrat
+				}
+			}
+		}
+		x = 9
+		y = 3
+		completion_reward = {
+			add_war_support = 0.15
+			declare_war_on {
+				target = RTH
+				type = annex_everything
+			}
+		}
+	}
+	
+	focus = { # Slay Heresiarch
+		id = ORD_slay_heresiarch
+		icon = GFX_focus_RAJ_lions_of_the_great_war
+		cost = 6.8
+		prerequisite = {
+			focus = ORD_reassert_eastern_claims
+		}
+		available = {
+			has_country_flag = ORD_military_theocrat
+		}
+		mutually_exclusive = {
+			focus = ORD_fortify_the_border
+			focus = ORD_shadow_war
+		}
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 2
+				has_government = theocrat
+			}
+		}
+		x = 10
+		y = 1
+		completion_reward = {
+			random_list = {
+				90 = {
+					RTH = {
+						country_event = rth.9
+					}
+				}
+				10 = {
+					RTH = {
+						country_event = rth.10
+					}
+				}
+			}
+		}
+	}
+	
+	focus = { #Crusade for Quellion
+		id = ORD_crusade_for_quellion
+		icon = GFX_goal_generic_war_with_comintern
+		cost = 1
+		prerequisite = {
+			focus = ORD_slay_heresiarch
+		}
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 2
+				OR = {
+					has_government = theocrat
+				}
+			}
+		}
+		x = 10
+		y = 2
+		completion_reward = {
+			add_timed_idea = {
+				idea = ORD_zeal
+				days = 100
+			}
+		}
+	}
+	
+	focus = { #Fortify the Border
+		id = ORD_fortify_the_border
+		icon = GFX_focus_ger_bulwark_against_bolshevism
+		cost = 20
+		prerequisite = {
+			focus = ORD_reassert_eastern_claims
+		}
+		available = {
+			has_country_flag = ORD_military_imperialist
+		}
+			
+		mutually_exclusive = {
+			focus = ORD_shadow_war
+			focus = ORD_slay_heresiarch
+		}
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 2
+				OR = {
+					has_government = puritan
+				}
+			}
+		}
+		x = 12
+		y = 1
+		completion_reward = {
+			add_war_support = 0.10
+			add_stability = 0.05
+			hidden_effect = {
+				set_country_flag = ORD_fortified_border
+			}
+			108 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = {
+						all_provinces = yes
+						limit_to_border = yes
+					}
+				}
+			}
+			94 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = {
+						all_provinces = yes
+						limit_to_border = yes
+					}
+				}
+			}
+			93 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = {
+						all_provinces = yes
+						limit_to_border = yes
+					}
+				}
+			}
+			84 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					instant_build = yes
+					province = {
+						all_provinces = yes
+						limit_to_border = yes
+					}
+				}
+			}
+			106 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province =	3168
+				}
+			}
+			107 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = {
+						all_provinces = yes
+						limit_to_border = yes
+					}
+				}
+			}
+		}
+	}
+	
+	focus = { #Restore Order
+		id = ORD_restore_order
+		icon = GFX_goal_generic_major_war
+		cost = 1
+		prerequisite = {
+			focus = ORD_fortify_the_border
+		}
+		bypass = {
+			OR = {
+				NOT = {
+					country_exists = RTH
+				}
+				has_war_with = RTH
+				RTH = {
+					is_puppet_of = ORD
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 2
+				OR = {
+					has_government = puritan
+				}
+			}
+		}
+		x = 12
+		y = 2
+		completion_reward = {
+			declare_war_on = {
+				target = RTH
+				type = annex_everything
+			}
+		}
+	}
+	
+	focus = { #Peace with Skaelinger
+		id = ORD_peace_with_skaelinger
+		icon = GFX_goal_generic_dangerous_deal
+		cost = 5
+		prerequisite = {
+				focus  = ORD_restore_order
+		}
+		mutually_exclusive = {
+			focus = ORD_end_the_stronghold
+		}
+		available = {
+				OR = {
+					NOT = {
+						country_exists = RTH
+					}
+					RTH = {
+						has_capitulated = yes
+					}
+					RTH = {
+						is_puppet_of = ORD
+					}
+				}
+		}
+		bypass = {
+			OR = {
+				NOT = {
+					country_exists = RTH
+				}
+				EOR = {
+					is_puppet_of = ORD
+				}
+			}
+			OR = {
+				NOT = {
+					country_exists = SKA
+				}
+				SKA = {
+					has_capitulated = yes
+				}
+				SKA = {
+					is_puppet_of = ORD
+				}
+				NOT = {
+					SKA = {
+						has_war_with = ORD
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 2
+				has_government = monarchy_absolute
+			}
+		}
+		x = 13
+		y = 3
+		completion_reward = {
+			SKA = {
+				country_event = ska.2
+			}
+		}
+	}
+	
+	focus = { #End the Stronghold
+		id = ORD_end_the_stronghold
+		icon = GFX_goal_generic_political_pressure
+		cost = 5
+		prerequisite = {
+			focus = ORD_restore_order
+			focus = ORD_crusade_for_quellion
+		}
+		bypass = {
+			OR = {
+				NOT = {
+					country_exists = RTH
+				}
+				EOR = {
+					is_puppet_of = ORD
+				}
+			}
+			OR = {
+				NOT = {
+					country_exists = SKA
+				}
+				SKA = {
+					has_capitulated = yes
+				}
+				SKA = {
+					is_puppet_of = ORD
+				}
+				NOT = {
+					SKA = {
+						has_war_with = ORD
+					}
+				}
+			}
+		}
+		mutually_exclusive = {
+			focus = ORD_peace_with_skaelinger
+		}
+		available = {
+				OR = {
+					NOT = {
+						country_exists = RTH
+					}
+					RTH = {
+						has_capitulated = yes
+					}
+					RTH = {
+						is_puppet_of = ORD
+					}
+				}
+		}
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 2
+				OR = {
+					has_government = puritan
+					has_government = theocrat
+				}
+			}
+		}
+		x = 11
+		y = 3
+		completion_reward = {
+			add_war_support = 0.10
+			add_stability = 0.05
+			add_timed_idea = {
+				idea = ORD_death_to_dwarves_idea
+				days = 100
+			}
+		}
+	}
+	
+	focus = { #Re-Establish Dominance
+		id = ORD_dominance
+		icon = GFX_goal_anti_comintern_pact
+		cost = 15
+		prerequisite = {
+				focus = ORD_support_sympathisers
+				focus = ORD_direct_strike
+				focus = ORD_peace_with_skaelinger
+				focus = ORD_end_the_stronghold
+		}
+		available = {
+			NOT = {
+				ORD = {
+					has_war = yes
+				}
+				RTH = {
+					has_civil_war = yes
+				}
+			}
+			OR = {
+				RTH = {
+					OR = {
+						is_puppet_of = ORD
+						has_government = puritan
+					}
+				}
+				AND = {
+					RTH = {
+						exists = no
+					}
+					EOR = {
+						exists = yes
+					}
+				}
+				AND = {
+					RTH = {
+						exists = no
+					}
+					owns_state = 118
+					owns_state = 122
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		x = 10
+		y = 4
+		completion_reward = {
+			country_event = {
+				id = ord.29
+				days = 1
+			}
+		}
+	}
+	
+	focus = { #Direct Rule from Istaroth
+		id = ORD_direct_rule
+		icon = GFX_focus_ORD_direct_rule
+		cost = 20
+		prerequisite = {
+			focus = ORD_dominance
+		}
+		mutually_exclusive = {
+			focus = ORD_duchy_eastern_ordoria
+		}
+		ai_will_do = {
+			factor = 25
+		}
+		available = {
+			ORD = {	
+				has_country_flag =	ORD_directly_rule_east
+			}
+			OR = {
+				RTH = {
+					OR = {
+						is_puppet_of = ORD
+						has_government = puritan
+					}
+				}
+				AND = {
+					RTH = {
+						exists = no
+					}
+					EOR = {
+						exists = yes
+					}
+				}
+				AND = {
+					RTH = {
+						exists = no
+					}
+					owns_state = 118
+					owns_state = 122
+				}
+			}
+		}
+		x = 11
+		y = 5
+		completion_reward = {
+			if = {
+				limit = {
+					country_exists = EOR
+				}
+				annex_country = {
+					target = EOR
+				}
+			}
+			if = {
+				limit = {
+					country_exists = RTH
+				}
+				annex_country = {
+					target = RTH
+				}
+			}
+			custom_effect_tooltip = ordoria_cores
+			hidden_effect = {
+				add_state_core = 128
+				add_state_core = 143
+				add_state_core = 145
+				add_state_core = 137
+				add_state_core = 135
+				add_state_core = 144
+				add_state_core = 140
+				add_state_core = 138
+				add_state_core = 136
+				add_state_core = 135
+				add_state_core = 119
+				add_state_core = 134
+				add_state_core = 118
+				add_state_core = 132
+				add_state_core = 131
+				add_state_core = 133
+				add_state_core = 142
+				add_state_core = 141
+				add_state_core = 139
+				add_state_core = 129
+				add_state_core = 130
+				add_state_core = 127
+				add_state_core = 126
+				add_state_core = 122
+				add_state_core = 124
+				add_state_core = 123
+				add_state_core = 125
+			}
+		}
+	}
+	
+	focus = { #Vassalize Eastern Ordoria
+		id = ORD_duchy_eastern_ordoria
+		icon = GFX_focus_ord_vassalize_rthauiaur
+		cost = 10
+		prerequisite = {
+			focus = ORD_dominance
+		}
+		mutually_exclusive = {
+			focus = ORD_direct_rule
+		}
+		available = {
+			ORD = {
+				has_country_flag =	ORD_indirectly_rule_east
+			}
+			OR = {
+				RTH = {
+					OR = {
+						is_puppet_of = ORD
+						has_government = puritan
+					}
+				}
+				AND = {
+					RTH = {
+						exists = no
+					}
+					EOR = {
+						exists = yes
+					}
+				}
+				AND = {
+					RTH = {
+						exists = no
+					}
+					owns_state = 118
+					owns_state = 122
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 25
+		}
+		x = 9
+		y = 5
+		completion_reward = {
+			if = {
+				limit = {
+					country_exists = EOR
+				}
+				puppet = EOR
+			}
+			if = {
+				limit = {
+					NOT = {
+						country_exists = EOR
+					}
+				}
+				release_puppet = EOR
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						owns_state = 190
+						owns_state = 191
+						owns_state = 148
+						owns_state = 147
+						owns_state = 120
+						owns_state = 171
+						owns_state = 189
+						owns_state = 175
+						owns_state = 184
+						owns_state = 103
+						owns_state = 104
+						owns_state = 105
+					}
+					EOR = {
+						transfer_state = 190
+						transfer_state = 191
+						transfer_state = 148
+						transfer_state = 147
+						transfer_state = 120
+						transfer_state = 171
+						transfer_state = 189
+						transfer_state = 175
+						transfer_state = 184
+						add_state_core = 190
+						add_state_core = 191
+						add_state_core = 148
+						add_state_core = 147
+						add_state_core = 120
+						add_state_core = 171
+						add_state_core = 189
+						add_state_core = 175
+						add_state_core = 184
+					}
+					hidden_effect = {
+						remove_state_core = 190
+						remove_state_core = 191
+						remove_state_core = 148
+						remove_state_core = 147
+						remove_state_core = 120
+						remove_state_core = 171
+						remove_state_core = 189
+						remove_state_core = 175
+						remove_state_core = 184
+					}
+				}
+			}
+			hidden_effect = {
+				EOR = {
+					transfer_state = 103
+					transfer_state = 104
+					transfer_state = 105
+					add_state_core = 103
+					add_state_core = 104
+					add_state_core = 105
+				}
+			}
+			hidden_effect = {
+				transfer_state = 126
+				transfer_state = 127
+				add_state_core = 126
+				add_state_core = 127
+
+			}
+			hidden_effect = {
+				every_state = {
+					limit = {
+						is_core_of = EOR
+						is_controlled_by = ROOT
+					}
+					EOR = {
+						transfer_state = PREV
+					}
+				}
+			}
+			if = {
+				limit = {
+					country_exists = RTH
+				}
+				EOR = {
+					annex_country = {
+						target = RTH
+					}
+				}
+			}
+		}
+	}
+	
+	focus = { #United Once More
+		id = ORD_united_once_more
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 6.8
+		prerequisite = {
+				focus = ORD_direct_rule
+				focus = ORD_duchy_eastern_ordoria	
+		}
+		x = 10
+		y = 6
+		ai_will_do = {
+			factor = 30
+		}
+		completion_reward = {
+			add_political_power = 150
+			remove_ideas = ORD_rthaur_rebellion
+			if =  {
+				limit = {
+					NOT = {
+						has_idea = ORD_hegemony_idea
+					}
+				}
+				add_ideas = ORD_ordoria_reunited
+			}
+			if = {
+				limit = {
+					has_idea = ORD_disrupted_industry
+				}
+				remove_ideas = ORD_disrupted_industry
+			}
+			if = {
+				limit = {
+					has_idea = ORD_industrial_recovery
+				}
+				remove_ideas = ORD_industrial_recovery
+			}
+			remove_ideas = ORD_rthaur_propaganda
+			add_popularity = {
+				ideology = republic_peasant
+				popularity = -0.35
+			}
+		}
+	}
+	
+	### CONQUEST OF LATHERIN ###
+	
+	focus = { #Oil the War Machine
+		id = ORD_wars
+		icon = GFX_focus_generic_japanese_imperial_glory
+		cost = 12
+		available = {
+			has_country_flag = ORD_unlock_wars
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		x = 17
+		y = 0
+		completion_reward = {
+			army_experience = 25
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = infantry_weapons
+			}
+		}
+	}
+	
+	focus = { #Build a Military Academy
+		id = ORD_military_academy
+		icon = GFX_focus_generic_military_academy
+		cost = 15
+		prerequisite = {
+			focus = ORD_wars
+		}
+		ai_will_do = {
+			factor = 8
+		}
+		x = 17
+		y = 1
+		completion_reward = {
+			create_corps_commander = {
+				name = "Thintharon Asrenthyne"
+				picture = ""
+				traits = {
+				brilliant_strategist
+				infantry_officer
+				infantry_leader
+				infantry_expert
+				jungle_rat
+				commando
+				}
+				skill = 3
+				attack_skill = 4
+				defense_skill = 2
+				planning_skill = 3
+				logistics_skill = 4
+			}
+			
+			create_corps_commander = {
+				name = "Loventhyn Isthere"
+				picture = ""
+				traits = {
+				inflexible_strategist
+				infantry_officer
+				infantry_leader
+				ambusher
+				jungle_rat
+				}
+				skill = 3
+				attack_skill = 2
+				defense_skill = 4
+				planning_skill = 3
+				logistics_skill = 2
+			}
+			
+			create_corps_commander = {
+				name = "Thinstorys Wacthyne"
+				picture = ""
+				traits = {
+				cavalry_officer
+				cavalry_leader
+				cavalry_expert
+				jungle_rat
+				commando
+				}
+				skill = 3
+				attack_skill = 4
+				defense_skill = 2
+				planning_skill = 4
+				logistics_skill = 3
+			}
+			
+			create_corps_commander = {
+				name = "Vincthorin Dastyre"
+				picture = ""
+				traits = {
+				jungle_rat
+				}
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+			}
+			
+			create_corps_commander = {
+				name = "Palthinyne Gothys"
+				picture = ""
+				traits = {
+				jungle_rat
+				}
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+			}
+			
+			create_corps_commander = {
+				name = "Kantissyne Lowrennis"
+				picture = ""
+				traits = {
+				jungle_rat
+				}
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+			}
+			add_research_slot = 1
+		}
+	}
+	
+	focus = { #Elven Bows
+		id = ORD_elven_bows
+		icon = GFX_focus_generic_air_defense
+		cost = 5
+		prerequisite = {
+			focus = ORD_military_academy
+		}
+		ai_will_do = {
+			factor = 6
+		}
+		x = 17
+		y = 2
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				ahead_reduction = 1
+				uses = 1
+				category = infantry_weapons
+			}
+		}
+	}
+	
+	focus = { #Export Death
+		id = ORD_export_death
+		icon = GFX_goal_generic_CAS
+		cost = 10
+		prerequisite = {
+			focus = ORD_elven_bows
+		}
+		ai_will_do = {
+			factor = 6
+		}
+		x = 17
+		y = 3
+		completion_reward = {
+			add_ideas = {
+				ORD_export_death_idea
+			}
+		}
+	}
+	
+	focus = { #Adopt Mobility
+		id = ORD_mobile_warfare
+		icon = GFX_focus_generic_combined_arms
+		cost = 10
+		prerequisite = {
+			focus = ORD_wars
+		}
+		available = {
+			has_country_flag = ORD_military_moderate
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		x = 15
+		y = 1
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.35
+				uses = 2
+				category = cat_mobile_warfare
+			}
+		}
+	}
+	
+	focus = { #Elf-Bred Horses
+		id = ORD_elven_horses
+		icon = GFX_goal_generic_cavalry
+		cost = 10
+		prerequisite = {
+			focus = ORD_mobile_warfare
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		x = 15
+		y = 2
+		completion_reward = {
+			add_ideas = {
+				ORD_elven_horses_idea
+			}
+		}
+	}
+	
+	focus = { #Elven Stealth
+		id = ORD_stealth
+		icon = GFX_focus_prc_infiltration
+		cost = 10
+		prerequisite = {
+			focus = ORD_elven_horses
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		x = 15
+		y = 3
+		completion_reward = {
+			add_ideas = {
+				ORD_stealth_idea
+			}
+		}
+	}
+	
+	focus = { #Adopt Resolve
+		id = ORD_grand_battleplan
+		icon = GFX_goal_generic_fortify_city
+		cost = 10
+		prerequisite = {
+			focus = ORD_wars
+		}
+		available = {
+			OR = {
+				has_country_flag = ORD_military_imperialist
+				has_country_flag = ORD_military_theocrat
+			}
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		x = 19
+		y = 1
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.35
+				uses = 2
+				category = cat_grand_battle_plan
+			}
+		}
+	}
+	
+	focus = { # Purity is our Shield
+		id = ORD_defense
+		icon = GFX_goal_generic_small_arms
+		cost = 10
+		prerequisite = {
+			focus = ORD_grand_battleplan
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		x = 19
+		y = 2
+		completion_reward = {
+			add_ideas = {
+				ORD_defense_idea
+			}
+		}
+	}
+	
+	focus = { # Hatred is our Sword
+		id = ORD_offense
+		icon = GFX_goal_generic_military_sphere
+		cost = 10
+		prerequisite = {
+			focus = ORD_defense
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		x = 19
+		y = 3
+		completion_reward = {
+			add_ideas = {
+				ORD_offense_idea
+			}
+		}
+	}
+	
+	focus = { #Imperial Ambitions
+		id = ORD_imperialism
+		icon = GFX_focus_ord_evil
+		cost = 5
+		prerequisite = {
+			focus = ORD_stealth
+			focus = ORD_offense
+		}
+		prerequisite = {
+			focus = ORD_export_death
+		}
+		available = {
+			OR = {
+				has_country_flag = ORD_foreign_imperialist
+				has_country_flag = ORD_foreign_theocrat
+			}
+		}
+		mutually_exclusive = {
+			focus = ORD_long_game
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 2
+				has_government = puritan
+			}
+			modifier = {
+				factor = 2
+				has_government = theocrat
+			}
+			modifier = {
+				factor = 0.5
+				has_government = monarchy_absolute
+			}
+		}
+		x = 21
+		y = 4
+		completion_reward = {
+			add_war_support = 0.15
+			add_manpower = 7500
+		}
+	}
+	
+	focus = { #Provoke the Union
+		id = ORD_provoke_union
+		icon = GFX_focus_generic_provoke_border_clashes
+		cost = 15
+		prerequisite = {
+			focus = ORD_imperialism
+		}
+		available = {
+			has_war = no
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		x = 22
+		y = 5
+		completion_reward = {
+			random_list = {
+				33 = {
+					UNG = {
+						country_event = {
+							id = ung.7
+							days = 5
+						}
+					}
+				}
+				34 = {
+					UNG = {
+						country_event = {
+							id = ung.8
+							days = 5
+						}
+					}
+				}
+				33 = {
+					UNG = {
+						country_event = {
+							id = ung.9
+							days = 5
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	focus = { # Punish Stahlhof
+		id = ORD_punish_stahlhof
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		cost = 5
+		prerequisite = {
+			focus = ORD_provoke_union
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		bypass = {
+			owns_state = 193
+			owns_state = 194
+			owns_state = 195
+			owns_state = 198
+		}
+		x = 22
+		y = 6
+		completion_reward = {
+			country_event = {
+				id = ord.35
+				days = 3
+			}
+		}
+	}
+	
+	focus = { #Invade the South
+		id = ORD_invade_south
+		icon = GFX_focus_generic_military_mission
+		cost = 1
+		prerequisite = {
+			focus = ORD_punish_stahlhof
+		}
+		available = {
+			has_war = no
+		}
+		bypass = {
+			has_war_with = UNG
+		}
+		ai_will_do = {
+			factor = 15
+			modifier = {
+				factor = 0.25
+				has_war = yes
+			}
+		}
+		x = 22
+		y = 7
+		completion_reward = {
+			declare_war_on = {
+				target = UNG
+				type = annex_everything
+			}
+			add_timed_idea = {
+				idea = ORD_slaughter_southerners_idea
+				days = 100
+			}
+			hidden_effect = {
+				set_country_flag =	ORD_southern_strategy
+			}
+		}
+	}
+	
+	focus = { #Provoke the Realm
+		id = ORD_provoke_realm
+		icon = GFX_focus_generic_provoke_border_clashes
+		cost = 15
+		prerequisite = {
+			focus = ORD_imperialism
+		}
+		available = {
+			has_war = no
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 2
+				has_government = monarchy_absolute
+			}
+		}
+		x = 20
+		y = 5
+		completion_reward = {
+			random_list = {
+				33 = {
+					GMR = {
+						country_event = {
+							id = gmr.7
+							days = 5
+						}
+					}
+				}
+				34 = {
+					GMR = {
+						country_event = {
+							id = gmr.8
+							days = 5
+						}
+					}
+				}
+				33 = {
+					GMR = {
+						country_event = {
+							id = gmr.9
+							days = 5
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	focus = { #Seize Sothane
+		id = ORD_seize_sothane
+		icon = GFX_goal_generic_territory_or_war
+		cost = 5
+		prerequisite = {
+			focus = ORD_provoke_realm
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		x = 20
+		y = 6
+		completion_reward = {
+			transfer_state = 18
+			add_state_core = 18
+			if = {
+				limit = {
+					country_exists = GMR
+				}
+				GMR = {
+					country_event = {
+						id = gmr.4
+						days = 7
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					country_exists = KRT
+				}
+				KRT = {
+					country_event = {
+						id = krt.1
+						days = 7
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					country_exists = NPC
+				}
+				NPC = {
+					country_event = {
+						id = npc.6
+						days = 7
+					}
+				}
+			}
+		}
+	}
+	
+	focus = { # Invade the North
+		id = ORD_invade_north
+		icon = GFX_focus_ord_invade_north
+		cost = 1
+		prerequisite = {
+			focus = ORD_seize_sothane
+		}
+		available = {
+			has_war = no
+		}
+		bypass = {
+			has_war_with = GMR
+		}
+		ai_will_do = {
+			factor = 15
+			modifier = {
+				factor = 0.25
+				has_war = yes
+			}
+		}
+		x = 20
+		y = 7
+		completion_reward = {
+			declare_war_on = {
+				target = GMR
+				type = annex_everything
+			}
+			add_timed_idea = {
+				idea = ORD_raze_realm_idea
+				days = 100
+			}
+			hidden_effect = {
+				set_country_flag =	ORD_northern_strategy
+			}
+		}
+	}
+	
+	focus = { # Secure an Overseas Beachhead
+		id = ORD_secure_beachhead
+		icon = GFX_focus_generic_navy_battleship2
+		cost = 1
+		prerequisite = {
+			focus = ORD_invade_north
+		}
+		prerequisite = {
+			focus = ORD_invade_south
+		}
+		available = {
+			OR = {
+				AND = {
+					owns_state = 1
+					owns_state = 233
+				}
+				AND = {
+					GMR = {
+						is_puppet_of = ORD
+					}
+					UNG = {
+						is_puppet_of = ORD
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		x = 21
+		y = 8
+		completion_reward = {
+			custom_effect_tooltip = WIP_not_done_note
+			navy_experience = 25
+		}
+	}
+	
+	focus = { #The Long Game
+		id = ORD_long_game
+		icon = GFX_goal_generic_army_doctrines
+		cost = 5
+		prerequisite = {
+			focus = ORD_stealth
+			focus = ORD_offense
+		}
+		prerequisite = {
+			focus = ORD_export_death
+		}
+		mutually_exclusive = {
+			focus = ORD_imperialism
+		}
+		available = {
+			has_country_flag = ORD_foreign_moderate
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		x = 17
+		y = 4
+		completion_reward = {
+			add_stability = 0.15
+			add_political_power = 150
+		}
+	}
+	
+	focus = { #Destabilize the South
+		id = ORD_destabilize_south
+		icon = GFX_focus_ord_shatter_union
+		cost = 10
+		prerequisite = {
+			focus = ORD_long_game
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		x = 18
+		y = 5
+		completion_reward = {
+			UNG = {
+				country_event = {
+					id = ung.10
+					days = 1
+				}
+			}
+		}
+	}
+	
+	focus = { #The Stahlhof Gambit
+		id = ORD_stahlhof_gambit
+		icon = GFX_focus_generic_gamble
+		cost = 10
+		prerequisite = {
+			focus = ORD_destabilize_south
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		x = 18
+		y = 6
+		completion_reward = {
+			country_event = {
+				id = ord.38
+				days = 1
+			}
+		}
+	}
+	
+	focus = { #Divde the Princes
+		id = ORD_divide_princes
+		icon = GFX_focus_generic_shatter
+		cost = 15
+		prerequisite = {
+			focus = ORD_stahlhof_gambit
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		x = 18
+		y = 7
+		completion_reward = {
+			custom_effect_tooltip = ordoria_divide_princes
+			hidden_effect = {
+				UNG = {
+					country_event = {
+						id = ung.11
+						days = 1
+					}
+				}
+			}
+			set_country_flag = ORD_union_shattered
+		}
+	}
+	
+	focus = { #Shatter the Union
+		id = ORD_shatter_union
+		icon = GFX_goal_generic_major_war
+		cost = 10
+		prerequisite = {
+			focus = ORD_divide_princes
+		}
+		ai_will_do = {
+			factor = 15
+		}
+		x = 18
+		y = 8
+		completion_reward = {
+			custom_effect_tooltip = ordoria_final_push
+			hidden_effect = {
+				if = {
+					limit = {
+						STA = {
+							has_country_flag = STA_defect
+						}
+					}
+					puppet = STA
+				}
+			}
+			hidden_effect = {
+				HLZ = {
+					declare_war_on = {
+						target = NOC
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = SVT
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = SPW
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = TEI
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = NRK
+						type = annex_everything
+					}
+					if = {
+						limit = {
+							STA = {
+								has_country_flag = STA_independent
+							}
+						}
+						declare_war_on = {
+							target = STA
+							type = annex_everything
+						}
+					}
+					declare_war_on = {
+						target = FAU
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = SNF
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = ARK
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = WIS
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = WSZ
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = FTH
+						type = annex_everything
+					}
+				}
+				NOC = {
+					declare_war_on = {
+						target = SVT
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = SPW
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = TEI
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = NRK
+						type = annex_everything
+					}
+					if = {
+						limit = {
+							STA = {
+								has_country_flag = STA_independent
+							}
+						}
+						declare_war_on = {
+							target = STA
+							type = annex_everything
+						}
+					}
+					declare_war_on = {
+						target = FAU
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = SNF
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = ARK
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = WIS
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = WSZ
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = FTH
+						type = annex_everything
+					}
+				}
+				SVT = {
+					declare_war_on = {
+						target = SPW
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = TEI
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = NRK
+						type = annex_everything
+					}
+					if = {
+						limit = {
+							STA = {
+								has_country_flag = STA_independent
+							}
+						}
+						declare_war_on = {
+							target = STA
+							type = annex_everything
+						}
+					}
+					declare_war_on = {
+						target = FAU
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = SNF
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = ARK
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = WIS
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = WSZ
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = FTH
+						type = annex_everything
+					}
+				}
+				SPW = {
+					declare_war_on = {
+						target = TEI
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = NRK
+						type = annex_everything
+					}
+					if = {
+						limit = {
+							STA = {
+								has_country_flag = STA_independent
+							}
+						}
+						declare_war_on = {
+							target = STA
+							type = annex_everything
+						}
+					}
+					declare_war_on = {
+						target = FAU
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = SNF
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = ARK
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = WIS
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = WSZ
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = FTH
+						type = annex_everything
+					}
+				}
+				TEI = {
+					declare_war_on = {
+						target = NRK
+						type = annex_everything
+					}
+					if = {
+						limit = {
+							STA = {
+								has_country_flag = STA_independent
+							}
+						}
+						declare_war_on = {
+							target = STA
+							type = annex_everything
+						}
+					}
+					declare_war_on = {
+						target = FAU
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = SNF
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = ARK
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = WIS
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = WSZ
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = FTH
+						type = annex_everything
+					}
+				}
+				NRK = {
+					if = {
+						limit = {
+							STA = {
+								has_country_flag = STA_independent
+							}
+						}
+						declare_war_on = {
+							target = STA
+							type = annex_everything
+						}
+					}
+					declare_war_on = {
+						target = FAU
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = SNF
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = ARK
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = WIS
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = WSZ
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = FTH
+						type = annex_everything
+					}
+				}
+				if = {
+					limit = {
+						STA = {
+							has_country_flag = STA_independent
+						}
+					}
+					STA = {
+						declare_war_on = {
+							target = FAU
+							type = annex_everything
+						}
+						declare_war_on = {
+							target = SNF
+							type = annex_everything
+						}
+						declare_war_on = {
+							target = ARK
+							type = annex_everything
+						}
+						declare_war_on = {
+							target = WIS
+							type = annex_everything
+						}
+						declare_war_on = {
+							target = WSZ
+							type = annex_everything
+						}
+						declare_war_on = {
+							target = FTH
+							type = annex_everything
+						}
+					}
+				}
+				FAU = {
+					declare_war_on = {
+						target = SNF
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = ARK
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = WIS
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = WSZ
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = FTH
+						type = annex_everything
+					}
+				}
+				SNF = {
+					declare_war_on = {
+						target = ARK
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = WIS
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = WSZ
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = FTH
+						type = annex_everything
+					}
+				}
+				ARK = {
+					declare_war_on = {
+						target = WIS
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = WSZ
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = FTH
+						type = annex_everything
+					}
+				}
+				WIS = {
+					declare_war_on = {
+						target = WSZ
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = FTH
+						type = annex_everything
+					}
+				}
+				WSZ = {
+					declare_war_on = {
+						target = FTH
+						type = annex_everything
+					}
+				}
+				create_wargoal = {
+				type = annex_everything
+				target = HLZ
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = NOC
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = SVT
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = SPW
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = TEI
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = SNF
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = NRK
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = ARK
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = FAU
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = WIS
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = WSZ
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = FTH
+				}
+				if = {
+					limit = {
+						STA = {
+							has_country_flag = STA_independent
+						}
+					}
+					create_wargoal = {
+						type = annex_everything
+						target = STA
+					}
+				}
+			}
+			hidden_effect = {
+				set_country_flag =	ORD_southern_strategy
+			}
+		}
+	}
+	
+	focus = { #Destabilize the North
+		id = ORD_destabilize_north
+		icon = GFX_focus_ord_shatter_realm
+		cost = 10
+		prerequisite = {
+			focus = ORD_long_game
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		x = 15
+		y = 5
+		completion_reward = {
+			GMR = {
+				country_event = {
+					id = gmr.10
+					days = 1
+				}
+			}
+		}
+	}
+	
+	focus = { #Support the Separatists
+		id = ORD_support_separatists
+		icon = GFX_focus_gmr_separatists
+		cost = 10
+		prerequisite = {
+			focus = ORD_destabilize_north
+		}
+		mutually_exclusive = {
+			focus = ORD_support_rebels
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		x = 14
+		y = 6
+		completion_reward = {
+			GMR = {
+				country_event = {
+				id = gmr.11
+				days = 1
+				}
+			}
+		}
+	}
+	
+	focus = { #Direct Intervention
+		id = ORD_direct_intervention
+		icon = GFX_focus_gmr_direct_intervention
+		cost = 3
+		prerequisite = {
+			focus = ORD_support_separatists
+		}
+		bypass = {
+			NOT = {
+				country_exists = GMR
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		x = 14
+		y = 7
+		completion_reward = {
+			declare_war_on = {
+				target = GMR
+				type = annex_everything
+			}
+			set_country_flag = ORD_gmr_intervention
+		}
+	}
+	
+	focus = { #Support the Rebels
+		id = ORD_support_rebels
+		icon = GFX_focus_gmr_rebels
+		cost = 15
+		prerequisite = {
+			focus = ORD_destabilize_north
+		}
+		mutually_exclusive = {
+			focus = ORD_support_separatists
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		x = 16
+		y = 6
+		completion_reward = {
+			GMR = {
+				country_event = {
+					id = gmr.43
+				}
+			}
+		}
+	}
+	
+	focus = { #Support Stoutfellow's Coup
+		id = ORD_support_stoufellow
+		icon = GFX_focus_gmr_stoutfellow
+		cost = 8
+		prerequisite = {
+			focus = ORD_support_rebels
+		}
+		bypass = {
+			GMR = {
+				has_country_flag = GMR_dominance_restored
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		x = 16
+		y = 7
+		completion_reward = {
+			NPC = {
+				country_event = {
+					id = npc.2
+					days = 1
+				}
+			}
+		}
+	}
+	
+	focus = { #Sweep up the Remains
+		id = ORD_sweep_remains
+		icon = GFX_focus_RAJ_indian_gurkhas
+		cost = 5
+		prerequisite = {
+			focus = ORD_direct_intervention
+			focus = ORD_support_stoufellow
+		}
+		ai_will_do = {
+			factor = 15
+		}
+		x = 15
+		y = 8
+		completion_reward = {
+			if = {
+				limit = {
+					country_exists = GMR
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = GMR
+				}
+			}
+			
+			if = {
+				limit = {
+					country_exists = NPC
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = NPC
+				}
+			}
+			
+			if = {
+				limit = {
+					country_exists = IRT
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = IRT
+				}
+			}
+			
+			if = {
+				limit = {
+					country_exists = FEL
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = FEL
+				}
+			}
+			
+			if = {
+				limit = {
+					country_exists = TRI
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = TRI
+				}
+			}
+			
+			if = {
+				limit = {
+					country_exists = KRT
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = KRT
+				}
+			}
+			
+			if = {
+				limit = {
+					country_exists = NAS
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = NAS
+				}
+			}
+			
+			if = {
+				limit = {
+					country_exists = NAV
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = NAV
+				}
+			}
+			
+			if = {
+				limit = {
+					country_exists = KAL
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = KAL
+				}
+			}
+		}
+	}
+	
+	focus = { #Ordorian Hegemony
+		id = ORD_hegemony
+		icon = GFX_focus_ORD_hegemony
+		cost = 15
+		prerequisite = {
+			focus = ORD_shatter_union
+			focus = ORD_secure_beachhead
+			focus = ORD_sweep_remains
+		}
+		available = {
+			AND = {
+				OR = {
+					owns_state = 1
+					GMR = {
+						is_puppet_of = ORD
+					}
+					NPC = {
+						is_puppet_of = ORD
+					}
+					IRT = {
+						is_puppet_of = ORD
+					}
+				}
+				OR = {
+					owns_state = 233
+					UNG = {
+						is_puppet_of = ORD
+					}
+					FAU = {
+						is_puppet_of = ORD
+					}
+				}
+				OR = {
+					owns_state = 118
+					EOR = {
+						is_puppet_of = ORD
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 25
+		}
+		x = 18
+		y = 9
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = ORD_ordoria_reunited
+				}
+				swap_ideas = {
+					remove_idea = ORD_ordoria_reunited
+					add_idea = ORD_hegemony_idea
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_idea = ORD_ordoria_reunited
+					}
+				}
+				add_ideas = ORD_hegemony_idea
+			}
+			add_stability = 0.15
+			add_war_support = 0.1
+			add_political_power = 150
+		}
+	}
+	
+	### INDUSTRY ###
+	
+	focus = {#Compensate for our Lost Industry
+		id = ORD_compensate_industry
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10
+		ai_will_do = {
+			factor = 8
+		}
+		available = {
+			has_country_flag = ORD_autumn_debate_done
+		}
+		x = 10
+		y = 7
+		completion_reward = {
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 2
+				
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+				}
+			}
+			
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+		}
+	}
+	
+	focus = {#Foreign Labour
+		id = ORD_foreign_labour
+		icon = GFX_focus_generic_economic_agreement
+		cost = 5
+		prerequisite = {
+			focus = ORD_compensate_industry
+		}
+		available = {
+			has_country_flag = ORD_domestic_moderate
+		}
+		mutually_exclusive = {
+			focus = ORD_enslave_vermin
+			focus = ORD_elven_labour
+		}
+		ai_will_do = {
+			factor = 6
+		}
+		x = 8
+		y = 8
+		completion_reward = {
+			custom_effect_tooltip = ORD_tolerance_warning
+			set_country_flag = ORD_unlock_tolerance_events
+			add_ideas = ORD_foreign_labour_idea
+			swap_ideas = {
+				remove_idea = ORD_disrupted_industry
+				add_idea = ORD_industrial_recovery
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 2
+
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+				}
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+		}
+	}
+	
+	focus ={#Right Tool for the Job
+		id = ORD_right_tool
+		icon = GFX_goal_generic_production2
+		cost = 12
+		prerequisite = {
+			focus = ORD_foreign_labour
+		}
+		ai_will_do = {
+			factor = 6
+		}
+		x = 8
+		y = 9
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ORD_foreign_labour_idea
+				add_idea = ORD_economic_castes
+			}
+		}
+	}
+	
+	focus = {#Limited Trade
+		id = ORD_limited_trade
+		icon = GFX_goal_generic_positive_trade_relations
+		cost = 5
+		prerequisite = {
+			focus = ORD_right_tool
+		}
+		ai_will_do = {
+			factor = 6
+		}
+		x = 8
+		y = 10
+		completion_reward = {
+			custom_effect_tooltip = ORD_allow_trade_tt
+			hidden_effect = {
+				set_country_flag = ORD_allow_trade
+			}
+			96 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			100 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+			85 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			89 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			84 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {#Enslave Vermin
+		id = ORD_enslave_vermin
+		icon = GFX_goal_tfv_saf_support_ossebrandwag
+		cost = 15
+		prerequisite = {
+			focus = ORD_compensate_industry
+		}
+		ai_will_do = {
+			factor = 6
+		}
+		available = {
+			has_country_flag = ORD_domestic_imperialist
+		}
+		mutually_exclusive = {
+			focus = ORD_foreign_labour
+			focus = ORD_elven_labour
+		}
+		x = 10
+		y = 8
+		completion_reward = {
+			custom_effect_tooltip = ORD_enslavement_warning
+			set_country_flag = ORD_unlock_slave_events
+			add_ideas = ORD_slavery
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 2
+
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+				}
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+				}
+			}
+		}
+	}
+	
+	focus = {#Free Purebloods
+		id = ORD_free_purebloods
+		icon = GFX_focus_generic_slavery
+		cost = 8
+		prerequisite = {
+			focus = ORD_enslave_vermin
+		}
+		ai_will_do = {
+			factor = 6
+		}
+		x = 10
+		y = 9
+		completion_reward = {
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 2
+
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+				}
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 2
+
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+				}
+			}
+		}
+	}
+	
+	focus = {#Industrialization Programs
+		id = ORD_industrialization_programs
+		icon = GFX_goal_generic_production
+		cost = 15
+		prerequisite = {
+			focus = ORD_free_purebloods
+		}
+		ai_will_do = {
+			factor = 8
+		}
+		x = 10
+		y = 10
+		completion_reward = {	
+			swap_ideas = {
+				remove_idea = ORD_slavery
+				add_idea = ORD_industrialized
+			}
+			swap_ideas = {
+					remove_idea = ORD_disrupted_industry
+					add_idea = ORD_industrial_recovery
+			}
+		}
+	}
+	
+	focus = {#Recovered Industry
+		id = ORD_recovered_industry
+		icon = GFX_focus_generic_industry_3
+		cost = 20
+		prerequisite = {
+			focus = ORD_limited_trade
+			focus = ORD_industrialization_programs
+		}
+		ai_will_do = {
+			factor = 12
+		}
+		x = 8
+		y = 11
+		completion_reward = {
+			if = {
+				limit = {
+					OR = {
+						has_idea = ORD_disrupted_industry
+						has_idea = ORD_industrial_recovery
+					}
+				}
+				remove_ideas = ORD_industrial_recovery
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 2
+
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+				}
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 2
+
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+				}
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+				}
+			}
+		}
+	}
+	
+	focus = { #Elven Labour
+		id = ORD_elven_labour
+		icon = GFX_goal_generic_construct_civilian
+		cost = 17
+		prerequisite  {
+			focus = ORD_compensate_industry
+		}
+		mutually_exclusive = {
+			focus = ORD_foreign_labour
+			focus = ORD_enslave_vermin
+		}
+		available = {
+			has_country_flag = ORD_domestic_theocrat
+		}
+		ai_will_do = {
+			factor = 7
+		}
+		x = 12
+		y = 8
+		completion_reward = {
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 4
+
+				add_building_construction = {
+					type = industrial_complex
+					level = 4
+				}
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 3
+
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+				}
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 2
+
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+				}
+			}
+		}
+	}
+	
+	focus = {#Elven Wits
+		id = ORD_elven_wits
+		icon = GFX_focus_ord_elven_wit
+		cost = 17
+		prerequisite = {
+			focus = ORD_elven_labour
+		}
+		ai_will_do = {
+			factor = 7
+		}
+		x = 12
+		y = 9
+		completion_reward = {
+			add_ideas = ORD_elven_wits_idea
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+				}
+			}
+		}
+	}
+	
+	focus = {#Elven Might
+		id = ORD_elven_might
+		icon = GFX_focus_ord_elven_might
+		cost = 10
+		ai_will_do = {
+			factor = 6
+		}
+		prerequisite = {
+			focus = ORD_elven_wits
+		}
+		x = 12
+		y = 10
+		completion_reward = {
+			add_ideas = ORD_elven_might_idea
+		}
+	}
+	
+	focus = {#Militarized Economy
+		id = ORD_militarized_economy
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 15
+		ai_will_do = {
+			factor = 12
+		}
+		prerequisite = {
+			focus = ORD_elven_might
+		}
+		x = 12
+		y = 11
+		completion_reward = {
+			custom_effect_tooltip = ORD_austerity_warning
+			set_country_flag = ORD_unlock_austerity_events
+			swap_ideas = {
+				remove_idea = ORD_disrupted_industry
+				add_idea = ORD_militarized_economy_idea
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 3
+
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+				}
+			}
+		}
+	}
+	
+	focus = {#Varinthian University
+		id = ORD_university_varinthia
+		icon = GFX_focus_ord_science
+		cost = 10
+		ai_will_do = {
+			factor = 18
+		}
+		available = {
+			has_country_flag = ORD_autumn_debate_done
+		}
+		prerequisite = {
+			focus = ORD_recovered_industry
+			focus = ORD_militarized_economy
+		}
+		x = 10
+		y = 12
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	
+	### DOMESTIC FOREIGNERS ###
+	
+	focus = {#Future of Foreigners
+		id = ORD_future_of_foreigners
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 1
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+			has_country_flag = ORD_autumn_debate_done
+		}
+		x = 28
+		y = 0
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+	
+
+	focus = {#Second Class Citizenry
+		id = ORD_second_class_citizenry
+		icon = GFX_goal_generic_improve_relations
+		cost = 8
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+			has_country_flag = ORD_domestic_moderate
+		}
+		prerequisite = {
+			focus = ORD_future_of_foreigners
+		}
+		mutually_exclusive = {
+			focus = ORD_deverminize_cities
+			focus = ORD_create_inquisition
+		}
+		x = 24
+		y = 1
+		completion_reward = {
+			custom_effect_tooltip = ORD_political_diversity_tt
+			hidden_effect = {
+				add_popularity = {
+					ideology = monarchy_absolute
+					popularity = 0.15
+				}
+				add_popularity = {
+					ideology = republic_merchant
+					popularity = 0.07
+				}
+				add_popularity = {
+					ideology = republic_aristocrat
+					popularity = 0.02
+				}
+				add_popularity = {
+					ideology = monarchy_constitutional
+					popularity = 0.04
+				}
+				add_popularity = {
+					ideology = republic_peasant
+					popularity = 0.01
+				}
+			}
+			add_political_power = 75
+			add_stability = 0.05
+		}
+	}
+	
+	focus = {#Ensure Loyalty
+		id = ORD_ensure_loyalty
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 15
+		ai_will_do = {
+			factor = 6
+		}
+		prerequisite = {
+			focus = ORD_second_class_citizenry
+		}
+		x = 24
+		y = 2
+		completion_reward = {
+			add_ideas = ORD_loyal_minorities
+		}
+	}
+	
+	focus = {#Promote Hofmeyer
+		id = ORD_promote_hofmeyer
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		cost = 5
+		ai_will_do = {
+			factor = 7
+		}
+		available = {
+			has_country_flag = ORD_hofmeyer_promoted
+		}
+		prerequisite = {
+			focus = ORD_ensure_loyalty
+		}
+		x = 23
+		y = 3
+		mutually_exclusive = {
+			focus = ORD_fuck_hofmeyer
+		}
+		completion_reward = {
+			112 = {
+				add_extra_state_shared_building_slots = 2
+				
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+				
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+				}
+				
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+			}
+		}
+	}
+	
+	focus = {#Fuck Hofmeyer
+		id = ORD_fuck_hofmeyer
+		icon = GFX_goal_generic_demand_territory
+		cost = 5
+		ai_will_do = {
+			factor = 7
+		}
+		available = {
+			has_country_flag = ORD_hofmeyer_fucked
+		}
+		prerequisite = {
+			focus = ORD_ensure_loyalty
+		}
+		x = 25
+		y = 3
+		mutually_exclusive = {
+			focus = ORD_promote_hofmeyer
+		}
+		completion_reward = {
+			add_political_power = 75
+			add_stability = 0.1
+			add_war_support = 0.05
+		}
+	}
+	
+	focus = {#Segregation
+		id = ORD_segregated_society
+		icon = GFX_focus_ord_moderate_society
+		cost = 10
+		ai_will_do = {
+			factor = 5
+		}
+		prerequisite = {
+			focus = ORD_promote_hofmeyer
+			focus = ORD_fuck_hofmeyer
+		}
+		x = 24
+		y = 4
+		completion_reward = {
+			add_stability = 0.35
+		}
+	}
+	
+	focus = {#Deverminize Cities
+		id = ORD_deverminize_cities
+		icon = GFX_focus_ord_evil2
+		cost = 15
+		ai_will_do = {
+			factor = 7
+		}
+		available = {
+			has_country_flag = ORD_domestic_imperialist
+		}
+		prerequisite = {
+			focus = ORD_future_of_foreigners
+		}
+		x = 28
+		y = 1
+		mutually_exclusive = {
+			focus = ORD_second_class_citizenry
+			focus = ORD_create_inquisition
+		}
+		completion_reward = {
+			
+			hidden_effect = {
+				84 = {
+					add_manpower = -487
+				}
+				
+				85 = {
+					add_manpower = -1192
+				}
+				
+				111 = {
+					add_manpower = -185
+				}
+				
+				112 = {
+					add_manpower = -2841
+				}
+			}
+			
+			add_war_support = 0.05
+			add_political_power = 125
+			add_stability = -0.15
+		}
+	}
+	
+	focus = {#Puritan Propaganda
+		id = ORD_puritan_propaganda
+		icon = GFX_goal_generic_national_unity_red
+		cost = 10
+		ai_will_do = {
+			factor = 6
+		}
+		prerequisite = {
+			focus = ORD_deverminize_cities
+		}
+		x = 28
+		y = 2
+		completion_reward = {
+			add_ideas = ORD_puritanism_propagandized
+		}
+	}
+	
+	focus = {#Acquit the Five
+		id = ORD_trial_acquit
+		icon = GFX_focus_rom_royal_dictatorship
+		cost = 5
+		ai_will_do = {
+			factor = 6
+		}
+		available = {
+			has_country_flag = ORD_five_acquitted
+		}
+		prerequisite = {
+			focus = ORD_puritan_propaganda
+		}
+		x = 29
+		y = 3
+		mutually_exclusive = {
+			focus = ORD_trial_guilty
+		}
+		completion_reward = {
+			add_stability = 0.15
+			add_political_power = -75
+		}
+	}
+	
+	focus = {#Stab the Five
+		id = ORD_trial_guilty
+		icon = GFX_focus_rom_abdicate
+		cost = 5
+		ai_will_do = {
+			factor = 6
+		}
+		available = {
+			has_country_flag = ORD_five_guilty
+		}
+		prerequisite = {
+			focus = ORD_puritan_propaganda
+		}
+		x = 27
+		y = 3
+		mutually_exclusive = {
+			focus = ORD_trial_acquit
+		}
+		completion_reward = {
+			add_war_support = 0.1
+		}
+	}
+	
+	focus = {#Purity
+		id = ORD_pure_society
+		icon = GFX_focus_ord_traditionalist_society
+		cost = 10
+		ai_will_do = {
+			factor = 5
+		}
+		prerequisite = {
+			focus = ORD_trial_acquit
+			focus = ORD_trial_guilty
+		}
+		x = 28
+		y = 4
+		completion_reward = {
+			add_stability = 0.15
+			add_war_support = 0.15
+		}
+	}
+	
+	focus = {#Nobody expects the Ordorian Inquisition
+		id = ORD_create_inquisition
+		icon = GFX_focus_generic_self_management
+		cost = 12
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+			has_country_flag = ORD_domestic_theocrat
+		}
+		prerequisite = {
+			focus = ORD_future_of_foreigners
+		}
+		x = 32
+		y = 1
+		mutually_exclusive = {
+			focus = ORD_second_class_citizenry
+			focus = ORD_deverminize_cities
+		}
+		completion_reward = {
+			add_ideas = ORD_inquisition
+		}
+	}
+	
+	focus = { #Hunt Heretics
+		id = ORD_hunt_heretics
+		icon = GFX_goal_generic_political_pressure
+		cost = 10
+		ai_will_do = {
+			factor = 5
+		}
+		prerequisite = {
+			focus = ORD_create_inquisition
+		}
+		x = 32
+		y = 2
+		completion_reward = {
+			add_stability = 0.05
+			add_popularity = {
+				ideology = theocrat
+				popularity = 0.2
+			}
+		}
+	}
+	
+	focus = { #Tolerate the Moderates
+		id = ORD_conclave_tolerate 
+		icon = GFX_goal_generic_neutrality_focus
+		cost = 5
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+			has_country_flag = ORD_moderates_tolerated
+		}
+		prerequisite = {
+			focus = ORD_hunt_heretics
+		}
+		x = 31
+		y = 3
+		mutually_exclusive = {
+			focus = ORD_conclave_heretical
+		}
+		completion_reward = {
+			add_stability = 0.15
+		}
+	}
+	
+	focus = { #Brand the Moderates Heretical
+		id = ORD_conclave_heretical 
+		icon = GFX_goal_generic_neutrality_focus
+		cost = 5
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+			has_country_flag = ORD_moderates_heretical
+		}
+		prerequisite = {
+			focus = ORD_hunt_heretics
+		}
+		x = 33
+		y = 3
+		mutually_exclusive = {
+			focus = ORD_conclave_tolerate
+		}
+		completion_reward = {
+			add_political_power = 150
+			add_popularity = {
+				ideology = monarchy_absolute
+				popularity = -0.5
+			}
+		}
+	}
+	
+	focus = {#Holy
+		id = ORD_holy_society
+		icon = GFX_focus_ord_faithful_society
+		cost = 10
+		ai_will_do = {
+			factor = 5
+		}
+		prerequisite = {
+			focus = ORD_conclave_tolerate
+			focus = ORD_conclave_heretical
+		}
+		x = 32
+		y = 4
+		completion_reward = {
+			add_war_support = 0.35
+		}
+	}
+	
+	### NAVY ###
+	
+	focus = {#Expand Ythelmare
+		id = ORD_expand_shipyards
+		icon = GFX_goal_generic_construct_naval_dockyard
+		cost = 10
+		ai_will_do = {
+			factor = 4
+		}
+		available = {
+			has_country_flag = ORD_autumn_debate_done
+		}
+		x = 28
+		y = 5
+		completion_reward = {
+			112 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = dockyard
+					level = 4
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {#More Shipyards
+		id = ORD_more_navy
+		icon = GFX_goal_generic_navy_battleship
+		cost = 11
+		ai_will_do = {
+			factor = 4
+		}
+		available = {
+			OR = {
+				has_country_flag = ORD_military_moderate
+				has_country_flag = ORD_military_theocrat
+			}
+		}
+		mutually_exclusive = {
+			focus = ORD_sponsor_privateers
+		}
+		prerequisite = {
+			focus = ORD_expand_shipyards
+		}
+		x = 27
+		y = 6
+		completion_reward = {
+			98 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			86 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {#More Ports
+		id = ORD_more_port
+		icon = GFX_goal_generic_navy_cruiser
+		cost = 8
+		ai_will_do = {
+			factor = 4
+		}
+		prerequisite = {
+			focus = ORD_more_navy
+		}
+		x = 27
+		y = 8
+		completion_reward = {
+			112 = {
+				add_building_construction = {
+					type = naval_base
+					level = 2
+					instant_build = yes
+					province = 363
+				}
+			}
+			98 = {
+				add_building_construction = {
+					type = naval_base
+					level = 3
+					instant_build = yes
+					province = 2540
+				}
+			}
+			97 = {
+				add_building_construction = {
+					type = naval_base
+					level = 4
+					instant_build = yes
+					province = 7542
+				}
+			}
+		}
+	}
+	
+	focus = {#Port Forts
+		id = ORD_safe_port
+		icon = GFX_focus_generic_coastal_fort
+		cost = 5
+		ai_will_do = {
+			factor = 4
+		}
+		prerequisite = {
+			focus = ORD_more_port
+		}
+		x = 27
+		y = 9
+		completion_reward = {
+			112 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 4
+					instant_build = yes
+					province = 363
+				}
+			}
+			98 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 3
+					instant_build = yes
+					province = 2540
+				}
+			}
+			97 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 3
+					instant_build = yes
+					province = 7542
+				}
+			}
+		}
+	}
+	
+	focus = {#Privateers
+		id = ORD_sponsor_privateers
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		cost = 4
+		ai_will_do = {
+			factor = 4
+		}
+		available = {
+			has_country_flag = ORD_military_imperialist
+		}
+		mutually_exclusive = {
+			focus = ORD_more_navy
+		}
+		prerequisite = {
+			focus = ORD_expand_shipyards
+		}
+		x = 29
+		y = 6
+		completion_reward = {
+			custom_effect_tooltip = ORD_privateers_tt
+			hidden_effect = {
+				set_country_flag = ORD_jolly_roger #Get it? It's a flag. Haha. Ha.
+			}
+		}
+	}
+	
+	focus = {#Coast Raids
+		id = ORD_coast_raids
+		icon = GFX_focus_RAJ_indian_gentlemen_offcers
+		cost = 7
+		ai_will_do = {
+			factor = 4
+		}
+		prerequisite = {
+			focus = ORD_sponsor_privateers
+		}
+		x = 29
+		y = 8
+		completion_reward = {
+			add_ideas = ORD_coast_raids_idea
+			navy_experience = 10
+		}
+	}
+	
+	focus = {#Port Raids
+		id = ORD_raid_port
+		icon = GFX_goal_generic_amphibious_assault
+		cost = 9
+		ai_will_do = {
+			factor = 4
+		}
+		prerequisite = {
+			focus = ORD_coast_raids
+		}
+		x = 29
+		y = 9
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ORD_coast_raids_idea
+				add_idea = ORD_port_raids_idea
+			}
+			navy_experience = 15
+		}
+	}
+	
+	focus = {#Fleet in Being
+		id = ORD_big_fleet
+		icon = GFX_focus_generic_navy_battleship2
+		cost = 13
+		ai_will_do = {
+			factor = 4
+		}
+		available = {
+			OR = {
+				has_country_flag = ORD_military_moderate
+				has_country_flag = ORD_military_theocrat
+			}
+		}
+		mutually_exclusive = {
+			focus = ORD_raiding_fleet
+		}
+		prerequisite = {
+			focus = ORD_expand_shipyards
+		}
+		
+		x = 25
+		y = 7
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.35
+				uses = 2
+				category = cat_fleet_in_being
+			}
+		}
+	}
+	
+	focus = {#Blockade Trade
+		id = ORD_blockade_ships
+		icon = GFX_goal_generic_occupy_states_coastal
+		cost = 5
+		ai_will_do = {
+			factor = 4
+		}
+		prerequisite = {
+			focus = ORD_big_fleet
+		}
+		x = 25
+		y = 8
+		completion_reward = {
+			UNG = {
+				remove_ideas = UNG_trade_realm
+			}
+			GMR = {
+				remove_ideas = GMR_trade_union #this should make the Rosites angry. haha.
+			}
+		}
+	}
+	
+	focus = {#Trade Interdiction
+		id = ORD_raiding_fleet
+		icon = GFX_goal_generic_navy_submarine
+		cost = 9
+		ai_will_do = {
+			factor = 4
+		}
+		available = {
+			has_country_flag = ORD_military_imperialist
+		}
+		mutually_exclusive = {
+			focus = ORD_big_fleet
+		}
+		prerequisite = {
+			focus = ORD_expand_shipyards
+		}
+		x = 31
+		y = 7
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.35
+				uses = 2
+				category = cat_trade_interdiction
+			}
+		}
+	}
+	
+	focus = {#Harass Trade
+		id = ORD_sink_ships
+		icon = GFX_goal_generic_navy_anti_submarine
+		cost = 14
+		ai_will_do = {
+			factor = 4
+		}
+		prerequisite = {
+			focus = ORD_raiding_fleet
+		}
+		x = 31
+		y = 8
+		completion_reward = {
+			custom_effect_tooltip = ORD_trade_harassment_tt
+			UNG = {
+				set_country_flag = UNG_trade_harassment
+			}
+			GMR = {
+				set_country_flag = GMR_trade_harassment
+			}
+		}
+	}
+}
