@@ -1,0 +1,93 @@
+Current to-do list:
+	Fix navy
+	Fix 2nd Rthaur Revolution CTD
+
+Future ideas:
+
+	Ordoria:
+		Vuid has pro-Rthaur sentiments?
+
+	General: 
+		Make Aristocrats or something a resource required to produce Heavy Knights.
+
+To do:
+# - Priorities
+? - Not realistic in any timeframe with current resources
+~ - Maybe, might be postponed or scrapped
+/ - Partially Done
+@ - Done
+$ - Put on hold indefinitely
+
+This Release - Empire of Purity:
+
+#@RTH Civil War OOBs
+
+#@ORD Independent for Ythelmare Pact
+#@Add timed 'Death to Dwarves' idea to 'End the Stronghold' (Bugs out NF Tree to add unfinished timed ideas.)
+@National spirits
+@Finish Ordorian Focus tree
+$RTH OOB when released by SKA?
+$ORD Civil War OOBs
+
+Next Release - Actually Playable Edition:
+	#Probably Bug Fixes
+	#/Balance States
+	#/Balance OOBs
+	#Implement Resources
+	#@Annexation Events
+	#/Finish Strategic Regions
+	
+Unplanned Future Release Packs:
+
+Ancestral Mountains:
+	#Implement Bergialer
+	#Implement Kurgur
+	#Bergialer Focus Tree
+	#Kurgur Focus Tree
+	#Skaelinger Focus Tree
+	Reclamation Events/Decisions
+	~Bergialer-Kurgur Border Wars
+
+War in the North:
+	#GMR Focus Tree
+	#Implement Rimatü
+	#Implement Lirothlind
+	#Rimatü Focus Tree
+	Lirothlind Focus Tree
+	~Steel Road Mechanics - Might need to postpone to IR
+
+The Union Forever:
+	#Inter-Freiprinztum Border Wars
+	#Ungerdaler Union CCW Mechanics
+	Ungerdaler Focus Trees
+	~Implement Perkavland
+	~Perkavland-Freiprinzer Border Wars
+	~Centralization mechanic?
+	~(Partially) Shared Freiprinztum Focus Tree	
+
+Imperium Resurgent:
+	#Implement Irinthios
+	#Irinthios Focus Tree
+	Implement Bilodya
+	~Bilodya Focus Tree
+	Implement Tlarthingia
+	~Tlarthingia Focus Tree
+	Irinthian Resurgence Events/Decisions
+	~Implement Merchant's Hand
+	~Merchant's Hand Focus Tree
+	~?Merchant's Hand Resources Trade?
+
+Bread and Roses:
+	#Rthaur Focus Tree
+	#Eastern Ordoria Focus Tree
+	#Larennis Events
+	General improvements to RadRepubs
+	Revist Ordorian tree?
+
+Misc:
+	#Implement Rest of World
+	?Tech Tree Revamp
+	?Air Unit Overhaul (Dragons, Bats, Pegasi, etc.)
+	?Naval Unit Overhaul (Frigates, Men O' War, etc.)
+	Additional Events
+	Decisions
