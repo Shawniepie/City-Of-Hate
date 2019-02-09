@@ -820,12 +820,10 @@ random_owned_state= {
 			focus = ORD_slay_heresiarch
 		}
 		ai_will_do = {
-			factor = 10
+			factor = 35
 			modifier = {
 				factor = 2
-				OR = {
-					has_government = theocrat
-				}
+				has_government = theocrat
 			}
 		}
 		x = 10
@@ -1447,6 +1445,21 @@ random_owned_state= {
 			add_popularity = {
 				ideology = republic_peasant
 				popularity = -0.35
+			}
+			if = {
+				limit = {
+					any_state = {
+						is_core_of = RTH
+					}
+				}
+				hidden_effect = {
+					all_state = {
+						limit = {
+							is_core_of = RTH
+						}
+						remove_core_of = RTH
+					}
+				}
 			}
 		}
 	}
@@ -2892,29 +2905,23 @@ random_owned_state= {
 			AND = {
 				OR = {
 					owns_state = 1
-					GMR = {
+					any_country = {
 						is_puppet_of = ORD
-					}
-					NPC = {
-						is_puppet_of = ORD
-					}
-					IRT = {
-						is_puppet_of = ORD
+						owns_state = 1
 					}
 				}
 				OR = {
 					owns_state = 233
-					UNG = {
+					any_country = {
 						is_puppet_of = ORD
-					}
-					FAU = {
-						is_puppet_of = ORD
+						owns_state = 233
 					}
 				}
 				OR = {
 					owns_state = 118
-					EOR = {
+					any_country = {
 						is_puppet_of = ORD
+						owns_state = 118
 					}
 				}
 			}
