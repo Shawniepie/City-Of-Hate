@@ -554,6 +554,10 @@ country_event = { #Conquest of Holzbrenn
 				has_country_flag = conquest_of_holzbrenn
 			}
 		}
+		NOT = {
+			tag = STA
+			has_country_flag = STA_defect
+		}
 	}
 
 	option = {# Liberate
@@ -771,6 +775,10 @@ country_event = { #Conquest of Neureik
 				has_country_flag = conquest_of_neureik
 			}
 		}
+		NOT = {
+			tag = STA
+			has_country_flag = STA_defect
+		}
 	}
 
 	option = {# Liberate
@@ -987,6 +995,10 @@ country_event = { #Conquest of Arkanisturm
 			ROOT = {
 				has_country_flag = conquest_of_arkanisturm
 			}
+		}
+		NOT = {
+			tag = STA
+			has_country_flag = STA_defect
 		}
 	}
 
@@ -1254,6 +1266,10 @@ country_event = { #Conquest of Nochwald
 				has_country_flag = conquest_of_nochwald
 			}
 		}
+		NOT = {
+			tag = STA
+			has_country_flag = STA_defect
+		}
 	}
 
 	option = {# Liberate
@@ -1470,6 +1486,10 @@ country_event = { #Conquest of Spochwald
 			ROOT = {
 				has_country_flag = conquest_of_spochwald
 			}
+		}
+		NOT = {
+			tag = STA
+			has_country_flag = STA_defect
 		}
 	}
 
@@ -1688,6 +1708,10 @@ country_event = { #Conquest of St. Vichtlas
 				has_country_flag = conquest_of_st_vichtlas
 			}
 		}
+		NOT = {
+			tag = STA
+			has_country_flag = STA_defect
+		}
 	}
 
 	option = {# Liberate
@@ -1905,6 +1929,10 @@ country_event = { #Conquest of Teigerholen
 				has_country_flag = conquest_of_teigerholen
 			}
 		}
+		NOT = {
+			tag = STA
+			has_country_flag = STA_defect
+		}
 	}
 
 	option = {# Liberate
@@ -2121,6 +2149,10 @@ country_event = { #Conquest of Schneefilde
 			ROOT = {
 				has_country_flag = conquest_of_schneefilde
 			}
+		}
+		NOT = {
+			tag = STA
+			has_country_flag = STA_defect
 		}
 	}
 
@@ -2387,6 +2419,10 @@ country_event = { #Conquest of Wistingen
 			ROOT = {
 				has_country_flag = conquest_of_wistingen
 			}
+		}
+		NOT = {
+			tag = STA
+			has_country_flag = STA_defect
 		}
 	}
 
@@ -2808,6 +2844,10 @@ country_event = { #Conquest of Fritzhafen
 				has_country_flag = conquest_of_fritzhafen
 			}
 		}
+		NOT = {
+			tag = STA
+			has_country_flag = STA_defect
+		}
 	}
 
 	option = {# Liberate
@@ -3024,6 +3064,10 @@ country_event = { #Conquest of Wertszvorde
 			ROOT = {
 				has_country_flag = conquest_of_wertszvorde
 			}
+		}
+		NOT = {
+			tag = STA
+			has_country_flag = STA_defect
 		}
 	}
 
@@ -3268,6 +3312,13 @@ country_event = { #Conquest of Ungerdal
 					has_country_flag = conquest_of_faustburg
 				}
 			}
+		}
+		233 = {
+			is_core_of = UNG
+		}
+		NOT = {
+			tag = STA
+			has_country_flag = STA_defect
 		}
 	}
 	
@@ -4594,6 +4645,10 @@ country_event = { #Conquest of Faustburg
 			ROOT = {
 				has_country_flag = conquest_of_faustburg
 			}
+		}
+		NOT = {
+			tag = STA
+			has_country_flag = STA_defect
 		}
 	}
 
