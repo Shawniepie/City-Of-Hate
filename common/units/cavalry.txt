@@ -81,6 +81,7 @@ sub_units = {
 		priority = 599
 		ai_priority = 200
 		active = yes
+		special_forces = yes
 		cavalry = yes
 
 		type = { infantry }
