@@ -124,6 +124,7 @@ ungerdaler_reunion = {
 							is_core_of = WIS
 							is_core_of = WSZ
 							is_core_of = FTH
+							is_core_of = UNG
 						}
 					}
 					UNG = {
@@ -323,6 +324,7 @@ ungerdaler_reunion = {
 							is_core_of = WIS
 							is_core_of = WSZ
 							is_core_of = FTH
+							is_core_of = UNG
 						}
 					}
 					UNG = {
@@ -523,6 +525,7 @@ set_party_name = {
 							is_core_of = WIS
 							is_core_of = WSZ
 							is_core_of = FTH
+							is_core_of = UNG
 						}
 					}
 					UNG = {
@@ -732,6 +735,7 @@ set_party_name = {
 							is_core_of = WIS
 							is_core_of = WSZ
 							is_core_of = FTH
+							is_core_of = UNG
 						}
 					}
 					UNG = {
@@ -932,6 +936,7 @@ set_party_name = {
 							is_core_of = WIS
 							is_core_of = WSZ
 							is_core_of = FTH
+							is_core_of = UNG
 						}
 					}
 					UNG = {
@@ -1132,6 +1137,7 @@ set_party_name = {
 							is_core_of = WIS
 							is_core_of = WSZ
 							is_core_of = FTH
+							is_core_of = UNG
 						}
 					}
 					UNG = {
@@ -1332,6 +1338,7 @@ set_party_name = {
 							is_core_of = WIS
 							is_core_of = WSZ
 							is_core_of = FTH
+							is_core_of = UNG
 						}
 					}
 					UNG = {
@@ -1532,6 +1539,7 @@ set_party_name = {
 							is_core_of = WIS
 							is_core_of = WSZ
 							is_core_of = FTH
+							is_core_of = UNG
 						}
 					}
 					UNG = {
@@ -1764,6 +1772,7 @@ set_party_name = {
 							is_core_of = WIS
 							is_core_of = WSZ
 							is_core_of = FTH
+							is_core_of = UNG
 						}
 					}
 					UNG = {
@@ -1964,6 +1973,7 @@ set_party_name = {
 							is_core_of = WIS
 							is_core_of = WSZ
 							is_core_of = FTH
+							is_core_of = UNG
 						}
 					}
 					UNG = {
@@ -2116,6 +2126,7 @@ set_party_name = {
 							is_core_of = WIS
 							is_core_of = WSZ
 							is_core_of = FTH
+							is_core_of = UNG
 						}
 					}
 					UNG = {
@@ -2316,6 +2327,7 @@ set_party_name = {
 							is_core_of = WIS
 							is_core_of = WSZ
 							is_core_of = FTH
+							is_core_of = UNG
 						}
 					}
 					UNG = {
@@ -2516,6 +2528,7 @@ set_party_name = {
 							is_core_of = WIS
 							is_core_of = WSZ
 							is_core_of = FTH
+							is_core_of = UNG
 						}
 					}
 					UNG = {
@@ -2716,6 +2729,7 @@ set_party_name = {
 							is_core_of = WIS
 							is_core_of = WSZ
 							is_core_of = FTH
+							is_core_of = UNG
 						}
 					}
 					UNG = {
