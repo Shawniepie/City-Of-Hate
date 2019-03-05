@@ -1,0 +1,133 @@
+### GRAND MASTER'S REALM FOCUS TREE ###
+
+focus_tree = {
+	id = realm_focus
+	country = {
+		factor = 0
+	#	modifier = {
+	#		add = 10
+	#		tag = GMR
+	#	}
+	}
+
+	#focus = { #
+	#	id = 
+	#	icon = GFX_
+	#	cost = 
+	#	prerequisite = {
+	#		focus = 
+	#	}
+	#	available = {
+	#		
+	#	}
+	#	mutually_exclusive = {
+	#		focus = 
+	#	}
+	#	bypass = {
+	#		
+	#	}
+	#	ai_will_do = {
+	#		factor = 
+	#	}
+	#	x = 
+	#	y = 
+	#	completion_reward = {
+	#		
+	#	}
+	#}
+	
+	
+### RELIGIOUS DISPUTES PATH ###
+
+	focus = { #Religious Disputes
+		id = GMR_religious_dispute
+		icon = GFX_goal_generic_neutrality_focus
+		cost = 3
+		available = {
+			has_country_flag = GMR_juridity_arthenist
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		x = 2
+		y = 0
+		completion_reward = {
+			country_event = {
+				id = gmr.47
+				days = 1
+			}
+		}
+	}
+	
+	focus = { #Sothrist
+		id = GMR_eokgite_orthodoxy
+		icon = GFX_goal_generic_political_pressure
+		cost = 1
+		prerequisite = {
+			focus = GMR_religious_dispute
+		}
+		available = {
+			has_country_flag = GMR_sothrist
+		}
+		mutually_exclusive = {
+			focus = GMR_arthenism_triumphant
+			focus = GMR_embrace_lorthoris
+		}
+		ai_will_do = {
+			factor = 6
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = { #Arthenist
+		id = GMR_arthenism_triumphant
+		icon = GFX_focus_hun_elect_a_king
+		cost = 1
+		prerequisite = {
+			focus = GMR_religious_dispute
+		}
+		available = {
+			has_country_flag = GMR_arthenist
+		}
+		mutually_exclusive = {
+			focus = GMR_eokgite_orthodoxy
+			focus = GMR_embrace_lorthoris
+		}
+		ai_will_do = {
+			factor = 6
+		}
+		x = 2
+		y = 1
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = { #Lorthorist
+		id = GMR_embrace_lorthoris
+		icon = GFX_goal_generic_religion
+		cost = 1
+		prerequisite = {
+			focus = GMR_religious_dispute
+		}
+		available = {
+			has_country_flag = GMR_lorthorian
+		}
+		mutually_exclusive = {
+			focus = GMR_eokgite_orthodoxy
+			focus = GMR_arthenism_triumphant
+		}
+		ai_will_do = {
+			factor = 6
+		}
+		x = 4
+		y = 1
+		completion_reward = {
+			
+		}
+	}
+}

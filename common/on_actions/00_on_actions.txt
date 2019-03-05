@@ -9,44 +9,6 @@ on_actions = {
 	#
 	#}
 	
-	on_daily = {
-		every_country = {
-			limit = {
-				has_idea = 	closed_economy
-			}
-		}
-		every_country = {
-			add_opinion_modifier = {
-				modifier = closed_economy_trade_modifier
-				target = ROOT
-			}
-		}
-	}
-	
-	on_daily = {
-		every_country = {
-			limit = {
-				AND = {
-					NOT = {
-						has_idea = closed_economy
-					}
-					any_country = {
-						has_opinion_modifier = {
-							modifier = closed_economy_trade_modifier
-							target = ROOT
-						}
-					}
-				}
-			}
-		}
-		every_country = {
-			remove_opinion_modifier = {
-				modifier = closed_economy_trade_modifier
-				target = ROOT
-			}
-		}
-	}
-	
 	on_leave_faction = {
 		effect = {
 			FROM = {

@@ -1,0 +1,270 @@
+ideologies = {
+
+	monarchy_absolute = {
+	
+		types = {
+		
+			monarchy_absolute_ideology = {
+			}
+		}
+		
+		dynamic_faction_names = {
+			"FACTION_NAME_ABSOLUTIST_1"
+			"FACTION_NAME_ABSOLUTIST_2"
+			"FACTION_NAME_ABSOLUTIST_3"
+			"FACTION_NAME_ABSOLUTIST_4"
+			"FACTION_NAME_ABSOLUTIST_5"
+		}
+		
+		color = { 63 33 33 }
+		
+		war_impact_on_world_tension = 1.1			#evil!
+		faction_impact_on_world_tension = 1.1
+		
+		rules = {
+			can_force_government = no
+			can_puppet = yes
+			can_join_factions = no
+		}
+		
+		modifiers = {
+			justify_war_goal_when_in_major_war_time = -0.80
+		}
+
+		ai_fascist = yes # uses the fascist AI behaviour
+	}
+	
+	monarchy_constitutional = {
+	
+		types = {
+			
+		monarchy_constitutional_ideology = {
+			}
+			
+		}
+		
+		dynamic_faction_names = {
+			"FACTION_NAME_CONSTITUTIONAL_1"
+			"FACTION_NAME_CONSTITUTIONAL_2"
+			"FACTION_NAME_CONSTITUTIONAL_3"
+			"FACTION_NAME_CONSTITUTIONAL_4"
+			"FACTION_NAME_CONSTITUTIONAL_5"
+			"FACTION_NAME_CONSTITUTIONAL_6"
+		}
+		
+		color = { 165 28 163 }
+		
+		rules = {
+			can_force_government = yes
+			can_send_volunteers = yes
+			can_puppet = yes
+			can_lower_tension = yes
+			can_guarantee_other_ideologies = yes
+			can_join_factions = no
+		}
+		
+		war_impact_on_world_tension = -0.4
+		faction_impact_on_world_tension = -0.1
+		
+		modifiers = {
+			generate_wargoal_tension = 0.25
+			join_faction_tension = 0.40
+			lend_lease_tension = 0.15
+			send_volunteers_tension = 0.05
+			guarantee_tension = 0.10
+		}
+		
+		ai_fascist = yes # uses the fascist AI behaviour
+	}
+
+
+	republic_peasant = {
+		
+		types = {
+					
+			republic_peasant_ideology = {
+			}
+		}
+		
+		dynamic_faction_names = {
+			"FACTION_NAME_PEASANT_1"
+			"FACTION_NAME_PEASANT_2"
+			"FACTION_NAME_PEASANT_3"
+			"FACTION_NAME_PEASANT_4"
+			"FACTION_NAME_PEASANT_5"
+		}
+		
+		color = { 206 24 24 }
+		
+		war_impact_on_world_tension = 1.1	#They upset the divine right to rule!
+		faction_impact_on_world_tension = 1.1
+		
+		ai_communist = yes # uses the commie AI behaviour
+		
+		rules = {
+			can_force_government = yes
+			can_send_volunteers = yes
+			can_puppet = yes
+			can_lower_tension = yes
+			can_join_factions = no
+		}
+	}
+
+	republic_aristocrat = {
+	
+		types = {
+		
+			republic_aristocrat_ideology = {
+			}
+		}
+		
+		dynamic_faction_names = {
+			"FACTION_NAME_ARISTOCRATIC_1"
+			"FACTION_NAME_ARISTOCRATIC_2"
+			"FACTION_NAME_ARISTOCRATIC_3"
+			"FACTION_NAME_ARISTOCRATIC_4"
+			"FACTION_NAME_ARISTOCRATIC_5"
+		}
+		
+		color = { 211 158 65 }
+		
+		rules = {
+			can_force_government = yes
+			can_send_volunteers = yes
+			can_puppet = yes
+			can_lower_tension = yes
+			can_guarantee_other_ideologies = yes
+			can_join_factions = no
+		}
+		
+		war_impact_on_world_tension = -0.4
+		faction_impact_on_world_tension = -0.1
+		
+		modifiers = {
+			generate_wargoal_tension = 0.35
+			join_faction_tension = 0.50
+			lend_lease_tension = 0.25
+			send_volunteers_tension = 0.15
+			guarantee_tension = 0.20
+			justify_war_goal_when_in_major_war_time = -0.30
+		}
+		
+		modifiers = {
+
+		}
+
+		ai_fascist = yes # uses the fascist AI behaviour
+	}
+	
+	republic_merchant = {
+	
+		types = {
+		
+			republic_merchant_ideology = {
+			}
+		}
+		
+		dynamic_faction_names = {
+			"FACTION_NAME_MERCHANT_1"
+			"FACTION_NAME_MERCHANT_2"
+			"FACTION_NAME_MERCHANT_3"
+			"FACTION_NAME_MERCHANT_4"
+			"FACTION_NAME_MERCHANT_5"
+		}
+		
+		color = { 234 255 7 }
+		
+		rules = {
+			can_force_government = yes
+			can_send_volunteers = yes
+			can_puppet = yes
+			can_lower_tension = yes
+			can_guarantee_other_ideologies = yes
+			can_join_factions = no
+		}
+		
+		war_impact_on_world_tension = -0.5
+		faction_impact_on_world_tension = -0.2
+		
+		modifiers = {
+			generate_wargoal_tension = 0.45
+			join_faction_tension = 0.60
+			lend_lease_tension = 0.35
+			send_volunteers_tension = 0.25
+			guarantee_tension = 0.30
+		}
+		
+		modifiers = {
+
+		}
+
+		ai_neutral = yes # uses the neutral AI behaviour
+	}
+	
+	
+	theocrat = {
+	
+		types = {
+		
+			theocrat_ideology = {
+			}
+		}
+		
+		dynamic_faction_names = {
+			"FACTION_NAME_THEOCRATIC_1"
+			"FACTION_NAME_THEOCRATIC_2"
+			"FACTION_NAME_THEOCRATIC_3"
+			"FACTION_NAME_THEOCRATIC_4"
+			"FACTION_NAME_THEOCRATIC_5"
+		}
+		
+		color = { 255 239 243 }
+				
+		rules = {
+			can_force_government = no
+			can_puppet = no
+			can_join_factions = no
+		}
+		
+		modifiers = {
+			justify_war_goal_when_in_major_war_time = -0.85
+		}
+
+		ai_fascist = yes # uses the fascist AI behaviour
+	}
+	
+		puritan = {
+	
+		types = {
+		
+			puritan_ideology = {
+			}
+		}
+		
+		dynamic_faction_names = {
+			"FACTION_NAME_PURITAN_1"
+			"FACTION_NAME_PURITAN_2"
+			"FACTION_NAME_PURITAN_3"
+			"FACTION_NAME_PURITAN_4"
+			"FACTION_NAME_PURITAN_5"
+		}
+		
+		color = { 150 75 0 }
+		
+		war_impact_on_world_tension = 1.3			#super-evil!
+		faction_impact_on_world_tension = 1.3
+		
+		rules = {
+			can_force_government = no
+			can_puppet = no
+			can_join_factions = no
+		}
+		
+		modifiers = {
+			justify_war_goal_when_in_major_war_time = -0.85
+		}
+
+		ai_fascist = yes # uses the fascist AI behaviour
+	}
+}
+

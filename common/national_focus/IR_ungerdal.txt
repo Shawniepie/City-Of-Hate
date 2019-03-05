@@ -1,0 +1,57 @@
+### GRAND MASTER'S REALM FOCUS TREE ###
+
+focus_tree = {
+	id = realm_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = UNG
+		}
+	}
+
+	#focus = { #
+	#	id = 
+	#	icon = GFX_
+	#	cost = 
+	#	prerequisite = {
+	#		focus = 
+	#	}
+	#	available = {
+	#		
+	#	}
+	#	mutually_exclusive = {
+	#		focus = 
+	#	}
+	#	bypass = {
+	#		
+	#	}
+	#	ai_will_do = {
+	#		factor = 
+	#	}
+	#	x = 
+	#	y = 
+	#	completion_reward = {
+	#		
+	#	}
+	#}
+	
+	focus = { #Sack of Scheefilde
+		id = UNG_schneefilde_sack
+		icon = GFX_ung_focus_sack_schneefilde
+		cost = 5
+		available = {
+			has_country_flag = UNG_schneefilde_sacked
+		}
+		ai_will_do = {
+			factor = 15
+		}
+		x = 9
+		y = 0
+		completion_reward = {
+			country_event = {
+				
+			}
+		}
+	}
+}
