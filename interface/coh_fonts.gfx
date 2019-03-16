@@ -1,0 +1,10 @@
+bitmapfonts = {
+	### NORMAL
+	bitmapfont = {
+		name = "Font_COH"
+		path = "gfx/fonts/font_COH"
+		color = 0xffffffff
+
+	}
+
+}

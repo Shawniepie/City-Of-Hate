@@ -1,0 +1,231 @@
+guiTypes = {
+
+	containerWindowType = {
+		name ="frontend_background"
+		position = { x=0 y =0 }
+		size = {
+			width = 1920
+			height = 1440
+			min = { width = 100% height = 100% }
+			preserve_aspect_ratio = yes
+		}
+		Orientation = center
+		Origo = center
+		clipping = no
+
+		background = {
+			name = "Background"
+			quadTextureSprite ="GFX_frontend_bg"
+		}
+
+	}
+
+
+
+	#containerWindowType = {
+	#	name  ="frontend_alpha_stamp"
+	#	position = { x=100 y =-100  }
+	#	size = { width = 131 height = 132}
+	#	orientation = lower_left
+	#	origo = lower_left
+	#
+	#	iconType =
+	#	{
+	#		name ="frontend_alpha_stamp"
+	#		spriteType = "GFX_alpha_stamp"
+	#		position = { x= 0 y = 20 }
+	#	}
+	#
+	#}
+
+	### MAIN MENU PANEL (upperright)
+	containerWindowType = {
+		name ="mainmenu_panel_upperright"
+		position = { x=0 y =-1 }
+		show_position = { x=-256 y =-1 }
+		animation_type = decelerated
+		animation_time = 1000
+		size = { width = 256 height = 768}
+		Orientation = upper_right
+
+		iconType =
+		{
+			name ="frontend_dev_logo"
+			spriteType = "GFX_frontend_dev_logo"
+			position = { x= 15 y = 15 }
+		}
+
+		iconType =
+		{
+			name ="pdx_int_logo"
+			spriteType = "GFX_pdx_int_logo"
+			position = { x= 135 y = 15 }
+		}
+
+	}
+
+	### SINGLE PLAYER MENU
+	containerWindowType = {
+		name = "mainmenu_single_player"
+		position = { x=0 y =12}
+		size = { width = 750 height = 750}
+		Orientation = CENTER
+		Origo = center
+
+
+
+		background = {
+			name = "Background"
+			quadTextureSprite ="GFX_tiled_window"
+		}
+
+		ButtonType = {
+			name = "sp_continue_button"
+			position = { x = 65 y = 328 }
+			quadTextureSprite ="GFX_main_lobby_button"
+			buttonText = "continue"
+			buttonFont = "Font_COH"
+			clicksound = click_default
+			oversound = ui_menu_over
+		}
+
+		ButtonType = {
+			name = "sp_new_button"
+			position = { x = 65 y = 188 }
+			quadTextureSprite ="GFX_main_lobby_button"
+			buttonText = "new game"
+			buttonFont = "Font_COH"
+			clicksound = click_default
+			oversound = ui_menu_over
+		}
+
+		ButtonType = {
+			name = "sp_load_button"
+			position = {  x = 65 y = 258 }
+			quadTextureSprite ="GFX_main_lobby_button"
+			buttonText = "load game"
+			buttonFont = "Font_COH"
+			clicksound = click_default
+			oversound = ui_menu_over
+		}
+
+		ButtonType = {
+			name = "sp_tutorial_button"
+			position = { x = 65 y = 468}
+			quadTextureSprite ="GFX_main_lobby_button"
+			buttonText = ""
+			buttonFont = "Font_COH"
+			clicksound = click_default
+			oversound = ui_menu_over
+		}
+
+		ButtonType = {
+			name = "sp_back_button"
+			position = { x = 65 y = 398 }
+			quadTextureSprite ="GFX_main_lobby_button"
+			buttonText = "back"
+			buttonFont = "Font_COH"
+			clicksound = click_close
+			oversound = ui_menu_over
+			shortcut = "ESCAPE"
+		}
+	}
+
+	### MAIN MENU PANEL (bottom)
+	containerWindowType = {
+		name ="mainmenu_panel_bottom"
+		position = { x = 0 y = 12}
+		size = { width = 750 height = 750}
+		Orientation = CENTER
+		Origo = center
+
+		background = {
+			name = "Background"
+			quadTextureSprite ="GFX_tiled_window"
+		}
+
+		ButtonType = {
+			name = "single_player_button"
+			position = { x = 70 y = 200 }
+			quadTextureSprite ="GFX_main_lobby_button"
+			font = "Font_COH"
+			text = "singleplayer"
+			clicksound = click_default
+			oversound = ui_menu_over
+		}
+
+		ButtonType = {
+			name = "multi_player_button"
+			position = { x = 70 y = 270}
+			quadTextureSprite ="GFX_main_lobby_button"
+			font = "Font_COH"
+			text = "multiplayer"
+			clicksound = click_default
+			oversound = ui_menu_over
+		}
+
+		instantTextBoxType = {
+
+			name ="version_label"
+			position = { x = 225 y = 630 }
+			textureFile = ""
+			font = "Font_COH"
+			borderSize = {x = 0 y = 0}
+			text = "ALPHA"
+			format = centre
+			maxWidth = 325
+			maxHeight = 20
+		}
+
+
+		ButtonType = {
+			name = "settings_button"
+			position = { x = 70 y = 340 }
+			quadTextureSprite ="GFX_main_lobby_button"
+			buttonText = "settings"
+			buttonFont = "Font_COH"
+			clicksound = click_default
+			oversound = ui_menu_over
+		}
+
+
+		ButtonType = {
+			name = "credits_button"
+			position = {  x = 70 y = 410 }
+			quadTextureSprite ="GFX_main_lobby_button"
+			buttonText = "credits"
+			buttonFont = "Font_COH"
+			clicksound = click_default
+			oversound = ui_menu_over
+		}
+
+		ButtonType = {
+			name = "nudge_button"
+			position = { x = 400 y = 480 }
+			quadTextureSprite ="GFX_main_lobby_button"
+			buttonText = "nudge"
+			buttonFont = "Font_COH"
+		}
+
+
+		ButtonType = {
+			name = "exit_button"
+			position = { x = 70 y = 480 }
+			quadTextureSprite ="GFX_main_lobby_button"
+			font = "Font_COH"
+			text = "exit"
+			clicksound = click_default
+			oversound = ui_menu_over
+
+		}
+		
+		iconType =
+		{
+			name ="logo_COH"
+			spriteType = "GFX_COH_logo"
+			position = { x= 175 y = 100 }
+		}
+
+
+	}
+}
