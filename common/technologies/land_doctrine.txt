@@ -129,11 +129,11 @@ technologies = {
 		xor={
 			armored_spearhead
 		}
-		motorized = {
+		light_cavalry = {
 			maximum_speed = 0.1
 			default_morale = 0.2
 		}
-		mechanized = {
+		heavy_cavalry = {
 			maximum_speed = 0.1
 			default_morale = 0.2
 		}
@@ -165,8 +165,8 @@ technologies = {
 		ai_research_weights = {
 			armor = 1.0
 			defensive = -2.0
-			motorized_equipment = 3.0
-			cat_mechanized_equipment = 5.0
+			light_cavalry_equipment = 3.0
+			cat_heavy_cavalry_equipment = 5.0
 		}
 	}
 	
@@ -207,11 +207,11 @@ technologies = {
 	
 	mechanised_offensive = {
 
-		motorized = {
+		light_cavalry = {
 			max_organisation = 15
 			
 		}
-		mechanized = {
+		heavy_cavalry = {
 			max_organisation = 15
 		}
 		
@@ -249,8 +249,8 @@ technologies = {
 		
 		ai_research_weights = {
 			armor = 2.0
-			motorized_equipment = 2.0
-			cat_mechanized_equipment = 2.0
+			light_cavalry_equipment = 2.0
+			cat_heavy_cavalry_equipment = 2.0
 		}
 	}
 	
@@ -296,7 +296,7 @@ technologies = {
 		ai_research_weights = {
 			armor = 16.0
 			offensive = -1.0
-			cat_mechanized_equipment = 2.0
+			cat_heavy_cavalry_equipment = 2.0
 		}
 	}
 	
@@ -337,7 +337,7 @@ technologies = {
 		ai_research_weights = {
 			armor = 2.5
 			offensive = -2.0
-			cat_mechanized_equipment = 1.5
+			cat_heavy_cavalry_equipment = 1.5
 		}
 	}
 	
@@ -353,10 +353,10 @@ technologies = {
 		
 		enable_tactic = tactic_breakthrough
 		
-		motorized = {
+		light_cavalry = {
 			max_organisation = 5
 		}
-		mechanized = {
+		heavy_cavalry = {
 			max_organisation = 5
 		}		
 
@@ -387,7 +387,7 @@ technologies = {
 		
 		ai_research_weights = {
 			armor = 2.5
-			cat_mechanized_equipment = 1.5
+			cat_heavy_cavalry_equipment = 1.5
 		}
 	}
 	
@@ -814,7 +814,7 @@ technologies = {
 		enable_tactic = tactic_overwhelming_fire
 		
 		path = {
-			leads_to_tech = sup_mechanized_offensive 
+			leads_to_tech = sup_heavy_cavalry_offensive 
 			research_cost_coeff = 1
 		}
 
@@ -889,7 +889,7 @@ technologies = {
 		enable_tactic = tactic_overwhelming_fire
 		
 		path = {
-			leads_to_tech = sup_mechanized_offensive 
+			leads_to_tech = sup_heavy_cavalry_offensive 
 			research_cost_coeff = 1
 		}
 
@@ -917,7 +917,7 @@ technologies = {
 		}
 	}
 	
-	sup_mechanized_offensive = {
+	sup_heavy_cavalry_offensive = {
 
 		category_all_armor = {
 			breakthrough = 0.10
@@ -1297,7 +1297,7 @@ technologies = {
 		
 		ai_research_weights = {
 			infantry_weapons = 1.5
-			motorized_equipment = 1.0
+			light_cavalry_equipment = 1.0
 		}
 	}
 	
@@ -1337,7 +1337,7 @@ technologies = {
 		
 		ai_research_weights = {
 			infantry_weapons = 2.5
-			motorized_equipment = 2.0
+			light_cavalry_equipment = 2.0
 		}
 	}
 	
@@ -1375,7 +1375,7 @@ technologies = {
 		
 		ai_research_weights = {
 			infantry_weapons = 1.5
-			motorized_equipment = 1.0
+			light_cavalry_equipment = 1.0
 		}
 	}
 	
@@ -1389,7 +1389,7 @@ technologies = {
 		enable_tactic = tactic_planned_attack
 		
 		path = {
-			leads_to_tech = grand_mechanized_offensive 
+			leads_to_tech = grand_heavy_cavalry_offensive 
 			research_cost_coeff = 1
 		}
 		path = {
@@ -1417,20 +1417,20 @@ technologies = {
 		
 		ai_research_weights = {
 			infantry_weapons = 1.5
-			motorized_equipment = 1.0
+			light_cavalry_equipment = 1.0
 		}
 	}
 	
-	grand_mechanized_offensive = {
+	grand_heavy_cavalry_offensive = {
 	
 		xor = {
 			infantry_offensive
 		}
 	
-		motorized = {
+		light_cavalry = {
 			max_organisation = 5
 		}
-		mechanized = {
+		heavy_cavalry = {
 			max_organisation = 5
 		}
 		
@@ -1463,8 +1463,8 @@ technologies = {
 		
 		ai_research_weights = {
 			infantry_weapons = 1.5
-			motorized_equipment = 1.0
-			cat_mechanized_equipment = 1.0
+			light_cavalry_equipment = 1.0
+			cat_heavy_cavalry_equipment = 1.0
 		}
 	}
 	
@@ -1499,8 +1499,8 @@ technologies = {
 		
 		ai_research_weights = {
 			infantry_weapons = 1.5
-			motorized_equipment = 1.0
-			cat_mechanized_equipment = 1.0
+			light_cavalry_equipment = 1.0
+			cat_heavy_cavalry_equipment = 1.0
 		}
 	}
 	
@@ -1538,7 +1538,7 @@ technologies = {
 		
 		ai_research_weights = {
 			infantry_weapons = 1.5
-			motorized_equipment = 1.0
+			light_cavalry_equipment = 1.0
 		}
 	}
 	
@@ -1576,8 +1576,8 @@ technologies = {
 		
 		ai_research_weights = {
 			infantry_weapons = 1.5
-			motorized_equipment = 1.0
-			cat_mechanized_equipment = 1.0
+			light_cavalry_equipment = 1.0
+			cat_heavy_cavalry_equipment = 1.0
 		}
 	}
 	
@@ -1611,7 +1611,7 @@ technologies = {
 		
 		ai_research_weights = {
 			infantry_weapons = 1.5
-			motorized_equipment = 1.0
+			light_cavalry_equipment = 1.0
 		}
 	}
 	
@@ -1645,14 +1645,14 @@ technologies = {
 		
 		ai_research_weights = {
 			infantry_weapons = 1.5
-			motorized_equipment = 1.0
+			light_cavalry_equipment = 1.0
 		}
 	}
 	
 	infantry_offensive = {
 	
 		xor = {
-			grand_mechanized_offensive
+			grand_heavy_cavalry_offensive
 		}
 		category_light_infantry = {
 			max_organisation = 5
@@ -1686,7 +1686,7 @@ technologies = {
 		
 		ai_research_weights = {
 			infantry_weapons = 1.5
-			motorized_equipment = 1.0
+			light_cavalry_equipment = 1.0
 		}
 	}
 	
@@ -1728,7 +1728,7 @@ technologies = {
 		
 		ai_research_weights = {
 			infantry_weapons = 1.5
-			motorized_equipment = 1.0
+			light_cavalry_equipment = 1.0
 		}
 	}
 	
@@ -1762,7 +1762,7 @@ technologies = {
 		
 		ai_research_weights = {
 			infantry_weapons = 1.5
-			motorized_equipment = 1.0
+			light_cavalry_equipment = 1.0
 		}
 	}
 	
@@ -1799,7 +1799,7 @@ technologies = {
 		
 		ai_research_weights = {
 			infantry_weapons = 1.5
-			motorized_equipment = 1.0
+			light_cavalry_equipment = 1.0
 		}
 	}
 	
@@ -1836,7 +1836,7 @@ technologies = {
 		
 		ai_research_weights = {
 			infantry_weapons = 1.5
-			motorized_equipment = 1.0
+			light_cavalry_equipment = 1.0
 		}
 	}
 	
@@ -1868,7 +1868,7 @@ technologies = {
 		
 		ai_research_weights = {
 			infantry_weapons = 1.5
-			motorized_equipment = 1.0
+			light_cavalry_equipment = 1.0
 		}
 	}
 	
@@ -2019,16 +2019,6 @@ technologies = {
 
 			modifier = {
 				factor = 0.4
-
-				OR = {
-					tag = CHI
-					tag = PRC
-					tag = XSM
-					tag = SIK
-					tag = GXC
-					tag = SHX
-					tag = YUN
-				}
 			}
 		}
 		
@@ -2112,7 +2102,7 @@ technologies = {
 
 		supply_consumption_factor = -0.10
 		
-		infantry = {
+		category_light_infantry = {
 			combat_width = -0.4
 		}
 
@@ -2161,7 +2151,7 @@ technologies = {
 		enable_tactic = tactic_breakthrough
 		
 		path = {
-			leads_to_tech = mechanized_wave
+			leads_to_tech = heavy_cavalry_wave
 			research_cost_coeff = 1
 		}
 
@@ -2188,7 +2178,7 @@ technologies = {
 		}
 	}
 	
-	mechanized_wave = {
+	heavy_cavalry_wave = {
 		category_tanks = {
 			max_organisation = 2
 		}
@@ -2197,11 +2187,11 @@ technologies = {
 			default_morale = 0.1
 		}
 		
-		mechanized = {
+		heavy_cavalry = {
 			max_organisation = 10
 			default_morale = 0.1
 		}
-		motorized = {
+		light_cavalry = {
 			max_organisation = 10
 			default_morale = 0.1
 		}		
@@ -2231,7 +2221,7 @@ technologies = {
 		
 		ai_research_weights = {
 			industry = 2.0
-			cat_mechanized_equipment = 3.0
+			cat_heavy_cavalry_equipment = 3.0
 		}
 	}
 	
@@ -2305,16 +2295,6 @@ technologies = {
 
 			modifier = {
 				factor = 0.6
-
-				OR = {
-					tag = CHI
-					tag = PRC
-					tag = XSM
-					tag = SIK
-					tag = GXC
-					tag = SHX
-					tag = YUN
-				}
 			}
 
 		}
@@ -2326,7 +2306,7 @@ technologies = {
 	
 	human_infantry_offensive = {
 
-		infantry = {
+		category_light_infantry = {
 			default_morale = 0.30
 		}
 		land_reinforce_rate = 0.05		
@@ -2401,7 +2381,7 @@ technologies = {
 
 		conscription = 0.05
 				
-		infantry = {
+		category_light_infantry = {
 			combat_width = -0.4
 		}
 
