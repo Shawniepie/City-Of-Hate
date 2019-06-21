@@ -4,6 +4,17 @@ state={
 	provinces={
 		1579 1580 3528 7409 7410 7832 7987 8255 8491 
 	}
-	manpower=0
+	state_category = large_town
+	manpower=491220
 	buildings_max_level_factor=1.000
+	history={
+		victory_points = { 1580 31 }
+		owner = TLA
+		buildings = {
+			infrastructure = 6
+			arms_factory = 3
+			industrial_complex = 1
+		}
+		add_core_of = TLA
+	}
 }

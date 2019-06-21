@@ -1,0 +1,24 @@
+state={
+	id=9
+	name="STATE_9"
+	provinces={
+		2797 2798 3217 6317 6878 7917 
+	}
+	state_category = town
+	manpower=15311
+	buildings_max_level_factor=1.000
+	
+	history={
+		owner = GMR
+		victory_points = {3217 11}
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+			dockyard = 1
+			3217  = {
+				naval_base = 1
+			}
+		}
+		add_core_of = GMR
+	}
+}

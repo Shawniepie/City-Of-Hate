@@ -3,19 +3,20 @@ spriteTypes = {
 	##################################
 	### Large images for Groups ###
 	
-	spriteType = { name = "GFX_group_infantry_icon"								textureFile = "gfx/interface/counters/divisions_large/unit_men_at_arms_icon.dds" noOfFrames = 2 }
-	spriteType = { name = "GFX_group_mobile_icon"								textureFile = "gfx/interface/counters/divisions_large/unit_heavy_cavalry_icon.dds" noOfFrames = 2 }
-	spriteType = { name = "GFX_group_armor_icon"								textureFile = "gfx/interface/counters/divisions_large/unit_medium_tank_icon.dds" noOfFrames = 2 }
+	spriteType = { name = "GFX_group_infantry_icon"										textureFile = "gfx/interface/counters/divisions_large/unit_men_at_arms_icon.dds" noOfFrames = 2 }
+	spriteType = { name = "GFX_group_mobile_icon"										textureFile = "gfx/interface/counters/divisions_large/unit_heavy_cavalry_icon.dds" noOfFrames = 2 }
+	spriteType = { name = "GFX_group_armor_icon"										textureFile = "gfx/interface/counters/divisions_large/unit_medium_tank_icon.dds" noOfFrames = 2 }
 	
 	##################################
 	### Large images for DIVISIONS ###
 
-	spriteType = { name = "GFX_unit_men_at_arms_icon_medium" 			textureFile = "gfx/interface/counters/divisions_large/unit_men_at_arms_icon.dds" noOfFrames = 2 }
-	spriteType = { name = "GFX_unit_garrison_icon_medium"				textureFile = "gfx/interface/counters/divisions_large/unit_garrison_icon.dds" noOfFrames = 2 }
-	spriteType = { name = "GFX_unit_dwarven_warriors_icon_medium"				textureFile = "gfx/interface/counters/divisions_large/unit_dwarven_warriors_icon.dds" noOfFrames = 2 }
-	spriteType = { name = "GFX_unit_light_cavalry_icon_medium"								textureFile = "gfx/interface/counters/divisions_large/unit_light_cavalry_icon.dds" noOfFrames = 2 }
-	spriteType = { name = "GFX_unit_heavy_cavalry_icon_medium"								textureFile = "gfx/interface/counters/divisions_large/unit_heavy_cavalry_icon.dds" noOfFrames = 2 }	
-	
+	spriteType = { name = "GFX_unit_men_at_arms_icon_medium"		 					textureFile = "gfx/interface/counters/divisions_large/unit_men_at_arms_icon.dds" noOfFrames = 2 }
+	spriteType = { name = "GFX_unit_garrison_icon_medium"								textureFile = "gfx/interface/counters/divisions_large/unit_garrison_icon.dds" noOfFrames = 2 }
+	spriteType = { name = "GFX_unit_dwarven_warriors_icon_medium"						textureFile = "gfx/interface/counters/divisions_large/unit_dwarven_warriors_icon.dds" noOfFrames = 2 }
+	spriteType = { name = "GFX_unit_light_cavalry_icon_medium"							textureFile = "gfx/interface/counters/divisions_large/unit_light_cavalry_icon.dds" noOfFrames = 2 }
+	spriteType = { name = "GFX_unit_heavy_cavalry_icon_medium"							textureFile = "gfx/interface/counters/divisions_large/unit_heavy_cavalry_icon.dds" noOfFrames = 2 }
+	spriteType = { name = "GFX_unit_perkav_raiders_icon_medium"							textureFile = "gfx/interface/counters/divisions_large/unit_perkav_raiders_icon.dds" noOfFrames = 2 }
+
 	spriteType = { name = "GFX_unit_modern_sp_artillery_brigade_icon_medium" 			textureFile = "gfx/interface/counters/divisions_large/unit_modern_armor_artillery_icon.dds" noOfFrames = 2 }
 	spriteType = { name = "GFX_unit_super_heavy_sp_artillery_brigade_icon_medium"		textureFile = "gfx/interface/counters/divisions_large/unit_super_heavy_armor_artillery_icon.dds" noOfFrames = 2 }
 	spriteType = { name = "GFX_unit_heavy_sp_artillery_brigade_icon_medium"				textureFile = "gfx/interface/counters/divisions_large/unit_heavy_armor_artillery_icon.dds" noOfFrames = 2 }
@@ -68,9 +69,10 @@ spriteTypes = {
 
 	spriteType = { name = "GFX_unit_men_at_arms_icon_medium_white"						textureFile = "gfx/interface/counters/divisions_small/onmap_unit_men_at_arms_icon.dds" noOfFrames = 2}
 	spriteType = { name = "GFX_unit_garrison_icon_medium_white"							textureFile = "gfx/interface/counters/divisions_small/onmap_unit_garrison_icon.dds" noOfFrames = 2}
-	spriteType = { name = "GFX_unit_dwarven_warriors_icon_medium_white"							textureFile = "gfx/interface/counters/divisions_small/onmap_unit_dwarven_warriors_icon.dds" noOfFrames = 2}
-	spriteType = { name = "GFX_unit_light_cavalry_icon_medium_white"								textureFile = "gfx/interface/counters/divisions_small/onmap_unit_light_cavalry_icon.dds" noOfFrames = 2 }
-	spriteType = { name = "GFX_unit_heavy_cavalry_icon_medium_white"								textureFile = "gfx/interface/counters/divisions_small/onmap_unit_heavy_cavalry_icon.dds" noOfFrames = 2 }	
+	spriteType = { name = "GFX_unit_dwarven_warriors_icon_medium_white"					textureFile = "gfx/interface/counters/divisions_small/onmap_unit_dwarven_warriors_icon.dds" noOfFrames = 2}
+	spriteType = { name = "GFX_unit_light_cavalry_icon_medium_white"					textureFile = "gfx/interface/counters/divisions_small/onmap_unit_light_cavalry_icon.dds" noOfFrames = 2 }
+	spriteType = { name = "GFX_unit_heavy_cavalry_icon_medium_white"					textureFile = "gfx/interface/counters/divisions_small/onmap_unit_heavy_cavalry_icon.dds" noOfFrames = 2 }	
+	spriteType = { name = "GFX_unit_perkav_raiders_icon_medium_white"					textureFile = "gfx/interface/counters/divisions_small/onmap_unit_perkav_raiders_icon.dds" noOfFrames = 2 }
 	
 	spriteType = { name = "GFX_unit_modern_armor_icon_medium_white"						textureFile = "gfx/interface/counters/divisions_small/onmap_unit_modern_armor_icon.dds" noOfFrames = 2}
 	spriteType = { name = "GFX_unit_super_heavy_armor_icon_medium_white"				textureFile = "gfx/interface/counters/divisions_small/onmap_unit_super_heavy_armor_icon.dds" noOfFrames = 2}

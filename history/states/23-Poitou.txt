@@ -1,0 +1,19 @@
+state={
+	id=23
+	name="STATE_23"
+	provinces={
+		820 821 822 823 824 825 5911 
+	}
+	state_category = rural
+	manpower=5569
+	buildings_max_level_factor=1.000
+	history={
+		owner = GMR
+		buildings = {
+			infrastructure = 4
+		}
+		add_core_of = GMR
+
+	}
+
+}

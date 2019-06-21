@@ -1,0 +1,17 @@
+state={
+	id=340
+	name="STATE_340"
+	provinces={
+		932 933 934 935 2390 5683 8172 8221 8305 
+	}
+	state_category = rural
+	manpower=2201
+	buildings_max_level_factor=1.000
+	history={
+		owner = WIS
+		buildings = {
+			infrastructure = 5	
+		}
+		add_core_of = WIS
+		}
+}

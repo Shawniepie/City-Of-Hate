@@ -1,0 +1,17 @@
+state={
+	id=278
+	name="STATE_278"
+	provinces={
+		3055 3056 4823 5154 6940 7205 8831 
+	}
+	state_category = rural
+	manpower=2201
+	buildings_max_level_factor=1.000
+	history={
+		owner = NOC
+		buildings = {
+			infrastructure = 3	
+		}
+		add_core_of = NOC
+	}
+}

@@ -1,0 +1,341 @@
+﻿	### RANDOM QUEST EVENTS ###
+
+add_namespace = random
+
+	## UNGERDALER EVENTS ##
+	
+	# MOUNTAIN EXPEDITION EVENT CHAIN #
+	
+country_event = {#Rumours of an Artifact
+	id = random.1
+	title = random.1.t
+	desc = random.1.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	fire_only_once = yes
+	
+	trigger = {
+		OR = {
+			tag = HLZ
+			tag = NOC
+			tag = SPW
+			tag = SVT
+			tag = TEI
+			tag = STA
+			tag = NRK
+			tag = UNG
+			tag = FAU
+			tag = ARK
+			tag = SNF
+			tag = WIS
+			tag = FTH
+			tag = WSZ
+		}
+		has_war = no
+	}
+	
+	mean_time_to_happen = {
+		days = 1825
+	}
+	
+	option = {#Vamos!
+		name = random.1.a
+		
+		ai_chance=  {
+			factor = 3
+		}
+		
+		add_political_power = 5
+		
+		set_country_flag = hunting_for_artifact
+	}
+	
+	option = {#We have better things to do than hunt for tales
+		name = random.1.b
+		
+		ai_chance = {
+			factor = 7
+		}
+		
+		add_stability = 0.02
+	}
+}
+
+country_event = {#Expedition Reaches the Mountains
+	id = random.2
+	title = random.2.t
+	desc = random.2.d
+	picture = GFX_report_event_china_infiltration
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_country_flag = hunting_for_artifact
+	}
+	
+	mean_time_to_happen = {
+		days = 50
+	}
+	
+	option = {#Let's go
+		name = random.2.a
+		
+		ai_chance = {
+			factor = 9
+		}
+		
+		clr_country_flag = hunting_for_artifact
+		set_country_flag = entering_mountains_artifact
+	}
+	
+	option = {#It's too dangerous
+		name = random.2.b
+		
+		ai_chance = {
+			factor = 1
+		}
+		
+		add_political_power = -10
+		clr_country_flag = hunting_for_artifact
+	}
+}
+
+country_event = {#A Guide?
+	id = random.3
+	title = random.3.t
+	desc = random.3.d
+	picture = GFX_report_event_bose
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_country_flag = entering_mountains_artifact
+	}
+	
+	mean_time_to_happen = {
+		days = 5
+	}
+	
+	option = {#Hire him
+		name = random.3.a
+		
+		ai_chance = {
+			factor = 2
+		}
+		
+		set_country_flag = hired_guide_artifact
+		clr_country_flag = entering_mountains_artifact
+		
+		hidden_effect = {
+			random_list = {
+				40 = {
+					set_country_flag = ring_artifact
+				}
+				40 = {
+					set_country_flag = sword_artifact
+				}
+				20 = {
+					set_country_flag = no_artifact
+				}
+			}
+		}
+	}
+	
+	option = {#Let's not
+		name = random.3.b
+		
+		ai_chance = {
+			factor = 1
+		}
+		
+		clr_country_flag = entering_mountains_artifact
+		
+		hidden_effect = {
+			random_list = {
+				33 = {
+					set_country_flag = ring_artifact
+				}
+				33 = {
+					set_country_flag = sword_artifact
+				}
+				34 = {
+					set_country_flag = no_artifact
+				}
+			}
+		}
+	}
+}
+
+country_event = {#Find Ring
+	id = random.4
+	title = random.4.t
+	desc = random.4.d
+	picture = GFX_report_event_indian_soldiers
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_country_flag = ring_artifact
+	}
+	
+	mean_time_to_happen = {
+		days = 14
+	}
+	
+	option = {#Yay
+		name = random.4.a
+		
+		set_country_flag = has_ring_artifact
+		clr_country_flag = ring_artifact
+		
+		hidden_effect = {
+			if = {
+				limit = {
+					has_country_flag = hired_guide_artifact
+				}
+				random_list = {
+					80 = {
+						clr_country_flag = hired_guide_artifact
+					}
+					20 = {
+						clr_country_flag = hired_guide_artifact
+						set_country_flag = guide_stole_artifact
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = {#Find Sword
+	id = random.5
+	title = random.5.t
+	desc = random.5.d
+	picture = GFX_report_event_indian_soldiers
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_country_flag = sword_artifact
+	}
+	
+	mean_time_to_happen = {
+		days = 14
+	}
+	
+	option = {#Yay
+		name = random.5.a
+		
+		set_country_flag = has_sword_artifact
+		clr_country_flag = sword_artifact
+		
+		hidden_effect = {
+			if = {
+				limit = {
+					has_country_flag = hired_guide_artifact
+				}
+				random_list = {
+					80 = {
+						clr_country_flag = hired_guide_artifact
+					}
+					20 = {
+						clr_country_flag = hired_guide_artifact
+						set_country_flag = guide_stole_artifact
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = {#Guide Steals Artifact
+	id = random.6
+	title = random.6.t
+	desc = random.6.d
+	picture = GFX_report_event_german_advisors_remain
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_country_flag = guide_stole_artifact
+	}
+	
+	option = {#Curse him
+		name = random.6.a
+		
+		clr_country_flag = guide_stole_artifact
+		if = {
+			limit = {
+				has_country_flag = has_sword_artifact
+			}
+			clr_country_flag = has_sword_artifact
+		}
+		if = {
+			limit = {
+				has_country_flag = has_ring_artifact
+			}
+			clr_country_flag = has_ring_artifact
+		}
+	}
+}
+
+country_event = {#Succesful Expedition
+	id = random.7
+	title = random.7.t
+	desc = random.7.d
+	picture = GFX_report_event_german_reichstag_gathering
+	
+	fire_only_once = yes
+	
+	trigger = {
+		OR = {
+			has_country_flag = has_sword_artifact
+			has_country_flag = has_ring_artifact
+		}
+	}
+	
+	option = {#Hurrah
+		name = random.7.a
+
+		if = {
+			limit = {
+				has_country_flag = has_sword_artifact
+			}
+			add_country_leader_trait = has_magic_sword
+			clr_country_flag = has_sword_artifact
+		}
+		if = {
+			limit = {
+				has_country_flag = has_ring_artifact
+			}
+			add_country_leader_trait = has_magic_ring
+			clr_country_flag = has_ring_artifact
+		}
+		add_stability = 0.03
+	}
+}
+
+country_event = {#Failed Expedition
+	id = random.8
+	title = random.8.t
+	desc = random.8.d
+	picture = GFX_report_event_degaulle_churchill
+	
+	fire_only_once = yes
+	
+	trigger = {
+		OR = {
+			has_country_flag = no_artifact
+			has_country_flag = guide_stole_artifact
+		}
+	}
+	
+	option = {#Curses
+		name = random.8.a
+		
+		clr_country_flag = no_artifact
+		clr_country_flag = guide_stole_artifact
+		
+		add_political_power = -25
+	}
+}

@@ -979,11 +979,11 @@ commissiaries = {
 			}
 			
 
-			228 = {
+			234 = {
 				set_state_name = "Wystine"
 			}			
 			set_province_name = {
-				id = 1101
+				id = 4641
 				name = "Wystine"
 			}
 			

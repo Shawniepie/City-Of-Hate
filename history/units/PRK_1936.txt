@@ -1,0 +1,142 @@
+﻿division_template = {
+	name = "Stráže"	
+	regiments = {
+		garrison = { x = 0 y = 0 }
+		garrison = { x = 0 y = 1 }
+		garrison = { x = 0 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Wojownicy"
+	regiments = {
+		men_at_arms = { x = 0 y = 0 }
+		men_at_arms = { x = 0 y = 1 }
+		men_at_arms = { x = 0 y = 2 }
+        men_at_arms = { x = 1 y = 0 }
+		men_at_arms = { x = 1 y = 1 }
+		men_at_arms = { x = 1 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Fosztogató"
+	regiments = {
+		perkav_raiders = { x = 0 y = 0 }
+		perkav_raiders = { x = 0 y = 1 }
+		perkav_raiders = { x = 0 y = 2 }
+        perkav_raiders = { x = 1 y = 0 }
+		perkav_raiders = { x = 1 y = 1 }
+		perkav_raiders = { x = 1 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Vozhdi"
+	regiments = {
+		heavy_cavalry = { x = 0 y = 0 }
+        heavy_cavalry = { x = 0 y = 1 }
+        heavy_cavalry = { x = 1 y = 0 }
+		heavy_cavalry = { x = 1 y = 1 }
+	}
+}
+
+units = {
+
+	division = {
+		name = "Krell's Raiders"
+		location = 7533
+		division_template = "Fosztogató"
+		start_experience_factor = 1
+	}
+	
+	division = {
+		name = "Warband of Nevetko"
+		location = 8812
+		division_template = "Fosztogató"
+		start_experience_factor = 0.5
+	}
+	
+	division = {
+		name = "Warband of Karczyk"
+		location = 3878
+		division_template = "Fosztogató"
+		start_experience_factor = 0.5
+	}
+	
+	division = {
+		name = "Warband of Lyenikova"
+		location = 6894
+		division_template = "Fosztogató"
+		start_experience_factor = 0.5
+	}
+	
+	division = {
+		name = "Warband of Vlencin"
+		location = 6140
+		division_template = "Fosztogató"
+		start_experience_factor = 0.5
+	}
+	
+	division = {
+		name = "Warband of Weltrova"
+		location = 7367
+		division_template = "Fosztogató"
+		start_experience_factor = 0.5
+	}
+	
+	division = {
+		name = "Warband of Rlavya"
+		location = 7413
+		division_template = "Fosztogató"
+		start_experience_factor = 0.5
+	}
+	
+	division = {
+		name = "Warband of Vitrczin"
+		location = 1325
+		division_template = "Fosztogató"
+		start_experience_factor = 0.5
+	}
+	
+	division = {
+		name = "Warband of Stotvic"
+		location = 5950
+		division_template = "Fosztogató"
+		start_experience_factor = 0.5
+	}
+	
+	division = {
+		name = "Warriors of Larzimcze"
+		location = 5769
+		division_template = "Wojownicy"
+		start_experience_factor = 0.25
+	}
+	
+	division = {
+		name = "Warriors of Manicze"
+		location = 2415
+		division_template = "Wojownicy"
+		start_experience_factor = 0.25
+	}
+	
+	division = {
+		name = "Warriors of Obtinsk"
+		location = 87
+		division_template = "Wojownicy"
+		start_experience_factor = 0.25
+	}
+}
+
+### STARTING PRODUCTION ###
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_0
+			creator = "PRK"
+		}
+		requested_factories = 22
+		progress = 0.31
+		efficiency = 13
+	}
+}

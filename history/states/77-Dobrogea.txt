@@ -1,0 +1,18 @@
+state={
+	id=77
+	name="STATE_77"
+	provinces={
+		3048 3049 3050 5228 5507 5614 8075 
+	}
+	state_category = rural
+	manpower=9981
+	buildings_max_level_factor=1.000
+		history={	
+		owner = ORD
+		buildings = {	
+		industrial_complex = 1
+		infrastructure = 5
+		}	
+		add_core_of = ORD
+		}
+}

@@ -4,6 +4,15 @@ state={
 	provinces={
 		212 2075 3206 3208 6563 7650 
 	}
-	manpower=0
+	state_category = rural
+	manpower=9092
 	buildings_max_level_factor=1.000
+	history={
+		owner = KUR
+		buildings = {
+			infrastructure = 4
+			arms_factory = 1
+		}
+		add_core_of = KUR
+	}
 }

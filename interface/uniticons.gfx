@@ -1,4 +1,4 @@
-spriteTypes = {	
+spriteTypes = {
 
    spriteType = {
      name = "GFX_garrison_icon_medium"
@@ -47,5 +47,16 @@ spriteTypes = {
      textureFile = "gfx/interface/counters/divisions_small/onmap_unit_dwarven_warriors_icon.dds" 
      noOfFrames = 2
    }
-
+   
+   spriteType = { 
+     name = "GFX_perkav_raiders_icon_medium"
+     textureFile = "gfx/interface/counters/divisions_large/unit_perkav_raiders_icon.dds"
+     noOfFrames = 2
+   }
+   
+   spriteType = { 
+     name = "GFX_perkav_raiders_icon_white"
+     textureFile = "gfx/interface/counters/divisions_small/onmap_unit_perkav_raiders_icon.dds" 
+     noOfFrames = 2
+   }
 }

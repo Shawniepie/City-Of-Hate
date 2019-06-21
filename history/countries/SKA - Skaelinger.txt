@@ -1,6 +1,6 @@
 ﻿capital = 146
 
-oob = "SKA_1936"
+set_oob = "SKA_1936"
 set_research_slots = 3
 
 set_technology = {
@@ -16,37 +16,31 @@ set_technology = {
 }
 
 set_politics = {
-
-	parties = {
-		monarchy_absolute= { 
-			popularity = 8
-		}
-
-		monarchy_constitutional = {
-			popularity = 70
-		}
-		
-		republic_peasant = {
-			popularity = 3
-		}
-		republic_aristocrat = {
-			popularity = 12
-		}
-		republic_merchant = {
-			popularity = 5
-		}
-		theocrat = {
-			popularity = 2
-		}
-		puritan = {
-			popularity = 0
-		}
-	}
-	
 	ruling_party = monarchy_constitutional
 	last_election = "1936.1.1"
 	election_frequency = 48
 	elections_allowed = no
+}
+
+set_popularities = {
+	monarchy_absolute = 8
+
+	monarchy_constitutional = 70
+
+	republic_peasant = 3
+
+	republic_aristocrat = 12
+
+	republic_merchant = 5
+
+	theocrat = 2
+
+	puritan = 0
+}
+
+add_ideas = {
+	dwarf_country
+	dwarven_ancestor_worship_religion
 }
 
 	give_guarantee = RTH

@@ -1,0 +1,73 @@
+plunder_schneefilde = {
+		
+	PRK_plunder_schneefilde = {
+		
+		icon = GFX_decision_generic_raid
+		
+		fire_only_once = yes
+		
+		allowed = {
+			tag = PRK
+		}
+		
+		available = {
+			NOT = {
+				has_war_with = SNF
+			}
+			NOT = {
+				SNF = {
+					is_subject_of = PRK
+				}
+			}
+			NOT = {
+				is_subject_of = UNG
+			}
+			NOT = {
+				controls_state = 224
+			}
+			divisions_in_border_state = {
+				size > 4
+				state = 638
+				border_state = 224
+			}
+			has_army_manpower = {
+				size > 19999
+			}
+		}
+
+		visible = {
+			tag = PRK
+			country_exists = SNF
+		}
+
+		ai_will_do = {
+			factor = 200
+		}
+		
+		complete_effect = {
+			SNF = {
+				country_event = {
+					id = snf.1
+					hours = 3
+				}
+			}
+			start_border_war = {
+				change_state_after_war = no
+				attacker = {
+					state = 638
+					num_provinces = 3
+					on_win = perkav_schneefilder_sack.1
+					on_lose = perkav_schneefilder_sack.2
+					on_cancel = perkav_schneefilder_sack.3
+				}
+				defender = {
+					state = 224
+					num_provinces = 3
+					on_win = schneefilde_schneefilder_sack.1
+					on_lose = schneefilde_schneefilder_sack.2
+					on_cancel = schneefilde_schneefilder_sack.3
+				}
+			}
+		}
+	}
+}

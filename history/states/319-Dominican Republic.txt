@@ -1,0 +1,17 @@
+state={
+	id=319
+	name="STATE_319"
+	provinces={
+		440 441 768 769 770 772 4595 8811 
+	}
+	state_category = pastoral
+	manpower=12914
+	buildings_max_level_factor=1.000
+	history={
+		owner = NRK
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = NRK
+		}
+}

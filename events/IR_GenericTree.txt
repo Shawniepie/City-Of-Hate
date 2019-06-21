@@ -61,7 +61,7 @@ country_event = {#Domestic Unrest
 			
 			modifier = {
 				is_puppet_of = ORD
-				factor = 0.8
+				factor = 0
 			}
 		}
 		add_stability = -0.05

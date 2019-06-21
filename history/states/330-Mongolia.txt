@@ -1,0 +1,17 @@
+state={
+	id=330
+	name="STATE_330"
+	provinces={
+		2377 2378 2380 3604 4164 6031 6032 6033 6179 7317 
+	}
+	state_category = rural
+	manpower=6872
+	buildings_max_level_factor=1.000
+	history={
+		owner = UNG
+		buildings = {
+			infrastructure = 5	
+		}
+		add_core_of = UNG
+		}
+}

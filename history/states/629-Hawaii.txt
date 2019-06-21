@@ -4,6 +4,15 @@ state={
 	provinces={
 		3181 3390 3415 3476 4457 5963 7153 
 	}
-	manpower=0
+	state_category = rural
+	manpower=1233
 	buildings_max_level_factor=1.000
+	history={
+		owner = PRK
+		buildings = {
+			infrastructure = 1
+			dockyard = 1
+		}
+		add_core_of = PRK
+	}
 }

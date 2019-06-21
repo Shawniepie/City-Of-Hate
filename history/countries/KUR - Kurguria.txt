@@ -1,0 +1,126 @@
+﻿capital = 367
+
+set_oob = "KUR_1936"
+
+
+set_technology = {
+	infantry_weapons = 1
+	tech_support = 1
+	tech_recon = 1
+}
+
+if = {
+	limit = {
+		not = { has_dlc = "Man the Guns" }
+	}
+	set_technology = {
+		early_destroyer = 1
+		transport = 1
+	}
+}
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_technology = {
+		early_ship_hull_light = 1
+		basic_battery = 1
+		basic_light_battery = 1
+		mtg_transport = 1
+	}
+}
+
+1939.1.1 = {
+}
+
+set_politics = {
+	ruling_party = monarchy_absolute
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	monarchy_absolute =67
+
+	monarchy_constitutional = 0
+
+	republic_peasant = 0
+
+	republic_aristocrat = 0
+
+	republic_merchant = 0
+
+	theocrat = 20
+
+	puritan = 13
+}
+
+add_ideas = {
+	orc_country
+	damokegol_religion
+	KUR_nomad_hunters
+}
+
+create_country_leader = {
+	name = "Hulren Gulthur"
+	desc = "politics_KUR_gulthur_desc"
+	picture = "gfx/leaders/KUR/Portrait_KUR_Gulthur.dds"
+	ideology = monarchy_constitutional_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Kuurl Morgs"
+	desc = "politics_KUR_morgs_desc"
+	picture = "gfx/leaders/KUR/Portrait_KUR_Morgs.dds"
+	ideology = republic_peasant_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Arulg Hinglur"
+	desc = "politics_KUR_hinglur_desc"
+	picture = "gfx/leaders/KUR/Portrait_KUR_Hinglur.dds"
+	ideology = puritan_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Hulren Gulthur"
+	desc = "politics_KUR_gulthur_desc"
+	picture = "gfx/leaders/KUR/Portrait_KUR_Gulthur.dds"
+	ideology = monarchy_absolute_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Lorgen Valger"
+	desc = "politics_KUR_valger_desc"
+	picture = "gfx/leaders/KUR/Portrait_KUR_Valger.dds"
+	ideology = theocrat_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Hulren Gulthur"
+	desc = "politics_KUR_gulthur_desc"
+	picture = "gfx/leaders/KUR/Portrait_KUR_Gulthur.dds"
+	ideology = republic_aristocrat_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Buugor Hisgen"
+	desc = "politics_KUR_hisgen_desc"
+	picture = "gfx/leaders/KUR/Portrait_KUR_Hisgen.dds"
+	ideology = republic_merchant_ideology
+	traits = {
+	}
+}

@@ -1,0 +1,20 @@
+state={
+	id=85
+	name="STATE_85"
+	provinces={
+		2039 2040 3431 3432 5882 
+	}
+	state_category = metropolis
+	manpower=1066921
+	buildings_max_level_factor=1.000
+		history={	
+		victory_points = { 2039 51 }
+		owner = ORD
+		buildings = {	
+		infrastructure = 7
+		arms_factory = 3
+		industrial_complex = 4
+		}	
+		add_core_of = ORD
+		}
+}

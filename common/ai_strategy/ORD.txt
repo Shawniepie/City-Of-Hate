@@ -10,6 +10,17 @@
 # protect
 # influence
 
+defend_heartlands = {
+	enable = {
+		original_tag = ORD
+	}
+	ai_strategy = {
+		type = area_priority
+		id = west_ordoria
+		value = 200
+	}
+}
+
 not_ready_for_rthaur_war = {
 	enable = {
 		original_tag = ORD

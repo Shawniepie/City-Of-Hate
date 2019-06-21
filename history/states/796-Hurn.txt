@@ -1,0 +1,17 @@
+state={
+	id=796
+	name="STATE_796"
+	provinces={
+		1918 1919 1920 1921 7383 8596 8856 
+	}
+	state_category = rural
+	manpower=58620
+	buildings_max_level_factor=1.000
+	history={
+		owner = TLA
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = TLA
+	}
+}

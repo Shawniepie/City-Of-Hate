@@ -1,6 +1,6 @@
 Current to-do list:
-	Fix navy
-	Fix 2nd Rthaur Revolution CTD
+	Add all countries + annexation events, racial idea and religions
+	The Union Forever Update
 
 Future ideas:
 
@@ -83,6 +83,12 @@ Bread and Roses:
 	#Larennis Events
 	General improvements to RadRepubs
 	Revist Ordorian tree?
+
+In the Name of the Gods
+	#Religious UI
+	#Religion Overhaul
+	#Religious Flavour Events
+	Theocracy Flavours?
 
 Misc:
 	#Implement Rest of World

@@ -1,0 +1,51 @@
+﻿division_template = {
+	name = "Perkav Raider Mercenaries"
+	is_locked = yes
+	
+	regiments = {
+		perkav_raiders = { x = 0 y = 0 }
+		perkav_raiders = { x = 0 y = 1 }
+		perkav_raiders = { x = 0 y = 2 }
+        perkav_raiders = { x = 1 y = 0 }
+		perkav_raiders = { x = 1 y = 1 }
+		perkav_raiders = { x = 1 y = 2 }
+	}
+}
+
+units = {
+
+	division = {
+		name = "Botev's Warband"
+		location = 8189
+		division_template = "Perkav Raider Mercenaries"
+		start_experience_factor = 1
+	}
+	
+	division = {
+		name = "Warriors of Stehlík"
+		location = 420 #nice
+		division_template = "Perkav Raider Mercenaries"
+		start_experience_factor = 0.5
+	}
+	
+	division = {
+		name = "Vladislavovna's Warriors"
+		location = 840
+		division_template = "Perkav Raider Mercenaries"
+		start_experience_factor = 0.5
+	}
+	
+	division = {
+		name = "Szczesny's Raiders"
+		location = 7240
+		division_template = "Perkav Raider Mercenaries"
+		start_experience_factor = 0.5
+	}
+	
+	division = {
+		name = "Raiders of Macháčková"
+		location = 842
+		division_template = "Perkav Raider Mercenaries"
+		start_experience_factor = 0.5
+	}
+}

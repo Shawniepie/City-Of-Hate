@@ -1,0 +1,871 @@
+﻿### PERKAV EVENTS
+
+add_namespace = prk
+
+country_event = { # Union offers Schneefilder Land
+	id = prk.1
+	title = prk.1.t
+	desc = prk.1.d
+	picture = report_event_pierre_laval
+	
+	is_triggered_only = yes
+	
+	option = {#Sure
+		name = prk.1.a
+		ai_chance = {
+			factor = 3
+		}
+		SNF = {
+			country_event = {
+				id = snf.2
+				days = 5
+			}
+		}
+	}
+	
+	option = {#Nah
+		name = prk.1.b
+		ai_chance = {
+			factor = 1
+		}
+		add_war_support = 0.05
+		UNG = {
+			country_event = {
+				id = ung.16
+				days = 5
+			}
+		}
+	}
+}
+
+country_event = { # Union offers Wertszer Land
+	id = prk.2
+	title = prk.2.t
+	desc = prk.2.d
+	picture = report_event_pierre_laval
+	
+	is_triggered_only = yes
+	
+	option = {#Sure
+		name = prk.2.a
+		ai_chance = {
+			factor = 3
+		}
+		WSZ = {
+			country_event = {
+				id = wsz.1
+				days = 5
+			}
+		}
+	}
+
+	option = {#Nah
+		name = prk.2.b
+		ai_chance = {
+			factor = 1
+		}
+		add_war_support = 0.05
+		UNG = {
+			country_event = {
+				id = ung.16
+				days = 5
+			}
+		}
+	}
+}
+
+country_event = {#Schneefilde Accepts
+	id = prk.3
+	title = prk.3.t
+	desc = prk.3.d
+	picture = GFX_report_event_generic_rally_3
+	
+	is_triggered_only = yes
+	
+	option = {#Yay
+		name = prk.3.a
+		PRK = {
+			transfer_state = 335
+			add_state_core = 335
+		}
+	}
+}
+
+country_event = {#Schneefilde Rejects
+	id = prk.4
+	title = prk.4.t
+	desc = prk.4.d
+	picture = GFX_report_event_poland_rejects
+	
+	is_triggered_only = yes
+	
+	option = {#Back down
+		name = prk.4.a
+		ai_chance = {
+			factor = 1
+		}
+		add_political_power = -25
+		UNG = {
+			set_country_flag = UNG_unsuccesful_territorial_appeasement
+		}
+	}
+	
+	option = {#Push Claim
+		name = prk.4.b
+		ai_chance = {
+			factor = 2
+		}
+		start_border_war = {
+			change_state_after_war = yes
+			attacker = {
+				state = 420 #nice
+				num_provinces = 4
+				on_win = prk.5
+				on_lose = prk.6
+				on_cancel = prk.6
+			}
+			defender = {
+				state = 335
+				num_provinces = 4
+				on_win = snf.3
+				on_lose = snf.4
+				on_cancel = snf.3
+			}
+		}
+	}
+}
+
+country_event = {#Victory in Barsoringer
+	id = prk.5
+	title = prk.5.t
+	desc = prk.5.d
+	picture = GFX_report_event_fascists_posing
+	
+	is_triggered_only = yes
+	
+	option = {#Glory!
+		name = prk.5.a
+		add_political_power = 35
+		PRK = {
+			transfer_state = 335
+			add_state_core = 335
+		}
+	}
+}
+
+country_event = {#Defeat in Barsoringer
+	id = prk.6
+	title = prk.6.t
+	desc = prk.6.d
+	picture = GFX_report_event_generic_army
+	
+	is_triggered_only = yes
+	
+	option = {#Damn
+		name = prk.6.a
+		add_stability = -0.05
+		UNG = {
+			set_country_flag = UNG_unsuccesful_territorial_appeasement
+		}
+	}
+}
+
+country_event = {#Wertszvorde Accepts
+	id = prk.7
+	title = prk.7.t
+	desc = prk.7.d
+	picture = GFX_report_event_generic_rally_3
+	
+	is_triggered_only = yes
+	
+	option = {#Yay
+		name = prk.7.a
+		PRK = {
+			transfer_state = 336
+			add_state_core = 336
+		}
+	}
+}
+
+country_event = {#Wertszvorde Rejects
+	id = prk.8
+	title = prk.8.t
+	desc = prk.8.d
+	picture = GFX_report_event_poland_rejects
+	
+	is_triggered_only = yes
+	
+	option = {#Back down
+		name = prk.8.a
+		ai_chance = {
+			factor = 1
+		}
+		add_political_power = -25
+		UNG = {
+			set_country_flag = UNG_unsuccesful_territorial_appeasement
+		}
+	}
+	
+	option = {#Push Claim
+		name = prk.8.b
+		ai_chance = {
+			factor = 2
+		}
+		start_border_war = {
+			change_state_after_war = yes
+			attacker = {
+				state = 420 #nice
+				num_provinces = 3
+				on_win = prk.9
+				on_lose = prk.10
+				on_cancel = prk.10
+			}
+			defender = {
+				state = 336
+				num_provinces = 4
+				on_win = wsz.3
+				on_lose = wsz.4
+				on_cancel = wsz.3
+			}
+		}
+	}
+}
+
+country_event = {#Victory in Holstohoren
+	id = prk.9
+	title = prk.9.t
+	desc = prk.9.d
+	picture = GFX_report_event_fascists_posing
+	
+	is_triggered_only = yes
+	
+	option = {#Glory!
+		name = prk.9.a
+		add_political_power = 35
+		PRK = {
+			transfer_state = 336
+			add_state_core = 336
+		}
+	}
+}
+
+country_event = {#Defeat in Holstohoren
+	id = prk.10
+	title = prk.10.t
+	desc = prk.10.d
+	picture = GFX_report_event_generic_army
+	
+	is_triggered_only = yes
+	
+	option = {#Damn
+		name = prk.10.a
+		add_stability = -0.05
+		UNG = {
+			set_country_flag = UNG_unsuccesful_territorial_appeasement
+		}
+	}
+}
+
+country_event = {#The Union Reaches Out
+	id = prk.11
+	title = prk.11.t
+	desc = prk.11.d
+	picture = GFX_report_event_royal_visit
+	
+	is_triggered_only = yes
+	
+	option = {#We will accept their aid
+		name = prk.11.a
+		custom_effect_tooltip = PRK_union_warning_tt
+		ai_chance = {
+			factor = 7
+		}
+		UNG = {
+			country_event = {
+				days = 5
+				id = ung.18
+			}
+		}
+	}
+	
+	option = {#We're good
+		name = prk.11.b
+		ai_chance = {
+			factor = 3
+		}
+		add_war_support = 0.05
+		UNG = {
+			country_event = {
+				days = 5
+				id = ung.19
+			}
+		}
+	}
+}
+
+country_event = {#The Perkav Census
+	id = prk.12
+	title = prk.12.t
+	desc = prk.12.d
+	picture = GFX_report_event_partition_of_india
+	
+	is_triggered_only = yes
+	
+	option = {#Good Stuff
+		name = prk.12.a
+		swap_ideas = {
+			remove_idea = PRK_perkav_script
+			add_idea = PRK_beginnings_literacy
+		}
+		swap_ideas = {
+			remove_idea = PRK_administrative_reform
+			add_idea = PRK_perkav_census_idea
+		}
+	}
+}
+
+country_event = {#Perkav University
+	id = prk.13
+	title = prk.13.t
+	desc = prk.13.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	is_triggered_only = yes
+	
+	option = {#Good Stuff
+		name = prk.13.a
+		remove_ideas = PRK_beginnings_literacy
+		add_research_slot = 1
+	}
+}
+
+country_event = {#Perkav Script
+	id = prk.14
+	title = prk.14.t
+	desc = prk.14.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = {#Good Stuff
+		name = prk.14.a
+		swap_ideas = {
+			remove_idea = PRK_oral_tradition
+			add_idea = PRK_perkav_script
+		}
+	}
+}
+
+country_event = {#Union Proselytizing
+	id = prk.15
+	title = prk.15.t
+	desc = prk.15.d
+	picture = GFX_report_event_soviet_purge_speech
+	
+	is_triggered_only = yes
+	
+	option = {#Let Them
+		name = prk.15.a
+		custom_effect_tooltip = PRK_proselytize_tt
+		
+		ai_chance = {
+			factor = 5
+			modifier = {
+				has_government = theocrat
+				factor = 0
+			}
+		}
+		
+		set_country_flag = PRK_union_proselytizing
+		
+	}
+	
+	option = {#No
+		name = prk.15.b
+		
+		ai_chance = {
+			factor = 3
+		}
+		
+		add_stability = 0.1
+	}
+}
+
+country_event = {#Conversion Time
+	id = prk.16
+	title = prk.16.t
+	desc = prk.16.d
+	picture = GFX_report_event_pierre_laval
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_country_flag = PRK_union_proselytizing
+	}
+	
+	mean_time_to_happen = {
+		days = 356
+	}
+	
+	option = {#Praise the Seven
+		name = prk.16.a
+		
+		clr_country_flag = PRK_union_proselytizing
+		set_country_flag = PRK_converted_to_septism
+		swap_ideas = {
+			remove_idea = krostov_religion
+			add_idea = septism_religion
+		}
+	}
+}
+
+country_event = {#Reactionary Civil War!
+	id = prk.17
+	title = prk.17.t
+	desc = prk.17.d
+	picture = GFX_report_event_perkavland_sacked
+	
+	fire_only_once = yes
+	
+	immediate = {
+		UNG = {
+			set_country_flag = UNG_perkav_rebels
+		}
+	}
+	
+	trigger = {
+		NOT = {
+			has_country_flag = PRK_rebels_stopped
+		}
+		OR = {
+			has_country_flag = PRK_converted_to_septism
+			has_country_flag = PRK_crowned_wendelin_flag
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 150
+	}
+	
+	option = {#Support Krell
+		name = prk.17.a
+		
+		ai_chance = {
+			factor = 1
+		}
+		
+		set_politics = {
+			ruling_party = monarchy_constitutional
+			elections_allowed = no	
+		}
+		
+		start_civil_war = {
+			ideology = monarchy_absolute
+			size = 0.5
+			capital = 415
+			states = {
+				415
+				421
+				622
+				626
+				627
+				625
+				414
+				620
+				619
+				639
+				642
+				643
+				646
+				416
+				637
+				638
+				640
+				644
+				643
+				646
+				645
+				644
+				641
+				638
+				637
+				647
+				648
+			}
+		}
+		
+		hidden_effect = {
+			random_other_country = {
+				limit = {
+					original_tag = PRK
+					has_government = monarchy_absolute
+				}
+				set_party_name = {
+					ideology = monarchy_absolute
+					long_name = PRK_monarchy_absolute_reactionary
+					name = PRK_monarchy_absolute_reactionary
+				}
+				set_party_name = {
+					ideology = monarchy_constitutional
+					long_name = PRK_monarchy_constitutional_reactionary
+					name = PRK_monarchy_constitutional_reactionary
+				}
+				set_country_flag = PRK_reactionaries_flag
+				
+				retire_country_leader = yes
+				
+				if = {
+					limit = {
+						has_idea = septism_religion
+					}
+					swap_ideas = {
+						remove_idea = septism_religion
+						add_idea = krostov_religion
+					}
+				}
+				
+				if = {
+					limit = {
+						has_idea = hieyrenous_patron
+					}
+					swap_ideas = {
+						remove_idea = hieyrenous_patron
+						add_idea = krostov_religion
+					}
+				}
+				
+				if = {
+					limit = {
+						has_idea = daskellin_patron
+					}
+					swap_ideas = {
+						remove_idea = daskellin_patron
+						add_idea = krostov_religion
+					}
+				}
+				
+				if = {
+					limit = {
+						has_idea = tergewelft_patron
+					}
+					swap_ideas = {
+						remove_idea = tergewelft_patron
+						add_idea = krostov_religion
+					}
+				}
+				
+				if = {
+					limit = {
+						has_idea = anzella_patron
+					}
+					swap_ideas = {
+						remove_idea = anzella_patron
+						add_idea = krostov_religion
+					}
+				}
+				
+				if = {
+					limit = {
+						has_idea = nurhelm_patron
+					}
+					swap_ideas = {
+						remove_idea = nurhelm_patron
+						add_idea = krostov_religion
+					}
+				}
+				
+				if = {
+					limit = {
+						has_idea = hutrig_patron
+					}
+					swap_ideas = {
+						remove_idea = hutrig_patron
+						add_idea = krostov_religion
+					}
+				}
+				
+				if = {
+					limit = {
+						has_idea = bitha_patron
+					}
+					swap_ideas = {
+						remove_idea = bitha_patron
+						add_idea = krostov_religion
+					}
+				}
+			}
+		}
+	}
+	
+	option = {#Support Reactionaries
+		name = prk.17.b
+		
+		ai_chance = {
+			factor = 0
+		}
+		
+		hidden_effect = {
+			PRK = {
+				set_capital = 415
+			}
+		}
+
+		start_civil_war = {
+			ideology = monarchy_constitutional
+			size = 0.5
+			capital = 413
+			states = {
+				413
+				630
+				629
+				628
+				631
+				632
+				653
+				654
+				655
+				651
+				652
+				649
+				650
+				420
+				623
+				624
+				621
+				419
+				618
+				617
+				417
+				636
+				635
+				633
+				634
+				418
+			}
+		}
+		
+		set_country_flag = PRK_reactionaries_flag
+		
+		hidden_effect = {
+			set_party_name = {
+				ideology = monarchy_absolute
+				long_name = PRK_monarchy_absolute_reactionary
+				name = PRK_monarchy_absolute_reactionary
+			}
+			set_party_name = {
+				ideology = monarchy_constitutional
+				long_name = PRK_monarchy_constitutional_reactionary
+				name = PRK_monarchy_constitutional_reactionary
+			}
+			
+			retire_country_leader = yes
+			
+			if = {
+				limit = {
+					has_idea = septism_religion
+				}
+				swap_ideas = {
+					remove_idea = septism_religion
+					add_idea = krostov_religion
+				}
+			}
+			
+			if = {
+				limit = {
+					has_idea = hieyrenous_patron
+				}
+				swap_ideas = {
+					remove_idea = hieyrenous_patron
+					add_idea = krostov_religion
+				}
+			}
+			
+			if = {
+				limit = {
+					has_idea = daskellin_patron
+				}
+				swap_ideas = {
+					remove_idea = daskellin_patron
+					add_idea = krostov_religion
+				}
+			}
+			
+			if = {
+				limit = {
+					has_idea = tergewelft_patron
+				}
+				swap_ideas = {
+					remove_idea = tergewelft_patron
+					add_idea = krostov_religion
+				}
+			}
+			
+			if = {
+				limit = {
+					has_idea = anzella_patron
+				}
+				swap_ideas = {
+					remove_idea = anzella_patron
+					add_idea = krostov_religion
+				}
+			}
+			
+			if = {
+				limit = {
+					has_idea = nurhelm_patron
+				}
+				swap_ideas = {
+					remove_idea = nurhelm_patron
+					add_idea = krostov_religion
+				}
+			}
+			
+			if = {
+				limit = {
+					has_idea = hutrig_patron
+				}
+				swap_ideas = {
+					remove_idea = hutrig_patron
+					add_idea = krostov_religion
+				}
+			}
+			
+			if = {
+				limit = {
+					has_idea = bitha_patron
+				}
+				swap_ideas = {
+					remove_idea = bitha_patron
+					add_idea = krostov_religion
+				}
+			}
+		}
+	}
+}
+
+country_event = {#Rename Krell's Hall on Victory
+	id = prk.18
+	title = prk.18.t
+	desc = prk.18.d
+	picture = GFX_report_event_perkavland_sacked
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_country_flag = PRK_reactionaries_flag
+		owns_state = 413
+	}
+	
+	mean_time_to_happen = {
+		days = 5
+	}
+	
+	option = {#Rename
+		name = prk.18.a
+		hidden_effect = {
+			set_capital = 415
+		}
+		413 = {
+			set_state_name = "Zlatko's Hall"
+		}
+		set_province_name = {
+			id = 7533
+			name = "Zlatko's Hall"
+		}
+		add_political_power = 50
+	}
+	
+	option = {#Rename and move capital
+		name = prk.18.b
+		set_capital = 413
+		413 = {
+			set_state_name = "Zlatko's Hall"
+		}
+		set_province_name = {
+			id = 7533
+			name = "Zlatko's Hall"
+		}
+		add_political_power = 50
+	}
+}
+
+country_event = {#Reformed Administration
+	id = prk.19
+	title = prk.19.t
+	desc = prk.19.d
+	picture = GFX_report_event_hol_cabinet_gerbrandy
+	
+	is_triggered_only = yes
+	
+	option = {#Good Stuff
+		name = prk.19.a
+		swap_ideas = {
+			remove_idea = PRK_tribal_nation
+			add_idea = PRK_administrative_reform
+		}
+	}
+}
+
+country_event = {#Crown Wendelin
+	id = prk.20
+	title = prk.20.t
+	desc = prk.20.d
+	picture = GFX_report_event_crowd_in_prague
+	
+	is_triggered_only = yes
+	
+	option = {#Hail to the King
+		name = prk.20.a
+		
+		set_politics = {
+			ruling_party = monarchy_constitutional
+		}
+		add_popularity = {
+			ideology = monarchy_constitutional
+			popularity = 0.1
+		}
+		remove_ideas = PRK_administrative_reform
+		add_stability = 0.15
+		set_country_flag = PRK_crowned_wendelin_flag
+	}
+}
+
+country_event = {#Freiprinztum?
+	id = prk.21
+	title = prk.21.t
+	desc = prk.21.d
+	picture = GFX_report_event_romania_parliament
+	
+	is_triggered_only = yes
+	
+	option = {#Sure
+		name = prk.21.a
+		
+		ai_chance = {
+			factor = 1
+		}
+		
+		UNG = {
+			country_event = {
+				id = ung.23
+				days = 5
+			}
+		}
+	}
+	
+	option = {#Nah
+		name = prk.21.b
+		
+		ai_chance = {
+			factor = 3
+		}
+		
+		add_political_power = 15
+		
+		UNG = {
+			country_event = {
+				id = ung.24
+			}
+		}
+	}
+}

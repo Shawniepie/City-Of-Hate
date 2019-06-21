@@ -14,20 +14,248 @@
 # contain
 # area_priority
 
-default_mountaineers_production = {
+invade_ordoria_priorities = {
 	enable = {
-		NOT = { original_tag = SKA }
-		NOT = { original_tag = PRK }
-		ai_wants_divisions > 11 #Decreasing the amount of mountaineers the AI wants
+		has_war_with = ORD
+		OR = {
+			ORD = {
+				controls_state = 85
+				controls_state = 111
+				controls_state = 112
+			}
+		}
 	}
 	abort = {
-		ai_wants_divisions < 12 #Decreasing the amount of mountaineers the AI wants
+		OR = {
+			NOT = {
+				has_war_with = ORD
+			}
+			AND = {
+				NOT = {
+					ORD = {
+						controls_state = 85
+						controls_state = 111
+						controls_state = 112
+					}
+				}
+			}
+		}
 	}
-
 	ai_strategy = {
-		type = role_ratio
-		id = mountaineers
-		value = 3
+		type = area_priority
+		id = west_ordoria
+		value = 200 #go for the heartlands
+	}
+}
+
+invade_realm_priorities = {
+	enable = {
+		has_war_with = GMR
+		OR = {
+			GMR = {
+				controls_state = 1
+				controls_state = 29
+				controls_state = 34
+				controls_state = 17
+			}
+		}
+	}
+	abort = {
+		OR = {
+			NOT = {
+				has_war_with = GMR
+			}
+			AND = {
+				NOT = {
+					GMR = {
+						controls_state = 1
+						controls_state = 29
+						controls_state = 34
+						controls_state = 17
+					}
+				}
+			}
+		}
+	}
+	ai_strategy = {
+		type = area_priority
+		id = irenthar
+		value = 180 #capital
+	}
+	ai_strategy = {
+		type = area_priority
+		id = trifersi
+		value = 200 #cut in half
+	}
+	ai_strategy = {
+		type = area_priority
+		id = cortineal
+		value = 200 #cut in half
+	}
+	ai_strategy = {
+		type = area_priority
+		id = caltireth
+		value = 170 #should have been operationally encircled by now
+	}
+}
+
+invade_union_priorities_northwest = { #Different approaches needed depending on where you strike from
+	enable = {
+		OR = {
+			original_tag = ORD
+			original_tag = RTH
+			original_tag = SKA
+			original_tag = GMR
+		}
+		has_war_with = UNG
+		OR = {
+			UNG = {
+				controls_state = 233
+				controls_state = 284
+				controls_state = 192
+				controls_state = 232
+			}
+			NRK = {
+				controls_state = 284
+			}
+			STA = {
+				controls_state = 192
+			}
+			HLZ = {
+				controls_state = 232
+			}
+		}
+	}
+	abort = {
+		OR = {
+			NOT = {
+				has_war_with = UNG
+			}
+			NOT = {
+				UNG = {
+					controls_state = 233
+				}
+			}
+		}
+	}
+	ai_strategy = {
+		type = area_priority
+		id = west_stahlhof
+		value = 200 #intitial incursion
+	}
+	ai_strategy = {
+		type = area_priority
+		id = holzbrenn
+		value = 190 #secure western front
+	}
+	ai_strategy = {
+		type = area_priority
+		id = neureik
+		value = 180 #move towards the Hochprinzessin
+	}
+	ai_strategy = {
+		type = area_priority
+		id = west_faustburg
+		value = 170 #Take the Freithron
+	}
+}
+
+invade_union_priorities_northeast = { #Different approaches needed depending on where you strike from
+	enable = {
+		original_tag = TLA
+		has_war_with = UNG
+		OR = {
+			UNG = {
+				controls_state = 233
+				controls_state = 206
+				controls_state = 234
+				controls_state = 236
+			}
+			ARK = {
+				controls_state = 206
+			}
+			WIS = {
+				controls_state = 234
+			}
+			FTH = {
+				controls_state = 236
+			}
+		}
+	}
+	abort = {
+		OR = {
+			NOT = {
+				has_war_with = UNG
+			}
+			NOT = {
+				UNG = {
+					controls_state = 233
+				}
+			}
+		}
+	}
+	ai_strategy = {
+		type = area_priority
+		id = fritzhafen
+		value = 200 #intitial incursion
+	}
+	ai_strategy = {
+		type = area_priority
+		id = wistingen
+		value = 190 #move west
+	}
+	ai_strategy = {
+		type = area_priority
+		id = arkanisturm
+		value = 180 #secure northern front
+	}
+	ai_strategy = {
+		type = area_priority
+		id = east_faustburg
+		value = 180 #move towards the Hochprinzessin
+	}
+	ai_strategy = {
+		type = area_priority
+		id = west_faustburg
+		value = 170 #Take the Freithron
+	}
+}
+
+invade_union_priorities_south = { #Different approaches needed depending on where you strike from
+	enable = {
+		original_tag = PRK
+		has_war_with = UNG
+		OR = {
+			UNG = {
+				controls_state = 233
+				controls_state = 224
+			}
+			SNF = {
+				controls_state = 224
+			}
+		}
+	}
+	abort = {
+		OR = {
+			NOT = {
+				has_war_with = UNG
+			}
+			NOT = {
+				UNG = {
+					controls_state = 233
+				}
+			}
+		}
+	}
+	ai_strategy = {
+		type = area_priority
+		id = schneefilde
+		value = 200 #intitial incursion
+	}
+	ai_strategy = {
+		type = area_priority
+		id = west_faustburg
+		value = 200 #Take the Freithron
 	}
 }
 
@@ -404,7 +632,6 @@ do_not_waste_pp_if_saving_for_manpower_laws = {
 default_unit_production = {
 	enable = {
 		always = yes
-		NOT = { original_tag = SKA }
 	}
 	
 	ai_strategy = {
@@ -435,6 +662,49 @@ default_unit_production = {
 		type = role_ratio
 		id = men_at_arms
 		value = 60
+	}
+	
+	# Naval unit factors
+	ai_strategy = {
+		type = unit_ratio
+		id = capital_ship
+		value = 10
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = submarine
+		value = 10
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = screen_ship
+		value = 40
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = convoy
+		value = 15
+	}
+	
+	ai_strategy = {
+		type = equipment_production_factor
+		id = fighter
+		value = 35
+	}
+	
+	ai_strategy = {
+		type = equipment_production_factor
+		id = infantry
+		value = 40
+	}
+	
+	ai_strategy = {
+		type = equipment_production_factor
+		id = artillery
+		value = 25
 	}
 }
 

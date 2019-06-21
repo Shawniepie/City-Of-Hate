@@ -1,0 +1,19 @@
+state={
+	id=782
+	name="STATE_782"
+	provinces={
+		2207 2209 2211 3457 3458 3533 5923 5924 6431 8192 8193 8809 
+	}
+	state_category = town
+	manpower=11921
+	buildings_max_level_factor=1.000
+	history={
+		owner = TLA
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 2
+			arms_factory = 1
+		}
+		add_core_of = TLA
+	}
+}

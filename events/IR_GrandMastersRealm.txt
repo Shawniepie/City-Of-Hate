@@ -73,6 +73,25 @@ country_event = { # Ordoria Breaks Pact
 	option = { # Damn them!
 		name = gmr.3.a
 		add_stability = -0.05
+		
+		if = {
+			limit = {
+				AND = {
+					is_in_faction_with = ORD
+					is_faction_leader = yes
+				}
+			}
+			dismantle_faction = yes
+		}
+		if = {
+			limit = {
+				AND = {
+					is_in_faction_with = ORD
+					is_faction_leader = no
+				}
+			}
+			leave_faction = yes
+		}
 	}
 }
 
@@ -151,7 +170,10 @@ country_event = { #The Realm Shatters
 				division_template = "Outrider Scouts"
 			}
 			load_oob = "GMR_shattered"
+
+			set_country_flag = GMR_uprisings
 		}
+		
 		hidden_effect = {
 			if = {
 				limit = {
@@ -170,10 +192,219 @@ country_event = { #The Realm Shatters
 				}
 			}
 		}
-	}
-	
-	option = { #Play Ierethayne
-		name = gmr.6.a
+		hidden_effect = {
+			NAS = {
+				add_state_core = 31
+				add_state_core = 32
+				add_state_core = 25
+				add_state_core = 51
+				add_state_core = 33
+				add_state_core = 61
+				add_state_core = 62
+				add_state_core = 52
+				add_state_core = 20
+				add_state_core = 21
+				add_state_core = 16
+				add_state_core = 22
+				
+				transfer_state = 31
+				transfer_state = 32
+				transfer_state = 25
+				transfer_state = 51
+				transfer_state = 33
+				transfer_state = 61
+				transfer_state = 62
+				transfer_state = 52
+				transfer_state = 20
+				transfer_state = 21
+				transfer_state = 16
+				transfer_state = 22
+				declare_war_on = {
+					target = GMR
+					type = annex_everything
+				}
+				load_oob = "NAS_free"
+			}
+		}
+		
+		hidden_effect = {
+			KAL = {
+				add_state_core = 65
+				add_state_core = 58
+				add_state_core = 37
+				add_state_core = 30
+				add_state_core = 36
+				add_state_core = 723
+				add_state_core = 58
+				add_state_core = 35
+				add_state_core = 59
+				add_state_core = 60
+				add_state_core = 34
+				
+				transfer_state = 65
+				transfer_state = 58
+				transfer_state = 37
+				transfer_state = 30
+				transfer_state = 36
+				transfer_state = 723
+				transfer_state = 58
+				transfer_state = 35
+				transfer_state = 59
+				transfer_state = 60
+				transfer_state = 34
+				declare_war_on = {
+					target = GMR
+					type = annex_everything
+				}
+				load_oob = "KAL_free"
+			}
+		}
+		
+		hidden_effect = {
+			TRI = {
+				transfer_state = 67
+				transfer_state = 68
+				transfer_state = 69
+				transfer_state = 70
+				transfer_state = 40
+				transfer_state = 29
+				transfer_state = 49
+				transfer_state = 57
+				
+				add_state_core = 67
+				add_state_core = 68
+				add_state_core = 69
+				add_state_core = 70
+				add_state_core = 40
+				add_state_core = 29
+				add_state_core = 49
+				add_state_core = 57
+				declare_war_on = {
+					target = GMR
+					type = annex_everything
+				}
+				load_oob = "TRI_free"
+			}
+		}
+			
+		hidden_effect = {
+			IRT = {
+				transfer_state = 1
+				transfer_state = 2
+				transfer_state = 3
+				transfer_state = 4
+				transfer_state = 5
+				transfer_state = 6
+				transfer_state = 7
+				transfer_state = 8
+				transfer_state = 9
+				transfer_state = 10
+				transfer_state = 11
+				transfer_state = 12
+				transfer_state = 15
+				
+				add_state_core = 1
+				add_state_core = 2
+				add_state_core = 3
+				add_state_core = 4
+				add_state_core = 5
+				add_state_core = 6
+				add_state_core = 7
+				add_state_core = 8
+				add_state_core = 9
+				add_state_core = 10
+				add_state_core = 11
+				add_state_core = 12
+				add_state_core = 15
+				declare_war_on = {
+					target = GMR
+					type = annex_everything
+				}
+				load_oob = "IRT_free"
+			}
+		}
+		
+		hidden_effect = {
+			NAV = {
+				transfer_state = 72
+				transfer_state = 46
+				transfer_state = 74
+				transfer_state = 75
+				transfer_state = 73
+				transfer_state = 47
+				transfer_state = 71
+				transfer_state = 66
+
+				add_state_core = 72
+				add_state_core = 46
+				add_state_core = 74
+				add_state_core = 75
+				add_state_core = 73
+				add_state_core = 47
+				add_state_core = 71
+				add_state_core = 66
+				declare_war_on = {
+					target = GMR
+					type = annex_everything
+				}
+				load_oob = "NAV_free"
+			}
+		}
+		
+		hidden_effect = {
+			KRT = {
+				transfer_state = 17
+				transfer_state = 18
+				transfer_state = 19
+				transfer_state = 13
+				transfer_state = 45
+				transfer_state = 23
+				transfer_state = 24
+
+				add_state_core = 17
+				add_state_core = 18
+				add_state_core = 19
+				add_state_core = 13
+				add_state_core = 45
+				add_state_core = 23
+				add_state_core = 24
+				declare_war_on = {
+					target = GMR
+					type = annex_everything
+				}
+				load_oob = "KRT_free"
+			}
+		}
+		
+		hidden_effect = {
+			FEL = {
+				transfer_state = 28
+				transfer_state = 27
+				transfer_state = 26
+				transfer_state = 41
+				transfer_state = 38
+				transfer_state = 39
+				transfer_state = 42
+				transfer_state = 44
+				transfer_state = 43
+				
+				add_state_core = 28
+				add_state_core = 27
+				add_state_core = 26
+				add_state_core = 41
+				add_state_core = 38
+				add_state_core = 39
+				add_state_core = 42
+				add_state_core = 44
+				add_state_core = 43
+				declare_war_on = {
+					target = GMR
+					type = annex_everything
+				}
+				load_oob = "FEL_free"
+			}
+		}
+		
 		hidden_effect = {
 		
 			1 = {
@@ -306,898 +537,27 @@ country_event = { #The Realm Shatters
 			remove_state_core = 62
 			remove_state_core = 52
 		}
+	}
+	
+	option = { #Play Ierethayne
+		name = gmr.6.a
 		
-		hidden_effect = {
-			NAS = {
-				add_state_core = 31
-				add_state_core = 32
-				add_state_core = 25
-				add_state_core = 51
-				add_state_core = 33
-				add_state_core = 61
-				add_state_core = 62
-				add_state_core = 52
-				add_state_core = 20
-				add_state_core = 21
-				add_state_core = 16
-				add_state_core = 22
-				
-				transfer_state = 31
-				transfer_state = 32
-				transfer_state = 25
-				transfer_state = 51
-				transfer_state = 33
-				transfer_state = 61
-				transfer_state = 62
-				transfer_state = 52
-				transfer_state = 20
-				transfer_state = 21
-				transfer_state = 16
-				transfer_state = 22
-				declare_war_on = {
-					target = GMR
-					type = annex_everything
-				}
-			}
-		}
-		
-		hidden_effect = {
-			KAL = {
-				add_state_core = 65
-				add_state_core = 58
-				add_state_core = 37
-				add_state_core = 30
-				add_state_core = 36
-				add_state_core = 723
-				add_state_core = 58
-				add_state_core = 35
-				add_state_core = 59
-				add_state_core = 60
-				add_state_core = 34
-				
-				transfer_state = 65
-				transfer_state = 58
-				transfer_state = 37
-				transfer_state = 30
-				transfer_state = 36
-				transfer_state = 723
-				transfer_state = 58
-				transfer_state = 35
-				transfer_state = 59
-				transfer_state = 60
-				transfer_state = 34
-				declare_war_on = {
-					target = GMR
-					type = annex_everything
-				}
-			}
-		}
-		
-		hidden_effect = {
-			TRI = {
-				transfer_state = 67
-				transfer_state = 68
-				transfer_state = 69
-				transfer_state = 70
-				transfer_state = 40
-				transfer_state = 29
-				transfer_state = 49
-				transfer_state = 57
-				
-				add_state_core = 67
-				add_state_core = 68
-				add_state_core = 69
-				add_state_core = 70
-				add_state_core = 40
-				add_state_core = 29
-				add_state_core = 49
-				add_state_core = 57
-				declare_war_on = {
-					target = GMR
-					type = annex_everything
-				}
-			}
-		}
-			
-		hidden_effect = {
-			IRT = {
-				transfer_state = 1
-				transfer_state = 2
-				transfer_state = 3
-				transfer_state = 4
-				transfer_state = 5
-				transfer_state = 6
-				transfer_state = 7
-				transfer_state = 8
-				transfer_state = 9
-				transfer_state = 10
-				transfer_state = 11
-				transfer_state = 12
-				transfer_state = 15
-				
-				add_state_core = 1
-				add_state_core = 2
-				add_state_core = 3
-				add_state_core = 4
-				add_state_core = 5
-				add_state_core = 6
-				add_state_core = 7
-				add_state_core = 8
-				add_state_core = 9
-				add_state_core = 10
-				add_state_core = 11
-				add_state_core = 12
-				add_state_core = 15
-				change_tag_from = GMR
-				declare_war_on = {
-					target = GMR
-					type = annex_everything
-				}
-			}
-		}
-		
-		hidden_effect = {
-			NAV = {
-				transfer_state = 72
-				transfer_state = 46
-				transfer_state = 74
-				transfer_state = 75
-				transfer_state = 73
-				transfer_state = 47
-				transfer_state = 71
-				transfer_state = 66
-
-				add_state_core = 72
-				add_state_core = 46
-				add_state_core = 74
-				add_state_core = 75
-				add_state_core = 73
-				add_state_core = 47
-				add_state_core = 71
-				add_state_core = 66
-				declare_war_on = {
-					target = GMR
-					type = annex_everything
-				}
-			}
-		}
-		
-		hidden_effect = {
-			KRT = {
-				transfer_state = 17
-				transfer_state = 18
-				transfer_state = 19
-				transfer_state = 13
-				transfer_state = 45
-				transfer_state = 23
-				transfer_state = 24
-
-				add_state_core = 17
-				add_state_core = 18
-				add_state_core = 19
-				add_state_core = 13
-				add_state_core = 45
-				add_state_core = 23
-				add_state_core = 24
-				declare_war_on = {
-					target = GMR
-					type = annex_everything
-				}
-			}
-		}
-		
-		hidden_effect = {
-			FEL = {
-				transfer_state = 28
-				transfer_state = 27
-				transfer_state = 26
-				transfer_state = 41
-				transfer_state = 38
-				transfer_state = 39
-				transfer_state = 42
-				transfer_state = 44
-				transfer_state = 43
-				
-				add_state_core = 28
-				add_state_core = 27
-				add_state_core = 26
-				add_state_core = 41
-				add_state_core = 38
-				add_state_core = 39
-				add_state_core = 42
-				add_state_core = 44
-				add_state_core = 43
-				declare_war_on = {
-					target = GMR
-					type = annex_everything
-				}
-			}
+		IRT = {
+			change_tag_from = GMR
 		}
 	}
 	
 	option = { #Play Felweyne
 		name = gmr.6.b
-		hidden_effect = {
-		
-			1 = {
-				set_state_name = "Ierethayne"
-			}
-			set_province_name = {
-				id = 3109
-				name = "Ierethayne"
-			}
-			
-			28 = {
-				set_state_name = "Felweyne"
-			}
-			set_province_name = {
-				id = 3966
-				name = "Felweyne"
-			}
-			
-			17 = {
-				set_state_name = "Kortinall"
-			}
-			
-			set_province_name = {
-				id = 7830
-				name = "Kortinall"
-			}
-			
-			72 = {
-				set_state_name = "Navandonne"
-			}
-			
-			set_province_name = {
-				id = 1334
-				name = "Navandonne"
-			}
-			
-			34 = {
-				set_state_name = "Kaltire"
-			}
-			
-			set_province_name = {
-				id = 3863
-				name = "Kaltire"
-			}
-			
-			20 = {
-				set_state_name = "Nastrodoge"
-			}
-			
-			set_province_name = {
-				id = 4931
-				name = "Nastrodoge"
-			}
-			
-			29 = {
-				set_state_name = "Trifell"
-			}
-			
-			set_province_name = {
-				id = 8702
-				name = "Trifell"
-			}
-
-			remove_state_core = 1
-			remove_state_core = 2
-			remove_state_core = 3
-			remove_state_core = 4
-			remove_state_core = 5
-			remove_state_core = 6
-			remove_state_core = 7
-			remove_state_core = 8
-			remove_state_core = 9
-			remove_state_core = 10
-			remove_state_core = 11
-			remove_state_core = 12
-			remove_state_core = 15
-			remove_state_core = 28
-			remove_state_core = 27
-			remove_state_core = 26
-			remove_state_core = 41
-			remove_state_core = 38
-			remove_state_core = 39
-			remove_state_core = 42
-			remove_state_core = 44
-			remove_state_core = 43
-			remove_state_core = 17
-			remove_state_core = 18
-			remove_state_core = 19
-			remove_state_core = 13
-			remove_state_core = 45
-			remove_state_core = 23
-			remove_state_core = 24
-			remove_state_core = 72
-			remove_state_core = 46
-			remove_state_core = 74
-			remove_state_core = 75
-			remove_state_core = 73
-			remove_state_core = 47
-			remove_state_core = 71
-			remove_state_core = 66
-			remove_state_core = 67
-			remove_state_core = 68
-			remove_state_core = 69
-			remove_state_core = 70
-			remove_state_core = 40
-			remove_state_core = 29
-			remove_state_core = 49
-			remove_state_core = 57
-			remove_state_core = 65
-			remove_state_core = 58
-			remove_state_core = 37
-			remove_state_core = 30
-			remove_state_core = 36
-			remove_state_core = 723
-			remove_state_core = 58
-			remove_state_core = 35
-			remove_state_core = 59
-			remove_state_core = 60
-			remove_state_core = 34
-			remove_state_core = 20
-			remove_state_core = 21
-			remove_state_core = 16
-			remove_state_core = 22
-			remove_state_core = 31
-			remove_state_core = 32
-			remove_state_core = 25
-			remove_state_core = 51
-			remove_state_core = 33
-			remove_state_core = 61
-			remove_state_core = 62
-			remove_state_core = 52
-		}
-		
-		hidden_effect = {
-			NAS = {
-				add_state_core = 31
-				add_state_core = 32
-				add_state_core = 25
-				add_state_core = 51
-				add_state_core = 33
-				add_state_core = 61
-				add_state_core = 62
-				add_state_core = 52
-				add_state_core = 20
-				add_state_core = 21
-				add_state_core = 16
-				add_state_core = 22
-				
-				transfer_state = 31
-				transfer_state = 32
-				transfer_state = 25
-				transfer_state = 51
-				transfer_state = 33
-				transfer_state = 61
-				transfer_state = 62
-				transfer_state = 52
-				transfer_state = 20
-				transfer_state = 21
-				transfer_state = 16
-				transfer_state = 22
-				declare_war_on = {
-					target = GMR
-					type = annex_everything
-				}
-			}
-		}
-		
-		hidden_effect = {
-			KAL = {
-				add_state_core = 65
-				add_state_core = 58
-				add_state_core = 37
-				add_state_core = 30
-				add_state_core = 36
-				add_state_core = 723
-				add_state_core = 58
-				add_state_core = 35
-				add_state_core = 59
-				add_state_core = 60
-				add_state_core = 34
-				
-				transfer_state = 65
-				transfer_state = 58
-				transfer_state = 37
-				transfer_state = 30
-				transfer_state = 36
-				transfer_state = 723
-				transfer_state = 58
-				transfer_state = 35
-				transfer_state = 59
-				transfer_state = 60
-				transfer_state = 34
-				declare_war_on = {
-					target = GMR
-					type = annex_everything
-				}
-			}
-		}
-		
-		hidden_effect = {
-			TRI = {
-				transfer_state = 67
-				transfer_state = 68
-				transfer_state = 69
-				transfer_state = 70
-				transfer_state = 40
-				transfer_state = 29
-				transfer_state = 49
-				transfer_state = 57
-				
-				add_state_core = 67
-				add_state_core = 68
-				add_state_core = 69
-				add_state_core = 70
-				add_state_core = 40
-				add_state_core = 29
-				add_state_core = 49
-				add_state_core = 57
-				declare_war_on = {
-					target = GMR
-					type = annex_everything
-				}
-			}
-		}
-		
-		hidden_effect = {
-			IRT = {
-				transfer_state = 1
-				transfer_state = 2
-				transfer_state = 3
-				transfer_state = 4
-				transfer_state = 5
-				transfer_state = 6
-				transfer_state = 7
-				transfer_state = 8
-				transfer_state = 9
-				transfer_state = 10
-				transfer_state = 11
-				transfer_state = 12
-				transfer_state = 15
-				
-				add_state_core = 1
-				add_state_core = 2
-				add_state_core = 3
-				add_state_core = 4
-				add_state_core = 5
-				add_state_core = 6
-				add_state_core = 7
-				add_state_core = 8
-				add_state_core = 9
-				add_state_core = 10
-				add_state_core = 11
-				add_state_core = 12
-				add_state_core = 15
-				declare_war_on = {
-					target = GMR
-					type = annex_everything
-				}
-			}
-		}
-		
-		hidden_effect = {
-			KRT = {
-				transfer_state = 17
-				transfer_state = 18
-				transfer_state = 19
-				transfer_state = 13
-				transfer_state = 45
-				transfer_state = 23
-				transfer_state = 24
-
-				add_state_core = 17
-				add_state_core = 18
-				add_state_core = 19
-				add_state_core = 13
-				add_state_core = 45
-				add_state_core = 23
-				add_state_core = 24
-				declare_war_on = {
-					target = GMR
-					type = annex_everything
-				}
-			}
-		}
-		
-		hidden_effect = {
-			NAV = {
-				transfer_state = 72
-				transfer_state = 46
-				transfer_state = 74
-				transfer_state = 75
-				transfer_state = 73
-				transfer_state = 47
-				transfer_state = 71
-				transfer_state = 66
-
-				add_state_core = 72
-				add_state_core = 46
-				add_state_core = 74
-				add_state_core = 75
-				add_state_core = 73
-				add_state_core = 47
-				add_state_core = 71
-				add_state_core = 66
-				declare_war_on = {
-					target = GMR
-					type = annex_everything
-				}
-			}
-		}
-		
-		hidden_effect = {
-			FEL = {
-				transfer_state = 28
-				transfer_state = 27
-				transfer_state = 26
-				transfer_state = 41
-				transfer_state = 38
-				transfer_state = 39
-				transfer_state = 42
-				transfer_state = 44
-				transfer_state = 43
-				
-				add_state_core = 28
-				add_state_core = 27
-				add_state_core = 26
-				add_state_core = 41
-				add_state_core = 38
-				add_state_core = 39
-				add_state_core = 42
-				add_state_core = 44
-				add_state_core = 43
-				change_tag_from = GMR
-				declare_war_on = {
-					target = GMR
-					type = annex_everything
-				}
-			}
+		FEL = {
+			change_tag_from = GMR
 		}
 	}
 	
 	option = { #Play Kortinall
 		name = gmr.6.c
-		hidden_effect = {
-		
-			1 = {
-				set_state_name = "Ierethayne"
-			}
-			set_province_name = {
-				id = 3109
-				name = "Ierethayne"
-			}
-			
-			28 = {
-				set_state_name = "Felweyne"
-			}
-			set_province_name = {
-				id = 3966
-				name = "Felweyne"
-			}
-			
-			17 = {
-				set_state_name = "Kortinall"
-			}
-			
-			set_province_name = {
-				id = 7830
-				name = "Kortinall"
-			}
-			
-			72 = {
-				set_state_name = "Navandonne"
-			}
-			
-			set_province_name = {
-				id = 1334
-				name = "Navandonne"
-			}
-			
-			34 = {
-				set_state_name = "Kaltire"
-			}
-			
-			set_province_name = {
-				id = 3863
-				name = "Kaltire"
-			}
-			
-			20 = {
-				set_state_name = "Nastrodoge"
-			}
-			
-			set_province_name = {
-				id = 4931
-				name = "Nastrodoge"
-			}
-			
-			29 = {
-				set_state_name = "Trifell"
-			}
-			
-			set_province_name = {
-				id = 8702
-				name = "Trifell"
-			}
-			
-			remove_state_core = 1
-			remove_state_core = 2
-			remove_state_core = 3
-			remove_state_core = 4
-			remove_state_core = 5
-			remove_state_core = 6
-			remove_state_core = 7
-			remove_state_core = 8
-			remove_state_core = 9
-			remove_state_core = 10
-			remove_state_core = 11
-			remove_state_core = 12
-			remove_state_core = 15
-			remove_state_core = 28
-			remove_state_core = 27
-			remove_state_core = 26
-			remove_state_core = 41
-			remove_state_core = 38
-			remove_state_core = 39
-			remove_state_core = 42
-			remove_state_core = 44
-			remove_state_core = 43
-			remove_state_core = 17
-			remove_state_core = 18
-			remove_state_core = 19
-			remove_state_core = 13
-			remove_state_core = 45
-			remove_state_core = 23
-			remove_state_core = 24
-			remove_state_core = 72
-			remove_state_core = 46
-			remove_state_core = 74
-			remove_state_core = 75
-			remove_state_core = 73
-			remove_state_core = 47
-			remove_state_core = 71
-			remove_state_core = 66
-			remove_state_core = 67
-			remove_state_core = 68
-			remove_state_core = 69
-			remove_state_core = 70
-			remove_state_core = 40
-			remove_state_core = 29
-			remove_state_core = 49
-			remove_state_core = 57
-			remove_state_core = 65
-			remove_state_core = 58
-			remove_state_core = 37
-			remove_state_core = 30
-			remove_state_core = 36
-			remove_state_core = 723
-			remove_state_core = 58
-			remove_state_core = 35
-			remove_state_core = 59
-			remove_state_core = 60
-			remove_state_core = 34
-			remove_state_core = 20
-			remove_state_core = 21
-			remove_state_core = 16
-			remove_state_core = 22
-			remove_state_core = 31
-			remove_state_core = 32
-			remove_state_core = 25
-			remove_state_core = 51
-			remove_state_core = 33
-			remove_state_core = 61
-			remove_state_core = 62
-			remove_state_core = 52
-		}
-		
-		hidden_effect = {
-			NAS = {
-				add_state_core = 31
-				add_state_core = 32
-				add_state_core = 25
-				add_state_core = 51
-				add_state_core = 33
-				add_state_core = 61
-				add_state_core = 62
-				add_state_core = 52
-				add_state_core = 20
-				add_state_core = 21
-				add_state_core = 16
-				add_state_core = 22
-				
-				transfer_state = 31
-				transfer_state = 32
-				transfer_state = 25
-				transfer_state = 51
-				transfer_state = 33
-				transfer_state = 61
-				transfer_state = 62
-				transfer_state = 52
-				transfer_state = 20
-				transfer_state = 21
-				transfer_state = 16
-				transfer_state = 22
-				declare_war_on = {
-					target = GMR
-					type = annex_everything
-				}
-			}
-		}
-		
-		hidden_effect = {
-			KAL = {
-				add_state_core = 65
-				add_state_core = 58
-				add_state_core = 37
-				add_state_core = 30
-				add_state_core = 36
-				add_state_core = 723
-				add_state_core = 58
-				add_state_core = 35
-				add_state_core = 59
-				add_state_core = 60
-				add_state_core = 34
-				
-				transfer_state = 65
-				transfer_state = 58
-				transfer_state = 37
-				transfer_state = 30
-				transfer_state = 36
-				transfer_state = 723
-				transfer_state = 58
-				transfer_state = 35
-				transfer_state = 59
-				transfer_state = 60
-				transfer_state = 34
-				declare_war_on = {
-					target = GMR
-					type = annex_everything
-				}
-			}
-		}
-		
-		hidden_effect = {
-			TRI = {
-				transfer_state = 67
-				transfer_state = 68
-				transfer_state = 69
-				transfer_state = 70
-				transfer_state = 40
-				transfer_state = 29
-				transfer_state = 49
-				transfer_state = 57
-				
-				add_state_core = 67
-				add_state_core = 68
-				add_state_core = 69
-				add_state_core = 70
-				add_state_core = 40
-				add_state_core = 29
-				add_state_core = 49
-				add_state_core = 57
-				declare_war_on = {
-					target = GMR
-					type = annex_everything
-				}
-			}
-		}
-		
-		hidden_effect = {
-			IRT = {
-				transfer_state = 1
-				transfer_state = 2
-				transfer_state = 3
-				transfer_state = 4
-				transfer_state = 5
-				transfer_state = 6
-				transfer_state = 7
-				transfer_state = 8
-				transfer_state = 9
-				transfer_state = 10
-				transfer_state = 11
-				transfer_state = 12
-				transfer_state = 15
-				
-				add_state_core = 1
-				add_state_core = 2
-				add_state_core = 3
-				add_state_core = 4
-				add_state_core = 5
-				add_state_core = 6
-				add_state_core = 7
-				add_state_core = 8
-				add_state_core = 9
-				add_state_core = 10
-				add_state_core = 11
-				add_state_core = 12
-				add_state_core = 15
-				declare_war_on = {
-					target = GMR
-					type = annex_everything
-				}
-			}
-		}
-		
-		hidden_effect = {
-			KRT = {
-				transfer_state = 17
-				transfer_state = 18
-				transfer_state = 19
-				transfer_state = 13
-				transfer_state = 45
-				transfer_state = 23
-				transfer_state = 24
-
-				add_state_core = 17
-				add_state_core = 18
-				add_state_core = 19
-				add_state_core = 13
-				add_state_core = 45
-				add_state_core = 23
-				add_state_core = 24
-				change_tag_from = GMR
-				declare_war_on = {
-					target = GMR
-					type = annex_everything
-				}
-			}
-		}
-		
-		hidden_effect = {
-			FEL = {
-				transfer_state = 28
-				transfer_state = 27
-				transfer_state = 26
-				transfer_state = 41
-				transfer_state = 38
-				transfer_state = 39
-				transfer_state = 42
-				transfer_state = 44
-				transfer_state = 43
-				
-				add_state_core = 28
-				add_state_core = 27
-				add_state_core = 26
-				add_state_core = 41
-				add_state_core = 38
-				add_state_core = 39
-				add_state_core = 42
-				add_state_core = 44
-				add_state_core = 43
-				declare_war_on = {
-					target = GMR
-					type = annex_everything
-				}
-			}
-		}
-		
-		hidden_effect = {
-			NAV = {
-				transfer_state = 72
-				transfer_state = 46
-				transfer_state = 74
-				transfer_state = 75
-				transfer_state = 73
-				transfer_state = 47
-				transfer_state = 71
-				transfer_state = 66
-
-				add_state_core = 72
-				add_state_core = 46
-				add_state_core = 74
-				add_state_core = 75
-				add_state_core = 73
-				add_state_core = 47
-				add_state_core = 71
-				add_state_core = 66
-				declare_war_on = {
-					target = GMR
-					type = annex_everything
-				}
-			}
+		KRT = {
+			change_tag_from = GMR
 		}
 	}
 	
@@ -1312,6 +672,8 @@ country_event = { #Separatist Uprisings
 			}
 			remove_ideas = GMR_trade_union
 		}
+		
+		set_country_flag = GMR_uprisings
 	}
 	
 	option = { #Curse Ordoria
@@ -2483,1042 +1845,34 @@ country_event = { #Separatist Uprisings
 		}
 	}
 	
-	country_event = { #Realm Shatters 2: Electric Boogaloo
-		id = gmr.32
-		title = gmr.32.t
-		desc = gmr.32.d
-		
-		is_triggered_only = yes
-		
-		option = { #Play Navandonne
+country_event = { #Realm Shatters 2: Electric Boogaloo
+	id = gmr.32
+	title = gmr.32.t
+	desc = gmr.32.d
+	
+	is_triggered_only = yes
+	
+	option = { #Play Navandonne
 		name = gmr.32.a
-		hidden_effect = {
-		
-			1 = {
-				set_state_name = "Ierethayne"
-			}
-			set_province_name = {
-				id = 3109
-				name = "Ierethayne"
-			}
-			
-			28 = {
-				set_state_name = "Felweyne"
-			}
-			set_province_name = {
-				id = 3966
-				name = "Felweyne"
-			}
-			
-			17 = {
-				set_state_name = "Kortinall"
-			}
-			
-			set_province_name = {
-				id = 7830
-				name = "Kortinall"
-			}
-			
-			72 = {
-				set_state_name = "Navandonne"
-			}
-			
-			set_province_name = {
-				id = 1334
-				name = "Navandonne"
-			}
-			
-			34 = {
-				set_state_name = "Kaltire"
-			}
-			
-			set_province_name = {
-				id = 3863
-				name = "Kaltire"
-			}
-			
-			20 = {
-				set_state_name = "Nastrodoge"
-			}
-			
-			set_province_name = {
-				id = 4931
-				name = "Nastrodoge"
-			}
-			
-			29 = {
-				set_state_name = "Trifell"
-			}
-			
-			set_province_name = {
-				id = 8702
-				name = "Trifell"
-			}
-			
-			remove_state_core = 1
-			remove_state_core = 2
-			remove_state_core = 3
-			remove_state_core = 4
-			remove_state_core = 5
-			remove_state_core = 6
-			remove_state_core = 7
-			remove_state_core = 8
-			remove_state_core = 9
-			remove_state_core = 10
-			remove_state_core = 11
-			remove_state_core = 12
-			remove_state_core = 15
-			remove_state_core = 28
-			remove_state_core = 27
-			remove_state_core = 26
-			remove_state_core = 41
-			remove_state_core = 38
-			remove_state_core = 39
-			remove_state_core = 42
-			remove_state_core = 44
-			remove_state_core = 43
-			remove_state_core = 17
-			remove_state_core = 18
-			remove_state_core = 19
-			remove_state_core = 13
-			remove_state_core = 45
-			remove_state_core = 23
-			remove_state_core = 24
-			remove_state_core = 72
-			remove_state_core = 46
-			remove_state_core = 74
-			remove_state_core = 75
-			remove_state_core = 73
-			remove_state_core = 47
-			remove_state_core = 71
-			remove_state_core = 66
-			remove_state_core = 67
-			remove_state_core = 68
-			remove_state_core = 69
-			remove_state_core = 70
-			remove_state_core = 40
-			remove_state_core = 29
-			remove_state_core = 49
-			remove_state_core = 57
-			remove_state_core = 65
-			remove_state_core = 58
-			remove_state_core = 37
-			remove_state_core = 30
-			remove_state_core = 36
-			remove_state_core = 723
-			remove_state_core = 58
-			remove_state_core = 35
-			remove_state_core = 59
-			remove_state_core = 60
-			remove_state_core = 34
-			remove_state_core = 20
-			remove_state_core = 21
-			remove_state_core = 16
-			remove_state_core = 22
-			remove_state_core = 31
-			remove_state_core = 32
-			remove_state_core = 25
-			remove_state_core = 51
-			remove_state_core = 33
-			remove_state_core = 61
-			remove_state_core = 62
-			remove_state_core = 52
-		}
-		
-		hidden_effect = {
-			NAS = {
-				add_state_core = 31
-				add_state_core = 32
-				add_state_core = 25
-				add_state_core = 51
-				add_state_core = 33
-				add_state_core = 61
-				add_state_core = 62
-				add_state_core = 52
-				add_state_core = 20
-				add_state_core = 21
-				add_state_core = 16
-				add_state_core = 22
-				
-				transfer_state = 31
-				transfer_state = 32
-				transfer_state = 25
-				transfer_state = 51
-				transfer_state = 33
-				transfer_state = 61
-				transfer_state = 62
-				transfer_state = 52
-				transfer_state = 20
-				transfer_state = 21
-				transfer_state = 16
-				transfer_state = 22
-				declare_war_on = {
-					target = GMR
-					type = annex_everything
-				}
-			}
-		}
-		
-		hidden_effect = {
-			TRI = {
-				transfer_state = 67
-				transfer_state = 68
-				transfer_state = 69
-				transfer_state = 70
-				transfer_state = 40
-				transfer_state = 29
-				transfer_state = 49
-				transfer_state = 57
-				
-				add_state_core = 67
-				add_state_core = 68
-				add_state_core = 69
-				add_state_core = 70
-				add_state_core = 40
-				add_state_core = 29
-				add_state_core = 49
-				add_state_core = 57
-				declare_war_on = {
-					target = GMR
-					type = annex_everything
-				}
-			}
-		}
-		
-		hidden_effect = {
-			KAL = {
-				add_state_core = 65
-				add_state_core = 58
-				add_state_core = 37
-				add_state_core = 30
-				add_state_core = 36
-				add_state_core = 723
-				add_state_core = 58
-				add_state_core = 35
-				add_state_core = 59
-				add_state_core = 60
-				add_state_core = 34
-				
-				transfer_state = 65
-				transfer_state = 58
-				transfer_state = 37
-				transfer_state = 30
-				transfer_state = 36
-				transfer_state = 723
-				transfer_state = 58
-				transfer_state = 35
-				transfer_state = 59
-				transfer_state = 60
-				transfer_state = 34
-				declare_war_on = {
-					target = GMR
-					type = annex_everything
-				}
-			}
-		}
-		
-		hidden_effect = {
-			IRT = {
-				transfer_state = 1
-				transfer_state = 2
-				transfer_state = 3
-				transfer_state = 4
-				transfer_state = 5
-				transfer_state = 6
-				transfer_state = 7
-				transfer_state = 8
-				transfer_state = 9
-				transfer_state = 10
-				transfer_state = 11
-				transfer_state = 12
-				transfer_state = 15
-				
-				add_state_core = 1
-				add_state_core = 2
-				add_state_core = 3
-				add_state_core = 4
-				add_state_core = 5
-				add_state_core = 6
-				add_state_core = 7
-				add_state_core = 8
-				add_state_core = 9
-				add_state_core = 10
-				add_state_core = 11
-				add_state_core = 12
-				add_state_core = 15
-				declare_war_on = {
-					target = GMR
-					type = annex_everything
-				}
-			}
-		}
-		
-		hidden_effect = {
-			NAV = {
-				transfer_state = 72
-				transfer_state = 46
-				transfer_state = 74
-				transfer_state = 75
-				transfer_state = 73
-				transfer_state = 47
-				transfer_state = 71
-				transfer_state = 66
-
-				add_state_core = 72
-				add_state_core = 46
-				add_state_core = 74
-				add_state_core = 75
-				add_state_core = 73
-				add_state_core = 47
-				add_state_core = 71
-				add_state_core = 66
-				change_tag_from = GMR
-				declare_war_on = {
-					target = GMR
-					type = annex_everything
-				}
-			}
-		}
-		
-		hidden_effect = {
-			KRT = {
-				transfer_state = 17
-				transfer_state = 18
-				transfer_state = 19
-				transfer_state = 13
-				transfer_state = 45
-				transfer_state = 23
-				transfer_state = 24
-
-				add_state_core = 17
-				add_state_core = 18
-				add_state_core = 19
-				add_state_core = 13
-				add_state_core = 45
-				add_state_core = 23
-				add_state_core = 24
-				declare_war_on = {
-					target = GMR
-					type = annex_everything
-				}
-			}
-		}
-		
-		hidden_effect = {
-			FEL = {
-				transfer_state = 28
-				transfer_state = 27
-				transfer_state = 26
-				transfer_state = 41
-				transfer_state = 38
-				transfer_state = 39
-				transfer_state = 42
-				transfer_state = 44
-				transfer_state = 43
-				
-				add_state_core = 28
-				add_state_core = 27
-				add_state_core = 26
-				add_state_core = 41
-				add_state_core = 38
-				add_state_core = 39
-				add_state_core = 42
-				add_state_core = 44
-				add_state_core = 43
-				declare_war_on = {
-					target = GMR
-					type = annex_everything
-				}
-			}
+		NAV = {
+			change_tag_from = GMR
 		}
 	}
-	
+
 	option = { #Play Nastrogdar
-	name = gmr.32.b
-	hidden_effect = {
-		
-			1 = {
-				set_state_name = "Ierethayne"
-			}
-			set_province_name = {
-				id = 3109
-				name = "Ierethayne"
-			}
-			
-			28 = {
-				set_state_name = "Felweyne"
-			}
-			set_province_name = {
-				id = 3966
-				name = "Felweyne"
-			}
-			
-			17 = {
-				set_state_name = "Kortinall"
-			}
-			
-			set_province_name = {
-				id = 7830
-				name = "Kortinall"
-			}
-			
-			72 = {
-				set_state_name = "Navandonne"
-			}
-			
-			set_province_name = {
-				id = 1334
-				name = "Navandonne"
-			}
-			
-			34 = {
-				set_state_name = "Kaltire"
-			}
-			
-			set_province_name = {
-				id = 3863
-				name = "Kaltire"
-			}
-			
-			20 = {
-				set_state_name = "Nastrodoge"
-			}
-			
-			set_province_name = {
-				id = 4931
-				name = "Nastrodoge"
-			}
-			
-			29 = {
-				set_state_name = "Trifell"
-			}
-			
-			set_province_name = {
-				id = 8702
-				name = "Trifell"
-			}
-			
-			remove_state_core = 1
-			remove_state_core = 2
-			remove_state_core = 3
-			remove_state_core = 4
-			remove_state_core = 5
-			remove_state_core = 6
-			remove_state_core = 7
-			remove_state_core = 8
-			remove_state_core = 9
-			remove_state_core = 10
-			remove_state_core = 11
-			remove_state_core = 12
-			remove_state_core = 15
-			remove_state_core = 28
-			remove_state_core = 27
-			remove_state_core = 26
-			remove_state_core = 41
-			remove_state_core = 38
-			remove_state_core = 39
-			remove_state_core = 42
-			remove_state_core = 44
-			remove_state_core = 43
-			remove_state_core = 17
-			remove_state_core = 18
-			remove_state_core = 19
-			remove_state_core = 13
-			remove_state_core = 45
-			remove_state_core = 23
-			remove_state_core = 24
-			remove_state_core = 72
-			remove_state_core = 46
-			remove_state_core = 74
-			remove_state_core = 75
-			remove_state_core = 73
-			remove_state_core = 47
-			remove_state_core = 71
-			remove_state_core = 66
-			remove_state_core = 67
-			remove_state_core = 68
-			remove_state_core = 69
-			remove_state_core = 70
-			remove_state_core = 40
-			remove_state_core = 29
-			remove_state_core = 49
-			remove_state_core = 57
-			remove_state_core = 65
-			remove_state_core = 58
-			remove_state_core = 37
-			remove_state_core = 30
-			remove_state_core = 36
-			remove_state_core = 723
-			remove_state_core = 58
-			remove_state_core = 35
-			remove_state_core = 59
-			remove_state_core = 60
-			remove_state_core = 34
-			remove_state_core = 20
-			remove_state_core = 21
-			remove_state_core = 16
-			remove_state_core = 22
-			remove_state_core = 31
-			remove_state_core = 32
-			remove_state_core = 25
-			remove_state_core = 51
-			remove_state_core = 33
-			remove_state_core = 61
-			remove_state_core = 62
-			remove_state_core = 52
-		}
-		
-		hidden_effect = {
-			NAS = {
-				add_state_core = 31
-				add_state_core = 32
-				add_state_core = 25
-				add_state_core = 51
-				add_state_core = 33
-				add_state_core = 61
-				add_state_core = 62
-				add_state_core = 52
-				add_state_core = 20
-				add_state_core = 21
-				add_state_core = 16
-				add_state_core = 22
-				
-				transfer_state = 31
-				transfer_state = 32
-				transfer_state = 25
-				transfer_state = 51
-				transfer_state = 33
-				transfer_state = 61
-				transfer_state = 62
-				transfer_state = 52
-				transfer_state = 20
-				transfer_state = 21
-				transfer_state = 16
-				transfer_state = 22
-				change_tag_from = GMR
-				declare_war_on = {
-					target = GMR
-					type = annex_everything
-				}
-			}
-		}
-		
-		hidden_effect = {
-			TRI = {
-				transfer_state = 67
-				transfer_state = 68
-				transfer_state = 69
-				transfer_state = 70
-				transfer_state = 40
-				transfer_state = 29
-				transfer_state = 49
-				transfer_state = 57
-				
-				add_state_core = 67
-				add_state_core = 68
-				add_state_core = 69
-				add_state_core = 70
-				add_state_core = 40
-				add_state_core = 29
-				add_state_core = 49
-				add_state_core = 57
-				declare_war_on = {
-					target = GMR
-					type = annex_everything
-				}
-			}
-		}
-		
-		hidden_effect = {
-			KAL = {
-				add_state_core = 65
-				add_state_core = 58
-				add_state_core = 37
-				add_state_core = 30
-				add_state_core = 36
-				add_state_core = 723
-				add_state_core = 58
-				add_state_core = 35
-				add_state_core = 59
-				add_state_core = 60
-				add_state_core = 34
-				
-				transfer_state = 65
-				transfer_state = 58
-				transfer_state = 37
-				transfer_state = 30
-				transfer_state = 36
-				transfer_state = 723
-				transfer_state = 58
-				transfer_state = 35
-				transfer_state = 59
-				transfer_state = 60
-				transfer_state = 34
-				declare_war_on = {
-					target = GMR
-					type = annex_everything
-				}
-			}
-		}
-		
-		hidden_effect = {
-			IRT = {
-				transfer_state = 1
-				transfer_state = 2
-				transfer_state = 3
-				transfer_state = 4
-				transfer_state = 5
-				transfer_state = 6
-				transfer_state = 7
-				transfer_state = 8
-				transfer_state = 9
-				transfer_state = 10
-				transfer_state = 11
-				transfer_state = 12
-				transfer_state = 15
-				
-				add_state_core = 1
-				add_state_core = 2
-				add_state_core = 3
-				add_state_core = 4
-				add_state_core = 5
-				add_state_core = 6
-				add_state_core = 7
-				add_state_core = 8
-				add_state_core = 9
-				add_state_core = 10
-				add_state_core = 11
-				add_state_core = 12
-				add_state_core = 15
-				declare_war_on = {
-					target = GMR
-					type = annex_everything
-				}
-			}
-		}
-		
-		hidden_effect = {
-			NAV = {
-				transfer_state = 72
-				transfer_state = 46
-				transfer_state = 74
-				transfer_state = 75
-				transfer_state = 73
-				transfer_state = 47
-				transfer_state = 71
-				transfer_state = 66
-
-				add_state_core = 72
-				add_state_core = 46
-				add_state_core = 74
-				add_state_core = 75
-				add_state_core = 73
-				add_state_core = 47
-				add_state_core = 71
-				add_state_core = 66
-				declare_war_on = {
-					target = GMR
-					type = annex_everything
-				}
-			}
-		}
-		
-		hidden_effect = {
-			KRT = {
-				transfer_state = 17
-				transfer_state = 18
-				transfer_state = 19
-				transfer_state = 13
-				transfer_state = 45
-				transfer_state = 23
-				transfer_state = 24
-
-				add_state_core = 17
-				add_state_core = 18
-				add_state_core = 19
-				add_state_core = 13
-				add_state_core = 45
-				add_state_core = 23
-				add_state_core = 24
-				declare_war_on = {
-					target = GMR
-					type = annex_everything
-				}
-			}
-		}
-		
-		hidden_effect = {
-			FEL = {
-				transfer_state = 28
-				transfer_state = 27
-				transfer_state = 26
-				transfer_state = 41
-				transfer_state = 38
-				transfer_state = 39
-				transfer_state = 42
-				transfer_state = 44
-				transfer_state = 43
-				
-				add_state_core = 28
-				add_state_core = 27
-				add_state_core = 26
-				add_state_core = 41
-				add_state_core = 38
-				add_state_core = 39
-				add_state_core = 42
-				add_state_core = 44
-				add_state_core = 43
-				declare_war_on = {
-					target = GMR
-					type = annex_everything
-				}
-			}
+		name = gmr.32.b
+		NAS = {
+			change_tag_from = GMR
 		}
 	}
-	
+
 	option = { #Play Kaltire
-	name = gmr.32.c
-	hidden_effect = {
-		
-			1 = {
-				set_state_name = "Ierethayne"
-			}
-			set_province_name = {
-				id = 3109
-				name = "Ierethayne"
-			}
-			
-			28 = {
-				set_state_name = "Felweyne"
-			}
-			set_province_name = {
-				id = 3966
-				name = "Felweyne"
-			}
-			
-			17 = {
-				set_state_name = "Kortinall"
-			}
-			
-			set_province_name = {
-				id = 7830
-				name = "Kortinall"
-			}
-			
-			72 = {
-				set_state_name = "Navandonne"
-			}
-			
-			set_province_name = {
-				id = 1334
-				name = "Navandonne"
-			}
-			
-			34 = {
-				set_state_name = "Kaltire"
-			}
-			
-			set_province_name = {
-				id = 3863
-				name = "Kaltire"
-			}
-			
-			20 = {
-				set_state_name = "Nastrodoge"
-			}
-			
-			set_province_name = {
-				id = 4931
-				name = "Nastrodoge"
-			}
-			
-			29 = {
-				set_state_name = "Trifell"
-			}
-			
-			set_province_name = {
-				id = 8702
-				name = "Trifell"
-			}
-			
-			remove_state_core = 1
-			remove_state_core = 2
-			remove_state_core = 3
-			remove_state_core = 4
-			remove_state_core = 5
-			remove_state_core = 6
-			remove_state_core = 7
-			remove_state_core = 8
-			remove_state_core = 9
-			remove_state_core = 10
-			remove_state_core = 11
-			remove_state_core = 12
-			remove_state_core = 15
-			remove_state_core = 28
-			remove_state_core = 27
-			remove_state_core = 26
-			remove_state_core = 41
-			remove_state_core = 38
-			remove_state_core = 39
-			remove_state_core = 42
-			remove_state_core = 44
-			remove_state_core = 43
-			remove_state_core = 17
-			remove_state_core = 18
-			remove_state_core = 19
-			remove_state_core = 13
-			remove_state_core = 45
-			remove_state_core = 23
-			remove_state_core = 24
-			remove_state_core = 72
-			remove_state_core = 46
-			remove_state_core = 74
-			remove_state_core = 75
-			remove_state_core = 73
-			remove_state_core = 47
-			remove_state_core = 71
-			remove_state_core = 66
-			remove_state_core = 67
-			remove_state_core = 68
-			remove_state_core = 69
-			remove_state_core = 70
-			remove_state_core = 40
-			remove_state_core = 29
-			remove_state_core = 49
-			remove_state_core = 57
-			remove_state_core = 65
-			remove_state_core = 58
-			remove_state_core = 37
-			remove_state_core = 30
-			remove_state_core = 36
-			remove_state_core = 723
-			remove_state_core = 58
-			remove_state_core = 35
-			remove_state_core = 59
-			remove_state_core = 60
-			remove_state_core = 34
-			remove_state_core = 20
-			remove_state_core = 21
-			remove_state_core = 16
-			remove_state_core = 22
-			remove_state_core = 31
-			remove_state_core = 32
-			remove_state_core = 25
-			remove_state_core = 51
-			remove_state_core = 33
-			remove_state_core = 61
-			remove_state_core = 62
-			remove_state_core = 52
-		}
-		
-		hidden_effect = {
-			NAS = {
-				add_state_core = 31
-				add_state_core = 32
-				add_state_core = 25
-				add_state_core = 51
-				add_state_core = 33
-				add_state_core = 61
-				add_state_core = 62
-				add_state_core = 52
-				add_state_core = 20
-				add_state_core = 21
-				add_state_core = 16
-				add_state_core = 22
-				
-				transfer_state = 31
-				transfer_state = 32
-				transfer_state = 25
-				transfer_state = 51
-				transfer_state = 33
-				transfer_state = 61
-				transfer_state = 62
-				transfer_state = 52
-				transfer_state = 20
-				transfer_state = 21
-				transfer_state = 16
-				transfer_state = 22
-				declare_war_on = {
-					target = GMR
-					type = annex_everything
-				}
-			}
-		}
-		
-		hidden_effect = {
-			TRI = {
-				transfer_state = 67
-				transfer_state = 68
-				transfer_state = 69
-				transfer_state = 70
-				transfer_state = 40
-				transfer_state = 29
-				transfer_state = 49
-				transfer_state = 57
-				
-				add_state_core = 67
-				add_state_core = 68
-				add_state_core = 69
-				add_state_core = 70
-				add_state_core = 40
-				add_state_core = 29
-				add_state_core = 49
-				add_state_core = 57
-				declare_war_on = {
-					target = GMR
-					type = annex_everything
-				}
-			}
-		}
-		
-		hidden_effect = {
-			KAL = {
-				add_state_core = 65
-				add_state_core = 58
-				add_state_core = 37
-				add_state_core = 30
-				add_state_core = 36
-				add_state_core = 723
-				add_state_core = 58
-				add_state_core = 35
-				add_state_core = 59
-				add_state_core = 60
-				add_state_core = 34
-				
-				transfer_state = 65
-				transfer_state = 58
-				transfer_state = 37
-				transfer_state = 30
-				transfer_state = 36
-				transfer_state = 723
-				transfer_state = 58
-				transfer_state = 35
-				transfer_state = 59
-				transfer_state = 60
-				transfer_state = 34
-				change_tag_from = GMR
-				declare_war_on = {
-					target = GMR
-					type = annex_everything
-				}
-			}
-		}
-		
-		hidden_effect = {
-			IRT = {
-				transfer_state = 1
-				transfer_state = 2
-				transfer_state = 3
-				transfer_state = 4
-				transfer_state = 5
-				transfer_state = 6
-				transfer_state = 7
-				transfer_state = 8
-				transfer_state = 9
-				transfer_state = 10
-				transfer_state = 11
-				transfer_state = 12
-				transfer_state = 15
-				
-				add_state_core = 1
-				add_state_core = 2
-				add_state_core = 3
-				add_state_core = 4
-				add_state_core = 5
-				add_state_core = 6
-				add_state_core = 7
-				add_state_core = 8
-				add_state_core = 9
-				add_state_core = 10
-				add_state_core = 11
-				add_state_core = 12
-				add_state_core = 15
-				declare_war_on = {
-					target = GMR
-					type = annex_everything
-				}
-			}
-		}
-		
-		hidden_effect = {
-			NAV = {
-				transfer_state = 72
-				transfer_state = 46
-				transfer_state = 74
-				transfer_state = 75
-				transfer_state = 73
-				transfer_state = 47
-				transfer_state = 71
-				transfer_state = 66
-
-				add_state_core = 72
-				add_state_core = 46
-				add_state_core = 74
-				add_state_core = 75
-				add_state_core = 73
-				add_state_core = 47
-				add_state_core = 71
-				add_state_core = 66
-				declare_war_on = {
-					target = GMR
-					type = annex_everything
-				}
-			}
-		}
-		
-		hidden_effect = {
-			KRT = {
-				transfer_state = 17
-				transfer_state = 18
-				transfer_state = 19
-				transfer_state = 13
-				transfer_state = 45
-				transfer_state = 23
-				transfer_state = 24
-
-				add_state_core = 17
-				add_state_core = 18
-				add_state_core = 19
-				add_state_core = 13
-				add_state_core = 45
-				add_state_core = 23
-				add_state_core = 24
-				declare_war_on = {
-					target = GMR
-					type = annex_everything
-				}
-			}
-		}
-		
-		hidden_effect = {
-			FEL = {
-				transfer_state = 28
-				transfer_state = 27
-				transfer_state = 26
-				transfer_state = 41
-				transfer_state = 38
-				transfer_state = 39
-				transfer_state = 42
-				transfer_state = 44
-				transfer_state = 43
-				
-				add_state_core = 28
-				add_state_core = 27
-				add_state_core = 26
-				add_state_core = 41
-				add_state_core = 38
-				add_state_core = 39
-				add_state_core = 42
-				add_state_core = 44
-				add_state_core = 43
-				declare_war_on = {
-					target = GMR
-					type = annex_everything
-				}
-			}
+		name = gmr.32.c
+		KAL = {
+			change_tag_from = GMR
 		}
 	}
-	
+
 	option = { #Still not there
 		name = gmr.32.e
 		country_event = {
@@ -3536,688 +1890,14 @@ country_event = { #Realm Shatters 3: Return of the Sinlis
 		is_triggered_only = yes
 		
 		option = { #Play Nastrogdar
-		name = gmr.33.a
-		hidden_effect = {
-		
-			1 = {
-				set_state_name = "Ierethayne"
-			}
-			set_province_name = {
-				id = 3109
-				name = "Ierethayne"
-			}
-			
-			28 = {
-				set_state_name = "Felweyne"
-			}
-			set_province_name = {
-				id = 3966
-				name = "Felweyne"
-			}
-			
-			17 = {
-				set_state_name = "Kortinall"
-			}
-			
-			set_province_name = {
-				id = 7830
-				name = "Kortinall"
-			}
-			
-			72 = {
-				set_state_name = "Navandonne"
-			}
-			
-			set_province_name = {
-				id = 1334
-				name = "Navandonne"
-			}
-			
-			34 = {
-				set_state_name = "Kaltire"
-			}
-			
-			set_province_name = {
-				id = 3863
-				name = "Kaltire"
-			}
-			
-			20 = {
-				set_state_name = "Nastrodoge"
-			}
-			
-			set_province_name = {
-				id = 4931
-				name = "Nastrodoge"
-			}
-			
-			29 = {
-				set_state_name = "Trifell"
-			}
-			
-			set_province_name = {
-				id = 8702
-				name = "Trifell"
-			}
-			
-			remove_state_core = 1
-			remove_state_core = 2
-			remove_state_core = 3
-			remove_state_core = 4
-			remove_state_core = 5
-			remove_state_core = 6
-			remove_state_core = 7
-			remove_state_core = 8
-			remove_state_core = 9
-			remove_state_core = 10
-			remove_state_core = 11
-			remove_state_core = 12
-			remove_state_core = 15
-			remove_state_core = 28
-			remove_state_core = 27
-			remove_state_core = 26
-			remove_state_core = 41
-			remove_state_core = 38
-			remove_state_core = 39
-			remove_state_core = 42
-			remove_state_core = 44
-			remove_state_core = 43
-			remove_state_core = 17
-			remove_state_core = 18
-			remove_state_core = 19
-			remove_state_core = 13
-			remove_state_core = 45
-			remove_state_core = 23
-			remove_state_core = 24
-			remove_state_core = 72
-			remove_state_core = 46
-			remove_state_core = 74
-			remove_state_core = 75
-			remove_state_core = 73
-			remove_state_core = 47
-			remove_state_core = 71
-			remove_state_core = 66
-			remove_state_core = 67
-			remove_state_core = 68
-			remove_state_core = 69
-			remove_state_core = 70
-			remove_state_core = 40
-			remove_state_core = 29
-			remove_state_core = 49
-			remove_state_core = 57
-			remove_state_core = 65
-			remove_state_core = 58
-			remove_state_core = 37
-			remove_state_core = 30
-			remove_state_core = 36
-			remove_state_core = 723
-			remove_state_core = 58
-			remove_state_core = 35
-			remove_state_core = 59
-			remove_state_core = 60
-			remove_state_core = 34
-			remove_state_core = 20
-			remove_state_core = 21
-			remove_state_core = 16
-			remove_state_core = 22
-			remove_state_core = 31
-			remove_state_core = 32
-			remove_state_core = 25
-			remove_state_core = 51
-			remove_state_core = 33
-			remove_state_core = 61
-			remove_state_core = 62
-			remove_state_core = 52
-		}
-		
-		hidden_effect = {
+			name = gmr.33.a
 			NAS = {
-				add_state_core = 31
-				add_state_core = 32
-				add_state_core = 25
-				add_state_core = 51
-				add_state_core = 33
-				add_state_core = 61
-				add_state_core = 62
-				add_state_core = 52
-				add_state_core = 20
-				add_state_core = 21
-				add_state_core = 16
-				add_state_core = 22
-				
-				transfer_state = 31
-				transfer_state = 32
-				transfer_state = 25
-				transfer_state = 51
-				transfer_state = 33
-				transfer_state = 61
-				transfer_state = 62
-				transfer_state = 52
-				transfer_state = 20
-				transfer_state = 21
-				transfer_state = 16
-				transfer_state = 22
-				declare_war_on = {
-					target = GMR
-					type = annex_everything
-				}
-			}
-		}
-		
-		hidden_effect = {
-			TRI = {
-				transfer_state = 67
-				transfer_state = 68
-				transfer_state = 69
-				transfer_state = 70
-				transfer_state = 40
-				transfer_state = 29
-				transfer_state = 49
-				transfer_state = 57
-				
-				add_state_core = 67
-				add_state_core = 68
-				add_state_core = 69
-				add_state_core = 70
-				add_state_core = 40
-				add_state_core = 29
-				add_state_core = 49
-				add_state_core = 57
 				change_tag_from = GMR
-				declare_war_on = {
-					target = GMR
-					type = annex_everything
-				}
 			}
 		}
-		
-		hidden_effect = {
-			KAL = {
-				add_state_core = 65
-				add_state_core = 58
-				add_state_core = 37
-				add_state_core = 30
-				add_state_core = 36
-				add_state_core = 723
-				add_state_core = 58
-				add_state_core = 35
-				add_state_core = 59
-				add_state_core = 60
-				add_state_core = 34
-				
-				transfer_state = 65
-				transfer_state = 58
-				transfer_state = 37
-				transfer_state = 30
-				transfer_state = 36
-				transfer_state = 723
-				transfer_state = 58
-				transfer_state = 35
-				transfer_state = 59
-				transfer_state = 60
-				transfer_state = 34
-				declare_war_on = {
-					target = GMR
-					type = annex_everything
-				}
-			}
-		}
-		
-		hidden_effect = {
-			IRT = {
-				transfer_state = 1
-				transfer_state = 2
-				transfer_state = 3
-				transfer_state = 4
-				transfer_state = 5
-				transfer_state = 6
-				transfer_state = 7
-				transfer_state = 8
-				transfer_state = 9
-				transfer_state = 10
-				transfer_state = 11
-				transfer_state = 12
-				transfer_state = 15
-				
-				add_state_core = 1
-				add_state_core = 2
-				add_state_core = 3
-				add_state_core = 4
-				add_state_core = 5
-				add_state_core = 6
-				add_state_core = 7
-				add_state_core = 8
-				add_state_core = 9
-				add_state_core = 10
-				add_state_core = 11
-				add_state_core = 12
-				add_state_core = 15
-				declare_war_on = {
-					target = GMR
-					type = annex_everything
-				}
-			}
-		}
-		
-		hidden_effect = {
-			NAV = {
-				transfer_state = 72
-				transfer_state = 46
-				transfer_state = 74
-				transfer_state = 75
-				transfer_state = 73
-				transfer_state = 47
-				transfer_state = 71
-				transfer_state = 66
-
-				add_state_core = 72
-				add_state_core = 46
-				add_state_core = 74
-				add_state_core = 75
-				add_state_core = 73
-				add_state_core = 47
-				add_state_core = 71
-				add_state_core = 66
-				declare_war_on = {
-					target = GMR
-					type = annex_everything
-				}
-			}
-		}
-		
-		hidden_effect = {
-			KRT = {
-				transfer_state = 17
-				transfer_state = 18
-				transfer_state = 19
-				transfer_state = 13
-				transfer_state = 45
-				transfer_state = 23
-				transfer_state = 24
-
-				add_state_core = 17
-				add_state_core = 18
-				add_state_core = 19
-				add_state_core = 13
-				add_state_core = 45
-				add_state_core = 23
-				add_state_core = 24
-				declare_war_on = {
-					target = GMR
-					type = annex_everything
-				}
-			}
-		}
-		
-		hidden_effect = {
-			FEL = {
-				transfer_state = 28
-				transfer_state = 27
-				transfer_state = 26
-				transfer_state = 41
-				transfer_state = 38
-				transfer_state = 39
-				transfer_state = 42
-				transfer_state = 44
-				transfer_state = 43
-				
-				add_state_core = 28
-				add_state_core = 27
-				add_state_core = 26
-				add_state_core = 41
-				add_state_core = 38
-				add_state_core = 39
-				add_state_core = 42
-				add_state_core = 44
-				add_state_core = 43
-				declare_war_on = {
-					target = GMR
-					type = annex_everything
-				}
-			}
-		}
-	}
 	
 	option = { #Play the Realm
-	name = gmr.33.b
-	hidden_effect = {
-		
-			1 = {
-				set_state_name = "Ierethayne"
-			}
-			set_province_name = {
-				id = 3109
-				name = "Ierethayne"
-			}
-			
-			28 = {
-				set_state_name = "Felweyne"
-			}
-			set_province_name = {
-				id = 3966
-				name = "Felweyne"
-			}
-			
-			17 = {
-				set_state_name = "Kortinall"
-			}
-			
-			set_province_name = {
-				id = 7830
-				name = "Kortinall"
-			}
-			
-			72 = {
-				set_state_name = "Navandonne"
-			}
-			
-			set_province_name = {
-				id = 1334
-				name = "Navandonne"
-			}
-			
-			34 = {
-				set_state_name = "Kaltire"
-			}
-			
-			set_province_name = {
-				id = 3863
-				name = "Kaltire"
-			}
-			
-			20 = {
-				set_state_name = "Nastrodoge"
-			}
-			
-			set_province_name = {
-				id = 4931
-				name = "Nastrodoge"
-			}
-			
-			29 = {
-				set_state_name = "Trifell"
-			}
-			
-			set_province_name = {
-				id = 8702
-				name = "Trifell"
-			}
-			
-			remove_state_core = 1
-			remove_state_core = 2
-			remove_state_core = 3
-			remove_state_core = 4
-			remove_state_core = 5
-			remove_state_core = 6
-			remove_state_core = 7
-			remove_state_core = 8
-			remove_state_core = 9
-			remove_state_core = 10
-			remove_state_core = 11
-			remove_state_core = 12
-			remove_state_core = 15
-			remove_state_core = 28
-			remove_state_core = 27
-			remove_state_core = 26
-			remove_state_core = 41
-			remove_state_core = 38
-			remove_state_core = 39
-			remove_state_core = 42
-			remove_state_core = 44
-			remove_state_core = 43
-			remove_state_core = 17
-			remove_state_core = 18
-			remove_state_core = 19
-			remove_state_core = 13
-			remove_state_core = 45
-			remove_state_core = 23
-			remove_state_core = 24
-			remove_state_core = 72
-			remove_state_core = 46
-			remove_state_core = 74
-			remove_state_core = 75
-			remove_state_core = 73
-			remove_state_core = 47
-			remove_state_core = 71
-			remove_state_core = 66
-			remove_state_core = 67
-			remove_state_core = 68
-			remove_state_core = 69
-			remove_state_core = 70
-			remove_state_core = 40
-			remove_state_core = 29
-			remove_state_core = 49
-			remove_state_core = 57
-			remove_state_core = 65
-			remove_state_core = 58
-			remove_state_core = 37
-			remove_state_core = 30
-			remove_state_core = 36
-			remove_state_core = 723
-			remove_state_core = 58
-			remove_state_core = 35
-			remove_state_core = 59
-			remove_state_core = 60
-			remove_state_core = 34
-			remove_state_core = 20
-			remove_state_core = 21
-			remove_state_core = 16
-			remove_state_core = 22
-			remove_state_core = 31
-			remove_state_core = 32
-			remove_state_core = 25
-			remove_state_core = 51
-			remove_state_core = 33
-			remove_state_core = 61
-			remove_state_core = 62
-			remove_state_core = 52
-		}
-		
-		hidden_effect = {
-			NAS = {
-				add_state_core = 31
-				add_state_core = 32
-				add_state_core = 25
-				add_state_core = 51
-				add_state_core = 33
-				add_state_core = 61
-				add_state_core = 62
-				add_state_core = 52
-				add_state_core = 20
-				add_state_core = 21
-				add_state_core = 16
-				add_state_core = 22
-				
-				transfer_state = 31
-				transfer_state = 32
-				transfer_state = 25
-				transfer_state = 51
-				transfer_state = 33
-				transfer_state = 61
-				transfer_state = 62
-				transfer_state = 52
-				transfer_state = 20
-				transfer_state = 21
-				transfer_state = 16
-				transfer_state = 22
-				declare_war_on = {
-					target = GMR
-					type = annex_everything
-				}
-			}
-		}
-		
-		hidden_effect = {
-			KAL = {
-				add_state_core = 65
-				add_state_core = 58
-				add_state_core = 37
-				add_state_core = 30
-				add_state_core = 36
-				add_state_core = 723
-				add_state_core = 58
-				add_state_core = 35
-				add_state_core = 59
-				add_state_core = 60
-				add_state_core = 34
-				
-				transfer_state = 65
-				transfer_state = 58
-				transfer_state = 37
-				transfer_state = 30
-				transfer_state = 36
-				transfer_state = 723
-				transfer_state = 58
-				transfer_state = 35
-				transfer_state = 59
-				transfer_state = 60
-				transfer_state = 34
-				declare_war_on = {
-					target = GMR
-					type = annex_everything
-				}
-			}
-		}
-		
-		hidden_effect = {
-			TRI = {
-				transfer_state = 67
-				transfer_state = 68
-				transfer_state = 69
-				transfer_state = 70
-				transfer_state = 40
-				transfer_state = 29
-				transfer_state = 49
-				transfer_state = 57
-				
-				add_state_core = 67
-				add_state_core = 68
-				add_state_core = 69
-				add_state_core = 70
-				add_state_core = 40
-				add_state_core = 29
-				add_state_core = 49
-				add_state_core = 57
-				declare_war_on = {
-					target = GMR
-					type = annex_everything
-				}
-			}
-		}
-		
-		hidden_effect = {
-			IRT = {
-				transfer_state = 1
-				transfer_state = 2
-				transfer_state = 3
-				transfer_state = 4
-				transfer_state = 5
-				transfer_state = 6
-				transfer_state = 7
-				transfer_state = 8
-				transfer_state = 9
-				transfer_state = 10
-				transfer_state = 11
-				transfer_state = 12
-				transfer_state = 15
-				
-				add_state_core = 1
-				add_state_core = 2
-				add_state_core = 3
-				add_state_core = 4
-				add_state_core = 5
-				add_state_core = 6
-				add_state_core = 7
-				add_state_core = 8
-				add_state_core = 9
-				add_state_core = 10
-				add_state_core = 11
-				add_state_core = 12
-				add_state_core = 15
-				declare_war_on = {
-					target = GMR
-					type = annex_everything
-				}
-			}
-		}
-		
-		hidden_effect = {
-			NAV = {
-				transfer_state = 72
-				transfer_state = 46
-				transfer_state = 74
-				transfer_state = 75
-				transfer_state = 73
-				transfer_state = 47
-				transfer_state = 71
-				transfer_state = 66
-
-				add_state_core = 72
-				add_state_core = 46
-				add_state_core = 74
-				add_state_core = 75
-				add_state_core = 73
-				add_state_core = 47
-				add_state_core = 71
-				add_state_core = 66
-				declare_war_on = {
-					target = GMR
-					type = annex_everything
-				}
-			}
-		}
-		
-		hidden_effect = {
-			KRT = {
-				transfer_state = 17
-				transfer_state = 18
-				transfer_state = 19
-				transfer_state = 13
-				transfer_state = 45
-				transfer_state = 23
-				transfer_state = 24
-
-				add_state_core = 17
-				add_state_core = 18
-				add_state_core = 19
-				add_state_core = 13
-				add_state_core = 45
-				add_state_core = 23
-				add_state_core = 24
-				declare_war_on = {
-					target = GMR
-					type = annex_everything
-				}
-			}
-		}
-		
-		hidden_effect = {
-			FEL = {
-				transfer_state = 28
-				transfer_state = 27
-				transfer_state = 26
-				transfer_state = 41
-				transfer_state = 38
-				transfer_state = 39
-				transfer_state = 42
-				transfer_state = 44
-				transfer_state = 43
-				
-				add_state_core = 28
-				add_state_core = 27
-				add_state_core = 26
-				add_state_core = 41
-				add_state_core = 38
-				add_state_core = 39
-				add_state_core = 42
-				add_state_core = 44
-				add_state_core = 43
-				declare_war_on = {
-					target = GMR
-					type = annex_everything
-				}
-			}
-		}
+		name = gmr.33.b
 	}
 	
 	option = { #Go back
@@ -4745,148 +2425,12 @@ country_event = {#Kingsmen Rebellion!
 		picture = GFX_report_event_spain_civil_war_soldiers
 	
 	fire_only_once = yes
-	mean_time_to_happen = {
-		days = 5
-	}
 		
 	is_triggered_only = yes
 	
 	immediate = {
 		hidden_effect = {
-			delete_unit_template_and_units = {
-				division_template = "Enforcers"
-				}
-			delete_unit_template_and_units = {
-				division_template = "Black Gargoyles"
-			}
-			delete_unit_template_and_units = {
-				division_template = "Sail Knights"
-			}
-			delete_unit_template_and_units = {
-				division_template = "Outrider Scouts"
-			}
-			load_oob = "GMR_civilwar"
-			set_global_flag = GMR_kingsmen_rebellion_flag
-		}
-		if = {
-			limit = {
-				has_idea = GMR_trade_union
-			}
-			remove_ideas = GMR_trade_union
-		}
-		if = {
-			limit = {
-				UNG = {
-					has_idea = UNG_trade_realm
-				}
-			}
-			UNG = {
-				remove_ideas = UNG_trade_realm
-			}
-		}
-	}
-	
-	option = { #Play Realm
-		name = gmr.43.a
-		add_stability = 0.-15
-		hidden_effect = {
-			17 = {
-				set_state_name = "Kortinall"
-			}
-		
-			set_province_name = {
-				id = 7830
-				name = "Kortinall"
-			}
-		
-			34 = {
-			set_state_name = "Kaltire"
-			}
-		
-			set_province_name = {
-				id = 3863
-				name = "Kaltire"
-			}
-		
-			20 = {
-				set_state_name = "Nastrodoge"
-			}
-			
-			set_province_name = {
-				id = 4931
-				name = "Nastrodoge"
-			}
-		
-			29 = {
-				set_state_name = "Trifell"
-			}
-		
-			set_province_name = {
-				id = 8702
-				name = "Trifell"
-			}
-			
-			hidden_effect = {
-				delete_unit_template_and_units = {
-					division_template = "Enforcers"
-				}
-				delete_unit_template_and_units = {
-					division_template = "Black Gargoyles"
-				}
-				delete_unit_template_and_units = {
-					division_template = "Sail Knights"
-				}
-				delete_unit_template_and_units = {
-					division_template = "Outrider Scouts"
-				}
-				load_oob = "GMR_revolution"
-			}
-		
 			NPC = {
-
-				transfer_state = 17
-				transfer_state = 18
-				transfer_state = 19
-				transfer_state = 13
-				transfer_state = 45
-				transfer_state = 23
-				transfer_state = 24
-				transfer_state = 67
-				transfer_state = 68
-				transfer_state = 69
-				transfer_state = 70
-				transfer_state = 40
-				transfer_state = 29
-				transfer_state = 49
-				transfer_state = 57
-				transfer_state = 65
-				transfer_state = 58
-				transfer_state = 37
-				transfer_state = 30
-				transfer_state = 36
-				transfer_state = 723
-				transfer_state = 58
-				transfer_state = 35
-				transfer_state = 59
-				transfer_state = 60
-				transfer_state = 34
-				transfer_state = 31
-				transfer_state = 32
-				transfer_state = 25
-				transfer_state = 51
-				transfer_state = 33
-				transfer_state = 61
-				transfer_state = 62
-				transfer_state = 52
-				transfer_state = 20
-				transfer_state = 21
-				transfer_state = 16
-				transfer_state = 22
-				transfer_state = 63
-				transfer_state = 64
-				transfer_state = 55
-				transfer_state = 56
-				
 				add_state_core = 17
 				add_state_core = 18
 				add_state_core = 19
@@ -4929,7 +2473,115 @@ country_event = {#Kingsmen Rebellion!
 				add_state_core = 64
 				add_state_core = 55
 				add_state_core = 56
+				}
+			if = {
+				limit = {
+					has_idea = GMR_trade_union
+				}
+				remove_ideas = GMR_trade_union
+			}
+			
+			if = {
+				limit = {
+					UNG = {
+						has_idea = UNG_trade_realm
+					}
+				}
+				UNG = {
+					remove_ideas = UNG_trade_realm
+				}
+			}
+			
+			delete_unit_template_and_units = {
+				division_template = "Enforcers"
+			}
+			delete_unit_template_and_units = {
+				division_template = "Black Gargoyles"
+			}
+			delete_unit_template_and_units = {
+				division_template = "Sail Knights"
+			}
+			
+			set_country_flag = GMR_kingsmen_rebellion_flag
+		}
+	}
+	
+	option = { #Play Realm
+		name = gmr.43.a
+		add_stability = 0.-15
+		hidden_effect = {
+			NPC = {
+				annex_country = {
+					target = GMR
+					transfer_troops = no
 				
+				}
+			}
+			
+			NPC = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 2500
+					producer = GMR
+				}
+			}
+
+			every_state = {
+				limit = {
+					is_owned_by = NPC
+					is_core_of = GMR
+					NOT = {
+						is_core_of = NPC
+					}
+				}
+				GMR = {
+					transfer_state = PREV
+				}
+			}
+			
+			load_oob = "GMR_revolution"
+			
+			delete_unit_template_and_units = {
+				division_template = "Outrider Scouts"
+			}
+			
+			17 = {
+				set_state_name = "Kortinall"
+			}
+		
+			set_province_name = {
+				id = 7830
+				name = "Kortinall"
+			}
+		
+			34 = {
+			set_state_name = "Kaltire"
+			}
+		
+			set_province_name = {
+				id = 3863
+				name = "Kaltire"
+			}
+		
+			20 = {
+				set_state_name = "Nastrodoge"
+			}
+			
+			set_province_name = {
+				id = 4931
+				name = "Nastrodoge"
+			}
+		
+			29 = {
+				set_state_name = "Trifell"
+			}
+		
+			set_province_name = {
+				id = 8702
+				name = "Trifell"
+			}
+		
+			NPC = {
 				load_oob = "NPC_revolution"
 				
 				declare_war_on = {
@@ -4944,6 +2596,41 @@ country_event = {#Kingsmen Rebellion!
 		name = gmr.43.b
 		add_stability = 0.-15
 		hidden_effect = {
+			NPC = {
+				annex_country = {
+					target = GMR
+					transfer_troops = no
+				
+				}
+			}
+			
+			NPC = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 2500
+					producer = GMR
+				}
+			}
+			
+			every_state = {
+				limit = {
+					is_owned_by = NPC
+					is_core_of = GMR
+					NOT = {
+						is_core_of = NPC
+					}
+				}
+				GMR = {
+					transfer_state = PREV
+				}
+			}
+			
+			load_oob = "GMR_revolution"
+			
+			delete_unit_template_and_units = {
+				division_template = "Outrider Scouts"
+			}
+			
 			17 = {
 				set_state_name = "Kortinall"
 			}
@@ -4979,121 +2666,19 @@ country_event = {#Kingsmen Rebellion!
 				id = 8702
 				name = "Trifell"
 			}
-			
-			hidden_effect = {
-				delete_unit_template_and_units = {
-					division_template = "Enforcers"
-				}
-				delete_unit_template_and_units = {
-					division_template = "Black Gargoyles"
-				}
-				delete_unit_template_and_units = {
-					division_template = "Sail Knights"
-				}
+
+			NPC = {
+				load_oob = "NPC_revolution"
+				
 				delete_unit_template_and_units = {
 					division_template = "Outrider Scouts"
 				}
-				load_oob = "GMR_revolution"
-			}
-		
-			NPC = {
-
-				transfer_state = 17
-				transfer_state = 18
-				transfer_state = 19
-				transfer_state = 13
-				transfer_state = 45
-				transfer_state = 23
-				transfer_state = 24
-				transfer_state = 67
-				transfer_state = 68
-				transfer_state = 69
-				transfer_state = 70
-				transfer_state = 40
-				transfer_state = 29
-				transfer_state = 49
-				transfer_state = 57
-				transfer_state = 65
-				transfer_state = 58
-				transfer_state = 37
-				transfer_state = 30
-				transfer_state = 36
-				transfer_state = 723
-				transfer_state = 58
-				transfer_state = 35
-				transfer_state = 59
-				transfer_state = 60
-				transfer_state = 34
-				transfer_state = 31
-				transfer_state = 32
-				transfer_state = 25
-				transfer_state = 51
-				transfer_state = 33
-				transfer_state = 61
-				transfer_state = 62
-				transfer_state = 52
-				transfer_state = 20
-				transfer_state = 21
-				transfer_state = 16
-				transfer_state = 22
-				transfer_state = 63
-				transfer_state = 64
-				transfer_state = 55
-				transfer_state = 56
-				
-				add_state_core = 17
-				add_state_core = 18
-				add_state_core = 19
-				add_state_core = 13
-				add_state_core = 45
-				add_state_core = 23
-				add_state_core = 24
-				add_state_core = 67
-				add_state_core = 68
-				add_state_core = 69
-				add_state_core = 70
-				add_state_core = 40
-				add_state_core = 29
-				add_state_core = 49
-				add_state_core = 57
-				add_state_core = 65
-				add_state_core = 58
-				add_state_core = 37
-				add_state_core = 30
-				add_state_core = 36
-				add_state_core = 723
-				add_state_core = 58
-				add_state_core = 35
-				add_state_core = 59
-				add_state_core = 60
-				add_state_core = 34
-				add_state_core = 31
-				add_state_core = 32
-				add_state_core = 25
-				add_state_core = 51
-				add_state_core = 33
-				add_state_core = 61
-				add_state_core = 62
-				add_state_core = 52
-				add_state_core = 20
-				add_state_core = 21
-				add_state_core = 16
-				add_state_core = 22
-				add_state_core = 63
-				add_state_core = 64
-				add_state_core = 55
-				add_state_core = 56
-				
-				load_oob = "NPC_revolution"
 				
 				declare_war_on = {
 					target = GMR
 					type = annex_everything
 				}
-				
-				NPC = {
-					change_tag_from = GMR
-				}
+				change_tag_from = GMR
 			}
 		}
 	}
@@ -5111,7 +2696,86 @@ country_event = { #Dominance Restored
 			has_country_flag = GMR_kingsmen_rebellion_flag
 		}
 		has_war = no
+		AND = {
+			OR = {
+				NOT = {
+					country_exists = NPC
+				}
+				NPC = {
+					is_puppet_of = GMR
+				}
+			}
+			
+			OR = {
+				NOT = {
+					country_exists = IRT
+				}
+				IRT = {
+					is_puppet_of = GMR
+				}
+			}
+			
+			OR = {
+				NOT = {
+					country_exists = KAL
+				}
+				KAL = {
+					is_puppet_of = GMR
+				}
+			}
+			
+			OR = {
+				NOT = {
+					country_exists = KRT
+				}
+				KRT = {
+					is_puppet_of = GMR
+				}
+			}
+			
+			OR = {
+				NOT = {
+					country_exists = NAS
+				}
+				NAS = {
+					is_puppet_of = GMR
+				}
+			}
+			
+			OR = {
+				NOT = {
+					country_exists = NAV
+				}
+				NAV = {
+					is_puppet_of = GMR
+				}
+			}
+			
+			OR = {
+				NOT = {
+					country_exists = FEL
+				}
+				FEL = {
+					is_puppet_of = GMR
+				}
+			}
+			
+			OR = {
+				NOT = {
+					country_exists = TRI
+				}
+				TRI = {
+					is_puppet_of = GMR
+				}
+			}
+		}
 	}
+	
+	mean_time_to_happen = {
+		days = 50
+	}
+	
+	fire_only_once = yes
 	
 	option = { # Yay
 		name = gmr.44.a
@@ -5121,6 +2785,44 @@ country_event = { #Dominance Restored
 			clr_country_flag = GMR_uprisings
 			clr_country_flag = GMR_kingsmen_rebellion_flag
 			set_country_flag = GMR_dominance_restored
+			every_state = {
+				limit = {
+					is_owned_by = GMR
+					OR = {
+						is_core_of = NPC
+						is_core_of = IRT
+						is_core_of = FEL
+						is_core_of = KRT
+						is_core_of = KAL
+						is_core_of = TRI
+						is_core_of = NAS
+						is_core_of = NAV
+					}
+				}
+				remove_core_of = NPC
+				remove_core_of = IRT
+				remove_core_of = FEL
+				remove_core_of = KRT
+				remove_core_of = KAL
+				remove_core_of = TRI
+				remove_core_of = NAS
+				remove_core_of = NAV
+				add_core_of = GMR
+				reset_state_name = yes
+			}
+			reset_province_name = 3109
+			
+			reset_province_name = 3966
+			
+			reset_province_name = 7830
+			
+			reset_province_name = 1334
+
+			reset_province_name = 3863
+				
+			reset_province_name = 4931
+
+			reset_province_name = 8702
 		}
 	}
 }
@@ -5149,6 +2851,4 @@ country_event = {#Ordorian Raid
 			days = 50
 		}
 	}
-}
-	
 }

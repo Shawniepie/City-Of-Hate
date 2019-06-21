@@ -1,0 +1,1071 @@
+ideas = {
+
+	patron_deity = {
+		law = yes
+
+		septism_religion = {
+			
+			visible = {
+				OR = {
+					original_tag = UNG
+					original_tag = SNF
+					original_tag = WIS
+					original_tag = WSZ
+					original_tag = FTH
+					original_tag = ARK
+					original_tag = TEI
+					original_tag = NRK
+					original_tag = STA
+					original_tag = SPW
+					original_tag = HLZ
+					original_tag = SVT
+					original_tag = NOC
+					original_tag = FAU
+					has_country_flag = PRK_converted_to_septism
+				}
+			}
+			
+			allowed = {
+				OR = {
+					original_tag = UNG
+					original_tag = SNF
+					original_tag = WIS
+					original_tag = WSZ
+					original_tag = FTH
+					original_tag = ARK
+					original_tag = TEI
+					original_tag = NRK
+					original_tag = STA
+					original_tag = SPW
+					original_tag = HLZ
+					original_tag = SVT
+					original_tag = NOC
+					original_tag = FAU
+					original_tag = PRK
+				}
+			}
+			
+			available = {
+				OR = {
+					custom_trigger_tooltip = {
+						tooltip = septism_freiprinz_tt		
+						OR = {
+							original_tag = UNG
+							original_tag = SNF
+							original_tag = WIS
+							original_tag = WSZ
+							original_tag = FTH
+							original_tag = ARK
+							original_tag = TEI
+							original_tag = NRK
+							original_tag = STA
+							original_tag = SPW
+							original_tag = HLZ
+							original_tag = SVT
+							original_tag = NOC
+							original_tag = FAU
+							is_subject_of = UNG
+						}
+					}
+					has_country_flag = PRK_converted_to_septism
+				}
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = religion_septism
+			
+			traits = {
+				septism_bonuses
+			}
+			
+			removal_cost = -1
+		}
+		
+		hieyrenous_patron = {
+		
+			visible = {
+				OR = {
+					original_tag = UNG
+					original_tag = SNF
+					original_tag = WIS
+					original_tag = WSZ
+					original_tag = FTH
+					original_tag = ARK
+					original_tag = TEI
+					original_tag = NRK
+					original_tag = STA
+					original_tag = SPW
+					original_tag = HLZ
+					original_tag = SVT
+					original_tag = NOC
+					original_tag = FAU
+					has_country_flag = PRK_converted_to_septism
+				}
+			}
+		
+			allowed = {
+				OR = {
+					original_tag = UNG
+					original_tag = SNF
+					original_tag = WIS
+					original_tag = WSZ
+					original_tag = FTH
+					original_tag = ARK
+					original_tag = TEI
+					original_tag = NRK
+					original_tag = STA
+					original_tag = SPW
+					original_tag = HLZ
+					original_tag = SVT
+					original_tag = NOC
+					original_tag = FAU
+					original_tag = PRK
+				}
+			}
+			
+			available = {
+				OR = {
+					custom_trigger_tooltip = {
+						tooltip = septism_freiprinz_tt		
+						OR = {
+							original_tag = UNG
+							original_tag = SNF
+							original_tag = WIS
+							original_tag = WSZ
+							original_tag = FTH
+							original_tag = ARK
+							original_tag = TEI
+							original_tag = NRK
+							original_tag = STA
+							original_tag = SPW
+							original_tag = HLZ
+							original_tag = SVT
+							original_tag = NOC
+							original_tag = FAU
+							is_subject_of = UNG
+						}
+					}
+					has_country_flag = PRK_converted_to_septism
+				}
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = deity_hieyrenous
+			
+			traits = {
+				hieyrenous_bonuses
+			}
+			
+			removal_cost = -1
+		}
+		
+		daskellin_patron = {
+		
+			visible = {
+				OR = {
+					original_tag = UNG
+					original_tag = SNF
+					original_tag = WIS
+					original_tag = WSZ
+					original_tag = FTH
+					original_tag = ARK
+					original_tag = TEI
+					original_tag = NRK
+					original_tag = STA
+					original_tag = SPW
+					original_tag = HLZ
+					original_tag = SVT
+					original_tag = NOC
+					original_tag = FAU
+					has_country_flag = PRK_converted_to_septism
+				}
+			}
+			
+			allowed = {
+				OR = {
+					original_tag = UNG
+					original_tag = SNF
+					original_tag = WIS
+					original_tag = WSZ
+					original_tag = FTH
+					original_tag = ARK
+					original_tag = TEI
+					original_tag = NRK
+					original_tag = STA
+					original_tag = SPW
+					original_tag = HLZ
+					original_tag = SVT
+					original_tag = NOC
+					original_tag = FAU
+					original_tag = PRK
+				}
+			}
+			
+			available = {
+				OR = {
+					custom_trigger_tooltip = {
+						tooltip = septism_freiprinz_tt		
+						OR = {
+							original_tag = UNG
+							original_tag = SNF
+							original_tag = WIS
+							original_tag = WSZ
+							original_tag = FTH
+							original_tag = ARK
+							original_tag = TEI
+							original_tag = NRK
+							original_tag = STA
+							original_tag = SPW
+							original_tag = HLZ
+							original_tag = SVT
+							original_tag = NOC
+							original_tag = FAU
+							is_subject_of = UNG
+						}
+					}
+					has_country_flag = PRK_converted_to_septism
+				}
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = deity_daskellin
+			
+			traits = {
+				daskellin_bonuses
+			}
+			
+			removal_cost = -1
+		}
+		
+		tergewelft_patron = {
+			
+			visible = {
+				OR = {
+					original_tag = UNG
+					original_tag = SNF
+					original_tag = WIS
+					original_tag = WSZ
+					original_tag = FTH
+					original_tag = ARK
+					original_tag = TEI
+					original_tag = NRK
+					original_tag = STA
+					original_tag = SPW
+					original_tag = HLZ
+					original_tag = SVT
+					original_tag = NOC
+					original_tag = FAU
+					has_country_flag = PRK_converted_to_septism
+				}
+			}
+
+			allowed = {
+				OR = {
+					original_tag = UNG
+					original_tag = SNF
+					original_tag = WIS
+					original_tag = WSZ
+					original_tag = FTH
+					original_tag = ARK
+					original_tag = TEI
+					original_tag = NRK
+					original_tag = STA
+					original_tag = SPW
+					original_tag = HLZ
+					original_tag = SVT
+					original_tag = NOC
+					original_tag = FAU
+					original_tag = PRK
+				}
+			}
+			
+			available = {
+				OR = {
+					custom_trigger_tooltip = {
+						tooltip = septism_freiprinz_tt		
+						OR = {
+							original_tag = UNG
+							original_tag = SNF
+							original_tag = WIS
+							original_tag = WSZ
+							original_tag = FTH
+							original_tag = ARK
+							original_tag = TEI
+							original_tag = NRK
+							original_tag = STA
+							original_tag = SPW
+							original_tag = HLZ
+							original_tag = SVT
+							original_tag = NOC
+							original_tag = FAU
+							is_subject_of = UNG
+						}
+					}
+					has_country_flag = PRK_converted_to_septism
+				}
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = deity_tergewelft
+			
+			traits = {
+				tergewelft_bonuses
+			}
+			
+			removal_cost = -1
+		}
+		
+		anzella_patron = {
+		
+			visible = {
+				OR = {
+					original_tag = UNG
+					original_tag = SNF
+					original_tag = WIS
+					original_tag = WSZ
+					original_tag = FTH
+					original_tag = ARK
+					original_tag = TEI
+					original_tag = NRK
+					original_tag = STA
+					original_tag = SPW
+					original_tag = HLZ
+					original_tag = SVT
+					original_tag = NOC
+					original_tag = FAU
+					has_country_flag = PRK_converted_to_septism
+				}
+			}
+		
+			allowed = {
+				OR = {
+					original_tag = UNG
+					original_tag = SNF
+					original_tag = WIS
+					original_tag = WSZ
+					original_tag = FTH
+					original_tag = ARK
+					original_tag = TEI
+					original_tag = NRK
+					original_tag = STA
+					original_tag = SPW
+					original_tag = HLZ
+					original_tag = SVT
+					original_tag = NOC
+					original_tag = FAU
+					original_tag = PRK
+				}
+			}
+			
+			available = {
+				OR = {
+					custom_trigger_tooltip = {
+						tooltip = septism_freiprinz_tt		
+						OR = {
+							original_tag = UNG
+							original_tag = SNF
+							original_tag = WIS
+							original_tag = WSZ
+							original_tag = FTH
+							original_tag = ARK
+							original_tag = TEI
+							original_tag = NRK
+							original_tag = STA
+							original_tag = SPW
+							original_tag = HLZ
+							original_tag = SVT
+							original_tag = NOC
+							original_tag = FAU
+							is_subject_of = UNG
+						}
+					}
+					has_country_flag = PRK_converted_to_septism
+				}
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = deity_anzella
+			
+			traits = {
+				anzella_bonuses
+			}
+			
+			removal_cost = -1
+		}
+		
+		nurhelm_patron = {
+		
+			visible = {
+				OR = {
+					original_tag = UNG
+					original_tag = SNF
+					original_tag = WIS
+					original_tag = WSZ
+					original_tag = FTH
+					original_tag = ARK
+					original_tag = TEI
+					original_tag = NRK
+					original_tag = STA
+					original_tag = SPW
+					original_tag = HLZ
+					original_tag = SVT
+					original_tag = NOC
+					original_tag = FAU
+					has_country_flag = PRK_converted_to_septism
+				}
+			}
+		
+			allowed = {
+				OR = {
+					original_tag = UNG
+					original_tag = SNF
+					original_tag = WIS
+					original_tag = WSZ
+					original_tag = FTH
+					original_tag = ARK
+					original_tag = TEI
+					original_tag = NRK
+					original_tag = STA
+					original_tag = SPW
+					original_tag = HLZ
+					original_tag = SVT
+					original_tag = NOC
+					original_tag = FAU
+					original_tag = PRK
+				}
+			}
+			
+			available = {
+				OR = {
+					custom_trigger_tooltip = {
+						tooltip = septism_freiprinz_tt		
+						OR = {
+							original_tag = UNG
+							original_tag = SNF
+							original_tag = WIS
+							original_tag = WSZ
+							original_tag = FTH
+							original_tag = ARK
+							original_tag = TEI
+							original_tag = NRK
+							original_tag = STA
+							original_tag = SPW
+							original_tag = HLZ
+							original_tag = SVT
+							original_tag = NOC
+							original_tag = FAU
+							is_subject_of = UNG
+						}
+					}
+					has_country_flag = PRK_converted_to_septism
+				}
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = deity_nurhelm
+			
+			traits = {
+				nurhelm_bonuses
+			}
+			
+			removal_cost = -1
+		}
+		
+		hutrig_patron = {
+		
+			visible = {
+				OR = {
+					original_tag = UNG
+					original_tag = SNF
+					original_tag = WIS
+					original_tag = WSZ
+					original_tag = FTH
+					original_tag = ARK
+					original_tag = TEI
+					original_tag = NRK
+					original_tag = STA
+					original_tag = SPW
+					original_tag = HLZ
+					original_tag = SVT
+					original_tag = NOC
+					original_tag = FAU
+					has_country_flag = PRK_converted_to_septism
+				}
+			}
+		
+			allowed = {
+				OR = {
+					original_tag = UNG
+					original_tag = SNF
+					original_tag = WIS
+					original_tag = WSZ
+					original_tag = FTH
+					original_tag = ARK
+					original_tag = TEI
+					original_tag = NRK
+					original_tag = STA
+					original_tag = SPW
+					original_tag = HLZ
+					original_tag = SVT
+					original_tag = NOC
+					original_tag = FAU
+					original_tag = PRK
+				}
+			}
+			
+			available = {
+				OR = {
+					custom_trigger_tooltip = {
+						tooltip = septism_freiprinz_tt		
+						OR = {
+							original_tag = UNG
+							original_tag = SNF
+							original_tag = WIS
+							original_tag = WSZ
+							original_tag = FTH
+							original_tag = ARK
+							original_tag = TEI
+							original_tag = NRK
+							original_tag = STA
+							original_tag = SPW
+							original_tag = HLZ
+							original_tag = SVT
+							original_tag = NOC
+							original_tag = FAU
+							is_subject_of = UNG
+						}
+					}
+					has_country_flag = PRK_converted_to_septism
+				}
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = deity_hutrig
+			
+			traits = {
+				hutrig_bonuses
+			}
+			
+			removal_cost = -1
+		}
+		
+		bitha_patron = {
+		
+			visible = {
+				OR = {
+					original_tag = UNG
+					original_tag = SNF
+					original_tag = WIS
+					original_tag = WSZ
+					original_tag = FTH
+					original_tag = ARK
+					original_tag = TEI
+					original_tag = NRK
+					original_tag = STA
+					original_tag = SPW
+					original_tag = HLZ
+					original_tag = SVT
+					original_tag = NOC
+					original_tag = FAU
+					has_country_flag = PRK_converted_to_septism
+				}
+			}
+		
+			allowed = {
+				OR = {
+					original_tag = UNG
+					original_tag = SNF
+					original_tag = WIS
+					original_tag = WSZ
+					original_tag = FTH
+					original_tag = ARK
+					original_tag = TEI
+					original_tag = NRK
+					original_tag = STA
+					original_tag = SPW
+					original_tag = HLZ
+					original_tag = SVT
+					original_tag = NOC
+					original_tag = FAU
+					original_tag = PRK
+				}
+			}
+			
+			available = {
+				OR = {
+					custom_trigger_tooltip = {
+						tooltip = septism_freiprinz_tt		
+						OR = {
+							original_tag = UNG
+							original_tag = SNF
+							original_tag = WIS
+							original_tag = WSZ
+							original_tag = FTH
+							original_tag = ARK
+							original_tag = TEI
+							original_tag = NRK
+							original_tag = STA
+							original_tag = SPW
+							original_tag = HLZ
+							original_tag = SVT
+							original_tag = NOC
+							original_tag = FAU
+							is_subject_of = UNG
+						}
+					}
+					has_country_flag = PRK_converted_to_septism
+				}
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = deity_bitha
+			
+			traits = {
+				bitha_bonuses
+			}
+			
+			removal_cost = -1
+		}
+		
+		krostov_religion = {
+		
+			visible = {
+				NOT = {
+					has_country_flag = PRK_converted_to_septism
+				}
+			}
+		
+		
+			allowed = {
+				original_tag = PRK
+			}
+			
+			available = {
+				NOT = {
+					has_country_flag = PRK_converted_to_septism
+				}
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = religion_krostovism
+			
+			traits = {
+				krostov_bonuses
+			}
+			
+			removal_cost = -1
+		}
+
+		arthenism_religion = {
+
+			visible = {
+				OR = {
+					tag = GMR
+					AND = {
+						tag = NPC
+						has_government = puritan
+					}
+				}
+			}
+			
+			allowed = {
+				OR = {
+					tag = GMR
+					AND = {
+						tag = NPC
+						has_government = puritan
+					}
+				}
+			}
+			
+			available = {
+				OR = {
+					tag = GMR
+					AND = {
+						tag = NPC
+						has_government = puritan
+					}
+				}
+			}
+			
+			allowed_civil_war = {
+				has_country_leader = {
+					name = "Trabaster Arthenon"
+					ruling_only = yes
+				}
+			}
+			
+			picture = religion_arthenism
+			
+			traits = {
+				arthenism_bonuses
+			}
+			
+			removal_cost = -1
+		}
+		
+		lorthorism_religion = {
+
+			visible = {
+				OR = {
+					original_tag = IRT
+					original_tag = FEL
+					original_tag = KAL
+					original_tag = KRT
+					original_tag = NAS
+					original_tag = NAV
+					original_tag = TRI
+					original_tag = NPC
+				}
+			}
+			
+			allowed = {
+				OR = {
+					original_tag = IRT
+					original_tag = FEL
+					original_tag = KAL
+					original_tag = KRT
+					original_tag = NAS
+					original_tag = NAV
+					original_tag = TRI
+					original_tag = NPC
+				}
+			}
+			
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = lorthorism_plains_tt		
+					OR = {
+						original_tag = IRT
+						original_tag = FEL
+						original_tag = KAL
+						original_tag = KRT
+						original_tag = NAS
+						original_tag = NAV
+						original_tag = TRI
+						original_tag = NPC
+					}
+				}
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = religion_lorthorism
+			
+			traits = {
+				lorthorism_bonuses
+			}
+			
+			removal_cost = -1
+		}
+		
+		sothrism_religion = {
+
+			visible = {
+				tag = GMR
+			}
+			
+			allowed = {
+				tag = GMR
+			}
+			
+			available = {
+				tag = GMR
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = religion_sothrism
+			
+			traits = {
+				sothrism_bonuses
+			}
+			
+			removal_cost = -1
+		}
+		
+		dwarven_ancestor_worship_religion = {
+			
+			visible = {
+				has_idea = dwarf_country
+			}
+			
+			allowed = {
+				has_idea = dwarf_country
+			}
+			
+			available = {
+				has_idea = dwarf_country
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = religion_dwarven_ancestor_worship
+			
+			traits = {
+				dwarven_ancestor_worship_bonuses
+			}
+			
+			removal_cost = -1
+		}
+		
+		itherynism_religion = {
+			
+			visible = {
+				OR = {
+					original_tag = ORD
+					original_tag = RTH
+					original_tag = EOR
+				}
+			}
+			
+			available = {
+				OR = {
+					original_tag = ORD
+					original_tag = RTH
+					original_tag = EOR
+				}
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = religion_itherynism
+			
+			traits = {
+				itherynism_bonuses
+			}
+		}
+		
+		itheryn_wisdom_patron = {
+
+			visible = {
+				OR = {
+					original_tag = ORD
+					original_tag = RTH
+					original_tag = EOR
+				}
+			}
+			
+			available = {
+				OR = {
+					original_tag = ORD
+					original_tag = RTH
+					original_tag = EOR
+				}
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = itheryn_wisdom
+			
+			traits = {
+				wisdom_itheryn_bonuses
+			}
+		}
+		
+		itheryn_vengeance_patron = {
+
+			visible = {
+				OR = {
+					original_tag = ORD
+					original_tag = RTH
+					original_tag = EOR
+				}
+			}
+			
+			available = {
+				OR = {
+					original_tag = ORD
+					original_tag = RTH
+					original_tag = EOR
+				}
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = itheryn_vengeance
+			
+			traits = {
+				vengeance_itheryn_bonuses
+			}
+		}
+		
+		itheryn_labour_patron = {
+
+			visible = {
+				OR = {
+					original_tag = ORD
+					original_tag = RTH
+					original_tag = EOR
+				}
+			}
+			
+			available = {
+				OR = {
+					original_tag = ORD
+					original_tag = RTH
+					original_tag = EOR
+				}
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = itheryn_labour
+			
+			traits = {
+				labour_itheryn_bonuses
+			}
+		}
+		
+		itheryn_justice_patron = {
+
+			visible = {
+				OR = {
+					original_tag = ORD
+					original_tag = RTH
+					original_tag = EOR
+				}
+			}
+			
+			available = {
+				OR = {
+					original_tag = ORD
+					original_tag = RTH
+					original_tag = EOR
+				}
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = itheryn_justice
+			
+			traits = {
+				justice_itheryn_bonuses
+			}
+		}
+		
+		ouborism_religion = {
+				
+			visible = {
+				original_tag = TLA
+			}
+			
+			allowed = {
+				original_tag = TLA
+			}
+			
+			available = {
+				original_tag = TLA
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = religion_ouborism
+			
+			traits = {
+				ouborism_bonuses
+			}
+			
+			removal_cost = -1
+		}
+		
+		molten_god_religion = {
+				
+			visible = {
+				original_tag = SUL
+			}
+			
+			allowed = {
+				original_tag = SUL
+			}
+			
+			available = {
+				original_tag = SUL
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = religion_molten_god
+			
+			traits = {
+				molten_god_bonuses
+			}
+			
+			removal_cost = -1
+		}
+		
+		damokegol_religion = {
+			
+			visible = {
+				original_tag = KUR
+			}
+			
+			allowed = {
+				original_tag = KUR
+			}
+			
+			available = {
+				original_tag = KUR
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = religion_damokegol
+			
+			traits = {
+				damokegol_bonuses
+			}
+			
+			removal_cost = -1
+		}
+	}
+}

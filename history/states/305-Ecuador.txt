@@ -1,0 +1,20 @@
+state={
+	id=305
+	name="STATE_305"
+	provinces={
+		1291 2151 3180 4214 5087 5176 7713 8029 8510 
+	}
+	state_category = town
+	manpower=18729
+	buildings_max_level_factor=1.000
+	history={
+		victory_points = { 7713 17 }
+		owner = HLZ
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 1
+			arms_factory = 1
+		}
+		add_core_of = HLZ
+	}
+}

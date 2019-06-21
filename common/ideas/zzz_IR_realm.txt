@@ -1,0 +1,66 @@
+ideas = {
+	
+	country = {
+
+		GMR_ordorian_meddling = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = generic_spy_political
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_weekly = -0.015
+				}
+		}
+		
+		GMR_trade_union = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = generic_sea_focused_navy
+			
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.1
+				production_speed_buildings_factor = 0.075
+				local_resources_factor = 0.15
+			}
+		}
+		
+		GMR_trade_harassed = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = brooklyn_naval_yard
+			
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.15
+				production_speed_buildings_factor = -0.1
+				local_resources_factor = -0.2
+			}
+		}
+	}
+}

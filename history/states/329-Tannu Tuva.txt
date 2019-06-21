@@ -1,0 +1,22 @@
+state={
+	id=329
+	name="STATE_329"
+	provinces={
+		930 2444 2445 3814 3892 5758 7414 7844 
+	}
+	state_category = town
+	manpower=13917
+	buildings_max_level_factor=1.000
+	resources = {
+		oil = 17
+	}
+	history={
+		victory_points = { 7844 15 }
+		owner = SNF
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 2
+		}
+		add_core_of = SNF
+	}
+}

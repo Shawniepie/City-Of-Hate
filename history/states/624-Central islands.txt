@@ -4,6 +4,18 @@ state={
 	provinces={
 		1968 5237 5762 5769 7218 
 	}
-	manpower=0
+	state_category = town
+	manpower=8429
 	buildings_max_level_factor=1.000
+	history={
+		victory_points = { 5769 8 }
+		owner = PRK
+		buildings = {
+			infrastructure = 3
+			arms_factory = 1
+			industrial_complex = 1
+			dockyard = 1
+		}
+		add_core_of = PRK
+	}
 }

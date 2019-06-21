@@ -4,6 +4,20 @@ state={
 	provinces={
 		2015 3937 3938 3939 7388 7389 8304 
 	}
-	manpower=0
+	state_category = town
+	manpower=10821
 	buildings_max_level_factor=1.000
+	history={
+		victory_points = { 3938 14 }
+		owner = BER
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 2
+			dockyard = 1
+			3938 = {
+				naval_base = 4
+			}
+		}
+		add_core_of = BER
+	}
 }

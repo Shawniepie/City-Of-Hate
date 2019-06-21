@@ -1,0 +1,876 @@
+UNG_manage_refugee_crisis = {
+	
+	UNG_resettle_refugees_UNG = {
+		
+		icon = GFX_decision_eng_blackshirt_march
+		
+		fire_only_once = yes
+		
+		allowed = {
+			tag = UNG
+		}
+		
+		available = {
+			has_country_flag = UNG_refugee_decisions_unlocked
+			has_political_power > 74
+		}
+		
+		cost = 0
+		
+		ai_will_do = {
+			factor = 200
+		}
+		
+		visible = {
+			has_country_flag = UNG_refugee_decisions_unlocked
+		}
+		
+		complete_effect = {
+			add_political_power = -75
+			remove_ideas = refugee_crisis
+			add_manpower = -5000
+			SNF = {
+				add_manpower = 5000
+			}
+			if = {
+				limit = {
+					SNF = {
+						has_idea = SNF_refugee_exodus_1
+					}
+				}
+				SNF = {
+					swap_ideas = {
+						remove_idea = SNF_refugee_exodus_1
+						add_idea = SNF_refugee_exodus_2
+					}
+					set_country_flag = SNF_refugees_returned_UNG
+				}
+			}
+			if = {
+				limit = {
+					SNF = {
+						AND = {
+							has_idea = SNF_refugee_exodus_2
+							OR = {
+								has_country_flag = SNF_refugees_returned_TEI
+								has_country_flag = SNF_refugees_returned_WIS
+							}
+						}
+					}
+				}
+				SNF = {
+					swap_ideas = {
+						remove_idea = SNF_refugee_exodus_2
+						add_idea = SNF_refugee_exodus_3
+					}
+					set_country_flag = SNF_refugees_returned_UNG
+				}
+			}
+			if = {
+				limit = {
+					SNF = {
+						AND = {
+							has_idea = SNF_refugee_exodus_3
+							has_country_flag = SNF_refugees_returned_TEI
+							has_country_flag = SNF_refugees_returned_WIS
+						}
+					}
+				}
+				SNF = {
+					remove_ideas = SNF_refugee_exodus_3
+				}
+				set_country_flag = UNG_no_refugees
+			}
+		}
+	}
+	
+	UNG_resettle_refugees_TEI = {
+		
+		icon = GFX_decision_eng_blackshirt_march
+		
+		fire_only_once = yes
+		
+		allowed = {
+			tag = UNG
+		}
+		
+		available = {
+			has_country_flag = UNG_refugee_decisions_unlocked
+			has_political_power > 74
+		}
+		
+		cost = 0
+		
+		ai_will_do = {
+			factor = 200
+		}
+		
+		visible = {
+			has_country_flag = UNG_refugee_decisions_unlocked
+		}
+		
+		complete_effect = {
+			add_political_power = -75
+			TEI = {
+				remove_ideas = refugee_crisis
+				add_manpower = -5000
+			}
+			SNF = {
+				add_manpower = 5000
+			}
+			if = {
+				limit = {
+					SNF = {
+						has_idea = SNF_refugee_exodus_1
+					}
+				}
+				SNF = {
+					swap_ideas = {
+						remove_idea = SNF_refugee_exodus_1
+						add_idea = SNF_refugee_exodus_2
+					}
+					set_country_flag = SNF_refugees_returned_TEI
+				}
+			}
+			if = {
+				limit = {
+					SNF = {
+						AND = {
+							has_idea = SNF_refugee_exodus_2
+							OR = {
+								has_country_flag = SNF_refugees_returned_UNG
+								has_country_flag = SNF_refugees_returned_WIS
+							}
+						}
+					}
+				}
+				SNF = {
+					swap_ideas = {
+						remove_idea = SNF_refugee_exodus_2
+						add_idea = SNF_refugee_exodus_3
+					}
+					set_country_flag = SNF_refugees_returned_TEI
+				}
+			}
+			if = {
+				limit = {
+					SNF = {
+						AND = {
+							has_idea = SNF_refugee_exodus_3
+							has_country_flag = SNF_refugees_returned_UNG
+							has_country_flag = SNF_refugees_returned_WIS
+						}
+					}
+				}
+				SNF = {
+					remove_ideas = SNF_refugee_exodus_3
+				}
+				set_country_flag = UNG_no_refugees
+			}
+		}
+	}
+
+	UNG_resettle_refugees_WIS = {
+		
+		icon = GFX_decision_eng_blackshirt_march
+		
+		fire_only_once = yes
+		
+		allowed = {
+			tag = UNG
+		}
+		
+		available = {
+			has_country_flag = UNG_refugee_decisions_unlocked
+			has_political_power > 74
+		}
+		
+		cost = 0
+		
+		ai_will_do = {
+			factor = 200
+		}
+		
+		visible = {
+			has_country_flag = UNG_refugee_decisions_unlocked
+		}
+		
+		complete_effect = {
+			add_political_power = -75
+			WIS = {
+				remove_ideas = refugee_crisis
+				add_manpower = -5000
+			}
+			SNF = {
+				add_manpower = 5000
+			}
+			if = {
+				limit = {
+					SNF = {
+						has_idea = SNF_refugee_exodus_1
+					}
+				}
+				SNF = {
+					swap_ideas = {
+						remove_idea = SNF_refugee_exodus_1
+						add_idea = SNF_refugee_exodus_2
+					}
+					set_country_flag = SNF_refugees_returned_WIS
+				}
+			}
+			if = {
+				limit = {
+					SNF = {
+						AND = {
+							has_idea = SNF_refugee_exodus_2
+							OR = {
+								has_country_flag = SNF_refugees_returned_TEI
+								has_country_flag = SNF_refugees_returned_UNG
+							}
+						}
+					}
+				}
+				SNF = {
+					swap_ideas = {
+						remove_idea = SNF_refugee_exodus_2
+						add_idea = SNF_refugee_exodus_3
+					}
+					set_country_flag = SNF_refugees_returned_WIS
+				}
+			}
+			if = {
+				limit = {
+					SNF = {
+						AND = {
+							has_idea = SNF_refugee_exodus_3
+							has_country_flag = SNF_refugees_returned_TEI
+							has_country_flag = SNF_refugees_returned_UNG
+						}
+					}
+				}
+				SNF = {
+					remove_ideas = SNF_refugee_exodus_3
+				}
+				set_country_flag = UNG_no_refugees
+			}
+		}
+	}
+}
+
+UNG_perkav_census_decisions = {
+	
+	UNG_survey_krellsland = {
+		
+		icon = GFX_decision_generic_political_discourse
+		
+		fire_only_once = yes
+		
+		allowed = {
+			tag = UNG
+		}
+		
+		available = {
+			has_country_flag = UNG_perkav_census_unlocked
+			NOT = {
+				has_country_flag = UNG_surveying_perkavland
+			}
+		}
+		
+		visible = {
+			has_country_flag = UNG_perkav_census_unlocked
+		}
+		
+		complete_effect ={
+			activate_mission = UNG_surveying_krellsland
+			set_country_flag = UNG_surveying_perkavland
+			PRK = {
+				add_timed_idea = {
+					idea = PRK_ungerdaler_reforms
+					days = 150
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 200
+		}
+
+	}
+		
+	UNG_surveying_krellsland = {
+		
+		icon = GFX_decision_generic_political_discourse
+		
+		available = {
+			always = no
+		}
+		
+		days_mission_timeout = 50
+		
+		activation = {
+			always = no #Triggered from decision
+		}
+		
+		highlight_states = {
+			state = 413
+			state = 630
+			state = 629
+			state = 631
+			state = 632
+			state = 653
+			state = 654
+			state = 655
+		}
+		
+		visible = {
+			NOT = {
+				has_country_flag = UNG_surveyed_krellsland
+			}
+		}
+		
+		is_good = yes
+		
+		timeout_effect = {
+			add_political_power = 25
+			set_country_flag = UNG_surveyed_krellsland
+			clr_country_flag = UNG_surveying_perkavland
+		}
+	}
+	
+	UNG_survey_nevetko = {
+		
+		icon = GFX_decision_generic_political_discourse
+		
+		fire_only_once = yes
+		
+		allowed = {
+			tag = UNG
+		}
+		
+		available = {
+			has_country_flag = UNG_perkav_census_unlocked
+			NOT = {
+				has_country_flag = UNG_surveying_perkavland
+			}
+		}
+		
+		visible = {
+			has_country_flag = UNG_perkav_census_unlocked
+		}
+		
+		complete_effect ={
+			activate_mission = UNG_surveying_nevetko
+			set_country_flag = UNG_surveying_perkavland
+			PRK = {
+				add_timed_idea = {
+					idea = PRK_ungerdaler_reforms
+					days = 150
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 200
+		}
+
+	}
+		
+	UNG_surveying_nevetko = {
+		
+		icon = GFX_decision_generic_political_discourse
+		
+		available = {
+			always = no
+		}
+		
+		days_mission_timeout = 50
+		
+		activation = {
+			always = no #Triggered from decision
+		}
+		
+		highlight_states = {
+			state = 651
+			state = 652
+			state = 649
+			state = 648
+			state = 647
+			state = 646
+			state = 643
+			state = 644
+			state = 645
+			state = 420
+		}
+		
+		visible = {
+			NOT = {
+				has_country_flag = UNG_surveyed_nevetko
+			}
+		}
+		
+		is_good = yes
+		
+		timeout_effect = {
+			add_political_power = 25
+			set_country_flag = UNG_surveyed_nevetko
+			clr_country_flag = UNG_surveying_perkavland
+		}
+	}
+	
+	UNG_survey_west_perkavland = {
+		
+		icon = GFX_decision_generic_political_discourse
+		
+		fire_only_once = yes
+		
+		allowed = {
+			tag = UNG
+		}
+		
+		available = {
+			has_country_flag = UNG_perkav_census_unlocked
+			NOT = {
+				has_country_flag = UNG_surveying_perkavland
+			}
+		}
+		
+		visible = {
+			has_country_flag = UNG_perkav_census_unlocked
+		}
+		
+		complete_effect ={
+			activate_mission = UNG_surveying_west_perkavland
+			set_country_flag = UNG_surveying_perkavland
+			PRK = {
+				add_timed_idea = {
+					idea = PRK_ungerdaler_reforms
+					days = 150
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 200
+		}
+
+	}
+		
+	UNG_surveying_west_perkavland = {
+		
+		icon = GFX_decision_generic_political_discourse
+		
+		available = {
+			always = no
+		}
+		
+		days_mission_timeout = 50
+		
+		activation = {
+			always = no #Triggered from decision
+		}
+		
+		highlight_states = {
+			state = 641
+			state = 640
+			state = 638
+			state = 637
+			state = 418
+			state = 636
+			state = 635
+			state = 634
+			state = 417
+			state = 633
+		}
+		
+		visible = {
+			NOT = {
+				has_country_flag = UNG_surveyed_west_perkavland
+			}
+		}
+		
+		is_good = yes
+		
+		timeout_effect = {
+			add_political_power = 25
+			set_country_flag = UNG_surveyed_west_perkavland
+			clr_country_flag = UNG_surveying_perkavland
+		}
+	}
+	
+	UNG_survey_karczyk_weltrova = {
+		
+		icon = GFX_decision_generic_political_discourse
+		
+		fire_only_once = yes
+		
+		allowed = {
+			tag = UNG
+		}
+		
+		available = {
+			has_country_flag = UNG_perkav_census_unlocked
+			NOT = {
+				has_country_flag = UNG_surveying_perkavland
+			}
+		}
+		
+		visible = {
+			has_country_flag = UNG_perkav_census_unlocked
+		}
+		
+		complete_effect ={
+			activate_mission = UNG_surveying_karczyk_weltrova
+			set_country_flag = UNG_surveying_perkavland
+			PRK = {
+				add_timed_idea = {
+					idea = PRK_ungerdaler_reforms
+					days = 150
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 200
+		}
+
+	}
+		
+	UNG_surveying_karczyk_weltrova = {
+		
+		icon = GFX_decision_generic_political_discourse
+		
+		available = {
+			always = no
+		}
+		
+		days_mission_timeout = 50
+		
+		activation = {
+			always = no #Triggered from decision
+		}
+		
+		highlight_states = {
+			state = 618
+			state = 617
+			state = 416
+			state = 639
+			state = 619
+			state = 419
+			state = 621
+			state = 620
+			state = 642
+		}
+		
+		visible = {
+			NOT = {
+				has_country_flag = UNG_surveyed_karczyk_weltrova
+			}
+		}
+		
+		is_good = yes
+		
+		timeout_effect = {
+			add_political_power = 25
+			set_country_flag = UNG_surveyed_karczyk_weltrova
+			clr_country_flag = UNG_surveying_perkavland
+		}
+	}
+	
+	UNG_survey_south_perkavland = {
+		
+		icon = GFX_decision_generic_political_discourse
+		
+		fire_only_once = yes
+		
+		allowed = {
+			tag = UNG
+		}
+		
+		available = {
+			has_country_flag = UNG_perkav_census_unlocked
+			NOT = {
+				has_country_flag = UNG_surveying_perkavland
+			}
+		}
+		
+		visible = {
+			has_country_flag = UNG_perkav_census_unlocked
+		}
+		
+		complete_effect ={
+			activate_mission = UNG_surveying_south_perkavland
+			set_country_flag = UNG_surveying_perkavland
+			PRK = {
+				add_timed_idea = {
+					idea = PRK_ungerdaler_reforms
+					days = 150
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 200
+		}
+
+	}
+		
+	UNG_surveying_south_perkavland = {
+		
+		icon = GFX_decision_generic_political_discourse
+		
+		available = {
+			always = no
+		}
+		
+		days_mission_timeout = 50
+		
+		activation = {
+			always = no #Triggered from decision
+		}
+		
+		highlight_states = {
+			state = 628
+			state = 414
+			state = 415
+			state = 625
+			state = 622
+			state = 626
+			state = 627
+			state = 628
+			state = 622
+			state = 421
+			state = 624
+			state = 623
+		}
+		
+		visible = {
+			NOT = {
+				has_country_flag = UNG_surveyed_south_perkavland
+			}
+		}
+		
+		is_good = yes
+		
+		timeout_effect = {
+			add_political_power = 25
+			set_country_flag = UNG_surveyed_south_perkavland
+			clr_country_flag = UNG_surveying_perkavland
+		}
+	}
+	
+	UNG_create_perkav_script = {
+		
+		icon = GFX_decision_decision_eng_trade_unions_support
+		
+		fire_only_once = yes
+		
+		allowed = {
+			tag = UNG
+		}
+		
+		available = {
+			has_country_flag = UNG_surveyed_krellsland
+			has_country_flag = UNG_surveyed_nevetko
+			has_country_flag = UNG_surveyed_west_perkavland
+			has_country_flag = UNG_surveyed_karczyk_weltrova
+			has_country_flag = UNG_surveyed_south_perkavland
+		}
+		
+		visible = {
+			has_country_flag = UNG_perkav_census_unlocked
+		}
+		
+		ai_will_do = {
+			factor = 200
+		}
+		
+		complete_effect = {
+			activate_mission = UNG_creating_perkav_script
+			PRK = {
+				add_timed_idea = {
+					idea = PRK_ungerdaler_reforms
+					days = 150
+				}
+			}
+		}
+	}
+	
+	UNG_creating_perkav_script = {
+		
+		icon = GFX_decision_decision_eng_trade_unions_support
+		
+		available = {
+			always = no
+		}
+		
+		days_mission_timeout = 120
+		
+		activation = {
+			always = no #Triggered from decision
+		}
+		
+		visible = {
+			NOT = {
+				has_country_flag = UNG_surveyed_south_perkavland
+			}
+		}
+		
+		is_good = yes
+		
+		timeout_effect = {
+			add_political_power = 100
+			set_country_flag = UNG_created_perkav_script
+			PRK = {
+				country_event = {	
+					id = prk.14
+					days = 120
+				}
+			}
+		}
+	}
+	
+	UNG_begin_administrative_reforms = {
+		
+		icon = GFX_decision_eng_ally_imperialist_coup
+		
+		fire_only_once = yes
+		
+		allowed = {
+			tag = UNG
+		}
+		
+		available = {
+			has_country_flag = UNG_surveyed_krellsland
+			has_country_flag = UNG_surveyed_nevetko
+			has_country_flag = UNG_surveyed_west_perkavland
+			has_country_flag = UNG_surveyed_karczyk_weltrova
+			has_country_flag = UNG_surveyed_south_perkavland
+			has_country_flag = UNG_created_perkav_script
+		}
+		
+		visible = {
+			has_country_flag = UNG_perkav_census_unlocked
+		}
+		
+		ai_will_do = {
+			factor = 200
+		}
+		
+		complete_effect = {
+			activate_mission = UNG_reforming_adminstration
+			PRK = {
+				add_timed_idea = {
+					idea = PRK_ungerdaler_reforms
+					days = 150
+				}
+			}
+		}
+	}
+	
+	UNG_reforming_adminstration = {
+		
+		icon = GFX_decision_generic_political_discourse
+		
+		available = {
+			always = no
+		}
+		
+		days_mission_timeout = 150
+		
+		activation = {
+			always = no #Triggered from decision
+		}
+		
+		visible = {
+			NOT = {
+				has_country_flag = UNG_reformed_administration
+			}
+		}
+		
+		is_good = yes
+		
+		timeout_effect = {
+			add_political_power = 100
+			PRK = {
+				country_event = {	
+					id = prk.19
+					days = 5
+				}
+			}
+			set_country_flag = UNG_reformed_administration
+		}
+	}
+	
+	UNG_complete_census = {
+		
+		icon = GFX_decision_eng_ally_imperialist_coup
+		
+		fire_only_once = yes
+		
+		allowed = {
+			tag = UNG
+		}
+		
+		available = {
+			has_country_flag = UNG_surveyed_krellsland
+			has_country_flag = UNG_surveyed_nevetko
+			has_country_flag = UNG_surveyed_west_perkavland
+			has_country_flag = UNG_surveyed_karczyk_weltrova
+			has_country_flag = UNG_surveyed_south_perkavland
+			has_country_flag = UNG_created_perkav_script
+			has_country_flag = UNG_reformed_administration
+		}
+		
+		visible = {
+			has_country_flag = UNG_perkav_census_unlocked
+		}
+		
+		ai_will_do = {
+			factor = 200
+		}
+		
+		complete_effect = {
+			activate_mission = UNG_completing_census
+			PRK = {
+				add_timed_idea = {
+					idea = PRK_ungerdaler_reforms
+					days = 356
+				}
+			}
+		}
+	}
+	
+	UNG_completing_census = {
+		
+		icon = GFX_decision_hol_draw_up_staff_plans
+		
+		available = {
+			always = no
+		}
+		
+		days_mission_timeout = 25
+		
+		activation = {
+			always = no #Triggered from decision
+		}
+		
+		visible = {
+			NOT = {
+				has_country_flag = UNG_completed_census
+			}
+		}
+		
+		is_good = yes
+		
+		timeout_effect = {
+			add_political_power = 150
+			PRK = {
+				country_event = {	
+					id = prk.12
+					days = 5
+				}
+			}
+			set_country_flag = UNG_completed_census
+		}
+	}
+}

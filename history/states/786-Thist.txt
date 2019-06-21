@@ -1,0 +1,17 @@
+state={
+	id=786
+	name="STATE_786"
+	provinces={
+		1825 2615 2616 5881 5893 5894 7097 7715 8182 8756 
+	}
+	state_category = rural
+	manpower=8027
+	buildings_max_level_factor=1.000
+	history={
+		owner = TLA
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = TLA
+	}
+}

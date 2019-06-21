@@ -330,14 +330,7 @@ country_event = { #Conquest of Rthauiaur
 		name = annex.2.b
 		trigger = {
 			NOT = {
-				OR = {
-					tag = SKA
-					tag = UNG
-					is_subject_of = UNG
-					UNG = {
-						is_subject_of = ROOT
-					}
-				}
+				tag = SKA
 			}
 		}
 
@@ -468,7 +461,6 @@ country_event = { #Conquest of Rthauiaur
 		name = annex.2.e
 		trigger = {
 			OR = {
-				tag = SKA
 				tag = UNG
 				ROOT = {
 					is_subject_of = UNG
@@ -610,8 +602,14 @@ country_event = { #Conquest of Holzbrenn
 				transfer_state = PREV
 			}
 		}
-			puppet = HLZ
-			set_country_flag = conquest_of_holzbrenn
+		puppet = HLZ
+		set_country_flag = conquest_of_holzbrenn
+		if = {
+			limit = {
+				has_government = puritan
+			}
+			set_country_flag = achievement_you_bastard
+		}
 	}
 	
 	option = { # Annex
@@ -5232,6 +5230,7 @@ country_event = { #Conquest of Trifell
 	trigger = {
 		NOT = {
 			original_tag = TRI
+			tag = GMR
 		}
 		OR = {
 			AND = {
@@ -5570,6 +5569,7 @@ country_event = { #Conquest of Nastrogdar
 	trigger = {
 		NOT = {
 			original_tag = NAS
+			tag = GMR
 		}
 		OR = {
 			AND = {
@@ -5865,6 +5865,7 @@ country_event = { #Conquest of Kortinall
 	trigger = {
 		NOT = {
 			original_tag = KRT
+			tag = GMR
 		}
 		OR = {
 			AND = {
@@ -6151,6 +6152,7 @@ country_event = { #Conquest of Felweyne
 	trigger = {
 		NOT = {
 			original_tag = FEL
+			tag = GMR
 		}
 		OR = {
 			AND = {
@@ -6438,6 +6440,7 @@ country_event = { #Conquest of Navandonne
 	trigger = {
 		NOT = {
 			original_tag = NAV
+			tag = GMR
 		}
 		OR = {
 			AND = {
@@ -6721,6 +6724,7 @@ country_event = { #Conquest of Kaltire
 	trigger = {
 		NOT = {
 			original_tag = KAL
+			tag = GMR
 		}
 		OR = {
 			AND = {
@@ -7965,5 +7969,168 @@ country_event = { #Conquest of the Confederation
 		}
 		
 		set_country_flag = conquest_of_the_confederation
+	}
+}
+
+country_event = { #Conquest of Perkavland
+	id = annex.27
+	title = annex.27.t
+	desc = annex.27.d
+	mean_time_to_happen = {
+		days = 15
+	}
+
+	trigger = {
+		NOT = {
+			original_tag = PRK
+		}
+		OR = {
+			AND = {
+				PRK = {
+					has_capitulated = yes
+				}
+				controls_state = 413
+			}
+			AND = {
+				NOT = {
+					country_exists = PRK
+				}
+				controls_state = 413
+			}
+			owns_state = 413
+		}
+		NOT = {
+			ROOT = {
+				has_country_flag = conquest_of_perkavland
+			}
+		}
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				tag = SNF
+			}
+			set_country_flag = achievement_something_done_right
+		}
+	}
+
+	option = {# Liberate
+		name = annex.27.a
+		trigger = {
+			NOT = {
+				OR = {
+					tag = UNG
+					is_subject_of = UNG
+					UNG = {
+						is_subject_of = ROOT
+					}
+				}
+			}
+		}
+
+		ai_chance = {
+			modifier = {
+				factor = 0
+				OR = {
+					has_government = puritan
+					has_government = theocrat
+				}
+			}
+			factor = 100
+		}
+
+		every_state = {
+			limit = {
+				is_core_of = PRK
+				is_controlled_by = ROOT
+				NOT = {
+					is_core_of = ROOT
+					is_claimed_by = ROOT
+				}
+			}
+			PRK = {
+				transfer_state = PREV
+			}
+		}
+			puppet = PRK
+			set_country_flag = conquest_of_perkavland
+	}
+	
+	option = { # Annex
+		name = annex.27.b
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						has_government = puritan
+						has_government = theocrat
+					}
+				}
+			}
+		}
+
+		set_country_flag = conquest_of_perkavland
+
+		custom_effect_tooltip = annex_tt
+
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = {
+						OR = {
+							has_government = puritan
+							has_government = theocrat
+						}
+					}
+				}
+				add_political_power = -50
+				add_stability = -0.05
+				add_war_support = -0.05
+			}
+		}
+	}
+
+	option = { # Freiprinztum
+		name = annex.27.c
+		trigger = {
+			OR = {
+				tag = UNG
+				ROOT = {
+					is_subject_of = UNG
+				}
+				UNG = {
+					is_subject_of = ROOT
+				}
+			}
+		}
+		
+		ai_chance = {
+			factor = 100
+		}
+		
+		every_state = {
+			limit = {
+				is_core_of = PRK
+				is_controlled_by = ROOT
+				NOT = {
+					is_core_of = ROOT
+					is_claimed_by = ROOT
+				}
+			}
+			PRK = {
+				transfer_state = PREV
+			}
+		}
+		
+		UNG = {
+			set_autonomy = {
+				target = PRK
+				autonomy_state = autonomy_IR_freiprinztum
+			}
+		}
 	}
 }

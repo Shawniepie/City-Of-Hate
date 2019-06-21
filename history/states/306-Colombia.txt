@@ -1,0 +1,17 @@
+state={
+	id=306
+	name="STATE_306"
+	provinces={
+		478 479 480 3781 4243 4482 4483 6925 
+	}
+	state_category = rural
+	manpower=4092
+	buildings_max_level_factor=1.000
+	history={
+		owner = NRK
+		buildings = {
+			infrastructure = 5	
+		}
+		add_core_of = NRK
+		}
+}

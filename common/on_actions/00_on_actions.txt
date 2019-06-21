@@ -42,4 +42,60 @@ on_actions = {
 			}
 		}
 	}
+	
+	#on_startup = {	### THIS CTD'S THE GAME, DON'T KNOW WHY ###
+	#	effect = {
+	#		every_country = {
+	#			if = {
+	#				limit = {
+	#					has_government = republic_peasant
+	#				}
+	#				every_country = {
+	#					limit = {
+	#						has_government = republic_peasant
+	#					}
+	#					add_opinion_modifier = {
+	#						target = ROOT
+	#						modifier = same_ideology
+	#					}
+	#					reverse_add_opinion_modifier = {
+	#						target = ROOT
+	#						modifier = same_ideology
+	#					}
+	#				}
+					#every_country = {
+					#	limit = {
+					#		has_government = republic_merchant
+					#	}
+					#	add_opinion_modifier = {
+					#		target = ROOT
+					#		modifier = similar_ideology
+					#	}
+					#	reverse_add_opinion_modifier = {
+					#		target = ROOT
+					#		modifier = similar_ideology
+					#	}
+					#}
+					#every_country = {
+					#	limit = {
+					#		NOT = {
+					#			OR = {
+					#				has_government = republic_peasant
+					#				has_government = republic_merchant
+					#			}
+					#		}
+					#	}
+					#	add_opinion_modifier = {
+					#		target = ROOT
+					#		modifier = different_ideology
+					#	}
+					#	reverse_add_opinion_modifier = {
+					#		target = ROOT
+					#		modifier = different_ideology
+					#	}
+					#}
+	#			}
+	#		}
+	#	}
+	#}
 }

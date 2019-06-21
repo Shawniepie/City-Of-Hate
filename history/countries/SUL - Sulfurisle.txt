@@ -1,0 +1,130 @@
+﻿capital = 488
+
+set_oob = "empty"
+set_research_slots = 3
+
+set_technology = {
+	infantry_weapons = 1
+	tech_support = 1
+	tech_recon = 1
+}
+
+if = {
+	limit = {
+		not = { has_dlc = "Man the Guns" }
+	}
+	set_technology = {
+		early_submarine = 1
+		early_destroyer = 1
+		early_light_cruiser = 1
+		transport = 1
+	}
+}
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		early_ship_hull_light = 1
+		basic_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		early_ship_hull_cruiser = 1
+		basic_battery = 1
+		basic_light_battery = 1
+		basic_torpedo = 1
+		sonar = 1
+		basic_depth_charges = 1
+		basic_secondary_battery = 1
+		mtg_transport = 1
+		basic_fire_control_system = 1
+	}
+}
+
+1939.1.1 = {
+}
+
+set_politics = {
+	ruling_party = republic_merchant
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	monarchy_absolute = 2
+
+	monarchy_constitutional = 2
+
+	republic_peasant = 2
+
+	republic_aristocrat = 27
+
+	republic_merchant = 63
+
+	theocrat = 2
+
+	puritan = 2
+}
+
+add_ideas = {
+	gnome_country
+	molten_god_religion
+	free_trade
+}
+
+create_country_leader = {
+	name = "Herby Litse"
+	desc = "politics_SUL_litse_desc"
+	picture = "gfx/leaders/SUL/Portrait_SUL_Litse.dds"
+	ideology = theocrat_ideology
+}
+
+create_country_leader = {
+	name = "Dolkie Venter"
+	desc = "politics_SUL_venter_desc"
+	picture = "gfx/leaders/SUL/Portrait_SUL_Venter.dds"
+	ideology = monarchy_absolute_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Dolkie Venter"
+	desc = "politics_SUL_venter_desc"
+	picture = "gfx/leaders/SUL/Portrait_SUL_Venter.dds"
+	ideology = monarchy_constitutional_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Jillis Thetsie"
+	desc = "politics_SUL_thetsie_desc"
+	picture = "gfx/leaders/SUL/Portrait_SUL_Thetsie.dds"
+	ideology = republic_aristocrat_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Hubert Gemsie"
+	desc = "politics_SUL_gemsie_desc"
+	picture = "gfx/leaders/SUL/Portrait_SUL_Gemsie.dds"
+	ideology = republic_peasant_ideology
+}
+
+create_country_leader = {
+	name = "Sulfie Darrow"
+	desc = "politics_SUL_darrow_desc"
+	picture = "gfx/leaders/SUL/Portrait_SUL_Darrow.dds"
+	ideology = republic_merchant_ideology
+}
+
+create_country_leader = {
+	name = "Burty Looke"
+	desc = "politics_SUL_looke_desc"
+	picture = "gfx/leaders/SUL/Portrait_SUL_Looke.dds"
+	ideology = puritan_ideology
+}

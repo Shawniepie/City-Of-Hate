@@ -1,0 +1,24 @@
+state={
+	id=29
+	name="STATE_29"
+	state_category = metropolis
+	manpower = 929127
+	provinces={
+		4451 4644 4645 4646 8149 8514 8702 8703 
+	}
+
+	resources = {
+		steel = 12
+	}
+	
+	history={
+		owner = GMR
+		victory_points = {8702 49}
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 3
+			arms_factory = 3
+		}
+		add_core_of = GMR
+	}
+}

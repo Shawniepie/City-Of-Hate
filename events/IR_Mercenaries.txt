@@ -1,0 +1,48 @@
+﻿	### MERCENARY EVENTS ###
+
+add_namespace = merc
+
+country_event = {#Perkav Contract Over
+	id = merc.1
+	title = merc.1.t
+	desc = merc.1.d
+	picture = GFX_report_event_romanian_soldiers
+	
+	immediate = {
+		set_country_flag = MERCS_perkav_raiders_contract_already_ending_flag
+	}
+	
+	trigger = {
+		has_country_flag = MERCS_hiring_perkav_raiders_flag
+		NOT = {
+			has_idea = MERCS_hiring_perkav_raiders_idea
+		}
+		NOT = {
+			has_country_flag = MERCS_perkav_raiders_contract_already_ending_flag
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 3
+	}
+	
+	option = {#Very Well
+		name = merc.1.a
+		delete_unit_template_and_units = {
+			division_template = "Perkav Raider Mercenaries"
+		}
+		clr_country_flag = MERCS_hiring_perkav_raiders_flag
+		clr_country_flag = MERCS_perkav_raiders_contract_already_ending_flag
+	}
+	
+	option = {#Renew Contract
+		name = merc.1.b
+		
+		add_timed_idea = {
+			idea = MERCS_hiring_perkav_raiders_idea
+			days = 183
+		}
+		clr_country_flag = MERCS_hiring_perkav_raiders_flag
+		clr_country_flag = MERCS_perkav_raiders_contract_already_ending_flag
+	}
+}

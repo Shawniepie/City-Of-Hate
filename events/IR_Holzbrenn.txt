@@ -2,17 +2,10 @@
 
 add_namespace = hlz
 
-### ROSENBLUT'S ACTIONS EVENTS
-
-
-
 ### MAD PRINCE FOCI EVENTS
 
 country_event = { # Carpenter's strike
 	id = hlz.1
-	immediate = {
-		log = "[GetDateText]: [Root.GetName]: event hlz.1"
-	}
 	title = hlz.1.t
 	desc = hlz.1.d
 	picture = GFX_report_event_generic_rally2
@@ -38,9 +31,6 @@ country_event = { # Carpenter's strike
 
 country_event = { # Last Straw
 	id = hlz.2
-	immediate = {
-		log = "[GetDateText]: [Root.GetName]: event hlz.2"
-	}
 	title = hlz.2.t
 	desc = hlz.2.d
 	picture = GFX_report_event_generic_riot
@@ -63,14 +53,17 @@ country_event = { # Last Straw
 
 country_event = { # Rosenblut Deposed
 	id = hlz.3
-	immediate = {
-		log = "[GetDateText]: [Root.GetName]: event hlz.3"
-	}
 	title = hlz.3.t
 	desc = hlz.3.d
 	picture = GFX_report_event_worker_protests
 	
 	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = HLZ_presslers_ambitions
+		}
+	}
 	
 	option = { # Aristocratic Path
 		name = hlz.3.a
@@ -102,6 +95,38 @@ country_event = { # Rosenblut Deposed
 		}
 		add_stability = 0.15
 		add_political_power = 50
+		every_country = {
+			limit = {
+				has_opinion_modifier = HLZ_mad_freiprinz_opinion
+				NOT = {
+					OR = {
+						has_government = republic_merchant
+						has_government = republic_peasant
+					}
+				}
+			}
+			remove_opinion_modifier = {
+				target = HLZ
+				modifier = HLZ_mad_freiprinz_opinion
+			}
+			add_opinion_modifier = {
+				target = HLZ
+				modifier = HLZ_republican_rabble
+			}
+		}
+		every_country = {
+			limit = {
+				has_opinion_modifier = HLZ_mad_freiprinz_opinion
+				OR = {
+					has_government = republic_merchant
+					has_government = republic_peasant
+				}
+			}
+			remove_opinion_modifier = {
+				target = HLZ
+				modifier = HLZ_mad_freiprinz_opinion
+			}
+			}
 		hidden_effect = {
 			set_country_flag = HLZ_wholesome_people
 			set_country_flag = HLZ_depose_tyrants
@@ -111,9 +136,6 @@ country_event = { # Rosenblut Deposed
 
 country_event = { # Nobility Steps In
 	id = hlz.4
-	immediate = {
-		log = "[GetDateText]: [Root.GetName]: event hlz.4"
-	}
 	title = hlz.4.t
 	desc = hlz.4.d
 	picture = GFX_report_event_albanian_king_zog
@@ -156,9 +178,6 @@ country_event = { # Nobility Steps In
 
 country_event = { # Kirschenrevolution
 	id = hlz.5
-	immediate = {
-		log = "[GetDateText]: [Root.GetName]: event hlz.5"
-	}
 	title = hlz.5.t
 	desc = hlz.5.d
 	picture = GFX_report_event_communists_cheer
@@ -196,5 +215,471 @@ country_event = { # Kirschenrevolution
 		hidden_effect = {
 			set_country_flag = HLZ_wholesome_socdems
 		}
+	}
+}
+
+### NOBILITY PATH EVENTS
+
+country_event = {#Response to Famine - Nobility
+	id = hlz.6
+	title = hlz.6.t
+	desc = hlz.6.d
+	picture = GFX_report_event_asian_politicians
+	
+	trigger = {
+		OR = {
+			has_completed_focus = HLZ_never_another_tyrant
+			has_completed_focus = HLZ_gutprinz_prinzip
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 15
+	}
+	
+	fire_only_once = yes
+	
+	option = {#Expand the Suppenküchen
+		name = hlz.6.a
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 1.5
+				has_government = republic_aristocrat
+			}
+		}
+		add_popularity = {
+			ideology = republic_aristocrat
+			popularity = 0.05
+		}
+		set_country_flag = HLZ_soup_kitchens
+	}
+	
+	option = {#Ration our Food
+		name = hlz.6.b
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 1.5
+				has_government = monarchy_constitutional
+			}
+		}
+		add_popularity = {
+			ideology = monarchy_constitutional
+			popularity = 0.05
+		}
+		set_country_flag = HLZ_ration_food
+	}
+}
+
+country_event = {#The Universities
+	id = hlz.7
+	title = hlz.7.t
+	desc = hlz.7.d
+	picture = GFX_report_event_molotov_ribbentrop_stalin_pact
+	
+	trigger = {
+		OR = {
+			has_completed_focus = HLZ_aristocrats_in_soup_kitchens
+			has_completed_focus = HLZ_feed_people
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 15
+	}
+	
+	fire_only_once = yes
+	
+	option = {#Open the Universities!
+		name = hlz.7.a
+		if = {
+			limit = {
+				has_government = republic_aristocrat
+			}
+			add_popularity = {
+				ideology = republic_aristocrat
+				popularity = 0.05
+			}
+		}
+		if = {
+			limit = {
+				has_government = monarchy_constitutional
+			}
+			add_popularity = {
+				ideology = monarchy_constitutional
+				popularity = 0.05
+			}
+		}
+		add_stability = -0.05
+		set_country_flag = HLZ_open_universities_flag
+	}
+	
+	option = {#Regulate Intake
+		name = hlz.7.b
+		set_country_flag = HLZ_patronage
+		add_stability = 0.05
+	}
+}
+
+country_event = {#Housing the People
+	id = hlz.8
+	title = hlz.8.t
+	desc = hlz.8.d
+	picture = GFX_report_event_generic_strike
+	
+	trigger = {
+		has_completed_focus = HLZ_assuage_worries
+	}
+	
+	mean_time_to_happen = {
+		days = 15
+	}
+	
+	fire_only_once = yes
+	
+	option = {#Initiate the Renovierungsprogramm!
+		name = hlz.8.a
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 1.5
+				has_government = monarchy_constitutional
+			}
+		}
+		set_country_flag = HLZ_renovating
+		add_popularity = {
+			ideology = monarchy_constitutional
+			popularity = 0.05
+		}
+	}
+	
+	option = {#Repurpose some houses instead
+		name = hlz.8.b
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 1.5
+				has_government = republic_aristocrat
+			}
+		}
+		set_country_flag = HLZ_repurposing
+		add_popularity = {
+			ideology = republic_aristocrat
+			popularity = 0.05
+		}
+	}
+}
+
+country_event = {#Edlerrat
+	id = hlz.9
+	title = hlz.9.t
+	desc = hlz.9.d
+	picture = GFX_report_event_generic_strike
+	
+	is_triggered_only = yes
+	
+	option = {#Talk with the Libertines
+		name = hlz.9.a
+		ai_chance = {
+			factor = 7
+		}
+		set_country_flag = HLZ_libertines_talks
+		add_popularity = {
+			ideology = republic_merchant
+			popularity = 0.05
+		}
+	}
+	
+	option = {#Talk with the League
+		name = hlz.9.b
+		ai_chance = {
+			factor = 3
+		}
+		set_country_flag = HLZ_league_talks
+		add_popularity = {
+			ideology = republic_peasant
+			popularity = 0.05
+		}
+	}
+}
+
+### REPUBLIC PATH EVENTS
+
+country_event = {#Core Values
+	id = hlz.10
+	title = hlz.10.t
+	desc = hlz.10.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	trigger = {
+		has_completed_focus = HLZ_co_government
+	}
+	
+	mean_time_to_happen = {
+		days = 15
+	}
+	
+	fire_only_once = yes
+	
+	option = {#Prosperity!
+		name = hlz.10.a
+		set_country_flag = HLZ_prioritize_prosperity
+		add_popularity = {
+			ideology = republic_merchant
+			popularity = 0.05
+		}
+	}
+	
+	option = {#Justice!
+		name = hlz.10.b
+		set_country_flag = HLZ_prioritize_justice
+		add_popularity = {
+			ideology = republic_peasant
+			popularity = 0.05
+		}
+	}
+}
+
+country_event = {#The Ordorian Question
+	id = hlz.11
+	title = hlz.11.t
+	desc = hlz.11.d
+	picture = GFX_report_event_generic_usa_treaty
+	
+	is_triggered_only = yes
+	
+	option = {#Welcome Refugees
+		name = hlz.11.a
+		ai_chance = {
+			factor = 5
+			modifier = {
+				has_government = republic_merchant
+				factor = 2
+			}
+		}
+		set_country_flag = HLZ_refugees_welcome #that oughta piss off some fascists. good.
+	}
+	
+	option = {#Direct Support
+		name = hlz.11.b
+		ai_chance = {
+			factor = 5
+			modifier = {
+				has_government = republic_peasant
+				factor = 2
+			}
+		}
+		set_country_flag = HLZ_direct_support
+	}
+}
+
+country_event = {#Pressler's Ambitions
+	id = hlz.12
+	title = hlz.12.t
+	desc = hlz.12.d
+	picture = GFX_report_event_fascist_militia
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_country_flag = HLZ_presslers_ambitions
+	}	
+	
+	mean_time_to_happen = {
+		days = 70
+	}
+	
+	immediate = {
+		set_country_flag = HLZ_presslers_ambitions_flag
+	}
+	
+	option = {#Soft Power
+		name = hlz.12.a
+		custom_effect_tooltip = HLZ_presslers_ambitions_tt
+		hidden_effect = {
+			activate_decision = HLZ_pressler_gathering_strength
+			set_country_flag = HLZ_soft_power_flag
+		}
+	}
+	
+	option = {#Hard Power
+		name = hlz.12.b
+		custom_effect_tooltip = HLZ_presslers_ambitions_tt
+		hidden_effect = {
+			activate_decision = HLZ_pressler_gathering_strength
+			set_country_flag = HLZ_hard_power_flag
+		}
+	}
+}
+
+country_event = {#Judicial Reform
+	id = hlz.13
+	title = hlz.13.t
+	desc = hlz.13.d
+	picture = GFX_report_event_german_reichstag_gathering
+	
+	is_triggered_only = yes
+	
+	option = {#Lord's Law
+		name = hlz.13.a
+		ai_chance = {
+			factor = 5
+			modifier = {
+				has_government = republic_aristocrat
+				factor = 2
+			}
+		}
+		set_country_flag = HLZ_lords_law
+		add_popularity = {
+			ideology = republic_aristocrat
+			popularity = 0.05
+		}
+	}
+	
+	option = {#Independent Judiciary
+		name = hlz.13.b
+		ai_chance = {
+			factor = 5
+			modifier = {
+				has_government = monarchy_constitutional
+				factor = 2
+			}
+		}
+		set_country_flag = HLZ_independent_judiciary
+		add_popularity = {
+			ideology = monarchy_constitutional
+			popularity = 0.05
+		}
+	}
+}
+
+country_event = {#Relegitimization
+	id = hlz.14
+	title = hlz.14.t
+	desc = hlz.14.d
+	picture = GFX_report_event_generic_parliament
+	
+	is_triggered_only = yes
+
+	option = {#Institutions
+		name = hlz.14.a
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 2
+				has_government = republic_aristocrat
+			}
+		}
+		set_country_flag = HLZ_institutional_legitimization
+	}
+	
+	option = {#Dialogue
+		name = hlz.14.b
+		ai_chance = {
+			factor = 3
+			modifier = {
+				factor = 2
+				has_government = monarchy_constitutional
+			}
+		}
+		set_country_flag = HLZ_dialogue_legitimization
+	}
+	
+	option = {#Results
+		name = hlz.14.c
+		ai_chance = {
+			factor = 5
+		}
+		set_country_flag = HLZ_institutional_legitimization
+	}
+}
+
+country_event = {#Bauernherren
+	id = hlz.15
+	title = hlz.15.t
+	desc = hlz.15.d
+	picture = GFX_report_event_indian_parade
+	
+	trigger = {
+		has_country_flag = HLZ_wholesome_liberals
+	}
+	
+	mean_time_to_happen = {
+		days = 130
+	}
+	
+	fire_only_once = yes
+	
+	option = {#Ok
+		name = hlz.15.a
+		set_country_flag = HLZ_bauernherren_question
+		custom_effect_tooltip = HLZ_bauernherren_unlocked_tt
+	}
+}
+
+country_event = {#Dealing with Bauernherren
+	id = hlz.16
+	title = hlz.16.t
+	desc = hlz.16.d
+	picture = GFX_report_event_german_advisors_remain
+	
+	is_triggered_only = yes
+	
+	option = {#Support Bauernherren
+		name = hlz.16.a
+		ai_chance = {
+			factor = 4
+		}
+		set_country_flag = HLZ_bauernherren_supported
+	}
+	
+	option = {#Machen-Lassen
+		name = hlz.16.b
+		ai_chance = {
+			factor = 6
+		}
+		set_country_flag = HLZ_machen_lassen_flag
+	}
+	
+	option = {#Support Smallholders
+		name = hlz.16.c
+		ai_chance = {
+			factor = 3
+		}
+		set_country_flag = HLZ_smallholders_supported
+	}
+}
+
+country_event = {#Land Reform
+	id = hlz.17
+	title = hlz.17.t
+	desc = hlz.17.d
+	picture = GFX_report_event_german_advisors_remain
+	
+	is_triggered_only = yes
+	
+	option = {#Republican Farms
+		name = hlz.17.a
+		ai_chance = {
+			factor = 3
+		}
+		set_country_flag = HLZ_republican_farms_established
+	}
+	
+	option = {#Communalize
+		name = hlz.17.b
+		ai_chance = {
+			factor = 4
+		}
+		set_country_flag = HLZ_communal_farms
+	}
+	
+	option = {#Smallholders
+		name = hlz.17.c
+		ai_chance = {
+			factor = 5
+		}
+		set_country_flag = HLZ_mandate_smallholds
 	}
 }

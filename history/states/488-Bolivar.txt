@@ -2,8 +2,30 @@ state={
 	id=488
 	name="STATE_488"
 	provinces={
-		784 
+		784 1277 1274 4703
 	}
-	manpower=0
+	state_category = city
+	manpower=8000
 	buildings_max_level_factor=1.000
+	resources = {
+			oil = 250
+			aluminium = 250
+			rubber = 250
+			tungsten = 250
+			steel = 250
+			chromium = 250
+	}
+	history={
+		victory_points = { 784 50 }
+		owner = SUL
+		buildings = {
+			infrastructure = 10
+			industrial_complex = 4
+			arms_factory = 3
+			4703 = {
+				naval_base = 10
+			}
+		}
+		add_core_of = SUL
+	}
 }

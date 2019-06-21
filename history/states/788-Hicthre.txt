@@ -1,0 +1,17 @@
+state={
+	id=788
+	name="STATE_788"
+	provinces={
+		1603 1605 1607 1608 1609 1610 1611 1612 1613 3413 3414 4854 6500 
+	}
+	state_category = pastoral
+	manpower=1096
+	buildings_max_level_factor=1.000
+	history={
+		owner = TLA
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = TLA
+	}
+}

@@ -1,7 +1,7 @@
-### GRAND MASTER'S REALM FOCUS TREE ###
+### UNGERDALER UNION FOCUS TREE ###
 
 focus_tree = {
-	id = realm_focus
+	id = union_focus
 	country = {
 		factor = 0
 		modifier = {
@@ -38,7 +38,7 @@ focus_tree = {
 	
 	focus = { #Sack of Scheefilde
 		id = UNG_schneefilde_sack
-		icon = GFX_ung_focus_sack_schneefilde
+		icon = GFX_focus_ung_sack_schneefilde
 		cost = 5
 		available = {
 			has_country_flag = UNG_schneefilde_sacked
@@ -46,12 +46,912 @@ focus_tree = {
 		ai_will_do = {
 			factor = 15
 		}
-		x = 9
+		x = 11
 		y = 0
 		completion_reward = {
 			country_event = {
-				
+				id = ung.14
+				days = 1
 			}
 		}
 	}
+	
+	focus = {#Reconstruction of the Sudstadt
+		id = UNG_reconstruction_schneefilde
+		icon = GFX_focus_ung_union_reconstruct_sudstadt
+		cost = 10
+		prerequisite = {
+			focus = UNG_schneefilde_sack
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		x = 5
+		y = 1
+		completion_reward = {
+			if = {
+				limit = {
+					SNF = {
+						has_country_flag = SNF_raid_limited_damage
+					}
+				}
+				224 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+					}
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+					}
+				}
+			}
+			if = {
+				limit = {
+					SNF = {
+						has_country_flag = SNF_raid_serious_damage
+					}
+				}
+				224 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 3
+					}
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+					}
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+					}
+				}
+			}
+			if = {
+				limit = {
+					SNF = {
+						has_country_flag = SNF_raid_moderate_damage
+					}
+				}
+				224 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+					}
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+					}
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+					}
+				}
+			}
+		}
+	}
+	
+	focus = {#Princely Relief Effort
+		id = UNG_princely_relief
+		icon = GFX_focus_ung_princely_relief
+		cost = 5
+		prerequisite = {
+			focus = UNG_reconstruction_schneefilde
+		}
+		ai_will_do = {
+			factor = 25
+		}
+		x = 5
+		y = 2
+		completion_reward = {
+			if = {
+				limit = {
+					SNF = {
+						has_idea = SNF_limited_devastation
+					}
+				}
+				SNF = {
+					remove_ideas = SNF_limited_devastation
+				}
+			}
+			if = {
+				limit = {
+					SNF = {
+						has_idea = SNF_moderate_devastation
+					}
+				}
+				SNF = {
+					remove_ideas = SNF_moderate_devastation
+				}
+			}
+			if = {
+				limit = {
+					SNF = {
+						has_idea = SNF_total_devastation
+					}
+				}
+				SNF = {
+					remove_ideas = SNF_total_devastation
+				}
+			}
+			every_country = {
+				limit = {
+					is_subject_of = UNG
+					NOT = {
+						tag = SNF
+					}
+				}
+				add_timed_idea = {
+					idea = princely_relief_tax
+					days = 125
+				}
+			}
+		}
+	}
+	
+	focus = {#Resettle Refugees
+		id = UNG_resettle_refugees
+		icon = GFX_focus_ung_resettle_refugees
+		cost = 13
+		prerequisite = {
+			focus = UNG_princely_relief
+		}
+		ai_will_do = {
+			factor = 25
+		}
+		x = 5
+		y = 3
+		bypass = {
+			SNF = {
+				has_country_flag = SNF_raid_limited_damage
+			}
+		}
+		completion_reward = {
+			custom_effect_tooltip = UNG_refugee_decisions_unlocked_tt
+			set_country_flag = UNG_refugee_decisions_unlocked
+		}
+	}
+	
+	focus = {#Tax Breaks
+		id = UNG_tax_breaks
+		icon = GFX_focus_mex_privatisation
+		cost = 4
+		prerequisite = {
+			focus = UNG_resettle_refugees
+		}
+		available = {
+			has_country_flag = UNG_no_refugees
+		}
+		x = 5
+		y = 4
+		completion_reward = {
+			SNF = {
+				add_timed_idea = {
+					idea = SNF_tax_breaks
+					days = 356
+				}
+			}
+		}
+	}
+	
+	focus = {#Fry Bigger Fish
+		id = UNG_bigger_fish
+		icon = GFX_focus_generic_concessions
+		cost = 5
+		prerequisite = {
+			focus = UNG_schneefilde_sack
+		}
+		available = {
+			has_country_flag = UNG_fry_bigger_fish
+		}
+		mutually_exclusive = {
+			focus = UNG_punish_perkavland
+			focus = UNG_diplomatic_efforts
+		}
+		x = 8
+		y = 1
+		completion_reward = {
+			add_political_power = 25
+			country_event = {
+				id = ung.17
+				days = 1
+			}
+		}
+	}
+	
+	focus = {#Territorial Concessions
+		id = UNG_concessions_territory
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 8
+		prerequisite = {
+			focus = UNG_bigger_fish
+		}
+		available = {
+			has_country_flag = UNG_concessions_territory_flag
+		}
+		x = 7
+		y = 2
+		completion_reward = {
+			country_event = {
+				id = ung.15
+				days = 1
+			}
+		}
+	}
+	
+	focus = {#Resettle Migrants
+		id = UNG_resettle_migrants
+		icon = GFX_goal_generic_neutrality_focus
+		cost = 10
+		prerequisite = {
+			focus = UNG_concessions_territory
+		}
+		available = {
+			OR = {
+				PRK = {
+					owns_state = 335
+				}
+				PRK = {
+					owns_state = 336
+				}
+			}
+			NOT = {
+				has_country_flag = UNG_unsuccesful_territorial_appeasement
+			}
+		}
+		x = 7
+		y = 3
+		completion_reward = {
+			add_timed_idea = {
+				idea = UNG_migrants_resettled
+				days = 210
+			}
+		}
+	}
+	
+	focus = {#Settle Raiders
+		id = UNG_settle_raiders
+		icon = GFX_focus_ung_settle_raiders
+		cost = 12
+		prerequisite = {
+			focus = UNG_resettle_migrants
+		}
+		x = 7
+		y = 4
+		
+		completion_reward = {
+			set_technology = {
+				perkav_raiders = 1
+			}
+		}
+	}
+	
+	focus = {#Placate Raiders
+		id = UNG_concessions_money
+		icon = GFX_focus_usa_reestablish_the_gold_standard
+		cost = 7
+		prerequisite = {
+			focus = UNG_bigger_fish
+		}
+		available = {
+			OR = {
+				has_country_flag = UNG_concessions_money_flag
+				has_country_flag = UNG_unsuccesful_territorial_appeasement
+			}
+		}
+		x = 9
+		y = 2
+		
+		completion_reward = {
+			add_timed_idea = {
+				idea = UNG_money_to_raiders_1
+				days = 300
+			}
+		}
+	}
+	
+	focus = {#Split the Bill
+		id = UNG_split_bill
+		icon = GFX_goal_generic_consumer_goods
+		cost = 10
+		prerequisite = {
+			focus = UNG_concessions_money
+		}
+		bypass = {
+			NOT = {
+				has_idea = UNG_money_to_raiders_1
+			}
+		}
+		x = 9
+		y = 3
+		
+		completion_reward = {
+			remove_ideas = UNG_money_to_raiders_1
+			add_timed_idea = {
+				idea = UNG_money_to_raiders_2
+				days = 100
+			}
+			every_country = {
+				limit = {
+					is_subject_of = UNG
+					NOT = {
+						tag = SNF
+					}
+				}
+				add_timed_idea = {
+					idea = UNG_money_to_raiders_2
+					days = 100
+				}
+			}
+		}
+	}
+	
+	focus = {#Hire Raiders
+		id = UNG_hire_raiders
+		icon = GFX_focus_ung_hire_raiders
+		cost = 10
+		prerequisite = {
+			focus = UNG_split_bill
+		}
+		x = 9
+		y = 4
+		
+		completion_reward = {
+			custom_effect_tooltip = MERCS_perkav_raiders_unlocked_tt
+			set_country_flag = MERCS_perkav_raiders_unlocked
+		}
+	}
+	
+	focus = {#Succesful Appeasement
+		id = UNG_appeasement
+		icon = GFX_goal_generic_major_alliance
+		cost = 10
+		prerequisite = {
+			focus = UNG_settle_raiders
+			focus = UNG_hire_raiders
+		}
+		x = 8
+		y = 5
+		
+		completion_reward = {
+			diplomatic_relation = {
+				country = PRK
+				relation = non_aggression_pact
+				active = yes
+			}
+		}
+	}
+	
+	focus = {#War Branch
+		id = UNG_punish_perkavland
+		icon = GFX_focus_ung_punish_perkavland
+		cost = 10
+		prerequisite = {
+			focus = UNG_schneefilde_sack
+		}
+		mutually_exclusive = {
+			focus = UNG_bigger_fish
+			focus = UNG_diplomatic_efforts
+		}
+		available = {
+			has_country_flag = UNG_war_perkavland_flag
+		}
+		x = 12
+		y = 1
+		
+		completion_reward = {
+			add_war_support = 0.1
+		}
+	}
+	
+	focus = {#Reinforce Garrison
+		id = UNG_reinforce_schneefilde
+		icon = GFX_focus_ung_reinforce_schneefilde
+		cost = 11
+		prerequisite = {
+			focus = UNG_punish_perkavland
+		}
+		x = 11
+		y = 2
+		
+		completion_reward = {
+			add_manpower = -5000
+			SNF = {
+				add_timed_idea = {
+					idea = SNF_garrison_reinforcement
+					days = 35
+				}
+			}
+		}
+	}
+	
+	focus = {#Sudschild Plan
+		id = UNG_sudschild
+		icon = GFX_focus_ung_sudschild_plan
+		cost = 15
+		prerequisite = {
+			focus = UNG_reinforce_schneefilde
+		}
+		x = 11
+		y = 3
+		
+		completion_reward = {
+			252 = {
+				add_building_construction = {
+					type = bunker
+					level = 1
+					instant_build = yes
+					province = {
+						id = 5421
+						id = 6289
+						id = 5737
+					}
+				}
+			}
+			224 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = {
+						all_provinces = yes
+						limit_to_border = yes
+					}
+				}
+			}
+			335 = {
+				add_building_construction = {
+					type = bunker
+					level = 1
+					instant_build = yes
+					province = {
+						id = 3107
+						id = 7653
+						id = 985
+						id = 1650
+					}
+				}
+			}
+		}
+	}
+	
+	focus = {#Southern Strike
+		id = UNG_southern_strike
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 8
+		prerequisite = {
+			focus = UNG_punish_perkavland
+		}
+		x = 13
+		y = 2
+		
+		completion_reward = {
+			
+			random_owned_controlled_state= {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			
+			random_owned_controlled_state= {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			
+			random_owned_controlled_state= {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {#Kaltwetter Corps
+		id = UNG_kaltwetter_korps
+		icon = GFX_focus_chi_army_reform
+		cost = 10
+		prerequisite = {
+			focus = UNG_southern_strike
+		}
+		x = 13
+		y = 3
+		
+		completion_reward = {
+			add_ideas = UNG_kaltwetter_corps_idea
+		}
+	}
+	
+	focus = {#Take Strategic Control
+		id = UNG_central_command
+		icon = GFX_focus_generic_military_mission
+		cost = 10
+		prerequisite = {
+			focus = UNG_sudschild
+		}
+		prerequisite = {
+			focus = UNG_kaltwetter_korps
+		}
+		mutually_exclusive = {
+			focus = UNG_joint_planning
+		}
+		
+		x = 11
+		y = 4
+		
+		completion_reward = {
+			add_ideas = UNG_central_command_idea
+			
+			SNF = {
+				add_ideas = UNG_central_command_idea
+			}
+		}
+	}
+	
+	focus = {#Joint Military Planning
+		id = UNG_joint_planning
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		cost = 10
+		prerequisite = {
+			focus = UNG_sudschild
+		}
+		prerequisite = {
+			focus = UNG_kaltwetter_korps
+		}
+		mutually_exclusive = {
+			focus = UNG_central_command
+		}
+		
+		x = 13
+		y = 4
+		
+		completion_reward = {
+			add_ideas = UNG_joint_planning_idea
+			
+			SNF = {
+				add_ideas = UNG_joint_planning_idea
+			}
+		}
+	}
+	
+	focus = { #DoW
+		id = UNG_war_perkavland
+		icon = GFX_focus_ung_take_down_krell
+		cost = 15
+		prerequisite = {
+			focus = UNG_central_command
+			focus = UNG_joint_planning
+		}
+		
+		x = 12
+		y = 5
+		
+		completion_reward = {
+			declare_war_on = {
+				target = PRK
+				type = annex_everything
+			}
+		}
+	}
+	
+	focus = {#Diplomatic Path
+		id = UNG_diplomatic_efforts
+		icon = GFX_goal_generic_improve_relations
+		cost = 12
+		prerequisite = {
+			focus = UNG_schneefilde_sack
+		}
+		mutually_exclusive = {
+			focus = UNG_bigger_fish
+			focus = UNG_punish_perkavland
+		}
+		available = {
+			has_country_flag = UNG_diplomatic_efforts_flag
+		}
+		
+		x = 17
+		y = 1
+		
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+	
+	focus = {#Perkav Census
+		id = UNG_perkav_census
+		icon = GFX_focus_generic_treaty
+		cost = 5
+		prerequisite = {
+			focus = UNG_diplomatic_efforts
+		}
+		
+		x = 17
+		y = 2
+		
+		completion_reward = {
+			add_political_power = 50
+			custom_effect_tooltip = UNG_perkav_census_tt
+			set_country_flag = UNG_perkav_census_unlocked
+		}
+	}
+	
+	focus = {#Tech Issues
+		id = UNG_fix_perkav_tech
+		icon = GFX_goal_generic_scientific_exchange
+		cost = 10
+		prerequisite = {
+			focus = UNG_perkav_census
+		}
+		
+		available = {
+			has_country_flag = UNG_completed_census
+		}
+		
+		x = 15
+		y = 3
+		
+		completion_reward = {
+			PRK = {
+				country_event = {
+					id = prk.13
+					days = 5
+				}
+			}
+		}
+	}
+	
+	focus = {#Political Issues
+		id = UNG_fix_perkav_politics
+		icon = GFX_focus_generic_self_management
+		cost = 10
+		prerequisite = {
+			focus = UNG_perkav_census
+		}
+		
+		available = {
+			has_country_flag = UNG_completed_census
+			has_completed_focus = UNG_fix_perkav_tech
+			has_completed_focus = UNG_develop_perkavland
+		}
+		
+		x = 17
+		y = 3
+		
+		completion_reward = {
+			PRK = {
+				country_event = {
+					id = prk.20
+					days = 5
+				}
+			}
+		}
+	}
+	
+	focus = {#Develop Perkavland
+		id = UNG_develop_perkavland
+		icon = GFX_goal_generic_construct_civilian
+		cost = 10
+		prerequisite = {
+			focus = UNG_perkav_census
+		}
+		
+		available = {
+			has_country_flag = UNG_completed_census
+		}
+		
+		x = 19
+		y = 3
+		
+		completion_reward = {
+			PRK = {
+				random_owned_controlled_state= {
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = industrial_complex
+						level = 3
+						instant_build = yes
+					}
+				}
+				
+				random_owned_controlled_state= {
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+				}
+				
+				random_owned_controlled_state= {
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+				
+				random_owned_controlled_state= {
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+				
+				random_owned_controlled_state= {
+					limit = {
+						infrastructure < 4
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 3
+						instant_build = yes
+					}
+				}
+				
+				random_owned_controlled_state= {
+					limit = {
+						infrastructure < 5
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+				
+				random_owned_controlled_state= {
+					limit = {
+						infrastructure < 5
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+				
+				random_owned_controlled_state= {
+					limit = {
+						infrastructure < 6
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	
+	focus = {#Stabilize Perkavland
+		id = UNG_stabilize_perkavland
+		icon = GFX_goal_generic_demand_territory
+		cost = 5
+		prerequisite = {
+			focus = UNG_fix_perkav_tech
+		}
+		prerequisite = {
+			focus = UNG_fix_perkav_politics
+		}
+		prerequisite = {
+			focus = UNG_develop_perkavland
+		}
+		
+		bypass = {
+			has_country_flag = UNG_perkav_rebels
+		}
+		
+		x = 17
+		y = 4
+		
+		completion_reward = {
+			custom_effect_tooltip = UNG_no_perkav_rebels_tt
+			PRK = {
+				set_country_flag = PRK_rebels_stopped
+			}
+			add_stability = 0.05
+		}
+	}
+	
+	focus = {#Ally Perkavland
+		id = UNG_ally_perkavland
+		icon = GFX_focus_ung_ally_perkavland
+		cost = 8
+		prerequisite = {
+			focus = UNG_stabilize_perkavland
+		}
+		mutually_exclusive = {
+			focus = UNG_vassalize_perkavland
+		}
+		
+		x = 16
+		y = 5
+		
+		ai_will_do = {
+			factor = 5
+		}
+		
+		completion_reward = {
+			add_stability = 0.1
+			create_faction = southern_alliance
+			add_to_faction = PRK
+
+			hidden_effect = {
+				set_country_flag = UNG_perkav_alliance
+			}
+		}
+	}
+	
+	focus = {#Vassalize Perkavland
+		id = UNG_vassalize_perkavland
+		icon = GFX_focus_rom_royal_dictatorship
+		cost = 16
+		prerequisite = {
+			focus = UNG_stabilize_perkavland
+		}
+		mutually_exclusive = {
+			focus = UNG_ally_perkavland
+		}
+		
+		x = 18
+		y = 5
+		
+		ai_will_do = {
+			factor = 3
+		}
+		
+		completion_reward = {
+			PRK = {
+				country_event = {
+					id = prk.21
+					days = 5
+				}
+			}
+		}
+	}			
+	
+	focus = {#No More Raids
+		id = UNG_end_raids
+		icon = GFX_focus_ung_no_more_raids
+		cost = 15
+		prerequisite = {
+			focus = UNG_appeasement
+			focus = UNG_war_perkavland
+			focus = UNG_ally_perkavland
+			focus = UNG_vassalize_perkavland
+		}
+		
+		available = {
+			PRK = {
+				OR = {
+					is_subject_of = UNG
+					is_in_faction_with = UNG
+					has_non_aggression_pact_with = UNG
+					exists = no
+				}
+			}
+		}
+		
+		x = 13
+		y = 6
+		
+		completion_reward = {
+			add_stability = 0.2
+			add_war_support = 0.15
+			add_political_power = 125
+		}
+	}		
 }

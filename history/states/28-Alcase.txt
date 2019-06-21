@@ -1,0 +1,26 @@
+state={
+	id=28
+	name="STATE_28"
+	state_category = metropolis
+	manpower = 779247
+
+	provinces={
+		3965 3966 4648 4830 5274 7973 
+	}
+
+	resources = {
+		oil = 11
+	}
+	
+	history={
+		owner = GMR
+		victory_points = { 3966 51 }
+		buildings = {
+			infrastructure = 6
+			arms_factory = 2
+			industrial_complex = 2
+		}
+		add_core_of = GMR
+	}
+
+}

@@ -1,8 +1,14 @@
+
 strategic_region={
 	id=116
 	name="STRATEGICREGION_116"
 	provinces={
 		9155 9263 9376 9971 10121 10444 10445 10446 10447 10448 10464 10615 10649 10660 10661 10751 10752 11091 11405 11647 12028 12270 12271 12272 12273 12274 13866 13946 14084 14085 14209 14731 14823 14973 15067 
+	}
+	naval_terrain=water_deep_ocean
+	static_modifiers={
+				water_modifier_shark_infested=always
+
 	}
 	weather={
 		period={
@@ -187,10 +193,5 @@ strategic_region={
 			sandstorm=0.000
 			min_snow_level=0.000
 		}
-	}
-	naval_terrain = water_deep_ocean
-
-	static_modifiers={
-		water_modifier_shark_infested=always
 	}
 }

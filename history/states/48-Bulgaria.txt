@@ -1,0 +1,19 @@
+state={
+	id=48
+	name="STATE_48"
+	provinces={
+		1722 1723 1724 5912 5916 6726 
+	}
+	state_category = town
+	manpower=11662
+	buildings_max_level_factor=1.000
+	history={
+		owner = GMR
+		buildings = {
+			infrastructure = 5
+			arms_factory = 1
+		}
+		add_core_of = GMR
+
+	}
+}

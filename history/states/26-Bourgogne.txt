@@ -1,0 +1,23 @@
+state={
+	id=26
+	name="STATE_26"
+	state_category = large_town
+
+	provinces={
+		516 517 518 838 5991 6037 8027 
+	}
+	manpower=34533
+	buildings_max_level_factor=1.000
+	history={
+		owner = GMR
+		victory_points = { 5991 18 }
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 2
+			arms_factory = 2
+		}
+		add_core_of = GMR
+
+	}
+
+}

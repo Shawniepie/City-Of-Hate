@@ -1,0 +1,20 @@
+state={
+	id=34
+	name="STATE_34"
+	state_category = large_city
+	manpower = 653591
+	provinces={
+		631 633 1241 3863 5121 5122 7629 
+	}
+
+	history={
+		owner = GMR
+		victory_points = { 3863 34 }
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 2
+			arms_factory = 1
+		}
+		add_core_of = GMR
+	}
+}

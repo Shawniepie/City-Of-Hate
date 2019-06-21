@@ -31,8 +31,8 @@ SKA = {
 }	
 
 STA = {
-	color = rgb { 103 148 175 }
-	color_ui = rgb { 109 155 183 }
+	color = rgb { 89 89 168 }
+	color_ui = rgb { 95 95 180 }
 }	
 
 HLZ = {
@@ -131,8 +131,33 @@ NAV = {
 }
 
 FAU = {
-	color = rgb { 15 250 215  }
+	color = rgb { 15 250 215 }
 	color_ui = rgb { 20 255 219 }
+}
+
+PRK = {
+	color = rgb { 43 190 167 }
+	color_ui = rgb { 49 201 179 }
+}
+
+TLA = {
+	color = rgb { 250 234 99 }
+	color_ui = rgb { 255 240 104 }
+}
+
+SUL = {
+	color = rgb { 240 161 135 }
+	color_ui = rgb { 255 170 140 }
+}
+
+BER = {
+	color = rgb { 81 137 181 }
+	color_ui = rgb { 90 146 190 }
+}
+
+KUR = {
+	color = rgb { 91 91 26 }
+	color_ui = rgb { 98 98 34 }
 }
 
 D01 = {

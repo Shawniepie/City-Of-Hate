@@ -1,6 +1,6 @@
 ﻿capital = 192
 
-oob = "STA_1936"
+set_oob = "STA_1936"
 
 
 set_technology = {
@@ -13,37 +13,31 @@ set_technology = {
 }
 
 set_politics = {
-
-	parties = {
-		monarchy_absolute= { 
-			popularity = 54
-		}
-
-		monarchy_constitutional = {
-			popularity = 0
-		}
-		
-		republic_peasant = {
-			popularity = 0
-		}
-		republic_aristocrat = {
-			popularity = 1
-		}
-		republic_merchant = {
-			popularity = 6
-		}
-		theocrat = {
-			popularity = 10
-		}
-		puritan = {
-			popularity = 29
-		}
-	}
-	
 	ruling_party = monarchy_absolute
 	last_election = "1936.1.1"
 	election_frequency = 48
 	elections_allowed = no
+}
+
+set_popularities = {
+	monarchy_absolute = 54
+
+	monarchy_constitutional = 0
+
+	republic_peasant = 0
+
+	republic_aristocrat = 1
+
+	republic_merchant = 6
+
+	theocrat = 10
+
+	puritan = 29
+}
+
+add_ideas = {
+	human_country
+	septism_religion
 }
 
 create_country_leader = {

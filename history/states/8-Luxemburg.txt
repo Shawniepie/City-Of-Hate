@@ -1,0 +1,23 @@
+state={
+	id=8
+	name="STATE_8"
+	state_category = large_town
+	provinces={
+		1018 1019 3110 3111 3113 3809 5054 5055 5672 7548 8476 8527 
+	}
+	manpower=46799 
+	buildings_max_level_factor=1.000
+	
+	history={
+		owner = GMR
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 2
+			arms_factory = 1
+
+		}
+		add_core_of = GMR
+	}
+
+
+}

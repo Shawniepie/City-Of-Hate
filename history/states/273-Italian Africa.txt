@@ -1,0 +1,17 @@
+state={
+	id=273
+	name="STATE_273"
+	provinces={
+		1837 1838 2817 3077 5025 5380 8276 
+	}
+	state_category = pastoral
+	manpower=1441
+	buildings_max_level_factor=1.000
+	history={
+		owner = SVT
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = SVT
+	}
+}

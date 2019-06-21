@@ -1,0 +1,17 @@
+state={
+	id=36
+	name="STATE_36"
+	provinces={
+		1676 1678 1985 5591 7813 
+	}
+	state_category = pastoral
+	manpower=4882
+	buildings_max_level_factor=1.000
+	history={
+		owner = GMR
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = GMR
+	}
+}

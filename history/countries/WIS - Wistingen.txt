@@ -1,6 +1,6 @@
 ﻿capital = 234
 
-oob = "WIS_1936"
+set_oob = "WIS_1936"
 
 
 set_technology = {
@@ -13,37 +13,31 @@ set_technology = {
 }
 
 set_politics = {
-
-	parties = {
-		monarchy_absolute= { 
-			popularity = 23
-		}
-
-		monarchy_constitutional = {
-			popularity = 54
-		}
-		
-		republic_peasant = {
-			popularity = 11
-		}
-		republic_aristocrat = {
-			popularity = 7
-		}
-		republic_merchant = {
-			popularity = 5
-		}
-		theocrat = {
-			popularity = 0
-		}
-		puritan = {
-			popularity = 0
-		}
-	}
-	
 	ruling_party = monarchy_constitutional
 	last_election = "1936.1.1"
 	election_frequency = 48
 	elections_allowed = no
+}
+
+add_ideas = {
+	human_country
+	anzella_patron
+}
+
+set_popularities = {
+	monarchy_absolute = 23
+
+	monarchy_constitutional = 54
+
+	republic_peasant = 11
+
+	republic_aristocrat = 7
+
+	republic_merchant = 5
+
+	theocrat = 0
+
+	puritan = 0
 }
 
 create_country_leader = {

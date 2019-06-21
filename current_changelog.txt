@@ -1,0 +1,6 @@
+-Shuffled some foci in the Ordorian tree to make mutually exclusive choices clearer
+-Reworked Holzbrenn's focus tree
+-Fixed OoB error where the Kurgur would have a random unit on the other continent
+-Fixed a graphics bug with the Compensation for Nobles idea for Ordoria
+-Transferred a province from Nohora to Hisjine
+-Slightly edited the Super Secret File

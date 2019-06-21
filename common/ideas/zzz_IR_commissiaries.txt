@@ -1,0 +1,31 @@
+ideas = {
+	
+	country = {
+	
+		OSG_settler_government = {
+			
+			allowed = {
+				always = yes
+			}
+			
+			allowed_civil_war = {
+				OR = {
+					has_government = puritan
+					has_government = theocrat
+					has_government = monarchy_absolute
+				}
+			}
+			
+			picture = saf_history_of_segregation_2
+			
+			removal_cost = -1
+			
+			modifier = {
+				conscription_factor = -0.95
+				MONTHLY_POPULATION = 0.35
+				production_speed_buildings_factor = 0.05
+				local_resources_factor = 0.05
+			}
+		}
+	}
+}
