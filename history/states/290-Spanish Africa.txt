@@ -1,0 +1,17 @@
+state={
+	id=290
+	name="STATE_290"
+	provinces={
+		1815 2840 3443 6328 6745 6746 7868 
+	}
+	state_category = rural
+	manpower=4439
+	buildings_max_level_factor=1.000
+	history={
+		owner = TEI
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = TEI
+	}
+}

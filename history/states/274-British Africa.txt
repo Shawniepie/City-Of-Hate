@@ -1,0 +1,19 @@
+state={
+	id=274
+	name="STATE_274"
+	provinces={
+		422 423 844 845 846 7573 7906 8009 8056 
+	}
+	state_category = town
+	manpower=15921
+	buildings_max_level_factor=1.000
+	history={
+		victory_points = { 7573 12 }
+		owner = UNG
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 1
+		}
+		add_core_of = UNG
+		}
+}

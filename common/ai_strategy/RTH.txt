@@ -30,3 +30,57 @@ skaelinger_buddies = {
 		value = 200
 	}
 }
+
+defend_loris_pass = {
+	enable = {
+		original_tag = RTH
+		controls_state = 131
+		OR = {
+			AND = {
+				country_exists = ORD
+				NOT = {
+					is_puppet_of = ORD
+				}
+				NOT = {
+					ORD = {
+						is_puppet_of = RTH
+					}
+				}
+			}
+			AND = {
+				NOT = {
+					country_exists = ORD
+				}
+				NOT = {
+					controls_state = 111
+				}
+				NOT = {
+					controls_state = 85
+				}
+				NOT = {
+					controls_state = 112
+				}
+			}
+		}
+	}
+	
+	abort = {
+		OR = {
+			AND = {
+				controls_state = 111
+				controls_state = 85
+				controls_state = 112
+			}
+			is_puppet_of = ORD
+			ORD = {
+				is_puppet_of = RTH
+			}
+		}
+	}
+	
+	ai_strategy = {
+		type = area_priority
+		id = loris_pass
+		value = 200
+	}
+}

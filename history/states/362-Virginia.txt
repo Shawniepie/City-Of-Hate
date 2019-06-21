@@ -1,0 +1,17 @@
+state={
+	id=362
+	name="STATE_362"
+	provinces={
+		119 120 125 126 130 6101 7310 7689 8675 
+	}
+	state_category = pastoral
+	manpower=1920
+	buildings_max_level_factor=1.000
+	history={
+		owner = WIS
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = WIS
+		}
+}

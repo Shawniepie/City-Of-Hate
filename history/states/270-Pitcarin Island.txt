@@ -1,0 +1,23 @@
+state={
+	id=270
+	name="STATE_270"
+	provinces={
+		3646 3957 4484 5940 8427 8737 
+	}
+	state_category = town
+	manpower=11239
+	buildings_max_level_factor=1.000
+	history={
+		victory_points = { 3957 8 }
+		owner = SVT
+		buildings = {
+			infrastructure = 5
+			arms_factory = 2
+			dockyard = 1
+			3957 = {
+				naval_base = 1
+			}
+		}
+		add_core_of = SVT
+	}
+}

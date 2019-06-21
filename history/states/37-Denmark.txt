@@ -1,0 +1,23 @@
+
+state={
+	id=37
+	name="STATE_37"
+
+	history={
+		owner = GMR
+		victory_points = { 4363 12 }
+		buildings = {
+			infrastructure = 4
+			arms_factory = 1
+		}
+		add_core_of = GMR
+
+	}
+
+	provinces={
+		1681 3370 4363 6649 8441 
+	}
+	state_category = town
+	manpower=17734
+	buildings_max_level_factor=1.000
+}

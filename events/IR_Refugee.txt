@@ -1,0 +1,19 @@
+﻿	### GENERIC FOCUS TREE EVENTS ###
+
+add_namespace = refugee
+
+country_event = {#Schneefilder Refugees
+	id = refugee.1
+	title = refugee.1.t
+	desc = refugee.1.d
+	picture = GFX_report_event_worker_protests
+	
+	is_triggered_only = yes
+	
+	option = {#Puritan
+		name = refugee.1.a
+		add_manpower = 5000
+		add_ideas = refugee_crisis
+		add_stability = -0.05
+	}
+}

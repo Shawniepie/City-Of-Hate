@@ -1,6 +1,6 @@
 ﻿capital = 224
 
-oob = "SNF_1936"
+set_oob = "SNF_1936"
 
 
 set_technology = {
@@ -13,37 +13,31 @@ set_technology = {
 }
 
 set_politics = {
-
-	parties = {
-		monarchy_absolute= { 
-			popularity = 52
-		}
-
-		monarchy_constitutional = {
-			popularity = 13
-		}
-		
-		republic_peasant = {
-			popularity = 1
-		}
-		republic_aristocrat = {
-			popularity = 4
-		}
-		republic_merchant = {
-			popularity = 3
-		}
-		theocrat = {
-			popularity = 17
-		}
-		puritan = {
-			popularity = 2
-		}
-	}
-	
 	ruling_party = monarchy_absolute
 	last_election = "1936.1.1"
 	election_frequency = 48
 	elections_allowed = no
+}
+
+set_popularities = {
+	monarchy_absolute = 52
+
+	monarchy_constitutional = 12
+
+	republic_peasant = 10
+
+	republic_aristocrat = 4
+
+	republic_merchant = 3
+
+	theocrat = 17
+
+	puritan = 2
+}
+
+add_ideas = {
+	human_country
+	hutrig_patron
 }
 
 create_country_leader = {

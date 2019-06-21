@@ -1,0 +1,17 @@
+state={
+	id=266
+	name="STATE_266"
+	provinces={
+		802 2967 4092 4422 5574 5961 
+	}
+	state_category = pastoral
+	manpower=4002
+	buildings_max_level_factor=1.000
+	history={
+		owner = NOC
+		buildings = {
+			infrastructure = 4
+		}
+		add_core_of = NOC
+	}
+}

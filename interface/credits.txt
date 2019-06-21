@@ -1,9 +1,73 @@
 ﻿#Irenthar: City of Hate Alpha Build
 
-#EVERYTHING
-Omnicide101
+#THE MOD TEAM
+Omnicide101 (Lead Dev, Setting Creator and Coder)
+East (Fritzhafen Dev)
+ItsNothing (Holzbrenn Dev)
+Oliver (Schneefilde Dev)
+SpaceHippo (Eokgi and Realm of Tears Dev)
+Otto Man (Writer, Ungerdaler Dev)
+Caelvanir (GFX Artist)
+Shawniepie (Interface GFX and GitHub Manager)
+Shortpower (Tech Tree Dev)
+Ace of Spades (Writer)
+Scoop (Discord Mod)
+Luka_No (Event and Portrait GFX)
 
-#Icons
+#Character Portraits
+
+Portraits made by Justin Nichol for the FLARE project:
+	Arthenon
+	Lafdaren
+	Serigan
+	Feininger
+	Katzmann
+	Beckenbauer
+	Artznbaum
+	Eichmann
+	Fischmann
+	Linzt
+	Wehinger
+	Astrellion
+	Stoutfellow
+	Hassler
+	Feryd
+	Jiseyne
+	Lothinnys
+	Valinthir I
+	Valinthir II
+	Vernythe
+	Krell
+	Zlatko
+	Derathur
+	Locthorin
+	Solverin
+	Rosenstock
+	Schillinger
+	Vlussinger
+	Treitschke
+	Kindl
+
+Other portraits made by Justin Nichol:
+	Darrow
+	
+Portraits made by Yann Blomquist:
+	Resmayer
+	Rosenblut
+	Zilversteen
+	Astrudinus
+	Speidel
+	Hartmann
+	Hellirfast
+	Kolb
+	Weisz
+	Schwarzenbach
+	Luudz
+	Lizardman Country Idea GFX
+
+Orc Country Idea - Made by GrimZombie
+
+#Flag Icons
 
 Ordorian Tree - Icon available at www.thenounproject.com (made by Jhonatan)
 Arkanisturm Spellbook - Icon available at techFlourish from www.techflourish.com
@@ -18,17 +82,20 @@ Schneefilder Snowflake - Icon available at www.icons8.com
 Skaelinger Pickaxe - Icon made by Smashicons from www.flaticon.com (https://www.flaticon.com/authors/smashicons)
 Skaelinger Battleaxe - Icon available at www.thenounproject.com (made by parkjisun)
 Ungerdaler Septagram - Icon available at commmons.wikimedia.org (made by Frater5)
-Religious Knot Pattern - Icon made by Gallery Forty5 at www.feltongallery45.co.uk
+Ungerdaler Eagle - Icon available at commons.wikimedia.org (made by David Liuzzo)
+Ungerdaler Crown - Icon available at vecteezy.com
+Religious Knot Pattern - Icon available at KissCC0
 Ierethayner Shield - Icon available at www.icons8.com
 Crowns - Icons available at pngtree.com
 Irentharite Gargoyle - Icon available at www.getdrawings.com
+Astrellion's Sunflower - Icon available at www.thenounproject.com (made by ProSymbols)
 Stoutfellow's Fist - Icon available at www.freepik.com (made by Vectorportal)
 Wertzsvorder Lion - Icon available at www.vecteezy.com
 Nochwalder Warhammer - Icon available at www.thenounproject.com (made by parkjisun)
 Nochwalder Laurel - Icon available at www.thenounproject.com (made by Ofer Lehr)
 Rthaur Handshake - Icon available at www.vector.me
 Guildist Sailboat - Icon available at www.thenounproject.com (made by Jens Tärning)
-Guildist Torch - Icon made by Freepik from www.flaticon.com (https://www.flaticon.com/authors/freepik)
+Guildist Torch - Icon made by Smashicons from www.flaticon.com (https://www.flaticon.com/authors/smashicons)
 Guildist Scales - Icon available at www.kissping.com
 Puritan Axe - Icon available at www.pixabay.com
 Puritan Skull - Icon available at www.thenounproject.com (made by Andrew Forrester)
@@ -37,7 +104,14 @@ Fritzhafer Anchor - Icon available at www.thenounproject.com (made by Public Dom
 Stahlhoffer Wings - Icon available at www.thenounproject.com (made by Luis Prado)
 Navandonnite Ship's Wheel - Icon available at www.thenounproject.com (made by Ben)
 Nastrodoger Scythe - Icon available at www.thenounproject.com (made by Ralf Schmitzer)
-
+Perkav Halberd - Icon available at www.thenounproject.com (made by parkjisun)
+Tlarthingian Bear - Icon available at www.thenounproject.com (made by Felix Brönnimann)
+Puritan Tlarthingian Bear - Icon available at www.vecteezy.com
+Tlarthingian Leaf - Icon available at www.thenounproject.com (made by Baboon Designs)
+Bergialer Crown - Icon available at www.thenounproject.com (made by Kelsey Armstrong)
+Sulfurisler Wrench - Icon available at www.thenounproject.com (made by National Park Service, US)
+Kurgur Claw - Icon available at www.thenounproject.com (made by regina)
+	
 #Hearts of Iron IV: Waking the Tiger
 
 #CREATIVE DIRECTOR

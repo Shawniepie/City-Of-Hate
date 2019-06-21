@@ -3,7 +3,6 @@ ideologies = {
 	monarchy_absolute = {
 	
 		types = {
-		
 			monarchy_absolute_ideology = {
 			}
 		}

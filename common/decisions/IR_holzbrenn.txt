@@ -1,0 +1,89 @@
+HLZ_presslers_ambitions = {
+	
+	HLZ_pressler_hiding = {
+	
+		icon = GFX_decision_hol_war_on_pacifism
+		
+		visible = {
+			original_tag = HLZ
+		}
+		
+		available = {
+			has_country_flag = HLZ_presslers_ambitions_flag
+			OR = {
+				NOT = {
+				has_country_flag = HLZ_pressler_stopped
+				}
+				NOT = {
+					has_country_leader = {
+						name = "Marius Pressler"
+						ruling_only = yes
+					}
+				}
+			}
+		}
+	
+	}
+	
+	HLZ_pressler_regrouping = {
+	
+		icon = GFX_decision_generic_political_discourse
+	
+	}
+	
+	HLZ_pressler_gathering_strength = {
+	
+		icon = GFX_decision_eng_blackshirt_march
+	
+	}
+	
+	HLZ_pressler_staking_claim = {
+	
+		icon = GFX_decision_eng_trade_unions_demand
+	
+	}
+	
+	HLZ_pressler_on_the_move = {
+	
+		icon = GFX_decision_generic_nationalism
+	
+	}
+}
+
+HLZ_defensive_planning = {
+	
+	HLZ_defensive_stratagems = {
+
+		icon = generic_army_support
+
+		available = {
+			has_war_with = ORD
+			has_country_flag = HLZ_defensive_stratagems_flag
+		}
+		
+		fire_only_once = yes
+		
+		visible = {
+			has_war_with = ORD
+			has_country_flag = HLZ_defensive_stratagems_flag
+		}
+
+		days_remove = 720
+
+		targeted_modifier = {
+				tag = ORD
+				defense_bonus_against = 0.15
+		}
+		modifier = {
+			mobilization_speed = 0.15
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				surrender_progress > 0.25
+				factor = 10
+			}
+		}
+	}
+}

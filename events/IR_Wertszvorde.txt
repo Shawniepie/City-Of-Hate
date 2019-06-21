@@ -1,0 +1,69 @@
+﻿### WERTZSER EVENTS
+
+add_namespace = wsz
+
+country_event = {#Give Lands to Perkavland?
+	id = wsz.1
+	title = wsz.1.t
+	desc = wsz.1.d
+	picture = GFX_report_event_military_planning
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {#Fine
+		name = prk.1.a
+		ai_chance = {
+			factor = 3
+		}
+		PRK = {
+			country_event = {
+				id = prk.7
+				days = 5
+			}
+		}
+	}
+	
+	option = {#Hell Nahw
+		name = wsz.1.b
+		ai_chance = {
+			factor = 1
+		}
+		add_political_power = 15
+		PRK = {
+			country_event = {
+				id = prk.8
+				days = 5
+			}
+		}
+	}
+}
+
+country_event = {#Victory in Holstohoren
+	id = wsz.2
+	title = wsz.2.t
+	desc = wsz.2.d
+	picture = GFX_report_event_fascists_posing
+	
+	is_triggered_only = yes
+	
+	option = {#Glory!
+		name = wsz.2.a
+		add_political_power = 35
+	}
+}
+
+country_event = {#Defeat in Holstohoren
+	id = wsz.3
+	title = wsz.3.t
+	desc = wsz.3.d
+	picture = GFX_report_event_generic_army
+	
+	is_triggered_only = yes
+	
+	option = {#Damn
+		name = wsz.3.a
+		add_stability = -0.05
+	}
+}

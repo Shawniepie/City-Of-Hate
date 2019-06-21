@@ -1,0 +1,17 @@
+state={
+	id=315
+	name="STATE_315"
+	provinces={
+		765 5509 5510 7315 8467 
+	}
+	state_category = pastoral
+	manpower=1337
+	buildings_max_level_factor=1.000
+	history={
+		owner = UNG
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = UNG
+		}
+}

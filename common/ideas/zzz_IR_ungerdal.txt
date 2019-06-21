@@ -1,0 +1,243 @@
+ideas = {
+	
+	country = {
+
+		UNG_ordorian_meddling = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = generic_spy_political
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_weekly = -0.015
+				}
+		}
+		
+		UNG_trade_realm = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = generic_sea_focused_navy
+			
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.1
+				production_speed_buildings_factor = 0.075
+				local_resources_factor = 0.15
+			}
+		}
+		
+		UNG_trade_harassed = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = brooklyn_naval_yard
+			
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.15
+				production_speed_buildings_factor = -0.1
+				local_resources_factor = -0.2
+			}
+		}
+		
+		princely_relief_tax = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = generic_foreign_capital
+			
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.05
+			}
+		}
+		
+		refugee_crisis = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = ung_refugee_crisis
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.3
+				MONTHLY_POPULATION = 0.05
+			}
+		}
+		
+		UNG_migrants_resettled = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = hol_shell_shocked_spectator
+			
+			removal_cost = -1
+			
+			modifier = {
+				MONTHLY_POPULATION = 0.3
+			}
+		}
+		
+		UNG_money_to_raiders_1 = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = generic_constitutional_guarantees
+			
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.35
+			}
+		}
+		
+		UNG_money_to_raiders_2 = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = generic_constitutional_guarantees
+			
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.05
+			}
+		}
+		
+		UNG_kaltwetter_corps_idea = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = ung_kaltwetter_corps
+			
+			removal_cost = -1
+			
+			modifier = {
+				acclimatization_cold_climate_gain_factor = 0.15
+			}
+		}
+		
+		UNG_central_command_idea = {
+		
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			cancel = {
+				OR = {
+					PRK = {
+						is_subject = yes
+					}
+					PRK = {
+						exists = NO
+					}
+				}
+			}
+			
+			picture = CZE_planning_bonus
+			
+			removal_cost = -1
+			
+			targeted_modifier = {
+					tag = PRK
+					attack_bonus_against = 0.15
+			}
+		}
+		
+		UNG_joint_planning_idea = {
+		
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			cancel = {
+				OR = {
+					PRK = {
+						is_subject = yes
+					}
+					PRK = {
+						exists = NO
+					}
+				}
+			}
+			
+			picture = FRA_national_mobilization_focus
+			
+			removal_cost = -1
+			
+			targeted_modifier = {
+					tag = PRK
+					defense_bonus_against = 0.15
+			}
+		}
+	}
+}

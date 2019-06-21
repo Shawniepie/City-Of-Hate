@@ -56,30 +56,10 @@ opinion_modifiers = {
 		value = 25
 	}
 	
-	similar_ruling_party = {
-		value = 10
-	}
-	
-	different_party_types = {
-		value = -10
-	}
-	
 	long_term_trade_partner = {
 		value = 1
 	}
 
-	same_ruling_party = {
-		value = 0
-	}
-	
-	similar_ruling_party = {
-		value = 0
-	}
-	
-	different_party_types = {
-		value = 0
-	}
-	
 	in_faction = {
 		value = 100
 	}
@@ -130,8 +110,79 @@ opinion_modifiers = {
 		value = -15
 	}
 	
+	ORD_thaw_modifier = {
+		value = 50
+	}
+	
+	ORD_demand_land_modifier = {
+		value = -15
+	}
+	
 	UNG_exchange = {
 		value = 5
 	}
 	
-}	
+	HLZ_mad_freiprinz_opinion = {
+		value = -70
+	}
+	
+	HLZ_besmirched_state = {
+		value = -35
+	}
+	
+	 HLZ_republican_rabble = {
+		value = -50
+	}
+	
+	HLZ_compensated_nobles_opinion = {
+		value = 20
+	}
+	
+	HLZ_purple_seats_opinion = {
+		value = 20
+	}
+	
+	IR_same_ideology = {
+		value = 25
+	}
+	
+	IR_similar_ideology = {
+		value = 10
+	}
+	
+	IR_different_ideology = {
+		value = -10
+	}
+	
+	puritan_good_race = {
+		value = 5
+	}
+	
+	IR_puritan_vermin = {
+		value = -200
+	}
+	
+	puritan_extremists = {
+		value = -5
+	}
+	
+	IR_puritan_butchers = {
+		value = -200
+	}
+	
+	IR_wrong_puritans = {
+		value = -200
+	}
+	
+	theocrat_good_faith = {
+		value = 50
+	}
+	
+	theocrat_similar_faith = {
+		value = 30
+	}
+	
+	IR_heathens = {
+		value = -30
+	}
+}

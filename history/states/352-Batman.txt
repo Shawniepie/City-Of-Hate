@@ -1,0 +1,17 @@
+state={
+	id=352
+	name="STATE_352"
+	provinces={
+		2002 4760 4761 4762 7109 7350 7744 8023 
+	}
+	state_category = pastoral
+	manpower=3420
+	buildings_max_level_factor=1.000
+	history={
+		owner = WSZ
+		buildings = {
+			infrastructure = 2	
+		}
+		add_core_of = WSZ
+		}
+}

@@ -1,0 +1,19 @@
+state={
+	id=370
+	name="STATE_370"
+	provinces={
+		401 402 403 404 1222 1223 3023 3026 6975 8515 
+	}
+	state_category = city
+	manpower=592210
+	history={
+		victory_points = { 402 40 }
+		owner = BER
+		buildings = {
+			infrastructure = 8
+			industrial_complex = 3
+			arms_factory = 2
+		}
+		add_core_of = BER
+	}
+}

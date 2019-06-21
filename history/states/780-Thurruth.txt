@@ -1,0 +1,18 @@
+state={
+	id=780
+	name="STATE_780"
+	provinces={
+		2166 2167 3707 4131 4132 4542 
+	}
+	state_category = pastoral
+	manpower=1028
+	buildings_max_level_factor=1.000
+	history={
+		owner = TLA
+		buildings = {
+			infrastructure = 1
+
+		}
+		add_core_of = TLA
+	}
+}

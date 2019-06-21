@@ -1,0 +1,118 @@
+areas = {
+
+	west_ordoria = {
+        strategic_regions = {
+            14
+            16
+        }
+    }
+	
+	central_ordoria = {
+		strategic_regions = {
+			13
+		}
+	}
+	
+	south_ordoria = {
+		strategic_regions = {
+			17
+		}
+	}
+	
+	loris_pass = {
+		strategic_regions = {
+			12
+		}
+	}
+	
+	east_ordoria = {
+		strategic_regions = {
+			10
+			11
+		}
+	}
+	
+	stahlhoffer_ordoria = {
+		strategic_regions = {
+			23
+		}
+	}
+	
+	irenthar = {
+		strategic_regions = {
+			105
+		}
+	}
+	
+	trifersi = {
+		strategic_regions = {
+			5
+		}
+	}
+	
+	cortineal = {
+		strategic_regions = {
+			4
+		}
+	}
+	
+	caltireth = {
+		strategic_regions = {
+			7
+		}
+	}
+	
+	west_stahlhof = {
+		strategic_regions = {
+			23
+		}
+	}
+	
+	holzbrenn = {
+		strategic_regions = {
+			25
+		}
+	}
+	
+	neureik = {
+		strategic_regions = {
+			54
+		}
+	}
+	
+	west_faustburg = {
+		strategic_regions = {
+			57
+		}
+	}
+	
+	east_faustburg = {
+		strategic_regions = {
+			58
+		}
+	}
+	
+	arkanisturm = {
+		strategic_regions = {
+			59
+		}
+	}
+	
+	wistingen = {
+		strategic_regions = {
+			61
+		}
+	}
+	
+	fritzhafen = {
+		strategic_regions = {
+			107
+		}
+	}
+	
+	schneefilde = {
+		strategic_regions = {
+			56
+		}
+	}
+}

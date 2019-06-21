@@ -4,6 +4,22 @@ state={
 	provinces={
 		262 4349 4615 5865 5950 5977 6521 7141 7599 7800 
 	}
-	manpower=0
+	state_category = large_town
+	manpower=271566
+	buildings_max_level_factor=1.000
+	history={
+		victory_points = { 5950 38 }
+		owner = PRK
+		buildings = {
+			infrastructure = 4
+			arms_factory = 1
+			dockyard = 2
+			industrial_complex = 2
+			5950 = {
+				naval_base = 4
+			}
+		}
+		add_core_of = PRK
+	}
 	buildings_max_level_factor=1.000
 }

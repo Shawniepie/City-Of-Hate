@@ -1,0 +1,836 @@
+ideas = {
+	
+	country = {
+		
+		#NATIONAL SPIRITS
+		
+		rosenbluts_evil = {
+			
+			allowed = {
+				original_tag = HLZ
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = generic_fascism_drift_2
+			
+			removal_cost = -1
+			
+			modifier = {
+				military_leader_cost_factor = 0.33
+				political_power_gain = -0.15
+				stability_factor = -0.05
+				war_support_factor = -0.1
+			}
+		}
+		
+		widespread_famine = {
+		
+			allowed = {	
+				original_tag = HLZ	
+			}
+		
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = raj_risk_of_famine
+			
+			removal_cost = -1
+			
+			modifier = {
+				army_morale_factor = -0.2
+				war_support_factor = -0.15
+				stability_factor = -0.1
+				production_speed_buildings_factor = -0.015
+				production_factory_efficiency_gain_factor = -0.15
+				local_resources_factor = -0.3
+				MONTHLY_POPULATION = -0.33
+			}
+			
+		}
+		
+		carpenters_strike = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = FRA_scw_intervention_republicans_focus
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_weekly = -0.015
+				}
+		}
+			
+		legacy_of_puritanism_idea = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = ast_abandon_the_westminster_system_fascism
+			
+			modifier = {
+				political_power_gain = -0.25
+				stability_factor = -0.05
+				conscription_factor = -0.25
+			}
+		}
+		
+		unpopular_state = {
+		
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				OR = {
+					NOT = {
+						has_government = republic_merchant
+					}
+					NOT = {
+						has_government = republic_peasant
+					}
+				}	
+			}
+			
+			picture = generic_disjointed_gov
+			
+			modifier = {
+				stability_factor = -0.15
+				war_support_factor = -0.1
+			}
+		}
+		
+		unpopular_state_2 = {
+		
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				OR = {
+					NOT = {
+						has_government = republic_merchant
+					}
+					NOT = {
+						has_government = republic_peasant
+					}
+				}	
+			}
+			
+			picture = generic_disjointed_gov
+			
+			modifier = {
+				stability_factor = -0.1
+				war_support_factor = -0.05
+			}
+		}
+		
+		unpopular_state_3 = {
+		
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				OR = {
+					NOT = {
+						has_government = republic_merchant
+					}
+					NOT = {
+						has_government = republic_peasant
+					}
+				}	
+			}
+			
+			picture = generic_disjointed_gov
+			
+			modifier = {
+				stability_factor = -0.05
+			}
+		}
+		
+		gutprinz_prinzip_idea = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				has_government = monarchy_constitutional
+			}
+			
+			picture = HUN_hungarian_monarchy
+			
+			modifier = {
+				stability_factor = 0.15
+				war_support_factor = 0.10
+				political_power_gain = 0.25
+			}
+		}
+		
+		never_another_tyrant_idea = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				has_government = republic_aristocrat
+			}
+
+			picture = ROM_king_carol_ii_handled
+			
+			modifier = {
+				drift_defence_factor = 0.25
+				military_leader_cost_factor = -0.25
+			}
+		}
+		
+		gardens_into_orchards_idea = {
+		
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				has_government = republic_aristocrat
+			}
+			
+			picture = generic_agrarian_reform
+			
+			modifier = {
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+			}
+		}
+		
+		open_university = {
+
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				OR = {
+					has_government = republic_aristocrat
+					has_government = monarchy_constitutional
+				}
+			}
+			
+			picture = generic_pp_unity_bonus
+			
+			modifier = {
+				research_speed_factor = 0.075
+			}
+		}
+		
+		petitions_idea = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				OR = {
+					has_government = republic_aristocrat
+					has_government = monarchy_constitutional
+				}
+			}
+			
+			picture = generic_constitutional_guarantees
+			
+			modifier = {
+				political_power_gain = 0.5
+			}
+		}
+		
+		beziehungsburo_idea = {
+		
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				OR = {
+					has_government = republic_aristocrat
+					has_government = monarchy_constitutional
+				}
+			}
+			
+			picture = hlz_beziehungsburo
+			
+			modifier = {
+				justify_war_goal_time = -0.25
+				enemy_justify_war_goal_time = 0.1
+				improve_relations_maintain_cost_factor = -0.5
+				guarantee_cost = -0.25
+			}
+		}
+		
+		rechtsakademie_idea = {	
+		
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				OR = {
+					has_government = republic_aristocrat
+					has_government = monarchy_constitutional
+				}
+			}
+			
+			picture = hlz_rechtsakademie
+			
+			modifier = {
+				trade_laws_cost_factor = -0.25
+				mobilization_laws_cost_factor = -0.25
+				economy_cost_factor = -0.25
+				stability_factor = 0.05
+			}
+		}
+		
+		noble_constitution_idea = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				OR = {
+					has_government = republic_aristocrat
+					has_government = monarchy_constitutional
+				}
+			}
+			
+			picture = HUN_treaty_of_triannon
+			
+			modifier = {
+				drift_defence_factor = 0.2
+				stability_factor = 0.15
+				political_power_gain = 0.5
+			}
+		}
+		
+		introduce_welfare_idea = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				OR = {
+					has_government = republic_aristocrat
+					has_government = monarchy_constitutional
+				}
+			}
+			
+			picture = export_focus
+			
+			modifier = {
+				consumer_goods_factor = -0.15
+			}
+			
+		}
+		
+		enlightened_nobility = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				OR = {
+					has_government = republic_aristocrat
+					has_government = monarchy_constitutional
+				}
+			}
+			
+			picture = jap_supremacy_of_will
+			
+			modifier = {
+				improve_relations_maintain_cost_factor = -0.25
+				army_org_Factor = 0.15
+			}
+		}
+		
+		idyllischen_prinztum_idea = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				OR = {
+					has_government = republic_aristocrat
+					has_government = monarchy_constitutional
+				}
+			}
+			
+			picture = YUG_federal_defense_council
+			
+			modifier = {
+				non_core_manpower = 0.03
+				army_morale_factor = 0.1
+			}
+		}
+		
+		guaranteed_freedoms_idea = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				has_government = republic_merchant
+			}
+			
+			picture = neutrality_idea
+			
+			modifier = {
+				enemy_partisan_effect = -0.25
+				production_factory_start_efficiency_factor = 0.15
+			}
+		}
+		
+		beratungsrat_idea = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				has_government = republic_merchant
+			}
+			
+			picture = generic_army_war_college
+			
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.15
+				local_resources_factor = 0.2
+			}
+		}
+		
+		libertine_constitution_idea = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				has_government = republic_merchant
+			}
+			
+			picture = generic_constitutional_guarantees
+			
+			modifier = {
+				MONTHLY_POPULATION = 0.1
+				enemy_partisan_effect = -0.15
+				stability_factor = 0.25
+			}
+		}
+		
+		never_another_starving_man_idea = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				has_government = republic_peasant
+			}
+			
+			picture = generic_agrarian_reform
+		
+			modifier = {
+				production_speed_buildings_factor = 0.15
+			}
+		}
+		
+		international_support_idea = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				has_government = republic_peasant
+			}
+			
+			picture = limited_conscription
+			
+			modifier = {
+				send_volunteer_size = 5
+				send_volunteers_tension = -1
+				send_volunteer_divisions_required = -1
+			}
+		}
+		
+		popular_constitution_idea = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				has_government = republic_peasant
+			}
+			
+			picture = generic_morale_bonus
+			
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				research_speed_factor = 0.05
+				stability_factor = 0.15
+			}
+		}
+		
+		ordorian_refugees_idea = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				has_government = republic_merchant
+			}
+			
+			picture = prc_low_popular_support3
+			
+			modifier = {
+				MONTHLY_POPULATION = 0.35
+				stability_factor = -0.2
+			}
+		}
+		
+		remnants_of_puritanism_idea = {
+		
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				OR = {
+					has_government = republic_merchant
+					has_government = republic_peasant
+				}
+			}
+			
+			picture = generic_fascism_drift_bonus
+			
+			modifier = {
+				political_power_gain = -0.2
+				stability_factor = -0.05
+				conscription_factor = -0.15
+			}
+		}
+		
+		succesful_co_government_idea = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				OR = {
+					has_government = republic_merchant
+					has_government = republic_peasant
+				}
+			}
+			
+			picture = generic_deal_with_the_devil
+			
+			modifier = {
+				army_defence_factor = 0.15
+				political_power_gain = 0.15
+			}
+		}
+		
+		idyllischen_republik_idea = {
+		
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				OR = {
+					has_government = republic_merchant
+					has_government = republic_peasant
+				}
+			}
+			
+			picture = received_attache
+			
+			modifier = {
+				industrial_capacity_factory = 0.15
+				conscription_factor = 0.1
+			}
+		}
+		
+		tax_breaks_big = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				has_government = republic_merchant
+			}
+			
+			picture = generic_agrarian_reform
+			
+			modifier = {
+				production_speed_buildings_factor = 0.1
+			}
+		}
+		
+		subsidies_small = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				has_government = republic_merchant
+			}
+			
+			picture = generic_agrarian_society
+			
+			modifier = {
+				stability_factor = 0.1
+			}
+		}
+		
+		agricultural_boom_idea = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = hlz_agricultural_boom
+			
+			modifier = {
+				MONTHLY_POPULATION = 1
+			}
+		}
+		
+		compensated_affected = {
+			
+			picture = generic_pp_unity_bonus
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				has_government = republic_peasant
+			}
+			
+			modifier = {
+				stability_factor = 0.15
+			}
+		}
+		
+		utopia_compensation_idea = {
+			
+			picture = ROM_king_carol_ii_hedonist
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				has_government = republic_peasant
+			}
+			
+			modifier = {
+				consumer_goods_factor = -0.15
+			}
+		}
+	}
+
+		#ADVISORS
+		
+	political_advisor = {
+		
+		laurenz_reinmann = {
+			
+			picture = generic_army_african_5
+			
+			allowed = {
+				original_tag = HLZ
+			}
+		
+			available = {
+				OR = {
+					has_government = monarchy_constitutional
+					has_government = republic_aristocrat
+				}
+				has_completed_focus = HLZ_relegitimization_institutions
+			}
+			
+			traits = {
+				aristocratic_paragon
+			}
+		}
+		
+		sabina_heuberger = {
+			
+			picture = generic_army_female_africa
+			
+			allowed = {
+				original_tag = HLZ
+			}
+		
+			available = {
+				OR = {
+					has_government = monarchy_constitutional
+					has_government = republic_aristocrat
+				}
+				has_completed_focus = HLZ_relegitimization_dialogue
+			}
+			
+			traits = {
+				skilled_orator
+			}
+		}
+		
+		erwin_bloch = {
+			
+			picture = generic_army_europe_6
+			
+			allowed = {
+				original_tag = HLZ
+			}
+		
+			available = {
+				OR = {
+					has_government = monarchy_constitutional
+					has_government = republic_aristocrat
+				}
+				has_completed_focus = HLZ_relegitimization_results
+			}
+			
+			traits = {
+				eye_for_economics
+			}
+		}
+		
+		alexandra_von_neureim = {
+			
+			picture = dolores_ibarruri
+			
+			allowed = {
+				original_tag = HLZ
+			}
+		
+			available = {
+				has_government = republic_merchant
+				has_completed_focus = HLZ_support_bauernherren
+			}
+			
+			traits = {
+				gentlewoman_farmer
+			}
+		}
+		
+		joachim_fugler = {
+			
+			picture = generic_political_advisor_south_america_2
+			
+			allowed = {
+				original_tag = HLZ
+			}
+		
+			available = {
+				has_government = republic_merchant
+				has_completed_focus = HLZ_machen_lassen
+			}
+			
+			traits = {
+				market_proponent
+			}
+		}
+		
+		helmut_goeth = {
+			
+			picture = andrew_cunningham
+			
+			allowed = {
+				original_tag = HLZ
+			}
+		
+			available = {
+				OR = {
+					AND = {
+						has_government = republic_merchant
+						has_completed_focus = HLZ_support_smallholders
+					}
+					AND = {
+						has_government = republic_peasant
+						has_completed_focus = HLZ_mandate_smallholds
+					}
+				}
+			}
+			
+			traits = {
+				smallholder_advocate
+			}
+		}
+		
+		karl_stelzner = {
+			
+			picture = alfred_heurtaux
+			
+			allowed = {
+				original_tag = HLZ
+			}
+			
+			available = {
+				has_government = republic_peasant
+				has_completed_focus = HLZ_republican_farms
+			}
+			
+			traits = {
+				central_organization_proponent
+			}
+		}
+		
+		ylcatra_isthyne = {
+			
+			picture = generic_political_advisor_female_africa
+			
+			allowed = {
+				original_tag = HLZ
+			}
+			
+			available = {
+				has_government = republic_peasant
+				has_completed_focus = HLZ_communal_tax
+			}
+			
+			traits = {
+				experienced_rosite
+			}
+		}
+	}
+}

@@ -1,0 +1,17 @@
+state={
+	id=79
+	name="STATE_79"
+	provinces={
+		2456 2459 2460 2462 2463 6654 
+	}
+	state_category = pastoral
+	manpower=2332
+	buildings_max_level_factor=1.000
+		history={	
+		owner = ORD
+		buildings = {	
+		infrastructure = 5
+		}	
+		add_core_of = ORD
+		}
+}

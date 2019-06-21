@@ -1,0 +1,24 @@
+state={
+	id=339
+	name="STATE_339"
+	provinces={
+		1114 1115 1116 1117 1118 2603 3308 3309 5832 8387 
+	}
+	state_category = town
+	manpower=19119
+	buildings_max_level_factor=1.000
+	history={
+		owner = FTH
+		victory_points = { 1115 14 }
+		buildings = {
+			infrastructure = 5	
+		dockyard = 1
+		arms_factory = 2
+		industrial_complex = 1
+		1115 = {
+			naval_base = 2
+		}
+		}
+		add_core_of = FTH
+	}
+}

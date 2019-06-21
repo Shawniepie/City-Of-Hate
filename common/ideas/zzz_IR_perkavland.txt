@@ -1,0 +1,170 @@
+ideas = {
+	
+	country = {
+		
+		PRK_tribal_nation = {
+			allowed = {
+				original_tag = PRK
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = prk_tribal_nation
+			
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.15
+				production_speed_buildings_factor = -0.4
+				conscription_factor = -0.25
+				political_power_factor = -0.35
+				stability_factor = -0.15
+				trade_laws_cost_factor = 0.15
+				mobilization_laws_cost_factor = 0.15
+				economy_cost_factor = 0.15
+			}
+		}
+		
+		PRK_oral_tradition = {
+			allowed = {
+				original_tag = PRK
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = prk_oral_tradition
+			
+			removal_cost = -1
+			
+			modifier = {
+				research_speed_factor = -0.33
+			}
+		}
+		
+		PRK_administrative_reform = {
+			allowed = {
+				original_tag = PRK
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = prk_administrative_reform
+			
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.1
+				production_speed_buildings_factor = -0.3
+				conscription_factor = -0.15
+				political_power_factor = -0.2
+				stability_factor = -0.1
+				trade_laws_cost_factor = 0.15
+				mobilization_laws_cost_factor = 0.15
+				economy_cost_factor = 0.15
+			}
+		}	
+		
+		PRK_perkav_census_idea = {
+			allowed = {
+				original_tag = PRK
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = prk_perkav_census
+			
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+				production_speed_buildings_factor = -0.2
+				conscription_factor = -0.1
+				political_power_factor = -0.1
+				stability_factor = -0.05
+				trade_laws_cost_factor = 0.15
+				mobilization_laws_cost_factor = 0.15
+				economy_cost_factor = 0.15
+			}
+		}
+		
+		PRK_perkav_script = {
+			allowed = {
+				original_tag = PRK
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = prk_perkav_script
+			
+			removal_cost = -1
+			
+			modifier = {
+				research_speed_factor = -0.25
+			}
+		}
+		
+		PRK_beginnings_literacy = {
+			allowed = {
+				original_tag = PRK
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = prk_beginnings_literacy
+			
+			removal_cost = -1
+			
+			modifier = {
+				research_speed_factor = -0.17
+			}
+		}
+		
+		PRK_riches_of_schneefilde = {
+			allowed = {
+				original_tag = PRK
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = prk_riches_schneefilde
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.35
+			}
+		}
+		
+		PRK_ungerdaler_reforms = {
+			allowed = {
+				original_tag = PRK
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_monarchy_strengthening
+
+			removal_cost = -1
+			
+			modifier = {
+				monarchy_constitutional_drift = 0.1
+			}
+		}
+	}
+}

@@ -1,0 +1,23 @@
+state={
+	id=291
+	name="STATE_291"
+	provinces={
+		1797 1799 1800 1801 3444 3445 5433 6510 
+	}
+	state_category = large_town
+	manpower=15421
+	buildings_max_level_factor=1.000
+	resources = {
+		tungsten = 14
+		}
+	history={
+		owner = NRK
+		victory_points = { 5433 17 }
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 2
+			arms_factory = 3
+		}
+		add_core_of = NRK
+		}
+}

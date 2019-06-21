@@ -1,0 +1,18 @@
+state={
+	id=789
+	name="STATE_789"
+	provinces={
+		297 298 1508 1509 1604 1606 6885 7156 7157 7158 7396 7397 7899 7900 8118 
+	}
+	state_category = rural
+	manpower=4982
+	buildings_max_level_factor=1.000
+	history={
+		owner = TLA
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+		}
+		add_core_of = TLA
+	}
+}

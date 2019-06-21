@@ -1,0 +1,17 @@
+state={
+	id=356
+	name="STATE_356"
+	provinces={
+		136 2600 2601 2602 7094 7399 7576 8280 8360 
+	}
+	state_category = pastoral
+	manpower=2332
+	buildings_max_level_factor=1.000
+	history={
+		owner = FTH
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = FTH
+		}
+}

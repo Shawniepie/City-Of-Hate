@@ -34,10 +34,64 @@ ORD_noble_riots = {
 	}
 }
 
+plunder_schneefilde = {
+	
+	icon = GFX_decision_category_border_conflicts
+	
+	allowed = {
+		always = yes
+	}
+}
+
+UNG_manage_refugee_crisis = {
+	
+	icon = GFX_decision_category_eng_organize_the_blackshirts
+	
+	allowed = {
+		always = yes
+	}
+}
+
+UNG_perkav_census_decisions = {
+	
+	icon = GFX_decision_category_perkav_census
+	
+	allowed = {
+		always = yes
+	}
+}
+
 rally_princes = {
 
 	icon = GFX_decision_category_wiederherstellung
 
+	allowed = {
+		always = yes
+	}
+}
+
+hire_mercenaries = {
+	
+	icon = GFX_decision_category_mercenaries
+	
+	allowed = {
+		always = yes
+	}
+}
+
+HLZ_defensive_planning = {
+	
+	icon = GFX_decision_category_military_operation
+	
+	allowed = {
+		always = yes
+	}
+}
+
+HLZ_presslers_ambitions = {
+	
+	icon = GFX_decision_category_power_struggle
+	
 	allowed = {
 		always = yes
 	}

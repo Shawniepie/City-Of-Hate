@@ -4,6 +4,14 @@ state={
 	provinces={
 		5640 5642 5842 5843 6628 8822 
 	}
-	manpower=0
+	state_category = pastoral
+	manpower=1720
 	buildings_max_level_factor=1.000
+	history={
+		owner = BER
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = BER
+	}
 }

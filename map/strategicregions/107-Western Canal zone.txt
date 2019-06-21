@@ -1,8 +1,14 @@
+
 strategic_region={
 	id=107
 	name="STRATEGICREGION_107"
 	provinces={
 		115 127 128 129 136 220 234 235 659 660 1114 1115 1116 1117 1118 1828 1829 1830 1842 1843 1844 2599 2600 2601 2602 2603 2694 2696 2791 2793 2794 3219 3220 3221 3222 3223 3224 3225 3308 3309 3509 3711 3712 3714 3715 3716 3717 4093 4094 4096 4097 4098 4729 4730 4895 4896 4996 4997 4998 4999 5000 5001 5618 5776 5832 6609 6629 6737 7063 7064 7065 7094 7319 7399 7448 7464 7576 7951 8124 8252 8280 8321 8360 8387 8454 8584 8674 8734 8747 8876 
+	}
+	naval_terrain=water_deep_ocean
+	static_modifiers={
+				water_modifier_shark_infested=always
+
 	}
 	weather={
 		period={
@@ -187,11 +193,5 @@ strategic_region={
 			sandstorm=0.000
 			min_snow_level=0.000
 		}
-	}
-
-	naval_terrain = water_deep_ocean
-
-	static_modifiers={
-		water_modifier_shark_infested=always
 	}
 }

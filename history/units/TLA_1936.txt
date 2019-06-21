@@ -1,0 +1,191 @@
+﻿division_template = {
+	name = "Unblooded Militia"	
+	regiments = {
+		garrison = { x = 0 y = 0 }
+		garrison = { x = 0 y = 1 }
+		garrison = { x = 0 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Mirewatch"
+	regiments = {
+		men_at_arms = { x = 0 y = 0 }
+		men_at_arms = { x = 0 y = 1 }
+		men_at_arms = { x = 0 y = 2 }
+        men_at_arms = { x = 1 y = 0 }
+		men_at_arms = { x = 1 y = 1 }
+		men_at_arms = { x = 1 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Wyrmriders"
+	regiments = {
+		heavy_cavalry = { x = 0 y = 0 }
+        heavy_cavalry = { x = 0 y = 1 }
+        heavy_cavalry = { x = 0 y = 2 }
+		heavy_cavalry = { x = 1 y = 0 }
+		heavy_cavalry = { x = 1 y = 1 }
+		heavy_cavalry = { x = 1 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Drake Cavalry"
+	regiments = {
+		light_cavalry = { x = 0 y = 0 }
+        light_cavalry = { x = 0 y = 1 }
+        light_cavalry = { x = 1 y = 0 }
+		light_cavalry = { x = 1 y = 1 }
+	}
+	support = {
+	    recon = { x = 0 y = 0 }
+	}
+}
+
+units = {
+
+	division = {
+		name = "Arngus Mirewatch"
+		location = 2626
+		division_template = "Mirewatch"
+		start_experience_factor = 0.6
+
+	}
+	
+	division = {
+		name = "Thurruth Mirewatch"
+		location = 3707
+		division_template = "Mirewatch"
+		start_experience_factor = 0.6
+
+	}
+	
+	division = {
+		name = "Gurluth Mirewatch"
+		location = 7581
+		division_template = "Mirewatch"
+		start_experience_factor = 0.8
+
+	}
+	
+	division = {
+		name = "Putrun Mirewatch"
+		location = 3841
+		division_template = "Mirewatch"
+		start_experience_factor = 0.7
+
+	}
+	
+	division = {
+		name = "Cist Mirewatch"
+		location = 2085
+		division_template = "Mirewatch"
+		start_experience_factor = 0.7
+
+	}
+	
+	division = {
+		name = "Maleet Mirewatch"
+		location = 3842
+		division_template = "Mirewatch"
+		start_experience_factor = 0.7
+
+	}
+	
+	division = {
+		name = "Gurn Mirewatch"
+		location = 1220
+		division_template = "Mirewatch"
+		start_experience_factor = 0.7
+
+	}
+	
+	division = {
+		name = "Luudz' Wyrmriders"
+		location = 6284
+		division_template = "Wyrmriders"
+		start_experience_factor = 0.7
+
+	}
+	
+	division = {
+		name = "Glorrin Drake Cavalry"
+		location = 5739
+		division_template = "Drake Cavalry"
+		start_experience_factor = 0.7
+
+	}
+	
+	division = {
+		name = "Issthvin Unblooded"
+		location = 3526
+		division_template = "Unblooded Militia"
+		start_experience_factor = 0.05
+
+	}
+	
+	division = {
+		name = "Norl Unblooded"
+		location = 80
+		division_template = "Unblooded Militia"
+		start_experience_factor = 0.05
+
+	}
+	
+	division = {
+		name = "Quure Unblooded"
+		location = 1601
+		division_template = "Unblooded Militia"
+		start_experience_factor = 0.05
+
+	}
+	
+	division = {
+		name = "Sorth Unblooded"
+		location = 5368
+		division_template = "Unblooded Militia"
+		start_experience_factor = 0.05
+
+	}
+	
+	division = {
+		name = "Garythie Unblooded"
+		location = 7594
+		division_template = "Unblooded Militia"
+		start_experience_factor = 0.05
+
+	}
+	
+	division = {
+		name = "Lurve Unblooded"
+		location = 5189
+		division_template = "Unblooded Militia"
+		start_experience_factor = 0.05
+
+	}
+}
+
+### STARTING PRODUCTION ###
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_0
+			creator = "TLA"
+		}
+		requested_factories = 8
+		progress = 0.48
+		efficiency = 59
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+			creator = "TLA" 
+		}
+		requested_factories = 5
+		progress = 0.3
+		efficiency = 37
+	}
+}

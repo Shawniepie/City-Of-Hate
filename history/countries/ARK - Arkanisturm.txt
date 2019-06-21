@@ -1,6 +1,6 @@
 ﻿capital = 206
 
-oob = "ARK_1936"
+set_oob = "ARK_1936"
 
 
 set_technology = {
@@ -13,37 +13,31 @@ set_technology = {
 }
 
 set_politics = {
-
-	parties = {
-		monarchy_absolute= { 
-			popularity = 13
-		}
-
-		monarchy_constitutional = {
-			popularity = 15
-		}
-		
-		republic_peasant = {
-			popularity = 1
-		}
-		republic_aristocrat = {
-			popularity = 61
-		}
-		republic_merchant = {
-			popularity = 4
-		}
-		theocrat = {
-			popularity = 3
-		}
-		puritan = {
-			popularity = 3
-		}
-	}
-	
 	ruling_party = republic_aristocrat
 	last_election = "1936.1.1"
 	election_frequency = 48
 	elections_allowed = no
+}
+
+set_popularities = {
+	monarchy_absolute = 13
+
+	monarchy_constitutional = 15
+
+	republic_peasant = 1
+
+	republic_aristocrat = 61
+
+	republic_merchant = 4
+
+	theocrat = 3
+
+	puritan = 3
+}
+
+add_ideas = {
+	human_country
+	hieyrenous_patron
 }
 
 create_country_leader = {

@@ -1,0 +1,17 @@
+state={
+	id=292
+	name="STATE_292"
+	provinces={
+		1878 1881 1882 6308 6309 
+	}
+	state_category = pastoral
+	manpower=2003
+	buildings_max_level_factor=1.000
+	history={
+		owner = NRK
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = NRK
+		}
+}

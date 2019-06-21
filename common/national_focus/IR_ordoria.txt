@@ -47,9 +47,9 @@ focus_tree = {
 			country_event = {
 				id = ord.1
 				days = 1
-				}
 			}
 		}
+	}
 	
 	focus = {#Absolutist
 		id = ORD_thaw
@@ -85,30 +85,46 @@ focus_tree = {
 				#news_event = news_event.1
 				add_political_power = -150
 				add_stability = -0.25
-						GMR = {
-				add_opinion_modifier = {
-					target = ORD
-					modifier = ORD_thaw_modifier
-						}
+				GMR = {
+					add_opinion_modifier = {
+						target = ORD
+						modifier = ORD_thaw_modifier
 					}
-						UNG = {
-				add_opinion_modifier = {
-					target = ORD
-					modifier = ORD_thaw_modifier
-						}
+					reverse_add_opinion_modifier = {
+						target = ORD
+						modifier = ORD_thaw_modifier
 					}
-						STA = {
-				add_opinion_modifier = {
-					target = ORD
-					modifier = ORD_thaw_modifier
-						}
+				}
+				UNG = {
+					add_opinion_modifier = {
+						target = ORD
+						modifier = ORD_thaw_modifier
 					}
-						HLZ = {
-				add_opinion_modifier = {
-					target = ORD
-					modifier = ORD_thaw_modifier
-						}
+					reverse_add_opinion_modifier = {
+						target = ORD
+						modifier = ORD_thaw_modifier
 					}
+				}
+				STA = {
+					add_opinion_modifier = {
+						target = ORD
+						modifier = ORD_thaw_modifier
+					}
+					reverse_add_opinion_modifier = {
+						target = ORD
+						modifier = ORD_thaw_modifier
+					}
+				}
+				HLZ = {
+					add_opinion_modifier = {
+						target = ORD
+						modifier = ORD_thaw_modifier
+					}
+					reverse_add_opinion_modifier = {
+						target = ORD
+						modifier = ORD_thaw_modifier
+					}
+				}
 				hidden_effect = {
 					set_country_flag = {
 						flag = ORD_moderate_success
@@ -775,7 +791,7 @@ random_owned_state= {
 	
 	focus = { # Slay Heresiarch
 		id = ORD_slay_heresiarch
-		icon = GFX_focus_RAJ_lions_of_the_great_war
+		icon = GFX_focus_ord_slay_heresiarch
 		cost = 6.8
 		prerequisite = {
 			focus = ORD_reassert_eastern_claims
@@ -1303,6 +1319,12 @@ random_owned_state= {
 		completion_reward = {
 			if = {
 				limit = {
+					has_idea = ORD_rthaur_propaganda
+				}
+				remove_ideas = ORD_rthaur_propaganda
+			}
+			if = {
+				limit = {
 					country_exists = EOR
 				}
 				puppet = EOR
@@ -1453,7 +1475,7 @@ random_owned_state= {
 					}
 				}
 				hidden_effect = {
-					all_state = {
+					every_state = {
 						limit = {
 							is_core_of = RTH
 						}
@@ -1498,7 +1520,7 @@ random_owned_state= {
 		ai_will_do = {
 			factor = 8
 		}
-		x = 17
+		x = 15
 		y = 1
 		completion_reward = {
 			create_corps_commander = {
@@ -1605,7 +1627,7 @@ random_owned_state= {
 		ai_will_do = {
 			factor = 6
 		}
-		x = 17
+		x = 15
 		y = 2
 		completion_reward = {
 			add_tech_bonus = {
@@ -1627,7 +1649,7 @@ random_owned_state= {
 		ai_will_do = {
 			factor = 6
 		}
-		x = 17
+		x = 15
 		y = 3
 		completion_reward = {
 			add_ideas = {
@@ -1646,10 +1668,13 @@ random_owned_state= {
 		available = {
 			has_country_flag = ORD_military_moderate
 		}
+		mutually_exclusive = {
+			focus = ORD_grand_battleplan
+		}
 		ai_will_do = {
 			factor = 5
 		}
-		x = 15
+		x = 17
 		y = 1
 		completion_reward = {
 			add_tech_bonus = {
@@ -1670,7 +1695,7 @@ random_owned_state= {
 		ai_will_do = {
 			factor = 5
 		}
-		x = 15
+		x = 17
 		y = 2
 		completion_reward = {
 			add_ideas = {
@@ -1689,7 +1714,7 @@ random_owned_state= {
 		ai_will_do = {
 			factor = 5
 		}
-		x = 15
+		x = 17
 		y = 3
 		completion_reward = {
 			add_ideas = {
@@ -1710,6 +1735,9 @@ random_owned_state= {
 				has_country_flag = ORD_military_imperialist
 				has_country_flag = ORD_military_theocrat
 			}
+		}
+		mutually_exclusive = {
+			focus = ORD_mobile_warfare
 		}
 		ai_will_do = {
 			factor = 5

@@ -119,4 +119,324 @@ units = {
 		start_experience_factor = 1.2
 
 	}
+	
+	division = {
+		name = "1st Levy"
+		location = 4469
+		division_template = "King's Guard"
+		start_experience_factor = 0.13
+
+	}
+	
+	division = {
+		name = "2nd Levy"
+		location = 1568
+		division_template = "King's Guard"
+		start_experience_factor = 0.13
+
+	}
+	
+	division = {
+		name = "3rd Levy"
+		location = 2914
+		division_template = "King's Guard"
+		start_experience_factor = 0.13
+
+	}
+	
+	division = {
+		name = "4th Levy"
+		location = 2913
+		division_template = "King's Guard"
+		start_experience_factor = 0.13
+
+	}
+	
+	division = {
+		name = "5th Levy"
+		location = 1571
+		division_template = "King's Guard"
+		start_experience_factor = 0.13
+
+	}
+	
+	division = {
+		name = "6th Levy"
+		location = 1570
+		division_template = "King's Guard"
+		start_experience_factor = 0.13
+
+	}
+	
+	division = {
+		name = "7th Levy"
+		location = 8317
+		division_template = "King's Guard"
+		start_experience_factor = 0.13
+
+	}
+	
+	division = {
+		name = "8th Levy"
+		location = 4695
+		division_template = "King's Guard"
+		start_experience_factor = 0.13
+
+	}
+	
+	division = {
+		name = "9th Levy"
+		location = 4470
+		division_template = "King's Guard"
+		start_experience_factor = 0.13
+
+	}
+	
+	division = {
+		name = "10th Levy"
+		location = 6621
+		division_template = "King's Guard"
+		start_experience_factor = 0.13
+
+	}
+	
+	division = {
+		name = "11th Levy"
+		location = 5915
+		division_template = "King's Guard"
+		start_experience_factor = 0.13
+
+	}
+	
+	division = {
+		name = "12th Levy"
+		location = 5914
+		division_template = "King's Guard"
+		start_experience_factor = 0.13
+
+	}
+	
+	division = {
+		name = "13th Levy"
+		location = 2408
+		division_template = "King's Guard"
+		start_experience_factor = 0.13
+
+	}
+	
+	division = {
+		name = "14th Levy"
+		location = 4644
+		division_template = "King's Guard"
+		start_experience_factor = 0.13
+
+	}
+	
+	division = {
+		name = "15th Levy"
+		location = 6566
+		division_template = "King's Guard"
+		start_experience_factor = 0.13
+
+	}
+	
+	division = {
+		name = "16th Levy"
+		location = 7219
+		division_template = "King's Guard"
+		start_experience_factor = 0.13
+
+	}
+	
+	division = {
+		name = "17th Levy"
+		location = 4647
+		division_template = "King's Guard"
+		start_experience_factor = 0.13
+
+	}
+	
+	division = {
+		name = "18th Levy"
+		location = 5917
+		division_template = "King's Guard"
+		start_experience_factor = 0.13
+
+	}
+	
+	division = {
+		name = "19th Levy"
+		location = 4646
+		division_template = "King's Guard"
+		start_experience_factor = 0.13
+
+	}
+	
+	division = {
+		name = "20th Levy"
+		location = 8434
+		division_template = "King's Guard"
+		start_experience_factor = 0.13
+
+	}
+	
+	division = {
+		name = "21st Levy"
+		location = 2361
+		division_template = "King's Guard"
+		start_experience_factor = 0.13
+
+	}
+	
+	division = {
+		name = "22nd Levy"
+		location = 7864
+		division_template = "King's Guard"
+		start_experience_factor = 0.13
+
+	}
+	
+	division = {
+		name = "23rd Levy"
+		location = 2746
+		division_template = "King's Guard"
+		start_experience_factor = 0.13
+
+	}
+	
+	division = {
+		name = "24th Levy"
+		location = 741
+		division_template = "King's Guard"
+		start_experience_factor = 0.13
+
+	}
+	
+	division = {
+		name = "25th Levy"
+		location = 6807
+		division_template = "King's Guard"
+		start_experience_factor = 0.13
+
+	}
+	
+	division = {
+		name = "26th Levy"
+		location = 62
+		division_template = "King's Guard"
+		start_experience_factor = 0.13
+
+	}
+	
+	division = {
+		name = "27th Levy"
+		location = 2824
+		division_template = "King's Guard"
+		start_experience_factor = 0.13
+
+	}
+	
+	division = {
+		name = "28th Levy"
+		location = 742
+		division_template = "King's Guard"
+		start_experience_factor = 0.13
+
+	}
+	
+	division = {
+		name = "29th Levy"
+		location = 3479
+		division_template = "King's Guard"
+		start_experience_factor = 0.13
+
+	}
+	
+	division = {
+		name = "30th Levy"
+		location = 1922
+		division_template = "King's Guard"
+		start_experience_factor = 0.13
+
+	}
+	
+	division = {
+		name = "31st Levy"
+		location = 8219
+		division_template = "King's Guard"
+		start_experience_factor = 0.13
+
+	}
+	
+	division = {
+		name = "32nd Levy"
+		location = 1564
+		division_template = "King's Guard"
+		start_experience_factor = 0.13
+
+	}
+	
+	division = {
+		name = "33rd Levy"
+		location = 7479
+		division_template = "King's Guard"
+		start_experience_factor = 0.13
+
+	}
+	
+	division = {
+		name = "34th Levy"
+		location = 7780
+		division_template = "King's Guard"
+		start_experience_factor = 0.13
+
+	}
+	
+	division = {
+		name = "35th Levy"
+		location = 827
+		division_template = "King's Guard"
+		start_experience_factor = 0.13
+
+	}
+	
+	division = {
+		name = "36th Levy"
+		location = 3671
+		division_template = "King's Guard"
+		start_experience_factor = 0.13
+
+	}
+	
+	division = {
+		name = "37th Levy"
+		location = 2757
+		division_template = "King's Guard"
+		start_experience_factor = 0.13
+
+	}
+	
+	division = {
+		name = "38th Levy"
+		location = 851
+		division_template = "King's Guard"
+		start_experience_factor = 0.13
+
+	}
+	
+	division = {
+		name = "39th Levy"
+		location = 1680
+		division_template = "King's Guard"
+		start_experience_factor = 0.13
+
+	}
+	
+	division = {
+		name = "40th Levy"
+		location = 6612
+		division_template = "King's Guard"
+		start_experience_factor = 0.13
+
+	}
 }

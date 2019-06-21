@@ -1,0 +1,24 @@
+ideas = {
+	
+	country = {
+	
+		MERCS_hiring_perkav_raiders_idea = {
+			
+			allowed = {
+				always = yes
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = merc_hiring_perkav_raiders
+			
+			removal_cost = -1
+			
+			modifier = {
+				civilian_factory_use = 5
+			}
+		}
+	}
+}

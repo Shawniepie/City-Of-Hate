@@ -1,0 +1,17 @@
+state={
+	id=325
+	name="STATE_325"
+	provinces={
+		148 149 348 349 350 351 352 8742 8908 
+	}
+	state_category = pastoral
+	manpower=1011
+	buildings_max_level_factor=1.000
+	history={
+		owner = SNF
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = SNF
+	}
+}

@@ -4,7 +4,9 @@ In the far North, the disparate kingdoms of the Northern Plains have been unifie
 
 In the sweltering jungles of Ordoria, the genocidal Elven Kingdom prepares to stamp out the lesser races, while the Rthaur rebels and their allies, the Dwarves of Skaelinger, stand ready to cast back the tides of madness that Ordoria seeks to unleash upon the world. Yet for all their courage, they are few in number, and if they should fail, the world may yet be cast into an age darkness from which it may never recover.
 
-Even the Union of free Ungerdaler Princes, the heart of civilization in southern Latherin, is not safe; the unrest in Holzbrenn, suffering under the yoke of the Mad Prince, is reaching a boiling point, while the Freiprinz of Stahlhof prepares to stake his claim on the Freithron and cast the Union into open civil war. Further beyond, in distant realms and uncharted lands, the warhorns are blowing, and they are coming ever closer...
+Even the Union of free Ungerdaler Princes, the heart of civilization in southern Latherin, is not safe; the unrest in Holzbrenn, suffering under the yoke of the Mad Prince, is reaching a boiling point, while the Freiprinz of Stahlhof prepares to stake his claim on the Freithron and cast the Union into open civil war. Meanwhile, the hardy men of Schneefilde report that the marauding barbarians of Perkavland launch raids with ever increasing numbers...
+
+Further beyond, in distant realms and uncharted lands, the warhorns are blowing, and they are coming ever closer...
 
 -----
 
@@ -12,14 +14,17 @@ Welcome to the public alpha of Irenthar: City of Hate, a total conversion mod fo
 
 This mod aims to bring a fantasy world to life, and let you take command - lead your people to freedom, or build a global empire and rule the world with an iron fist, the choice is yours.
 
-Please note that as it is currently a public alpha mod developed by a single person, it is still VERY much in development. Most of the countries aren't even on the map yet, but I've done my best to insure that what is there is fun to play.
+Please note that as it is currently a public alpha mod, it is still VERY much in development. Most of the countries aren't even on the map yet, but I've done my best to insure that what is there is fun to play.
 
 Features:
 	-A completely original setting dreamt up by yours truly.
 	-Seven unique ideologies, including monarchies, republics and theocracies.
 	-A completely new generic Focus Tree with 67 foci to choose from.
 	-Two unique focus trees, with plenty more planned.
-	-Four unique units, with many more on the way.
+	-Five unique units, with many more on the way.
+	-A religion system - choose a Patron Deity for your people!
 	-(Hopefully) a Hearts of Iron experience completely unlike anything you've seen before!
+
+Join our Discord! https://discord.gg/QhZAGMN
 
 If you have any questions or bugs, please post them on the mod's official subreddit, r/CoHmod. You'll also find dev diaries and teasers here.

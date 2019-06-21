@@ -504,6 +504,9 @@ country_event = {#Second Rthaur Revolution - Skaelinger Joins!
 				modifier = staunch_allies
 			}
 		}
+		ORD = {
+			clr_country_flag = conquest_of_skaelinger
+		}
 	}
 }
 

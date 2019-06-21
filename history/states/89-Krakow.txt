@@ -1,0 +1,21 @@
+state={
+	id=89
+	name="STATE_89"
+	provinces={
+		3732 3995 4212 7071 7831 8017 8913 
+	}
+	state_category = town
+	manpower=8792
+	resources = {
+		steel = 14
+	}
+	buildings_max_level_factor=1.000
+		history={	
+		owner = ORD
+		buildings = {	
+		infrastructure = 4
+		industrial_complex = 2
+		}	
+		add_core_of = ORD
+		}
+}

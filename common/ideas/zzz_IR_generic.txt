@@ -1,0 +1,724 @@
+ideas = {
+
+	country_race = {
+		
+		human_country = {
+			allowed = {
+				always = no #assigned in country files
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = generic_political_advisor_india_2
+			
+			traits = {
+				human_racial_bonuses
+			}
+			
+			removal_cost = -1
+		}
+		
+		elf_country = {
+			allowed = {
+				always = no #assigned in country files
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = generic_elf
+			
+			traits = {
+				elf_racial_bonuses
+			}
+			
+			removal_cost = -1
+		}
+		
+		dwarf_country = {
+			allowed = {
+				always = no #assigned in country files
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = generic_dwarf
+			
+			traits = {
+				dwarf_racial_bonuses
+			}
+			
+			removal_cost = -1
+		}
+		
+		gnome_country = {
+			allowed = {
+				always = no #assigned in country files
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = generic_gnome
+			
+			traits = {
+				gnome_racial_bonuses
+			}
+			
+			removal_cost = -1
+		}
+		
+		lizardmen_country = {
+			allowed = {
+				always = no #assigned in country files
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = generic_lizardman
+			
+			traits = {
+				lizardman_racial_bonuses
+			}
+			
+			removal_cost = -1
+		}
+		
+		orc_country = {
+			allowed = {
+				always = no #assigned in country files
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = generic_orc
+			
+			traits = {
+				orc_racial_bonuses
+			}
+			
+			removal_cost = -1
+		}
+	}
+	
+	country = {
+		
+		GENERIC_ban_foreigners = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				has_government = puritan
+			}
+			
+			picture = saf_history_of_segregation
+			
+			removal_cost = -1
+			
+			modifier = {
+				MONTHLY_POPULATION = -0.01
+				war_support_factor = 0.15
+			}
+		}
+		
+		GENERIC_national_unity_idea = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				has_government = puritan
+			}
+			
+			picture = HUN_secret_rearmament
+			
+			removal_cost = -1
+			
+			modifier = {
+				army_attack_factor = 0.15
+			}
+		}
+		
+		GENERIC_loyalty_monarch_idea = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				has_government = monarchy_absolute
+			}
+			
+			picture = ast_abandon_the_westminster_system
+			
+			removal_cost = -1
+			
+			modifier = {
+				army_org_Factor = 0.15
+			}
+		}
+		
+		GENERIC_nepotism_idea = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				has_government = monarchy_absolute
+			}
+			
+			picture = ROM_king_carol_ii_hedonist
+			
+			removal_cost = -1
+			
+			modifier = {
+				political_advisor_cost_factor = -0.35
+				military_leader_cost_factor = -0.35
+				high_command_cost_factor = -0.35
+				army_chief_cost_factor = -0.35
+				navy_chief_cost_factor = -0.35
+				air_chief_cost_factor = -0.35
+			}
+		}
+		
+		GENERIC_authoritarianism_idea = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				OR = {
+					has_government = puritan
+					has_government = monarchy_absolute
+				}
+			}
+			
+			picture = generic_oppression
+			
+			removal_cost = -1
+			
+			modifier = {
+				enemy_partisan_effect = -0.1
+				mobilization_laws_cost_factor = -0.33
+				economy_cost_factor = -0.33
+				trade_laws_cost_factor = -0.33
+			}
+		}
+		
+		GENERIC_limited_freedoms_idea = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				has_government = monarchy_constitutional
+			}
+			
+			picture = neutrality_idea
+			
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = 0.25
+			}	
+		}
+		
+		GENERIC_benevolent_monarchy_idea = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				has_government = monarchy_constitutional
+			}
+			
+			picture = HUN_hungarian_monarchy_habsburg
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.35
+			}
+		}
+		
+		GENERIC_figurehead_monarch_idea = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				has_government = republic_aristocrat
+			}
+			
+			picture = generic_king_handled
+			
+			removal_cost = -1
+			
+			modifier = {
+				drift_defence_factor = 0.35
+			}
+		}
+		
+		GENERIC_academy_elites_idea = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				has_government = republic_aristocrat
+			}
+			
+			picture = generic_research_bonus
+			
+			removal_cost = -1
+			
+			modifier = {
+				research_speed_factor = 0.075
+			}
+		}
+		
+		GENERIC_constitutionalism_idea = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				OR = {
+					has_government = monarchy_constitutional
+					has_government = republic_aristocrat
+				}
+			}
+			
+			picture = HUN_treaty_of_triannon
+			
+			modifier = {
+				opinion_gain_monthly_factor = 0.25
+				enemy_justify_war_goal_time = 0.15
+			}
+		}
+		
+		GENERIC_mercantile_freedom_idea = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war {
+				has_government = republic_merchant
+			}
+			
+			picture = can_wartime_prices_and_trade_board
+			
+			modifier = {
+				production_speed_buildings_factor = 0.15
+			}
+		}
+		
+		GENERIC_standardize_currency_idea = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				has_government = republic_merchant
+			}
+			
+			picture = generic_neutrality_drift_bonus
+			
+			modifier = {
+				 production_factory_efficiency_gain_factor = 0.075
+			}
+		}
+		
+		GENERIC_grain_dole_idea = {
+		
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				has_government = republic_peasant
+			}
+			
+			picture = generic_agrarian_society
+			
+			modifier = {
+				army_core_defence_factor = 0.25
+			}
+		}
+		
+		GENERIC_land_redistribution_idea = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				has_government = republic_peasant
+			}
+			
+			picture = generic_rosites
+			
+			modifier = {
+				consumer_goods_factor = -0.1
+			}
+			
+		}
+		
+		GENERIC_republicanism_idea = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				OR = {
+					has_government = republic_merchant
+					has_government = republic_peasant
+				}
+			}
+			
+			picture = FRA_national_mobilization_focus
+			
+			modifier = {
+				partisan_effect = 0.2
+			}
+		}
+		
+		GENERIC_state_religion_idea = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				has_government = theocrat
+			}
+			
+			picture = generic_temple
+			
+			modifier = {
+				conscription_factor = 0.05
+			}
+		}
+		
+		GENERIC_religious_fervour_idea = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				has_government = theocrat
+			}
+			
+			picture = vittoria_mutilata
+			
+			modifier = {
+				army_morale_factor = 0.1
+			}
+		}
+		
+		GENERIC_ecclesiocratism_idea = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				has_government = theocrat
+			}
+			
+			picture = generic_religion
+			
+			modifier = {
+				surrender_limit = 0.15
+				land_reinforce_rate = 0.1
+			}
+		}
+		
+		GENERIC_import_resources_idea = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = generic_foreign_capital
+			
+			modifier = {
+				min_export = -0.5
+				consumer_goods_factor = -0.15
+			}
+		}
+		
+		GENERIC_economies_of_scale = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = man_five_year_plan_industry
+			
+			modifier = {
+				industrial_capacity_factory = 0.15
+				industrial_capacity_dockyard  = 0.15
+			}
+		}
+		
+		GENERIC_diverse_economy = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = generic_local_self_management
+			
+			modifier = {
+				line_change_production_efficiency_factor = 0.2
+				production_factory_start_efficiency_factor = 0.1
+			}
+		}
+		
+		GENERIC_armourers_guild_idea = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = generic_production_bonus
+			
+			modifier = {
+				industrial_capacity_factory = 0.15
+				production_speed_arms_factory_factor = 0.1
+			}
+		}
+		
+		GENERIC_army_superiority = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = generic_victors_of_ww1
+			
+			modifier = {
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+			}
+		}
+		
+		GENERIC_standardized_ships = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = generic_navy_bonus
+			
+			modifier = {
+				industrial_capacity_dockyard = 0.15
+				production_speed_dockyard_factor = 0.1
+			}
+		}
+		
+		GENERIC_naval_superiority = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = liberty_ships_focus
+			
+			modifier = {
+				spotting_chance = 0.05
+				naval_hit_chance = 0.05
+			}
+		}
+		
+		GENERIC_outrider_corps = {
+		
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = generic_motorized_equipment_manufacturer_2
+			
+			modifier = {
+				recon_factor = 0.15
+			}
+		}
+		
+		GENERIC_anvil_infantry = {
+		
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = generic_fortify_the_borders
+			
+			modifier = {
+				army_infantry_defence_factor = 0.1
+				cavalry_attack_factor = 0.1
+			}
+		}
+		
+		GENERIC_supply_uniforms = {
+		
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = generic_manpower_bonus
+			
+			modifier = {
+				army_morale_factor = 0.1
+				mobilization_speed = 0.05
+			}
+		}
+		
+		GENERIC_regimental_pride = {
+		
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = generic_morale_bonus
+			
+			modifier = {
+				experience_loss_factor = -0.1
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+			}
+		}
+		
+		GENERIC_mass_produced_arms = {
+		
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = man_militarism
+			
+			modifier = {
+				industrial_capacity_factory = 0.1
+			}
+		}
+		
+		GENERIC_supply_trains = {
+		
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = can_wartime_prices_and_trade_board
+			
+			modifier = {
+				attrition = -0.25
+				land_reinforce_rate = 0.1
+			}
+		}
+		
+		GENERIC_superior_officers = {
+		
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = generic_war_preparation
+			
+			modifier = {
+				army_leader_start_level = 1
+				max_planning  = 0.1
+			}
+		}
+		
+		GENERIC_chain_of_command = {
+		
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = generic_chain_of_command
+			
+			modifier = {
+				army_org_factor = 0.1
+				planning_speed = 0.05
+			}
+		}
+	}
+}

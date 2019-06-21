@@ -1,0 +1,217 @@
+﻿division_template = {
+	name = "Kurgur Deathriders"
+	
+	division_names_group = GMR_CAV_01
+	
+	regiments = {
+		heavy_cavalry = { x = 0 y = 0 }
+        heavy_cavalry = { x = 0 y = 1 }
+        heavy_cavalry = { x = 1 y = 0 }
+		heavy_cavalry = { x = 1 y = 1 }
+		heavy_cavalry = { x = 2 y = 0 }
+		heavy_cavalry = { x = 2 y = 1 }
+	}
+	support = {
+	    recon = { x = 0 y = 0 }
+	}
+}
+
+division_template = {
+	name = "Kurgur Raiders"
+	
+	division_names_group = GMR_CAV_02
+	
+	regiments = {
+		light_cavalry = { x = 0 y = 0 }
+        light_cavalry = { x = 0 y = 1 }
+        light_cavalry = { x = 1 y = 0 }
+		light_cavalry = { x = 1 y = 1 }
+		light_cavalry = { x = 2 y = 0 }
+		light_cavalry = { x = 2 y = 1 }
+	}
+	support = {
+	    recon = { x = 0 y = 0 }
+	}
+}
+
+units = {
+
+	division = {
+		name = "Clan Gulthur"
+		location = 1904
+		division_template = "Kurgur Deathriders"
+		start_experience_factor = 0.8
+
+	}
+
+	division = {
+		name = "Clan Haskur"
+		location = 1741
+		division_template = "Kurgur Deathriders"
+		start_experience_factor = 0.3
+
+	}
+
+	division = {
+		name = "Clan Vulgur"
+		location = 6104
+		division_template = "Kurgur Deathriders"
+		start_experience_factor = 0.3
+
+	}
+
+	division = {
+		name = "Clan Hulmor"
+		location = 3404
+		division_template = "Kurgur Deathriders"
+		start_experience_factor = 0.3
+
+	}
+
+	division = {
+		name = "Clan Vanghur"
+		location = 722
+		division_template = "Kurgur Deathriders"
+		start_experience_factor = 0.3
+
+	}
+
+	division = {
+		name = "Clan Listvor"
+		location = 7605
+		division_template = "Kurgur Deathriders"
+		start_experience_factor = 0.3
+
+	}
+
+	division = {
+		name = "Clan Gangorr"
+		location = 1746
+		division_template = "Kurgur Deathriders"
+		start_experience_factor = 0.3
+
+	}
+
+	division = {
+		name = "Clan Multhur"
+		location = 2503
+		division_template = "Kurgur Raiders"
+		start_experience_factor = 0.3
+
+	}
+
+	division = {
+		name = "Clan Hingvar"
+		location = 2956
+		division_template = "Kurgur Raiders"
+		start_experience_factor = 0.3
+
+	}
+	
+	division = {
+		name = "Clan Vingharr"
+		location = 1479
+		division_template = "Kurgur Raiders"
+		start_experience_factor = 0.3
+
+	}
+
+	division = {
+		name = "Clan Yulharg"
+		location = 44
+		division_template = "Kurgur Raiders"
+		start_experience_factor = 0.3
+
+	}
+
+	division = {
+		name = "Clan Halghan"
+		location = 3473
+		division_template = "Kurgur Raiders"
+		start_experience_factor = 0.3
+
+	}
+
+	division = {
+		name = "Clan Vistgorr"
+		location = 2288
+		division_template = "Kurgur Raiders"
+		start_experience_factor = 0.3
+
+	}
+
+	division = {
+		name = "Clan Liskargg"
+		location = 43
+		division_template = "Kurgur Raiders"
+		start_experience_factor = 0.3
+
+	}
+
+	division = {
+		name = "Clan Welging"
+		location = 6600
+		division_template = "Kurgur Raiders"
+		start_experience_factor = 0.3
+
+	}
+
+	division = {
+		name = "Clan Porgur"
+		location = 5445
+		division_template = "Kurgur Raiders"
+		start_experience_factor = 0.3
+
+	}
+	
+	division = {
+		name = "Clan Jinghor"
+		location = 4344
+		division_template = "Kurgur Raiders"
+		start_experience_factor = 0.3
+
+	}
+
+	division = {
+		name = "Clan Ilgorgur"
+		location = 1744
+		division_template = "Kurgur Raiders"
+		start_experience_factor = 0.3
+
+	}
+
+	division = {
+		name = "Clan Hiskor"
+		location = 5035
+		division_template = "Kurgur Raiders"
+		start_experience_factor = 0.3
+
+	}	
+	
+}
+
+
+
+
+### STARTING PRODUCTION ###
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_0
+			creator = "KUR"
+		}
+		requested_factories = 4
+		progress = 0.69
+		efficiency = 29
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+			creator = "KUR" 
+		}
+		requested_factories = 1
+		progress = 0.11
+		efficiency = 6
+	}
+}

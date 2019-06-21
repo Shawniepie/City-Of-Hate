@@ -6,9 +6,7 @@ ungerdaler_reunion = {
 		
 		allowed = {
 			original_tag = HLZ
-			NOT = {
-				country_exists = UNG
-			}
+			has_dlc = "Waking the Tiger"
 		}
 		
 		available = {
@@ -206,9 +204,6 @@ ungerdaler_reunion = {
 		allowed = {
 			original_tag = NOC
 			has_dlc = "Waking the Tiger"
-			NOT = {
-				country_exists = UNG
-			}
 		}
 		
 		available = {
@@ -407,9 +402,6 @@ set_party_name = {
 		allowed = {
 			original_tag = SVT
 			has_dlc = "Waking the Tiger"
-			NOT = {
-				country_exists = UNG
-			}
 		}
 		
 		available = {
@@ -617,9 +609,6 @@ set_party_name = {
 		allowed = {
 			original_tag = SPW
 			has_dlc = "Waking the Tiger"
-			NOT = {
-				country_exists = UNG
-			}
 		}
 		
 		available = {
@@ -818,9 +807,6 @@ set_party_name = {
 		allowed = {
 			original_tag = TEI
 			has_dlc = "Waking the Tiger"
-			NOT = {
-				country_exists = UNG
-			}
 		}
 		
 		available = {
@@ -1019,9 +1005,6 @@ set_party_name = {
 		allowed = {
 			original_tag = NRK
 			has_dlc = "Waking the Tiger"
-			NOT = {
-				country_exists = UNG
-			}
 		}
 		
 		available = {
@@ -1220,9 +1203,6 @@ set_party_name = {
 		allowed = {
 			original_tag = STA
 			has_dlc = "Waking the Tiger"
-			NOT = {
-				country_exists = UNG
-			}
 		}
 		
 		available = {
@@ -1421,9 +1401,6 @@ set_party_name = {
 		allowed = {
 			original_tag = STA
 			has_dlc = "Waking the Tiger"
-			NOT = {
-				country_exists = UNG
-			}
 		}
 		
 		available = {
@@ -1654,9 +1631,6 @@ set_party_name = {
 		allowed = {
 			original_tag = SNF
 			has_dlc = "Waking the Tiger"
-			NOT = {
-				country_exists = UNG
-			}
 		}
 		
 		available = {
@@ -1855,9 +1829,6 @@ set_party_name = {
 		allowed = {
 			original_tag = FAU
 			has_dlc = "Waking the Tiger"
-			NOT = {
-				country_exists = UNG
-			}
 		}
 		
 		available = {
@@ -2008,9 +1979,6 @@ set_party_name = {
 		allowed = {
 			original_tag = ARK
 			has_dlc = "Waking the Tiger"
-			NOT = {
-				country_exists = UNG
-			}
 		}
 		
 		available = {
@@ -2209,9 +2177,6 @@ set_party_name = {
 		allowed = {
 			original_tag = WIS
 			has_dlc = "Waking the Tiger"
-			NOT = {
-				country_exists = UNG
-			}
 		}
 		
 		available = {
@@ -2410,9 +2375,6 @@ set_party_name = {
 		allowed = {
 			original_tag = FTH
 			has_dlc = "Waking the Tiger"
-			NOT = {
-				country_exists = UNG
-			}
 		}
 		
 		available = {
@@ -2611,9 +2573,6 @@ set_party_name = {
 		allowed = {
 			original_tag = WSZ
 			has_dlc = "Waking the Tiger"
-			NOT = {
-				country_exists = UNG
-			}
 		}
 		
 		available = {

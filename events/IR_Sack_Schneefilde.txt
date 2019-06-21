@@ -1,0 +1,202 @@
+﻿### SACK OF SCHNEEFILDE EVENTS
+
+add_namespace = perkav_schneefilder_sack
+
+country_event = {
+	id = perkav_schneefilder_sack.1
+	title = perkav_schneefilder_sack.1.t
+	desc = perkav_schneefilder_sack.1.d
+	
+	picture = GFX_report_event_perkavland_sacked
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = perkav_schneefilder_sack.1.a
+		add_political_power = 50
+		add_war_support = 0.05
+		add_timed_idea = {
+			idea = PRK_riches_of_schneefilde
+			days = 75
+		}
+	}
+}
+
+country_event = {
+	id = perkav_schneefilder_sack.2
+	title = perkav_schneefilder_sack.2.t
+	desc = perkav_schneefilder_sack.2.d
+	
+	picture = GFX_report_event_dead_soldiers
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = perkav_schneefilder_sack.2.a
+		add_political_power = -50
+		add_stability = -0.05
+	}
+}
+
+country_event = {
+	id = perkav_schneefilder_sack.3
+	title = perkav_schneefilder_sack.3.t
+	desc = perkav_schneefilder_sack.3.d
+	
+	picture = GFX_report_event_soldiers_in_france
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = perkav_schneefilder_sack.3.a
+		add_political_power = -25
+	}
+}
+
+add_namespace = schneefilde_schneefilder_sack
+
+country_event = {
+	id = schneefilde_schneefilder_sack.1
+	title = schneefilde_schneefilder_sack.1.t
+	desc = schneefilde_schneefilder_sack.1.d
+	
+	picture = GFX_report_event_albanian_partisans
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = schneefilde_schneefilder_sack.1.a
+		UNG = {
+			set_country_flag = UNG_schneefilde_sacked
+		}
+		add_political_power = 50
+		add_war_support = 0.05
+		224 = {
+			remove_building = {
+				type = infrastructure
+				level = 2
+			}
+			remove_building = {
+				type = industrial_complex
+				level = 1
+			}
+		}
+		set_country_flag = SNF_raid_limited_damage
+		add_ideas = SNF_limited_devastation
+	}
+}
+
+country_event = {
+	id = schneefilde_schneefilder_sack.2
+	title = schneefilde_schneefilder_sack.2.t
+	desc = schneefilde_schneefilder_sack.2.d
+	
+	picture = GFX_report_event_perkavland_sacked
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = schneefilde_schneefilder_sack.2.a
+		UNG = {
+			set_country_flag = UNG_schneefilde_sacked
+		}
+		add_political_power = -50
+		add_stability = -0.05
+		add_timed_idea = {
+			idea = SNF_schneefilde_sacked
+			days = 365
+		}
+		224 = {
+			remove_building = {
+				type = infrastructure
+				level = 3
+			}
+			remove_building = {
+				type = industrial_complex
+				level = 2
+			}
+			remove_building = {
+				type = arms_factory
+				level = 1
+			}
+		}
+		set_country_flag = SNF_raid_serious_damage
+		add_ideas = SNF_total_devastation
+		add_ideas = SNF_refugee_exodus_1
+		UNG = {
+			country_event = {
+				id = refugee.1
+				days = 6
+			}
+		}
+		TEI = {
+			country_event = {
+				id = refugee.1
+				days = 6
+			}
+		}
+		WIS = {
+			country_event = {
+				id = refugee.1
+				days = 6
+			}
+		}
+	}
+}
+
+country_event = {
+	id = schneefilde_schneefilder_sack.3
+	title = schneefilde_schneefilder_sack.3.t
+	desc = schneefilde_schneefilder_sack.3.d
+	
+	picture = GFX_report_event_soldiers_in_france
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = schneefilde_schneefilder_sack.3.a
+		UNG = {
+			set_country_flag = UNG_schneefilde_sacked
+		}
+		add_political_power = 25
+		add_timed_idea = {
+			idea = SNF_schneefilde_sacked
+			days = 235
+		}
+		224 = {
+			remove_building = {
+				type = infrastructure
+				level = 1
+			}
+			remove_building = {
+				type = industrial_complex
+				level = 1
+			}
+			remove_building = {
+				type = arms_factory
+				level = 1
+			}
+		}
+		set_country_flag = SNF_raid_moderate_damage
+		add_ideas = SNF_moderate_devastation
+		add_ideas = SNF_refugee_exodus_1
+		UNG = {
+			country_event = {
+				id = refugee.1
+				days = 6
+			}
+		}
+		TEI = {
+			country_event = {
+				id = refugee.1
+				days = 6
+			}
+		}
+		WIS = {
+			country_event = {
+				id = refugee.1
+				days = 6
+			}
+		}
+	}
+}

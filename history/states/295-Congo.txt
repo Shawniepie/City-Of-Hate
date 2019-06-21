@@ -1,0 +1,17 @@
+state={
+	id=295
+	name="STATE_295"
+	provinces={
+		2527 4088 4090 4091 4579 7468 8709 
+	}
+	state_category = pastoral
+	manpower=2339
+	buildings_max_level_factor=1.000
+	history={
+		owner = HLZ
+		buildings = {
+			infrastructure = 2	
+		}
+		add_core_of = HLZ
+	}
+}

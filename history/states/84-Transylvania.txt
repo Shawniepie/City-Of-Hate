@@ -1,0 +1,20 @@
+state={
+	id=84
+	name="STATE_84"
+	provinces={
+		6143 6200 6201 6202 8554 8818 
+	}
+	state_category = large_city
+	manpower=893219
+	buildings_max_level_factor=1.000
+		history={	
+		owner = ORD
+		victory_points = {6202 42}
+		buildings = {
+			industrial_complex = 3
+			arms_factory = 2
+			infrastructure = 5
+		}	
+		add_core_of = ORD
+		}
+}

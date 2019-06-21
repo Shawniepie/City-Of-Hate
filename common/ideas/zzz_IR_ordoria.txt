@@ -1,0 +1,912 @@
+ideas = {
+	
+	country = {
+
+		ORD_rthaur_rebellion = {
+			
+			allowed = {
+				original_tag = ORD
+			}
+			
+			allowed_civil_war = {
+				NOT = {
+					has_government = republic_peasant
+				}
+			}
+			
+			picture = ord_rthaur_rebellion
+			
+			removal_cost = -1
+			
+			modifier = {
+				war_support_factor = 0.1
+				stability_factor = -0.05
+				drift_defence_factor = 0.15
+				conscription = 0.01
+			}
+		}
+		
+		ORD_disrupted_industry = {
+			
+			allowed = {
+				original_tag = ORD
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = great_depression
+			
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.35
+				production_speed_buildings_factor = -0.40
+				production_factory_efficiency_gain_factor = -0.25
+			}
+			
+		}
+		
+		ORD_industrial_recovery = {
+			
+			allowed = {
+				original_tag = ORD
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = generic_exploit_mines
+			
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.25
+				production_speed_buildings_factor = -0.25
+				production_factory_efficiency_gain_factor = -0.1
+			}
+			
+		}
+			
+		ORD_ordoria_reunited = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				NOT = {
+					has_government = republic_peasant
+				}
+			}
+			
+			picture = triumphant_will
+			
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = 1
+				stability_factor = 0.15
+				drift_defence_factor = 0.25
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
+			}
+		}
+		
+		ORD_supremacy_idea = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				has_government = puritan
+			}
+			
+			picture = FRA_army_of_aggression_focus
+			
+			removal_cost = -1
+			
+			modifier = {
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+				partisan_effect = 0.15
+			}
+		}
+		
+		ORD_selfreliance_idea = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes #autarkical institutions don't vapourize just because you switch ideologies
+			}
+			
+			picture = ast_all_in
+			
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_buildings_factor = 0.15
+				consumer_goods_factor = -0.05
+				production_factory_efficiency_gain_factor = 0.1
+			}
+		}
+		
+		ORD_religious_zeal_idea = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				has_government = theocrat
+			}
+			
+			picture = generic_pp_unity_bonus
+			
+			removal_cost = -1
+			
+			modifier = {
+				army_attack_factor = 0.075
+				army_morale_factor = 0.075
+			}
+		}
+		
+		ORD_holy_crusade_idea = {
+			
+			allowed = {
+				always = no
+			}
+		
+			allowed_civil_war = {
+				has_government = theocrat
+			}
+			
+			picture = FRA_scw_intervention_nationalists_focus
+			
+			removal_cost = -1
+			
+			modifier = {
+				army_attack_factor = 0.15
+				army_morale_factor = 0.15
+			}
+		}
+		
+		ORD_zeal = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = no
+			}
+			
+			cancel = {
+				NOT = {
+					OR = {
+						country_exists = RTH
+						RTH = {
+							is_puppet_of = ORD
+						}
+					}
+				}
+			}
+			
+			picture = ast_volunteer_defence_corps
+		
+			removal_cost = -1
+			
+			targeted_modifier = {
+				tag = RTH
+				attack_bonus_against = 0.15
+				defense_bonus_against = 0.15
+			}
+		}
+		
+		ORD_rthaur_propaganda = {
+			
+			allowed = {
+				original_tag = ORD
+			}
+			
+			allowed_civil_war = {
+				NOT = {
+					has_government = republic_peasant
+				}
+			}
+			
+			picture = ord_rthaur_propaganda
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.05
+				conscription_factor = -0.25
+				republic_peasant_drift = 0.1
+			}
+		}
+
+		ORD_death_to_dwarves_idea = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = no
+			}
+			
+			cancel = {
+				NOT = {
+					has_war_with = SKA
+				}
+			}
+			
+			picture = ast_volunteer_defence_corps
+		
+			removal_cost = -1
+			
+			targeted_modifier = {
+				tag = SKA
+				attack_bonus_against = 0.15
+				defense_bonus_against = 0.15
+			}
+		}
+		
+		ORD_export_death_idea = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = generic_purge
+			
+			removal_cost = -1
+			
+			modifier = {
+				army_leader_start_attack_level = 1
+			}
+		}
+		
+		ORD_elven_horses_idea = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = porsche
+			
+			removal_cost = -1
+			
+			modifier = {
+				cavalry_attack_factor = 0.15
+				cavalry_defence_factor = 0.15
+			}
+		}
+		
+		ORD_stealth_idea = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = prc_the_long_march
+			
+			removal_cost = -1
+			
+			modifier = {
+				recon_factor = 0.15
+			}
+		}
+		
+		ORD_defense_idea = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = generic_wall_line
+			
+			removal_cost = -1
+			
+			modifier = {
+				max_dig_in = 0.1
+				army_defence_factor = 0.05
+			}
+		}
+		
+		ORD_offense_idea = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = chi_army_corruption2
+			
+			removal_cost = -1
+			
+			modifier = {
+				army_speed_factor = 0.05
+				army_attack_factor = 0.05
+			}
+		}
+		
+		ORD_slaughter_southerners_idea = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = no
+			}
+			
+			cancel = {
+				NOT = {
+					has_war_with = UNG
+				}
+			}
+			
+			picture = ast_volunteer_defence_corps
+		
+			removal_cost = -1
+			
+			targeted_modifier = {
+				tag = UNG
+				attack_bonus_against = 0.15
+				defense_bonus_against = 0.15
+			}
+		}
+		
+		ORD_raze_realm_idea = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = no
+			}
+			
+			cancel = {
+				NOT = {
+					has_war_with = GMR
+				}
+			}
+			
+			picture = ast_volunteer_defence_corps
+		
+			removal_cost = -1
+			
+			targeted_modifier = {
+				tag = GMR
+				attack_bonus_against = 0.15
+				defense_bonus_against = 0.15
+			}
+		}
+		
+		ORD_hegemony_idea = {
+			
+			allowed = {
+				always = no
+			}
+		
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = ordoria_hegemony
+			
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = 1
+				stability_factor = 0.15
+				drift_defence_factor = 0.25
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
+				justify_war_goal_time = -0.25
+				war_support_factor = 0.1
+				conscription_factor = 0.25
+				subjects_autonomy_gain = -0.5
+				max_command_power = 25
+				surrender_limit = 0.1
+			}
+		}
+		
+		ORD_foreign_labour_idea = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				has_government = monarchy_absolute
+			}
+			
+			picture = generic_production_bonus
+			
+			removal_cost = -1
+			
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				local_resources_factor = 0.15
+			}
+		}
+		
+		ORD_economic_castes = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				has_government = monarchy_absolute
+			}
+			
+			picture = ord_foreign_labour
+			
+			removal_cost = -1
+			
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.15
+				production_factory_max_efficiency_factor = 0.15
+				local_resources_factor = 0.3
+			}
+		}
+		
+		ORD_slavery = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				has_government = puritan
+			}
+			
+			picture = generic_slavery
+			
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.1
+				production_speed_buildings_factor = 0.2
+			}
+		}
+		
+		ORD_industrialized = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				has_government = puritan
+			}
+			
+			picture = man_five_year_plan_industry
+			
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.15
+				production_speed_buildings_factor = 0.25
+				industrial_capacity_factory = 0.1
+			}
+		}
+		
+		ORD_elven_wits_idea = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				has_government = theocrat
+			}
+			
+			picture = jap_supremacy_of_technology
+			
+			removal_cost = -1
+			
+			modifier = {
+				research_speed_factor = 0.1
+			}
+		}
+		
+		ORD_elven_might_idea = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				has_government = theocrat
+			}
+			
+			picture = generic_elf_whoopass
+			
+			removal_cost = -1
+			
+			modifier = {
+				army_org_factor = 0.075
+				training_time_factor = -0.2
+				experience_loss_factor = -0.1
+				army_attack_factor = 0.05
+			}
+		}
+		
+		ORD_militarized_economy_idea = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				has_government = theocrat
+			}
+			
+			picture = ord_war_focussed_economy
+			
+			removal_cost = -1
+			
+			modifier = {
+				mobilization_laws_cost_factor = -0.25
+				high_command_cost_factor  = -0.25
+				conscription_factor = 0.075
+				conversion_cost_civ_to_mil_factor = -0.35
+				production_speed_arms_factory_factor = 0.3
+				industrial_capacity_factory = 0.15
+				war_support_factor = 0.15
+				stability_factor = -0.1
+				production_speed_industrial_complex_factor  = -0.25
+				consumer_goods_factor = 0.35
+			}
+		}
+		
+		ORD_slave_concessions = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				has_government = puritan
+			}
+			
+			picture = generic_goods_red_bonus
+			
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.1
+			}
+		}
+		
+		ORD_slave_revolt = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				has_government = puritan
+			}
+			
+			picture = chi_war_of_resistance2
+			
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.15
+				local_resources_factor = -0.25
+				stability_factor = -0.05
+			}
+		}
+		
+		ORD_slave_leader = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				has_government = puritan
+			}
+			
+			picture = chi_war_of_resistance3
+			
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.2
+				local_resources_factor = -0.35
+				stability_factor = -0.1
+			}
+		}
+		
+		ORD_race_riot_concessions = {
+		
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				has_government = puritan
+			}
+			
+			picture = saf_history_of_segregation_2
+			
+			removal_cost = -1
+			
+			modifier = {
+				foreign_subversive_activites = 0.35
+				encryption_factor = -0.1
+				production_factory_efficiency_gain_factor = -0.05
+				production_factory_max_efficiency_factor = -0.05
+			}
+		}
+		
+		ORD_race_riot_escalating = {
+		
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				has_government = puritan
+			}
+			
+			picture = saf_ossewabrandwag_2
+			
+			removal_cost = -1
+			
+			modifier = {
+				foreign_subversive_activites = 0.5
+				encryption_factor = -0.15
+				production_factory_efficiency_gain_factor = -0.1
+				production_factory_max_efficiency_factor = -0.1
+			}
+		}
+		
+		ORD_race_riot_escalated = {
+		
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				has_government = puritan
+			}
+			
+			picture = saf_ossewabrandwag_fascism
+			
+			removal_cost = -1
+			
+			modifier = {
+				foreign_subversive_activites = 0.65
+				encryption_factor = -0.25
+				production_factory_efficiency_gain_factor = -0.25
+				production_factory_max_efficiency_factor = -0.25
+			}
+		}
+		
+		ORD_austerity_concessions = {
+		
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				has_government = theocrat
+			}
+			
+			picture = HUN_hungarian_monarchy
+			
+			removal_cost = -1
+			
+			modifier = {
+				mobilization_laws_cost_factor = 0.2
+				high_command_cost_factor = 0.2
+				production_speed_arms_factory_factor = -0.25
+				consumer_goods_factor = 0.1
+				war_support_factor = -0.15
+			}
+		}
+		
+		ORD_austerity_riot_escalating = {
+		
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				has_government = theocrat
+			}
+			
+			picture = ast_abandon_the_westminster_system
+			
+			removal_cost = -1
+			
+			modifier = {
+				mobilization_laws_cost_factor = 0.35
+				high_command_cost_factor = 0.35
+				production_speed_arms_factory_factor = -0.4
+				consumer_goods_factor = 0.15
+				war_support_factor = -0.25
+			}
+		}
+		
+		ORD_austerity_riot_escalated = {
+		
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				has_government = theocrat
+			}
+			
+			picture = can_patriation
+			
+			removal_cost = -1
+			
+			modifier = {
+				mobilization_laws_cost_factor = 0.45
+				high_command_cost_factor = 0.45
+				production_speed_arms_factory_factor = -0.5
+				consumer_goods_factor = 0.2
+				war_support_factor = -0.35
+			}
+		}
+		
+		ORD_loyal_minorities = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				has_government = monarchy_absolute
+			}
+			
+			picture = generic_spy_intel
+			
+			removal_cost = -1
+			
+			modifier = {
+				decryption_factor = 0.05
+				encryption_factor = 0.1
+			}
+		}
+		
+		ORD_puritanism_propagandized = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				has_government = puritan
+			}
+			
+			picture = generic_fascism_drift_bonus
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.05
+				war_support_factor = 0.05
+				surrender_limit = 0.05
+				offensive_war_stability_factor = 0.25
+			}
+		}
+		
+		ORD_inquisition = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				has_government = theocrat
+			}
+			
+			picture = generic_spy_coup
+			
+			removal_cost = -1
+			
+			modifier = {
+				decryption_factor = 0.2
+				drift_defence_factor = 0.33
+				enemy_partisan_effect = -0.25
+			}
+		}
+		
+		ORD_coast_raids_idea = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				has_government = puritan
+			}
+			
+			picture = generic_coastal_defense_ships2
+			
+			removal_cost = -1
+			
+			modifier = {
+				convoy_raiding_efficiency_factor = 0.15
+			}
+		}
+		
+		ORD_port_raids_idea = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				has_government = puritan
+			}
+			
+			picture = generic_coastal_defense_ships
+			
+			removal_cost = -1
+			
+			modifier = {
+				convoy_raiding_efficiency_factor = 0.15
+				invasion_preparation = -0.25
+			}
+		}
+		
+		ORD_privateer_spoils = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				has_government = puritan
+			}
+			
+			picture = generic_sea_focused_navy
+			
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.15
+			}
+		}
+	}
+}

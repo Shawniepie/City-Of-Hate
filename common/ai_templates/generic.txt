@@ -1,7 +1,7 @@
 dwarven_warriors_generic = {
 
 	production_prio = {
-			factor = 10
+		factor = 10
 	}
 
 	roles = {
@@ -93,7 +93,7 @@ dwarven_warriors_generic = {
 men_at_arms_generic = {
 
 	production_prio = {
-			factor = 10
+		factor = 10
 	}
 
 	roles = {
@@ -185,7 +185,7 @@ men_at_arms_generic = {
 garrison_generic = {
 
 	production_prio = {
-			factor = 10
+		factor = 10
 	}
 
 	roles = {
@@ -277,7 +277,7 @@ garrison_generic = {
 cavalry_generic = {
 
 	production_prio = {
-			factor = 10
+		factor = 10
 	}
 
 	roles = {

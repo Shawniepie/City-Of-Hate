@@ -1,0 +1,17 @@
+state={
+	id=332
+	name="STATE_332"
+	provinces={
+		3327 5757 7470 8409 8525 
+	}
+	state_category = rural
+	manpower=1029
+	buildings_max_level_factor=1.000
+	history={
+		owner = SNF
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = SNF
+		}
+}

@@ -1,0 +1,23 @@
+state={
+	id=279
+	name="STATE_279"
+	provinces={
+		3097 3098 6908 7320 7609 7700 8656 
+	}
+	state_category = town
+	manpower=16742
+	buildings_max_level_factor=1.000
+	history={
+		victory_points = { 8656 16 }
+		owner = NOC
+		buildings = {
+			infrastructure = 5
+			dockyard = 3
+			industrial_complex = 1
+			8656 = {
+				naval_base = 4
+			}
+		}
+		add_core_of = NOC
+	}
+}

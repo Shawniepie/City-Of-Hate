@@ -1,52 +1,71 @@
 ﻿capital = 85
 
-oob = "ORD_1936"
+set_oob = "ORD_1936"
 
 set_technology = {
 	infantry_weapons = 1
+	infantry_weapons1 = 1
 	tech_support = 1
 	tech_recon = 1
-	early_submarine = 1
-	early_destroyer = 1
-	early_light_cruiser = 1
-	early_heavy_cruiser = 1
+}
+
+if = {
+	limit = {
+		not = { has_dlc = "Man the Guns" }
+	}
+	set_technology = {
+		early_submarine = 1
+		early_destroyer = 1
+		early_light_cruiser = 1
+		transport = 1
+	}
+}
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		early_ship_hull_light = 1
+		basic_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		early_ship_hull_cruiser = 1
+		basic_battery = 1
+		basic_light_battery = 1
+		basic_torpedo = 1
+		sonar = 1
+		basic_depth_charges = 1
+		basic_secondary_battery = 1
+		mtg_transport = 1
+		basic_fire_control_system = 1
+	}
 }
 
 1939.1.1 = {
 }
 
 set_politics = {
-
-	parties = {
-		monarchy_absolute= { 
-			popularity = 16
-		}
-
-		monarchy_constitutional = {
-			popularity = 3
-		}
-		
-		republic_peasant = {
-			popularity = 0
-		}
-		republic_aristocrat = {
-			popularity = 4
-		}
-		republic_merchant = {
-			popularity = 0
-		}
-		theocrat = {
-			popularity = 29
-		}
-		puritan = {
-			popularity = 47
-		}
-	}
-	
 	ruling_party = puritan
 	last_election = "1936.1.1"
 	election_frequency = 48
 	elections_allowed = no
+}
+
+set_popularities = {
+	monarchy_absolute = 16
+
+	monarchy_constitutional = 3
+
+	republic_peasant = 0
+
+	republic_aristocrat = 4
+
+	republic_merchant = 0
+
+	theocrat = 29
+
+	puritan = 48
 }
 
 	add_opinion_modifier = {
@@ -58,6 +77,8 @@ set_politics = {
 	closed_economy
 	ORD_rthaur_rebellion
 	ORD_disrupted_industry
+	elf_country
+	itheryn_vengeance_patron
 	}
 	
 create_country_leader = {

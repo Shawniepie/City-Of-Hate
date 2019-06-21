@@ -1842,6 +1842,16 @@ country_event = { #Gamble on Stahlhof?
 	
 	option = { #Alea iacta est
 		name = ord.38.a
+		ai_chance = {
+			factor = 10
+			modifier = {
+				OR = {
+					has_government = puritan
+					has_government = theocrat
+				}
+				factor = 0
+			}
+		}
 		STA = {
 			country_event = {
 			id = sta.6
@@ -1852,7 +1862,13 @@ country_event = { #Gamble on Stahlhof?
 	
 	option = { #No
 		name = ord.38.b
+				ai_chance = {
+			factor = 5
+		}
 		add_political_power = 50
+		STA = {
+			set_country_flag = STA_independent
+		}
 	}
 }
 
@@ -1906,14 +1922,6 @@ country_event = { #Rthaur Resistance
 		}
 		hidden_effect = {
 			every_state = {
-				limit = {
-					is_core_of = ORD
-				}
-				remove_state_claim = RTH
-			}
-		}
-		hidden_effect = {
-			every_state = {
 				RTH = {
 					remove_state_claim = PREV
 					remove_state_core = PREV
@@ -1939,7 +1947,15 @@ country_event = { #Second Rthaur Rebellion!
 		NOT = {
 			has_government = republic_peasant
 		}
-		owns_state = 118
+		OR = {
+			owns_state = 118
+			EOR = {
+				is_puppet_of = ORD
+			}
+			RTH = {
+				is_puppet_of = ORD
+			}
+		}
 		has_idea = ORD_rthaur_propaganda
 		republic_peasant > 0.4
 	}
@@ -1948,74 +1964,27 @@ country_event = { #Second Rthaur Rebellion!
 		days = 8
 	}
 	
-	option = { #Crush them!
-		name = ord.40.a
-		remove_ideas = ORD_rthaur_propaganda
-		set_party_name = {
-			ideology = republic_peasant
-			long_name = ORD_republic_peasant_party
-			name = ORD_republic_peasant_party
-		}
-		add_popularity = {
-			ideology = republic_peasant
-			popularity = -0.5
-		}
-		
+	immediate = {
 		hidden_effect = {
-			delete_unit_template_and_units = {
-				division_template = "Grove Guards"
-			}
-			delete_unit_template_and_units = {
-				division_template = "Bladesingers"
-			}
-			delete_unit_template_and_units = {
-				division_template = "Rangers"
-			}
-			load_oob = "ORD_ii_rev"
-		}
-		
-		hidden_effect = {
-			if = {
+
+			every_state = {
 				limit = {
-					RTH = {
-						is_puppet = yes
-					}
+					is_core_of = ORD
 				}
-				set_autonomy =  {
-					target = RTH
-					autonomy_state = autonomy_free
+				ORD = {
+					remove_state_core = PREV
 				}
 			}
+			every_state = {
+				limit = {
+					is_core_of = RTH
+				}
+				RTH = {
+					remove_state_core = PREV
+				}
+			}
+			
 			RTH = {
-				transfer_state = 118
-				transfer_state = 132
-				transfer_state = 140
-				transfer_state = 137
-				transfer_state = 145
-				transfer_state = 143
-				transfer_state = 128
-				transfer_state = 103
-				transfer_state = 104
-				transfer_state = 105
-				transfer_state = 106
-				transfer_state = 133
-				transfer_state = 119
-				transfer_state = 135
-				transfer_state = 144
-				transfer_state = 107
-				transfer_state = 84
-				transfer_state = 93
-				transfer_state = 90
-				transfer_state = 76
-				transfer_state = 88
-				transfer_state = 89
-				transfer_state = 114
-				transfer_state = 113
-				transfer_state = 77
-				transfer_state = 86
-				transfer_state = 78
-				transfer_state = 115
-				
 				add_state_core = 118
 				add_state_core = 132
 				add_state_core = 140
@@ -2044,9 +2013,77 @@ country_event = { #Second Rthaur Rebellion!
 				add_state_core = 86
 				add_state_core = 78
 				add_state_core = 115
-				
+			}
+			
+			every_state = {
+				limit = {
+					is_owned_by = ORD
+					NOT = {
+						is_core_of = RTH
+					}
+				}
+				ORD = {
+					add_state_core = PREV
+				}
+			}
+			
+			delete_unit_template_and_units = {
+				division_template = "Grove Guards"
+			}
+			delete_unit_template_and_units = {
+				division_template = "Bladesingers"
+			}
+			
+			set_country_flag = ORD_second_civil_war_flag
+		}
+	}
+	
+	option = { #Crush them!
+		name = ord.40.a
+		
+		remove_ideas = ORD_rthaur_propaganda
+
+		set_party_name = {
+			ideology = republic_peasant
+			long_name = ORD_republic_peasant_party
+			name = ORD_republic_peasant_party
+		}
+		add_popularity = {
+			ideology = republic_peasant
+			popularity = -0.5
+		}
+		
+		hidden_effect = {
+			RTH = {
+				annex_country = {
+					target = ORD
+					transfer_troops = no
+				}
+			}
+			
+			every_state = {
+				limit = {
+					is_owned_by = RTH
+					is_core_of = ORD
+					NOT = {
+						is_core_of = RTH
+					}
+				}
+				ORD = {
+					transfer_state = PREV
+				}
+			}
+			
+			RTH = {
 				load_oob = "RTH_ii_rev"
 			}
+
+			load_oob = "ORD_ii_rev"
+
+			delete_unit_template_and_units = {
+				division_template = "Rangers"
+			}
+			
 			declare_war_on = {
 				target = RTH
 				type = annex_everything
@@ -2067,9 +2104,11 @@ country_event = { #Second Rthaur Rebellion!
 	
 	option = { #Hasta la Siempre!
 		name = ord.40.b
+		
 		remove_ideas = ORD_rthaur_propaganda
+		
 		set_party_name = {
-			ideology = republic_peasant_party
+			ideology = republic_peasant
 			long_name = ORD_republic_peasant_party
 			name = ORD_republic_peasant_party
 		}
@@ -2079,99 +2118,39 @@ country_event = { #Second Rthaur Rebellion!
 		}
 		
 		hidden_effect = {
-			delete_unit_template_and_units = {
-				division_template = "Grove Guards"
+			RTH = {
+				annex_country = {
+					target = ORD
+					transfer_troops = no
+				}
 			}
-			delete_unit_template_and_units = {
-				division_template = "Bladesingers"
+			
+			every_state = {
+				limit = {
+					is_owned_by = RTH
+					is_core_of = ORD
+					NOT = {
+						is_core_of = RTH
+					}
+				}
+				ORD = {
+					transfer_state = PREV
+				}
 			}
+			
+			RTH = {
+				load_oob = "RTH_ii_rev"
+			}
+
+			load_oob = "ORD_ii_rev"
+			
 			delete_unit_template_and_units = {
 				division_template = "Rangers"
 			}
-			load_oob = "ORD_ii_rev"
-		}
-		
-		hidden_effect = {
-			if = {
-				limit = {
-					RTH = {
-						is_puppet = yes
-					}
-				}
-				set_autonomy =  {
-					target = RTH
-					autonomy_state = autonomy_free
-				}
-			}
-			RTH = {
-				transfer_state = 118
-				transfer_state = 132
-				transfer_state = 140
-				transfer_state = 137
-				transfer_state = 145
-				transfer_state = 143
-				transfer_state = 128
-				transfer_state = 103
-				transfer_state = 104
-				transfer_state = 105
-				transfer_state = 106
-				transfer_state = 133
-				transfer_state = 119
-				transfer_state = 135
-				transfer_state = 144
-				transfer_state = 107
-				transfer_state = 84
-				transfer_state = 93
-				transfer_state = 90
-				transfer_state = 76
-				transfer_state = 88
-				transfer_state = 89
-				transfer_state = 114
-				transfer_state = 113
-				transfer_state = 77
-				transfer_state = 86
-				transfer_state = 78
-				transfer_state = 115
-				
-				add_state_core = 118
-				add_state_core = 132
-				add_state_core = 140
-				add_state_core = 137
-				add_state_core = 145
-				add_state_core = 143
-				add_state_core = 128
-				add_state_core = 103
-				add_state_core = 104
-				add_state_core = 105
-				add_state_core = 106
-				add_state_core = 133
-				add_state_core = 119
-				add_state_core = 135
-				add_state_core = 144
-				add_state_core = 107
-				add_state_core = 84
-				add_state_core = 93
-				add_state_core = 90
-				add_state_core = 76
-				add_state_core = 88
-				add_state_core = 89
-				add_state_core = 114
-				add_state_core = 113
-				add_state_core = 77
-				add_state_core = 86
-				add_state_core = 78
-				add_state_core = 115
-				
-				RTH = {
-					change_tag_from = ORD
-				}
-				load_oob = "RTH_ii_rev"
-			}
-			RTH = {
-				declare_war_on = {
-						target = ORD
-						type = annex_everything
-				}
+			
+			declare_war_on = {
+				target = RTH
+				type = annex_everything
 			}
 			if = {
 				limit = {
@@ -2183,6 +2162,10 @@ country_event = { #Second Rthaur Rebellion!
 						days = 5
 					}
 				}
+			}
+			
+			RTH = {
+				change_tag_from = ORD
 			}
 		}
 	}
@@ -2514,9 +2497,9 @@ country_event = { #Noble Riot Halted
 		add_stability = 0.05
 		if = {
 			limit = {
-				has_idea = ORD_noble_riot_escalated
+				has_idea = ORD_austerity_riot_escalated
 			}
-			remove_ideas = ORD_noble_riot_escalated
+			remove_ideas = ORD_austerity_riot_escalated
 		}
 	}
 }
@@ -2699,6 +2682,50 @@ country_event = {#Succesful Raid
 		add_timed_idea = {
 			idea = ORD_privateer_spoils
 			days = 50
+		}
+	}
+}
+
+country_event = { #Re-Core Rthaur Rebel Lands after the 2OCW
+	id = ord.54
+	title = ord.54.t
+	desc = ord.54.d
+	picture = GFX_report_event_french_resistance_02
+	
+	fire_only_once = yes
+	
+	trigger = {
+		original_tag = ORD
+		has_country_flag = ORD_second_civil_war_flag
+		OR = {
+			NOT = {
+				country_exists = RTH
+			}
+			RTH = {
+				is_puppet_of = ORD
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 15
+	}
+	
+	option = { #Stability!
+		name = ord.54.a
+		hidden_effect = {
+			every_state = {
+				limit = {
+					is_core_of = RTH
+				}
+				add_core_of = ORD
+				remove_core_of = RTH
+			}
+			if = {
+				limit = {
+					country_exists = EOR
+				}
+			}
 		}
 	}
 }

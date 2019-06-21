@@ -1,0 +1,131 @@
+ideas = {
+	
+	country = {
+	
+		RTH_disorganized_revolution = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = rth_fires_revolution
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.1
+				political_power_factor = -0.35
+				war_support_factor = 0.05
+			}
+		}
+		
+		RTH_inexperienced_commanders = {
+		
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = rth_peasant_army
+			
+			removal_cost = -1
+			
+			modifier = {
+				army_org_factor = -0.35
+				planning_speed  = -0.15
+				max_planning = -0.25
+			}
+		}
+		
+		RTH_ordorian_influence_idea = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				has_government = puritan
+			}
+			
+			picture = generic_fascism_drift_bonus
+			
+			removal_cost = -1
+			
+			modifier = {
+				puritan_drift = 0.15
+				stability_factor = -0.1
+			}
+		}
+		
+		RTH_loris_pass_lost = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = all_adults_serve
+			
+			removal_cost = -1
+			
+			modifier = {
+				army_org_Factor = -0.25
+				army_defence_factor = -0.35
+				army_attack_factor = -0.35
+			}
+		}
+		
+		RTH_demoralized = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = officers_purged
+			
+			removal_cost = -1
+			
+			modifier = {
+				army_defence_factor = -0.1
+				surrender_limit = -0.25
+			}
+		}
+		
+		
+		RTH_vengeful = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = generic_communist_army
+			
+			removal_cost = -1
+			
+			modifier = {
+				army_attack_factor = 0.1
+				surrender_limit = 0.25
+				training_time_factor = -0.33
+				conscription = 0.05
+			}
+		}
+	}
+}

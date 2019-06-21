@@ -1,1 +1,1 @@
-#empty file used to overwrite vanilla
+#emtpy file to overwrite vanilla

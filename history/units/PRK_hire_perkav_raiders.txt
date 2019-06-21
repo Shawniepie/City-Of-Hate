@@ -1,0 +1,51 @@
+﻿division_template = {
+	name = "Perkav Raider Mercenaries"
+	is_locked = yes
+	
+	regiments = {
+		perkav_raiders = { x = 0 y = 0 }
+		perkav_raiders = { x = 0 y = 1 }
+		perkav_raiders = { x = 0 y = 2 }
+        perkav_raiders = { x = 1 y = 0 }
+		perkav_raiders = { x = 1 y = 1 }
+		perkav_raiders = { x = 1 y = 2 }
+	}
+}
+
+units = {
+
+	division = {
+		name = "Wojtas' Warband"
+		location = 7533
+		division_template = "Perkav Raider Mercenaries"
+		start_experience_factor = 1
+	}
+	
+	division = {
+		name = "Warriors of Yurievna"
+		location = 7939
+		division_template = "Perkav Raider Mercenaries"
+		start_experience_factor = 0.5
+	}
+	
+	division = {
+		name = "Horváth's Warriors"
+		location = 2305
+		division_template = "Perkav Raider Mercenaries"
+		start_experience_factor = 0.5
+	}
+	
+	division = {
+		name = "Radzik's Raiders"
+		location = 5289
+		division_template = "Perkav Raider Mercenaries"
+		start_experience_factor = 0.5
+	}
+	
+	division = {
+		name = "Raiders of Ivanov"
+		location = 1401
+		division_template = "Perkav Raider Mercenaries"
+		start_experience_factor = 0.5
+	}
+}

@@ -1,0 +1,81 @@
+hire_mercenaries = {
+	
+	MERCS_perkav_raiders = {
+		
+		icon = GFX_decision_hire_perkav_raiders
+		
+		allowed = {
+			always = yes
+		}
+		
+		available = {
+			num_of_available_civilian_factories > 5
+			NOT = {
+				has_country_flag = MERCS_hiring_perkav_raiders_flag
+			}
+			any_state = {
+				is_capital = yes
+				is_owned_and_controlled_by = ROOT
+			}
+		}
+		
+		visible = {
+			OR = {
+				has_tech = perkav_raiders
+				has_country_flag = MERCS_perkav_raiders_unlocked
+			}
+		}
+		
+		cost = 0
+		
+		ai_will_do = {
+			factor = 1
+			modifier = { #Why on Earth would we hire mercs when we're at peace?
+				has_war = no
+				factor = 0
+			}
+			modifier = { #Let's not if we are low on factories
+				num_of_available_civilian_factories < 23
+				factor = 0.5
+			}
+			modifier = { #Let's not if we are very low on factories
+				num_of_available_civilian_factories < 13
+				factor = 0.25
+			}
+			modifier = { #Best to get units if we're at war
+				surrender_progress > 0.25
+				factor = 2
+			}
+			modifier = {#Oh god oh fuck
+				surrender_progress > 0.5
+				factor = 4
+			}
+		}
+		
+		complete_effect = {
+			custom_effect_tooltip = MERCS_hire_perkav_raiders_effects_tt
+			hidden_effect = {
+				if = {
+					limit = {
+						tag = UNG
+					}
+					load_oob = "UNG_hire_perkav_raiders"
+				}
+				
+				if = {
+					limit = {
+						tag = PRK
+					}
+					load_oob = "PRK_hire_perkav_raiders"
+				}
+				
+				add_timed_idea = {
+					idea = MERCS_hiring_perkav_raiders_idea
+					days = 183
+				}
+				
+				set_country_flag = MERCS_hiring_perkav_raiders_flag	
+			}
+		}
+	}
+}

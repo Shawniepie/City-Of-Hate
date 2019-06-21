@@ -15,16 +15,37 @@ focus_tree = {
 		}
 	}	
 
+#focus = {#
+#	id = HLZ_
+#	icon = GFX_
+#	cost = 
+#	prerequisite = {
+#		focus = 
+#	}
+#	available = {
+#		
+#	}
+#	x = 
+#	y = 
+#	ai_will_do = {
+#		factor = 5
+#	}
+#	completion_reward = {
+#		
+#	}
+#}
+
+
 ### TOWARDS UTOPIA ###
 
 focus = {#The Mad Prince
 	id = HLZ_mad_prince
 	icon = GFX_focus_generic_japanese_imperial_glory
 	cost = 5
-	x = 14
+	x = 32
 	y = 0
 	ai_will_do = {
-		factor = 15
+		factor = 5
 	}
 	completion_reward = {
 		add_stability = -0.15
@@ -42,14 +63,15 @@ focus = {#Carpenter's Strike
 	prerequisite = {
 		focus = HLZ_mad_prince
 	}
-	x = 14
+	x = 32
 	y = 1
 	ai_will_do = {
-		factor = 15
+		factor = 5
 	}
 	completion_reward = {
 		country_event = {
 			id = hlz.1
+			days = 5
 		}
 	}	
 }
@@ -61,15 +83,16 @@ focus = {#The Last Straw
 	prerequisite = {
 		focus = HLZ_carpenter_strike
 	}
-	x = 14
+	x = 32
 	y = 2
 	ai_will_do = {
-		factor = 15
+		factor = 5
 	}
 	completion_reward  = {
 		country_event = {
 			id = hlz.2
-			}
+			days = 5
+		}
 		add_stability = -0.25
 		add_political_power = -100
 		add_ideas = legacy_of_puritanism_idea
@@ -95,16 +118,70 @@ focus = {#The Nobility Steps In
 			}
 		}
 	}
-	x = 11
+	x = 19
 	y = 3
 	ai_will_do = {
-		factor = 15
+		factor = 5
 	}
 	completion_reward = {
 		add_stability = 0.05
 		add_political_power = 50
+		add_ideas = unpopular_state
 		country_event = {
 			id = hlz.4
+		}
+	}
+}
+
+focus = {#Aristocratic Republic
+	id = HLZ_never_another_tyrant
+	icon = GFX_focus_rom_abdicate
+	cost = 10
+	prerequisite = {
+		focus = HLZ_nobility_steps_in
+	}
+	available = {
+		OR = {
+			has_country_flag = HLZ_wholesome_aristocrats
+			AND = {
+				has_country_flag =	HLZ_depose_tyrants
+				has_government = republic_aristocrat
+					}
+			}
+		}
+	x = 18
+	y = 4
+	ai_will_do = {
+		factor = 5
+	}
+	completion_reward = {
+		add_stability = 0.075
+		add_political_power = 35
+		add_ideas = never_another_tyrant_idea
+	}
+}
+
+focus = {#Mingle with Plebs
+	id = HLZ_among_masses
+	icon = GFX_goal_tfv_sever_ties_with_uk
+	cost = 10
+	prerequisite = {
+		focus = HLZ_never_another_tyrant
+	}
+	available = {
+		has_government = republic_aristocrat
+	}
+	x = 18
+	y = 5
+	ai_will_do = {
+		factor = 5
+	}
+	completion_reward = {
+		add_stability = 0.05
+		add_political_power = 25
+		add_popularity = {
+			ideology = republic_aristocrat
+			popularity = 0.20
 		}
 	}
 }
@@ -125,10 +202,10 @@ focus = {#Constitutional Monarchy
 			}
 		}
 	}
-	x = 12
+	x = 20
 	y = 4
 	ai_will_do = {
-		factor = 15
+		factor = 5
 	}
 	completion_reward = {
 		add_political_power = 100
@@ -146,10 +223,10 @@ focus = {#Limit Princely Power
 	available = {
 		has_government = monarchy_constitutional
 	}
-	x = 12
+	x = 20
 	y = 5
 	ai_will_do = {
-		factor = 15
+		factor = 5
 	}
 	completion_reward = {
 		add_stability = 0.05
@@ -168,195 +245,26 @@ focus = {#Assuage Worries
 	cost = 6.8
 	prerequisite = {
 		focus = HLZ_limit_princely_power
-	}
-	available = {
-		has_government = monarchy_constitutional
-	}
-	x = 12
-	y = 6
-	ai_will_do = {
-		factor = 15
-	}
-	completion_reward = {
-		add_stability = 0.15
-		add_war_support = 0.1
-	}
-}
-
-focus = {#Feed the People
-	id = HLZ_feed_people
-	icon = GFX_goal_generic_construct_civilian
-	cost = 10
-	prerequisite = {
-		focus = HLZ_assuage_worries
-	}
-	available = {
-		has_government = monarchy_constitutional
-	}
-	x = 12
-	y = 7
-	ai_will_do = {
-		factor = 15
-	}
-	completion_reward = {
-		random_owned_state= {
-			add_extra_state_shared_building_slots = 2
-			add_building_construction = {
-				type = industrial_complex
-				level = 2
-				instant_build = yes
-			}
-		}
-		random_owned_state= {
-			add_extra_state_shared_building_slots = 1
-			add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-			}
-		}
-		random_owned_state= {
-			add_extra_state_shared_building_slots = 1
-			add_building_construction = {
-				type = industrial_complex
-				level = 1
-				instant_build = yes
-			}
-		}
-		remove_ideas = widespread_famine
-	}
-}
-
-focus = {#Repurpose the Altpalast
-	id = HLZ_repurpose_altpalast
-	icon = GFX_goal_generic_construction2
-	cost = 6.8
-	prerequisite = {
-		focus = HLZ_feed_people
-	}
-	available = {
-		has_government = monarchy_constitutional
-	}
-	x = 12
-	y = 8
-	ai_will_do = {
-		factor = 15
-	}
-	completion_reward = {
-		232 = {
-			if = {
-				limit = {
-					is_controlled_by = ROOT 
-				}
-			}
-			add_extra_state_shared_building_slots = 2
-			add_building_construction = {
-				type = industrial_complex
-				level = 2
-				instant_build = yes
-			}
-			add_building_construction = {
-				type = infrastructure
-				level = 1
-				instant_build = yes
-			}
-		}	
-		add_political_power = 75
-		add_stability = 0.05
-	}
-}
-
-focus = {#Prinzhilfe
-	id = HLZ_prinzhilfe
-	icon = GFX_goal_generic_improve_relations
-	cost = 6.8
-	prerequisite = {
-		focus = HLZ_repurpose_altpalast
-	}
-	available = {
-		has_government = monarchy_constitutional
-	}
-	x = 12
-	y = 9
-	ai_will_do = {
-		factor = 15
-	}
-	completion_reward = {
-		add_research_slot = 1
-	}
-}
-
-focus = {#Personally Visit Elves
-	id = HLZ_visit_elves
-	icon = GFX_goal_tripartite_pact
-	cost = 6.8
-	prerequisite = {
-		focus = HLZ_prinzhilfe
-	}
-	available = {
-		has_government = monarchy_constitutional
-	}
-	x = 12
-	y = 10
-	ai_will_do = {
-		factor = 15
-	}
-	completion_reward = {
-		remove_ideas = legacy_of_puritanism_idea
-		add_political_power = 75
-	}
-}
-
-focus = {#Aristocratic Republic
-	id = HLZ_never_another_tyrant
-	icon = GFX_focus_rom_abdicate
-	cost = 10
-	prerequisite = {
-		focus = HLZ_nobility_steps_in
+		focus = HLZ_among_masses
 	}
 	available = {
 		OR = {
-			has_country_flag = HLZ_wholesome_aristocrats
-			AND = {
-				has_country_flag =	HLZ_depose_tyrants
-				has_government = republic_aristocrat
-					}
-			}
+			has_government = monarchy_constitutional
+			has_government = republic_aristocrat
 		}
-	x = 10
-	y = 4
+	}
+	x = 17
+	y = 6
 	ai_will_do = {
-		factor = 15
+		factor = 5
 	}
 	completion_reward = {
-		add_stability = 0.075
-		add_political_power = 35
-		add_ideas = never_another_tyrant_idea
-	}
-}
-
-focus = {#Mingle with Plebes
-	id = HLZ_among_masses
-	icon = GFX_goal_tfv_sever_ties_with_uk
-	cost = 10
-	prerequisite = {
-		focus = HLZ_never_another_tyrant
-	}
-	available = {
-		has_government = republic_aristocrat
-	}
-	x = 10
-	y = 5
-	ai_will_do = {
-		factor = 15
-	}
-	completion_reward = {
-		add_stability = 0.05
-		add_political_power = 25
 		add_popularity = {
-			ideology = republic_aristocrat
-			popularity = 0.20
+			ideology = monarchy_constitutional
+			popularity = 0.1
 		}
+		add_stability = 0.05
+		add_war_support = 0.1
 	}
 }
 
@@ -365,15 +273,23 @@ focus = {#Aristocrats in the Soup Kitchens
 	icon = GFX_focus_generic_self_management
 	cost = 7
 	prerequisite = {
+		focus = HLZ_limit_princely_power
 		focus = HLZ_among_masses
 	}
-	available = {
-		has_government = republic_aristocrat
+	mutually_exclusive = {
+		focus = HLZ_feed_people
 	}
-	x = 10
+	available = {
+		has_country_flag = HLZ_soup_kitchens
+		OR = {
+			has_government = monarchy_constitutional
+			has_government = republic_aristocrat
+		}
+	}
+	x = 19
 	y = 6
 	ai_will_do = {
-		factor = 15
+		factor = 5
 	}
 	completion_reward = {
 		232 = {
@@ -401,46 +317,129 @@ focus = {#Aristocrats in the Soup Kitchens
 			popularity = 0.15
 		}
 		remove_ideas = widespread_famine
+		add_ideas = never_another_starving_man_idea
 	}
 }
 
-focus = {#Gardens into Orchards
-	id = HLZ_gardens_into_orchards
+focus = {#Ration Foodstuffs
+	id = HLZ_feed_people
 	icon = GFX_goal_generic_consumer_goods
-	cost = 6.8
+	cost = 10
 	prerequisite = {
+		focus = HLZ_assuage_worries
+		focus = HLZ_among_masses
+	}
+	mutually_exclusive = {
 		focus = HLZ_aristocrats_in_soup_kitchens
 	}
 	available = {
-		has_government = republic_aristocrat
+		has_country_flag = HLZ_ration_food
+		OR = {
+			has_government = monarchy_constitutional
+			has_government = republic_aristocrat
+		}
 	}
-	x = 10
-	y = 7
+	x = 21
+	y = 6
 	ai_will_do = {
-		factor = 15
+		factor = 5
 	}
 	completion_reward = {
+		random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+		random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+		remove_ideas = widespread_famine
 		add_ideas = gardens_into_orchards_idea
 	}
 }
 
 focus = {#Repurpose the Mansions
 	id = HLZ_repurpose_mansions
-	icon = GFX_focus_generic_treaty
+	icon = GFX_focus_hlz_repurpose_mansions
 	cost = 5
 	prerequisite = {
-		focus = HLZ_gardens_into_orchards
+		focus = HLZ_aristocrats_in_soup_kitchens
+		focus = HLZ_feed_people
+	}
+	prerequisite = {
+		focus = HLZ_assuage_worries
+	}
+	mutually_exclusive = {
+		focus = HLZ_renovierungsprogramm
 	}
 	available = {
-	has_government = republic_aristocrat
+		has_country_flag = HLZ_repurposing
+		OR = {
+			has_government = monarchy_constitutional
+			has_government = republic_aristocrat
+		}
+	}
+	x = 10
+	y = 7
+	ai_will_do = {
+		factor = 5
+	}
+	completion_reward = {
+		232= {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+		random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+		random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+}
+
+focus = {#Repurpose the Altpalast
+	id = HLZ_repurpose_altpalast
+	icon = GFX_goal_generic_construction2
+	cost = 6.8
+	prerequisite = {
+		focus = HLZ_repurpose_mansions
+	}
+	available = {
+		OR = {
+			has_government = monarchy_constitutional
+			has_government = republic_aristocrat
+		}
 	}
 	x = 10
 	y = 8
 	ai_will_do = {
-		factor = 15
+		factor = 5
 	}
 	completion_reward = {
-		random_owned_state= {
+		232 = {
 			add_extra_state_shared_building_slots = 2
 			add_building_construction = {
 				type = industrial_complex
@@ -449,11 +448,41 @@ focus = {#Repurpose the Mansions
 			}
 			add_building_construction = {
 				type = infrastructure
-				level = 2
+				level = 1
 				instant_build = yes
 			}
 		}
-		random_owned_state= {
+	}
+}
+
+focus = {#Renovierungsprogramm
+	id = HLZ_renovierungsprogramm
+	icon = GFX_goal_generic_construct_civilian
+	cost = 10
+	prerequisite = {
+		focus = HLZ_aristocrats_in_soup_kitchens
+		focus = HLZ_feed_people
+	}
+	prerequisite = {
+		focus = HLZ_assuage_worries
+	}
+	mutually_exclusive = {
+		focus = HLZ_repurpose_mansions
+	}
+	available = {
+		has_country_flag = HLZ_renovating
+		OR = {
+			has_government = monarchy_constitutional
+			has_government = republic_aristocrat
+		}
+	}
+	x = 8
+	y = 7
+	ai_will_do = {
+		factor = 5
+	}
+	completion_reward = {
+		random_owned_controlled_state = {
 			add_extra_state_shared_building_slots = 1
 			add_building_construction = {
 				type = industrial_complex
@@ -462,60 +491,234 @@ focus = {#Repurpose the Mansions
 			}
 			add_building_construction = {
 				type = infrastructure
-				level = 2
+				level = 1
+				instant_build = yes
+			}
+		}
+		random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 1
 				instant_build = yes
 			}	
+		}
+		random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+}
+
+focus = {#Rehabilitate the Altpalast
+	id = HLZ_rehabilitate_altpalast
+	icon = GFX_focus_man_claim_the_mandate_of_heaven
+	cost = 5
+	prerequisite = {
+		focus = HLZ_renovierungsprogramm
+	}
+	available = {
+		OR = {
+			has_government = monarchy_constitutional
+			has_government = republic_aristocrat
+		}
+	}
+	x = 8
+	y = 8
+	ai_will_do = {
+		factor = 5
+	}
+	completion_reward = {
+		add_stability = 0.1
+		add_popularity = {
+			ideology = monarchy_constitutional
+			popularity = 0.1
+		}
+	}
+}
+
+focus = {#Adelshäuser
+	id = HLZ_adelshauser
+	icon = GFX_goal_generic_construct_civ_factory
+	cost = 10
+	prerequisite = {
+		focus = HLZ_repurpose_altpalast
+		focus = HLZ_rehabilitate_altpalast
+	}
+	available = {
+		OR = {
+			has_government = monarchy_constitutional
+			has_government = republic_aristocrat
+		}
+	}
+	x = 9
+	y = 9
+	ai_will_do = {
+		factor = 5
+	}
+	completion_reward = {
+		random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+		random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
 		}
 	}
 }
 
 focus = {#Open the Universities
 	id = HLZ_open_universities
-	icon = GFX_goal_generic_propaganda
+	icon = GFX_focus_research2
 	cost = 10
 	prerequisite = {
-		focus = HLZ_repurpose_mansions
+		focus = HLZ_assuage_worries
+	}
+	prerequisite = {
+		focus = HLZ_aristocrats_in_soup_kitchens
+		focus = HLZ_feed_people
+	}
+	mutually_exclusive = {
+		focus = HLZ_patronage_brightest
 	}
 	available = {
-		has_government = republic_aristocrat
+		has_country_flag = HLZ_open_universities_flag
+		OR = {
+			has_government = monarchy_constitutional
+			has_government = republic_aristocrat
+		}
 	}
-	x = 10
-	y = 9
+	x = 15
+	y = 7
 	ai_will_do = {
-		factor = 15
+		factor = 5
 	}
 	completion_reward = {
 		add_research_slot = 1
+		add_ideas = open_university
 	}
 }
 
-focus = {#Pass Equality Act
-	id = HLZ_equality_act
-	icon = GFX_goal_continuous_boost_freedom
-	cost = 6.8
+focus = {#Patronage for the Brightest
+	id = HLZ_patronage_brightest
+	icon = GFX_goal_generic_scientific_exchange
+	cost = 10
 	prerequisite = {
+		focus = HLZ_assuage_worries
+	}
+	prerequisite = {
+		focus = HLZ_aristocrats_in_soup_kitchens
+		focus = HLZ_feed_people
+	}
+	mutually_exclusive = {
 		focus = HLZ_open_universities
 	}
 	available = {
-		has_government = republic_aristocrat
+		has_country_flag = HLZ_patronage
+		OR = {
+			has_government = monarchy_constitutional
+			has_government = republic_aristocrat
+		}
 	}
-	x = 10
-	y = 10
+	x = 17
+	y = 7
 	ai_will_do = {
-		factor = 15
+		factor = 5
 	}
 	completion_reward = {
-		remove_ideas = legacy_of_puritanism_idea
-		}
+		add_research_slot = 1
+		add_political_power = 50
+	}
 }
 
-focus = {#Talk with Libertines
-	id = HLZ_talk_libertines
-	icon = GFX_goal_generic_approach_republicans
-	cost = 5
+focus = {#Re-Establish Judicial Institutions
+	id = HLZ_judicial_institutions
+	icon = GFX_goal_generic_neutrality_focus
+	cost = 10
 	prerequisite = {
-		focus = HLZ_visit_elves
-		focus = HLZ_equality_act
+		focus = HLZ_assuage_worries
+	}
+	prerequisite = {
+		focus = HLZ_aristocrats_in_soup_kitchens
+		focus = HLZ_feed_people
+	}
+	available = {
+		OR = {
+			has_government = monarchy_constitutional
+			has_government = republic_aristocrat
+		}
+	}
+	x = 19
+	y = 7
+	ai_will_do = {
+		factor = 5
+	}
+	completion_reward = {
+		country_event = {
+			id = hlz.13
+			days = 5
+		}
+		add_stability = 0.05
+	}
+}
+
+focus = {#Lords as Arbiters
+	id = HLZ_lords_arbiters
+	icon = GFX_focus_eng_god_save_the_king
+	cost = 7
+	prerequisite = {
+		focus = HLZ_judicial_institutions
+	}
+	available = {
+		has_country_flag = HLZ_lords_law
+		OR = {
+			has_government = monarchy_constitutional
+			has_government = republic_aristocrat
+		}
+	}
+	mutually_exclusive = {
+		focus = HLZ_freiprinzliche_richter
+	}
+	ai_will_do = {
+		factor = 5
+	}
+	x = 18
+	y = 8
+	completion_reward = {
+		add_political_power = 75
+		add_stability = 0.05
+	}
+}
+
+focus = {#Institutionalize Petitions
+	id = HLZ_institutionalize_petitions
+	icon = GFX_focus_eng_concessions_to_the_trade_unions
+	cost = 9
+	prerequisite = {
+		focus = HLZ_lords_arbiters
 	}
 	available = {
 		OR = {
@@ -524,16 +727,626 @@ focus = {#Talk with Libertines
 		}
 	}
 	ai_will_do = {
-		factor = 15
+		factor = 5
 	}
-	x = 10
+	x = 18
+	y = 9
+	completion_reward = {
+		add_ideas = petitions_idea
+	}
+}
+
+focus = {#Rule of Nobility
+	id = HLZ_rule_nobility
+	icon = GFX_focus_hlz_enlightened_nobility
+	cost = 5
+	prerequisite = {
+		focus = HLZ_institutionalize_petitions
+	}
+	available = {
+		OR = {
+			has_government = monarchy_constitutional
+			has_government = republic_aristocrat
+		}
+	}
+	ai_will_do = {
+		factor = 5
+	}
+	x = 18
+	y = 10
+	completion_reward = {
+		add_popularity = {
+			ideology = republic_aristocrat
+			popularity = 0.05
+		}
+		add_war_support = 0.05
+	}
+}
+
+focus = {#Freiprinzliche Richter
+	id = HLZ_freiprinzliche_richter
+	icon = GFX_focus_eng_motion_of_no_confidence
+	cost = 7
+	prerequisite = {
+		focus = HLZ_judicial_institutions
+	}
+	available = {
+		has_country_flag = HLZ_independent_judiciary
+		OR = {
+			has_government = monarchy_constitutional
+			has_government = republic_aristocrat
+		}
+	}
+	mutually_exclusive = {
+		focus = HLZ_lords_arbiters
+	}
+	ai_will_do = {
+		factor = 5
+	}
+	x = 20
+	y = 8
+	completion_reward = {
+		add_stability = 0.1
+	}
+}
+
+focus = {#Found Rechtsakademie
+	id = HLZ_establish_rechtsakademie
+	icon = GFX_focus_generic_military_academy
+	cost = 9
+	prerequisite = {
+		focus = HLZ_freiprinzliche_richter
+	}
+	available = {
+		OR = {
+			has_government = monarchy_constitutional
+			has_government = republic_aristocrat
+		}
+	}	
+	ai_will_do = {
+		factor = 5
+	}
+	x = 20
+	y = 9
+	completion_reward = {
+		add_ideas = rechtsakademie_idea
+	}
+}
+
+focus = {#Rule of Law
+	id = HLZ_rule_law
+	icon = GFX_goal_support_democracy
+	cost = 5
+	prerequisite = {
+		focus = HLZ_establish_rechtsakademie
+	}
+	available = {
+		OR = {
+			has_government = monarchy_constitutional
+			has_government = republic_aristocrat
+		}
+	}
+	ai_will_do = {
+		factor = 5
+	}
+	x = 20
+	y = 10
+	completion_reward = {
+		add_popularity = {
+			ideology = monarchy_constitutional
+			popularity = 0.05
+		}
+		add_stability = 0.05
+	}
+}
+
+focus = {#Relegitimize Aristocracy
+	id = HLZ_relegitimization
+	icon = GFX_focus_hun_elect_a_king
+	cost = 2
+	prerequisite = {
+		focus = HLZ_assuage_worries
+	}
+	prerequisite = {
+		focus = HLZ_aristocrats_in_soup_kitchens
+		focus = HLZ_feed_people
+	}
+	available = {
+		OR = {
+			has_government = monarchy_constitutional
+			has_government = republic_aristocrat
+		}
+	}
+	ai_will_do = {
+		factor = 5
+	}
+	x = 24
+	y = 7
+	completion_reward = {
+		country_event = {
+			id = hlz.14
+			days = 5
+		}
+	}
+}
+
+focus = {#Religitimize through Institutions
+	id = HLZ_relegitimization_institutions
+	icon = GFX_focus_generic_temple
+	cost = 10
+	prerequisite = {
+		focus = HLZ_relegitimization
+	}
+	available = {
+		has_country_flag = HLZ_institutional_legitimization
+		OR = {
+			has_government = monarchy_constitutional
+			has_government = republic_aristocrat
+		}
+	}
+	mutually_exclusive = {
+		focus = HLZ_relegitimization_dialogue
+		focus = HLZ_relegitimization_results
+	}
+	ai_will_do = {
+		factor = 5
+	}
+	x = 22
+	y = 8
+	completion_reward = {
+		swap_ideas = {
+			remove_idea = unpopular_state
+			add_idea = unpopular_state_2
+		}
+		custom_effect_tooltip = available_political_advisor
+		show_ideas_tooltip = laurenz_reinmann
+	}
+}
+
+focus = {#Turn to the Church
+	id = HLZ_appeal_church
+	icon = GFX_focus_generic_treaty
+	cost = 5
+	prerequisite = {
+		focus = HLZ_relegitimization_institutions
+	}
+	available = {
+		OR = {
+			has_government = monarchy_constitutional
+			has_government = republic_aristocrat
+		}
+	}
+	ai_will_do = {
+		factor = 5
+	}
+	x = 22
+	y = 9
+	completion_reward = {
+		swap_ideas = {
+			remove_idea = unpopular_state_2
+			add_idea = unpopular_state_3
+		}
+		add_manpower = 2500
+	}
+}
+
+focus = {#Concessions to the Church
+	id = HLZ_concessions_clergy
+	icon = GFX_goal_tripartite_pact
+	cost = 5
+	prerequisite = {
+		focus = HLZ_appeal_church
+	}
+	available = {
+		OR = {
+			has_government = monarchy_constitutional
+			has_government = republic_aristocrat
+		}
+	}
+	ai_will_do = {
+		factor = 5
+	}
+	x = 22
+	y = 10
+	completion_reward = {
+		add_popularity = {
+			ideology = theocrat
+			popularity = 0.1
+		}
+	}
+}
+
+focus = {#Relegitimize through Dialogue
+	id = HLZ_relegitimization_dialogue
+	icon = GFX_goal_generic_propaganda
+	cost = 10
+	prerequisite = {
+		focus = HLZ_relegitimization
+	}
+	available = {
+		has_country_flag = HLZ_dialogue_legitimization
+		OR = {
+			has_government = monarchy_constitutional
+			has_government = republic_aristocrat
+		}
+	}
+	mutually_exclusive = {
+		focus = HLZ_relegitimization_institutions
+		focus = HLZ_relegitimization_results
+	}
+	ai_will_do = {
+		factor = 5
+	}
+	x = 24
+	y = 8
+	completion_reward = {
+		swap_ideas = {
+			remove_idea = unpopular_state
+			add_idea = unpopular_state_2
+		}
+		custom_effect_tooltip = available_political_advisor
+		show_ideas_tooltip = sabina_heuberger
+	}
+}
+
+focus = {#Acknowledge Complicity
+	id = HLZ_acknowledge_complicity
+	icon = GFX_focus_hlz_acknowledge_complicity
+	cost = 5
+	prerequisite = {
+		focus = HLZ_relegitimization_dialogue
+	}
+	available = {
+		OR = {
+			has_government = monarchy_constitutional
+			has_government = republic_aristocrat
+		}
+	}
+	ai_will_do = {
+		factor = 5
+	}
+	x = 24
+	y = 9
+	completion_reward = {
+		swap_ideas = {
+			remove_idea = unpopular_state_2
+			add_idea = unpopular_state_3
+		}
+		add_war_support = 0.05
+	}
+}
+
+focus = {#Concessions to the Peasantry
+	id = HLZ_concessions_peasantry
+	icon = GFX_focus_hlz_concessions_peasants
+	cost = 5
+	prerequisite = {
+		focus = HLZ_acknowledge_complicity
+	}
+	available = {
+		OR = {
+			has_government = monarchy_constitutional
+			has_government = republic_aristocrat
+		}
+	}
+	ai_will_do = {
+		factor = 5
+	}
+	x = 24
+	y = 10
+	completion_reward = {
+		add_popularity = {
+			ideology = republic_peasant
+			popularity = 0.1
+		}
+	}
+}
+
+focus = {#Relegitimize through Results
+	id = HLZ_relegitimization_results
+	icon = GFX_goal_generic_positive_trade_relations
+	cost = 10
+	prerequisite = {
+		focus = HLZ_relegitimization
+	}
+	available = {
+		has_country_flag = HLZ_results_legitimization
+		OR = {
+			has_government = monarchy_constitutional
+			has_government = republic_aristocrat
+		}
+	}
+	mutually_exclusive = {
+		focus = HLZ_relegitimization_institutions
+		focus = HLZ_relegitimization_dialogue
+	}
+	ai_will_do = {
+		factor = 5
+	}
+	x = 26
+	y = 8
+	completion_reward = {
+		swap_ideas = {
+			remove_idea = unpopular_state
+			add_idea = unpopular_state_2
+		}
+		custom_effect_tooltip = available_political_advisor
+		show_ideas_tooltip = erwin_bloch
+	}
+}
+
+focus = {#Share our Wealth
+	id = HLZ_share_wealth
+	icon = GFX_focus_usa_reestablish_the_gold_standard
+	cost = 5
+	prerequisite = {
+		focus = HLZ_relegitimization_results
+	}
+	available = {
+		OR = {
+			has_government = monarchy_constitutional
+			has_government = republic_aristocrat
+		}
+	}
+	ai_will_do = {
+		factor = 5
+	}
+	x = 26
+	y = 9
+	completion_reward = {
+		swap_ideas = {
+			remove_idea = unpopular_state_2
+			add_idea = unpopular_state_3
+		}
+		random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+		random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+}
+
+focus = {#Concessions to the Bourgeoisie
+	id = HLZ_concessions_bourgeoisie
+	icon = GFX_focus_mex_privatisation
+	cost = 5
+	prerequisite = {
+		focus = HLZ_share_wealth
+	}
+	available = {
+		OR = {
+			has_government = monarchy_constitutional
+			has_government = republic_aristocrat
+		}
+	}
+	ai_will_do = {
+		factor = 5
+	}
+	x = 26
+	y = 10
+	completion_reward = {
+		add_popularity = {
+			ideology = republic_merchant
+			popularity = 0.1
+		}
+	}
+}
+
+focus = {#Aristocracy Accepted
+	id = HLZ_aristocracy_accepted
+	icon = GFX_focus_eng_imperial_federation
+	cost = 10
+	prerequisite = {
+		focus = HLZ_concessions_clergy
+		focus = HLZ_concessions_peasantry
+		focus = HLZ_concessions_bourgeoisie
+	}
+	available = {
+		OR = {
+			has_government = monarchy_constitutional
+			has_government = republic_aristocrat
+		}
+	}
+	ai_will_do = {
+		factor = 5
+	}
+	x = 24
 	y = 11
+	completion_reward = {
+		remove_ideas = unpopular_state_3
+	}
+}
+
+focus = {#Repairing Image
+	id = HLZ_repairing_image
+	icon = GFX_goal_generic_improve_relations
+	cost = 5
+	prerequisite = {
+		focus = HLZ_assuage_worries
+	}
+	prerequisite = {
+		focus = HLZ_aristocrats_in_soup_kitchens
+		focus = HLZ_feed_people
+	}
+	available = {
+		OR = {
+			has_government = monarchy_constitutional
+			has_government = republic_aristocrat
+		}
+	}
+	ai_will_do = {
+		factor = 5
+	}
+	x = 29
+	y = 7
+	completion_reward = {
+		add_political_power = 50
+	}
+}
+
+focus = {#Socialite Prince
+	id = HLZ_socialite_prince
+	icon = GFX_focus_hlz_diplomat_prince
+	cost = 8
+	prerequisite = {
+		focus = HLZ_repairing_image
+	}
+	available = {
+		OR = {
+			has_government = monarchy_constitutional
+			has_government = republic_aristocrat
+		}
+	}
+	ai_will_do = {
+		factor = 5
+	}
+	x = 28
+	y = 8
+	completion_reward = {
+		add_country_leader_trait = socialite_prince
+	}
+}
+
+focus = {#Beziehungsburö
+	id = HLZ_found_beziehungsburo
+	icon = GFX_goal_generic_intelligence_exchange
+	cost = 12
+	prerequisite = {
+		focus = HLZ_repairing_image
+	}
+	available = {
+		OR = {
+			has_government = monarchy_constitutional
+			has_government = republic_aristocrat
+		}
+	}
+	ai_will_do = {
+		factor = 5
+	}
+	x = 30
+	y = 8
+	completion_reward = {
+		every_country = {
+			limit = {
+				has_opinion_modifier = HLZ_mad_freiprinz_opinion
+			}
+			remove_opinion_modifier = {
+				target = HLZ
+				modifier = HLZ_mad_freiprinz_opinion
+			}
+			add_opinion_modifier = {
+				target = HLZ
+				modifier = HLZ_besmirched_state
+			}
+		}
+		add_ideas = beziehungsburo_idea
+	}
+}
+
+focus = {#Dynastic Ties
+	id = HLZ_exploit_dynastic_ties
+	icon = GFX_focus_hlz_dynastic_ties
+	cost = 10
+	prerequisite = {
+		focus = HLZ_socialite_prince
+	}
+	prerequisite = {
+		focus = HLZ_found_beziehungsburo
+	}
+	available = {
+		OR = {
+			has_government = monarchy_constitutional
+			has_government = republic_aristocrat
+		}
+	}
+	ai_will_do = {
+		factor = 5
+	}
+	x = 29
+	y = 9
+	completion_reward = {
+		every_country = {
+			limit = {
+				has_opinion_modifier = HLZ_besmirched_state
+			}
+			remove_opinion_modifier = {
+				target = HLZ
+				modifier = HLZ_besmirched_state
+			}
+		}
+	}
+}
+
+focus = {#The Edlerrat
+	id = HLZ_edlerrat
+	icon = GFX_focus_usa_build_the_pentagon
+	cost = 2
+	available = {
+		OR = {
+			has_government = monarchy_constitutional
+			has_government = republic_aristocrat
+		}
+	}
+	prerequisite = {
+		focus = HLZ_assuage_worries
+	}
+	prerequisite = {
+		focus = HLZ_aristocrats_in_soup_kitchens
+		focus = HLZ_feed_people
+	}
+	x = 13
+	y = 7
+	ai_will_do = {
+		factor = 5
+	}
+	completion_reward = {
+		country_event = {
+			id = hlz.9
+			days = 3
+		}
+	}
+}
+
+focus = {#Talk with Libertines
+	id = HLZ_talk_libertines
+	icon = GFX_goal_generic_approach_republicans
+	cost = 5
+	prerequisite = {
+		focus = HLZ_edlerrat
+	}
+	available = {
+		has_country_flag = HLZ_libertines_talks
+		OR = {
+			has_government = monarchy_constitutional
+			has_government = republic_aristocrat
+		}
+	}
+	mutually_exclusive = {
+		focus = HLZ_talk_league
+	}
+	ai_will_do = {
+		factor = 5
+	}
+	x = 12
+	y = 8
 	completion_reward = {
 		add_popularity = {
 			ideology = republic_merchant
 			popularity = 0.05
 		}
 		add_stability = 0.07
+		add_political_power = 50
 	}
 }
 
@@ -542,26 +1355,45 @@ focus = {#Talk with League
 	icon = GFX_goal_generic_approach_rosites
 	cost = 5
 	prerequisite = {
-		focus = HLZ_visit_elves
-		focus = HLZ_equality_act
+		focus = HLZ_edlerrat
 	}
 	available = {
+		has_country_flag = HLZ_league_talks
 		OR = {
 			has_government = monarchy_constitutional
 			has_government = republic_aristocrat
 		}
 	}
-	x = 12
-	y = 11
+	mutually_exclusive = {
+		focus = HLZ_talk_libertines
+	}
+	x = 14
+	y = 8
 	ai_will_do = {
-		factor = 15
+		factor = 5
 	}
 	completion_reward = {
 		add_popularity = {
 			ideology = republic_peasant
 			popularity = 0.05
 		}
-		add_stability = 0.07
+		random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+		random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+		add_stability = -0.05
 	}
 }
 
@@ -578,10 +1410,10 @@ focus = {#The Noble Constitution
 			has_government = republic_aristocrat
 		}
 	}
-	x = 10
-	y = 12
+	x = 12
+	y = 9
 	ai_will_do = {
-		factor = 15
+		factor = 5
 	}
 	completion_reward = {
 		add_ideas = noble_constitution_idea
@@ -606,10 +1438,10 @@ focus = {#Introduce Welfare
 			has_government = republic_aristocrat
 		}
 	}
-	x = 12
-	y = 12
+	x = 14
+	y = 9
 	ai_will_do = {
-		factor = 15
+		factor = 5
 	}
 	completion_reward = {
 		add_ideas = introduce_welfare_idea
@@ -617,7 +1449,57 @@ focus = {#Introduce Welfare
 			ideology = republic_peasant
 			popularity = 0.05
 		}
-		add_stability = 0.075
+		add_war_support = 0.075
+	}
+}
+
+focus = {#Elven Representation
+	id = HLZ_elven_representation
+	icon = GFX_goal_tripartite_pact
+	cost = 6.8
+	available = {
+		OR = {
+			has_government = monarchy_constitutional
+			has_government = republic_aristocrat
+		}
+	}
+	prerequisite = {
+		focus = HLZ_edlerrat
+	}
+	x = 16
+	y = 8
+	ai_will_do = {
+		factor = 5
+	}
+	completion_reward = {
+		swap_ideas = {
+			remove_idea = legacy_of_puritanism_idea
+			add_idea = remnants_of_puritanism_idea
+		}
+		add_war_support = 0.05
+	}
+}
+
+focus = {#Pass Equality Act
+	id = HLZ_equality_act
+	icon = GFX_goal_continuous_boost_freedom
+	cost = 15
+	available = {
+		OR = {
+			has_government = monarchy_constitutional
+			has_government = republic_aristocrat
+		}
+	}
+	prerequisite = {
+		focus = HLZ_elven_representation
+	}
+	x = 16
+	y = 9
+	ai_will_do = {
+		factor = 5
+	}
+	completion_reward = {
+		remove_ideas = remnants_of_puritanism_idea
 	}
 }
 
@@ -627,9 +1509,10 @@ focus = {#Enlightened Nobility
 	cost = 15
 	prerequisite = {
 		focus = HLZ_constitution_noble
+		focus = HLZ_introduce_welfare	
 	}
 	prerequisite = {
-		focus = HLZ_introduce_welfare	
+		focus = HLZ_equality_act
 	}
 	available = {
 		OR = {
@@ -637,14 +1520,14 @@ focus = {#Enlightened Nobility
 			has_government = republic_aristocrat
 		}
 	}
-	x = 11
-	y = 13
+	x = 14
+	y = 10
 	ai_will_do = {
-		factor = 15
+		factor = 5
 	}
 	completion_reward = {
 		add_ideas = enlightened_nobility
-		add_stability = 0.15
+		add_stability = 0.05
 		add_political_power = 150
 	}
 }
@@ -662,10 +1545,10 @@ focus = {#Idyllic Princedom
 			has_government = republic_aristocrat
 		}
 	}
-	x = 11
-	y = 14
+	x = 14
+	y = 11
 	ai_will_do = {
-		factor = 15
+		factor = 5
 	}
 	completion_reward = {
 		add_ideas = idyllischen_prinztum_idea
@@ -691,10 +1574,10 @@ focus = {#The Cherry Revolution
 			}
 		}
 	}
-	x = 17
+	x = 45
 	y = 3
 	ai_will_do = {
-		factor = 15
+		factor = 5
 	}
 	completion_reward = {
 		add_stability = 0.05
@@ -718,27 +1601,61 @@ focus = {#Merchant Republican
 			AND = {
 				has_country_flag = HLZ_depose_tyrants
 				has_government = republic_merchant
-				}
+			}
 		}
 	}
-	x = 15
+	x = 39
 	y = 4
 	ai_will_do = {
-		factor = 15
+		factor = 5
 	}
 	completion_reward = {
 		add_popularity = {
 			ideology = republic_merchant
 			popularity = 0.1
 		}
-	add_stability = 0.075
-	add_political_power = 35
+		add_stability = 0.075
+		add_political_power = 35
 	}
 }
 
-focus = {#Compromise with the League
-	id = HLZ_compromises_league
-	icon = GFX_goal_generic_approach_rosites
+focus = {#Support the Carpenter's Guild
+	id = HLZ_support_carpenters
+	icon = GFX_focus_generic_industry_1
+	cost = 10
+	prerequisite = {
+		focus = HLZ_assembly_libertine
+	}
+	available = {
+		has_government = republic_merchant
+	}
+	x = 37
+	y = 5
+	ai_will_do = {
+		factor = 5
+	}
+	completion_reward = {
+		232= {
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = industrial_complex
+				level = 3
+				instant_build = yes
+			}
+		}
+		random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+}
+focus = {#Guarantee Freedoms
+	id = HLZ_guarantee_freedoms
+	icon = GFX_focus_generic_treaty
 	cost = 6.8
 	prerequisite = {
 		focus = HLZ_assembly_libertine
@@ -746,71 +1663,14 @@ focus = {#Compromise with the League
 	available = {
 		has_government = republic_merchant
 	}
-	x = 15
+	x = 39
 	y = 5
 	ai_will_do = {
-		factor = 15
-	}
-	completion_reward = {
-		add_popularity = {
-			ideology = republic_peasant
-			popularity = 0.05
-		}
-		add_stability = 0.05
-		add_political_power = 65
-	}
-}
-
-focus = {#Guarantee Freedoms
-	id = HLZ_guarantee_freedoms
-	icon = GFX_focus_generic_treaty
-	cost = 6.8
-	prerequisite = {
-		focus = HLZ_compromises_league
-	}
-	available = {
-		has_government = republic_merchant
-	}
-	x = 15
-	y = 6
-	ai_will_do = {
-		factor = 15
+		factor = 5
 	}
 	completion_reward = {
 		add_ideas = guaranteed_freedoms_idea
 		add_political_power = 65
-	}
-}
-
-focus = {#Ordorian Refugees
-	id = HLZ_ordorian_refugees
-	icon = GFX_focus_generic_self_management
-	cost = 10
-	prerequisite = {
-		focus = HLZ_guarantee_freedoms
-	}
-	available = {
-		has_government = republic_merchant
-		has_country_flag = HLZ_hunger_fixed
-	}
-	x = 15
-	y = 7
-	ai_will_do = {
-		factor = 15
-	}
-	completion_reward = {
-		set_country_flag = HLZ_ordorian_refugees_flag
-		add_manpower = 10000
-		add_timed_idea = {
-			idea = ordorian_refugees_idea
-			days = 365
-		}
-		add_stability = -0.075
-		add_political_power = -25
-		add_popularity = {
-			ideology = puritan
-			popularity = 0.05
-		}
 	}
 }
 
@@ -819,15 +1679,15 @@ focus = {#Create the Beratungsrat
 	icon = GFX_focus_generic_military_academy
 	cost = 10
 	prerequisite = {
-		focus = HLZ_ordorian_refugees
+		focus = HLZ_assembly_libertine
 	}
 	available = {
 		has_government = republic_merchant
 	}
-	x = 15
-	y = 8
+	x = 41
+	y = 5
 	ai_will_do = {
-		factor = 15
+		factor = 5
 	}
 	completion_reward = {
 		add_ideas = beratungsrat_idea
@@ -840,160 +1700,331 @@ focus = {#Libertine Constitution
 	icon = GFX_goal_generic_national_unity
 	cost = 15
 	prerequisite = {
+		focus = HLZ_support_carpenters
+	}
+	prerequisite = {
+		focus = HLZ_guarantee_freedoms
+	}
+	prerequisite = {
 		focus = HLZ_create_beratungsrat
 	}
 	available = {
 		has_government = republic_merchant
 	}
-	x = 15
-	y = 9
+	x = 39
+	y = 6
 	ai_will_do = {
-		factor = 15
+		factor = 5
 	}
 	completion_reward = {
 		add_ideas = libertine_constitution_idea
 	}
 }
 
-focus = {#Radical Republican
-	id = HLZ_assembly_rosite
-	icon = GFX_focus_generic_rosite
-	cost = 10
+focus = {#Bauernherren
+	id = HLZ_bauernherren
+	icon = GFX_focus_hlz_bauernherren
+	cost = 4
 	prerequisite = {
-		focus = HLZ_kirschenrevolution
+		focus = HLZ_assembly_libertine
 	}
 	available = {
-		OR = {
-			has_country_flag = HLZ_wholesome_socdems
-			AND = {
-				has_country_flag =	HLZ_depose_tyrants
-				has_government = republic_peasant
-				}
-		}
+		has_country_flag = HLZ_bauernherren_question
+		has_government = republic_merchant
 	}
-	x = 19
-	y = 4
-	ai_will_do = {
-		factor = 15
-	}
-	completion_reward = {
-		add_popularity = {
-			ideology = republic_peasant
-			popularity = 0.1
-		}
-	add_stability = 0.05
-	add_political_power = 90
-	}
-}
-
-focus = {#Compromise with the Libertines
-	id = HLZ_compromises_libertines
-	icon = GFX_goal_generic_approach_republicans
-	cost = 6.8
-	prerequisite = {
-		focus = HLZ_assembly_rosite
-	}
-	available = {
-		has_government = republic_peasant
-	}
-	x = 19
+	x = 34
 	y = 5
 	ai_will_do = {
-		factor = 15
+		factor = 5
 	}
 	completion_reward = {
-		add_popularity = {
-			ideology = republic_merchant
-			popularity = 0.05
+		country_event = {
+			id = hlz.16
+			days = 1
 		}
-		add_stability = 0.05
-		add_political_power = 115
 	}
 }
 
-focus = {#Fuck Hunger
-	id = HLZ_never_another_starving_man
-	icon = GFX_focus_generic_industry_3
-	cost = 6.8
+focus = {#Support Bauernherren
+	id = HLZ_support_bauernherren
+	icon = GFX_focus_hlz_land_support_bauernherren
+	cost = 6
 	prerequisite = {
-		focus = HLZ_compromises_libertines
+		focus = HLZ_bauernherren
+	}
+	mutually_exclusive = {
+		focus = HLZ_machen_lassen
+		focus = HLZ_support_smallholders
 	}
 	available = {
-		has_government = republic_peasant
-		has_country_flag = HLZ_hunger_fixed
+		has_government = republic_merchant
+		has_country_flag = HLZ_bauernherren_supported
 	}
-	x = 19
+	x = 32
 	y = 6
 	ai_will_do = {
-		factor = 15
+		factor = 5
 	}
 	completion_reward = {
-		add_ideas = never_another_starving_man_idea
-		add_stability = 0.05
+		custom_effect_tooltip = available_political_advisor
+		show_ideas_tooltip = alexandra_von_neureim
 	}
 }
 
-focus = {#Aid Rthauiaur
-	id = HLZ_aid_rthauiaur
-	icon = GFX_goal_generic_major_alliance
-	cost = 5
+focus = {#Efficiency through Scale
+	id = HLZ_efficiency_scale
+	icon = GFX_goal_generic_construct_civ_factory
+	cost = 10
 	prerequisite = {
-		focus = HLZ_never_another_starving_man
+		focus = HLZ_support_bauernherren
 	}
 	available = {
-		has_government = republic_peasant
+		has_government = republic_merchant
 	}
-	x = 19
+	x = 32
 	y = 7
 	ai_will_do = {
-		factor = 15
+		factor = 5
 	}
 	completion_reward = {
-		add_political_power = 100
-		add_ideas = international_support_idea
-		set_rule = {
-			can_send_volunteers = yes
+		random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = industrial_complex
+				level = 3
+				instant_build = yes
+			}
+		}
+		random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = industrial_complex
+				level = 3
+				instant_build = yes
+			}
+		}
+		random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = industrial_complex
+				level = 3
+				instant_build = yes
+			}
 		}
 	}
 }
 
-focus = {#Fuck Illiteracy
-	id = HLZ_anti_illiteracy_programs
-	icon = GFX_focus_generic_socialist_science
-	cost = 10
+focus = {#Machen-Lassen
+	id = HLZ_machen_lassen
+	icon = GFX_focus_hlz_land_machen_lassen
+	cost = 6
 	prerequisite = {
-		focus = HLZ_aid_rthauiaur
+		focus = HLZ_bauernherren
+	}
+	mutually_exclusive = {
+		focus = HLZ_support_bauernherren
+		focus = HLZ_support_smallholders
 	}
 	available = {
-		has_government = republic_peasant
+		has_country_flag = HLZ_machen_lassen_flag
+		has_government = republic_merchant
 	}
-	x = 19
-	y = 8
+	x = 34
+	y = 6
 	ai_will_do = {
-		factor = 15
+		factor = 5
 	}
 	completion_reward = {
-		add_research_slot = 1
+		custom_effect_tooltip = available_political_advisor
+		show_ideas_tooltip = joachim_fugler
 	}
 }
 
-focus = {#Popular Constitution
-	id = HLZ_constitution_popular
-	icon = GFX_goal_generic_national_unity_red
-	cost = 15
+focus = {#Efficiency through Competition
+	id = HLZ_efficiency_competition
+	icon = GFX_goal_generic_trade
+	cost = 10
 	prerequisite = {
-		focus = HLZ_anti_illiteracy_programs
+		focus = HLZ_machen_lassen
 	}
 	available = {
-		has_government = republic_peasant
+		has_government = republic_merchant
 	}
-	x = 19
-	y = 9
+	x = 34
+	y = 7
 	ai_will_do = {
-		factor = 15
+		factor = 5
 	}
 	completion_reward = {
-		add_ideas = popular_constitution_idea
+		random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = industrial_complex
+				level = 3
+				instant_build = yes
+			}
+		}
+		random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = industrial_complex
+				level = 3
+				instant_build = yes
+			}
+		}
+		random_owned_controlled_state = {
+			add_resource = {
+				type = steel
+				amount = 18
+			}
+		}
+		random_owned_controlled_state = {
+			add_resource = {
+				type = aluminium
+				amount = 12
+			}
+		}
+	}
+}
+
+focus = {#Support Smallholders
+	id = HLZ_support_smallholders
+	icon = GFX_focus_hlz_land_smallholds
+	cost = 6
+	prerequisite = {
+		focus = HLZ_bauernherren
+	}
+	available = {
+		has_government = republic_merchant
+		has_country_flag = HLZ_support_smallholders
+	}
+	mutually_exclusive = {
+		focus = HLZ_support_bauernherren
+		focus = HLZ_machen_lassen
+	}
+	x = 36
+	y = 6
+	ai_will_do = {
+		factor = 5
+	}
+	completion_reward = {
+		custom_effect_tooltip = available_political_advisor
+		show_ideas_tooltip = helmut_goeth
+	}
+}
+
+focus = {#Efficiency through Personal Interest
+	id = HLZ_efficiency_interests
+	icon = GFX_goal_generic_position_armies
+	cost = 10
+	prerequisite = {
+		focus = HLZ_support_smallholders
+	}
+	available = {
+		has_government = republic_merchant
+	}
+	x = 36
+	y = 7
+	ai_will_do = {
+		factor = 5
+	}
+	completion_reward = {
+		random_owned_controlled_state = {
+			add_resource = {
+				type = steel
+				amount = 18
+			}
+		}
+		random_owned_controlled_state = {
+			add_resource = {
+				type = aluminium
+				amount = 12
+			}
+		}
+		random_owned_controlled_state = {
+			add_resource = {
+				type = steel
+				amount = 9
+			}
+		}
+		random_owned_controlled_state = {
+			add_resource = {
+				type = aluminium
+				amount = 6
+			}
+		}
+	}
+}
+
+focus = {#Big Breaks
+	id = HLZ_big_breaks
+	icon = GFX_goal_generic_intelligence_exchange
+	cost = 8
+	prerequisite = {
+		focus = HLZ_efficiency_scale
+		focus = HLZ_efficiency_competition
+	}
+	mutually_exclusive = {
+		focus = HLZ_small_subsidies
+	}
+	available = {
+		has_government = republic_merchant
+	}
+	x = 33
+	y = 8
+	ai_will_do = {
+		factor = 5
+	}
+	completion_reward = {
+		add_ideas = tax_breaks_big
+	}
+}
+
+focus = {#Small Subsidies
+	id = HLZ_small_subsidies
+	icon = GFX_goal_generic_construction2
+	cost = 8
+	prerequisite = {
+		focus = HLZ_efficiency_interests
+		focus = HLZ_efficiency_competition
+	}
+	mutually_exclusive = {
+		focus = HLZ_big_breaks
+	}
+	available = {
+		has_government = republic_merchant
+	}
+	x = 35
+	y = 8
+	ai_will_do = {
+		factor = 5
+	}
+	completion_reward = {
+		add_ideas = subsidies_small
+	}
+}
+
+focus = {#Agricultural Boom
+	id = HLZ_agricultural_boom
+	icon = GFX_focus_hlz_agricultural_boom
+	cost = 10
+	prerequisite = {
+		focus = HLZ_big_breaks
+		focus = HLZ_small_subsidies
+	}
+	available = {
+		has_government = republic_merchant
+	}
+	x = 34
+	y = 9
+	ai_will_do = {
+		factor = 5
+	}
+	completion_reward = {
+		add_timed_idea = {
+			idea = agricultural_boom_idea
+			days = 180
+		}
 	}
 }
 
@@ -1002,8 +2033,7 @@ focus = {#Co-Government
 	icon = GFX_focus_generic_concessions
 	cost = 10
 	prerequisite = {
-			focus = HLZ_compromises_league
-			focus = HLZ_compromises_libertines
+			focus = HLZ_kirschenrevolution
 	}
 	available = {
 		OR = {
@@ -1011,8 +2041,8 @@ focus = {#Co-Government
 			has_government = republic_peasant
 		}
 	}
-	x = 17
-	y = 6
+	x = 45
+	y = 4
 	ai_will_do = {
 		factor = 15
 	}
@@ -1030,12 +2060,38 @@ focus = {#Co-Government
 	}
 }
 
+focus = {#Feed the Poor
+	id = HLZ_feed_poor
+	icon = GFX_goal_generic_positive_trade_relations
+	cost = 5
+	prerequisite = {
+		focus = HLZ_co_government
+	}
+	available = {
+		OR = {
+			has_government = republic_merchant
+			has_government = republic_peasant
+		}
+	}
+	x = 43
+	y = 5
+	ai_will_do = {
+		factor = 5
+	}
+	completion_reward = {
+		add_stability = 0.075
+		add_political_power = 95
+		remove_ideas = widespread_famine
+		set_country_flag = HLZ_hunger_fixed
+	}
+}
+
 focus = {#State-Sponsored Hospitals
 	id = HLZ_state_sponsored_hospitals
 	icon = GFX_goal_generic_improve_relations
 	cost = 6.8
 	prerequisite = {
-		focus = HLZ_co_government
+		focus = HLZ_feed_poor
 	}
 	available = {
 	OR = {
@@ -1043,39 +2099,13 @@ focus = {#State-Sponsored Hospitals
 			has_government = republic_peasant
 		}
 	}
-	x = 17
-	y = 7
+	x = 42
+	y = 6
 	ai_will_do = {
-		factor = 15
+		factor = 5
 	}
 	completion_reward = {
-		random_owned_state= {
-			add_extra_state_shared_building_slots = 3
-			add_building_construction = {
-				type = industrial_complex
-				level = 3
-				instant_build = yes
-			}
-			add_building_construction = {
-				type = infrastructure
-				level = 1
-				instant_build = yes
-			}
-		}
-		random_owned_state= {
-			add_extra_state_shared_building_slots = 1
-			add_building_construction = {
-				type = industrial_complex
-				level = 1
-				instant_build = yes
-			}
-			add_building_construction = {
-				type = infrastructure
-				level = 1
-				instant_build = yes
-			}
-		}
-		random_owned_state= {
+		random_owned_controlled_state = {
 			add_extra_state_shared_building_slots = 2
 			add_building_construction = {
 				type = industrial_complex
@@ -1088,12 +2118,38 @@ focus = {#State-Sponsored Hospitals
 				instant_build = yes
 			}
 		}
+		random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+		random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
 	}
 }
 
-focus = {#Anti-Corruption Measures
-	id = HLZ_anti_corruption_measures
-	icon = GFX_goal_generic_neutrality_focus
+focus = {#Set up Freigilde
+	id = HLZ_freigilde
+	icon = GFX_goal_generic_production
 	cost = 10
 	prerequisite = {
 		focus = HLZ_state_sponsored_hospitals
@@ -1104,16 +2160,260 @@ focus = {#Anti-Corruption Measures
 			has_government = republic_peasant
 		}
 	}
-	x = 17
+	x = 42
+	y = 7
+	ai_will_do = {
+		factor = 5
+	}
+	completion_reward = {
+		random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+		random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+		random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+	}
+}
+
+focus = {#The Prosperous State
+	id = HLZ_prosperous_state
+	icon = GFX_focus_mex_privatisation
+	cost = 10
+	prerequisite = {
+		focus = HLZ_freigilde
+	}
+	mutually_exclusive = {
+		focus = HLZ_just_state
+	}
+	available = {
+		has_country_flag = HLZ_prioritize_prosperity
+		OR = {
+			has_government = republic_merchant
+			has_government = republic_peasant
+		}
+	}
+	x = 42
 	y = 8
 	ai_will_do = {
-		factor = 15
+		factor = 5
+		modifier = {
+			factor = 2
+			has_government = republic_merchant
+		}
+	}
+	completion_reward = {
+		add_stability = 0.05
+		add_popularity = {
+			ideology = republic_merchant
+			popularity = 0.05
+		}
+		random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+		random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+}
+
+focus = {#The Ordorian Question
+	id = HLZ_ordorian_question
+	icon = GFX_focus_ord_evil
+	cost = 2
+	prerequisite = {
+		focus = HLZ_co_government
+	}
+	available = {
+		OR = {
+			has_government = republic_merchant
+			has_government = republic_peasant
+		}
+	}
+	x = 45
+	y = 5
+	ai_will_do = {
+		factor = 10
+	}
+	completion_reward = {
+		country_event = {
+			id = hlz.11
+			days = 5
+		}
+	}
+}			
+
+focus = {#Ordorian Refugees
+	id = HLZ_ordorian_refugees
+	icon = GFX_focus_generic_self_management
+	cost = 10
+	prerequisite = {
+		focus = HLZ_ordorian_question
+	}
+	available = {
+		has_country_flag = HLZ_refugees_welcome
+		OR = {
+			has_government = republic_merchant
+			has_government = republic_peasant
+		}
+	}
+	mutually_exclusive = {
+		focus = HLZ_aid_rthauiaur
+	}
+	x = 44
+	y = 6
+	ai_will_do = {
+		factor = 5
+	}
+	completion_reward = {
+		set_country_flag = HLZ_ordorian_refugees_flag
+		add_manpower = 10000
+		add_timed_idea = {
+			idea = ordorian_refugees_idea
+			days = 365
+		}
+		add_stability = -0.075
+		add_political_power = -25
+		add_popularity = {
+			ideology = puritan
+			popularity = 0.05
+		}
+	}
+}
+
+focus = {#Aid Rthauiaur
+	id = HLZ_aid_rthauiaur
+	icon = GFX_goal_generic_major_alliance
+	cost = 3
+	prerequisite = {
+		focus = HLZ_ordorian_question
+	}
+	available = {
+		has_country_flag = HLZ_direct_support
+		OR = {
+			has_government = republic_merchant
+			has_government = republic_peasant
+		}
+	}
+	mutually_exclusive = {
+		focus = HLZ_ordorian_refugees
+	}
+	x = 46
+	y = 6
+	ai_will_do = {
+		factor = 5
+	}
+	completion_reward = {
+		add_political_power = 100
+		add_ideas = international_support_idea
+		set_rule = {
+			can_send_volunteers = yes
+		}
+	}
+}
+
+focus = {#Defensive_Stratagems
+	id = HLZ_defensive_stratagems
+	icon = GFX_goal_generic_defence
+	cost = 10
+	prerequisite = {
+		focus = HLZ_ordorian_refugees
+		focus = HLZ_aid_rthauiaur
+	}
+	available = {
+		OR = {
+			has_government = republic_merchant
+			has_government = republic_peasant
+		}
+	}
+	x = 45
+	y = 7
+	ai_will_do = {
+		factor = 5
+	}
+	completion_reward = {
+		304 = {
+			add_building_construction = {
+				type = bunker
+				level = 2
+				instant_build = yes
+				province = {
+					all_provinces = yes
+					limit_to_border = yes
+				}
+			}
+		}
+		305 = {
+			add_building_construction = {
+				type = bunker
+				level = 2
+				instant_build = yes
+				province = {
+					id = 2151
+					id = 8510
+					id = 4214
+					id = 1291
+				}
+			}
+		}
+		set_country_flag = HLZ_defensive_stratagems_flag
+	}
+}
+
+focus = {#Anti-Corruption Measures
+	id = HLZ_anti_corruption_measures
+	icon = GFX_goal_generic_neutrality_focus
+	cost = 10
+	prerequisite = {
+		focus =HLZ_co_government
+	}
+	available = {
+		OR = {
+			has_government = republic_merchant
+			has_government = republic_peasant
+		}
+	}
+	x = 47
+	y = 5
+	ai_will_do = {
+		factor = 5
 	}
 	completion_reward = {
 		add_stability = 0.15
 	}
 }
-
 
 focus = {#Equal Rights
 	id = HLZ_equal_rights
@@ -1128,101 +2428,16 @@ focus = {#Equal Rights
 			has_government = republic_peasant
 		}
 	}
-	x = 17
-	y = 9
+	x = 48
+	y = 6
 	ai_will_do = {
-		factor = 15
+		factor = 5
 	}
 	completion_reward = {
-		add_stability = 0.15
+		add_stability = 0.05
 		swap_ideas = {
 			remove_idea = legacy_of_puritanism_idea
 			add_idea = remnants_of_puritanism_idea
-		}
-	}
-}
-
-focus = {#Feed the Poor
-	id = HLZ_feed_poor
-	icon = GFX_goal_generic_positive_trade_relations
-	cost = 5
-	prerequisite = {
-		focus = HLZ_equal_rights
-	}
-	available = {
-		OR = {
-			has_government = republic_merchant
-			has_government = republic_peasant
-		}
-	}
-	x = 17
-	y = 10
-	ai_will_do = {
-		factor = 15
-	}
-	completion_reward = {
-		add_stability = 0.075
-		add_political_power = 95
-		remove_ideas = widespread_famine
-		set_country_flag = HLZ_hunger_fixed
-	}
-}
-
-focus = {#Set up Freigilde
-	id = HLZ_freigilde
-	icon = GFX_goal_generic_production
-	cost = 10
-	prerequisite = {
-		focus = HLZ_feed_poor
-	}
-	available = {
-		OR = {
-			has_government = republic_merchant
-			has_government = republic_peasant
-		}
-	}
-	x = 17
-	y = 11
-	ai_will_do = {
-		factor = 15
-	}
-	completion_reward = {
-		random_owned_state= {
-			add_extra_state_shared_building_slots = 2
-			add_building_construction = {
-				type = industrial_complex
-				level = 2
-				instant_build = yes
-			}
-			add_building_construction = {
-				type = infrastructure
-				level = 1
-				instant_build = yes
-			}
-		}
-		random_owned_state= {
-			add_extra_state_shared_building_slots = 2
-			add_building_construction = {
-				type = industrial_complex
-				level = 2
-				instant_build = yes
-			}
-		}
-		random_owned_state= {
-			add_extra_state_shared_building_slots = 2
-			add_building_construction = {
-				type = industrial_complex
-				level = 2
-				instant_build = yes
-			}
-		}
-		random_owned_state= {
-			add_extra_state_shared_building_slots = 2
-			add_building_construction = {
-				type = industrial_complex
-				level = 2
-				instant_build = yes
-			}
 		}
 	}
 }
@@ -1232,7 +2447,7 @@ focus = {#Anti-Discrimination Campaigns
 	icon = GFX_goal_generic_propaganda
 	cost = 15
 	prerequisite = {
-		focus = HLZ_freigilde
+		focus = HLZ_equal_rights
 	}
 	available = {
 		OR = {
@@ -1240,13 +2455,56 @@ focus = {#Anti-Discrimination Campaigns
 			has_government = republic_peasant
 		}
 	}
-	x = 17
-	y = 12
+	x = 48
+	y = 7
 	ai_will_do = {
-		factor = 15
+		factor = 5
 	}
 	completion_reward = {
 		remove_ideas = remnants_of_puritanism_idea
+	}
+}
+
+focus = {#The Just State
+	id = HLZ_just_state
+	icon = GFX_focus_hol_abandon_the_gold_standard
+	cost = 10
+	available = {
+		has_country_flag = HLZ_prioritize_justice
+		OR = {
+			has_government = republic_merchant
+			has_government = republic_peasant
+		}
+	}
+	prerequisite = {
+		focus = HLZ_anti_discrimination_campaigns
+	}
+	mutually_exclusive = {
+		focus = HLZ_prosperous_state
+	}
+	x = 48
+	y = 8
+	ai_will_do = {
+		factor = 5
+		modifier = {
+			factor = 2
+			has_government = republic_merchant
+		}
+	}
+	completion_reward = {
+		add_war_support = 0.05
+		add_popularity = {
+			ideology = republic_peasant
+			popularity = 0.05
+		}
+		random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+		}
 	}
 }
 
@@ -1255,7 +2513,8 @@ focus = {#It Can Work
 	icon = GFX_goal_generic_major_alliance
 	cost = 15
 	prerequisite = {
-		focus = HLZ_anti_discrimination_campaigns
+		focus = HLZ_prosperous_state
+		focus = HLZ_just_state
 	}
 	available = {
 		OR = {
@@ -1263,16 +2522,503 @@ focus = {#It Can Work
 			has_government = republic_peasant
 		}
 	}
-	x = 17
-	y = 13
+	x = 45
+	y = 10
 	ai_will_do = {
-		factor = 15
+		factor = 5
 	}
 	completion_reward = {
-		add_ideas =  succesful_co_government_idea
-		add_stability = 0.15
+		add_ideas = succesful_co_government_idea
+		add_stability = 0.05
 		add_war_support = 0.1
 		add_political_power = 150
+	}
+}
+
+focus = {#Radical Republican
+	id = HLZ_assembly_rosite
+	icon = GFX_focus_generic_rosite
+	cost = 10
+	prerequisite = {
+		focus = HLZ_kirschenrevolution
+	}
+	available = {
+		OR = {
+			has_country_flag = HLZ_wholesome_socdems
+			AND = {
+				has_country_flag =	HLZ_depose_tyrants
+				has_government = republic_peasant
+			}
+		}
+	}
+	x = 51
+	y = 4
+	ai_will_do = {
+		factor = 5
+	}
+	completion_reward = {
+		add_popularity = {
+			ideology = republic_peasant
+			popularity = 0.1
+		}
+		add_stability = 0.05
+		add_political_power = 90
+	}
+}
+
+focus = {#Fuck Hunger
+	id = HLZ_never_another_starving_man
+	icon = GFX_focus_generic_industry_3
+	cost = 6.8
+	prerequisite = {
+		focus = HLZ_assembly_rosite
+	}
+	available = {
+		has_government = republic_peasant
+		has_country_flag = HLZ_hunger_fixed
+	}
+	x = 49
+	y = 5
+	ai_will_do = {
+		factor = 5
+	}
+	completion_reward = {
+		add_ideas = never_another_starving_man_idea
+		add_stability = 0.05
+	}
+}
+
+focus = {#Fuck Illiteracy
+	id = HLZ_anti_illiteracy_programs
+	icon = GFX_focus_generic_socialist_science
+	cost = 10
+	prerequisite = {
+		focus = HLZ_assembly_rosite
+	}
+	available = {
+		has_government = republic_peasant
+	}
+	x = 51
+	y = 5
+	ai_will_do = {
+		factor = 5
+	}
+	completion_reward = {
+		add_research_slot = 1
+	}
+}
+
+focus = {#Fuck Homelessness
+	id = HLZ_staatshauser
+	icon = GFX_focus_generic_rosite_housing
+	cost = 10
+	prerequisite = {
+		focus = HLZ_assembly_rosite
+	}
+	available = {
+		has_government = republic_peasant
+	}
+	x = 53
+	y = 5
+	ai_will_do = {
+		factor = 5
+	}
+	completion_reward = {
+		random_owned_controlled_state = {
+			limit = {
+				OR = {
+					has_state_category = rural
+					has_state_category = pastoral
+					has_state_category = town
+					has_state_category = large_town
+				}
+			}
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+		random_owned_controlled_state = {
+			limit = {
+				OR = {
+					has_state_category = rural
+					has_state_category = pastoral
+					has_state_category = town
+					has_state_category = large_town
+				}
+			}
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+		random_owned_controlled_state = {
+			limit = {
+				OR = {
+					has_state_category = rural
+					has_state_category = pastoral
+					has_state_category = town
+					has_state_category = large_town
+				}
+			}
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+		random_owned_controlled_state = {
+			limit = {
+				OR = {
+					has_state_category = rural
+					has_state_category = pastoral
+					has_state_category = town
+					has_state_category = large_town
+				}
+			}
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+}
+
+focus = {#Popular Constitution
+	id = HLZ_constitution_popular
+	icon = GFX_goal_generic_national_unity_red
+	cost = 15
+	prerequisite = {
+		focus = HLZ_anti_illiteracy_programs
+	}
+	prerequisite = {
+		focus = HLZ_never_another_starving_man
+	}
+	prerequisite = {
+		focus = HLZ_staatshauser
+	}
+	available = {
+		has_government = republic_peasant
+	}
+	x = 51
+	y = 6
+	ai_will_do = {
+		factor = 5
+	}
+	completion_reward = {
+		add_ideas = popular_constitution_idea
+	}
+}
+
+focus = {#Land Reform
+	id = HLZ_begin_land_reform
+	icon = GFX_focus_hlz_land_reform
+	cost = 8
+	prerequisite = {
+		focus = HLZ_assembly_rosite
+	}
+	available = {
+		has_government = republic_peasant
+	}
+	x = 56
+	y = 5
+	ai_will_do = {
+		factor = 5
+	}
+	completion_reward = {
+		country_event = {
+			id = hlz.17
+			days = 1
+		}
+	}
+}
+
+focus = {#Republican Farms
+	id = HLZ_republican_farms
+	icon = GFX_focus_hlz_republican_farms
+	cost = 6
+	prerequisite = {
+		focus = HLZ_begin_land_reform
+	}
+	mutually_exclusive = {
+		focus = HLZ_encourage_communalization
+		focus = HLZ_mandate_smallholds
+	}
+	available = {
+		has_government = republic_peasant
+		has_country_flag = HLZ_republican_farms_established
+	}
+	x = 54
+	y = 6
+	ai_will_do = {
+		factor = 5
+	}
+	completion_reward = {
+		custom_effect_tooltip = available_political_advisor
+		show_ideas_tooltip = karl_stelzner
+	}
+}
+
+focus = {#Deputies of State
+	id = HLZ_state_deputies
+	icon = GFX_focus_hlz_state_deputies
+	cost = 10
+	prerequisite = {
+		focus = HLZ_republican_farms
+	}
+	available = {
+		has_government = republic_peasant
+	}
+	x = 54
+	y = 7
+	ai_will_do = {
+		factor = 5
+	}
+	completion_reward = {
+		random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = industrial_complex
+				level = 3
+				instant_build = yes
+			}
+		}
+		random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = industrial_complex
+				level = 3
+				instant_build = yes
+			}
+		}
+		random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+		}
+	}
+}
+
+focus = {#Encourage Communalization
+	id = HLZ_encourage_communalization
+	icon = GFX_focus_hlz_communalization
+	cost = 6
+	prerequisite = {
+		focus = HLZ_begin_land_reform
+	}
+	mutually_exclusive = {
+		focus = HLZ_republican_farms
+		focus = HLZ_mandate_smallholds
+	}
+	available = {
+		has_government = republic_peasant
+		has_country_flag = HLZ_communal_farms
+	}
+	x = 56
+	y = 6
+	ai_will_do = {
+		factor = 5
+	}
+	completion_reward = {
+		custom_effect_tooltip = available_political_advisor
+		show_ideas_tooltip = ylcatra_isthyne
+	}
+}
+
+focus = {#Communal Tax
+	id = HLZ_communal_tax
+	icon = GFX_focus_hlz_communal_tax
+	cost = 10
+	prerequisite = {
+		focus = HLZ_encourage_communalization
+	}
+	available = {
+		has_government = republic_peasant
+	}
+	x = 56
+	y = 7
+	ai_will_do = {
+		factor = 5
+	}
+	completion_reward = {
+		random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = arms_factory
+				level = 3
+				instant_build = yes
+			}
+		}
+		random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = industrial_complex
+				level = 3
+				instant_build = yes
+			}
+		}
+		random_owned_controlled_state = {
+			add_resource = {
+				type = steel
+				amount = 20
+			}
+		}
+		random_owned_controlled_state = {
+			add_resource = {
+				type = aluminium
+				amount = 10
+			}
+		}
+	}
+}
+
+focus = {#Mandate Smallholds
+	id = HLZ_mandate_smallholds
+	icon = GFX_focus_hlz_mandate_smallholds
+	cost = 6
+	prerequisite = {
+		focus = HLZ_begin_land_reform
+	}
+	mutually_exclusive = {
+		focus = HLZ_republican_farms
+		focus = HLZ_encourage_communalization
+	}
+	available = {
+		has_government = republic_peasant
+	}
+	x = 58
+	y = 6
+	ai_will_do = {
+		factor = 5
+	}
+	completion_reward = {
+		custom_effect_tooltip = available_political_advisor
+		show_ideas_tooltip = helmut_goeth
+	}
+}
+
+focus = {#Day-Plow Rule
+	id = HLZ_day_plow_rule
+	icon = GFX_focus_hlz_day_plow_rule
+	cost = 10
+	prerequisite = {
+		focus = HLZ_mandate_smallholds
+	}
+	available = {
+		has_government = republic_peasant
+	}
+	x = 58
+	y = 7
+	ai_will_do = {
+		factor = 5
+	}
+	completion_reward = {
+		random_owned_controlled_state = {
+			add_resource = {
+				type = steel
+				amount = 20
+			}
+		}
+		random_owned_controlled_state = {
+			add_resource = {
+				type = aluminium
+				amount = 10
+			}
+		}
+		random_owned_controlled_state = {
+			add_resource = {
+				type = steel
+				amount = 10
+			}
+		}
+		random_owned_controlled_state = {
+			add_resource = {
+				type = aluminium
+				amount = 5
+			}
+		}
+	}
+}
+
+focus = {#Compensate Affected
+	id = HLZ_compensate_affected
+	icon = GFX_goal_generic_demand_territory
+	cost = 8
+	prerequisite = {
+		focus = HLZ_state_deputies
+		focus = HLZ_communal_tax
+	}
+	mutually_exclusive = {
+		focus = HLZ_utopia_compensation
+	}
+	available = {
+		has_government = republic_peasant
+	}
+	x = 55
+	y = 8
+	ai_will_do = {
+		factor = 5
+	}
+	completion_reward = {
+		add_ideas = compensated_affected
+	}
+}
+
+focus = {#Utopia as Compensation
+	id = HLZ_utopia_compensation
+	icon = GFX_focus_rom_parties_end
+	cost = 8
+	prerequisite = {
+		focus = HLZ_communal_tax
+		focus = HLZ_day_plow_rule
+	}
+	mutually_exclusive = {
+		focus = HLZ_compensate_affected
+	}
+	available = {
+		has_government = republic_peasant
+	}
+	x = 57
+	y = 8
+	ai_will_do = {
+		factor = 5
+	}
+	completion_reward = {
+		add_ideas = utopia_compensation_idea
+	}
+}
+
+focus = {#Finish Land Reform
+	id = HLZ_finish_land_reform
+	icon = GFX_focus_hlz_finish_land_reform
+	cost = 10
+	prerequisite = {
+		focus = HLZ_compensate_affected
+		focus = HLZ_utopia_compensation
+	}
+	available = {
+		has_government = republic_peasant
+	}
+	x = 56
+	y = 9
+	ai_will_do = {
+		factor = 5
+	}
+	completion_reward = {
+		add_timed_idea = {
+			idea = agricultural_boom_idea
+			days = 180
+		}
 	}
 }
 
@@ -1283,20 +3029,16 @@ focus = {#Idyllic Republic
 	prerequisite = {
 		focus = HLZ_it_can_work
 	}
-	prerequisite = {
-		focus = HLZ_constitution_libertine
-		focus = HLZ_constitution_popular
-	}
 	available = {
 		OR = {
 			has_government = republic_merchant
 			has_government = republic_peasant
 		}
 	}
-	x = 17
-	y = 14
+	x = 45
+	y = 11
 	ai_will_do = {
-		factor = 15
+		factor = 5
 	}
 	completion_reward = {
 		add_ideas = idyllischen_republik_idea
@@ -1311,10 +3053,10 @@ focus = {#End the Madness
 			focus = HLZ_idyllischen_prinztum
 			focus = HLZ_idyllischen_republik
 	}
-	x = 14
-	y = 15
+	x = 27
+	y = 12
 	ai_will_do = {
-		factor = 15
+		factor = 5
 	}
 	completion_reward = {
 		remove_ideas = rosenbluts_evil

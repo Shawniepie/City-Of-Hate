@@ -1,0 +1,17 @@
+state={
+	id=269
+	name="STATE_269"
+	provinces={
+		2338 3456 4618 6813 7904 
+	}
+	state_category = pastoral
+	manpower=2203
+	buildings_max_level_factor=1.000
+	history={
+		owner = SVT
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = SVT
+	}
+}

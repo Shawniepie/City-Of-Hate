@@ -1,0 +1,19 @@
+state={
+	id=3
+	name="STATE_3"
+	provinces={
+		185 2751 2752 3864 4988 6405 7140 
+	}
+	state_category = pastoral
+	manpower=9721
+	buildings_max_level_factor=1.000
+
+	history={
+		owner = GMR
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+		}
+		add_core_of = GMR
+	}
+}

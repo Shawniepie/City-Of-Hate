@@ -1,0 +1,22 @@
+state={
+	id=98
+	name="STATE_98"
+	provinces={
+		2540 5715 7121 8175 8777 
+	}
+	state_category = town
+	manpower=15720
+	buildings_max_level_factor=1.000
+		history={
+		victory_points = {2540 17}
+		owner = ORD
+		buildings = {
+		2540 = {naval_base = 2}
+		infrastructure = 4
+		industrial_complex = 2
+		arms_factory = 1
+		dockyard = 1
+		}	
+		add_core_of = ORD
+		}
+}

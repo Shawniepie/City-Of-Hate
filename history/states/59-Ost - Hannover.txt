@@ -1,0 +1,18 @@
+state={
+	id=59
+	name="STATE_59"
+	provinces={
+		527 530 531 
+	}
+	state_category = town
+	manpower=12692
+	buildings_max_level_factor=1.000
+	history={
+		owner = GMR
+		buildings = {
+			infrastructure = 4
+		}
+		add_core_of = GMR
+
+	}
+}

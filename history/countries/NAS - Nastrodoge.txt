@@ -1,6 +1,6 @@
 ﻿capital = 20
 
-oob = "empty"
+set_oob = "empty"
 set_research_slots = 3
 
 set_technology = {
@@ -14,37 +14,31 @@ set_technology = {
 }
 
 set_politics = {
-
-	parties = {
-		monarchy_absolute= { 
-			popularity = 2
-		}
-
-		monarchy_constitutional = {
-			popularity = 4
-		}
-		
-		republic_peasant = {
-			popularity = 61
-		}
-		republic_aristocrat = {
-			popularity = 6
-		}
-		republic_merchant = {
-			popularity = 14
-		}
-		theocrat = {
-			popularity = 9
-		}
-		puritan = {
-			popularity = 4
-		}
-	}
-	
 	ruling_party = republic_peasant
 	last_election = "1936.1.1"
 	election_frequency = 48
 	elections_allowed = no
+}
+
+set_popularities = {
+	monarchy_absolute = 2
+
+	monarchy_constitutional = 4
+
+	republic_peasant = 61
+
+	republic_aristocrat = 6
+
+	republic_merchant = 14
+
+	theocrat = 9
+
+	puritan = 4
+}
+
+add_ideas = {
+	human_country
+	lorthorism_religion
 }
 
 create_country_leader = {

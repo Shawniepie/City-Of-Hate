@@ -8,9 +8,6 @@ rally_princes = {
 		
 		allowed = {
 			tag = HLZ
-			NOT = {
-				country_exists = UNG
-			}
 		}
 		
 		available = {
@@ -233,9 +230,6 @@ rally_princes = {
 		
 		allowed = {
 			tag = STA
-			NOT = {
-				country_exists = UNG
-			}
 		}
 		
 		available = {
@@ -458,9 +452,6 @@ rally_princes = {
 		
 		allowed = {
 			tag = NOC
-			NOT = {
-				country_exists = UNG
-			}
 		}
 		
 		available = {
@@ -683,9 +674,6 @@ rally_princes = {
 		
 		allowed = {
 			tag = SVT
-			NOT = {
-				country_exists = UNG
-			}
 		}
 		
 		available = {
@@ -908,9 +896,6 @@ rally_princes = {
 		
 		allowed = {
 			tag = SPW
-			NOT = {
-				country_exists = UNG
-			}
 		}
 		
 		available = {
@@ -1133,9 +1118,6 @@ rally_princes = {
 		
 		allowed = {
 			tag = NRK
-			NOT = {
-				country_exists = UNG
-			}
 		}
 		
 		available = {
@@ -1358,9 +1340,6 @@ rally_princes = {
 
 		allowed = {
 			tag = TEI
-			NOT = {
-				country_exists = UNG
-			}
 		}
 		
 		available = {
@@ -1583,9 +1562,6 @@ rally_princes = {
 		
 		allowed = {
 			tag = FAU
-			NOT = {
-				country_exists = UNG
-			}
 		}
 		
 		available = {
@@ -1808,9 +1784,6 @@ rally_princes = {
 		
 		allowed = {
 			tag = ARK
-			NOT = {
-				country_exists = UNG
-			}
 		}
 		
 		available = {
@@ -2033,9 +2006,6 @@ rally_princes = {
 		
 		allowed = {
 			tag = SNF
-			NOT = {
-				country_exists = UNG
-			}
 		}
 		
 		available = {
@@ -2258,9 +2228,6 @@ rally_princes = {
 		
 		allowed = {
 			tag = WIS
-			NOT = {
-				country_exists = UNG
-			}
 		}
 		
 		available = {
@@ -2483,9 +2450,6 @@ rally_princes = {
 		
 		allowed = {
 			tag = FTH
-			NOT = {
-				country_exists = UNG
-			}
 		}
 		
 		available = {
@@ -2708,9 +2672,6 @@ rally_princes = {
 		
 		allowed = {
 			tag = WSZ
-			NOT = {
-				country_exists = UNG
-			}
 		}
 		
 		available = {

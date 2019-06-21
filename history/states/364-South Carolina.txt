@@ -1,0 +1,17 @@
+state={
+	id=364
+	name="STATE_364"
+	provinces={
+		200 201 203 204 205 206 1716 2346 6337 
+	}
+	state_category = pastoral
+	manpower=4029
+	buildings_max_level_factor=1.000
+	history={
+		owner = KUR
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = KUR
+	}
+}

@@ -1,6 +1,6 @@
 ﻿capital = 284
 
-oob = "NRK_1936"
+set_oob = "NRK_1936"
 
 
 set_technology = {
@@ -13,37 +13,31 @@ set_technology = {
 }
 
 set_politics = {
-
-	parties = {
-		monarchy_absolute= { 
-			popularity = 28
-		}
-
-		monarchy_constitutional = {
-			popularity = 62
-		}
-		
-		republic_peasant = {
-			popularity = 0
-		}
-		republic_aristocrat = {
-			popularity = 10
-		}
-		republic_merchant = {
-			popularity = 0
-		}
-		theocrat = {
-			popularity = 0
-		}
-		puritan = {
-			popularity = 0
-		}
-	}
-	
 	ruling_party = monarchy_constitutional
 	last_election = "1936.1.1"
 	election_frequency = 48
 	elections_allowed = no
+}
+
+set_popularities = {
+	monarchy_absolute = 28
+
+	monarchy_constitutional = 62
+
+	republic_peasant = 0
+
+	republic_aristocrat = 10
+
+	republic_merchant = 0
+
+	theocrat = 0
+
+	puritan = 0
+}
+
+add_ideas = {
+	human_country
+	bitha_patron
 }
 
 create_country_leader = {

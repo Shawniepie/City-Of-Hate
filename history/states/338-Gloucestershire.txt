@@ -1,0 +1,23 @@
+state={
+	id=338
+	name="STATE_338"
+	provinces={
+		1129 1130 1131 1132 2003 2004 7049 7497 8197 8342 
+	}
+	state_category = town
+	manpower=12811
+	buildings_max_level_factor=1.000
+	history={
+		victory_points = { 7497 18 }
+		owner = WSZ
+		buildings = {
+			infrastructure = 5	
+		dockyard = 2
+		industrial_complex = 1
+		7497 = {
+			naval_base = 2
+		}
+		}
+		add_core_of = WSZ
+	}
+}

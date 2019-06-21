@@ -1,0 +1,17 @@
+state={
+	id=297
+	name="STATE_297"
+	provinces={
+		1301 1302 2661 2662 5040 7718 8292 8374 
+	}
+	state_category = rural
+	manpower=9227
+	buildings_max_level_factor=1.000
+	history={
+		owner = HLZ
+		buildings = {
+			infrastructure = 4
+		}
+		add_core_of = HLZ
+	}
+}

@@ -1,0 +1,90 @@
+﻿units = {
+
+	division = {
+		name = "Clan Hafahlíf"
+		location = 287
+		division_template = "Mountainbreakers"
+		start_experience_factor = 0.8
+
+	}
+
+	division = {
+		name = "Clan Hraustr"
+		location = 8110
+		division_template = "Mountainbreakers"
+		start_experience_factor = 0.8
+
+	}
+
+	division = {
+		name = "Clan Stinnrstál"
+		location = 2090
+		division_template = "Mountainbreakers"
+		start_experience_factor = 0.8
+
+	}
+	
+	division = {
+		name = "Clan Hellirfast"
+		location = 2091
+		division_template = "Mountainbreakers"
+		start_experience_factor = 1.0
+
+	}
+
+	division = {
+		name = "Jolskane Hearthguards"
+		location = 7426
+		division_template = "Hearthguards"
+		start_experience_factor = 0.6
+
+	}
+	
+	division = {
+		name = "Alstur Border Garrison"
+		location = 7304
+		division_template = "Hearthguards"
+		start_experience_factor = 0.6
+
+	}
+	
+	division = {
+		name = "Vintalr Southguard"
+		location = 1420
+		division_template = "Hearthguards"
+		start_experience_factor = 0.7
+
+	}
+	
+	division = {
+		name = "Asdringr Southguard"
+		location = 7838
+		division_template = "Hearthguards"
+		start_experience_factor = 0.7
+
+	}
+	
+	division = {
+		name = "1st Miner's Militia"
+		location = 304
+		division_template = "Tunnel Fighters"
+		start_experience_factor = 0.5
+
+	}
+	
+	division = {
+		name = "2nd Miner's Militia"
+		location = 278
+		division_template = "Tunnel Fighters"
+		start_experience_factor = 0.5
+
+	}
+	
+	division = {
+		name = "3rd Miner's Militia"
+		location = 277
+		division_template = "Tunnel Fighters"
+		start_experience_factor = 0.5
+
+	}
+}

@@ -222,6 +222,36 @@ country_event = { # Ordoria Breaks Pact
 	option = { # Damn them!
 		name = ung.5.a
 		add_stability = -0.05
+		if = {
+			limit = {
+				AND = {
+					is_in_faction_with = ORD
+					is_faction_leader = yes
+				}
+			}
+			dismantle_faction = yes
+		}
+		if = {
+			limit = {
+				AND = {
+					is_in_faction_with = ORD
+					is_faction_leader = no
+				}
+			}
+			leave_faction = yes
+		}
+		if = {
+			limit = {
+				AND = {
+					NOT = {
+						is_in_faction_with = PRK
+					}
+					has_country_flag = UNG_perkav_alliance
+				}
+			}
+			create_faction = southern_alliance
+			add_to_faction = PRK
+		}
 	}
 }
 
@@ -480,6 +510,19 @@ country_event = { #The Union Shattered
 				}
 			}
 		}
+		
+		hidden_effect = {
+			if = {
+				limit = {
+					UNG = {
+						is_in_faction = yes
+					}
+					UNG = {
+						dismantle_faction = yes
+					}
+				}
+			}
+		}
 	}
 }
 
@@ -513,6 +556,305 @@ country_event = {#Ordorian Raid
 		add_timed_idea = {
 			idea = UNG_trade_harassed
 			days = 50
+		}
+	}
+}
+
+country_event = {#Schneefilde Sacked!
+	id = ung.13
+	title = ung.13.t
+	desc = ung.13.d
+	picture = GFX_report_event_korean_war_march
+	
+	is_triggered_only = yes
+	
+	option = {#Curse Perkavland!
+		name = ung.13.a
+		set_country_flag = schneefilde_sacked
+	}
+}
+
+country_event = {#Response to Perkavland
+	id = ung.14
+	title = ung.14.t
+	desc = ung.14.d
+	picture = GFX_report_event_military_planning
+	
+	is_triggered_only = yes
+	
+	option = {#We have bigger fish to fry
+		name = ung.14.a
+		ai_chance = {
+			factor = 3
+		}
+		set_country_flag = UNG_fry_bigger_fish
+	}
+	
+	option = {#Time for War
+		name = ung.14.b
+		ai_chance = {
+			factor = 5
+		}
+		set_country_flag = UNG_war_perkavland_flag
+	}
+	
+	option = {#Diplomatic Efforts
+		name = ung.14.c
+		ai_chance = {
+			factor = 1
+		}
+		PRK = {
+			country_event = {
+				id = prk.11
+				days = 5
+			}
+		}
+	}
+}
+
+country_event = {#Territorial Concessions
+	id = ung.15
+	title = ung.15.t
+	desc = ung.15.d
+	picture = GFX_report_event_soviet_invasion_map
+	
+	is_triggered_only = yes
+	
+	option = { #Schneefilde
+		name = ung.15.a
+		ai_chance = {
+			factor = 4
+		}
+		PRK = {
+			country_event = {
+				id = prk.1
+				days = 1
+			}
+		}
+	}
+	
+	option = { #Wertszvorde
+		name = ung.15.b
+		ai_chance = {
+			factor = 1
+		}
+		PRK = {
+			country_event = {
+				id = prk.2
+				days = 5
+			}
+		}
+	}
+}
+
+country_event = {#Perkavland Rejects Territorial Concessions
+	id = ung.16
+	title = ung.16.t
+	desc = ung.16.d
+	picture = GFX_report_event_finnish_letter
+	
+	is_triggered_only = yes
+	
+	option = { #Damn
+		name = ung.16.a
+		add_political_power = -25
+		set_country_flag = UNG_unsuccesful_territorial_appeasement
+	}
+}
+
+country_event = {#Decide on Appeasement
+	id = ung.17
+	title = ung.17.t
+	desc = ung.17.d
+	picture = GFX_report_event_generic_sign_treaty3
+	
+	is_triggered_only = yes
+	
+	option = {#Give Land
+		name = ung.17.a
+		ai_chance = {
+			factor = 1
+		}
+		set_country_flag = UNG_concessions_territory_flag
+	}
+	
+	option = {#Give money
+		name = ung.17.b
+		ai_chance = {
+			factor = 3
+		}
+		set_country_flag = UNG_concessions_money_flag
+	}
+}
+
+country_event = {#Perkavland Accepts
+	id = ung.18
+	title = ung.18.t
+	desc = ung.18.d
+	picture = GFX_report_event_molotov_ribentrop_handshake
+	
+	is_triggered_only = yes
+	
+	option = {#Gucchi
+		name = ung.18.a
+		set_country_flag = UNG_diplomatic_efforts_flag
+	}
+}
+
+country_event = {#Perkavland Rejects
+	id = ung.19
+	title = ung.19.t
+	desc = ung.19.d
+	picture = GFX_report_event_romania_poland_visit
+	
+	is_triggered_only = yes
+	
+	option = {#War it is
+		name = ung.19.a
+		ai_chance = {
+			factor = 2
+		}
+		set_country_flag = UNG_war_perkavland
+	}
+	
+	option = {#Eh, their loss
+		name = ung.19.b
+		ai_chance = {
+			factor = 1
+		}
+		set_country_flag = UNG_fry_bigger_fish
+	}
+}
+
+country_event = {#Proselytize in Perkavland?
+	id = ung.20
+	title = ung.20.t
+	desc = ung.20.d
+	picture = GFX_report_event_soviet_invasion_map
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_country_flag = UNG_diplomatic_efforts_flag
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	option = {#Yes
+		name = ung.20.a
+		custom_effect_tooltip = UNG_proselytize_tt
+		
+		ai_chance = {
+			factor = 5
+		}
+		
+		PRK = {
+			country_event = {
+				id = prk.15
+				days = 5
+			}
+		}
+	}
+	
+	option = {#No
+		name = ung.20.b
+		
+		ai_chance = {
+			factor = 3
+			modifier = {
+				has_government = theocrat
+				factor = 0
+			}
+		}
+	}
+}
+
+country_event = {#Proselytizing Accepted
+	id = ung.21
+	title = ung.21.t
+	desc = ung.21.d
+	picture = GFX_report_event_molotov_ribentrop_handshake
+	
+	is_triggered_only = yes
+	
+	option = {#Yay
+		name = ung.21.a
+		
+		add_political_power = 75
+	}
+}
+
+country_event = {#Proselytizing Accepted
+	id = ung.22
+	title = ung.22.t
+	desc = ung.22.d
+	picture = GFX_report_event_molotov_ribentrop_handshake
+	
+	is_triggered_only = yes
+	
+	option = {#Yay
+		name = ung.22.a
+		
+		add_political_power = -25
+	}
+}
+
+country_event = {#Perkavland Vassalized
+	id = ung.23
+	title = ung.23.t
+	desc = ung.23.d
+	picture = GFX_report_event_communists_cheer
+	
+	is_triggered_only = yes
+	
+	option = {#Yay
+		name = ung.23.a
+		add_stability = 0.05
+		set_autonomy = {
+			target = PRK
+			autonomy_state = autonomy_IR_freiprinztum
+			freedom_level = 0.4
+		}
+	}
+}
+
+country_event = {#Mutual Guarantees with Perkavland
+	id = ung.24
+	title = ung.24.t
+	desc = ung.24.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = {#Oh well
+		name = ung.24.a
+		
+		diplomatic_relation = {
+			country = PRK
+			relation = guarantee
+			active = yes
+		}
+		
+		diplomatic_relation = {
+			country = PRK
+			relation = military_access
+			active = yes
+		}
+		
+		PRK = {
+			diplomatic_relation = {
+				country = UNG
+				relation = guarantee
+				active = yes
+			}
+			
+			diplomatic_relation = {
+				country = UNG
+				relation = military_access
+				active = yes
+			}
 		}
 	}
 }

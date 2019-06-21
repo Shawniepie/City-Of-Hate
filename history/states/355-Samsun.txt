@@ -1,0 +1,17 @@
+state={
+	id=355
+	name="STATE_355"
+	provinces={
+		1111 1112 1113 5404 5616 5617 7670 8507 
+	}
+	state_category = rural
+	manpower=2918
+	buildings_max_level_factor=1.000
+	history={
+		owner = WSZ
+		buildings = {
+			infrastructure = 5	
+		}
+		add_core_of = WSZ
+		}
+}

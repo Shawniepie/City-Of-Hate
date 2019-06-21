@@ -1,0 +1,20 @@
+state={
+	id=774
+	name="STATE_774"
+	provinces={
+		1548 1598 1599 1600 1601 1602 7810 7849 7858 8752 
+	}
+	state_category = town
+	manpower=14129
+	buildings_max_level_factor=1.000
+	history={
+		victory_points = { 1601 12 }
+		owner = TLA
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 2
+			arms_factory = 1
+		}
+		add_core_of = TLA
+	}
+}

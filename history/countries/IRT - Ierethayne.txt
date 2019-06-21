@@ -1,53 +1,76 @@
 ﻿capital = 1
 
-oob = "empty"
+set_oob = "empty"
 set_research_slots = 3
 
 set_technology = {
 	infantry_weapons = 1
 	tech_support = 1
 	tech_recon = 1
-	early_submarine = 1
-	early_destroyer = 1
-	early_light_cruiser = 1
-	early_heavy_cruiser = 1
+}
+
+if = {
+	limit = {
+		not = { has_dlc = "Man the Guns" }
+	}
+	set_technology = {
+		early_submarine = 1
+		early_destroyer = 1
+		early_light_cruiser = 1
+		transport = 1
+	}
+}
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		early_ship_hull_light = 1
+		basic_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		early_ship_hull_cruiser = 1
+		basic_battery = 1
+		basic_light_battery = 1
+		basic_torpedo = 1
+		sonar = 1
+		basic_depth_charges = 1
+		basic_secondary_battery = 1
+		mtg_transport = 1
+		basic_fire_control_system = 1
+	}
 }
 
 1939.1.1 = {
 }
 
 set_politics = {
-
-	parties = {
-		monarchy_absolute= { 
-			popularity = 9
-		}
-
-		monarchy_constitutional = {
-			popularity = 14
-		}
-		
-		republic_peasant = {
-			popularity = 15
-		}
-		republic_aristocrat = {
-			popularity = 26
-		}
-		republic_merchant = {
-			popularity = 18
-		}
-		theocrat = {
-			popularity = 10
-		}
-		puritan = {
-			popularity = 8
-		}
-	}
-	
 	ruling_party = republic_aristocrat
 	last_election = "1936.1.1"
 	election_frequency = 48
 	elections_allowed = no
+}
+
+set_popularities = {
+	monarchy_absolute = 9
+
+	monarchy_constitutional = 14
+
+	republic_peasant = 15
+
+	republic_aristocrat = 26
+
+	republic_merchant = 18
+
+	theocrat = 10
+
+	puritan = 8
+}
+
+add_ideas = {
+	human_country
+	lorthorism_religion
 }
 
 create_country_leader = {

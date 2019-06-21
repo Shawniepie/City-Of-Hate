@@ -1,0 +1,27 @@
+state={
+	id=20
+	name="STATE_20"
+	state_category = metropolis
+	manpower = 720842
+
+	provinces={
+		244 245 3043 3347 3348 4929 4930 4931 4932 8776 8887 
+	}
+
+	resources = {
+			aluminium = 14
+	}
+	
+	history={
+		owner = GMR
+		victory_points = { 4931 46 }
+		buildings = {
+			infrastructure = 7
+			arms_factory = 2
+			industrial_complex = 4
+		}
+		add_core_of = GMR
+
+	}
+
+}

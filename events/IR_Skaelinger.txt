@@ -293,6 +293,11 @@ country_event = { #Second Rthaur Revolution
 				target = SKA
 				autonomy_state = autonomy_free
 			}
+		}
+		if = {
+			limit = {
+				has_cosmetic_tag = SKA_OSG
+			}
 			drop_cosmetic_tag = yes
 			kill_country_leader = yes
 			set_politics = {
@@ -345,6 +350,7 @@ country_event = { #Second Rthaur Revolution
 				modifier = staunch_allies
 			}
 		}
+
 		RTH = {
 			country_event = {
 				id = rth.11
@@ -402,6 +408,163 @@ country_event = { #Second Rthaur Revolution
 			country_event = {
 				id = rth.13
 				days = 2
+			}
+		}
+	}
+}
+
+country_event = {#Troops Retreat from Rthauiaur
+	id = ska.9
+	title = ska.9.t
+	desc = ska.9.d
+	picture = GFX_report_event_ast_army
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		days = 3
+	}
+	
+	trigger = {
+		original_tag = SKA
+		OR = {
+			NOT = {
+				country_exists = RTH
+			}
+			RTH = {
+				has_capitulated = yes
+			}
+		}
+		OR = {
+			divisions_in_state = {
+				size > 0
+				state = 128
+			}
+			divisions_in_state = {
+				size > 0
+				state = 143
+			}divisions_in_state = {
+				size > 0
+				state = 145
+			}
+			divisions_in_state = {
+				size > 0
+				state = 137
+			}
+			divisions_in_state = {
+				size > 0
+				state = 138
+			}
+			divisions_in_state = {
+				size > 0
+				state = 132
+			}
+			divisions_in_state = {
+				size > 0
+				state = 131
+			}
+			divisions_in_state = {
+				size > 0
+				state = 130
+			}
+			divisions_in_state = {
+				size > 0
+				state = 127
+			}
+			divisions_in_state = {
+				size > 0
+				state = 129
+			}
+			divisions_in_state = {
+				size > 0
+				state = 126
+			}
+			divisions_in_state = {
+				size > 0
+				state = 122
+			}
+			divisions_in_state = {
+				size > 0
+				state = 125
+			}
+			divisions_in_state = {
+				size > 0
+				state = 123
+			}
+			divisions_in_state = {
+				size > 0
+				state = 124
+			}
+			divisions_in_state = {
+				size > 0
+				state = 139
+			}
+			divisions_in_state = {
+				size > 0
+				state = 142
+			}
+			divisions_in_state = {
+				size > 0
+				state = 133
+			}
+			divisions_in_state = {
+				size > 0
+				state = 118
+			}
+			divisions_in_state = {
+				size > 0
+				state = 134
+			}
+			divisions_in_state = {
+				size > 0
+				state = 136
+			}
+			divisions_in_state = {
+				size > 0
+				state = 135
+			}
+			divisions_in_state = {
+				size > 0
+				state = 119
+			}
+			divisions_in_state = {
+				size > 0
+				state = 144
+			}
+			divisions_in_state = {
+				size > 0
+				state = 143
+			}
+			divisions_in_state = {
+				size > 0
+				state = 140
+			}
+		}
+	}
+	
+	option = {#Fall back and defend, enemy coming!
+		name = ska.9.a
+		hidden_effect = {
+			ORD = {
+				annex_country = {
+					target = SKA
+					transfer_troops = no
+				}
+			}
+			every_state = {
+				limit = {
+					is_core_of = SKA
+				}
+				SKA = {
+					transfer_state = PREV
+				}
+			}
+			load_oob = "SKA_defend"
+			ORD = {
+				declare_war_on = {
+					target = SKA
+					type = annex_everything
+				}
 			}
 		}
 	}

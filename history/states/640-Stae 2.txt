@@ -4,6 +4,14 @@ state={
 	provinces={
 		344 1803 1979 3940 4292 4719 6304 
 	}
-	manpower=0
+	state_category = pastoral
+	manpower=420
 	buildings_max_level_factor=1.000
+	history={
+		owner = PRK
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = PRK
+	}
 }

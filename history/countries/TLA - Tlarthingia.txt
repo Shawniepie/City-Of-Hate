@@ -1,0 +1,141 @@
+﻿capital = 372
+
+set_oob = "TLA_1936"
+
+set_technology = {
+	infantry_weapons = 1
+	tech_support = 1
+	tech_recon = 1
+}
+
+if = {
+	limit = {
+		not = { has_dlc = "Man the Guns" }
+	}
+	set_technology = {
+		early_submarine = 1
+		early_destroyer = 1
+		early_light_cruiser = 1
+		transport = 1
+	}
+}
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		early_ship_hull_light = 1
+		basic_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		early_ship_hull_cruiser = 1
+		basic_battery = 1
+		basic_light_battery = 1
+		basic_torpedo = 1
+		sonar = 1
+		basic_depth_charges = 1
+		basic_secondary_battery = 1
+		mtg_transport = 1
+		basic_fire_control_system = 1
+	}
+}
+
+1939.1.1 = {
+}
+
+set_politics = {
+	ruling_party = monarchy_constitutional
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	monarchy_absolute = 5
+
+	monarchy_constitutional = 67
+
+	republic_peasant = 3
+
+	republic_aristocrat = 8
+
+	republic_merchant = 4
+
+	theocrat = 7
+
+	puritan = 6
+}
+
+add_ideas = {
+	lizardmen_country
+	ouborism_religion
+}
+
+	add_opinion_modifier = {
+		target = IRI
+		modifier = bitter_rivals
+	}
+	
+create_country_leader = {
+	name = "Gluthor Hurin"
+	desc = "politics_TLA_hurin_desc"
+	picture = "gfx/leaders/TLA/Portrait_TLA_Hurin.dds"
+	ideology = republic_peasant_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Glithgar Arquul"
+	desc = "politics_TLA_arquul_desc"
+	picture = "gfx/leaders/TLA/Portrait_TLA_Arquul.dds"
+	ideology = puritan_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Balger Luudz"
+	desc = "politics_TLA_luudz_desc"
+	picture = "gfx/leaders/TLA/Portrait_TLA_Luudz.dds"
+	ideology = monarchy_absolute_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Balger Luudz"
+	desc = "politics_TLA_luudz_desc"
+	picture = "gfx/leaders/TLA/Portrait_TLA_Luudz.dds"
+	ideology = monarchy_constitutional_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Logstun Hycthuus"
+	desc = "politics_TLA_hycthuus_desc"
+	picture = "gfx/leaders/TLA/Portrait_TLA_Hycthuus.dds"
+	ideology = theocrat_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Quul Huuthor"
+	desc = "politics_TLA_huuthor_desc"
+	picture = "gfx/leaders/TLA/Portrait_TLA_Huuthor.dds"
+	ideology = republic_aristocrat_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Holg Veltree"
+	desc = "politics_TLA_veltree_desc"
+	picture = "gfx/leaders/TLA/Portrait_TLA_Veltree.dds"
+	ideology = republic_merchant_ideology
+	traits = {
+	}
+}
