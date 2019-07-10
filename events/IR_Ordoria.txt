@@ -762,7 +762,7 @@ country_event = { # Heavy Demands - the Union Refuses
 		hidden_effect = {
 			modify_country_flag = {
 					flag = ORD_moderate_failure
-					value = 2
+					value = 1
 			}
 		}
 	}
@@ -788,7 +788,7 @@ country_event = { # Medium Demands - the Union Complies
 		hidden_effect = {
 			modify_country_flag = {
 					flag = ORD_moderate_success
-					value = 1
+					value = 2
 			}
 		}
 	}
@@ -812,7 +812,7 @@ country_event = { # Medium Demands - the Union Refuses
 		hidden_effect = {
 			modify_country_flag = {
 					flag = ORD_moderate_failure
-					value = 1
+					value = 2
 			}
 		}
 	}
@@ -861,7 +861,7 @@ country_event = { # Arthenon Accepts Pact
 		hidden_effect = {
 			modify_country_flag = {
 					flag = ORD_moderate_success
-					value = 1
+					value = 2
 			}
 		}
 		hidden_effect = {
@@ -1312,7 +1312,7 @@ country_event = { # Traditionalist Civil War
 		ORD = {
 			AND = {
 				has_country_flag = ORD_moderate_path_over
-				has_country_flag = { 
+				has_country_flag = {
 					flag = ORD_moderate_success
 					value < 4
 				}
@@ -1321,6 +1321,73 @@ country_event = { # Traditionalist Civil War
 					value < 4
 				}
 			}
+		}
+	}
+	
+	immediate = {
+	
+		hidden_effect = {
+			
+			every_state = {
+				limit = {
+					is_core_of = ORD
+				}
+				ORD = {
+					remove_state_core = PREV
+				}
+			}
+			
+			ORD = {
+				set_capital = 111
+			}
+			
+			ORB = {
+				add_state_core = 85
+				add_state_core = 99
+				add_state_core = 100
+				add_state_core = 101
+				add_state_core = 106
+				add_state_core = 105
+				add_state_core = 104
+				add_state_core = 103
+				add_state_core = 102
+				add_state_core = 92
+				add_state_core = 98
+				add_state_core = 97
+				add_state_core = 100
+				add_state_core = 80
+				add_state_core = 81
+				add_state_core = 91
+				add_state_core = 107
+				add_state_core = 84
+				add_state_core = 88
+				add_state_core = 87
+				add_state_core = 83
+				add_state_core = 86
+				
+				set_capital = 85
+			}
+			
+			every_state = {
+				limit = {
+					is_owned_by = ORD
+					NOT = {
+						is_core_of = ORB
+					}
+				}
+				ORD = {
+					add_state_core = PREV
+				}
+			}
+
+			delete_unit_template_and_units = {
+					division_template = "Grove Guards"
+				}
+			delete_unit_template_and_units = {
+				division_template = "Bladesingers"
+			}
+			
+			set_country_flag = ORD_trad_civil_war_flag
 		}
 	}
 	
@@ -1335,127 +1402,89 @@ country_event = { # Traditionalist Civil War
 			factor = 100
 		}
 		hidden_effect = {
-			ORD = {
-				set_capital = 111
-			}
-		}
-		start_civil_war = {
-			ideology = puritan
-			size = 0.5
-			capital = 85
-			states = {
-				85
-				99
-				100
-				101
-				198
-				193
-				195
-				194
-				106
-				105
-				104
-				103
-				102
-				92
-				98
-				97
-				100
-				80
-				81
-				91
-				107
-				84
-				88
-				87
-				83
-			}
-		}
-		hidden_effect = {
-			set_equipment_fraction = 0.7
-		}
-		hidden_effect = {
-			random_other_country = {
-				limit = {
-					original_tag = ORD
-					has_government =  puritan
+		
+			ORB = {
+				annex_country = {
+					target = ORD
+					transfer_troops = no
 				}
-				set_equipment_fraction = 0.7
-				set_country_flag = ORD_autumn_debate_done
-				set_country_flag = ORD_foreign_imperialist
-				set_country_flag = ORD_military_imperialist
-				set_country_flag = ORD_domestic_imperialist
-				clr_country_flag = ORD_foreign_moderate
-				clr_country_flag = ORD_military_moderate
-				clr_country_flag = ORD_domestic_moderate
+			}
+			
+			every_state = {
+				limit = {
+					is_owned_by = ORB
+					is_core_of = ORD
+				}
+				ORD = {
+					transfer_state = PREV
+				}
+			}
+						
+			load_oob = "ORD_civil_war_oob"
+			
+			delete_unit_template_and_units = {
+				division_template = "Rangers"
+			}
+			
+			ORB = {
+				load_oob = "ORB_civil_war_oob"
+				set_country_flag = ORB_civil_war_flag
+			}
+			
+			declare_war_on = {
+				target = ORB
+				type = annex_everything
 			}
 		}
 	}
+
 	option = { # Rid our people of this Moderate insanity!
 		name = ord.28.b
 		add_stability = -0.25
 		add_popularity = {
 			ideology = puritan
-			popularity = 0.35
+			popularity = -0.35
 		}
 		ai_chance = {
-			factor = 0
+			factor = 100
 		}
-		set_politics = {
-			ruling_party = puritan
-			elections_allowed = no
-		}
-		start_civil_war = {
-			ideology = monarchy_absolute
-			size = 0.5
-			capital = 111
-			states = {
-				111
-				108
-				94
-				95
-				117
-				110
-				90
-				76
-				93
-				89
-				116
-				115
-				77
-				112
-				114
-				113
-				86
-				78
-				79
-				82
-				109
-				108
-				96
-				101
-			}
-		}
-		
 		hidden_effect = {
-			load_oob = "ORD_Civil_War"
-			set_equipment_fraction = 0.7
-			set_country_flag = ORD_foreign_imperialist
-			set_country_flag = ORD_military_imperialist
-			set_country_flag = ORD_domestic_imperialist
-			clr_country_flag = ORD_foreign_moderate
-			clr_country_flag = ORD_military_moderate
-			clr_country_flag = ORD_domestic_moderate
-		}
 		
-		hidden_effect = {
-			random_other_country = {
-				limit = {
-					original_tag = ORD
-					has_government =  monarchy_absolute
+			ORB = {
+				annex_country = {
+					target = ORD
+					transfer_troops = no
 				}
-				set_equipment_fraction = 0.7
-				set_country_flag = ORD_autumn_debate_done
+			}
+			
+			every_state = {
+				limit = {
+					is_owned_by = ORB
+					is_core_of = ORD
+				}
+				ORD = {
+					transfer_state = PREV
+				}
+			}
+						
+			load_oob = "ORD_civil_war_oob"
+			
+			delete_unit_template_and_units = {
+				division_template = "Rangers"
+			}
+			
+			ORB = {
+				load_oob = "ORB_civil_war_oob"
+				set_country_flag = ORB_civil_war_flag
+			}
+			
+			declare_war_on = {
+				target = ORB
+				type = annex_everything
+			}
+			
+			ORB = {
+				change_tag_from = ORD
 			}
 		}
 	}
@@ -1905,7 +1934,7 @@ country_event = { #Rthaur Resistance
 		}
 		add_popularity = {
 			ideology = republic_peasant
-			popularity = 0.15
+			popularity = 0.1
 		}
 		hidden_effect = {
 			every_state = {
@@ -1957,7 +1986,7 @@ country_event = { #Second Rthaur Rebellion!
 			}
 		}
 		has_idea = ORD_rthaur_propaganda
-		republic_peasant > 0.4
+		republic_peasant > 0.45
 	}
 	
 	mean_time_to_happen = {
@@ -1966,6 +1995,8 @@ country_event = { #Second Rthaur Rebellion!
 	
 	immediate = {
 		hidden_effect = {
+			
+			remove_ideas = ORD_rthaur_propaganda
 
 			every_state = {
 				limit = {
@@ -2040,8 +2071,6 @@ country_event = { #Second Rthaur Rebellion!
 	
 	option = { #Crush them!
 		name = ord.40.a
-		
-		remove_ideas = ORD_rthaur_propaganda
 
 		set_party_name = {
 			ideology = republic_peasant
@@ -2104,8 +2133,6 @@ country_event = { #Second Rthaur Rebellion!
 	
 	option = { #Hasta la Siempre!
 		name = ord.40.b
-		
-		remove_ideas = ORD_rthaur_propaganda
 		
 		set_party_name = {
 			ideology = republic_peasant
@@ -2709,7 +2736,7 @@ country_event = { #Re-Core Rthaur Rebel Lands after the 2OCW
 	
 	mean_time_to_happen = {
 		days = 15
-	}
+	}	
 	
 	option = { #Stability!
 		name = ord.54.a
@@ -2725,7 +2752,298 @@ country_event = { #Re-Core Rthaur Rebel Lands after the 2OCW
 				limit = {
 					country_exists = EOR
 				}
+				annex_country = {
+					target = EOR
+					transfer_troops = yes
+				}
+				every_state = {
+					limit = {
+						is_core_of = EOR
+					}
+					add_core_of = ORD
+					remove_core_of = EOR
+				}
 			}
+		}
+	}
+}
+
+country_event = { #Holzbrenn on the Move
+	id = ord.55
+	title = ord.55.t
+	desc = ord.55.d
+	picture = GFX_report_event_ast_army
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+		
+	option = { #Curses!
+		name = ord.55.a
+		add_war_support = 0.05
+		custom_effect_tooltip = ORD_holzbrenn_skirmish_tt
+	}
+}
+
+country_event = {#Civil War - Moderate Victory
+	id = ord.56
+	title = ord.56.t
+	desc = ord.56.d
+	picture = GFX_report_event_dutch_soldiers_indonesia
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_country_flag = ORD_trad_civil_war_flag
+		NOT = {
+			has_war_with = ORB
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 15
+	}
+	
+	option = {#Yay
+		name = ord.56.a
+		
+		clr_country_flag = ORD_trad_civil_war_flag
+		
+		hidden_effect = {
+			every_state = {
+				limit = {
+					is_core_of = ORB
+				}
+				remove_core_of = ORB
+				add_core_of = ORD
+			}
+		}
+	}
+}
+
+country_event = {#Civil War - Traditionalist Victory
+	id = ord.57
+	title = ord.57.t
+	desc = ord.57.d
+	picture = GFX_report_event_fascist_speech
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_country_flag = ORB_civil_war_flag
+		NOT = {
+			has_war_with = ORD
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 15
+	}
+	
+	option = {#Yay
+		name = ord.57.a
+		
+		clr_country_flag = ORB_civil_war_flag
+		
+		hidden_effect = {
+			every_state = {
+					limit = {
+						is_core_of = ORB
+					}
+					remove_core_of = ORB
+					add_core_of = ORD
+				}
+			ORD = {
+				transfer_state = 85
+			}
+		
+			ORD = {
+				change_tag_from = ORB
+			}
+			every_state = {
+				limit = {
+					is_owned_by = ORB
+				}
+				ORD = {
+					transfer_state = PREV
+				}
+			}
+		}
+		
+		ORD = {
+			country_event = {
+				id = ord.58
+				days = 15
+			}
+			
+			hidden_effect = {
+				set_politics = {
+					ruling_party = puritan
+				}
+
+				set_popularities = {
+
+					monarchy_absolute = 2
+
+					monarchy_constitutional = 0
+
+					republic_peasant = 4
+
+					republic_aristocrat = 0
+
+					republic_merchant = 0
+
+					theocrat = 28
+
+					puritan = 67
+				}
+			}
+		}
+	}
+}
+
+country_event = {#Civil War - Traditionalists Debate Policy
+	id = ord.58
+	title = ord.58.t
+	desc = ord.58.d
+	picture = GFX_report_event_fascist_gathering
+	
+	is_triggered_only = yes
+	
+	option = {#Who knows what the future holds?
+		name = ord.58.a
+		
+		custom_effect_tooltip = ORD_civil_war_politics_tt
+		
+		clr_country_flag = ORD_domestic_moderate
+		clr_country_flag = ORD_domestic_imperialist
+		clr_country_flag = ORD_domestic_theocrat
+
+		clr_country_flag = ORD_military_moderate
+		clr_country_flag = ORD_military_imperialist
+		clr_country_flag = ORD_military_theocrat
+
+		clr_country_flag = ORD_foreign_moderate
+		clr_country_flag = ORD_foreign_imperialist
+		clr_country_flag = ORD_foreign_theocrat
+		
+		hidden_effect = {
+			random_list = {
+				50 = {
+					set_country_flag = ORD_domestic_imperialist
+				}
+				50 = {
+					set_country_flag = ORD_domestic_theocrat
+				}
+			}
+			
+			random_list = {
+				50 = {
+					set_country_flag = ORD_military_imperialist
+				}
+				50 = {
+					set_country_flag = ORD_military_theocrat
+				}
+			}
+			
+			random_list = {
+				50 = {
+					set_country_flag = ORD_foreign_imperialist
+				}
+				50 = {
+					set_country_flag = ORD_foreign_theocrat
+				}
+			}
+		}
+		
+		if = {
+			limit = {
+				OR = {
+					AND = {
+						has_country_flag = ORD_domestic_imperialist
+						has_country_flag = ORD_military_imperialist
+					}
+					AND = {
+						has_country_flag = ORD_domestic_imperialist
+						has_country_flag = ORD_foreign_imperialist
+					}
+					AND = {
+						has_country_flag = ORD_military_imperialist
+						has_country_flag = ORD_foreign_imperialist
+					}
+				}
+			}
+			
+			ORD = {
+				set_politics = {
+					ruling_party = puritan
+				}
+
+				set_popularities = {
+
+					monarchy_absolute = 2
+
+					monarchy_constitutional = 0
+
+					republic_peasant = 4
+
+					republic_aristocrat = 0
+
+					republic_merchant = 0
+
+					theocrat = 28
+
+					puritan = 67
+				}
+				
+				set_country_flag = ORD_autumn_debate_done
+				set_country_flag = ORD_empire_purity
+			}
+		}
+		
+		if = {
+			limit = {
+				OR = {
+					AND = {
+						has_country_flag = ORD_domestic_theocrat
+						has_country_flag = ORD_military_theocrat
+					}
+					AND = {
+						has_country_flag = ORD_domestic_theocrat
+						has_country_flag = ORD_foreign_theocrat
+					}
+					AND = {
+						has_country_flag = ORD_military_theocrat
+						has_country_flag = ORD_foreign_theocrat
+					}
+				}
+			}
+			
+			ORD = {
+			
+				set_politics = {
+					ruling_party = theocrat
+				}
+
+				set_popularities = {
+
+					monarchy_absolute = 2
+
+					monarchy_constitutional = 0
+
+					republic_peasant = 4
+
+					republic_aristocrat = 0
+
+					republic_merchant = 0
+
+					theocrat = 67
+
+					puritan = 28
+				}
+			}
+			set_country_flag = ORD_autumn_debate_done
+			set_country_flag = ORD_pure_priests_flag
 		}
 	}
 }

@@ -4,3 +4,6 @@
 -Fixed a graphics bug with the Compensation for Nobles idea for Ordoria
 -Transferred a province from Nohora to Hisjine
 -Slightly edited the Super Secret File
+-Rebalanced Second Rthaur Revolution and Traditionalist Civil War
+-Updated Holzbrenn's flags to HD versions
+-Changed the Traditionalist Civil War from a dynamic tag to a specific tag, ORB. This prevents a bug which caused the dynamic tag to gain all of Ordoria's land if the Second Rthaur Revolution fired.

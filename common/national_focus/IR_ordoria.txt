@@ -6,10 +6,6 @@ focus_tree = {
 		factor = 0
 		modifier = {
 			add = 10
-			tag = ORD
-		}
-		modifier = {
-			add = 10
 			original_tag = ORD
 		}
 	}
@@ -43,6 +39,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 15
 		}
+		
 		completion_reward = {
 			country_event = {
 				id = ord.1

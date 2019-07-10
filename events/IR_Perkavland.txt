@@ -824,7 +824,7 @@ country_event = {#Crown Wendelin
 			ideology = monarchy_constitutional
 			popularity = 0.1
 		}
-		remove_ideas = PRK_administrative_reform
+		remove_ideas = PRK_perkav_census_idea
 		add_stability = 0.15
 		set_country_flag = PRK_crowned_wendelin_flag
 	}

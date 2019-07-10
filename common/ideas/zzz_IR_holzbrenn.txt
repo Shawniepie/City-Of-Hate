@@ -666,9 +666,183 @@ ideas = {
 				consumer_goods_factor = -0.15
 			}
 		}
+		
+		HLZ_military_investment_idea = {
+		
+			allowed = { 
+				always = no
+			}
+			
+			allowed_civil_war = {
+				original_tag = HLZ
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_goods_red_bonus
+			
+			modifier = {
+				production_speed_arms_factory_factor = 0.2
+				production_speed_dockyard_factor = 0.2
+				
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.10 instant = yes
+				}
+			}
+			equipment_bonus = {
+				support_equipment = {
+					build_cost_ic = -0.05 instant = yes
+				}
+			}
+			equipment_bonus = {
+				artillery = {
+					build_cost_ic = -0.05 instant = yes
+				}
+			}
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		HLZ_army_officer_recruitment_idea = {
+		
+			allowed = { 
+				always = no
+			}
+			
+			allowed_civil_war = {
+				original_tag = HLZ
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_goods_red_bonus
+			
+			modifier = {
+				army_chief_cost_factor = -0.25
+				navy_chief_cost_factor = -0.25
+				military_leader_cost_factor = -0.25
+			}
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		HLZ_restore_the_former_glory_idea = {
+		
+			allowed = { 
+				always = no
+			}
+			
+			allowed_civil_war = {
+				original_tag = HLZ
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_goods_red_bonus
+			
+			modifier = {
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+			}
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		HLZ_compensation_for_losses_idea = {
+			allowed = { always = no }
+			
+			allowed_civil_war = { original_tag = HLZ }
+			
+			removal_cost = -1
+			
+			picture = eng_imperial_conscription
+			
+			modifier = {
+				consumer_goods_factor = 0.08
+			}
+			
+			ai_will_do = { factor = 1 }
+		}
+	
+		HLZ_seize_the_wealth_idea = {
+			allowed = { always = no }
+			
+			allowed_civil_war = { original_tag = HLZ }
+			
+			removal_cost = -1
+			
+			picture = eng_imperial_conscription
+			
+			modifier = {
+				consumer_goods_factor = -0.08
+			}
+			
+			ai_will_do = { factor = 1 }
+		}
+	
+		HLZ_egalitarianism_idea = {
+			allowed = { always = no }
+			
+			allowed_civil_war = { original_tag = HLZ }
+			
+			removal_cost = -1
+			
+			picture = eng_imperial_conscription
+			
+			modifier = {
+				stability_factor = 0.15
+			}
+			
+			ai_will_do = { factor = 1 }
+		}
+		
+		HLZ_reintegrate_the_aristocrats_idea = {
+			allowed = { always = no }
+			
+			allowed_civil_war = { original_tag = HLZ }
+			
+			removal_cost = -1
+			
+			picture = eng_imperial_conscription
+			
+			modifier = {
+				political_power_gain = 0.25
+				political_advisor_cost_factor = -0.20
+			}
+			
+			ai_will_do = { factor = 1 }
+		}
+	
+		HLZ_lokalraete_idea = {
+			allowed = { always = no }
+			
+			allowed_civil_war = { original_tag = HLZ }
+			
+			removal_cost = -1
+			
+			picture = eng_imperial_conscription
+			
+			modifier = {
+				production_speed_industrial_complex_factor = 0.05
+				production_speed_naval_base_factor = 0.05
+				production_speed_bunker_factor = 0.05
+				political_power_gain = -0.25
+			}
+			
+			ai_will_do = { factor = 1 }
+		}
+	
 	}
 
-		#ADVISORS
+	#ADVISORS
 		
 	political_advisor = {
 		
@@ -825,7 +999,7 @@ ideas = {
 			
 			available = {
 				has_government = republic_peasant
-				has_completed_focus = HLZ_communal_tax
+				has_completed_focus = HLZ_encourage_communalization
 			}
 			
 			traits = {

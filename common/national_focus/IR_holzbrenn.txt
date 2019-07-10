@@ -183,6 +183,7 @@ focus = {#Mingle with Plebs
 			ideology = republic_aristocrat
 			popularity = 0.20
 		}
+		set_country_flag = HLZ_princely_army_recovery_available
 	}
 }
 
@@ -236,6 +237,7 @@ focus = {#Limit Princely Power
 			ideology = monarchy_constitutional
 			popularity = 0.25
 		}
+		set_country_flag = HLZ_princely_army_recovery_available
 	}
 }
 
@@ -1237,7 +1239,7 @@ focus = {#Beziehungsburö
 	x = 30
 	y = 8
 	completion_reward = {
-		every_country = {
+		every_other_country = {
 			limit = {
 				has_opinion_modifier = HLZ_mad_freiprinz_opinion
 			}
@@ -1276,7 +1278,7 @@ focus = {#Dynastic Ties
 	x = 29
 	y = 9
 	completion_reward = {
-		every_country = {
+		every_other_country = {
 			limit = {
 				has_opinion_modifier = HLZ_besmirched_state
 			}
@@ -1616,6 +1618,7 @@ focus = {#Merchant Republican
 		}
 		add_stability = 0.075
 		add_political_power = 35
+		set_country_flag = HLZ_princely_army_recovery_available
 	}
 }
 
@@ -2563,6 +2566,7 @@ focus = {#Radical Republican
 		}
 		add_stability = 0.05
 		add_political_power = 90
+		set_country_flag = HLZ_princely_army_recovery_available
 	}
 }
 
@@ -3053,7 +3057,7 @@ focus = {#End the Madness
 			focus = HLZ_idyllischen_prinztum
 			focus = HLZ_idyllischen_republik
 	}
-	x = 27
+	x = 29
 	y = 12
 	ai_will_do = {
 		factor = 5
@@ -3063,4 +3067,994 @@ focus = {#End the Madness
 	}
 }
 
+focus = {#Princely Army
+	id = HLZ_princely_army_recovery
+	icon = GFX_focus_hlz_military_glory
+	cost = 10
+	x = 13
+	y = 0
+	available = {
+		has_country_flag = HLZ_princely_army_recovery_available
+	}
+	completion_reward = {
+		add_tech_bonus = {
+		bonus = 0.5
+		uses = 1
+		category = infantry_equipment
+		}
+		army_experience = 15
+	}
+	ai_will_do = {
+		factor = 8
+	}
+}
+focus = {#Military Investment
+	id = HLZ_military_investment
+	icon = GFX_focus_hlz_light_up_forges
+	cost = 10
+	prerequisite = {
+		focus = HLZ_princely_army_recovery
+	}
+	x = 11
+	y = 1
+	completion_reward = {
+		add_timed_idea = { 
+			days = 180
+			idea = HLZ_military_investment_idea
+		}
+	}
+	ai_will_do = {
+		factor = 7
+	}
+}
+
+focus = {#Prospect for Resources
+	id = HLZ_prospect_for_resources
+	icon = GFX_focus_generic_steel
+	cost = 10
+	prerequisite = {
+		focus = HLZ_military_investment
+	}
+	x = 9
+	y = 2
+	completion_reward = {
+			add_resource = { type = steel amount = 16 state = 232 }
+			
+	}
+	ai_will_do = {
+		factor = 5
+	}
+}
+
+focus = {#Resources for the Artillery
+	id = HLZ_artillery_resources
+	icon = GFX_focus_generic_tungsten
+	cost = 10
+	prerequisite = {
+		focus = HLZ_prospect_for_resources
+	}
+	x = 9
+	y = 3
+	available = {
+		has_full_control_of_state = 304
+	}
+	completion_reward = {
+		add_resource = { 
+			type = tungsten
+			amount = 8
+			state = 304
+		}
+	}
+	ai_will_do = {
+		factor = 5
+	}
+}
+
+focus = {#Artillery Improvements
+	id = HLZ_artillery_improvements
+	icon = GFX_goal_generic_army_artillery2
+	cost = 10
+	prerequisite = {
+		focus = HLZ_artillery_resources
+	}
+	x = 9
+	y = 4
+	completion_reward = {
+		add_tech_bonus = {
+			bonus = 1
+			uses = 1
+			category = artillery
+		}
+	}
+	ai_will_do = {
+		factor = 5
+	}
+}
+
+focus = {#Industrial Development
+	id = HLZ_industrial_development
+	icon = GFX_goal_generic_construct_mil_factory
+	cost = 10
+	prerequisite = {
+		focus = HLZ_military_investment
+	}
+	x = 11
+	y = 2
+	available = {
+		has_full_control_of_state = 232
+	}
+	completion_reward = {
+		232 = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+			type = arms_factory
+			level = 2
+			instant_build = yes
+			}
+		}
+	}
+	ai_will_do = {
+		factor = 7
+	}
+}
+
+focus = {#Armed Forces Equipment Upgrade
+	id = HLZ_armed_forces_equipment_upgrade
+	icon = GFX_goal_generic_axis_build_infantry
+	cost = 10
+	prerequisite = {
+		focus = HLZ_industrial_development
+	}
+	x = 11
+	y = 3
+	completion_reward = {
+		add_tech_bonus = {
+			bonus = 1
+			uses = 1
+			category = infantry_weapons
+			category = artillery
+		}
+	}
+	ai_will_do = {
+		factor = 6
+	}
+}
+
+focus = {#Strategic Battleplans
+	id = HLZ_strategic_battleplans
+	icon = GFX_focus_hlz_kriegsplan_nord
+	cost = 10
+	prerequisite = {
+		focus = HLZ_armed_forces_equipment_upgrade
+	}
+	x = 11
+	y = 4
+	completion_reward = {
+		add_tech_bonus = {
+			bonus = 1
+			uses = 1
+			category = land_doctrine
+		}
+		custom_effect_tooltip = HLZ_kriegsplan_nord_tt
+		set_country_flag = HLZ_kriegsplan_nord
+		ORD = {
+			country_event = {
+				id = ord.55
+				days = 5
+			}
+		}
+	}
+	ai_will_do = {
+		factor = 7
+	}
+}
+
+focus = {#Army Officer Recruitment
+	id = HLZ_army_officer_recruitment
+	icon = GFX_focus_generic_military_mission
+	cost = 10
+	prerequisite = {
+		focus = HLZ_princely_army_recovery
+	}
+	x = 15
+	y = 1
+	completion_reward = {
+		add_ideas = { 
+			HLZ_army_officer_recruitment_idea
+		}
+	}
+	ai_will_do = {
+		factor = 6
+	}
+}
+
+focus = {#Dockyard Improvements
+	id = HLZ_dockyard_improvements
+	icon = GFX_focus_hlz_reopen_dockyards
+	cost = 10
+	prerequisite = {
+		focus = HLZ_military_investment
+	}
+	x = 13
+	y = 2
+	completion_reward = {
+		300 = {
+			add_extra_state_shared_building_slots = 4
+			add_building_construction = {
+			type = dockyard
+			level = 4
+			instant_build = yes
+			}
+		}
+	}
+	ai_will_do = {
+		factor = 6
+	}
+}
+
+focus = {#Coast Guard
+	id = HLZ_coastguard_fleet
+	icon = GFX_focus_hlz_counter_pirates
+	cost = 10
+	prerequisite = {
+		focus = HLZ_dockyard_improvements
+	}
+	x = 13
+	y = 3
+	completion_reward = {
+		add_tech_bonus = {
+			bonus = 1
+			uses = 1
+			category = dd_tech
+		}
+	}
+	ai_will_do = {
+		factor = 5
+	}
+}
+
+focus = {#Kriegsflottenmodelle
+	id = HLZ_freiprinz_kriegsflottenmodelle
+	icon = GFX_focus_hlz_meerschild
+	cost = 10
+	prerequisite = {
+		focus = HLZ_coastguard_fleet
+	}
+	x = 13
+	y = 4
+	completion_reward = {
+		add_tech_bonus = {
+			bonus = 1
+			uses = 1
+			category = cl_tech
+		}
+	}
+	ai_will_do = {
+		factor = 5
+	}
+}
+
+focus = {#Marine-Einheit
+	id = HLZ_marineeinheit
+	icon = GFX_focus_secret_rearmament
+	cost = 10
+	prerequisite = {
+		focus = HLZ_army_officer_recruitment
+	}
+	x = 15
+	y = 2
+	completion_reward = {
+		add_tech_bonus = {
+			bonus = 1
+			uses = 1
+			technology = marines
+			technology = marines2
+			technology = marines3
+		}
+	}
+	ai_will_do = {
+		factor = 4
+	}
+}
+
+focus = {#Naval Invasion Specialization
+	id = HLZ_naval_invasion_specialization
+	icon = GFX_focus_hlz_joint_naval_training
+	cost = 10
+	prerequisite = {
+		focus = HLZ_marineeinheit
+	}
+	x = 15
+	y = 3
+	completion_reward = {
+		add_tech_bonus = {
+			bonus = 1
+			uses = 1
+			category = tp_tech
+		}
+		add_tech_bonus = {
+			bonus = 0.25
+			uses = 1
+			technology = marines
+			technology = marines2
+			technology = marines3
+		}
+		navy_experience = 10
+		random_country = {
+			limit = {
+				OR = {
+					original_tag = NOC
+					original_tag = SVT
+					original_tag = TEI
+				}
+				random_owned_controlled_state = {
+					is_coastal = yes
+				}
+				is_puppet_of = UNG
+			}
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = tp_tech
+			}
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				technology = marines
+				technology = marines2
+				technology = marines3
+			}
+			navy_experience = 10
+		}
+	}
+	ai_will_do = {
+		factor = 4
+	}
+}
+
+focus = {#Restore the Former Glory
+	id = HLZ_restore_the_former_glory
+	icon = GFX_focus_generic_strike_at_democracy1
+	cost = 10
+	prerequisite = {
+		focus = HLZ_artillery_improvements
+	}
+	prerequisite = {
+		focus = HLZ_strategic_battleplans
+	}
+	x = 10
+	y = 5
+	completion_reward = {
+		add_ideas = {
+			HLZ_restore_the_former_glory_idea
+		}
+	}
+	ai_will_do = {
+		factor = 8
+	}
+}
+
+focus = {
+	id = HLZ_the_fate_of_the_aristocracy
+	icon = GFX_goal_generic_demand_territory
+	cost = 10
+	x = 63
+	y = 4
+	prerequisite = {
+		focus = HLZ_kirschenrevolution
+	}
+	completion_reward = {
+		country_event = {
+			id = hlz.18
+			days = 2
+		}
+	}
+	ai_will_do = {
+		factor = 1
+	}
+
+}
+focus = {
+	id = HLZ_redden_the_blue_blood
+	icon = GFX_goal_tripartite_pact
+	cost = 10
+	prerequisite = {
+		focus = HLZ_the_fate_of_the_aristocracy
+	}
+	mutually_exclusive = {
+		focus = HLZ_exile_the_nobility
+		focus = HLZ_titular_titles
+	}
+	x = -1
+	y = 1
+	relative_position_id = HLZ_the_fate_of_the_aristocracy
+	available = {
+		has_country_flag = HLZ_the_fate_of_the_aristocracy_opt2_flag
+	}
+	completion_reward = {
+		add_manpower = 2000
+	}
+	ai_will_do = {
+		factor = 1
+	}
+
+}
+focus = {
+	id = HLZ_officers_and_diplomats
+	icon = GFX_focus_generic_military_academy
+	cost = 10
+	prerequisite = {
+		focus = HLZ_redden_the_blue_blood
+	}
+	x = -1
+	y = 2
+	relative_position_id = HLZ_the_fate_of_the_aristocracy
+
+	completion_reward = {
+		
+		every_other_country = {
+			limit = {
+				has_opinion_modifier = HLZ_republican_rabble
+			}
+			remove_opinion_modifier = {
+				target = HLZ
+				modifier = HLZ_republican_rabble
+			}
+			add_opinion_modifier = {
+				target = HLZ
+				modifier = HLZ_blue_blooded_diplomats
+			}
+		}
+		
+		every_other_country = {
+			limit = {
+				is_puppet_of = UNG
+				OR = {
+					has_ruling_party = republic_peasant
+					has_ruling_party = republic_merchant
+				}
+			}
+			add_opinion_modifier = {
+				target = HLZ
+				modifier = HLZ_caved_to_aristocrats
+			}
+		}
+		
+		
+		create_corps_commander = {
+		name = "Wilhelm Schneider"
+		picture = "Portrait_France_Jean_de_Lattre_de_Tassigny.dds"
+		skill = 3
+		attack_skill = 3
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 2
+		}
+		
+		create_corps_commander = {
+		name = "Thomas Schmidt"
+		picture = "Portrait_France_Jean_de_Lattre_de_Tassigny.dds"
+		skill = 2
+		attack_skill = 2
+		defense_skill = 3
+		planning_skill = 1
+		logistics_skill = 2
+		}
+		
+		create_field_marshal = {
+		name = "Franz Freier"
+		picture = "Portrait_France_Jean_de_Lattre_de_Tassigny.dds"
+		skill = 2
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 3
+		logistics_skill = 2
+		}
+		
+	}
+	ai_will_do = {
+		factor = 1
+	}
+
+}
+focus = {
+	id = HLZ_exile_the_nobility
+	icon = GFX_focus_CZE_german_puppet
+	cost = 10
+	prerequisite = {
+		focus = HLZ_the_fate_of_the_aristocracy
+	}
+	mutually_exclusive = {
+		focus = HLZ_redden_the_blue_blood
+		focus = HLZ_titular_titles
+	}
+	x = 2
+	y = 1
+	relative_position_id = HLZ_the_fate_of_the_aristocracy
+	
+	bypass = {
+	
+	}
+	available = {
+		has_country_flag = HLZ_the_fate_of_the_aristocracy_opt1_flag
+	}
+	completion_reward = {
+		add_manpower = -2500
+		add_war_support = 0.05
+	}
+	ai_will_do = {
+		factor = 1
+	}
+
+}
+focus = {
+	id = HLZ_compensation_for_losses
+	icon = GFX_focus_mex_privatisation
+	cost = 10
+	prerequisite = {
+		focus = HLZ_exile_the_nobility
+	}
+	mutually_exclusive = {
+		focus = HLZ_seize_the_wealth
+	}
+	x = 1
+	y = 2
+	relative_position_id = HLZ_the_fate_of_the_aristocracy
+
+	completion_reward = {
+		every_other_country = {
+			limit = {
+				has_opinion_modifier = HLZ_republican_rabble
+			}
+			remove_opinion_modifier = {
+				target = HLZ
+				modifier = HLZ_republican_rabble
+			}
+			add_opinion_modifier = {
+				target = HLZ
+				modifier = HLZ_compensated_nobles
+			}
+		}
+		
+		every_other_country = {
+			limit = {
+				is_puppet_of = UNG
+				OR = {
+					has_ruling_party = republic_peasant
+					has_ruling_party = republic_merchant
+				}
+			}
+			add_opinion_modifier = {
+				target = HLZ
+				modifier = HLZ_caved_to_aristocrats
+			}
+		}
+		add_timed_idea = { idea = HLZ_compensation_for_losses_idea days = 180 }
+	}
+	ai_will_do = {
+		factor = 1
+	}
+
+}
+focus = {
+	id = HLZ_seize_the_wealth
+	icon = GFX_focus_usa_reestablish_the_gold_standard
+	cost = 10
+	prerequisite = {
+		focus = HLZ_exile_the_nobility
+	}
+	mutually_exclusive = {
+		focus = HLZ_compensation_for_losses
+	}
+	x = 3
+	y = 2
+	relative_position_id = HLZ_the_fate_of_the_aristocracy
+	
+	completion_reward = {
+		every_other_country = {
+			limit = {
+				has_opinion_modifier = HLZ_republican_rabble
+			}
+			remove_opinion_modifier = {
+				target = HLZ
+				modifier = HLZ_republican_rabble
+			}
+			add_opinion_modifier = {
+				target = HLZ
+				modifier = HLZ_noble_riches_seized
+			}
+		}
+		
+		add_timed_idea = { idea = HLZ_seize_the_wealth_idea days = 180 }
+	}
+	ai_will_do = {
+		factor = 1
+	}
+
+}
+focus = {
+	id = HLZ_egalitarianism
+	icon = GFX_focus_generic_concessions
+	cost = 10
+	prerequisite = {
+		focus = HLZ_compensation_for_losses
+		focus = HLZ_seize_the_wealth
+	}
+	x = 2
+	y = 3
+	relative_position_id = HLZ_the_fate_of_the_aristocracy
+
+	completion_reward = {
+		add_ideas = { HLZ_egalitarianism_idea }
+	}
+	ai_will_do = {
+		factor = 1
+	}
+
+}
+focus = {
+	id = HLZ_titular_titles
+	icon = GFX_focus_eng_concessions_to_the_trade_unions
+	cost = 10
+	prerequisite = {
+		focus = HLZ_the_fate_of_the_aristocracy
+	}
+	mutually_exclusive = {
+		focus = HLZ_redden_the_blue_blood
+		focus = HLZ_exile_the_nobility
+	}
+	x = -3
+	y = 1
+	relative_position_id = HLZ_the_fate_of_the_aristocracy
+
+	available = {
+		has_country_flag = HLZ_the_fate_of_the_aristocracy_opt1_flag
+	}
+	completion_reward = {
+		add_stability = 0.05
+	}
+	ai_will_do = {
+		factor = 1
+	}
+
+}
+focus = {
+	id = HLZ_reassure_the_freiprinzen
+	icon = GFX_goal_tfv_strengthen_commonwealth_ties
+	cost = 10
+	prerequisite = {
+		focus = HLZ_titular_titles
+	}
+	x = -3
+	y = 2
+	relative_position_id = HLZ_the_fate_of_the_aristocracy
+
+	completion_reward = {
+		every_other_country = {
+			limit = {
+				has_opinion_modifier = HLZ_republican_rabble
+			}
+			remove_opinion_modifier = {
+				target = HLZ
+				modifier = HLZ_republican_rabble
+			}
+			add_opinion_modifier = {
+				target = HLZ
+				modifier = HLZ_freiprinzen_reassured
+			}
+		}
+		
+		every_other_country = {
+			limit = {
+				is_puppet_of = UNG
+				OR = {
+					has_ruling_party = republic_peasant
+					has_ruling_party = republic_merchant
+				}
+			}
+			add_opinion_modifier = {
+				target = HLZ
+				modifier = HLZ_caved_to_aristocrats
+			}
+		}
+	}
+	ai_will_do = {
+		factor = 1
+	}
+
+}
+focus = {
+	id = HLZ_reintegrate_the_aristocrats
+	icon = GFX_goal_generic_national_unity
+	cost = 10
+	prerequisite = {
+		focus = HLZ_reassure_the_freiprinzen
+		focus = HLZ_officers_and_diplomats
+	}
+	x = -2
+	y = 3
+	relative_position_id = HLZ_the_fate_of_the_aristocracy
+
+	completion_reward = {
+		add_ideas = { HLZ_reintegrate_the_aristocrats_idea }
+	}
+	ai_will_do = {
+		factor = 1
+	}
+
+}
+focus = {
+	id = HLZ_new_governance
+	icon = GFX_focus_generic_self_management
+	cost = 10
+	prerequisite = {
+		focus = HLZ_reintegrate_the_aristocrats
+		focus = HLZ_egalitarianism
+	}
+	x = 0
+	y = 4
+	relative_position_id = HLZ_the_fate_of_the_aristocracy
+	
+	completion_reward = {
+		country_event = {
+			id = hlz.24
+			days = 1
+		}
+	}
+	ai_will_do = {
+		factor = 1
+	}
+
+}
+focus = {
+	id = HLZ_zentralrepublik
+	icon = GFX_focus_generic_treaty
+	cost = 10
+	prerequisite = {
+		focus = HLZ_new_governance
+	}
+	mutually_exclusive = {
+		focus = HLZ_wahlkreise
+	}
+	x = -2
+	y = 5
+	relative_position_id = HLZ_the_fate_of_the_aristocracy
+	
+	bypass = {
+	
+	}
+	available = {
+		has_country_flag = HLZ_new_governance_opt1_flag
+	}
+	completion_reward = {
+		add_popularity = {
+		ideology = republic_merchant
+		popularity = 0.15
+		}
+		add_war_support = 0.1
+	}
+	ai_will_do = {
+		factor = 1
+	}
+
+}
+focus = {
+	id = HLZ_wahlkreise
+	icon = GFX_focus_generic_temple
+	cost = 10
+	prerequisite = {
+		focus = HLZ_new_governance
+	}
+	mutually_exclusive = {
+		focus = HLZ_lokalraete
+		focus = HLZ_zentralrepublik
+	}
+	x = 0
+	y = 5
+	relative_position_id = HLZ_the_fate_of_the_aristocracy
+	
+	bypass = {
+	
+	}
+	available = {
+		has_country_flag = HLZ_new_governance_opt2_flag
+	}
+	completion_reward = {
+		add_popularity = {
+		ideology = republic_merchant
+		popularity = 0.10
+		}
+		add_popularity = {
+		ideology = republic_peasant
+		popularity = 0.10
+		}
+		add_stability = 0.1
+	}
+	ai_will_do = {
+		factor = 1
+	}
+
+}
+focus = {
+	id = HLZ_lokalraete
+	icon = GFX_goal_generic_intelligence_exchange
+	cost = 10
+	prerequisite = {
+		focus = HLZ_new_governance
+	}
+	mutually_exclusive = {
+		focus = HLZ_wahlkreise
+	}
+	x = 2
+	y = 5
+	relative_position_id = HLZ_the_fate_of_the_aristocracy
+	
+	bypass = {
+	
+	}
+	available = {
+		has_country_flag = HLZ_new_governance_opt3_flag
+	}
+	completion_reward = {
+		add_popularity = {
+		ideology = republic_peasant
+		popularity = 0.15
+		}
+		add_ideas = { HLZ_lokalraete_idea }
+	}
+	ai_will_do = {
+		factor = 1
+	}
+
+}
+focus = {
+	id = HLZ_purple_seats
+	icon = GFX_focus_rom_royal_dictatorship
+	cost = 10
+	prerequisite = {
+		focus = HLZ_zentralrepublik
+		focus = HLZ_wahlkreise
+		focus = HLZ_lokalraete
+	}
+	mutually_exclusive = {
+		focus = HLZ_equal_opportunity
+		focus = HLZ_ban_aristocrats_from_elections
+	}
+	x = -2
+	y = 6
+	relative_position_id = HLZ_the_fate_of_the_aristocracy
+	
+	available = {
+		NOT = {
+			has_government = republic_peasant
+		}
+		NOT = { has_country_flag = HLZ_the_fate_of_the_aristocracy_opt3_flag }
+	}
+	
+	completion_reward = {
+		add_popularity = {
+			ideology = republic_aristocrat
+			popularity = 0.16
+		}
+		
+		every_other_country = {
+			limit = {
+				OR = {
+					has_opinion_modifier = HLZ_blue_blooded_diplomats
+					has_opinion_modifier = HLZ_compensated_nobles
+					has_opinion_modifier = HLZ_noble_riches_seized
+					has_opinion_modifier = HLZ_freiprinzen_reassured
+				}
+			}
+			add_opinion_modifier = {
+				target = HLZ
+				modifier = HLZ_purple_seats_opinion
+			}
+		}
+		
+		every_other_country = {
+			limit = {
+				is_puppet_of = UNG
+				OR = {
+					has_government = republic_merchant
+					has_government = republic_peasant
+				}
+				NOT = {
+					has_opinion_modifier = HLZ_caved_to_aristocrats
+				}
+			}
+			add_opinion_modifier = {
+				target = HLZ
+				modifier = HLZ_caved_to_aristocrats
+			}
+		}
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+focus = {
+	id = HLZ_equal_opportunity
+	icon = GFX_goal_generic_trade
+	cost = 10
+	prerequisite = {
+		focus = HLZ_lokalraete
+		focus = HLZ_wahlkreise
+		focus = HLZ_zentralrepublik
+	}
+	mutually_exclusive = {
+		focus = HLZ_ban_aristocrats_from_elections
+		focus = HLZ_purple_seats
+	}
+	x = 0
+	y = 6
+	relative_position_id = HLZ_the_fate_of_the_aristocracy
+	
+	available = {
+		NOT = { has_country_flag = HLZ_the_fate_of_the_aristocracy_opt3_flag }
+	}
+	completion_reward = {
+		add_popularity = {
+		ideology = republic_aristocrat
+		popularity = 0.04
+		}
+		add_popularity = {
+		ideology = republic_merchant
+		popularity = 0.04
+		}
+		add_popularity = {
+		ideology = republic_peasant
+		popularity = 0.04
+		}
+	}
+	ai_will_do = {
+		factor = 1
+	}
+
+}
+focus = {
+	id = HLZ_ban_aristocrats_from_elections
+	icon = GFX_focus_generic_support_the_left_right
+	cost = 10
+	prerequisite = {
+		focus = HLZ_lokalraete
+		focus = HLZ_wahlkreise
+		focus = HLZ_zentralrepublik
+	}
+	mutually_exclusive = {
+		focus = HLZ_equal_opportunity
+		focus = HLZ_purple_seats
+	}
+	x = 2
+	y = 6
+	relative_position_id = HLZ_the_fate_of_the_aristocracy
+	completion_reward = {
+		every_other_country = {
+			limit = {
+				OR = {
+					has_opinion_modifier = HLZ_blue_blooded_diplomats
+					has_opinion_modifier = HLZ_compensated_nobles
+					has_opinion_modifier = HLZ_noble_riches_seized
+					has_opinion_modifier = HLZ_freiprinzen_reassured
+				}
+			}
+			add_opinion_modifier = {
+				target = HLZ
+				modifier = HLZ_banned_aristocrats_opinion
+			}
+		}
+		add_popularity = {
+		ideology = republic_aristocrat
+		popularity = -0.5
+		}
+		add_popularity = {
+		ideology = monarchy_constitutional
+		popularity = -0.5
+		}
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
 }

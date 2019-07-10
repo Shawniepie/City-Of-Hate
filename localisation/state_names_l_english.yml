@@ -394,7 +394,7 @@
  STATE_393:1 "Sornthasol"
  STATE_394:1 "Ciri"
  STATE_395:1 "Ithnarond"
- STATE_396:1 "Tion"
+ STATE_396:1 "West Tion"
  STATE_397:1 "Tykinthos"
  STATE_398:1 "Sasnai"
  STATE_399:1 "Tofnos"
@@ -795,3 +795,4 @@
  STATE_794:0 "Thorstheree"
  STATE_795:0 "Khoreet"
  STATE_796:0 "Hurn"
+ STATE_797:0 "East Tion"

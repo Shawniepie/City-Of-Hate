@@ -424,6 +424,13 @@ country_event = {#Core Values
 	
 	option = {#Prosperity!
 		name = hlz.10.a
+		ai_chance = {
+			factor = 5
+			modifier = {
+				has_government = republic_merchant
+				factor = 2
+			}
+		}
 		set_country_flag = HLZ_prioritize_prosperity
 		add_popularity = {
 			ideology = republic_merchant
@@ -433,6 +440,13 @@ country_event = {#Core Values
 	
 	option = {#Justice!
 		name = hlz.10.b
+		ai_chance = {
+			factor = 5
+			modifier = {
+				has_government = republic_peasant
+				factor = 2
+			}
+		}
 		set_country_flag = HLZ_prioritize_justice
 		add_popularity = {
 			ideology = republic_peasant
@@ -681,5 +695,239 @@ country_event = {#Land Reform
 			factor = 5
 		}
 		set_country_flag = HLZ_mandate_smallholds
+	}
+}
+
+### FATE OF THE ARISTOCRACY FOCUS EVENTS
+
+country_event = {
+	id = hlz.18
+	title = hlz.18.t
+	desc = hlz.18.d
+	picture = GFX_report_event_eng_royal_family
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	mean_time_to_happen = { days = 1 }
+	
+	option = { #Titular Titles
+		name = hlz.18.a
+			trigger = {
+				NOT = {
+					has_government = republic_peasant
+				}
+			}
+			ai_chance = {
+				factor = 3
+			}
+			set_country_flag = HLZ_the_fate_of_the_aristocracy_opt1_flag
+	}
+	
+	option = { #Redden the blue Blood
+		name = hlz.18.b
+		ai_chance = {
+			factor = 5
+		}
+		UNG = {
+			country_event = { id = hlz.19 days = 1 }
+		}
+	}
+
+	
+	option = { #Exile The Nobility
+		name = hlz.18.c
+		ai_chance = {
+			factor = 4
+		}
+		UNG = {
+				country_event = { id = hlz.20 days = 1 }
+		}
+	}
+}
+
+country_event = { ##Redden the blue blood change
+	id = hlz.19
+	title = hlz.19.t
+	desc = hlz.19.d
+	picture = GFX_report_event_stalin_01
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	mean_time_to_happen = { days = 1 }
+	
+	option = { #Leave them be
+		name = hlz.19.a
+			ai_chance = {
+				factor = 5
+			}
+			HLZ = { set_country_flag = HLZ_the_fate_of_the_aristocracy_opt2_flag }
+	}
+	
+	option = { #Demand Change
+		name = hlz.19.b
+			ai_chance = {
+				factor = 3
+			}
+			hidden_effect = {
+				HLZ = {
+					country_event = { id = hlz.21 days = 1 }
+				}
+			}
+	}
+}
+
+country_event = { ##Exile the nobility change
+	id = hlz.20
+	title = hlz.20.t
+	desc = hlz.20.d
+	picture = GFX_report_event_stalin_01
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	mean_time_to_happen = { days = 1 }
+	
+	option = { #Leave them be
+		name = hlz.20.a
+			ai_chance = {
+				factor = 3
+			}
+			HLZ = { set_country_flag = HLZ_the_fate_of_the_aristocracy_opt3_flag }
+	}
+	
+	option = { #Demand Change
+		name = hlz.20.b
+			ai_chance = {
+				factor = 5
+			}
+			hidden_effect = {
+				HLZ = {
+					country_event = { id = hlz.22 days = 1 }
+				}
+			}
+	}
+}
+
+country_event = { ##Redden Blue Blood denied by UNG
+	id = hlz.21
+	title = hlz.21.t
+	desc = hlz.21.d
+	picture = GFX_report_event_stalin_01
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	mean_time_to_happen = { days = 1 }
+	
+	option = { #Give in
+		name = hlz.21.a
+		trigger = {
+			NOT = {
+				has_government = republic_peasant
+			}
+		}
+		ai_chance = {
+			factor = 5
+		}
+		HLZ = { set_country_flag = HLZ_the_fate_of_the_aristocracy_opt1_flag }
+	}
+	
+	option = { #Refuse change
+		name = hlz.21.b
+		ai_chance = {
+			factor = 3
+		}
+		HLZ = { set_country_flag = HLZ_the_fate_of_the_aristocracy_opt2_flag }
+		UNG = { create_wargoal = { type = annex_everything target = HLZ } }
+		UNG = {
+			country_event = { id = hlz.23 days = 1 }
+		}
+	}
+}
+
+country_event = { ##Exile the nobility denied by UNG
+	id = hlz.22
+	title = hlz.22.t
+	desc = hlz.22.d
+	picture = GFX_report_event_stalin_01
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	mean_time_to_happen = { days = 1 }
+	
+	option = { #Give in
+		name = hlz.22.a
+		trigger = {
+			NOT = {
+				has_government = republic_peasant
+			}
+		}
+		ai_chance = {
+			factor = 3
+		}
+		HLZ = { set_country_flag = HLZ_the_fate_of_the_aristocracy_opt1_flag }
+	}
+	
+	option = { #Refuse change
+		name = hlz.22.b
+		ai_chance = {
+			factor = 5
+		}
+		HLZ = { set_country_flag = HLZ_the_fate_of_the_aristocracy_opt3_flag }
+		UNG = { create_wargoal = { type = annex_everything target = HLZ } }
+		UNG = {
+			country_event = { id = hlz.23 days = 1 }
+		}
+	}
+}
+
+country_event = { ##UNG: Holzbrenn refused to change
+	id = hlz.23
+	title = hlz.23.t
+	desc = hlz.23.d
+	picture = GFX_report_event_stalin_01
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	mean_time_to_happen = { days = 1 }
+	
+	option = { #Back Pressler
+		name = hlz.23.a
+		ai_chance = {
+			factor = 5
+		}
+			UNG = { create_wargoal = { type = annex_everything target = HLZ } }
+	}
+	
+	option = { #Back down
+		name = hlz.23.a
+		ai_chance = {
+			factor = 3
+		}
+		add_political_power = -75
+	}
+}
+
+country_event = {#New governance
+	id = hlz.24
+	title = hlz.24.t
+	desc = hlz.24.d
+	picture = GFX_report_event_generic_communist_congress
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	mean_time_to_happen = { days = 1 }
+	
+	option = { #Zentralrepublik
+		name = hlz.24.a
+			set_country_flag = HLZ_new_governance_opt1_flag
+	}
+	
+	option = { #Wahlkreise
+		name = hlz.24.b
+			set_country_flag = HLZ_new_governance_opt2_flag
+	}
+	
+	option = { #Lokalräte
+		name = hlz.24.c
+			set_country_flag = HLZ_new_governance_opt3_flag
 	}
 }

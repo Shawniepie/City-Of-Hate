@@ -148,6 +148,16 @@
  ORD_theocrat_party:0 "Faithful"
  ORD_puritan_party:0 "Traditionalists"
  
+ ORB_monarchy_absolute_party:0 "Moderates"
+ ORB_monarchy_constitutional_party:0 "House Valinthir"
+ ORB_republic_aristocrat_party:0 "House Valinthir"
+ ORB_republic_peasant_party:0 "Ordorian People's Front"
+ ORB_republic_peasant_party_resistance:0 "Rthaur Resistance"
+ ORB_republic_merchant_party:0 "The Conclave"
+ ORB_republic_merchant_party_long:0 "The Conclave of Guilds"
+ ORB_theocrat_party:0 "Faithful"
+ ORB_puritan_party:0 "Traditionalists"
+ 
  OSG_party_name:0 "Ordorian Settler Government"
  
  EOR_monarchy_absolute_party:0 "House Valinthir"
