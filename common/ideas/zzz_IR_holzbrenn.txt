@@ -839,7 +839,83 @@ ideas = {
 			
 			ai_will_do = { factor = 1 }
 		}
-	
+		
+		HLZ_geheimpolizei_idea = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_spy_political
+			
+			modifier = {
+				enemy_partisan_effect = -0.2
+				drift_defence_factor = 0.25
+			}
+		}
+		HLZ_conscription_idea = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_manpower_bonus
+			
+			modifier = {
+				conscription = 0.015
+			}
+		}
+		HLZ_iron_discipline_idea = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = german_advisors
+			
+			modifier = {
+				conscription = 0.015
+				army_org_factor = 0.05
+			}
+		}
+		HLZ_gotter_freiprinz_idea = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = general_staff
+			
+			modifier = {
+				conscription = 0.015
+				army_org_factor = 0.05
+				army_morale_factor = 0.1
+			}
+		}
 	}
 
 	#ADVISORS

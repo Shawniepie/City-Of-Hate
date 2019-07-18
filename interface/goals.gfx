@@ -8,6 +8,11 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
+	name = "GFX_focus_freiprinzen_septism"
+	texturefile = "gfx/interface/goals/focus_freiprinzen_septism.dds"			
+	}
+	
+	SpriteType = {
 	name = "GFX_focus_generic_rosite_housing"
 	texturefile = "gfx/interface/goals/focus_generic_rosite_housing.dds"			
 	}
@@ -55,6 +60,30 @@ spriteTypes = {
 	SpriteType = {
 	name = "GFX_focus_generic_industry_1"
 	texturefile = "gfx/interface/goals/focus_generic_industry_1.dds"
+
+	}
+	
+	SpriteType = {
+	name = "GFX_focus_generic_iron_mine"
+	texturefile = "gfx/interface/goals/focus_generic_iron_mine.dds"
+
+	}
+	
+	SpriteType = {
+	name = "GFX_focus_hlz_kanonen_legierung"
+	texturefile = "gfx/interface/goals/focus_hlz_kanonen_legierung.dds"
+
+	}
+	
+	SpriteType = {
+	name = "GFX_focus_hlz_military_renewal"
+	texturefile = "gfx/interface/goals/focus_hlz_military_renewal.dds"
+
+	}	
+
+	SpriteType = {
+	name = "GFX_focus_hlz_replenish_officers"
+	texturefile = "gfx/interface/goals/focus_hlz_replenish_officers.dds"
 
 	}
 	
@@ -218,6 +247,12 @@ spriteTypes = {
 	name = "GFX_focus_hlz_repurpose_mansions"
 	texturefile = "gfx/interface/goals/focus_hlz_repurpose_mansions.dds"
 
+	}
+
+	SpriteType = {
+	name = "GFX_focus_ung_union_forever"
+	texturefile = "gfx/interface/goals/focus_ung_union_forever.dds"
+			
 	}
 	
 	SpriteType = {

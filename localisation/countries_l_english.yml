@@ -396,8 +396,8 @@
  FTH_puritan_ADJ:0 "Humanist Fritzer"
  
  HLZ_monarchy_absolute:0 "Holzbrenn"
- HLZ_monarchy_absolute_ADJ:0 "the Principality of Holzbrenn"
- HLZ_monarchy_absolute_DEF:0 "Holzbrenner"
+ HLZ_monarchy_absolute_DEF:0 "the Principality of Holzbrenn"
+ HLZ_monarchy_absolute_ADJ:0 "Holzbrenner"
  HLZ_monarchy_constitutional:0 "Gutprinzer Holzbrenn"
  HLZ_monarchy_constitutional_DEF:0 "the Good Principality of Holzbrenn"
  HLZ_monarchy_constitutional_ADJ:0 "Holzbrenner"

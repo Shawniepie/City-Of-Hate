@@ -162,6 +162,14 @@ opinion_modifiers = {
 		value = -35
 	}
 	
+	HLZ_placated = {
+		value = 35
+	}
+	
+	HLZ_supported = {
+		value = 50
+	}
+	
 	IR_same_ideology = {
 		value = 25
 	}

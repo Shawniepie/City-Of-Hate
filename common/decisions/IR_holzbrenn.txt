@@ -10,18 +10,11 @@ HLZ_presslers_ambitions = {
 		}
 		
 		available = {
-			has_country_flag = HLZ_presslers_ambitions_flag
-			OR = {
-				NOT = {
-				has_country_flag = HLZ_pressler_stopped
-				}
-				NOT = {
-					has_country_leader = {
-						name = "Marius Pressler"
-						ruling_only = yes
-					}
-				}
-			}
+			always = no #targeted only
+		}
+		
+		activation = {
+			always = no #targeted only
 		}
 		
 		days_mission_timeout = 150
@@ -45,18 +38,11 @@ HLZ_presslers_ambitions = {
 		}
 		
 		available = {
-			has_country_flag = HLZ_presslers_ambitions_flag
-			OR = {
-				NOT = {
-				has_country_flag = HLZ_pressler_stopped
-				}
-				NOT = {
-					has_country_leader = {
-						name = "Marius Pressler"
-						ruling_only = yes
-					}
-				}
-			}
+			always = no #targeted only
+		}
+		
+		activation = {
+			always = no #targeted only
 		}
 
 		days_mission_timeout = 150
@@ -81,18 +67,11 @@ HLZ_presslers_ambitions = {
 		}
 		
 		available = {
-			has_country_flag = HLZ_presslers_ambitions_flag
-			OR = {
-				NOT = {
-				has_country_flag = HLZ_pressler_stopped
-				}
-				NOT = {
-					has_country_leader = {
-						name = "Marius Pressler"
-						ruling_only = yes
-					}
-				}
-			}
+			always = no #targeted only
+		}
+		
+		activation = {
+			always = no #targeted only
 		}
 		
 		days_mission_timeout = 150
@@ -117,18 +96,11 @@ HLZ_presslers_ambitions = {
 		}
 		
 		available = {
-			has_country_flag = HLZ_presslers_ambitions_flag
-			OR = {
-				NOT = {
-				has_country_flag = HLZ_pressler_stopped
-				}
-				NOT = {
-					has_country_leader = {
-						name = "Marius Pressler"
-						ruling_only = yes
-					}
-				}
-			}
+			always = no #targeted only
+		}
+		
+		activation = {
+			always = no #targeted only
 		}
 		
 		days_mission_timeout = 150
@@ -152,18 +124,11 @@ HLZ_presslers_ambitions = {
 		}
 		
 		available = {
-			has_country_flag = HLZ_presslers_ambitions_flag
-			OR = {
-				NOT = {
-				has_country_flag = HLZ_pressler_stopped
-				}
-				NOT = {
-					has_country_leader = {
-						name = "Marius Pressler"
-						ruling_only = yes
-					}
-				}
-			}
+			always = no #targeted only
+		}
+		
+		activation = {
+			always = no #targeted only
 		}
 		
 		days_mission_timeout = 150
@@ -173,7 +138,7 @@ HLZ_presslers_ambitions = {
 		is_good = no
 		
 		timeout_effect = {
-			country_event = hlz.
+			country_event = hlz.25
 		}
 	}
 }
