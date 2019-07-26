@@ -13,6 +13,10 @@ Shortpower (Tech Tree Dev)
 Ace of Spades (Writer)
 Scoop (Discord Mod)
 Luka_No (Event and Portrait GFX)
+Dregorin (Tristal Dev and Coder)
+Old Man Duchense (Dwarven Lorecrafter and Coder)
+TheIsraeliLoli (Coder)
+Darth Riki 01 (GFX Artist)
 
 #Character Portraits
 
@@ -76,6 +80,7 @@ Rosite Bread - Icon available at www.icons8.com
 Wistinger/Holzbrenner Tree - Icon available at www.thenounproject.com (made by Shane Herzog)
 Rosite Fist - Icon available at en.wikipedia.org (made by Keith Tyler)
 Holzbrenner Axes - Icon available at www.thenounproject.com (made by Guvnor Co)
+Holzbrenner Shield - Icon available at www.thenounproject.com (made by alkhalifi_design)
 Sword (Various) - Icon available at www.mbtskoudsalg.com
 Nochwalder Fishing Hook - Icon available at www.thenounproject.com (made by Alexander Russell)
 Schneefilder Snowflake - Icon available at www.icons8.com
@@ -111,6 +116,9 @@ Tlarthingian Leaf - Icon available at www.thenounproject.com (made by Baboon Des
 Bergialer Crown - Icon available at www.thenounproject.com (made by Kelsey Armstrong)
 Sulfurisler Wrench - Icon available at www.thenounproject.com (made by National Park Service, US)
 Kurgur Claw - Icon available at www.thenounproject.com (made by regina)
+Irinthian Wreath - Icon available at www.clipartmax.com
+Irinthian Knight - Lithuanian Coat of Arms (public domain)
+Rthaur Sword - Icon available at www.thenounproject.com (made by Simon Mettler)
 	
 #Hearts of Iron IV: Waking the Tiger
 

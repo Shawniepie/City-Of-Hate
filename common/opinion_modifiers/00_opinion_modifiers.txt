@@ -130,16 +130,44 @@ opinion_modifiers = {
 		value = -35
 	}
 	
-	 HLZ_republican_rabble = {
+	HLZ_republican_rabble = {
 		value = -50
 	}
 	
-	HLZ_compensated_nobles_opinion = {
-		value = 20
+	HLZ_blue_blooded_diplomats = {
+		value = -25
+	}
+	
+	HLZ_compensated_nobles = {
+		value = -40
+	}
+	
+	HLZ_noble_riches_seized = {
+		value = -65
+	}
+	
+	HLZ_freiprinzen_reassured = {
+		value = -5
+	}
+	
+	HLZ_caved_to_aristocrats = {
+		value = -15
 	}
 	
 	HLZ_purple_seats_opinion = {
 		value = 20
+	}
+	
+	HLZ_banned_aristocrats_opinion = {
+		value = -35
+	}
+	
+	HLZ_placated = {
+		value = 35
+	}
+	
+	HLZ_supported = {
+		value = 50
 	}
 	
 	IR_same_ideology = {

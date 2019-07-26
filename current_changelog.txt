@@ -1,6 +1,5 @@
--Shuffled some foci in the Ordorian tree to make mutually exclusive choices clearer
--Reworked Holzbrenn's focus tree
--Fixed OoB error where the Kurgur would have a random unit on the other continent
--Fixed a graphics bug with the Compensation for Nobles idea for Ordoria
--Transferred a province from Nohora to Hisjine
--Slightly edited the Super Secret File
+-Added Irinthios
+-Added Rimatü
+-Added extra loading tips
+-Fixed the bug in Holzbrenn's tree that prevented you from picking the Exile the Nobility focus
+-Made it so that the Soft Power foci only pause rather than cancel if you run out of PP while pursuing it, to prevent the AI from shafting itself every time by conscripting people instead of preventing a countercoup

@@ -1,2 +1,2 @@
-	From;To;Type;Through;start_x;start_y;stop_x;stop_y;adjacency_rule_name;Comment
--1;-1;;-1;-1;-1;-1;-1;-1
+From;To;Type;Through;start_x;start_y;stop_x;stop_y;adjacency_rule_name;Comment
+5456;3161;sea;12545;-1;-1;-1;-1;STRAIT_TION;Tion

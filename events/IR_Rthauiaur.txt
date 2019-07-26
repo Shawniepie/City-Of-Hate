@@ -110,32 +110,23 @@ country_event = {#Pro-Ordorian Coup
 				puppet = EOR
 			}
 			EOR = {
-				set_politics = {
-					parties = {
-						monarchy_absolute= { 
-							popularity = 15
-						}
+				set_popularities = {
+					monarchy_absolute = 15 
 
-						monarchy_constitutional = {
-							popularity = 4
-						}
-		
-						republic_peasant = {
-							popularity = 0
-						}
-						republic_aristocrat = {
-							popularity = 15
-						}
-						republic_merchant = {
-							popularity = 0
-						}
-						theocrat = {
-							popularity = 2
-						}
-						puritan = {
-							popularity = 64
-						}
-					}
+					monarchy_constitutional = 4
+	
+					republic_peasant = 0
+
+					republic_aristocrat = 15
+
+					republic_merchant = 0
+
+					theocrat = 2
+
+					puritan = 64
+
+				}
+				set_politics = {
 					ruling_party = puritan
 				}
 			}
@@ -223,30 +214,22 @@ country_event = {#Pro-Ordorian Coup
 			puppet = EOR
 		}
 		hidden_effect = {
+			set_popularities = {
+				monarchy_absolute = 15
+
+				monarchy_constitutional = 4
+
+				republic_peasant = 0
+
+				republic_aristocrat = 15
+
+				republic_merchant = 0
+
+				theocrat = 2
+
+				puritan = 64
+			}
 			set_politics = {
-				parties = {
-					monarchy_absolute= { 
-						popularity = 15
-					}
-					monarchy_constitutional = {
-						popularity = 4
-					}	
-					republic_peasant = {
-						popularity = 0
-					}
-					republic_aristocrat = {
-						popularity = 15
-					}
-					republic_merchant = {
-						popularity = 0
-					}
-					theocrat = {
-						popularity = 2
-					}
-					puritan = {
-						popularity = 64
-					}
-				}
 				ruling_party = puritan
 			}
 		}

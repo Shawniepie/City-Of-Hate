@@ -4,6 +4,19 @@ state={
 	provinces={
 		4940 5017 5896 6681 7331 7332 
 	}
-	manpower=0
+	state_category = town
+	manpower=14292
 	buildings_max_level_factor=1.000
+	resources = {
+			steel = 37
+	}
+	history={
+		victory_points = {5896 8 }
+		owner = RMT
+		buildings = {
+			infrastructure = 2
+			arms_factory = 3
+		}
+		add_core_of = RMT
+	}
 }

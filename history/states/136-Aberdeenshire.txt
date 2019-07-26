@@ -6,7 +6,6 @@ state={
 	}
 	state_category = town
 	manpower=15293
-	resources = { oil = 13 }
 	buildings_max_level_factor=1.000
 		history={
 		victory_points = { 2541 16 }

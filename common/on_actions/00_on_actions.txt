@@ -1,5 +1,19 @@
 on_actions = {
-
+	
+	on_startup = {
+		effect = {
+			every_country = {
+				country_event = mod_country.1
+			}
+		}
+	}
+	
+	on_daily = {
+		effect = {
+			check_population_change = yes
+		}
+	}
+	
 	# country random events
 	#on_bi_yearly_pulse = {
 	#

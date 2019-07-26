@@ -93,7 +93,7 @@ units = {
 	}
 	
 	division = {
-		name = "Alstur Border Garrison"
+		name = "Alstir Border Garrison"
 		location = 8260
 		division_template = "Hearthguards"
 		start_experience_factor = 0.6

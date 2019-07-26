@@ -15,6 +15,11 @@ ORD = {
 	color_ui = rgb { 167 255 55 }
 }
 
+ORB = {
+	color = rgb { 221 136 101 }
+	color_ui = rgb { 229 143 111 }
+}
+
 EOR = {
 	color = rgb { 140 200 0 }
 	color_ui = rgb { 145 215 55 }
@@ -158,6 +163,16 @@ BER = {
 KUR = {
 	color = rgb { 91 91 26 }
 	color_ui = rgb { 98 98 34 }
+}
+
+IRI = {
+	color = rgb { 181 0 147 }
+	color_ui = rgb { 194 12 159 }
+}
+
+RMT = {
+	color = rgb { 249 4 0 }
+	color_ui = rgb { 255 15 11 }
 }
 
 D01 = {

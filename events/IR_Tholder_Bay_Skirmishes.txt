@@ -1,0 +1,299 @@
+﻿### THOLDER BAY SKIRMISHES EVENTS
+
+add_namespace = holzbrenn_invade
+
+country_event = {#Holzbrenn - Victory
+	id = holzbrenn_invade.1
+	title = holzbrenn_invade.1.t
+	desc = holzbrenn_invade.1.d
+	
+	picture = GFX_report_event_dutch_soldiers_indonesia
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = holzbrenn_invade.1.a
+		add_political_power = 15
+		transfer_state = 96
+		add_state_core = 96
+		96 = {
+			set_state_name = "Heißjein"
+		}
+		set_province_name = {
+			id = 5883
+			name = "Heißjein"
+		}
+	}
+}
+
+country_event = {#Holzbrenn - Defeat
+	id = holzbrenn_invade.2
+	title = holzbrenn_invade.2.t
+	desc = holzbrenn_invade.2.d
+	
+	picture = GFX_report_event_dead_soldiers
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = holzbrenn_invade.2.a
+		add_political_power = -25
+	}
+}
+
+country_event = {#Holzbrenn - Draw
+	id = holzbrenn_invade.3
+	title = holzbrenn_invade.3.t
+	desc = holzbrenn_invade.3.d
+	
+	picture = GFX_report_event_soldiers_in_france
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = holzbrenn_invade.3.a
+		add_political_power = -15
+	}
+}
+
+country_event = {#Ordoria - Victory
+	id = holzbrenn_invade.4
+	title = holzbrenn_invade.4.t
+	desc = holzbrenn_invade.4.d
+	
+	picture = GFX_report_event_albanian_partisans
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = holzbrenn_invade.4.a
+		add_political_power = 25
+	}
+}
+
+country_event = {#Ordoria - Defeat
+	id = holzbrenn_invade.5
+	title = holzbrenn_invade.5.t
+	desc = holzbrenn_invade.5.d
+	
+	picture = GFX_report_event_dead_soldiers
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = holzbrenn_invade.5.a
+		add_political_power = -50
+		add_stability = -0.05
+	}
+}
+
+country_event = {#Ordoria - Draw
+	id = holzbrenn_invade.6
+	title = holzbrenn_invade.6.t
+	desc = holzbrenn_invade.6.d
+	
+	picture = GFX_report_event_soldiers_in_france
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = holzbrenn_invade.6.a
+		add_political_power = 15
+	}
+}
+
+country_event = {#Holzbrenn - Victory 2
+	id = holzbrenn_invade.7
+	title = holzbrenn_invade.7.t
+	desc = holzbrenn_invade.7.d
+	
+	picture = GFX_report_event_dutch_soldiers_indonesia
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = holzbrenn_invade.7.a
+		add_political_power = 15
+		transfer_state = 98
+		add_state_core = 98
+		98 = {
+			set_state_name = "Thölder"
+		}
+		set_province_name = {
+			id = 2540
+			name = "Thölder"
+		}
+	}
+}
+
+country_event = {#Holzbrenn - Defeat 2
+	id = holzbrenn_invade.8
+	title = holzbrenn_invade.8.t
+	desc = holzbrenn_invade.8.d
+	
+	picture = GFX_report_event_dead_soldiers
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = holzbrenn_invade.8.a
+		add_political_power = -25
+	}
+}
+
+country_event = {#Holzbrenn - Draw 2
+	id = holzbrenn_invade.9
+	title = holzbrenn_invade.9.t
+	desc = holzbrenn_invade.9.d
+	
+	picture = GFX_report_event_soldiers_in_france
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = holzbrenn_invade.9.a
+		add_political_power = -15
+	}
+}
+
+country_event = {#Ordoria - Victory 2
+	id = holzbrenn_invade.10
+	title = holzbrenn_invade.10.t
+	desc = holzbrenn_invade.10.d
+	
+	picture = GFX_report_event_albanian_partisans
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = holzbrenn_invade.10.a
+		add_political_power = 25
+	}
+}
+
+country_event = {#Ordoria - Defeat 2
+	id = holzbrenn_invade.11
+	title = holzbrenn_invade.11.t
+	desc = holzbrenn_invade.11.d
+	
+	picture = GFX_report_event_dead_soldiers
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = holzbrenn_invade.11.a
+		add_political_power = -50
+		add_stability = -0.05
+	}
+}
+
+country_event = {#Ordoria - Draw 2
+	id = holzbrenn_invade.12
+	title = holzbrenn_invade.12.t
+	desc = holzbrenn_invade.12.d
+	
+	picture = GFX_report_event_soldiers_in_france
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = holzbrenn_invade.12.a
+		add_political_power = 15
+	}
+}
+
+country_event = {#Holzbrenn - Victory 3
+	id = holzbrenn_invade.13
+	title = holzbrenn_invade.13.t
+	desc = holzbrenn_invade.13.d
+	
+	picture = GFX_report_event_dutch_soldiers_indonesia
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = holzbrenn_invade.13.a
+		add_political_power = 15
+		transfer_state = 97
+		add_state_core = 97
+		97 = {
+			set_state_name = "Pöltheren"
+		}
+	}
+}
+
+country_event = {#Holzbrenn - Defeat 3
+	id = holzbrenn_invade.14
+	title = holzbrenn_invade.14.t
+	desc = holzbrenn_invade.14.d
+	
+	picture = GFX_report_event_dead_soldiers
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = holzbrenn_invade.14.a
+		add_political_power = -25
+	}
+}
+
+country_event = {#Holzbrenn - Draw 3
+	id = holzbrenn_invade.15
+	title = holzbrenn_invade.15.t
+	desc = holzbrenn_invade.15.d
+	
+	picture = GFX_report_event_soldiers_in_france
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = holzbrenn_invade.15.a
+		add_political_power = -15
+	}
+}
+
+country_event = {#Ordoria - Victory 3
+	id = holzbrenn_invade.16
+	title = holzbrenn_invade.16.t
+	desc = holzbrenn_invade.16.d
+	
+	picture = GFX_report_event_albanian_partisans
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = holzbrenn_invade.16.a
+		add_political_power = 25
+	}
+}
+
+country_event = {#Ordoria - Defeat 3
+	id = holzbrenn_invade.17
+	title = holzbrenn_invade.17.t
+	desc = holzbrenn_invade.17.d
+	
+	picture = GFX_report_event_dead_soldiers
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = holzbrenn_invade.17.a
+		add_political_power = -50
+		add_stability = -0.15
+	}
+}
+
+country_event = {#Ordoria - Draw 3
+	id = holzbrenn_invade.18
+	title = holzbrenn_invade.18.t
+	desc = holzbrenn_invade.18.d
+	
+	picture = GFX_report_event_soldiers_in_france
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = holzbrenn_invade.18.a
+		add_political_power = 15
+	}
+}

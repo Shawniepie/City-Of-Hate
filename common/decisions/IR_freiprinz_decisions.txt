@@ -8,10 +8,10 @@ rally_princes = {
 		
 		allowed = {
 			tag = HLZ
-		}
+		}	
 		
 		available = {
-			is_subject = no
+			is_puppet = no
 			has_capitulated = no
 			tag = HLZ
 			NOT = {
@@ -45,7 +45,7 @@ rally_princes = {
 				limit = {
 					STA = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				STA = {
@@ -60,7 +60,7 @@ rally_princes = {
 				limit = {
 					NOC = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				NOC = {
@@ -75,7 +75,7 @@ rally_princes = {
 				limit = {
 					SVT = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				SVT = {
@@ -90,7 +90,7 @@ rally_princes = {
 				limit = {
 					SPW = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				SPW = {
@@ -105,7 +105,7 @@ rally_princes = {
 				limit = {
 					NRK = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				NRK = {
@@ -120,7 +120,7 @@ rally_princes = {
 				limit = {
 					TEI = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				TEI = {
@@ -135,7 +135,7 @@ rally_princes = {
 				limit = {
 					FAU = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				FAU = {
@@ -150,7 +150,7 @@ rally_princes = {
 				limit = {
 					ARK = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				ARK = {
@@ -165,7 +165,7 @@ rally_princes = {
 				limit = {
 					SNF = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				SNF = {
@@ -180,7 +180,7 @@ rally_princes = {
 				limit = {
 					WIS = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				WIS = {
@@ -195,7 +195,7 @@ rally_princes = {
 				limit = {
 					FTH = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				FTH = {
@@ -209,7 +209,7 @@ rally_princes = {
 				limit = {
 					WSZ = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				WSZ = {
@@ -233,7 +233,7 @@ rally_princes = {
 		}
 		
 		available = {
-			is_subject = no
+			is_puppet = no
 			has_capitulated = no
 			tag = STA
 			NOT = {
@@ -267,7 +267,7 @@ rally_princes = {
 				limit = {
 					HLZ = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				HLZ = {
@@ -282,7 +282,7 @@ rally_princes = {
 				limit = {
 					NOC = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				NOC = {
@@ -297,7 +297,7 @@ rally_princes = {
 				limit = {
 					SVT = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				SVT = {
@@ -312,7 +312,7 @@ rally_princes = {
 				limit = {
 					SPW = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				SPW = {
@@ -327,7 +327,7 @@ rally_princes = {
 				limit = {
 					NRK = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				NRK = {
@@ -342,7 +342,7 @@ rally_princes = {
 				limit = {
 					TEI = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				TEI = {
@@ -357,7 +357,7 @@ rally_princes = {
 				limit = {
 					FAU = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				FAU = {
@@ -372,7 +372,7 @@ rally_princes = {
 				limit = {
 					ARK = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				ARK = {
@@ -387,7 +387,7 @@ rally_princes = {
 				limit = {
 					SNF = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				SNF = {
@@ -402,7 +402,7 @@ rally_princes = {
 				limit = {
 					WIS = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				WIS = {
@@ -417,7 +417,7 @@ rally_princes = {
 				limit = {
 					FTH = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				FTH = {
@@ -431,7 +431,7 @@ rally_princes = {
 				limit = {
 					WSZ = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				WSZ = {
@@ -455,7 +455,7 @@ rally_princes = {
 		}
 		
 		available = {
-			is_subject = no
+			is_puppet = no
 			has_capitulated = no
 			tag = NOC
 			NOT = {
@@ -489,7 +489,7 @@ rally_princes = {
 				limit = {
 					STA = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				STA = {
@@ -504,7 +504,7 @@ rally_princes = {
 				limit = {
 					HLZ = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				HLZ = {
@@ -519,7 +519,7 @@ rally_princes = {
 				limit = {
 					SVT = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				SVT = {
@@ -534,7 +534,7 @@ rally_princes = {
 				limit = {
 					SPW = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				SPW = {
@@ -549,7 +549,7 @@ rally_princes = {
 				limit = {
 					NRK = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				NRK = {
@@ -564,7 +564,7 @@ rally_princes = {
 				limit = {
 					TEI = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				TEI = {
@@ -579,7 +579,7 @@ rally_princes = {
 				limit = {
 					FAU = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				FAU = {
@@ -594,7 +594,7 @@ rally_princes = {
 				limit = {
 					ARK = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				ARK = {
@@ -609,7 +609,7 @@ rally_princes = {
 				limit = {
 					SNF = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				SNF = {
@@ -624,7 +624,7 @@ rally_princes = {
 				limit = {
 					WIS = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				WIS = {
@@ -639,7 +639,7 @@ rally_princes = {
 				limit = {
 					FTH = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				FTH = {
@@ -653,7 +653,7 @@ rally_princes = {
 				limit = {
 					WSZ = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				WSZ = {
@@ -677,7 +677,7 @@ rally_princes = {
 		}
 		
 		available = {
-			is_subject = no
+			is_puppet = no
 			has_capitulated = no
 			tag = SVT
 			NOT = {
@@ -711,7 +711,7 @@ rally_princes = {
 				limit = {
 					STA = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				STA = {
@@ -726,7 +726,7 @@ rally_princes = {
 				limit = {
 					NOC = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				NOC = {
@@ -741,7 +741,7 @@ rally_princes = {
 				limit = {
 					HLZ = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				HLZ = {
@@ -756,7 +756,7 @@ rally_princes = {
 				limit = {
 					SPW = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				SPW = {
@@ -771,7 +771,7 @@ rally_princes = {
 				limit = {
 					NRK = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				NRK = {
@@ -786,7 +786,7 @@ rally_princes = {
 				limit = {
 					TEI = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				TEI = {
@@ -801,7 +801,7 @@ rally_princes = {
 				limit = {
 					FAU = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				FAU = {
@@ -816,7 +816,7 @@ rally_princes = {
 				limit = {
 					ARK = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				ARK = {
@@ -831,7 +831,7 @@ rally_princes = {
 				limit = {
 					SNF = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				SNF = {
@@ -846,7 +846,7 @@ rally_princes = {
 				limit = {
 					WIS = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				WIS = {
@@ -861,7 +861,7 @@ rally_princes = {
 				limit = {
 					FTH = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				FTH = {
@@ -875,7 +875,7 @@ rally_princes = {
 				limit = {
 					WSZ = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				WSZ = {
@@ -899,7 +899,7 @@ rally_princes = {
 		}
 		
 		available = {
-			is_subject = no
+			is_puppet = no
 			has_capitulated = no
 			tag = SPW
 			NOT = {
@@ -933,7 +933,7 @@ rally_princes = {
 				limit = {
 					STA = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				STA = {
@@ -948,7 +948,7 @@ rally_princes = {
 				limit = {
 					NOC = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				NOC = {
@@ -963,7 +963,7 @@ rally_princes = {
 				limit = {
 					SVT = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				SVT = {
@@ -978,7 +978,7 @@ rally_princes = {
 				limit = {
 					HLZ = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				HLZ = {
@@ -993,7 +993,7 @@ rally_princes = {
 				limit = {
 					NRK = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				NRK = {
@@ -1008,7 +1008,7 @@ rally_princes = {
 				limit = {
 					TEI = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				TEI = {
@@ -1023,7 +1023,7 @@ rally_princes = {
 				limit = {
 					FAU = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				FAU = {
@@ -1038,7 +1038,7 @@ rally_princes = {
 				limit = {
 					ARK = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				ARK = {
@@ -1053,7 +1053,7 @@ rally_princes = {
 				limit = {
 					SNF = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				SNF = {
@@ -1068,7 +1068,7 @@ rally_princes = {
 				limit = {
 					WIS = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				WIS = {
@@ -1083,7 +1083,7 @@ rally_princes = {
 				limit = {
 					FTH = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				FTH = {
@@ -1097,7 +1097,7 @@ rally_princes = {
 				limit = {
 					WSZ = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				WSZ = {
@@ -1121,7 +1121,7 @@ rally_princes = {
 		}
 		
 		available = {
-			is_subject = no
+			is_puppet = no
 			has_capitulated = no
 			tag = NRK
 			NOT = {
@@ -1155,7 +1155,7 @@ rally_princes = {
 				limit = {
 					STA = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				STA = {
@@ -1170,7 +1170,7 @@ rally_princes = {
 				limit = {
 					NOC = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				NOC = {
@@ -1185,7 +1185,7 @@ rally_princes = {
 				limit = {
 					SVT = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				SVT = {
@@ -1200,7 +1200,7 @@ rally_princes = {
 				limit = {
 					SPW = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				SPW = {
@@ -1215,7 +1215,7 @@ rally_princes = {
 				limit = {
 					HLZ = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				HLZ = {
@@ -1230,7 +1230,7 @@ rally_princes = {
 				limit = {
 					TEI = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				TEI = {
@@ -1245,7 +1245,7 @@ rally_princes = {
 				limit = {
 					FAU = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				FAU = {
@@ -1260,7 +1260,7 @@ rally_princes = {
 				limit = {
 					ARK = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				ARK = {
@@ -1275,7 +1275,7 @@ rally_princes = {
 				limit = {
 					SNF = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				SNF = {
@@ -1290,7 +1290,7 @@ rally_princes = {
 				limit = {
 					WIS = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				WIS = {
@@ -1305,7 +1305,7 @@ rally_princes = {
 				limit = {
 					FTH = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				FTH = {
@@ -1319,7 +1319,7 @@ rally_princes = {
 				limit = {
 					WSZ = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				WSZ = {
@@ -1343,7 +1343,7 @@ rally_princes = {
 		}
 		
 		available = {
-			is_subject = no
+			is_puppet = no
 			has_capitulated = no
 			tag = TEI
 			NOT = {
@@ -1377,7 +1377,7 @@ rally_princes = {
 				limit = {
 					STA = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				STA = {
@@ -1392,7 +1392,7 @@ rally_princes = {
 				limit = {
 					NOC = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				NOC = {
@@ -1407,7 +1407,7 @@ rally_princes = {
 				limit = {
 					SVT = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				SVT = {
@@ -1422,7 +1422,7 @@ rally_princes = {
 				limit = {
 					SPW = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				SPW = {
@@ -1437,7 +1437,7 @@ rally_princes = {
 				limit = {
 					NRK = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				NRK = {
@@ -1452,7 +1452,7 @@ rally_princes = {
 				limit = {
 					HLZ = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				HLZ = {
@@ -1467,7 +1467,7 @@ rally_princes = {
 				limit = {
 					FAU = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				FAU = {
@@ -1482,7 +1482,7 @@ rally_princes = {
 				limit = {
 					ARK = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				ARK = {
@@ -1497,7 +1497,7 @@ rally_princes = {
 				limit = {
 					SNF = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				SNF = {
@@ -1512,7 +1512,7 @@ rally_princes = {
 				limit = {
 					WIS = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				WIS = {
@@ -1527,7 +1527,7 @@ rally_princes = {
 				limit = {
 					FTH = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				FTH = {
@@ -1541,7 +1541,7 @@ rally_princes = {
 				limit = {
 					WSZ = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				WSZ = {
@@ -1565,7 +1565,7 @@ rally_princes = {
 		}
 		
 		available = {
-			is_subject = no
+			is_puppet = no
 			has_capitulated = no
 			tag = FAU
 			NOT = {
@@ -1599,7 +1599,7 @@ rally_princes = {
 				limit = {
 					STA = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				STA = {
@@ -1614,7 +1614,7 @@ rally_princes = {
 				limit = {
 					NOC = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				NOC = {
@@ -1629,7 +1629,7 @@ rally_princes = {
 				limit = {
 					SVT = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				SVT = {
@@ -1644,7 +1644,7 @@ rally_princes = {
 				limit = {
 					SPW = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				SPW = {
@@ -1659,7 +1659,7 @@ rally_princes = {
 				limit = {
 					NRK = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				NRK = {
@@ -1674,7 +1674,7 @@ rally_princes = {
 				limit = {
 					HLZ = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				HLZ = {
@@ -1689,7 +1689,7 @@ rally_princes = {
 				limit = {
 					HLZ = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				HLZ = {
@@ -1704,7 +1704,7 @@ rally_princes = {
 				limit = {
 					ARK = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				ARK = {
@@ -1719,7 +1719,7 @@ rally_princes = {
 				limit = {
 					SNF = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				SNF = {
@@ -1734,7 +1734,7 @@ rally_princes = {
 				limit = {
 					WIS = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				WIS = {
@@ -1749,7 +1749,7 @@ rally_princes = {
 				limit = {
 					FTH = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				FTH = {
@@ -1763,7 +1763,7 @@ rally_princes = {
 				limit = {
 					WSZ = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				WSZ = {
@@ -1787,7 +1787,7 @@ rally_princes = {
 		}
 		
 		available = {
-			is_subject = no
+			is_puppet = no
 			has_capitulated = no
 			tag = ARK
 			NOT = {
@@ -1821,7 +1821,7 @@ rally_princes = {
 				limit = {
 					STA = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				STA = {
@@ -1836,7 +1836,7 @@ rally_princes = {
 				limit = {
 					NOC = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				NOC = {
@@ -1851,7 +1851,7 @@ rally_princes = {
 				limit = {
 					SVT = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				SVT = {
@@ -1866,7 +1866,7 @@ rally_princes = {
 				limit = {
 					SPW = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				SPW = {
@@ -1881,7 +1881,7 @@ rally_princes = {
 				limit = {
 					NRK = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				NRK = {
@@ -1896,7 +1896,7 @@ rally_princes = {
 				limit = {
 					HLZ = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				HLZ = {
@@ -1911,7 +1911,7 @@ rally_princes = {
 				limit = {
 					FAU = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				FAU = {
@@ -1926,7 +1926,7 @@ rally_princes = {
 				limit = {
 					HLZ = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				HLZ = {
@@ -1941,7 +1941,7 @@ rally_princes = {
 				limit = {
 					SNF = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				SNF = {
@@ -1956,7 +1956,7 @@ rally_princes = {
 				limit = {
 					WIS = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				WIS = {
@@ -1971,7 +1971,7 @@ rally_princes = {
 				limit = {
 					FTH = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				FTH = {
@@ -1985,7 +1985,7 @@ rally_princes = {
 				limit = {
 					WSZ = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				WSZ = {
@@ -2009,7 +2009,7 @@ rally_princes = {
 		}
 		
 		available = {
-			is_subject = no
+			is_puppet = no
 			has_capitulated = no
 			tag = SNF
 			NOT = {
@@ -2043,7 +2043,7 @@ rally_princes = {
 				limit = {
 					STA = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				STA = {
@@ -2058,7 +2058,7 @@ rally_princes = {
 				limit = {
 					NOC = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				NOC = {
@@ -2073,7 +2073,7 @@ rally_princes = {
 				limit = {
 					SVT = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				SVT = {
@@ -2088,7 +2088,7 @@ rally_princes = {
 				limit = {
 					SPW = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				SPW = {
@@ -2103,7 +2103,7 @@ rally_princes = {
 				limit = {
 					NRK = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				NRK = {
@@ -2118,7 +2118,7 @@ rally_princes = {
 				limit = {
 					HLZ = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				HLZ = {
@@ -2133,7 +2133,7 @@ rally_princes = {
 				limit = {
 					FAU = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				FAU = {
@@ -2148,7 +2148,7 @@ rally_princes = {
 				limit = {
 					ARK = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				ARK = {
@@ -2163,7 +2163,7 @@ rally_princes = {
 				limit = {
 					HLZ = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				HLZ = {
@@ -2178,7 +2178,7 @@ rally_princes = {
 				limit = {
 					WIS = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				WIS = {
@@ -2193,7 +2193,7 @@ rally_princes = {
 				limit = {
 					FTH = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				FTH = {
@@ -2207,7 +2207,7 @@ rally_princes = {
 				limit = {
 					WSZ = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				WSZ = {
@@ -2231,7 +2231,7 @@ rally_princes = {
 		}
 		
 		available = {
-			is_subject = no
+			is_puppet = no
 			has_capitulated = no
 			tag = WIS
 			NOT = {
@@ -2265,7 +2265,7 @@ rally_princes = {
 				limit = {
 					STA = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				STA = {
@@ -2280,7 +2280,7 @@ rally_princes = {
 				limit = {
 					NOC = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				NOC = {
@@ -2295,7 +2295,7 @@ rally_princes = {
 				limit = {
 					SVT = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				SVT = {
@@ -2310,7 +2310,7 @@ rally_princes = {
 				limit = {
 					SPW = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				SPW = {
@@ -2325,7 +2325,7 @@ rally_princes = {
 				limit = {
 					NRK = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				NRK = {
@@ -2340,7 +2340,7 @@ rally_princes = {
 				limit = {
 					HLZ = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				HLZ = {
@@ -2355,7 +2355,7 @@ rally_princes = {
 				limit = {
 					FAU = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				FAU = {
@@ -2370,7 +2370,7 @@ rally_princes = {
 				limit = {
 					ARK = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				ARK = {
@@ -2385,7 +2385,7 @@ rally_princes = {
 				limit = {
 					SNF = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				SNF = {
@@ -2400,7 +2400,7 @@ rally_princes = {
 				limit = {
 					HLZ = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				HLZ = {
@@ -2415,7 +2415,7 @@ rally_princes = {
 				limit = {
 					FTH = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				FTH = {
@@ -2429,7 +2429,7 @@ rally_princes = {
 				limit = {
 					WSZ = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				WSZ = {
@@ -2453,7 +2453,7 @@ rally_princes = {
 		}
 		
 		available = {
-			is_subject = no
+			is_puppet = no
 			has_capitulated = no
 			tag = FTH
 			NOT = {
@@ -2487,7 +2487,7 @@ rally_princes = {
 				limit = {
 					STA = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				STA = {
@@ -2502,7 +2502,7 @@ rally_princes = {
 				limit = {
 					NOC = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				NOC = {
@@ -2517,7 +2517,7 @@ rally_princes = {
 				limit = {
 					SVT = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				SVT = {
@@ -2532,7 +2532,7 @@ rally_princes = {
 				limit = {
 					SPW = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				SPW = {
@@ -2547,7 +2547,7 @@ rally_princes = {
 				limit = {
 					NRK = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				NRK = {
@@ -2562,7 +2562,7 @@ rally_princes = {
 				limit = {
 					HLZ = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				HLZ = {
@@ -2577,7 +2577,7 @@ rally_princes = {
 				limit = {
 					FAU = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				FAU = {
@@ -2592,7 +2592,7 @@ rally_princes = {
 				limit = {
 					ARK = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				ARK = {
@@ -2607,7 +2607,7 @@ rally_princes = {
 				limit = {
 					SNF = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				SNF = {
@@ -2622,7 +2622,7 @@ rally_princes = {
 				limit = {
 					WIS = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				WIS = {
@@ -2637,7 +2637,7 @@ rally_princes = {
 				limit = {
 					HLZ = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				HLZ = {
@@ -2651,7 +2651,7 @@ rally_princes = {
 				limit = {
 					WSZ = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				WSZ = {
@@ -2675,7 +2675,7 @@ rally_princes = {
 		}
 		
 		available = {
-			is_subject = no
+			is_puppet = no
 			has_capitulated = no
 			tag = WSZ
 			NOT = {
@@ -2709,7 +2709,7 @@ rally_princes = {
 				limit = {
 					STA = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				STA = {
@@ -2724,7 +2724,7 @@ rally_princes = {
 				limit = {
 					NOC = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				NOC = {
@@ -2739,7 +2739,7 @@ rally_princes = {
 				limit = {
 					SVT = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				SVT = {
@@ -2754,7 +2754,7 @@ rally_princes = {
 				limit = {
 					SPW = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				SPW = {
@@ -2769,7 +2769,7 @@ rally_princes = {
 				limit = {
 					NRK = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				NRK = {
@@ -2784,7 +2784,7 @@ rally_princes = {
 				limit = {
 					HLZ = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				HLZ = {
@@ -2799,7 +2799,7 @@ rally_princes = {
 				limit = {
 					FAU = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				FAU = {
@@ -2814,7 +2814,7 @@ rally_princes = {
 				limit = {
 					ARK = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				ARK = {
@@ -2829,7 +2829,7 @@ rally_princes = {
 				limit = {
 					SNF = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				SNF = {
@@ -2844,7 +2844,7 @@ rally_princes = {
 				limit = {
 					WIS = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				WIS = {
@@ -2859,7 +2859,7 @@ rally_princes = {
 				limit = {
 					FTH = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				FTH = {
@@ -2873,7 +2873,7 @@ rally_princes = {
 				limit = {
 					HLZ = {
 						has_capitulated = no
-						is_subject = no
+						is_puppet = no
 					}
 				}
 				HLZ = {

@@ -197,6 +197,7 @@ ungerdaler_reunion = {
 		}
 	}
 }
+
 	NOC_restore_the_union = {
 		
 		icon = GFX_decision_restore_ungerdaler_union
@@ -538,69 +539,69 @@ set_party_name = {
 					remove_core_of = FTH
 					add_core_of = UNG
 				}
-		UNG = {
-			set_capital = 227
+			UNG = {
+				set_capital = 227
+			}
+			UNG = {
+				create_country_leader = {
+					name = "Gabriela Schober"
+					desc = "politics_SVT_schober_desc"
+					picture = "gfx/leaders/SVT/Portrait_SVT_Schober.dds"
+					ideology = monarchy_constitutional_ideology
+					traits = {
+					}
+				}
+			}
+			UNG = {
+				create_country_leader = {
+					name = "Gabriela Schober"
+					desc = "politics_SVT_schober_desc"
+					picture = "gfx/leaders/SVT/Portrait_SVT_Schober.dds"
+					ideology = monarchy_absolute_ideology
+					traits = {
+					}
+				}
+			}
+			UNG = {
+				create_country_leader = {
+					name = "Gabriela Schober"
+					desc = "politics_SVT_schober_desc"
+					picture = "gfx/leaders/SVT/Portrait_SVT_Schober.dds"
+					ideology = republic_aristocrat_ideology
+					traits = {
+					}
+				}
+			}
+			UNG = {
+				create_country_leader = {
+					name = "Dietlind Rosenstock"
+					desc = "politics_SVT_rosenstock_desc"
+					picture = "gfx/leaders/SVT/Portrait_SVT_Rosenstock.dds"
+					ideology = theocrat_ideology
+					traits = {
+					}
+				}
+			}
+			UNG = {
+				set_party_name = {
+					ideology = monarchy_absolute
+					name = SVT_monarchy_constitutional_party
+				}
+			}
+			UNG = {
+				set_party_name = {
+					ideology = monarchy_constitutional
+					name = SVT_monarchy_constitutional_party
+				}
+			}
+			UNG = {
+				set_party_name = {
+					ideology = republic_aristocrat
+					name = SVT_monarchy_constitutional_party 
+				}
+			}
 		}
-		UNG = {
-create_country_leader = {
-	name = "Gabriela Schober"
-	desc = "politics_SVT_schober_desc"
-	picture = "gfx/leaders/SVT/Portrait_SVT_Schober.dds"
-	ideology = monarchy_constitutional_ideology
-	traits = {
 	}
-}
-	}
-	UNG = {
-create_country_leader = {
-	name = "Gabriela Schober"
-	desc = "politics_SVT_schober_desc"
-	picture = "gfx/leaders/SVT/Portrait_SVT_Schober.dds"
-	ideology = monarchy_absolute_ideology
-	traits = {
-	}
-}
-	}
-	UNG = {
-create_country_leader = {
-	name = "Gabriela Schober"
-	desc = "politics_SVT_schober_desc"
-	picture = "gfx/leaders/SVT/Portrait_SVT_Schober.dds"
-	ideology = republic_aristocrat_ideology
-	traits = {
-	}
-}
-	UNG = {
-create_country_leader = {
-	name = "Dietlind Rosenstock"
-	desc = "politics_SVT_rosenstock_desc"
-	picture = "gfx/leaders/SVT/Portrait_SVT_Rosenstock.dds"
-	ideology = theocrat_ideology
-	traits = {
-	}
-}
-}
-	}
-	UNG = {
-set_party_name = {
-    ideology = monarchy_absolute
-    name = SVT_monarchy_constitutional_party
-}
-	}
-	UNG = {
-set_party_name = {
-    ideology = monarchy_constitutional
-    name = SVT_monarchy_constitutional_party
-}
-	}
-	UNG = {
-set_party_name = {
-    ideology = republic_aristocrat
-    name = SVT_monarchy_constitutional_party 
-}
-	}
-	}
-}
 }
 	SPW_restore_the_union = {
 		
@@ -1592,31 +1593,23 @@ set_party_name = {
 					puppet = UNG
 				}
 				UNG = {
+					set_popularities = {
+						monarchy_absolute = 57
+
+						monarchy_constitutional = 0
+						
+						republic_peasant = 9
+
+						republic_aristocrat = 0
+
+						republic_merchant = 6
+
+						theocrat = 12
+
+						puritan = 16
+
+					}
 					set_politics = {
-						parties = {
-							monarchy_absolute= { 
-								popularity = 57
-							}
-							monarchy_constitutional = {
-								popularity = 0
-							}
-							
-							republic_peasant = {
-								popularity = 9
-							}
-							republic_aristocrat = {
-								popularity = 0
-							}
-							republic_merchant = {
-								popularity = 6
-							}
-							theocrat = {
-								popularity = 12
-							}
-							puritan = {
-								popularity = 16
-							}
-						}
 						ruling_party = monarchy_absolute
 					}
 				}
@@ -2761,5 +2754,6 @@ set_party_name = {
 }
 	}
 	}
+}
 }
 }

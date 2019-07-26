@@ -97,67 +97,51 @@ commissiaries = {
 					has_government = puritan
 				}
 				SKA = {
-					set_politics = {
-						parties = {
-							monarchy_absolute= { 
-								popularity = 13
-							}
+					set_popularities = {
 
-							monarchy_constitutional = {
-								popularity = 0
-							}
-							
-							republic_peasant = {
-								popularity = 0
-							}
-							republic_aristocrat = {
-								popularity = 0
-							}
-							republic_merchant = {
-								popularity = 0
-							}
-							theocrat = {
-								popularity = 27
-							}
-							puritan = {
-								popularity = 60
-							}
-						}
+						monarchy_absolute = 13
+
+						monarchy_constitutional = 0
+
+						republic_peasant = 0
+
+						republic_aristocrat = 0
+
+						republic_merchant = 0
+
+						theocrat = 27
+
+						puritan = 60
+					}
+					set_politics = {
 						ruling_party = puritan
 					}
 				}
 			}
+
 			if = {
 				limit = {
 					has_government = theocrat
 				}
 				SKA = {
-					set_politics = {
-						parties = {
-							monarchy_absolute= { 
-								popularity = 13
-							}
+					set_popularities = {
 
-							monarchy_constitutional = {
-								popularity = 0
-							}
-							
-							republic_peasant = {
-								popularity = 0
-							}
-							republic_aristocrat = {
-								popularity = 0
-							}
-							republic_merchant = {
-								popularity = 0
-							}
-							theocrat = {
-								popularity = 60
-							}
-							puritan = {
-								popularity = 27
-							}
-						}
+						monarchy_absolute = 13
+
+						monarchy_constitutional = 0
+
+						republic_peasant = 0
+
+						republic_aristocrat = 0
+
+						republic_merchant = 0
+
+						theocrat = 60
+
+						puritan = 27
+					}
+					
+					set_politics = {
 						ruling_party = theocrat
 					}
 				}
@@ -372,32 +356,23 @@ commissiaries = {
 					has_government = puritan
 				}
 				STA = {
-					set_politics = {
-						parties = {
-							monarchy_absolute= { 
-								popularity = 13
-							}
+					set_popularities = {
 
-							monarchy_constitutional = {
-								popularity = 0
-							}
-							
-							republic_peasant = {
-								popularity = 0
-							}
-							republic_aristocrat = {
-								popularity = 0
-							}
-							republic_merchant = {
-								popularity = 0
-							}
-							theocrat = {
-								popularity = 27
-							}
-							puritan = {
-								popularity = 60
-							}
-						}
+						monarchy_absolute = 13
+
+						monarchy_constitutional = 0
+
+						republic_peasant = 0
+
+						republic_aristocrat = 0
+
+						republic_merchant = 0
+
+						theocrat = 27
+
+						puritan = 60
+					}
+					set_politics = {
 						ruling_party = puritan
 					}
 				}
@@ -407,32 +382,24 @@ commissiaries = {
 					has_government = theocrat
 				}
 				STA = {
-					set_politics = {
-						parties = {
-							monarchy_absolute= { 
-								popularity = 13
-							}
+					set_popularities = {
 
-							monarchy_constitutional = {
-								popularity = 0
-							}
-							
-							republic_peasant = {
-								popularity = 0
-							}
-							republic_aristocrat = {
-								popularity = 0
-							}
-							republic_merchant = {
-								popularity = 0
-							}
-							theocrat = {
-								popularity = 60
-							}
-							puritan = {
-								popularity = 27
-							}
-						}
+						monarchy_absolute = 13
+
+						monarchy_constitutional = 0
+
+						republic_peasant = 0
+
+						republic_aristocrat = 0
+
+						republic_merchant = 0
+
+						theocrat = 60
+
+						puritan = 27
+					}
+					
+					set_politics = {
 						ruling_party = theocrat
 					}
 				}
@@ -658,32 +625,23 @@ commissiaries = {
 					has_government = puritan
 				}
 				NOC = {
-					set_politics = {
-						parties = {
-							monarchy_absolute= { 
-								popularity = 13
-							}
+					set_popularities = {
 
-							monarchy_constitutional = {
-								popularity = 0
-							}
-							
-							republic_peasant = {
-								popularity = 0
-							}
-							republic_aristocrat = {
-								popularity = 0
-							}
-							republic_merchant = {
-								popularity = 0
-							}
-							theocrat = {
-								popularity = 27
-							}
-							puritan = {
-								popularity = 60
-							}
-						}
+						monarchy_absolute = 13
+
+						monarchy_constitutional = 0
+
+						republic_peasant = 0
+
+						republic_aristocrat = 0
+
+						republic_merchant = 0
+
+						theocrat = 27
+
+						puritan = 60
+					}
+					set_politics = {
 						ruling_party = puritan
 					}
 				}
@@ -693,32 +651,23 @@ commissiaries = {
 					has_government = theocrat
 				}
 				NOC = {
-					set_politics = {
-						parties = {
-							monarchy_absolute= { 
-								popularity = 13
-							}
+					set_popularities = {
 
-							monarchy_constitutional = {
-								popularity = 0
-							}
-							
-							republic_peasant = {
-								popularity = 0
-							}
-							republic_aristocrat = {
-								popularity = 0
-							}
-							republic_merchant = {
-								popularity = 0
-							}
-							theocrat = {
-								popularity = 60
-							}
-							puritan = {
-								popularity = 27
-							}
-						}
+						monarchy_absolute = 13
+
+						monarchy_constitutional = 0
+
+						republic_peasant = 0
+
+						republic_aristocrat = 0
+
+						republic_merchant = 0
+
+						theocrat = 60
+
+						puritan = 27
+					}
+					set_politics = {
 						ruling_party = theocrat
 					}
 				}
@@ -993,32 +942,23 @@ commissiaries = {
 					has_government = puritan
 				}
 				WIS = {
-					set_politics = {
-						parties = {
-							monarchy_absolute= { 
-								popularity = 13
-							}
+					set_popularities = {
 
-							monarchy_constitutional = {
-								popularity = 0
-							}
-							
-							republic_peasant = {
-								popularity = 0
-							}
-							republic_aristocrat = {
-								popularity = 0
-							}
-							republic_merchant = {
-								popularity = 0
-							}
-							theocrat = {
-								popularity = 27
-							}
-							puritan = {
-								popularity = 60
-							}
-						}
+						monarchy_absolute = 13
+
+						monarchy_constitutional = 0
+
+						republic_peasant = 0
+
+						republic_aristocrat = 0
+
+						republic_merchant = 0
+
+						theocrat = 27
+
+						puritan = 60
+					}
+					set_politics = {
 						ruling_party = puritan
 					}
 				}
@@ -1028,32 +968,23 @@ commissiaries = {
 					has_government = theocrat
 				}
 				WIS = {
-					set_politics = {
-						parties = {
-							monarchy_absolute= { 
-								popularity = 13
-							}
+					set_popularities = {
 
-							monarchy_constitutional = {
-								popularity = 0
-							}
-							
-							republic_peasant = {
-								popularity = 0
-							}
-							republic_aristocrat = {
-								popularity = 0
-							}
-							republic_merchant = {
-								popularity = 0
-							}
-							theocrat = {
-								popularity = 60
-							}
-							puritan = {
-								popularity = 27
-							}
-						}
+						monarchy_absolute = 13
+
+						monarchy_constitutional = 0
+
+						republic_peasant = 0
+
+						republic_aristocrat = 0
+
+						republic_merchant = 0
+
+						theocrat = 60
+
+						puritan = 27
+					}
+					set_politics = {
 						ruling_party = theocrat
 					}
 				}
@@ -1310,32 +1241,23 @@ commissiaries = {
 					has_government = puritan
 				}
 				NAS = {
-					set_politics = {
-						parties = {
-							monarchy_absolute= { 
-								popularity = 13
-							}
+					set_popularities = {
 
-							monarchy_constitutional = {
-								popularity = 0
-							}
-							
-							republic_peasant = {
-								popularity = 0
-							}
-							republic_aristocrat = {
-								popularity = 0
-							}
-							republic_merchant = {
-								popularity = 0
-							}
-							theocrat = {
-								popularity = 27
-							}
-							puritan = {
-								popularity = 60
-							}
-						}
+						monarchy_absolute = 13
+
+						monarchy_constitutional = 0
+
+						republic_peasant = 0
+
+						republic_aristocrat = 0
+
+						republic_merchant = 0
+
+						theocrat = 27
+
+						puritan = 60
+					}
+					set_politics = {
 						ruling_party = puritan
 					}
 				}
@@ -1345,32 +1267,23 @@ commissiaries = {
 					has_government = theocrat
 				}
 				NAS = {
-					set_politics = {
-						parties = {
-							monarchy_absolute= { 
-								popularity = 13
-							}
+					set_popularities = {
 
-							monarchy_constitutional = {
-								popularity = 0
-							}
-							
-							republic_peasant = {
-								popularity = 0
-							}
-							republic_aristocrat = {
-								popularity = 0
-							}
-							republic_merchant = {
-								popularity = 0
-							}
-							theocrat = {
-								popularity = 60
-							}
-							puritan = {
-								popularity = 27
-							}
-						}
+						monarchy_absolute = 13
+
+						monarchy_constitutional = 0
+
+						republic_peasant = 0
+
+						republic_aristocrat = 0
+
+						republic_merchant = 0
+
+						theocrat = 60
+
+						puritan = 27
+					}
+					set_politics = {
 						ruling_party = theocrat
 					}
 				}
@@ -1581,32 +1494,23 @@ commissiaries = {
 					has_government = puritan
 				}
 				TRI = {
-					set_politics = {
-						parties = {
-							monarchy_absolute= { 
-								popularity = 13
-							}
+					set_popularities = {
 
-							monarchy_constitutional = {
-								popularity = 0
-							}
-							
-							republic_peasant = {
-								popularity = 0
-							}
-							republic_aristocrat = {
-								popularity = 0
-							}
-							republic_merchant = {
-								popularity = 0
-							}
-							theocrat = {
-								popularity = 27
-							}
-							puritan = {
-								popularity = 60
-							}
-						}
+						monarchy_absolute = 13
+
+						monarchy_constitutional = 0
+
+						republic_peasant = 0
+
+						republic_aristocrat = 0
+
+						republic_merchant = 0
+
+						theocrat = 27
+
+						puritan = 60
+					}
+					set_politics = {
 						ruling_party = puritan
 					}
 				}
@@ -1616,32 +1520,23 @@ commissiaries = {
 					has_government = theocrat
 				}
 				TRI = {
-					set_politics = {
-						parties = {
-							monarchy_absolute= { 
-								popularity = 13
-							}
+					set_popularities = {
 
-							monarchy_constitutional = {
-								popularity = 0
-							}
-							
-							republic_peasant = {
-								popularity = 0
-							}
-							republic_aristocrat = {
-								popularity = 0
-							}
-							republic_merchant = {
-								popularity = 0
-							}
-							theocrat = {
-								popularity = 60
-							}
-							puritan = {
-								popularity = 27
-							}
-						}
+						monarchy_absolute = 13
+
+						monarchy_constitutional = 0
+
+						republic_peasant = 0
+
+						republic_aristocrat = 0
+
+						republic_merchant = 0
+
+						theocrat = 60
+
+						puritan = 27
+					}
+					set_politics = {
 						ruling_party = theocrat
 					}
 				}
@@ -1856,32 +1751,23 @@ commissiaries = {
 					has_government = puritan
 				}
 				IRT = {
-					set_politics = {
-						parties = {
-							monarchy_absolute= { 
-								popularity = 13
-							}
+					set_popularities = {
 
-							monarchy_constitutional = {
-								popularity = 0
-							}
-							
-							republic_peasant = {
-								popularity = 0
-							}
-							republic_aristocrat = {
-								popularity = 0
-							}
-							republic_merchant = {
-								popularity = 0
-							}
-							theocrat = {
-								popularity = 27
-							}
-							puritan = {
-								popularity = 60
-							}
-						}
+						monarchy_absolute = 13
+
+						monarchy_constitutional = 0
+
+						republic_peasant = 0
+
+						republic_aristocrat = 0
+
+						republic_merchant = 0
+
+						theocrat = 27
+
+						puritan = 60
+					}
+					set_politics = {
 						ruling_party = puritan
 					}
 				}
@@ -1891,32 +1777,23 @@ commissiaries = {
 					has_government = theocrat
 				}
 				IRT = {
-					set_politics = {
-						parties = {
-							monarchy_absolute= { 
-								popularity = 13
-							}
+					set_popularities = {
 
-							monarchy_constitutional = {
-								popularity = 0
-							}
-							
-							republic_peasant = {
-								popularity = 0
-							}
-							republic_aristocrat = {
-								popularity = 0
-							}
-							republic_merchant = {
-								popularity = 0
-							}
-							theocrat = {
-								popularity = 60
-							}
-							puritan = {
-								popularity = 27
-							}
-						}
+						monarchy_absolute = 13
+
+						monarchy_constitutional = 0
+
+						republic_peasant = 0
+
+						republic_aristocrat = 0
+
+						republic_merchant = 0
+
+						theocrat = 60
+
+						puritan = 27
+					}
+					set_politics = {
 						ruling_party = theocrat
 					}
 				}

@@ -1,0 +1,18 @@
+state={
+	id=798
+	name="STATE_798"
+	provinces={
+		2517 4378 5120 8555 
+	}
+	state_category = pastoral
+	manpower=3054
+	buildings_max_level_factor=1.000
+	history={
+		owner = RMT
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 1
+		}
+		add_core_of = RMT
+	}
+}

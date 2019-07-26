@@ -16,8 +16,9 @@ state={
 			industrial_complex = 2
 		}
 		add_core_of = GMR
+		add_core_of = RMT
 	}
 	resources = {
-		steel = 53
+		steel = 27
 	}
 }

@@ -300,32 +300,24 @@ country_event = { #Second Rthaur Revolution
 			}
 			drop_cosmetic_tag = yes
 			kill_country_leader = yes
-			set_politics = {
-				parties = {
-					monarchy_absolute= { 
-						popularity = 0
-					}
+			set_popularities = {
 
-					monarchy_constitutional = {
-						popularity = 65
-					}
-					
-					republic_peasant = {
-						popularity = 15
-					}
-					republic_aristocrat = {
-						popularity = 10
-					}
-					republic_merchant = {
-						popularity = 5
-					}
-					theocrat = {
-						popularity = 5
-					}
-					puritan = {
-						popularity = 0
-					}
-				}
+				monarchy_absolute = 0
+
+				monarchy_constitutional = 65
+				
+				republic_peasant = 15
+
+				republic_aristocrat = 10
+
+				republic_merchant = 5
+
+				theocrat = 5
+
+				puritan = 0
+
+			}
+			set_politics = {
 				ruling_party = monarchy_constitutional
 			}
 		}

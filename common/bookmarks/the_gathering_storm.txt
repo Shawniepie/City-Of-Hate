@@ -71,9 +71,9 @@ bookmarks = {
 				widespread_famine
 			}
 			focuses = {
-				HLZ_last_straw
-				HLZ_aristocrats_in_soup_kitchens
-				HLZ_co_government
+				HLZ_edlerrat
+				HLZ_communal_tax
+				HLZ_pressler_triumphant
 			}
 		}
 		

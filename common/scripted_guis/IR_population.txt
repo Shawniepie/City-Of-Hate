@@ -1,0 +1,12 @@
+scripted_gui = {
+
+	population = {
+		context_type = player_context
+		
+		window_name = "population_container"
+		
+		visible = {
+           always = yes
+		}
+	}
+}

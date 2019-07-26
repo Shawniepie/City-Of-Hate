@@ -1,11 +1,11 @@
 technologies = {
-
+	
 	gw_artillery = {
 
 		enable_equipments = {
 			artillery_equipment_1
 		}
-		
+
 		path = {
 			leads_to_tech = interwar_artillery 
 			research_cost_coeff = 1
@@ -399,6 +399,11 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 1
+			
+			modifier = {
+				factor = 2
+				tag = SOV
+			}
 		}
 		
 		categories = {
@@ -437,6 +442,11 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 1
+			
+			modifier = {
+				factor = 2
+				tag = SOV
+			}
 		}
 		
 		categories = {
@@ -475,6 +485,11 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 1
+			
+			modifier = {
+				factor = 2
+				tag = SOV
+			}
 		}
 		
 		categories = {
@@ -509,6 +524,11 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 1
+			
+			modifier = {
+				factor = 2
+				tag = SOV
+			}
 		}
 		
 		categories = {
@@ -550,6 +570,16 @@ technologies = {
 			
 			modifier = {
 				factor = 0.5
+
+				OR = {
+					tag = CHI
+					tag = PRC
+					tag = XSM
+					tag = SIK
+					tag = GXC
+					tag = SHX
+					tag = YUN
+				}
 			}
 			modifier = {
 				factor = 2
@@ -584,7 +614,7 @@ technologies = {
 			air_attack = 0.1
 		}
 
-		industry_air_damage_factor = -0.08
+		tech_air_damage_factor = -0.02
 		
 		path = {
 			leads_to_tech = antiair2
@@ -602,6 +632,19 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				OR = {
+					tag = JAP
+					tag = ENG
+					tag = USA
+				}
+				OR = {
+					has_war_with = JAP
+					has_war_with = USA
+					has_war_with = ENG
+				}
+				factor = 5
+			}
 		}
 		
 		categories = {
@@ -637,6 +680,19 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 2
+			modifier = {
+				OR = {
+					tag = JAP
+					tag = ENG
+					tag = USA
+				}
+				OR = {
+					has_war_with = JAP
+					has_war_with = USA
+					has_war_with = ENG
+				}
+				factor = 5
+			}
 		}
 		
 		categories = {
@@ -656,7 +712,7 @@ technologies = {
 			air_attack = 0.1
 		}
 		
-		industry_air_damage_factor = -0.08
+		tech_air_damage_factor = -0.02
 
 		path = {
 			leads_to_tech = antiair4
@@ -674,6 +730,19 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				OR = {
+					tag = JAP
+					tag = ENG
+					tag = USA
+				}
+				OR = {
+					has_war_with = JAP
+					has_war_with = USA
+					has_war_with = ENG
+				}
+				factor = 5
+			}
 		}
 		
 		categories = {
@@ -693,7 +762,7 @@ technologies = {
 			air_attack = 0.1
 		}
 
-		industry_air_damage_factor = -0.08
+		tech_air_damage_factor = -0.02
 		
 		path = {
 			leads_to_tech = antiair5
@@ -711,6 +780,19 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				OR = {
+					tag = JAP
+					tag = ENG
+					tag = USA
+				}
+				OR = {
+					has_war_with = JAP
+					has_war_with = USA
+					has_war_with = ENG
+				}
+				factor = 5
+			}
 		}
 		
 		categories = {
@@ -741,6 +823,19 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				OR = {
+					tag = JAP
+					tag = ENG
+					tag = USA
+				}
+				OR = {
+					has_war_with = JAP
+					has_war_with = USA
+					has_war_with = ENG
+				}
+				factor = 5
+			}
 		}
 		
 		categories = {
@@ -770,6 +865,30 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 1
+			
+			modifier = {
+				factor = 0.2
+
+				OR = {
+					tag = CHI
+					tag = PRC
+					tag = XSM
+					tag = SIK
+					tag = GXC
+					tag = SHX
+					tag = YUN
+				}
+			}
+			modifier = {
+				tag = JAP
+				not = {
+					OR = {
+						has_War_with = SOV
+						has_war_with = USA
+					}
+				}
+				factor = 0.5
+			}
 			modifier = {
 				factor = 2
 				date > "1937.1.1"
@@ -846,6 +965,16 @@ technologies = {
 				}
 			}
 			modifier = {
+				tag = JAP
+				not = {
+					OR = {
+						has_War_with = SOV
+						has_war_with = USA
+					}
+				}
+				factor = 0.5
+			}
+			modifier = {
 				factor = 2
 				date > "1939.1.6"
 			}
@@ -899,8 +1028,23 @@ technologies = {
 				date > "1939.1.9"
 			}
 			modifier = {
+				tag = JAP
+				not = {
+					OR = {
+						has_War_with = SOV
+						has_war_with = USA
+					}
+				}
+				factor = 0.5
+			}
+			modifier = {
 				factor = 2
 				date > "1940.1.1"
+			}
+			modifier = {
+				tag = USA
+				has_War = no
+				factor = 0.5 #this tank nonsense will never catch on
 			}
 			modifier = {
 				factor = 5
@@ -960,6 +1104,16 @@ technologies = {
 			modifier = {
 				factor = 2
 				date > "1941.1.6"
+			}
+			modifier = {
+				tag = JAP
+				not = {
+					OR = {
+						has_War_with = SOV
+						has_war_with = USA
+					}
+				}
+				factor = 0.5
 			}
 			modifier = {
 				factor = 2
@@ -1026,6 +1180,16 @@ technologies = {
 				date > "1942.1.6"
 			}
 			modifier = {
+				tag = JAP
+				not = {
+					OR = {
+						has_War_with = SOV
+						has_war_with = USA
+					}
+				}
+				factor = 0.5
+			}
+			modifier = {
 				factor = 5
 				date > "1943.1.1"
 			}
@@ -1080,6 +1244,16 @@ technologies = {
 				date > "1942.1.9"
 			}
 			modifier = {
+				tag = JAP
+				not = {
+					OR = {
+						has_War_with = SOV
+						has_war_with = USA
+					}
+				}
+				factor = 0.5
+			}
+			modifier = {
 				factor = 2
 				date > "1943.1.1"
 			}
@@ -1106,5 +1280,554 @@ technologies = {
 			cat_anti_tank
 		}
 	}
+
+	shortbow = {
+
+		enable_equipments = {
+			bow_equipment_1
+		}
+
+		enable_subunits = {
+			archer_brigade
+		}
+		
+		path = {
+			leads_to_tech = composite_bow
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = crossbow
+			research_cost_coeff = 1
+		}
+		
+		path = {
+			leads_to_tech = gunpowder
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 1.5
+		
+		folder = {
+			name = artillery_folder
+			position = { x = 0 y = 1 }
+		}
+		
+		categories = {
+			artillery
+		}
+		
+		ai_will_do = {
+			factor = 2
+			
+			modifier = {
+				factor = 2
+				date > "1937.1.1"
+			}
+			
+			modifier = {
+				factor = 5
+				date > "1938.1.1"
+			}
+			
+			modifier = {
+				factor = 5
+				date > "1939.1.1"
+			}
+		}
+	}
 	
+	composite_bow = {
+
+		enable_equipments = {
+			bow_equipment_2
+		}
+		
+		path = {
+			leads_to_tech = repeater
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 1.5
+
+		start_year = 1937
+		
+		folder = {
+			name = artillery_folder
+			position = { x = 0 y = 3 }
+		}
+		
+		categories = {
+			artillery
+		}
+		
+		ai_will_do = {
+			factor = 2
+
+			modifier = {
+				factor = 2
+				date > "1937.1.1"
+			}
+			
+			modifier = {
+				factor = 2
+				date > "1938.1.1"
+			}
+			
+			modifier = {
+				factor = 5
+				date > "1939.1.1"
+			}
+		}
+	}
+
+	crossbow = {
+
+		enable_equipments = {
+			bow_equipment_3
+		}
+
+		path = {
+			leads_to_tech = earlyballista
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 1.5
+
+		start_year = 1936
+		
+		folder = {
+			name = artillery_folder
+			position = { x = -3 y = 3 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 0.5
+
+				OR = {
+					tag = CHI
+					tag = PRC
+					tag = XSM
+					tag = SIK
+					tag = GXC
+					tag = SHX
+					tag = YUN
+				}
+			}
+			modifier = {
+				factor = 2
+				date > "1937.1.1"
+			}
+			
+			modifier = {
+				factor = 5
+				date > "1938.1.1"
+			}
+			
+			modifier = {
+				factor = 5
+				date > "1939.1.1"
+			}
+		}
+		
+		categories = {
+			artillery
+		}
+	}
+
+	gunpowder = {
+		
+		path = {
+			leads_to_tech = earlycannon
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 1.5
+
+		start_year = 1938
+		
+		folder = {
+			name = artillery_folder
+			position = { x = 3 y = 4 }
+		}
+		
+		ai_will_do = {
+			factor = 2
+			
+			modifier = {
+				factor = 2
+				date > "1938.1.9"
+			}
+			
+			modifier = {
+				factor = 2
+				date > "1939.1.1"
+			}
+			
+			modifier = {
+				factor = 5
+				date > "1939.1.6"
+			}
+		}
+
+		categories = {
+			artillery
+		}
+	}
+
+	earlycannon = {
+		
+		enable_equipments = {
+			artillery_equipment_1
+		}
+
+		path = {
+			leads_to_tech = cannon
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 1.5
+
+		start_year = 1940
+		
+		folder = {
+			name = artillery_folder
+			position = { x = 3 y = 6 }
+		}
+		
+		ai_will_do = {
+			factor = 2
+			
+			modifier = {
+				factor = 2
+				date > "1940.1.9"
+			}
+			
+			modifier = {
+				factor = 2
+				date > "1939.1.1"
+			}
+			
+			modifier = {
+				factor = 5
+				date > "1941.1.6"
+			}
+		}
+
+		categories = {
+			artillery
+		}
+	}
+
+	repeater = {
+
+		enable_equipments = {
+			bow_equipment_4
+		}
+		
+		path = {
+			leads_to_tech = hwacha
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 1.5
+
+		start_year = 1939
+		
+		folder = {
+			name = artillery_folder
+			position = { x = 0 y = 5 }
+		}
+		
+		categories = {
+			artillery
+		}
+		
+		ai_will_do = {
+			factor = 2
+
+			modifier = {
+				factor = 2
+				date > "1939.1.1"
+			}
+			
+			modifier = {
+				factor = 2
+				date > "1940.1.1"
+			}
+			
+			modifier = {
+				factor = 5
+				date > "1941.1.1"
+			}
+		}
+	}
+
+	hwacha = {
+
+		enable_equipments = {
+			hwacha_equipment_1
+		}
+
+		enable_subunits = {
+			hwacha_brigade
+			hwacha_support
+		}
+
+		
+		path = {
+			leads_to_tech = flechette
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 1.5
+
+		start_year = 1941
+		
+		folder = {
+			name = artillery_folder
+			position = { x = 0 y = 8 }
+		}
+		
+		categories = {
+			artillery
+		}
+		
+		ai_will_do = {
+			factor = 2
+
+			modifier = {
+				factor = 2
+				date > "1939.1.1"
+			}
+			
+			modifier = {
+				factor = 2
+				date > "1940.1.1"
+			}
+			
+			modifier = {
+				factor = 5
+				date > "1941.1.1"
+			}
+		}
+	}
+
+	flechette = {
+
+		enable_equipments = {
+			artillery_equipment_2
+		}
+		
+		research_cost = 1.5
+
+		start_year = 1943
+		
+		folder = {
+			name = artillery_folder
+			position = { x = 0 y = 12 }
+		}
+		
+		categories = {
+			artillery
+		}
+		
+		ai_will_do = {
+			factor = 2
+
+			modifier = {
+				factor = 2
+				date > "1939.1.1"
+			}
+			
+			modifier = {
+				factor = 2
+				date > "1940.1.1"
+			}
+			
+			modifier = {
+				factor = 5
+				date > "1941.1.1"
+			}
+		}
+	}
+
+	cannon = {
+		
+		enable_equipments = {
+			artillery_equipment_3
+		}
+
+		enable_subunits = {
+			artillery_brigade
+			artillery
+		}
+		
+		research_cost = 1.5
+
+		start_year = 1943
+		
+		folder = {
+			name = artillery_folder
+			position = { x = 3 y = 12 }
+		}
+		
+		ai_will_do = {
+			factor = 2
+			
+			modifier = {
+				factor = 2
+				date > "1943.1.9"
+			}
+			
+			modifier = {
+				factor = 2
+				date > "1944.1.1"
+			}
+			
+			modifier = {
+				factor = 5
+				date > "1945.1.6"
+			}
+		}
+
+		categories = {
+			artillery
+		}
+	}
+
+	earlyballista = {
+
+		enable_equipments = {
+			ballista_equipment_1
+		}
+
+		enable_subunits = {
+			ballista_brigade
+			ballista_support
+		}
+
+		path = {
+			leads_to_tech = ballista
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 1.5
+
+		start_year = 1939
+		
+		folder = {
+			name = artillery_folder
+			position = { x = -3 y = 5 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		
+			modifier = {
+				factor = 2
+				date > "1939.1.1"
+			}
+			
+			modifier = {
+				factor = 5
+				date > "1940.1.1"
+			}
+			
+			modifier = {
+				factor = 5
+				date > "1941.1.1"
+			}
+		}
+		
+		categories = {
+			artillery
+		}
+	}
+	
+	ballista = {
+
+		enable_equipments = {
+			ballista_equipment_2
+		}
+		
+		path = {
+			leads_to_tech = heavyballista
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.5
+
+		start_year = 1941
+		
+		folder = {
+			name = artillery_folder
+			position = { x = -3 y = 8 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 2
+				date > "1941.1.1"
+			}
+			
+			modifier = {
+				factor = 5
+				date > "1942.1.1"
+			}
+			
+			modifier = {
+				factor = 5
+				date > "1943.1.1"
+			}
+		}
+		
+		categories = {
+			artillery
+		}
+	}
+
+	heavyballista = {
+
+		enable_equipments = {
+			ballista_equipment_3
+		}
+		
+		research_cost = 1.5
+
+		start_year = 1943
+		
+		folder = {
+			name = artillery_folder
+			position = { x = -3 y = 12 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 2
+				date > "1943.1.1"
+			}
+			
+			modifier = {
+				factor = 5
+				date > "1944.1.1"
+			}
+			
+			modifier = {
+				factor = 5
+				date > "1945.1.1"
+			}
+		}
+		
+		categories = {
+			artillery
+		}
+	}
 }

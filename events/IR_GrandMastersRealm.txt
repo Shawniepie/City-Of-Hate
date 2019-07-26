@@ -59,6 +59,7 @@ country_event = { # Ythelmare Pact
 		ORD = {
 			add_to_faction = ROOT
 		}
+		set_country_flag = ythelmare_pact_member
 	}
 }
 
@@ -79,18 +80,22 @@ country_event = { # Ordoria Breaks Pact
 				AND = {
 					is_in_faction_with = ORD
 					is_faction_leader = yes
+					has_country_flag = ythelmare_pact_member
 				}
 			}
 			dismantle_faction = yes
+			clr_country_flag = ythelmare_pact_member
 		}
 		if = {
 			limit = {
 				AND = {
 					is_in_faction_with = ORD
 					is_faction_leader = no
+					has_country_flag = ythelmare_pact_member
 				}
 			}
 			leave_faction = yes
+			clr_country_flag = ythelmare_pact_member
 		}
 	}
 }

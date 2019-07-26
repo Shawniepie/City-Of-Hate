@@ -1,5 +1,12 @@
 areas = {
 
+	tholder_bay_border = {
+		strategic_regions = {
+			16
+			137
+		}
+	}
+
 	west_ordoria = {
         strategic_regions = {
             14

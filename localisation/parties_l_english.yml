@@ -148,6 +148,16 @@
  ORD_theocrat_party:0 "Faithful"
  ORD_puritan_party:0 "Traditionalists"
  
+ ORB_monarchy_absolute_party:0 "Moderates"
+ ORB_monarchy_constitutional_party:0 "House Valinthir"
+ ORB_republic_aristocrat_party:0 "House Valinthir"
+ ORB_republic_peasant_party:0 "Ordorian People's Front"
+ ORB_republic_peasant_party_resistance:0 "Rthaur Resistance"
+ ORB_republic_merchant_party:0 "The Conclave"
+ ORB_republic_merchant_party_long:0 "The Conclave of Guilds"
+ ORB_theocrat_party:0 "Faithful"
+ ORB_puritan_party:0 "Traditionalists"
+ 
  OSG_party_name:0 "Ordorian Settler Government"
  
  EOR_monarchy_absolute_party:0 "House Valinthir"
@@ -199,6 +209,7 @@
  FTH_puritan_party_long:0 "Fritzer Humanist Front for the Expulsion of Non-Humans and Half-Breeds"
  
  HLZ_monarchy_absolute_party:0 "House Beckenbauer"
+ HLZ_monarchy_pressler_name:0 "House Pressler"
  HLZ_monarchy_constitutional_party:0 "House Beckenbauer"
  HLZ_republic_aristocrat_party:0 "Council of Dukes"
  HLZ_republic_peasant_party:0 "Solidarity League"
@@ -349,3 +360,19 @@
  KUR_republic_merchant_party:0 "Traders"
  KUR_theocrat_party:0 "Cult of the Slaying Word"
  KUR_puritan_party:0 "Pillagers"
+ 
+ IRI_monarchy_absolute_party:0 "House Chairophon"
+ IRI_monarchy_constitutional_party:0 "House Chairophon"
+ IRI_republic_aristocrat_party:0 "House Chairophon"
+ IRI_republic_peasant_party:0 "Chorikites"
+ IRI_republic_merchant_party:0 "Golden League"
+ IRI_theocrat_party:0 "Church of Selin"
+ IRI_puritan_party:0 "Imperialists"
+ 
+ RMT_monarchy_absolute_party:0 "House Skyldske"
+ RMT_monarchy_constitutional_party:0 "House Skyldske"
+ RMT_republic_aristocrat_party:0 "House Skyldske"
+ RMT_republic_peasant_party:0 "Diggers"
+ RMT_republic_merchant_party:0 "Steel Road Merchants"
+ RMT_theocrat_party:0 "Ancestor's Temple"
+ RMT_puritan_party:0 "Autarks"

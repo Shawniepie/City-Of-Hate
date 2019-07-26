@@ -257,6 +257,12 @@ leader_traits = {
 		dig_in_speed_factor = 0.05
 	}
 	
+	selinism_bonuses = {
+		random = no
+		navy_max_range_factor  = 0.07
+		land_night_attack = 0.05
+	}
+	
 	gallant_paladin = {
 		cavalry_attack_factor = 0.25
 		cavalry_defence_factor = 0.25

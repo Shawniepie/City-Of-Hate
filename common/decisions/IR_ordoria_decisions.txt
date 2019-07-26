@@ -1,0 +1,396 @@
+ORD_slave_economy = {
+
+	ORD_crush_slave_revolt = {
+
+		icon = oppression
+		
+		available = {
+			has_country_flag = ORD_slave_revolt_leader
+			divisions_in_state = {
+				state = 109	
+				size > 2
+			}
+		}
+
+		highlight_states = {
+			state = 109
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				add = 200
+				divisions_in_state = {
+					state = 109
+					size > 2
+				}
+			}
+		}
+
+		visible = {
+			NOT = {
+				has_active_mission = ORD_pacify_slave_revolt
+			}
+			NOT = {
+				has_country_flag = ORD_slaves_butchered
+			}
+			has_country_flag = ORD_slave_revolt_leader
+		}
+
+		is_good = yes
+
+		complete_effect = {
+			activate_mission = ORD_pacify_slave_revolt
+			custom_effect_tooltip = ORD_pacify_slave_revolt_explanation
+		}
+	}
+	
+	ORD_pacify_slave_revolt = {
+
+		icon = generic_civil_support
+
+		available = {
+			always = no
+		}
+
+		days_mission_timeout = 50
+
+		activation = {
+			always = no #Triggered from effect
+		}
+
+		cancel_trigger = {
+			divisions_in_state = {
+				state = 109
+				size < 3
+			}
+		}
+
+		highlight_states = {
+			state = 109
+		}
+
+		visible = {
+			NOT = {
+				has_country_flag = ORD_slaves_butchered
+			}
+		}
+
+		is_good = yes
+
+		timeout_effect = {
+			country_event = {
+				id = ord.43
+				days = 3
+			}
+			set_country_flag = ORD_slaves_butchered
+		}
+	}
+	
+	ORD_slave_revolt_favours = {
+
+		icon = generic_civil_support
+		
+		available = {
+			has_equipment = {
+				infantry_equipment_1 > 349
+			}
+			has_political_power > 124
+			has_stability > 0.05
+		}
+		
+		ai_will_do = {
+			factor = 500
+		}
+
+		highlight_states = {
+			state = 109
+		}
+
+		visible = {
+			has_country_flag = ORD_slave_revolt_leader
+			NOT = {
+				has_country_flag = ORD_slaves_butchered
+			}
+		}
+
+		is_good = yes
+
+		complete_effect = {
+			country_event = {
+				id = ord.43
+				days = 3
+			}
+			set_country_flag = ORD_slaves_butchered
+			add_political_power = -125
+			add_stability = -0.05
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 350
+			}
+		}
+	}
+}
+
+ORD_race_riots = {
+
+	ORD_crush_race_riots = {
+
+		icon = oppression
+		
+		available = {
+			has_country_flag = ORD_race_riot_escalated
+			divisions_in_state = {
+				state = 85	
+				size > 2
+			}
+		}
+
+		highlight_states = {
+			state = 85
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				add = 200
+				divisions_in_state = {
+					state = 85
+					size > 2
+				}
+			}
+		}
+
+		visible = {
+			NOT = {
+				has_active_mission = ORD_suppress_race_riot
+			}
+			NOT = {
+				has_country_flag = ORD_rioters_jailed
+			}
+			has_country_flag = ORD_race_riot_escalated
+		}
+
+		is_good = yes
+
+		complete_effect = {
+			activate_mission = ORD_pacify_slave_revolt
+			custom_effect_tooltip = ORD_pacify_slave_revolt_explanation
+		}
+	}
+	
+	ORD_suppress_race_riot = {
+
+		icon = generic_civil_support
+
+		days_mission_timeout = 50
+
+		activation = {
+			always = no #Triggered from effect
+		}
+
+		cancel_trigger = {
+			divisions_in_state = {
+				state = 85
+				size < 3
+			}
+		}
+
+		highlight_states = {
+			state = 85
+		}
+
+		visible = {
+			NOT = {
+				has_country_flag = ORD_rioters_jailed
+			}
+		}
+
+		is_good = yes
+
+		timeout_effect = {
+			country_event = {
+				id = ord.46
+				days = 3
+			}
+			set_country_flag = ORD_rioters_jailed
+		}
+	}
+	
+	ORD_race_riot_favours = {
+
+		icon = generic_civil_support
+		
+		available = {
+			has_equipment = {
+				infantry_equipment_1 > 349
+			}
+			has_political_power > 124
+			has_stability > 0.05
+		}
+		
+		ai_will_do = {
+			factor = 500
+		}
+
+		highlight_states = {
+			state = 85
+		}
+
+		visible = {
+			has_country_flag = ORD_race_riot_escalated
+			NOT = {
+				has_country_flag = ORD_rioters_jailed
+			}
+		}
+
+		is_good = yes
+
+		complete_effect = {
+			country_event = {
+				id = ord.46
+				days = 3
+			}
+			set_country_flag = ORD_rioters_jailed
+			add_political_power = -125
+			add_stability = -0.05
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 350
+			}
+		}
+	}
+}
+
+ORD_noble_riots = {
+
+	ORD_crush_noble_riots = {
+
+		icon = oppression
+		
+		available = {
+			has_country_flag = ORD_noble_riot_escalated
+			divisions_in_state = {
+				state = 112	
+				size > 2
+			}
+		}
+
+		highlight_states = {
+			state = 112
+		}
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				add = 200
+				divisions_in_state = {
+					state = 112
+					size > 2
+				}
+			}
+		}
+
+		visible = {
+			has_country_flag = ORD_noble_riot_escalated
+			NOT = {
+				has_country_flag = ORD_nobles_supressed
+			}
+		}
+
+		is_good = yes
+
+		complete_effect = {
+			activate_mission = ORD_pacify_slave_revolt
+			custom_effect_tooltip = ORD_pacify_slave_revolt_explanation
+		}
+	}
+	
+	ORD_suppress_noble_riot = {
+
+		icon = generic_civil_support
+
+		days_mission_timeout = 50
+
+		activation = {
+			always = no #Triggered from effect
+		}
+
+		cancel_trigger = {
+			divisions_in_state = {
+				state = 112
+				size < 3
+			}
+		}
+
+		highlight_states = {
+			state = 112
+		}
+
+		visible = {
+			NOT = {
+				has_country_flag = ORD_nobles_supressed
+			}
+		}
+
+		is_good = yes
+
+		timeout_effect = {
+			country_event = {
+				id = ord.46
+				days = 3
+			}
+			set_country_flag = ORD_nobles_supressed
+		}
+	}
+	
+	ORD_noble_riot_favours = {
+
+		icon = generic_civil_support
+		
+		available = {
+			has_equipment = {
+				infantry_equipment_1 > 349
+			}
+			has_political_power > 124
+			has_stability > 0.05
+		}
+		
+		ai_will_do = {
+			factor = 500
+		}
+
+		highlight_states = {
+			state = 112
+		}
+
+		visible = {
+			has_country_flag = ORD_noble_riot_escalated
+			NOT = {
+				has_country_flag = ORD_nobles_supressed
+			}
+		}
+
+		is_good = yes
+
+		complete_effect = {
+			country_event = {
+				id = ord.46
+				days = 3
+			}
+			set_country_flag = ORD_nobles_supressed
+			add_political_power = -125
+			add_stability = -0.05
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 350
+			}
+		}
+	}
+}

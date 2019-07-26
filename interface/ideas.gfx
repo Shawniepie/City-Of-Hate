@@ -166,6 +166,11 @@ spriteTypes = {
 	}
 	
 	spriteType = {
+		name = "GFX_idea_religion_selinism"
+		texturefile = "gfx/interface/ideas/religion_selinism.dds"
+	}
+	
+	spriteType = {
 		name = "GFX_idea_religion_arthenism"
 		texturefile = "gfx/interface/ideas/religion_arthenism.dds"
 	}

@@ -1,0 +1,24 @@
+state={
+	id=797
+	name="STATE_797"
+	provinces={
+		3160 3161 4270 5454 8087 
+	}
+	state_category = metropolis
+	manpower=429287
+	buildings_max_level_factor=1.000
+	history={
+		victory_points = { 3161 32 }
+		owner = IRI
+		buildings = {
+			infrastructure = 8
+			industrial_complex = 7
+			arms_factory = 2
+			dockyard = 1
+			3161 = {
+				naval_base = 5
+			}
+		}
+		add_core_of = IRI
+	}
+}

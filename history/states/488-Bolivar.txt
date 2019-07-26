@@ -4,11 +4,11 @@ state={
 	provinces={
 		784 1277 1274 4703
 	}
-	state_category = city
+	state_category = megalopolis
 	manpower=8000
 	buildings_max_level_factor=1.000
 	resources = {
-			oil = 250
+			food = 250
 			aluminium = 250
 			rubber = 250
 			tungsten = 250

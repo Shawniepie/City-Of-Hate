@@ -7,3 +7,51 @@
 #Rules needs linking from the straits that are affected by the rule ( adjacency_rule_id )
 
 #Name is how you refer to the rule in adjecencies.csv
+
+#Strait of Tion
+adjacency_rule
+{
+	name = "STRAIT_TION"
+	
+	contested =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = no
+	}
+	enemy =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = no
+	}
+	friend =
+	{
+		army = yes
+		navy = yes
+		submarine = yes
+		trade = yes
+	}
+	neutral =
+	{
+		army = yes
+		navy = yes
+		submarine = yes
+		trade = yes
+	}
+	
+	required_provinces = { 5456 3161 }
+
+	is_disabled = {
+		OR = {
+			has_global_flag = STRAIT_TION_BLOCKED
+			has_country_flag = STRAIT_TION_BLOCKED_FOR_COUNTRY
+		}
+		tooltip = disable_canal_tt
+	}
+		
+	icon = 12049
+	offset = { 1 0 -6 }
+}

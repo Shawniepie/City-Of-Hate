@@ -2,8 +2,19 @@ state={
 	id=766
 	name="STATE_766"
 	provinces={
-		641 1214 1219 1220 1221 1576 1577 1578 1916 1918 1919 1920 1921 2085 2758 3529 3530 4279 4547 4548 5221 6012 6013 6283 6284 6285 6399 6881 6882 6883 7145 7383 7481 7482 7581 7834 7937 8180 8400 8523 8596 8840 8856 8910 
+		6399 6881 3529 3530 1578 1577 1576 7481 8523 7482 2758 7145
 	}
-	manpower=0
+	state_category = town
+	manpower=10810
 	buildings_max_level_factor=1.000
+	history={
+		victory_points = { 3530 12 }
+		owner = TLA
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 1
+			arms_factory = 2
+		}
+		add_core_of = TLA
+	}
 }

@@ -4,6 +4,21 @@ state={
 	provinces={
 		4535 4536 4537 6053 6054 
 	}
-	manpower=0
+	state_category = city
+	manpower=301927
 	buildings_max_level_factor=1.000
+	history={
+		victory_points = { 4536 25 }
+		owner = IRI
+		buildings = {
+			infrastructure = 8
+			industrial_complex = 1
+			arms_factory = 4
+			dockyard = 1
+			4536 = {
+				naval_base = 2
+			}
+		}
+		add_core_of = IRI
+	}
 }

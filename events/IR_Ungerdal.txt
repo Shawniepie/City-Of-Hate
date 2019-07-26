@@ -227,18 +227,22 @@ country_event = { # Ordoria Breaks Pact
 				AND = {
 					is_in_faction_with = ORD
 					is_faction_leader = yes
+					has_country_flag = ythelmare_pact_member
 				}
 			}
 			dismantle_faction = yes
+			clr_country_flag = ythelmare_pact_member
 		}
 		if = {
 			limit = {
 				AND = {
 					is_in_faction_with = ORD
 					is_faction_leader = no
+					has_country_flag = ythelmare_pact_member
 				}
 			}
 			leave_faction = yes
+			clr_country_flag = ythelmare_pact_member
 		}
 		if = {
 			limit = {
@@ -268,6 +272,7 @@ country_event = { # Ythelmare Pact
 		ORD = {
 			add_to_faction = ROOT
 		}
+		set_country_flag = ythelmare_pact_member
 	}
 }
 
@@ -479,32 +484,24 @@ country_event = { #The Union Shattered
 				ORD = {
 					puppet = STA
 				}
-				STA = {
+				STA = {					
+					set_popularities = {
+						monarchy_absolute = 57 
+
+						monarchy_constitutional = 0
+						
+						republic_peasant = 9
+
+						republic_aristocrat = 0
+
+						republic_merchant = 6
+
+						theocrat = 12
+
+						puritan = 16
+
+					}
 					set_politics = {
-						parties = {
-							monarchy_absolute= { 
-								popularity = 57
-							}
-							monarchy_constitutional = {
-								popularity = 0
-							}
-							
-							republic_peasant = {
-								popularity = 9
-							}
-							republic_aristocrat = {
-								popularity = 0
-							}
-							republic_merchant = {
-								popularity = 6
-							}
-							theocrat = {
-								popularity = 12
-							}
-							puritan = {
-								popularity = 16
-							}
-						}
 						ruling_party = monarchy_absolute
 					}
 				}
@@ -517,9 +514,9 @@ country_event = { #The Union Shattered
 					UNG = {
 						is_in_faction = yes
 					}
-					UNG = {
-						dismantle_faction = yes
-					}
+				}
+				UNG = {
+					dismantle_faction = yes
 				}
 			}
 		}

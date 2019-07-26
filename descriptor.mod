@@ -1,4 +1,4 @@
-﻿name="Irenthar: City of Hate"
+name="Irenthar: City of Hate"
 path="mod/Tharassian"
 user_dir="Tharassian"
 replace_path="events"

@@ -849,6 +849,7 @@ ideas = {
 					original_tag = ORD
 					original_tag = RTH
 					original_tag = EOR
+					original_tag = ORB
 				}
 			}
 			
@@ -857,6 +858,7 @@ ideas = {
 					original_tag = ORD
 					original_tag = RTH
 					original_tag = EOR
+					original_tag = ORB
 				}
 			}
 			
@@ -878,6 +880,7 @@ ideas = {
 					original_tag = ORD
 					original_tag = RTH
 					original_tag = EOR
+					original_tag = ORB
 				}
 			}
 			
@@ -886,6 +889,7 @@ ideas = {
 					original_tag = ORD
 					original_tag = RTH
 					original_tag = EOR
+					original_tag = ORB
 				}
 			}
 			
@@ -907,6 +911,7 @@ ideas = {
 					original_tag = ORD
 					original_tag = RTH
 					original_tag = EOR
+					original_tag = ORB
 				}
 			}
 			
@@ -915,6 +920,7 @@ ideas = {
 					original_tag = ORD
 					original_tag = RTH
 					original_tag = EOR
+					original_tag = ORB
 				}
 			}
 			
@@ -936,6 +942,7 @@ ideas = {
 					original_tag = ORD
 					original_tag = RTH
 					original_tag = EOR
+					original_tag = ORB
 				}
 			}
 			
@@ -944,6 +951,7 @@ ideas = {
 					original_tag = ORD
 					original_tag = RTH
 					original_tag = EOR
+					original_tag = ORB
 				}
 			}
 			
@@ -965,6 +973,7 @@ ideas = {
 					original_tag = ORD
 					original_tag = RTH
 					original_tag = EOR
+					original_tag = ORB
 				}
 			}
 			
@@ -973,6 +982,7 @@ ideas = {
 					original_tag = ORD
 					original_tag = RTH
 					original_tag = EOR
+					original_tag = ORB
 				}
 			}
 			
@@ -1063,6 +1073,33 @@ ideas = {
 			
 			traits = {
 				damokegol_bonuses
+			}
+			
+			removal_cost = -1
+		}
+		
+		selenism_religion = {
+			
+			visible = {
+				original_tag = IRI
+			}
+			
+			allowed = {
+				original_tag = IRI
+			}
+			
+			available = {
+				original_tag = IRI
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = religion_selinism
+			
+			traits = {
+				selinism_bonuses
 			}
 			
 			removal_cost = -1

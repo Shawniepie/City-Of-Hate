@@ -4,6 +4,15 @@ state={
 	provinces={
 		264 265 266 267 4260 4267 4268 
 	}
-	manpower=0
+	state_category = rural
+	manpower=8201
 	buildings_max_level_factor=1.000
+	history={
+		owner = IRI
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 2
+		}
+		add_core_of = IRI
+	}
 }

@@ -1,0 +1,54 @@
+﻿###################################################
+add_namespace = mod_country
+
+country_event = {
+	id = mod_country.1
+	hidden = yes
+	
+	is_triggered_only = yes
+
+	immediate = {
+		clear_variable = num_controlled_core_states
+		clear_variable = num_owned_core_states
+		clear_variable = core_population
+		clear_variable = total_population
+		if = {
+			limit = {
+				is_ai = no 
+			}
+			for_each_loop = {
+				array = Root.controlled_states
+				var:v = {
+					add_to_variable = { Root.total_population = state_population_k }
+					if = { 
+						limit = {
+							is_core_of = ROOT
+						}
+						add_to_variable = { Root.num_controlled_core_states = 1 }
+						if = {
+							limit = {
+								is_owned_by = ROOT
+							}
+							add_to_variable = { Root.num_owned_core_states = 1 }
+						}
+						add_to_variable = { Root.core_population = state_population_k }
+					}
+				}
+			}
+		}
+		if = { limit = { check_variable = { core_population > 1000 } } 
+			set_variable = { core_population_k = core_population }
+			divide_variable = { core_population_k = 1000 }
+			clear_variable = core_population
+		}
+		if = { limit = { check_variable = { total_population > 1000 } } 
+			set_variable = { total_population_k = total_population }
+			divide_variable = { total_population_k = 1000 }
+			clear_variable = total_population
+		}
+	}
+	
+	option = {
+		
+	}
+}

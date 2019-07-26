@@ -4,6 +4,15 @@ state={
 	provinces={
 		591 593 594 596 7381 7522 
 	}
-	manpower=0
+	state_category = pastoral
+	manpower=1029
 	buildings_max_level_factor=1.000
+	history={
+		owner = RMT
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+		add_core_of = RMT
+	}
 }
