@@ -1,0 +1,201 @@
+﻿division_template = {
+	name = "Grove Guards"	
+	regiments = {
+		garrison = { x = 0 y = 0 }
+		garrison = { x = 0 y = 1 }
+		garrison = { x = 0 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Bladesingers"
+	regiments = {
+		men_at_arms = { x = 0 y = 0 }
+		men_at_arms = { x = 0 y = 1 }
+		men_at_arms = { x = 0 y = 2 }
+        men_at_arms = { x = 1 y = 0 }
+		men_at_arms = { x = 1 y = 1 }
+		men_at_arms = { x = 1 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Pure Rangers"
+	regiments = {
+		light_cavalry = { x = 0 y = 0 }
+        light_cavalry = { x = 0 y = 1 }
+        light_cavalry = { x = 1 y = 0 }
+		light_cavalry = { x = 1 y = 1 }
+	}
+	support = {
+	    recon = { x = 0 y = 0 }
+	}
+}
+
+units = {
+
+	division = {
+		name = "1st Pure Militia"
+		location = 2889
+		division_template = "Grove Guards"
+		start_experience_factor = 0.3
+
+	}
+
+	division = {
+		name = "2nd Pure Militia"
+		location = 17
+		division_template = "Grove Guards"
+		start_experience_factor = 0.3
+
+	}
+
+	division = {
+		name = "3rd Pure Militia"
+		location = 20
+		division_template = "Grove Guards"
+		start_experience_factor = 0.3
+
+	}
+
+	division = {
+		name = "4th Pure Militia"
+		location = 111
+		division_template = "Grove Guards"
+		start_experience_factor = 0.3
+
+	}
+
+	division = {
+		name = "5th Pure Militia"
+		location = 6202
+		division_template = "Grove Guards"
+		start_experience_factor = 0.3
+
+	}
+	
+	division = {
+		name = "6th Pure Militia"
+		location = 3994
+		division_template = "Grove Guards"
+		start_experience_factor = 0.3
+
+	}
+
+	division = {
+		name = "7th Pure Militia"
+		location = 8554
+		division_template = "Grove Guards"
+		start_experience_factor = 0.3
+
+	}
+	
+	division = {
+		name = "8th Pure Militia"
+		location = 7121
+		division_template = "Grove Guards"
+		start_experience_factor = 0.3
+
+	}
+	
+	division = {
+		name = "9th Pure Militia"
+		location = 5468
+		division_template = "Grove Guards"
+		start_experience_factor = 0.3
+
+	}
+	
+	division = {
+		name = "10th Pure Militia"
+		location = 807
+		division_template = "Grove Guards"
+		start_experience_factor = 0.3
+
+	}
+
+	division = {
+		name = "1st Trueborn"
+		location = 6143
+		division_template = "Bladesingers"
+		start_experience_factor = 1.2
+	}
+
+	division = {
+		name = "2nd Trueborn"
+		location = 5302
+		division_template = "Bladesingers"
+		start_experience_factor = 0.5
+	}
+
+	division = {
+		name = "3rd Trueborn"
+		location = 457
+		division_template = "Bladesingers"
+		start_experience_factor = 0.5
+
+	}
+
+	division = {
+		name = "4th Trueborn"
+		location = 4186
+		division_template = "Bladesingers"
+		start_experience_factor = 0.5
+	}
+
+	division = {
+		name = "5th Trueborn"
+		location = 2540
+		division_template = "Bladesingers"
+		start_experience_factor = 0.5
+	}
+
+	division = {
+		name = "6th Trueborn"
+		location = 1649
+		division_template = "Bladesingers"
+		start_experience_factor = 0.5
+	}
+
+	division = {
+		name = "7th Trueborn"
+		location = 7764
+		division_template = "Bladesingers"
+		start_experience_factor = 0.5
+	}
+
+	division = {
+		name = "8th Trueborn"
+		location = 8175
+		division_template = "Bladesingers"
+		start_experience_factor = 0.5
+	}
+
+	division = {
+		name = "9th Trueborn"
+		location = 5200
+		division_template = "Bladesingers"
+		start_experience_factor = 0.5
+	}
+
+	division = {
+		name = "1st Pure Rangers"
+		location = 57
+		division_template = "Pure Rangers"
+		start_experience_factor = 0.4
+	}
+
+	division = {
+		name = "2nd Pure Rangers"
+		location = 7542
+		division_template = "Pure Rangers"
+		start_experience_factor = 0.4
+	}
+
+	division = {
+		name = "3rd Pure Rangers"
+		location = 5903
+		division_template = "Pure Rangers"
+		start_experience_factor = 0.4
+	}
+}

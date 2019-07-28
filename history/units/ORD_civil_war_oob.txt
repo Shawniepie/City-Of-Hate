@@ -1,0 +1,216 @@
+﻿division_template = {
+	name = "Grove Guards"	
+	regiments = {
+		garrison = { x = 0 y = 0 }
+		garrison = { x = 0 y = 1 }
+		garrison = { x = 0 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Bladesingers"
+	regiments = {
+		men_at_arms = { x = 0 y = 0 }
+		men_at_arms = { x = 0 y = 1 }
+		men_at_arms = { x = 0 y = 2 }
+        men_at_arms = { x = 1 y = 0 }
+		men_at_arms = { x = 1 y = 1 }
+		men_at_arms = { x = 1 y = 2 }
+	}
+}
+
+division_template = {
+	name = "King's Rangers"
+	regiments = {
+		light_cavalry = { x = 0 y = 0 }
+        light_cavalry = { x = 0 y = 1 }
+        light_cavalry = { x = 1 y = 0 }
+		light_cavalry = { x = 1 y = 1 }
+	}
+	support = {
+	    recon = { x = 0 y = 0 }
+	}
+}
+
+units = {
+
+	division = {
+		name = "1st King's Militia"
+		location = 7506
+		division_template = "Grove Guards"
+		start_experience_factor = 0.3
+
+	}
+
+	division = {
+		name = "2nd King's Militia"
+		location = 7061
+		division_template = "Grove Guards"
+		start_experience_factor = 0.3
+
+	}
+
+	division = {
+		name = "3rd King's Militia"
+		location = 7950
+		division_template = "Grove Guards"
+		start_experience_factor = 0.3
+
+	}
+
+	division = {
+		name = "4th King's Militia"
+		location = 3048
+		division_template = "Grove Guards"
+		start_experience_factor = 0.3
+
+	}
+
+	division = {
+		name = "5th King's Militia"
+		location = 3770
+		division_template = "Grove Guards"
+		start_experience_factor = 0.3
+
+	}
+	
+	division = {
+		name = "6th King's Militia"
+		location = 3498
+		division_template = "Grove Guards"
+		start_experience_factor = 0.3
+
+	}
+
+	division = {
+		name = "7th King's Militia"
+		location = 7336
+		division_template = "Grove Guards"
+		start_experience_factor = 0.3
+
+	}
+
+	division = {
+		name = "8th King's Militia"
+		location = 363
+		division_template = "Grove Guards"
+		start_experience_factor = 0.3
+
+	}
+	
+	division = {
+		name = "9th King's Militia"
+		location = 1942
+		division_template = "Grove Guards"
+		start_experience_factor = 0.3
+
+	}
+
+	division = {
+		name = "1st Loyalists"
+		location = 577
+		division_template = "Bladesingers"
+		start_experience_factor = 1.2
+	}
+
+	division = {
+		name = "2nd Loyalists"
+		location = 5228
+		division_template = "Bladesingers"
+		start_experience_factor = 0.5
+	}
+
+	division = {
+		name = "3rd Loyalists"
+		location = 6740
+		division_template = "Bladesingers"
+		start_experience_factor = 0.5
+
+	}
+
+	division = {
+		name = "4th Loyalists"
+		location = 5179
+		division_template = "Bladesingers"
+		start_experience_factor = 0.5
+	}
+
+	division = {
+		name = "5th Loyalists"
+		location = 2983
+		division_template = "Bladesingers"
+		start_experience_factor = 0.5
+	}
+
+	division = {
+		name = "6th Loyalists"
+		location = 3449
+		division_template = "Bladesingers"
+		start_experience_factor = 0.5
+	}
+
+	division = {
+		name = "7th Loyalists"
+		location = 789
+		division_template = "Bladesingers"
+		start_experience_factor = 0.5
+	}
+
+	division = {
+		name = "8th Loyalists"
+		location = 6654
+		division_template = "Bladesingers"
+		start_experience_factor = 0.5
+	}
+
+	division = {
+		name = "9th Loyalists"
+		location = 3772
+		division_template = "Bladesingers"
+		start_experience_factor = 0.5
+	}
+	
+	division = {
+		name = "10th Loyalists"
+		location = 746
+		division_template = "Bladesingers"
+		start_experience_factor = 0.5
+	}
+
+	
+	division = {
+		name = "11th Loyalists"
+		location = 806
+		division_template = "Bladesingers"
+		start_experience_factor = 0.5
+	}
+
+	division = {
+		name = "1st King's Rangers"
+		location = 5228
+		division_template = "King's Rangers"
+		start_experience_factor = 0.4
+	}
+
+	division = {
+		name = "2nd King's Rangers"
+		location = 570
+		division_template = "King's Rangers"
+		start_experience_factor = 0.4
+	}
+
+	division = {
+		name = "3rd King's Rangers"
+		location = 7586
+		division_template = "King's Rangers"
+		start_experience_factor = 0.4
+	}
+
+	division = {
+		name = "4th King's Rangers"
+		location = 4776
+		division_template = "King's Rangers"
+		start_experience_factor = 0.4
+	}	
+	
+}

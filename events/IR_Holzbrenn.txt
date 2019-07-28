@@ -77,6 +77,7 @@ country_event = { # Rosenblut Deposed
 		}
 		add_stability = 0.15
 		add_political_power = 50
+		activate_mission = HLZ_pressler_gathering_strength
 		hidden_effect = {
 			set_country_flag = HLZ_wholesome_nobles
 			set_country_flag = HLZ_depose_tyrants
@@ -95,6 +96,7 @@ country_event = { # Rosenblut Deposed
 		}
 		add_stability = 0.15
 		add_political_power = 50
+		activate_mission = HLZ_pressler_gathering_strength
 		every_country = {
 			limit = {
 				has_opinion_modifier = HLZ_mad_freiprinz_opinion
@@ -424,6 +426,13 @@ country_event = {#Core Values
 	
 	option = {#Prosperity!
 		name = hlz.10.a
+		ai_chance = {
+			factor = 5
+			modifier = {
+				has_government = republic_merchant
+				factor = 2
+			}
+		}
 		set_country_flag = HLZ_prioritize_prosperity
 		add_popularity = {
 			ideology = republic_merchant
@@ -433,6 +442,13 @@ country_event = {#Core Values
 	
 	option = {#Justice!
 		name = hlz.10.b
+		ai_chance = {
+			factor = 5
+			modifier = {
+				has_government = republic_peasant
+				factor = 2
+			}
+		}
 		set_country_flag = HLZ_prioritize_justice
 		add_popularity = {
 			ideology = republic_peasant
@@ -480,15 +496,7 @@ country_event = {#Pressler's Ambitions
 	desc = hlz.12.d
 	picture = GFX_report_event_fascist_militia
 	
-	fire_only_once = yes
-	
-	trigger = {
-		has_country_flag = HLZ_presslers_ambitions
-	}	
-	
-	mean_time_to_happen = {
-		days = 70
-	}
+	is_triggered_only = yes
 	
 	immediate = {
 		set_country_flag = HLZ_presslers_ambitions_flag
@@ -681,5 +689,490 @@ country_event = {#Land Reform
 			factor = 5
 		}
 		set_country_flag = HLZ_mandate_smallholds
+	}
+}
+
+### FATE OF THE ARISTOCRACY FOCUS EVENTS
+
+country_event = {
+	id = hlz.18
+	title = hlz.18.t
+	desc = hlz.18.d
+	picture = GFX_report_event_eng_royal_family
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	mean_time_to_happen = { days = 1 }
+	
+	option = { #Titular Titles
+		name = hlz.18.a
+			trigger = {
+				NOT = {
+					has_government = republic_peasant
+				}
+			}
+			ai_chance = {
+				factor = 3
+			}
+			set_country_flag = HLZ_the_fate_of_the_aristocracy_opt1_flag
+	}
+	
+	option = { #Redden the blue Blood
+		name = hlz.18.b
+		ai_chance = {
+			factor = 5
+		}
+		UNG = {
+			country_event = { id = hlz.19 days = 1 }
+		}
+	}
+
+	
+	option = { #Exile The Nobility
+		name = hlz.18.c
+		ai_chance = {
+			factor = 4
+		}
+		UNG = {
+				country_event = { id = hlz.20 days = 1 }
+		}
+	}
+}
+
+country_event = { ##Redden the blue blood change
+	id = hlz.19
+	title = hlz.19.t
+	desc = hlz.19.d
+	picture = GFX_report_event_stalin_01
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	mean_time_to_happen = { days = 1 }
+	
+	option = { #Leave them be
+		name = hlz.19.a
+			ai_chance = {
+				factor = 5
+			}
+			HLZ = { set_country_flag = HLZ_the_fate_of_the_aristocracy_opt2_flag }
+	}
+	
+	option = { #Demand Change
+		name = hlz.19.b
+			ai_chance = {
+				factor = 3
+			}
+			hidden_effect = {
+				HLZ = {
+					country_event = { id = hlz.21 days = 1 }
+				}
+			}
+	}
+}
+
+country_event = { ##Exile the nobility change
+	id = hlz.20
+	title = hlz.20.t
+	desc = hlz.20.d
+	picture = GFX_report_event_stalin_01
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	mean_time_to_happen = { days = 1 }
+	
+	option = { #Leave them be
+		name = hlz.20.a
+			ai_chance = {
+				factor = 3
+			}
+			HLZ = { set_country_flag = HLZ_the_fate_of_the_aristocracy_opt3_flag }
+	}
+	
+	option = { #Demand Change
+		name = hlz.20.b
+			ai_chance = {
+				factor = 5
+			}
+			hidden_effect = {
+				HLZ = {
+					country_event = { id = hlz.22 days = 1 }
+				}
+			}
+	}
+}
+
+country_event = { ##Redden Blue Blood denied by UNG
+	id = hlz.21
+	title = hlz.21.t
+	desc = hlz.21.d
+	picture = GFX_report_event_stalin_01
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	mean_time_to_happen = { days = 1 }
+	
+	option = { #Give in
+		name = hlz.21.a
+		trigger = {
+			NOT = {
+				has_government = republic_peasant
+			}
+		}
+		ai_chance = {
+			factor = 5
+		}
+		HLZ = { set_country_flag = HLZ_the_fate_of_the_aristocracy_opt1_flag }
+	}
+	
+	option = { #Refuse change
+		name = hlz.21.b
+		ai_chance = {
+			factor = 3
+		}
+		HLZ = { set_country_flag = HLZ_the_fate_of_the_aristocracy_opt2_flag }
+		UNG = {
+			country_event = { id = hlz.23 days = 1 }
+		}
+	}
+}
+
+country_event = { ##Exile the nobility denied by UNG
+	id = hlz.22
+	title = hlz.22.t
+	desc = hlz.22.d
+	picture = GFX_report_event_stalin_01
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	mean_time_to_happen = { days = 1 }
+	
+	option = { #Give in
+		name = hlz.22.a
+		trigger = {
+			NOT = {
+				has_government = republic_peasant
+			}
+		}
+		ai_chance = {
+			factor = 3
+		}
+		HLZ = { set_country_flag = HLZ_the_fate_of_the_aristocracy_opt1_flag }
+	}
+	
+	option = { #Refuse change
+		name = hlz.22.b
+		ai_chance = {
+			factor = 5
+		}
+		HLZ = { set_country_flag = HLZ_the_fate_of_the_aristocracy_opt3_flag }
+		UNG = {
+			country_event = { id = hlz.23 days = 1 }
+		}
+	}
+}
+
+country_event = { ##UNG: Holzbrenn refused to change
+	id = hlz.23
+	title = hlz.23.t
+	desc = hlz.23.d
+	picture = GFX_report_event_stalin_01
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	mean_time_to_happen = { days = 1 }
+	
+	option = { #Back Pressler
+		name = hlz.23.a
+		ai_chance = {
+			factor = 5
+		}
+		HLZ = {
+			if = {
+				limit = {
+					has_active_mission = HLZ_pressler_on_the_move
+					NOT = {
+						has_country_flag = HLZ_union_supported_pressler
+					}
+				}
+				remove_mission = HLZ_pressler_on_the_move
+				set_country_flag = HLZ_union_supported_pressler
+				country_event = {
+					id = hlz.25
+					days = 5
+				}
+			}
+			
+			if = {
+				limit = {
+					has_active_mission = HLZ_pressler_staking_claim
+					NOT = {
+						has_country_flag = HLZ_union_supported_pressler
+					}
+				}
+				remove_mission = HLZ_pressler_staking_claim
+				activate_mission = HLZ_pressler_on_the_move
+				set_country_flag = HLZ_union_supported_pressler
+			}
+			
+			if = {
+				limit = {
+					has_active_mission = HLZ_pressler_gathering_strength
+					NOT = {
+						has_country_flag = HLZ_union_supported_pressler
+					}
+				}
+				remove_mission = HLZ_pressler_gathering_strength
+				activate_mission = HLZ_pressler_on_the_move
+				set_country_flag = HLZ_union_supported_pressler
+			}
+			
+			if = {
+				limit = {
+					has_active_mission = HLZ_pressler_regrouping
+					NOT = {
+						has_country_flag = HLZ_union_supported_pressler
+					}
+				}
+				remove_mission = HLZ_pressler_regrouping
+				activate_mission = HLZ_pressler_gathering_strength
+				set_country_flag = HLZ_union_supported_pressler
+			}
+			
+			if = {
+				limit = {
+					has_active_mission = HLZ_pressler_hiding
+					NOT = {
+						has_country_flag = HLZ_union_supported_pressler
+					}
+				}
+				remove_mission = HLZ_pressler_hiding
+				activate_mission = HLZ_pressler_regrouping
+				set_country_flag = HLZ_union_supported_pressler
+			}
+		}
+	}
+	
+	option = { #Back down
+		name = hlz.23.b
+		ai_chance = {
+			factor = 3
+		}
+		add_political_power = -75
+	}
+}
+
+country_event = {#New governance
+	id = hlz.24
+	title = hlz.24.t
+	desc = hlz.24.d
+	picture = GFX_report_event_generic_communist_congress
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	mean_time_to_happen = { days = 1 }
+	
+	option = { #Zentralrepublik
+		name = hlz.24.a
+			set_country_flag = HLZ_new_governance_opt1_flag
+	}
+	
+	option = { #Wahlkreise
+		name = hlz.24.b
+			set_country_flag = HLZ_new_governance_opt2_flag
+	}
+	
+	option = { #Lokalräte
+		name = hlz.24.c
+			set_country_flag = HLZ_new_governance_opt3_flag
+	}
+}
+
+country_event = {#Pressler Takes Over
+	id = hlz.25
+	title = hlz.25.t
+	desc = hlz.25.d
+	picture = GFX_report_event_imperial_conference
+	is_triggered_only = yes
+	
+	option = {#Broken dreams so grand
+		name = hlz.25.a
+		add_stability = -0.25
+		add_war_support = -0.25
+		kill_country_leader = yes
+		set_politics = {
+			ruling_party = monarchy_absolute
+		}
+		add_popularity = {
+			ideology = monarchy_absolute
+			popularity = 0.27
+		}
+		create_country_leader = {
+			name = "Marius Pressler"
+			desc = "politics_HLZ_pressler_desc"
+			picture = "Portrait_HLZ_Pressler.dds"
+			expire = "1965.1.1"
+			ideology = monarchy_absolute_ideology
+		}
+		set_party_name = { 
+			ideology = monarchy_absolute
+			long_name = HLZ_monarchy_pressler_name
+			name = HLZ_monarchy_pressler_name
+		}
+		every_country = {
+			limit = {
+				has_opinion_modifier = HLZ_mad_freiprinz_opinion
+			}
+			remove_opinion_modifier = {
+				target = HLZ
+				modifier = HLZ_mad_freiprinz_opinion
+			}
+		}
+		
+		every_country = {
+			limit = {
+				has_opinion_modifier = HLZ_republican_rabble
+			}
+			remove_opinion_modifier = {
+				target = HLZ
+				modifier = HLZ_republican_rabble
+			}
+		}
+		
+		every_country = {
+			limit = {
+				has_opinion_modifier = HLZ_besmirched_state
+			}
+			remove_opinion_modifier = {
+				target = HLZ
+				modifier = HLZ_besmirched_state
+			}
+		}
+		
+		every_country = {
+			limit = {
+				has_opinion_modifier = HLZ_blue_blooded_diplomats
+			}
+			remove_opinion_modifier = {
+				target = HLZ
+				modifier = HLZ_blue_blooded_diplomats
+			}
+		}
+		
+		every_country = {
+			limit = {
+				has_opinion_modifier = HLZ_compensated_nobles
+			}
+			remove_opinion_modifier = {
+				target = HLZ
+				modifier = HLZ_compensated_nobles
+			}
+		}
+		
+		every_country = {
+			limit = {
+				has_opinion_modifier = HLZ_noble_riches_seized
+			}
+			remove_opinion_modifier = {
+				target = HLZ
+				modifier = HLZ_noble_riches_seized
+			}
+		}
+		
+		every_country = {
+			limit = {
+				has_opinion_modifier = HLZ_freiprinzen_reassured
+			}
+			remove_opinion_modifier = {
+				target = HLZ
+				modifier = HLZ_freiprinzen_reassured
+			}
+		}
+		
+		every_country = {
+			limit = {
+				has_opinion_modifier = HLZ_caved_to_aristocrats
+			}
+			remove_opinion_modifier = {
+				target = HLZ
+				modifier = HLZ_caved_to_aristocrats
+			}
+		}
+		
+		every_country = {
+			limit = {
+				has_opinion_modifier = HLZ_purple_seats_opinion
+			}
+			remove_opinion_modifier = {
+				target = HLZ
+				modifier =	HLZ_purple_seats_opinion
+			}
+		}
+		
+		every_country = {
+			limit = {
+				has_opinion_modifier = HLZ_banned_aristocrats_opinion
+			}
+			remove_opinion_modifier = {
+				target = HLZ
+				modifier = HLZ_banned_aristocrats_opinion
+			}
+		}
+	}
+}
+
+country_event = {#Pressler Captured
+	id = hlz.26
+	title = hlz.26.t
+	desc = hlz.26.d
+	picture = GFX_report_event_gathering_protest
+	is_triggered_only = yes
+	
+	option = {#Yay
+		name = hlz.26.a
+	}
+}
+
+country_event = {#Pressler Killed
+	id = hlz.27
+	title = hlz.27.t
+	desc = hlz.27.d
+	picture = GFX_report_event_dead_ungerdaler
+	is_triggered_only = yes
+	
+	option = {#Yay
+		name = hlz.27.a
+	}
+}
+
+country_event = {#Our Place in the Union
+	id = hlz.28
+	title = hlz.28.t
+	desc = hlz.28.d
+	picture = GFX_report_event_hitler_handshake
+	is_triggered_only = yes
+	
+	option = {#Support Adalina
+		name = hlz.28.a
+		UNG = {
+			add_opinion_modifier = {
+				target = HLZ
+				modifier = HLZ_supported
+			}
+		}
+	}
+	
+	option = {#Support Stahlhof
+		name = hlz.28.b
+		STA = {
+			add_opinion_modifier = {
+				target = HLZ
+				modifier = HLZ_supported
+			}
+		}
+	}
+	
+	option = {#Our own Union with blackjack and hookers
+		name = hlz.28.c
+		add_political_power = 50
 	}
 }

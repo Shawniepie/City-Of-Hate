@@ -13,6 +13,9 @@ country_event = {#Ungerdaler United Front
 	
 	option = {#Join
 		name = alliance.1.a
+		trigger = {
+			is_puppet = no
+		}
 		ai_chance = {
 			factor = 7
 		}

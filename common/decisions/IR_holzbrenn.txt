@@ -5,48 +5,141 @@ HLZ_presslers_ambitions = {
 		icon = GFX_decision_hol_war_on_pacifism
 		
 		visible = {
-			original_tag = HLZ
+			original_tag = HLZ	
+			has_country_flag = HLZ_presslers_ambitions_flag
 		}
 		
 		available = {
-			has_country_flag = HLZ_presslers_ambitions_flag
-			OR = {
-				NOT = {
-				has_country_flag = HLZ_pressler_stopped
-				}
-				NOT = {
-					has_country_leader = {
-						name = "Marius Pressler"
-						ruling_only = yes
-					}
-				}
-			}
+			always = no #targeted only
 		}
-	
+		
+		activation = {
+			always = no #targeted only
+		}
+		
+		days_mission_timeout = 150
+		
+		fire_only_once = no
+		
+		is_good = no
+		
+		timeout_effect = {
+			activate_mission = HLZ_pressler_regrouping
+		}
 	}
 	
 	HLZ_pressler_regrouping = {
 	
 		icon = GFX_decision_generic_political_discourse
+		
+		visible = {
+			original_tag = HLZ
+			has_country_flag = HLZ_presslers_ambitions_flag
+		}
+		
+		available = {
+			always = no #targeted only
+		}
+		
+		activation = {
+			always = no #targeted only
+		}
+
+		days_mission_timeout = 150
+		
+		fire_only_once = no
+		
+		is_good = no
+		
+		timeout_effect = {
+			activate_mission = HLZ_pressler_gathering_strength
+		}
 	
 	}
 	
 	HLZ_pressler_gathering_strength = {
-	
+		
 		icon = GFX_decision_eng_blackshirt_march
+		
+		visible = {
+			original_tag = HLZ
+			has_country_flag = HLZ_presslers_ambitions_flag
+		}
+		
+		available = {
+			always = no #targeted only
+		}
+		
+		activation = {
+			always = no #targeted only
+		}
+		
+		days_mission_timeout = 150
+		
+		fire_only_once = no
+		
+		is_good = no
+		
+		timeout_effect = {
+			activate_mission = HLZ_pressler_staking_claim
+		}
 	
 	}
 	
 	HLZ_pressler_staking_claim = {
-	
+		
 		icon = GFX_decision_eng_trade_unions_demand
-	
+		
+		visible = {
+			original_tag = HLZ
+			has_country_flag = HLZ_presslers_ambitions_flag
+		}
+		
+		available = {
+			always = no #targeted only
+		}
+		
+		activation = {
+			always = no #targeted only
+		}
+		
+		days_mission_timeout = 150
+		
+		fire_only_once = no
+		
+		is_good = no
+		
+		timeout_effect = {
+			activate_mission = HLZ_pressler_on_the_move
+		}
 	}
 	
 	HLZ_pressler_on_the_move = {
-	
+		
 		icon = GFX_decision_generic_nationalism
-	
+		
+		visible = {
+			original_tag = HLZ
+			has_country_flag = HLZ_presslers_ambitions_flag
+		}
+		
+		available = {
+			always = no #targeted only
+		}
+		
+		activation = {
+			always = no #targeted only
+		}
+		
+		days_mission_timeout = 150
+		
+		fire_only_once = no
+		
+		is_good = no
+		
+		timeout_effect = {
+			country_event = hlz.25
+		}
 	}
 }
 
@@ -87,3 +180,165 @@ HLZ_defensive_planning = {
 		}
 	}
 }
+
+HLZ_invade_ordoria = {
+	
+	HLZ_invade_hisjine = {
+		
+		icon = generic_prepare_civil_war
+		
+		visible = {
+			original_tag = HLZ
+			has_country_flag = HLZ_kriegsplan_nord
+			NOT = {
+				owns_state = 96
+			}
+		}
+		
+		available = {
+			has_country_flag = HLZ_kriegsplan_nord
+			divisions_in_border_state = {
+				size > 2
+				state = 305
+				border_state = 96
+			}
+			NOT = {
+				has_border_war_with = ORD
+				owns_state = 96
+			}
+		}
+		
+		cost = 50
+		
+		ai_will_do = {
+			factor = 20
+		}
+		
+		complete_effect = {
+			start_border_war = {
+				change_state_after_war = no
+				attacker = {
+					state = 305
+					num_provinces = 4
+					on_win = holzbrenn_invade.1
+					on_lose = holzbrenn_invade.2
+					on_cancel = holzbrenn_invade.3
+				}
+				defender = {
+					state = 96
+					num_provinces = 3
+					on_win = holzbrenn_invade.4
+					on_lose = holzbrenn_invade.5
+					on_cancel = holzbrenn_invade.6
+				}
+			}
+		}
+	}
+	
+	HLZ_invade_tholder = {
+		
+		icon = generic_prepare_civil_war
+		
+		visible = {
+			original_tag = HLZ
+			has_country_flag = HLZ_kriegsplan_nord
+			NOT = {
+				owns_state = 98
+			}
+		}
+		
+		available = {
+			has_country_flag = HLZ_kriegsplan_nord
+			divisions_in_border_state = {
+				size > 2
+				state = 96
+				border_state = 98
+			}
+			NOT = {
+				has_border_war_with = ORD
+				owns_state = 98
+			}
+			owns_state = 96
+		}
+		
+		cost = 50
+		
+		ai_will_do = {
+			factor = 20
+		}
+		
+		complete_effect = {
+			start_border_war = {
+				change_state_after_war = no
+				attacker = {
+					state = 96
+					num_provinces = 2
+					on_win = holzbrenn_invade.7
+					on_lose = holzbrenn_invade.8
+					on_cancel = holzbrenn_invade.9
+				}
+				defender = {
+					state = 98
+					num_provinces = 1
+					on_win = holzbrenn_invade.10
+					on_lose = holzbrenn_invade.11
+					on_cancel = holzbrenn_invade.12
+				}
+			}
+		}
+	}
+	
+	HLZ_invade_polthoraur = {
+		
+		icon = generic_prepare_civil_war
+		
+		visible = {
+			original_tag = HLZ
+			has_country_flag = HLZ_kriegsplan_nord
+			NOT = {
+				owns_state = 97
+			}
+		}
+		
+		available = {
+			has_country_flag = HLZ_kriegsplan_nord
+			divisions_in_border_state = {
+				size > 2
+				state = 98
+				border_state = 97
+			}
+			NOT = {
+				has_border_war_with = ORD
+				owns_state = 97
+			}
+			owns_state = 98
+		}
+		
+		cost = 50
+		
+		ai_will_do = {
+			factor = 20
+		}
+		
+		complete_effect = {
+			start_border_war = {
+				change_state_after_war = no
+				attacker = {
+					state = 98
+					num_provinces = 2
+					on_win = holzbrenn_invade.13
+					on_lose = holzbrenn_invade.14
+					on_cancel = holzbrenn_invade.15
+				}
+				defender = {
+					state = 97
+					num_provinces = 2
+					on_win = holzbrenn_invade.16
+					on_lose = holzbrenn_invade.17
+					on_cancel = holzbrenn_invade.18
+				}
+			}
+		}
+	}
+}
+		

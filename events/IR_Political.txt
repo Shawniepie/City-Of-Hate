@@ -3,7 +3,7 @@
 add_namespace = ir.political
 
 
-country_event = {#Ungerdaler United Front
+country_event = {#Opinion stuff
 	id = ir.political.1
 		
 	hidden = yes

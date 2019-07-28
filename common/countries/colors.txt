@@ -15,6 +15,11 @@ ORD = {
 	color_ui = rgb { 167 255 55 }
 }
 
+ORB = {
+	color = rgb { 221 136 101 }
+	color_ui = rgb { 229 143 111 }
+}
+
 EOR = {
 	color = rgb { 140 200 0 }
 	color_ui = rgb { 145 215 55 }
