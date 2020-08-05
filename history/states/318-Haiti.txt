@@ -2,13 +2,13 @@ state={
 	id=318
 	name="STATE_318"
 	provinces={
-		773 5410 5648 6388 6389 7102 8303 8461 
+		1010 8806 367 2100 2240 524 8602 
 	}
 	state_category = town
 	manpower=174032
 	buildings_max_level_factor=1.000
 	history={
-		victory_points = { 769 12 }
+		victory_points = { 2100 12 }
 		owner = NRK
 		buildings = {
 			infrastructure = 5

@@ -20,7 +20,7 @@ country_event = {#Holzbrenn - Victory
 			set_state_name = "Heißjein"
 		}
 		set_province_name = {
-			id = 5883
+			id = 4339
 			name = "Heißjein"
 		}
 	}
@@ -120,7 +120,7 @@ country_event = {#Holzbrenn - Victory 2
 			set_state_name = "Thölder"
 		}
 		set_province_name = {
-			id = 2540
+			id = 4600
 			name = "Thölder"
 		}
 	}

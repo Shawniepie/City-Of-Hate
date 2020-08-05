@@ -2,20 +2,20 @@ state={
 	id=236
 	name="STATE_236"
 	provinces={
-		4997 4998 4999 5000 5776 7064 7065 8124 8674 
+		8753 3332 5285
 	}
 	state_category = city
 	manpower=782934
 	buildings_max_level_factor=1.000
 	history={
-		victory_points = { 8124 46 }
+		victory_points = { 8753 46 }
 		owner = FTH
 		buildings = {
 			infrastructure = 5	
 			arms_factory = 1
 			industrial_complex = 2
 			dockyard = 3
-			8124 = {
+			8753 = {
 				naval_base = 5
 			}
 		}

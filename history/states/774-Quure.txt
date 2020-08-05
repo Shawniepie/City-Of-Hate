@@ -2,13 +2,13 @@ state={
 	id=774
 	name="STATE_774"
 	provinces={
-		1548 1598 1599 1600 1601 1602 7810 7849 7858 8752 
+		6968 6949 5248 6920
 	}
 	state_category = town
 	manpower=14129
 	buildings_max_level_factor=1.000
 	history={
-		victory_points = { 1601 12 }
+		victory_points = { 6968 12 }
 		owner = TLA
 		buildings = {
 			infrastructure = 4

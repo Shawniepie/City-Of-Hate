@@ -13,3 +13,32 @@ technology_sharing_group = {
     }
 
 }
+
+technology_sharing_group = {
+
+	id = UNG_BER_schiffstudien_tech_group
+	name = UNG_BER_schiffstudien_tech_group_name
+	desc = UNG_BER_schiffstudien_tech_group_desc
+	picture = GFX_UNG_BER_schiffstudien
+    
+	research_sharing_per_country_bonus = 0.1
+	
+	categories = { naval_doctrine naval_equipment }
+	
+    available = {
+        OR = {
+			AND = {
+				tag = BER
+				NOT = {
+					has_war_with = UNG
+				}
+			}
+			AND = {
+				tag = UNG
+				NOT = {
+					has_war_with = UNG
+				}
+			}
+		}
+    }
+}

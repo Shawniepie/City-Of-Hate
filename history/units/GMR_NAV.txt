@@ -2,35 +2,35 @@
 
 	division = {
 		name = "Vernass Enforcers"
-		location = 7235
+		location = 3439
 		division_template = "Enforcers"
 		start_experience_factor = 0.3
 	}
 	
 	division = {
-		name = "Splythwass Enforcers"
-		location = 5037
+		name = "Portwatch"
+		location = 4323
 		division_template = "Enforcers"
 		start_experience_factor = 0.3
 	}
 	
 	division = {
 		name = "Navandon Black Gargoyles"
-		location = 1334
+		location = 3119
 		division_template = "Black Gargoyles"
 		start_experience_factor = 0.5
 	}
 
 	division = {
 		name = "Frecter Black Gargoyles"
-		location = 1104
+		location = 2082
 		division_template = "Black Gargoyles"
 		start_experience_factor = 0.5
 	}
 
 	division = {
-		name = "Raelon Black Gargoyles"
-		location = 2862
+		name = "Tinnis Black Gargoyles"
+		location = 5916
 		division_template = "Black Gargoyles"
 		start_experience_factor = 0.5
 	}

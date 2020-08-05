@@ -2,8 +2,19 @@ state={
 	id=755
 	name="STATE_755"
 	provinces={
-		6055 6056 6057 6205 6764 7690 
+		2514 1972
 	}
-	manpower=0
+	state_category = town
+	manpower=15724
 	buildings_max_level_factor=1.000
+	history={
+		victory_points = { 1972 10 }
+		owner = IRI
+		buildings = {
+			infrastructure = 8
+			industrial_complex = 3
+			arms_factory = 1
+		}
+		add_core_of = IRI
+	}
 }

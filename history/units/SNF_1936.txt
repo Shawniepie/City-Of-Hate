@@ -48,7 +48,7 @@ units = {
 
 	division = {
 		name = "1st Regiment 'Weissmans Schwerter'"
-		location = 7342
+		location = 2355
 		division_template = "Prinztruppen"
 		start_experience_factor = 0.5
 
@@ -56,7 +56,7 @@ units = {
 	
 	division = {
 		name = "2nd Regiment 'Feldkämpfer'"
-		location = 7402
+		location = 2780
 		division_template = "Prinztruppen"
 		start_experience_factor = 0.5
 
@@ -64,7 +64,7 @@ units = {
 	
 	division = {
 		name = "3rd Regiment 'Kaltachsen'"
-		location = 2337
+		location = 2699
 		division_template = "Prinztruppen"
 		start_experience_factor = 0.5
 
@@ -72,7 +72,7 @@ units = {
 
 	division = {
 		name = "1st Cavalry 'Der Gegenangriff'"
-		location = 4974
+		location = 1131
 		division_template = "Prinzritter"
 		start_experience_factor = 0.5
 
@@ -80,7 +80,7 @@ units = {
 	
 	division = {
 		name = "2nd Cavalry 'Die Antwort'"
-		location = 1519
+		location = 1491
 		division_template = "Prinzritter"
 		start_experience_factor = 0.5
 
@@ -88,7 +88,7 @@ units = {
 	
 	division = {
 		name = "Schneefilde City Watch"
-		location = 6676
+		location = 3183
 		division_template = "Stadtwache"
 		start_experience_factor = 0.05
 

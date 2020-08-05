@@ -2,7 +2,7 @@ state={
 	id=63
 	name="STATE_63"
 	provinces={
-		1776 2757 3649 5587 8794 
+		6094 6068 1864 6106 3060 2831 6045
 	}
 	state_category = town
 	manpower=15329

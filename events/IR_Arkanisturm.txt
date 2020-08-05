@@ -1,0 +1,295 @@
+﻿### WERTZSER EVENTS
+
+add_namespace = ark
+
+country_event = {#Elections
+	id = ark.1
+	title = ark.1.t
+	desc = ark.1.d
+	picture = GFX_report_event_military_planning
+	
+	trigger = {
+		date > 1938.03.07
+	}
+	
+	fire_only_once = yes
+	
+	option = {#Lafdaren!
+		name = ark.1.a
+		ai_chance = {
+			factor = 10
+			modifier = {
+				has_country_flag = STA_supported_resmayer
+				factor = 0
+			}
+		}
+		
+		if = {
+			limit = {
+				has_country_flag = STA_supported_resmayer
+			}
+			custom_effect_tooltip = ARK_resmayer_supported
+			add_political_power = -75
+			add_stability = -0.15
+		}
+		
+		STA = {
+			country_event = {
+				id = sta.8
+				days = 5
+			}
+		}
+		
+		set_politics = {
+			ruling_party = monarchy_constitutional
+		}
+		
+		hidden_effect = {
+				
+			add_popularity = {
+				ideology = monarchy_constitutional
+				popularity = 0.15
+			}
+			
+			add_popularity = {
+				ideology = monarchy_absolute
+				popularity = -0.1
+			}
+			
+			add_popularity = {
+				ideology = republic_aristocrat
+				popularity = -0.61
+			}
+		}
+	}
+	
+	option = {#Resmayer!
+		name = ark.1.b
+		ai_chance = {
+			factor = 1
+		}
+		
+		set_politics = {
+			ruling_party = monarchy_absolute
+		}
+		
+		hidden_effect = {
+				
+			add_popularity = {
+				ideology = monarchy_absolute
+				popularity = 0.15
+			}
+			
+			add_popularity = {
+				ideology = monarchy_constitutional
+				popularity = -0.1
+			}
+			
+			add_popularity = {
+				ideology = republic_aristocrat
+				popularity = -0.61
+			}
+		}
+		
+		STA = {
+			country_event = {
+				id = sta.9
+				days = 5
+			}
+		}
+	}
+}
+
+country_event = { # Arkanisturm Civil War
+	id = ark.2
+	title = ark.2.t	
+	desc = ark.2.d
+	picture = GFX_report_event_spain_civil_war_volunteers_02
+	
+	is_triggered_only = yes
+	
+	immediate = {
+	
+		hidden_effect = {
+			
+			every_state = {
+				limit = {
+					is_core_of = ARK
+				}
+				ARK = {
+					remove_state_core = PREV
+				}
+			}
+			
+			ARK = {
+				set_capital = 206
+			}
+			
+			ARB = {
+				add_state_core = 248
+				add_state_core = 238
+				add_state_core = 237
+				add_state_core = 219
+				add_state_core = 220
+				add_state_core = 207
+				add_state_core = 218
+				
+				set_capital = 218
+			}
+			
+			every_state = {
+				limit = {
+					is_owned_by = ARK
+					NOT = {
+						is_core_of = ARB
+					}
+				}
+				ARK = {
+					add_state_core = PREV
+				}
+			}
+
+			delete_unit_template_and_units = {
+					division_template = "Turmwache"
+				}
+			delete_unit_template_and_units = {
+				division_template = "Zaubertruppen"
+			}
+			delete_unit_template_and_units = {
+				division_template = "Einhorn-Kavallerie"
+			}
+			
+			if = {
+				limit = {
+					ARK = {
+						is_subject_of = UNG
+					}
+				}
+				set_country_flag = ARK_is_freiprinz
+			}
+			
+			add_ideas = GENERIC_civil_war_isolation
+		}
+	}
+	
+	option = { # For Lafdaren's Memory!
+		name = ark.2.a
+		add_stability = -0.25
+		add_popularity = {
+			ideology = monarchy_absolute
+			popularity = -0.35
+		}
+		ai_chance = {
+			factor = 100
+		}
+		hidden_effect = {
+		
+			ARB = {
+				annex_country = {
+					target = ARK
+					transfer_troops = no
+				}
+			}
+			
+			every_state = {
+				limit = {
+					is_owned_by = ARB
+					is_core_of = ARK
+				}
+				ARK = {
+					transfer_state = PREV
+				}
+			}
+			
+			if = {
+				limit = {
+					has_country_flag = ARK_is_freiprinz
+				}
+				UNG = {
+					set_autonomy = {
+						target = ARK
+						autonomy_state = autonomy_IR_freiprinztum
+					}
+				}
+			}
+			
+			load_oob = "ARK_civilwar"
+			
+			delete_unit_template_and_units = {
+				division_template = "Zauberspäher"
+			}
+			
+			ARB = {
+				load_oob = "ARB_civilwar"
+				add_ideas = GENERIC_civil_war_isolation
+			}
+			
+			declare_war_on = {
+				target = ARB
+				type = civil_war
+			}
+		}
+	}
+
+	option = { # For Resmayer!
+		name = ark.2.b
+		add_stability = -0.25
+		add_popularity = {
+			ideology = monarchy_absolute
+			popularity = -0.35
+		}
+		ai_chance = {
+			factor = 100
+		}
+		hidden_effect = {
+		
+			ARB = {
+				annex_country = {
+					target = ARK
+					transfer_troops = no
+				}
+			}
+			
+			every_state = {
+				limit = {
+					is_owned_by = ARB
+					is_core_of = ARK
+				}
+				ARK = {
+					transfer_state = PREV
+				}
+			}
+			
+			if = {
+				limit = {
+					has_country_flag = ARK_is_freiprinz
+				}
+				UNG = {
+					set_autonomy = {
+						target = ARK
+						autonomy_state = autonomy_IR_freiprinztum
+					}
+				}
+			}	
+			
+			load_oob = "ARK_civilwar"
+			
+			delete_unit_template_and_units = {
+				division_template = "Zauberspäher"
+			}
+			
+			ARB = {
+				load_oob = "ARB_civilwar"
+				add_ideas = GENERIC_civil_war_isolation
+			}
+			
+			declare_war_on = {
+				target = ARB
+				type = civil_war
+			}
+		}
+		ARB = {
+			change_tag_from = ARK
+		}
+	}
+}

@@ -38,7 +38,7 @@ units = {
 
 	division = {
 		name = "Stadswacht van Hieringen"
-		location = 617
+		location = 8402
 		division_template = "Stadswacht"
 		start_experience_factor = 0.6
 
@@ -46,175 +46,175 @@ units = {
 	
 	division = {
 		name = "Stadswacht van Nieuwveld"
-		location = 3938
+		location = 2155
 		division_template = "Stadswacht"
 		start_experience_factor = 0.2
 	}
 	
 	division = {
 		name = "Stadswacht van Jaaikeland"
-		location = 8325
+		location = 3503
 		division_template = "Stadswacht"
 		start_experience_factor = 0.2
 	}
 	
 	division = {
 		name = "Stadswacht van Erkevan"
-		location = 6929
+		location = 277
 		division_template = "Stadswacht"
 		start_experience_factor = 0.2
 	}
 	
 	division = {
 		name = "Stadswacht van Doert"
-		location = 8380
+		location = 8289
 		division_template = "Stadswacht"
 		start_experience_factor = 0.2
 	}
 	
 	division = {
 		name = "Stadswacht van Barmzande"
-		location = 8903
+		location = 2663
 		division_template = "Stadswacht"
 		start_experience_factor = 0.2
 	}
 	
 	division = {
 		name = "Stadswacht van Gersteveld"
-		location = 2141
+		location = 2319
 		division_template = "Stadswacht"
 		start_experience_factor = 0.2
 	}
 	
 	division = {
 		name = "Stadswacht van Noordrivier"
-		location = 5002
+		location = 8201
 		division_template = "Stadswacht"
 		start_experience_factor = 0.2
 	}
 	
 	division = {
 		name = "Stadswacht van Vaerhoog"
-		location = 402
+		location = 4253
 		division_template = "Stadswacht"
 		start_experience_factor = 0.2
 	}
 	
 	division = {
 		name = "Stadswacht van Deemsedande"
-		location = 6266
+		location = 8231
 		division_template = "Stadswacht"
 		start_experience_factor = 0.2
 	}
 	
 	division = {
 		name = "Stadswacht van Ticht"
-		location = 3269
+		location = 4802
 		division_template = "Stadswacht"
 		start_experience_factor = 0.2
 	}
 	
 	division = {
 		name = "Stadswacht van Paaksterbaai"
-		location = 5488
+		location = 8490
 		division_template = "Stadswacht"
 		start_experience_factor = 0.2
 	}
 	
 	division = {
 		name = "Stadswacht van Langekaap"
-		location = 6698
+		location = 7963
 		division_template = "Stadswacht"
 		start_experience_factor = 0.2
 	}
 	
 	division = {
 		name = "Stadswacht van Eerherstel"
-		location = 8509
+		location = 7999
 		division_template = "Stadswacht"
 		start_experience_factor = 0.5
 	}
 	
 	division = {
 		name = "1e Wrekers"
-		location = 4500
+		location = 2648
 		division_template = "Wrekers"
 		start_experience_factor = 0.4
 	}
 	
 	division = {
 		name = "2e Wrekers"
-		location = 2076
+		location = 3960
 		division_template = "Wrekers"
 		start_experience_factor = 0.4
 	}
 	
 	division = {
 		name = "3e Wrekers"
-		location = 7142
+		location = 7900
 		division_template = "Wrekers"
 		start_experience_factor = 0.4
 	}
 	
 	division = {
 		name = "4e Wrekers"
-		location = 1682
+		location = 7931
 		division_template = "Wrekers"
 		start_experience_factor = 0.4
 	}
 	
 	division = {
 		name = "5e Wrekers"
-		location = 1737
+		location = 8080
 		division_template = "Wrekers"
 		start_experience_factor = 0.4
 	}
 	
 	division = {
 		name = "6e Wrekers"
-		location = 1749
+		location = 1192
 		division_template = "Wrekers"
 		start_experience_factor = 0.4
 	}
 	
 	division = {
 		name = "7e Wrekers"
-		location = 7735
+		location = 2619
 		division_template = "Wrekers"
 		start_experience_factor = 0.4
 	}
 	
 	division = {
 		name = "8e Wrekers"
-		location = 2308
+		location = 8379
 		division_template = "Wrekers"
 		start_experience_factor = 0.4
 	}
 	
 	division = {
 		name = "9e Wrekers"
-		location = 892
+		location = 1931
 		division_template = "Wrekers"
 		start_experience_factor = 0.4
 	}
 	
 	division = {
 		name = "10e Wrekers"
-		location = 895
+		location = 4979
 		division_template = "Wrekers"
 		start_experience_factor = 0.4
 	}
 	
 	division = {
 		name = "1e Padwakers"
-		location = 6841
+		location = 7970
 		division_template = "Padwakers"
 		start_experience_factor = 0.3
 	}
 	
 	division = {
 		name = "2e Padwakers"
-		location = 223
+		location = 4722
 		division_template = "Padwakers"
 		start_experience_factor = 0.3
 	}

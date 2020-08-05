@@ -1,0 +1,227 @@
+﻿division_template = {
+	name = "Gendarmerie"	
+	regiments = {
+		garrison = { x = 0 y = 0 }
+		garrison = { x = 0 y = 1 }
+		garrison = { x = 0 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Avant-Guerres"
+	regiments = {
+		men_at_arms = { x = 0 y = 0 }
+		men_at_arms = { x = 0 y = 1 }
+		men_at_arms = { x = 0 y = 2 }
+        men_at_arms = { x = 1 y = 0 }
+		men_at_arms = { x = 1 y = 1 }
+		men_at_arms = { x = 1 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Cavaliers"
+	regiments = {
+		light_cavalry = { x = 0 y = 0 }
+        light_cavalry = { x = 0 y = 1 }
+        light_cavalry = { x = 1 y = 0 }
+		light_cavalry = { x = 1 y = 1 }
+	}
+	support = {
+	    recon = { x = 0 y = 0 }
+	}
+}
+
+units = {
+
+	division = {
+		name = "Gendarmes de Tarnoweth"
+		location = 4427
+		division_template = "Gendarmerie"
+		start_experience_factor = 0.3
+
+	}
+
+	division = {
+		name = "Gendarmes de Silnarond"
+		location = 3171
+		division_template = "Gendarmerie"
+		start_experience_factor = 0.3
+
+	}
+
+	division = {
+		name = "Gendarmes de Chapuis"
+		location = 5828
+		division_template = "Gendarmerie"
+		start_experience_factor = 0.3
+
+	}
+
+	division = {
+		name = "Gendarmes de Chetlorine"
+		location = 5711
+		division_template = "Gendarmerie"
+		start_experience_factor = 0.3
+
+	}
+
+	division = {
+		name = "Gendarmes d'Ynthel-sur-Phoine"
+		location = 772
+		division_template = "Gendarmerie"
+		start_experience_factor = 0.3
+
+	}
+	
+	division = {
+		name = "Gendarmes de Caerwennal"
+		location = 6173
+		division_template = "Gendarmerie"
+		start_experience_factor = 0.3
+
+	}
+	
+	division = {
+		name = "Gendarmes de Teth"
+		location = 5163
+		division_template = "Gendarmerie"
+		start_experience_factor = 0.3
+
+	}
+	
+	division = {
+		name = "Gendarmes d'Islaroth"
+		location = 5964
+		division_template = "Gendarmerie"
+		start_experience_factor = 0.3
+
+	}
+	
+	division = {
+		name = "Gendarmes de Bel"
+		location = 3765
+		division_template = "Gendarmerie"
+		start_experience_factor = 0.3
+
+	}
+
+	division = {
+		name = "Guerres de Lirothlind"
+		location = 5779
+		division_template = "Avant-Guerres"
+		start_experience_factor = 1.2
+	}
+
+	division = {
+		name = "1st Avant-Guerres"
+		location = 2249
+		division_template = "Avant-Guerres"
+		start_experience_factor = 0.5
+	}
+
+	division = {
+		name = "2nd Avant-Guerres"
+		location = 2955
+		division_template = "Avant-Guerres"
+		start_experience_factor = 0.5
+	}
+
+	division = {
+		name = "3rd Avant-Guerres"
+		location = 1359
+		division_template = "Avant-Guerres"
+		start_experience_factor = 0.5
+
+	}
+
+	division = {
+		name = "4th Avant-Guerres"
+		location = 937
+		division_template = "Avant-Guerres"
+		start_experience_factor = 0.5
+	}
+
+	division = {
+		name = "5th Avant-Guerres"
+		location = 2647
+		division_template = "Avant-Guerres"
+		start_experience_factor = 0.5
+	}
+
+	division = {
+		name = "6th Avant-Guerres"
+		location = 5912
+		division_template = "Avant-Guerres"
+		start_experience_factor = 0.5
+	}
+
+	division = {
+		name = "7th Avant-Guerres"
+		location = 1229
+		division_template = "Avant-Guerres"
+		start_experience_factor = 0.5
+	}
+
+	division = {
+		name = "8th Avant-Guerres"
+		location = 5970
+		division_template = "Avant-Guerres"
+		start_experience_factor = 0.5
+	}
+
+	division = {
+		name = "9th Avant-Guerres"
+		location = 1210
+		division_template = "Avant-Guerres"
+		start_experience_factor = 0.5
+	}
+
+	division = {
+		name = "1st Cavaliers"
+		location = 6066
+		division_template = "Cavaliers"
+		start_experience_factor = 0.4
+	}
+
+	division = {
+		name = "2nd Cavaliers"
+		location = 3844
+		division_template = "Cavaliers"
+		start_experience_factor = 0.4
+	}
+
+	division = {
+		name = "3rd Cavaliers"
+		location = 6020
+		division_template = "Cavaliers"
+		start_experience_factor = 0.4
+	}	
+	
+}
+
+
+
+
+### STARTING PRODUCTION ###
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_0
+			creator = "LIR"
+		}
+		requested_factories = 5
+		progress = 0.69
+		efficiency = 69
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+			creator = "LIR" 
+		}
+		requested_factories = 2
+		progress = 0.4
+		efficiency = 34
+	}
+}

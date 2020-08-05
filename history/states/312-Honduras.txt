@@ -2,7 +2,7 @@ state={
 	id=312
 	name="STATE_312"
 	provinces={
-		847 3683 5511 5512 5513 8145 8413 8697 8698 
+		5569 3529 5518 4830 1589 3912
 	}
 	state_category = rural
 	manpower=4881

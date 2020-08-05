@@ -150,10 +150,10 @@ country_event = { # Nobility Steps In
 			ruling_party = monarchy_constitutional
 			elections_allowed = no
 		}
-			add_popularity = {
+		add_popularity = {
 			ideology = monarchy_constitutional
 			popularity = 0.05
-			}
+		}
 		add_stability = 0.05
 		add_political_power = 25
 		hidden_effect = {
@@ -169,7 +169,7 @@ country_event = { # Nobility Steps In
 		add_popularity = {
 			ideology = republic_aristocrat
 			popularity = 0.05
-			}
+		}
 		add_stability = 0.05
 		add_political_power = 25
 		hidden_effect = {
@@ -195,7 +195,7 @@ country_event = { # Kirschenrevolution
 		add_popularity = {
 			ideology = republic_merchant
 			popularity = 0.05
-			}
+		}
 		add_stability = 0.05
 		add_political_power = 25
 		hidden_effect = {
@@ -211,7 +211,7 @@ country_event = { # Kirschenrevolution
 		add_popularity = {
 			ideology = republic_peasant
 			popularity = 0.05
-			}
+		}
 		add_stability = 0.05
 		add_political_power = 25
 		hidden_effect = {

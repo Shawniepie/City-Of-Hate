@@ -2,8 +2,25 @@ state={
 	id=380
 	name="STATE_380"
 	provinces={
-		1980 
+		5467
 	}
-	manpower=0
+	state_category = city
+	manpower=328187
 	buildings_max_level_factor=1.000
+	
+	history={
+		owner = MER
+		buildings = {
+			infrastructure = 7
+			industrial_complex = 5
+			arms_factory = 1
+			dockyard = 2
+			6861 = {
+				naval_base = 6
+			}
+		}
+		add_core_of = MER
+	}
 }
+
+

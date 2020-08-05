@@ -1,0 +1,52 @@
+scripted_gui = {
+
+	steelroad = {
+		context_type = player_context
+		
+		window_name = "steel_road_container"
+		
+		visible = {
+			any_controlled_state = {
+				OR = {
+					has_state_flag = steel_road_state
+					has_state_flag = steel_road_state_new
+				}
+			}
+		}
+		
+		effects = {
+			steel_road_button_click = {
+				set_country_flag = open_steel_road_button_flag
+			}
+		}
+	}
+	
+	steelroad_list = {
+		context_type = player_context
+		
+		window_name = "steel_road_list"
+		
+		visible = {
+			has_country_flag = open_steel_road_button_flag
+		}
+		
+		effects = {
+			close_button_click = {
+				clr_country_flag = open_steel_road_button_flag
+			}
+		}
+		
+		dynamic_lists = {
+			GRID_NAME = {
+			  array = steelroadarray
+			  entry = ENTRYNAME 
+			}
+		}
+	}
+	
+	steelroad_scrollbar = {
+		visible = {
+			always = yes
+		}
+	}
+}

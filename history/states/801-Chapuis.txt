@@ -1,0 +1,19 @@
+state={
+	id=801
+	name="STATE_801"
+	provinces={
+		5865 5847 2000 5838 5828 1082 5399 36 4891 363
+	}
+	state_category = town
+	manpower=12572
+	buildings_max_level_factor=1.000
+	history={
+		victory_points = { 5828 8 }
+		owner = LIR
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 2
+		}
+		add_core_of = LIR
+	}
+}

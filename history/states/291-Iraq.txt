@@ -2,7 +2,7 @@ state={
 	id=291
 	name="STATE_291"
 	provinces={
-		1797 1799 1800 1801 3444 3445 5433 6510 
+		4054 8930 1551 5236 1450 1388 3807 5018 8823
 	}
 	state_category = large_town
 	manpower=15421
@@ -12,7 +12,7 @@ state={
 		}
 	history={
 		owner = NRK
-		victory_points = { 5433 17 }
+		victory_points = { 1388 17 }
 		buildings = {
 			infrastructure = 6
 			industrial_complex = 2

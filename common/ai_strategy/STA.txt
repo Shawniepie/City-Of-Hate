@@ -1,0 +1,48 @@
+# befriend
+# conquer
+# antagonize
+# build_ship
+# build_army
+# unit_ratio
+# build_building
+# research_tech
+# garrison
+# protect
+# influence
+
+arkanisturm_civil_war = {#Let's not take Arkanisturm land if we're fighting for Resmayer
+	enable = {
+		original_tag = STA
+		country_exists = ARB
+		has_war_with = ARK
+	}
+	
+	abort = {
+		OR = {
+			NOT = {
+				country_exists = ARB
+				has_war_with = ARK
+			}
+		}
+	}
+	ai_strategy = {
+		type = befriend
+		id = "ARB"
+		value = 200
+	}
+	ai_strategy = {
+		type = alliance
+		id = "ARB"			
+		value = 200
+	}
+	ai_strategy = {
+		type = protect
+		id = "ARB"			
+		value = 200
+	}	
+	ai_strategy = {
+		type = force_defend_ally_borders
+		id = "ARB"
+		value = 200
+	}
+}

@@ -62,6 +62,16 @@ add_ideas = {
 	KUR_nomad_hunters
 }
 
+add_opinion_modifier = {
+	target = SKA
+	modifier = bitter_rivals
+}
+
+add_opinion_modifier = {
+	target = BER
+	modifier = bitter_rivals
+}
+
 create_country_leader = {
 	name = "Hulren Gulthur"
 	desc = "politics_KUR_gulthur_desc"

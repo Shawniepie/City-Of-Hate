@@ -2,7 +2,7 @@ state={
 	id=622
 	name="STATE_622"
 	provinces={
-		1110 1874 2183 4458 5754 6892 8701 8779 
+		2662 1221 1824 1106 2150 856 3341
 	}
 	state_category = pastoral
 	manpower=3209
@@ -11,7 +11,7 @@ state={
 		owner = PRK
 		buildings = {
 			infrastructure = 1
-			dockyard = 1
+			industrial_complex = 1
 		}
 		add_core_of = PRK
 	}

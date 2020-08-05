@@ -24,38 +24,38 @@ division_template = {
 units = {
 
 	division = {
-		name = "Dorissus Militia"
-		location = 2285
+		name = "Xarinthe Circle Guards"
+		location = 2388
 		division_template = "Circle Guards"
 		start_experience_factor = 0.3
 
 	}
 	
 	division = {
-		name = "Berinthe Circle Guards"
-		location = 1564
+		name = "Tyruth Circle Guards"
+		location = 4863
 		division_template = "Circle Guards"
 		start_experience_factor = 0.3
 
 	}
 	
 	division = {
-		name = "Kortinall Freegrove Warriors"
-		location = 7830
+		name = "Cortineal Warriors"
+		location = 6594
 		division_template = "Freegrove Warriors"
 		start_experience_factor = 0.5
 	}
 
 	division = {
-		name = "Gerneth Freegrove Warriors"
-		location = 5987
+		name = "Berinthe Warriors"
+		location = 6593
 		division_template = "Freegrove Warriors"
 		start_experience_factor = 0.5
 	}
 
 	division = {
-		name = "Heswith Freegrove Warriors"
-		location = 827
+		name = "Heswith Warriors"
+		location = 6555
 		division_template = "Freegrove Warriors"
 		start_experience_factor = 0.5
 	}

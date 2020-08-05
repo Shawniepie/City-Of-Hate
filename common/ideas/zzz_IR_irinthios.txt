@@ -1,0 +1,64 @@
+ideas = {
+	
+	country = {
+	
+		IRI_dissenters = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = generic_spy_political
+			
+			removal_cost = -1
+			
+			modifier = {
+				republic_aristocrat_drift = 0.1
+				stability_weekly = -0.007
+			}
+		}
+
+		IRI_embargoed = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = generic_embargo
+			
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.2
+				production_speed_buildings_factor = -0.2
+				production_factory_efficiency_gain_factor = -0.15
+			}
+		}
+		
+		marriage_IRI_UNG = {
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = generic_royal_marriage
+			
+			removal_cost = -1
+			
+			modifier = {
+				custom_effect_tt = royal_marriage_warning_tt
+			}
+		}
+	}
+}

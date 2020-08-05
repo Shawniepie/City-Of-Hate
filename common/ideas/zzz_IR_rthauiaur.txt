@@ -38,9 +38,30 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				army_org_factor = -0.35
-				planning_speed  = -0.15
-				max_planning = -0.25
+				army_org_factor = -0.1
+				planning_speed  = -0.05
+				max_planning = -0.15
+			}
+		}
+		
+		RTH_unblooded_commanders = {
+		
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = rth_unblooded_commanders
+			
+			removal_cost = -1
+			
+			modifier = {
+				army_org_factor = -0.05
+				planning_speed  = -0.05
+				max_planning = -0.05
 			}
 		}
 		
@@ -125,6 +146,26 @@ ideas = {
 				surrender_limit = 0.25
 				training_time_factor = -0.33
 				conscription = 0.05
+			}
+		}
+	}
+	
+	political_advisor = {
+	
+		alyssyna_lavynthis = {
+			
+			picture = rth_lavynthis
+			
+			allowed = {
+				original_tag = RTH
+			}
+		
+			available = {
+				always = no #added by event
+			}
+			
+			traits = {
+				blue_blooded_noblewoman
 			}
 		}
 	}

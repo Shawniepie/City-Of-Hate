@@ -1,0 +1,614 @@
+﻿### LIROTHLINE EVENTS
+
+add_namespace = lir
+
+### OF KINGS AND PRIESTS
+
+country_event = { #Noble Supports the Heir Apparent
+	id = lir.1
+	title = lir.1.t
+	desc = lir.1.d
+	picture = GFX_report_event_romania_poland_visit
+	
+	trigger = {
+		original_tag = LIR
+		NOT = {
+			has_country_flag = LIR_power_struggle_over
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 400
+	}
+	
+	option = {#Long Live the King!
+		name = lir.1.a
+		ai_chance = {
+			factor = 2
+		}
+		add_popularity = {
+			ideology = monarchy_constitutional
+			popularity = 0.03
+		}
+	}
+	
+	option = {#Find him some ill omens
+		name = lir.1.b
+		ai_chance = {
+			factor = 1
+		}
+		add_political_power = -25
+		add_popularity = {
+			ideology = monarchy_constitutional
+			popularity = -0.01
+		}
+	}
+}
+
+country_event = { #Clergyman Supports the Heir Apparent
+	id = lir.2
+	title = lir.2.t
+	desc = lir.2.d
+	picture = GFX_report_event_romania_poland_visit
+	
+	trigger = {
+		original_tag = LIR
+		NOT = {
+			has_country_flag = LIR_power_struggle_over
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 400
+	}
+	
+	option = {#Long Live the King!
+		name = lir.2.a
+		ai_chance = {
+			factor = 3
+		}
+		add_popularity = {
+			ideology = monarchy_constitutional
+			popularity = 0.07
+		}
+	}
+	
+	option = {#Find a reason to excommunicate him
+		name = lir.2.b
+		ai_chance = {
+			factor = 1
+		}
+		add_political_power = -50
+		add_popularity = {
+			ideology = monarchy_constitutional
+			popularity = 0.01
+		}
+	}
+}
+
+country_event = { #Ill Omens
+	id = lir.3
+	title = lir.3.t
+	desc = lir.3.d
+	picture = GFX_report_event_soviet_finnish_pact
+	
+	trigger = {
+		original_tag = LIR
+		NOT = {
+			has_country_flag = LIR_power_struggle_over
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 400
+	}
+	
+	option = {#Good thing we bought that tamed bird
+		name = lir.3.a
+		ai_chance = {
+			factor = 2
+		}
+		add_popularity = {
+			ideology = theocrat
+			popularity = 0.03
+		}
+	}
+	
+	option = {#Nonsense
+		name = lir.3.b
+		ai_chance = {
+			factor = 1
+		}
+		add_political_power = -25
+		add_popularity = {
+			ideology = theocrat
+			popularity = -0.01
+		}
+	}
+}
+
+country_event = {#Blasphemy!
+	id = lir.4
+	title = lir.4.t
+	desc = lir.4.d
+	picture = GFX_report_event_poland_rejects
+	
+	trigger = {
+		original_tag = LIR
+		NOT = {
+			has_country_flag = LIR_power_struggle_over
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 400
+	}
+	
+	option = {#Heresy!
+		name = lir.4.a
+		ai_chance = {
+			factor = 2
+		}
+		add_popularity = {
+			ideology = theocrat
+			popularity = 0.07
+		}
+	}
+	
+	option = {#It's fine
+		name = lir.4.b
+		ai_chance = {
+			factor = 1
+		}
+		add_political_power = -50
+		add_popularity = {
+			ideology = theocrat
+			popularity = 0.01
+		}
+	}
+}
+
+country_event = {#Coronation
+	id = lir.5
+	title = lir.5.t
+	desc = lir.5.d
+	picture = GFX_report_event_hol_cabinet_de_geer
+	
+	fire_only_once = yes
+	
+	trigger = {
+		original_tag = LIR
+		date > 1941.07.13
+	}
+	
+	mean_time_to_happen = {
+		days = 5
+	}
+	
+	option = {#Monarchy!
+		name = lir.5.a
+		ai_chance = {
+			factor = 5
+			modifier = {
+				monarchy_constitutional > 0.5
+				factor = 2
+			}
+			modifier = {
+				monarchy_constitutional > 0.6
+				factor = 2
+			}
+			modifier = {
+				monarchy_constitutional > 0.7
+				factor = 2
+			}
+		}
+		set_politics = {
+			ruling_party = monarchy_constitutional
+		}
+		add_popularity = {
+			popularity = 0.35
+			ideology = monarchy_constitutional
+		}
+		set_country_flag = LIR_power_struggle_over
+		if = {
+			limit = {
+				theocrat > 0.5
+			}
+			custom_effect_tooltip = LIR_civilwar_tt
+			set_country_flag = LIR_theocrat_civilwar
+		}
+		every_country = {
+			country_event = {
+				id = ir.political.4
+			}
+		}
+		every_country = {
+			country_event = {
+				id = ir.political.3
+			}
+		}
+	}
+	
+	option = {#Theocracy!
+		name = lir.5.b
+		ai_chance = {
+			factor = 5
+			modifier = {
+				theocrat > 0.5
+				factor = 2
+			}
+			modifier = {
+				theocrat > 0.6
+				factor = 2
+			}
+			modifier = {
+				theocrat > 0.7
+				factor = 2
+			}
+		}
+		set_politics = {
+			ruling_party = theocrat
+		}
+		add_popularity = {
+			popularity = 0.35
+			ideology = theocrat
+		}
+		set_country_flag = LIR_power_struggle_over
+		if = {
+			limit = {
+				monarchy_constitutional > 0.5
+			}
+			custom_effect_tooltip = LIR_civilwar_tt
+			set_country_flag = LIR_monarchy_civilwar
+		}
+	}
+}
+
+country_event = {#Royalist Revolt
+	id = lir.6
+	title = lir.6.t
+	desc = lir.6.d
+	picture = GFX_report_event_lithuania_army
+	
+	fire_only_once = yes
+	
+	trigger = {
+		original_tag = LIR
+		has_country_flag = LIR_monarchy_civilwar
+	}
+	
+	mean_time_to_happen = {
+		days = 73
+	}
+	
+	option = {#King
+		name = lir.6.a
+		add_popularity = {
+			ideology = theocrat
+			popularity = -0.5
+		}
+		add_stability = -0.35
+		if = {
+			limit = {
+				monarchy_constitutional < 0.5
+			}
+			start_civil_war = {
+				ruling_party = monarchy_constitutional
+				ideology = theocrat
+				size = 0.4
+			}
+		}
+		if = {
+			limit = {
+				AND = {
+					monarchy_constitutional > 0.5
+					monarchy_constitutional < 0.6
+				}
+			}
+			start_civil_war = {
+				ruling_party = monarchy_constitutional
+				ideology = theocrat
+				size = 0.5
+			}
+		}
+		if = {
+			limit = {
+				AND = {
+					monarchy_constitutional > 0.6
+					monarchy_constitutional < 0.7
+				}
+			}
+			start_civil_war = {
+				ruling_party = monarchy_constitutional
+				ideology = theocrat
+				size = 0.6
+			}
+		}
+		if = {
+			limit = {
+				monarchy_constitutional > 0.7
+			}
+			start_civil_war = {
+				ruling_party = monarchy_constitutional
+				ideology = theocrat
+				size = 0.7
+			}
+		}
+		every_country = {
+			country_event = {
+				id = ir.political.4
+			}
+		}
+		every_country = {
+			country_event = {
+				id = ir.political.3
+			}
+		}
+		add_ideas = GENERIC_civil_war_isolation
+		every_other_country = {
+			limit = {
+				original_tag = LIR
+				has_war_with = LIR
+				has_civil_war = yes
+			}
+			add_ideas = GENERIC_civil_war_isolation
+		}
+	}
+	
+	option = {#Church
+		name = lir.6.b
+		set_politics = {
+			ruling_party = theocrat
+		}
+		add_popularity = {
+			ideology = monarchy_constitutional
+			popularity = -0.5
+		}
+		add_stability = -0.35
+		if = {
+			limit = {
+				monarchy_constitutional < 0.5
+			}
+			start_civil_war = {
+				ruling_party = monarchy_constitutional
+				ideology = theocrat
+				size = 0.4
+			}
+		}
+		if = {
+			limit = {
+				monarchy_constitutional > 0.5
+				monarchy_constitutional < 0.6
+			}
+			start_civil_war = {
+				ruling_party = monarchy_constitutional
+				ideology = theocrat
+				size = 0.5
+			}
+		}
+		if = {
+			limit = {
+				monarchy_constitutional > 0.6
+				monarchy_constitutional < 0.7
+			}
+			start_civil_war = {
+				ruling_party = monarchy_constitutional
+				ideology = theocrat
+				size = 0.6
+			}
+		}
+		if = {
+			limit = {
+				monarchy_constitutional > 0.7
+			}
+			start_civil_war = {
+				ruling_party = monarchy_constitutional
+				ideology = theocrat
+				size = 0.7
+			}
+		}
+		add_ideas = GENERIC_civil_war_isolation
+		every_other_country = {
+			limit = {
+				original_tag = LIR
+				has_war_with = LIR
+				has_civil_war = yes
+			}
+			add_ideas = GENERIC_civil_war_isolation
+		}
+	}
+}
+
+country_event = {#Religious Revolt
+	id = lir.7
+	title = lir.7.t
+	desc = lir.7.d
+	picture = GFX_report_event_hungary_gains_transylvania
+	
+	fire_only_once = yes
+	
+	trigger = {
+		original_tag = LIR
+		has_country_flag = LIR_theocrat_civilwar
+	}
+	
+	mean_time_to_happen = {
+		days = 73
+	}
+	
+	option = {#King
+		name = lir.7.a
+		add_popularity = {
+			ideology = monarchy_constitutional
+			popularity = -0.5
+		}
+		add_stability = -0.35
+		if = {
+			limit = {
+				theocrat < 0.5
+			}
+			start_civil_war = {
+				ruling_party = theocrat
+				ideology = monarchy_constitutional
+				size = 0.4
+			}
+		}
+		if = {
+			limit = {
+				AND = {
+					theocrat > 0.5
+					theocrat < 0.6
+				}
+			}
+			start_civil_war = {
+				ruling_party = theocrat
+				ideology = monarchy_constitutional
+				size = 0.5
+			}
+		}
+		if = {
+			limit = {
+				AND = {
+					theocrat > 0.6
+					theocrat < 0.7
+				}
+			}
+			start_civil_war = {
+				ruling_party = theocrat
+				ideology = monarchy_constitutional
+				size = 0.6
+			}
+		}
+		if = {
+			limit = {
+				theocrat > 0.7
+			}
+			start_civil_war = {
+				ruling_party = theocrat
+				ideology = monarchy_constitutional
+				size = 0.7
+			}
+		}
+		every_country = {
+			country_event = {
+				id = ir.political.4
+			}
+		}
+		every_country = {
+			country_event = {
+				id = ir.political.3
+			}
+		}
+		add_ideas = GENERIC_civil_war_isolation
+		every_other_country = {
+			limit = {
+				original_tag = LIR
+				has_war_with = LIR
+				has_civil_war = yes
+			}
+			add_ideas = GENERIC_civil_war_isolation
+		}
+	}
+	
+	option = {#Church
+		name = lir.7.b
+		set_politics = {
+			ruling_party = monarchy_constitutional
+		}
+		add_popularity = {
+			ideology = theocrat
+			popularity = -0.5
+		}
+		add_stability = -0.35
+		if = {
+			limit = {
+				theocrat < 0.5
+			}
+			start_civil_war = {
+				ruling_party = theocrat
+				ideology = monarchy_constitutional
+				size = 0.4
+			}
+		}
+		if = {
+			limit = {
+				AND = {
+					theocrat > 0.5
+					theocrat < 0.6
+				}
+			}
+			start_civil_war = {
+				ruling_party = theocrat
+				ideology = monarchy_constitutional
+				size = 0.5
+			}
+		}
+		if = {
+			limit = {
+				AND = {
+					theocrat > 0.6
+					theocrat < 0.7
+				}
+			}
+			start_civil_war = {
+				ruling_party = theocrat
+				ideology = monarchy_constitutional
+				size = 0.6
+			}
+		}
+		if = {
+			limit = {
+				theocrat > 0.7
+			}
+			start_civil_war = {
+				ruling_party = theocrat
+				ideology = monarchy_constitutional
+				size = 0.7
+			}
+		}
+		add_ideas = GENERIC_civil_war_isolation
+		every_other_country = {
+			limit = {
+				original_tag = LIR
+				has_war_with = LIR
+				has_civil_war = yes
+			}
+			add_ideas = GENERIC_civil_war_isolation
+		}	
+	}
+}
+
+country_event = {#Union Offers Alliance
+	id = lir.8
+	title = lir.8.t
+	desc = lir.8.d
+	picture = GFX_report_event_carol_meeting
+
+	is_triggered_only = yes
+	
+	option = {#Yes
+		name = lir.8.a
+		ai_chance = {
+			factor = 5
+		}
+		UNG = {
+			country_event = {
+				id = ung.30
+				days = 3
+			}
+		}
+	}
+	
+	option = {#No
+		name = lir.8.b
+		ai_chance = {
+			factor = 1
+		}
+		UNG = {
+			country_event = {
+				id = ung.31
+				days = 3
+			}
+		}
+	}
+}

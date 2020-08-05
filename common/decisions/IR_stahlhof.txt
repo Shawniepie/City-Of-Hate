@@ -1,0 +1,331 @@
+STA_request_war_resources_category = {
+	 ##Idea 1
+	 STA_request_equipment_decision = {
+		icon = generic_research
+		
+		cost = 40
+		days_remove = 70
+		
+		visible = {
+			UNG = {exists = yes}
+			NOT = { has_war_with = UNG }
+			is_puppet_of = UNG
+			ORD = {exists = yes}
+			ORD = { is_puppet = no }
+			NOT = { is_in_faction_with = ORD }
+		}
+		complete_effect = {
+			UNG = { country_event = { id = sta.8 hours = 12 } }
+		}
+	 }
+}
+
+STA_a_convincing_act_category = {
+	
+	STA_a_convincing_act_decision = {
+		
+		icon = generic_research
+		
+		cost = 30
+		days_remove = 70
+		
+		available = {
+			has_completed_focus = STA_a_convincing_act
+			Not = { STA = { owns_state = 96 } }
+			owns_state = 194
+			has_border_war = false
+		}
+		
+		complete_effect = {
+			
+			start_border_war = {
+				
+				change_state_after_war = no
+				
+				attacker = {
+					state = 194
+					num_provinces = 3
+					on_win = sta.19
+					on_lose = sta.20
+					on_cancel = sta.21
+				}
+				
+				defender = {
+					state = 96
+					num_provinces = 2
+					on_win = sta.22
+					on_lose = sta.23
+					on_cancel = sta.24
+				}
+			}
+		}
+	}
+
+}
+
+STA_a_convincing_act_category = {
+	
+	STA_stahlplan_zhertis_decision = {
+		
+		icon = generic_research
+		
+		cost = 30
+		days_remove = 70
+		
+		available = {
+			has_completed_focus = STA_stahlplan_zhertis
+			Not = { STA = { owns_state = 105 } }
+			owns_state = 214
+			has_border_war = false
+		}
+		
+		complete_effect = {
+			
+			start_border_war = {
+				
+				change_state_after_war = no
+				
+				attacker = {
+					state = 214
+					num_provinces = 2
+					on_win = sta.25
+					on_lose = sta.26
+					on_cancel = sta.27
+				}
+				
+				defender = {
+					state = 105
+					num_provinces = 2
+					on_win = sta.28
+					on_lose = sta.29
+					on_cancel = sta.30
+				}
+			}
+		}
+	}
+
+}
+
+STA_a_convincing_act_category = {
+	
+	STA_stahlplan_venoehr_decision = {
+		
+		icon = generic_research
+		
+		cost = 30
+		days_remove = 70
+		
+		available = {
+			has_completed_focus = STA_stahlplan_venoehr
+			Not = { STA = { owns_state = 106 } }
+			owns_state = 202
+			has_border_war = false
+		}
+		
+		complete_effect = {
+			
+			start_border_war = {
+				
+				change_state_after_war = no
+				
+				attacker = {
+					state = 202
+					num_provinces = 1
+					on_win = sta.31
+					on_lose = sta.32
+					on_cancel = sta.33
+				}
+				
+				defender = {
+					state = 106
+					num_provinces = 1
+					on_win = sta.34
+					on_lose = sta.35
+					on_cancel = sta.36
+				}
+			}
+		}
+	}
+
+}
+
+STA_a_convincing_act_category = {
+	
+	STA_stahlplan_anzitt_decision = {
+		
+		icon = generic_research
+		
+		cost = 30
+		days_remove = 70
+		
+		available = {
+			has_completed_focus = STA_stahlplan_anzitt
+			Not = { STA = { owns_state = 104 } }
+			owns_state = 195
+			has_border_war = false
+		}
+		
+		complete_effect = {
+			
+			start_border_war = {
+				
+				change_state_after_war = no
+				
+				attacker = {
+					state = 195
+					num_provinces = 1
+					on_win = sta.37
+					on_lose = sta.38
+					on_cancel = sta.39
+				}
+				
+				defender = {
+					state = 104
+					num_provinces = 1
+					on_win = sta.40
+					on_lose = sta.41
+					on_cancel = sta.42
+				}
+			}
+		}
+	}
+
+}
+
+STA_a_convincing_act_category = {
+	
+	STA_stahlplan_fratin_decision = {
+		
+		icon = generic_research
+		
+		cost = 30
+		days_remove = 70
+		
+		available = {
+			has_completed_focus = STA_stahlplan_fratin
+			Not = { STA = { owns_state = 107 } }
+			owns_state = 105
+			has_border_war = false
+		}
+		
+		complete_effect = {
+
+			start_border_war = {
+				
+				change_state_after_war = no
+				
+				attacker = {
+					state = 105
+					num_provinces = 2
+					on_win = sta.43
+					on_lose = sta.44
+					on_cancel = sta.45
+				}
+				
+				defender = {
+					state = 107
+					num_provinces = 2
+					on_win = sta.46
+					on_lose = sta.47
+					on_cancel = sta.48
+					}
+			}
+			
+		
+		}
+	}
+
+}
+
+STA_a_convincing_act_category = {
+	
+	STA_stahlplan_fratin_decision2 = {
+		
+		icon = generic_research
+		
+		cost = 30
+		days_remove = 70
+		
+		available = {
+			has_completed_focus = STA_stahlplan_fratin
+			Not = { STA = { owns_state = 107 } }
+			owns_state = 104
+			has_border_war = false
+		}
+		
+		complete_effect = {
+
+			start_border_war = {
+				
+					change_state_after_war = no
+				
+					attacker = {
+						state = 104
+						num_provinces = 5
+						on_win = sta.49
+						on_lose = sta.50
+						on_cancel = sta.51
+					}
+				
+					defender = {
+						state = 107
+						num_provinces = 3
+						on_win = sta.52
+						on_lose = sta.53
+						on_cancel = sta.54
+						}
+				}
+			
+		
+		}
+	}
+
+}
+
+STA_trial_by_fire_category = {
+	
+	STA_trial_by_fire_decision = {
+		
+		icon = generic_research
+		
+		cost = 30
+		days_remove = 70
+		
+		available = {
+			has_completed_focus = STA_trial_by_fire
+			Not = { STA = { owns_state = 218 } }
+			owns_state = 212
+			has_border_war = false
+		}
+		
+		complete_effect = {
+			
+			start_border_war = {
+				
+				change_state_after_war = no
+				
+				attacker = {
+					state = 212
+					num_provinces = 2
+					on_win = sta.60
+					on_lose = sta.61
+					on_cancel = sta.62
+				}
+				
+				defender = {
+					state = 218
+					num_provinces = 3
+					on_win = sta.63
+					on_lose = sta.64
+					on_cancel = sta.65
+				}
+			}
+			UNG = {
+				add_opinion_modifier = {
+					target = STA modifier = STA_conducted_inner_hostilities_opinion
+				}
+			}
+		}
+	}
+
+}

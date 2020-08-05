@@ -2,13 +2,12 @@ state={
 	id=617
 	name="STATE_617"
 	provinces={
-		526 1145 1695 2455 3574 4318 6313 8163 
+		9572 4621 1683 5371 9602 2359 2745
 	}
 	state_category = rural
 	manpower=2593
 	buildings_max_level_factor=1.000
 	history={
-		victory_points = { 5950 38 }
 		owner = PRK
 		buildings = {
 			infrastructure = 2

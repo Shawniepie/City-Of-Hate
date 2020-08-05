@@ -2,13 +2,13 @@ state={
 	id=224
 	name="STATE_224"
 	provinces={
-		367 740 1368 3600 4039 4518 5604 6676 7402 
+		600 2355 9445 3183 1131
 	}
 	state_category = city
 	manpower=709923
 	buildings_max_level_factor=1.000
 	history={
-		victory_points = { 6676 51}
+		victory_points = { 3183 51}
 		owner = SNF
 		buildings = {
 			infrastructure = 5	

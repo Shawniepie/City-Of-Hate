@@ -48,7 +48,7 @@ units = {
 
 	division = {
 		name = "1st Regiment 'Geisterjäger'"
-		location = 8664
+		location = 9155
 		division_template = "Prinztruppen"
 		start_experience_factor = 0.5
 
@@ -56,7 +56,7 @@ units = {
 	
 	division = {
 		name = "2nd Regiment 'Waldwanderer'"
-		location = 511
+		location = 2327
 		division_template = "Prinztruppen"
 		start_experience_factor = 0.5
 
@@ -64,7 +64,7 @@ units = {
 	
 	division = {
 		name = "1st Cavalry 'Schnellreiter'"
-		location = 3641
+		location = 3757
 		division_template = "Prinzritter"
 		start_experience_factor = 0.7
 
@@ -72,7 +72,7 @@ units = {
 	
 	division = {
 		name = "Spochwald City Watch"
-		location = 1077
+		location = 9061
 		division_template = "Stadtwache"
 		start_experience_factor = 0.05
 

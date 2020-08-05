@@ -1,0 +1,126 @@
+﻿### IRINTHIAN EVENTS
+
+add_namespace = iri
+
+### WAR WITH TLARTHINGIA
+
+country_event = {#To Arms!
+	id = iri.1
+	title = iri.1.t
+	desc = iri.1.d
+	picture = GFX_report_event_soviet_invasion_map
+	
+	fire_only_once = yes
+	
+	trigger = {
+		date > 1940.01.01
+	}
+	
+	mean_time_to_happen = {
+		days = 150
+	}
+	
+	option = {#To War!
+		name = iri.1.a
+		every_state = {
+			limit = {
+				is_core_of = TLA
+			}
+			add_claim_by = IRI
+		}
+		create_wargoal = {
+			type = annex_everything
+			target = TLA
+		}
+	}
+}
+
+country_event = {#Victory against Tlarthingia
+	id = iri.2
+	title = iri.2.t
+	desc = iri.2.d
+	picture = GFX_report_event_spain_civil_war_volunteers_02
+	
+	fire_only_once = yes
+	
+	trigger = {
+		any_owned_state = {
+			is_owned_by = IRI
+			is_core_of = TLA
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 15
+	}
+	
+	option = {#Glory!
+		name = iri.2.a
+		every_state = {
+			limit = {
+				AND = {
+					is_core_of = TLA
+					is_owned_by = IRI
+				}
+			}
+			add_core_of = IRI
+		}
+	}
+}
+
+country_event = {#Dissenting Nobles!
+	id = iri.3
+	title = iri.3.t
+	desc = iri.3.d
+	picture = report_event_carol_party
+	
+	is_triggered_only = yes
+	
+	option = {#Drat
+		name = iri.3.a
+		add_timed_idea = {
+			idea = IRI_dissenters
+			days = 182
+		}
+	}
+}
+
+country_event = {#Union Alliance?
+	id = iri.4
+	title = iri.4.t
+	desc = iri.4.d
+	picture = report_event_carol_party
+	
+	is_triggered_only = yes
+	
+	option = {#Yes
+		name = iri.4.a
+		ai_chance = {
+			factor = 9
+		}
+		UNG = {
+			country_event = {
+				id = ung.54
+				days = 4
+			}
+		}
+		
+	}
+	
+	option = {#No
+		name = iri.4.b
+		ai_chance = {
+			factor = 1
+			modifier = {
+				has_war_with = TLA
+				factor = 0
+			}
+		}
+		UNG = {
+			country_event = {
+				id = ung.55
+				days = 4
+			}
+		}
+	}
+}

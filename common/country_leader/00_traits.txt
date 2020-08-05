@@ -37,7 +37,7 @@ leader_traits = {
 	
 	gentlewoman_farmer = {
 		random = no
-		consumer_goods_factor = -0.15
+		production_factory_max_efficiency_factor = 0.15
 	}
 	
 	market_proponent = {
@@ -77,16 +77,27 @@ leader_traits = {
 		consumer_goods_factor = -0.15
 	}
 	
+	blue_blooded_noblewoman = {
+		political_power_gain = -0.25
+		experience_gain_army_factor = 0.15
+	}
+	
 	has_magic_sword = {
 		random = no
 		army_attack_factor = 0.03
-		army_defence_factor = 0.03
+		army_morale_factor = 0.03
 	}
 	
 	has_magic_ring = {
 		random = no
 		stability_factor = 0.03
 		consumer_goods_factor = -0.03
+	}
+	
+	has_magic_armour = {
+		random = no
+		army_core_defence_factor = 0.03
+		max_dig_in = 0.1
 	}
 	
 	human_racial_bonuses = {
@@ -135,6 +146,12 @@ leader_traits = {
 		random = no
 		stability_factor = 0.07
 		conscription_factor  = 0.05
+	}
+	
+	arkanimism_bonuses = {
+		random = no
+		research_speed_factor = 0.07
+		own_operative_detection_chance_factor = -0.05
 	}
 	
 	hieyrenous_bonuses = {
@@ -255,6 +272,18 @@ leader_traits = {
 		random = no
 		army_attack_factor  = 0.07
 		dig_in_speed_factor = 0.05
+	}
+	
+	selinism_bonuses = {
+		random = no
+		navy_max_range_factor  = 0.07
+		land_night_attack = 0.05
+	}
+	
+	chivraism_bonuses = {
+		random = no
+		acclimatization_cold_climate_gain_factor  = 0.07
+		out_of_supply_factor = -0.05
 	}
 	
 	gallant_paladin = {

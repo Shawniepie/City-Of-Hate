@@ -57,16 +57,24 @@ division_template = {
 units = {
 
 	division = {
-		name = "Sinlis Militia"
-		location = 1725
+		name = "Quent Militia"
+		location = 5256
+		division_template = "Enforcers"
+		start_experience_factor = 0.1
+
+	}
+	
+	division = {
+		name = "Westrenne Militia"
+		location = 6262
 		division_template = "Enforcers"
 		start_experience_factor = 0.1
 
 	}
 
 	division = {
-		name = "Anzer Militia"
-		location = 1810
+		name = "Splythwass Militia"
+		location = 5428
 		division_template = "Enforcers"
 		start_experience_factor = 0.1
 
@@ -74,7 +82,7 @@ units = {
 
 	division = {
 		name = "Navandon Loyalists"
-		location = 4695
+		location = 6237
 		division_template = "Enforcers"
 		start_experience_factor = 0.3
 
@@ -82,7 +90,7 @@ units = {
 
 	division = {
 		name = "Felwerin Loyalists"
-		location = 1723
+		location = 5417
 		division_template = "Enforcers"
 		start_experience_factor = 0.2
 
@@ -90,7 +98,7 @@ units = {
 
 	division = {
 		name = "Cortineal Loyalists"
-		location = 668
+		location = 6477
 		division_template = "Enforcers"
 		start_experience_factor = 0.15
 
@@ -98,7 +106,7 @@ units = {
 
 	division = {
 		name = "Blacksteel Bodyguards"
-		location = 1569
+		location = 6377
 		division_template = "Black Gargoyles"
 		start_experience_factor = 1.2
 
@@ -106,7 +114,7 @@ units = {
 
 	division = {
 		name = "Trifersi Loyalists"
-		location = 8225
+		location = 6261
 		division_template = "Black Gargoyles"
 		start_experience_factor = 0.4
 
@@ -114,14 +122,14 @@ units = {
 	
 	division = {
 		name = "Caltireth Loyalists"
-		location = 3694
+		location = 4681
 		division_template = "Black Gargoyles"
 		start_experience_factor = 0.3
 	}
 	
 	division = {
 		name = "Nastrogdar Loyalists"
-		location = 4007
+		location = 2207
 		division_template = "Sail Knights"
 		start_experience_factor = 0.2
 	}

@@ -1,2 +1,12 @@
-	From;To;Type;Through;start_x;start_y;stop_x;stop_y;adjacency_rule_name;Comment
--1;-1;;-1;-1;-1;-1;-1;-1
+From;To;Type;Through;start_x;start_y;stop_x;stop_y;adjacency_rule_name;Comment
+6505;2077;sea;17954;-1;-1;-1;-1;;Strait of Tion
+5391;9724;sea;15432;-1;-1;-1;-1;;Paperhelm I
+5311;9724;sea;17536;-1;-1;-1;-1;;Paperhelm II
+8694;5229;sea;10750;-1;-1;-1;-1;;Tistlas-Tiefstein
+8395;566;sea;10818;-1;-1;-1;-1;;Silbervelt-Kristerlach
+5643;774;sea;13902;-1;-1;-1;-1;;Ithnarond-Ciri
+4537;1304;sea;16943;-1;-1;-1;-1;;Hathliss I
+256;7122;sea;13887;-1;-1;-1;-1;;Hathliss II
+9720;8701;sea;18009;-1;-1;-1;-1;;Sulfurisle I
+9720;8745;sea;18009;-1;-1;-1;-1;;Sulfurisle II
+8950;4396;sea;13161;-1;-1;-1;-1;;Cumail NaMara-Xarus

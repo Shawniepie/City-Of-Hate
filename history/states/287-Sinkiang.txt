@@ -2,7 +2,7 @@ state={
 	id=287
 	name="STATE_287"
 	provinces={
-		106 3786 3787 4597 5188 6125 6126 7511 
+		8723 3576 8687 2868 553 8634 8625 1055 3747 8638 4466 8522 1317
 	}
 	state_category = town
 	manpower=17282
@@ -11,7 +11,7 @@ state={
 		steel = 12
 	}
 	history={
-		victory_points = { 6126 14 }
+		victory_points = { 8625 14 }
 		owner = NRK
 		buildings = {
 			infrastructure = 5	

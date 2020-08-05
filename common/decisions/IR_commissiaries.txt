@@ -85,79 +85,77 @@ commissiaries = {
 				}
 				release_puppet = SKA
 			}
+			
 			146 = {
 				set_state_name = "Skylynaur"
 			}			
-			set_province_name = {
-				id = 325
-				name = "Skylynaur"
+			
+			186 = {
+				set_state_name = "Votryss"
 			}
+			
+			187 = {
+				set_state_name = "Witraur"
+			}
+			
+			157 = {
+				set_state_name = "Wysgyn"
+			}
+			
+			149 = {
+				set_state_name = "Hostryn"
+			}
+			
 			if = {
 				limit = {
 					has_government = puritan
 				}
 				SKA = {
-					set_politics = {
-						parties = {
-							monarchy_absolute= { 
-								popularity = 13
-							}
+					set_popularities = {
 
-							monarchy_constitutional = {
-								popularity = 0
-							}
-							
-							republic_peasant = {
-								popularity = 0
-							}
-							republic_aristocrat = {
-								popularity = 0
-							}
-							republic_merchant = {
-								popularity = 0
-							}
-							theocrat = {
-								popularity = 27
-							}
-							puritan = {
-								popularity = 60
-							}
-						}
+						monarchy_absolute = 13
+
+						monarchy_constitutional = 0
+
+						republic_peasant = 0
+
+						republic_aristocrat = 0
+
+						republic_merchant = 0
+
+						theocrat = 27
+
+						puritan = 60
+					}
+					set_politics = {
 						ruling_party = puritan
 					}
 				}
 			}
+
 			if = {
 				limit = {
 					has_government = theocrat
 				}
 				SKA = {
-					set_politics = {
-						parties = {
-							monarchy_absolute= { 
-								popularity = 13
-							}
+					set_popularities = {
 
-							monarchy_constitutional = {
-								popularity = 0
-							}
-							
-							republic_peasant = {
-								popularity = 0
-							}
-							republic_aristocrat = {
-								popularity = 0
-							}
-							republic_merchant = {
-								popularity = 0
-							}
-							theocrat = {
-								popularity = 60
-							}
-							puritan = {
-								popularity = 27
-							}
-						}
+						monarchy_absolute = 13
+
+						monarchy_constitutional = 0
+
+						republic_peasant = 0
+
+						republic_aristocrat = 0
+
+						republic_merchant = 0
+
+						theocrat = 60
+
+						puritan = 27
+					}
+					
+					set_politics = {
 						ruling_party = theocrat
 					}
 				}
@@ -360,44 +358,78 @@ commissiaries = {
 			
 			192 = {
 				set_state_name = "Stauhyte"
-			}			
-			set_province_name = {
-				id = 2246
-				name = "Stauhyte"
 			}
 			
+			232 = {
+				set_state_name = "Hysbryn"
+			}
+			
+			284 = {
+				set_state_name = "Norothe"
+			}
+			
+			206 = {
+				set_state_name = "Ofynhaur"
+			}
+			
+			238 = {
+				set_state_name = "Nymyngr"
+			}
+			
+			218 = {
+				set_state_name = "Nortyf"
+			}
+			
+			318 = {
+				set_state_name = "Yringaur"
+			}
+			
+			287 = {
+				set_state_name = "Rintygr"
+			}
+			
+			291 = {
+				set_state_name = "Lothinnysorynthe"
+			}
+			
+			209 = {
+				set_state_name = "Onywasr"
+			}
+			
+			305 = {
+				set_state_name = "Varthysaur"
+			}
+			
+			299 = {
+				set_state_name = "Grosbaraur"
+			}
+			
+			294 = {
+				set_state_name = "Ruhyskyst"
+			}
 			
 			if = {
 				limit = {
 					has_government = puritan
 				}
 				STA = {
-					set_politics = {
-						parties = {
-							monarchy_absolute= { 
-								popularity = 13
-							}
+					set_popularities = {
 
-							monarchy_constitutional = {
-								popularity = 0
-							}
-							
-							republic_peasant = {
-								popularity = 0
-							}
-							republic_aristocrat = {
-								popularity = 0
-							}
-							republic_merchant = {
-								popularity = 0
-							}
-							theocrat = {
-								popularity = 27
-							}
-							puritan = {
-								popularity = 60
-							}
-						}
+						monarchy_absolute = 13
+
+						monarchy_constitutional = 0
+
+						republic_peasant = 0
+
+						republic_aristocrat = 0
+
+						republic_merchant = 0
+
+						theocrat = 27
+
+						puritan = 60
+					}
+					set_politics = {
 						ruling_party = puritan
 					}
 				}
@@ -407,32 +439,24 @@ commissiaries = {
 					has_government = theocrat
 				}
 				STA = {
-					set_politics = {
-						parties = {
-							monarchy_absolute= { 
-								popularity = 13
-							}
+					set_popularities = {
 
-							monarchy_constitutional = {
-								popularity = 0
-							}
-							
-							republic_peasant = {
-								popularity = 0
-							}
-							republic_aristocrat = {
-								popularity = 0
-							}
-							republic_merchant = {
-								popularity = 0
-							}
-							theocrat = {
-								popularity = 60
-							}
-							puritan = {
-								popularity = 27
-							}
-						}
+						monarchy_absolute = 13
+
+						monarchy_constitutional = 0
+
+						republic_peasant = 0
+
+						republic_aristocrat = 0
+
+						republic_merchant = 0
+
+						theocrat = 60
+
+						puritan = 27
+					}
+					
+					set_politics = {
 						ruling_party = theocrat
 					}
 				}
@@ -646,10 +670,38 @@ commissiaries = {
 
 			228 = {
 				set_state_name = "Nocthorin"
-			}			
-			set_province_name = {
-				id = 1101
-				name = "Nocthorin"
+			}
+			
+			226 = {
+				set_state_name = "Itheryn-Quwyl"
+			}
+			
+			225 = {
+				set_state_name = "Tygirhyln"
+			}
+			
+			227 = {
+				set_state_name = "Anthymarys"
+			}
+			
+			229 = {
+				set_state_name = "Tifsyne"
+			}
+			
+			279 = {
+				set_state_name = "Thistlyss"
+			}
+			
+			270 = {
+				set_state_name = "Quwyl-Yann"
+			}
+			
+			272 = {
+				set_state_name = "Taurbyring"
+			}
+			
+			256 = {
+				set_state_name = "Gorhafyn"
 			}
 			
 			
@@ -658,32 +710,23 @@ commissiaries = {
 					has_government = puritan
 				}
 				NOC = {
-					set_politics = {
-						parties = {
-							monarchy_absolute= { 
-								popularity = 13
-							}
+					set_popularities = {
 
-							monarchy_constitutional = {
-								popularity = 0
-							}
-							
-							republic_peasant = {
-								popularity = 0
-							}
-							republic_aristocrat = {
-								popularity = 0
-							}
-							republic_merchant = {
-								popularity = 0
-							}
-							theocrat = {
-								popularity = 27
-							}
-							puritan = {
-								popularity = 60
-							}
-						}
+						monarchy_absolute = 13
+
+						monarchy_constitutional = 0
+
+						republic_peasant = 0
+
+						republic_aristocrat = 0
+
+						republic_merchant = 0
+
+						theocrat = 27
+
+						puritan = 60
+					}
+					set_politics = {
 						ruling_party = puritan
 					}
 				}
@@ -693,32 +736,23 @@ commissiaries = {
 					has_government = theocrat
 				}
 				NOC = {
-					set_politics = {
-						parties = {
-							monarchy_absolute= { 
-								popularity = 13
-							}
+					set_popularities = {
 
-							monarchy_constitutional = {
-								popularity = 0
-							}
-							
-							republic_peasant = {
-								popularity = 0
-							}
-							republic_aristocrat = {
-								popularity = 0
-							}
-							republic_merchant = {
-								popularity = 0
-							}
-							theocrat = {
-								popularity = 60
-							}
-							puritan = {
-								popularity = 27
-							}
-						}
+						monarchy_absolute = 13
+
+						monarchy_constitutional = 0
+
+						republic_peasant = 0
+
+						republic_aristocrat = 0
+
+						republic_merchant = 0
+
+						theocrat = 60
+
+						puritan = 27
+					}
+					set_politics = {
 						ruling_party = theocrat
 					}
 				}
@@ -981,44 +1015,30 @@ commissiaries = {
 
 			234 = {
 				set_state_name = "Wystine"
-			}			
-			set_province_name = {
-				id = 4641
-				name = "Wystine"
 			}
-			
 			
 			if = {
 				limit = {
 					has_government = puritan
 				}
 				WIS = {
-					set_politics = {
-						parties = {
-							monarchy_absolute= { 
-								popularity = 13
-							}
+					set_popularities = {
 
-							monarchy_constitutional = {
-								popularity = 0
-							}
-							
-							republic_peasant = {
-								popularity = 0
-							}
-							republic_aristocrat = {
-								popularity = 0
-							}
-							republic_merchant = {
-								popularity = 0
-							}
-							theocrat = {
-								popularity = 27
-							}
-							puritan = {
-								popularity = 60
-							}
-						}
+						monarchy_absolute = 13
+
+						monarchy_constitutional = 0
+
+						republic_peasant = 0
+
+						republic_aristocrat = 0
+
+						republic_merchant = 0
+
+						theocrat = 27
+
+						puritan = 60
+					}
+					set_politics = {
 						ruling_party = puritan
 					}
 				}
@@ -1028,32 +1048,23 @@ commissiaries = {
 					has_government = theocrat
 				}
 				WIS = {
-					set_politics = {
-						parties = {
-							monarchy_absolute= { 
-								popularity = 13
-							}
+					set_popularities = {
 
-							monarchy_constitutional = {
-								popularity = 0
-							}
-							
-							republic_peasant = {
-								popularity = 0
-							}
-							republic_aristocrat = {
-								popularity = 0
-							}
-							republic_merchant = {
-								popularity = 0
-							}
-							theocrat = {
-								popularity = 60
-							}
-							puritan = {
-								popularity = 27
-							}
-						}
+						monarchy_absolute = 13
+
+						monarchy_constitutional = 0
+
+						republic_peasant = 0
+
+						republic_aristocrat = 0
+
+						republic_merchant = 0
+
+						theocrat = 60
+
+						puritan = 27
+					}
+					set_politics = {
 						ruling_party = theocrat
 					}
 				}
@@ -1148,12 +1159,6 @@ commissiaries = {
 						}
 						owns_state = 17
 					}
-					OR = {
-						KAL = {
-							is_puppet_of = ORD
-						}
-						owns_state = 34
-					}
 				}
 			}
 		}
@@ -1176,47 +1181,30 @@ commissiaries = {
 			
 			hidden_effect = {
 				NAS = {
-					add_state_core = 31
-					add_state_core = 32
 					add_state_core = 25
-					add_state_core = 51
-					add_state_core = 33
-					add_state_core = 61
-					add_state_core = 62
-					add_state_core = 52
 					add_state_core = 20
 					add_state_core = 21
-					add_state_core = 16
 					add_state_core = 22
-					add_state_core = 56
-					add_state_core = 53
-				}
-				
-				KAL = {
-					add_state_core = 65
-					add_state_core = 58
-					add_state_core = 37
-					add_state_core = 30
+					add_state_core = 19
 					add_state_core = 36
+					add_state_core = 50
+					add_state_core = 26
+					add_state_core = 75
+					add_state_core = 73
 					add_state_core = 723
-					add_state_core = 58
-					add_state_core = 35
-					add_state_core = 59
-					add_state_core = 60
-					add_state_core = 34
-					add_state_core = 63
 				}
 				
 				KRT = {
+					add_state_core = 16
 					add_state_core = 17
 					add_state_core = 18
+					add_state_core = 30
 					add_state_core = 19
-					add_state_core = 13
-					add_state_core = 45
 					add_state_core = 23
 					add_state_core = 24
-					add_state_core = 50
-					add_state_core = 14
+					add_state_core = 12
+					add_state_core = 27
+					add_state_core = 35
 				}
 			}
 				
@@ -1258,27 +1246,6 @@ commissiaries = {
 				}
 			}
 			
-			
-			if = {
-				limit = {
-					country_exists = KAL
-				}
-				NAS = {
-					annex_country = {
-						target = KAL
-						transfer_troops = yes
-					}
-				}
-			}
-			hidden_effect = {
-				every_state = {
-					limit = {
-						is_core_of = KAL
-					}
-					add_core_of = NAS
-				}
-			}
-			
 			hidden_effect = {
 				every_state = {
 					limit = {
@@ -1295,47 +1262,52 @@ commissiaries = {
 				}
 			}
 			
-
 			20 = {
 				set_state_name = "Nasthyrin"
 			}			
-			set_province_name = {
-				id = 4931
-				name = "Nasthyrin"
+
+			17 = {
+				set_state_name = "Cyrthinnis"
+			}			
+
+			26 = {
+				set_state_name = "Vislythe"
+			}			
+
+			75 = {
+				set_state_name = "Splythwiss"
 			}
 			
+			723 = {
+				set_state_name = "Thyrrintyl"
+			}			
+			
+			12 = {
+				set_state_name = "Xorynthaur"
+			}
 			
 			if = {
 				limit = {
 					has_government = puritan
 				}
 				NAS = {
-					set_politics = {
-						parties = {
-							monarchy_absolute= { 
-								popularity = 13
-							}
+					set_popularities = {
 
-							monarchy_constitutional = {
-								popularity = 0
-							}
-							
-							republic_peasant = {
-								popularity = 0
-							}
-							republic_aristocrat = {
-								popularity = 0
-							}
-							republic_merchant = {
-								popularity = 0
-							}
-							theocrat = {
-								popularity = 27
-							}
-							puritan = {
-								popularity = 60
-							}
-						}
+						monarchy_absolute = 13
+
+						monarchy_constitutional = 0
+
+						republic_peasant = 0
+
+						republic_aristocrat = 0
+
+						republic_merchant = 0
+
+						theocrat = 27
+
+						puritan = 60
+					}
+					set_politics = {
 						ruling_party = puritan
 					}
 				}
@@ -1345,32 +1317,23 @@ commissiaries = {
 					has_government = theocrat
 				}
 				NAS = {
-					set_politics = {
-						parties = {
-							monarchy_absolute= { 
-								popularity = 13
-							}
+					set_popularities = {
 
-							monarchy_constitutional = {
-								popularity = 0
-							}
-							
-							republic_peasant = {
-								popularity = 0
-							}
-							republic_aristocrat = {
-								popularity = 0
-							}
-							republic_merchant = {
-								popularity = 0
-							}
-							theocrat = {
-								popularity = 60
-							}
-							puritan = {
-								popularity = 27
-							}
-						}
+						monarchy_absolute = 13
+
+						monarchy_constitutional = 0
+
+						republic_peasant = 0
+
+						republic_aristocrat = 0
+
+						republic_merchant = 0
+
+						theocrat = 60
+
+						puritan = 27
+					}
+					set_politics = {
 						ruling_party = theocrat
 					}
 				}
@@ -1488,28 +1451,41 @@ commissiaries = {
 			hidden_effect = {
 				TRI = {
 					add_state_core = 67
-					add_state_core = 68
-					add_state_core = 69
-					add_state_core = 70
-					add_state_core = 40
 					add_state_core = 29
-					add_state_core = 49
-					add_state_core = 57
+					add_state_core = 43
 					add_state_core = 54
-					add_state_core = 55
-					add_state_core = 64
+					add_state_core = 44
+					add_state_core = 53
 				}
 				
 				NAV = {
 					add_state_core = 72
-					add_state_core = 46
-					add_state_core = 74
-					add_state_core = 75
-					add_state_core = 73
-					add_state_core = 47
 					add_state_core = 71
 					add_state_core = 66
+					add_state_core = 70
+					add_state_core = 69
+					add_state_core = 68
 				}
+				
+				KAL = {
+					add_state_core = 65
+					add_state_core = 55
+					add_state_core = 64
+					add_state_core = 57
+					add_state_core = 58
+					add_state_core = 45
+					add_state_core = 52
+					add_state_core = 58
+					add_state_core = 61
+					add_state_core = 59
+					add_state_core = 60
+					add_state_core = 34
+					add_state_core = 63
+					add_state_core = 62
+					add_state_core = 56
+					add_state_core = 51
+					add_state_core = 49
+				}	
 			}
 				
 			if = {
@@ -1530,6 +1506,26 @@ commissiaries = {
 						target = NAV
 						transfer_troops = yes
 					}
+				}
+			}
+			
+			if = {
+				limit = {
+					country_exists = KAL
+				}
+				TRI = {
+					annex_country = {
+						target = KAL
+						transfer_troops = yes
+					}
+				}
+			}
+			hidden_effect = {
+				every_state = {
+					limit = {
+						is_core_of = KAL
+					}
+					add_core_of = TRI
 				}
 			}
 			
@@ -1581,32 +1577,23 @@ commissiaries = {
 					has_government = puritan
 				}
 				TRI = {
-					set_politics = {
-						parties = {
-							monarchy_absolute= { 
-								popularity = 13
-							}
+					set_popularities = {
 
-							monarchy_constitutional = {
-								popularity = 0
-							}
-							
-							republic_peasant = {
-								popularity = 0
-							}
-							republic_aristocrat = {
-								popularity = 0
-							}
-							republic_merchant = {
-								popularity = 0
-							}
-							theocrat = {
-								popularity = 27
-							}
-							puritan = {
-								popularity = 60
-							}
-						}
+						monarchy_absolute = 13
+
+						monarchy_constitutional = 0
+
+						republic_peasant = 0
+
+						republic_aristocrat = 0
+
+						republic_merchant = 0
+
+						theocrat = 27
+
+						puritan = 60
+					}
+					set_politics = {
 						ruling_party = puritan
 					}
 				}
@@ -1616,32 +1603,23 @@ commissiaries = {
 					has_government = theocrat
 				}
 				TRI = {
-					set_politics = {
-						parties = {
-							monarchy_absolute= { 
-								popularity = 13
-							}
+					set_popularities = {
 
-							monarchy_constitutional = {
-								popularity = 0
-							}
-							
-							republic_peasant = {
-								popularity = 0
-							}
-							republic_aristocrat = {
-								popularity = 0
-							}
-							republic_merchant = {
-								popularity = 0
-							}
-							theocrat = {
-								popularity = 60
-							}
-							puritan = {
-								popularity = 27
-							}
-						}
+						monarchy_absolute = 13
+
+						monarchy_constitutional = 0
+
+						republic_peasant = 0
+
+						republic_aristocrat = 0
+
+						republic_merchant = 0
+
+						theocrat = 60
+
+						puritan = 27
+					}
+					set_politics = {
 						ruling_party = theocrat
 					}
 				}
@@ -1769,21 +1747,26 @@ commissiaries = {
 					add_state_core = 9
 					add_state_core = 10
 					add_state_core = 11
-					add_state_core = 12
-					add_state_core = 15
+					add_state_core = 13
+					add_state_core = 31
+					add_state_core = 14
 				}
 				
 				FEL = {
 					add_state_core = 28
-					add_state_core = 27
-					add_state_core = 26
+					add_state_core = 32
+					add_state_core = 37
 					add_state_core = 41
+					add_state_core = 15
 					add_state_core = 38
 					add_state_core = 39
 					add_state_core = 42
-					add_state_core = 44
-					add_state_core = 43
+					add_state_core = 47
+					add_state_core = 46
+					add_state_core = 33
+					add_state_core = 40
 					add_state_core = 48
+					add_state_core = 74
 				}
 			}
 				
@@ -1856,32 +1839,23 @@ commissiaries = {
 					has_government = puritan
 				}
 				IRT = {
-					set_politics = {
-						parties = {
-							monarchy_absolute= { 
-								popularity = 13
-							}
+					set_popularities = {
 
-							monarchy_constitutional = {
-								popularity = 0
-							}
-							
-							republic_peasant = {
-								popularity = 0
-							}
-							republic_aristocrat = {
-								popularity = 0
-							}
-							republic_merchant = {
-								popularity = 0
-							}
-							theocrat = {
-								popularity = 27
-							}
-							puritan = {
-								popularity = 60
-							}
-						}
+						monarchy_absolute = 13
+
+						monarchy_constitutional = 0
+
+						republic_peasant = 0
+
+						republic_aristocrat = 0
+
+						republic_merchant = 0
+
+						theocrat = 27
+
+						puritan = 60
+					}
+					set_politics = {
 						ruling_party = puritan
 					}
 				}
@@ -1891,32 +1865,23 @@ commissiaries = {
 					has_government = theocrat
 				}
 				IRT = {
-					set_politics = {
-						parties = {
-							monarchy_absolute= { 
-								popularity = 13
-							}
+					set_popularities = {
 
-							monarchy_constitutional = {
-								popularity = 0
-							}
-							
-							republic_peasant = {
-								popularity = 0
-							}
-							republic_aristocrat = {
-								popularity = 0
-							}
-							republic_merchant = {
-								popularity = 0
-							}
-							theocrat = {
-								popularity = 60
-							}
-							puritan = {
-								popularity = 27
-							}
-						}
+						monarchy_absolute = 13
+
+						monarchy_constitutional = 0
+
+						republic_peasant = 0
+
+						republic_aristocrat = 0
+
+						republic_merchant = 0
+
+						theocrat = 60
+
+						puritan = 27
+					}
+					set_politics = {
 						ruling_party = theocrat
 					}
 				}
@@ -1975,6 +1940,232 @@ commissiaries = {
 						expire = "1965.1.1"
 						ideology = monarchy_absolute_ideology
 						traits = {
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	ORD_pyrkhiv_commissiary = {
+		
+		icon = GFX_decision_ordorian_settler_governments
+		
+		allowed = {
+			original_tag = ORD
+		}
+		
+		available = {
+			OR = {
+				PRK = {
+					is_puppet_of = ORD
+				}
+				owns_state = 413
+			}
+		}
+		
+		cost = 0
+		
+		ai_will_do = {
+			factor = 200
+		}
+		
+		visible = {
+			has_country_flag = ORD_settler_governments_enabled
+			NOT = {
+				has_country_flag = ORD_settled_perkavland
+			}
+		}
+		
+		complete_effect = {
+			set_country_flag = ORD_settled_perkavland
+			if = {
+				limit = {
+					NOT = {
+						country_exists = PRK
+					}
+				}
+				release_puppet = PRK
+			}
+			413 = {
+				set_state_name = "Ythele-Resderin"
+			}			
+			set_province_name = {
+				id = 4527
+				name = "Ythele-Resderin"
+			}
+			if = {
+				limit = {
+					has_government = puritan
+				}
+				SKA = {
+					set_popularities = {
+
+						monarchy_absolute = 13
+
+						monarchy_constitutional = 0
+
+						republic_peasant = 0
+
+						republic_aristocrat = 0
+
+						republic_merchant = 0
+
+						theocrat = 27
+
+						puritan = 60
+					}
+					set_politics = {
+						ruling_party = puritan
+					}
+				}
+			}
+
+			if = {
+				limit = {
+					has_government = theocrat
+				}
+				PRK = {
+					set_popularities = {
+
+						monarchy_absolute = 13
+
+						monarchy_constitutional = 0
+
+						republic_peasant = 0
+
+						republic_aristocrat = 0
+
+						republic_merchant = 0
+
+						theocrat = 60
+
+						puritan = 27
+					}
+					
+					set_politics = {
+						ruling_party = theocrat
+					}
+				}
+			}
+			PRK = {
+				set_cosmetic_tag = PRK_OSG
+			}
+			PRK = {
+				set_party_name = {
+					ideology = puritan
+					long_name = OSG_party_name
+					name = OSG_party_name
+				}
+				set_party_name = {
+					ideology = theocrat
+					long_name = OSG_party_name
+					name = OSG_party_name
+				}
+				set_party_name = {
+					ideology = monarchy_absolute
+					long_name = OSG_party_name
+					name = OSG_party_name
+				}
+			}
+			
+			PRK = {
+				add_ideas = OSG_settler_government
+			}
+			
+			if = {
+				limit = {
+					PRK = {
+						has_idea = PRK_tribal_nation
+					}
+					PRK = {
+						remove_ideas = PRK_tribal_nation
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					PRK = {
+						has_idea = PRK_administrative_reform
+					}
+					PRK = {
+						remove_ideas = PRK_administrative_reform
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					PRK = {
+						has_idea = PRK_perkav_census_idea
+					}
+					PRK = {
+						remove_ideas = PRK_perkav_census_idea
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					PRK = {
+						has_idea = PRK_perkav_script
+					}
+					PRK = {
+						remove_ideas = PRK_perkav_script
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					PRK = {
+						has_idea = PRK_oral_tradition
+					}
+					PRK = {
+						remove_ideas = PRK_oral_tradition
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					PRK = {
+						has_idea = PRK_beginnings_literacy
+					}
+					PRK = {
+						remove_ideas = PRK_beginnings_literacy
+					}
+				}
+			}
+			
+			hidden_effect = {
+				PRK = {
+					create_country_leader = {
+						name = "Ycthar Venthryse"
+						desc = "politics_OSG_venthryse_desc"
+						picture = "gfx/leaders/OSG/Portrait_OSG_Venthryse.dds"
+						expire = "1965.1.1"
+						ideology = puritan_ideology
+						traits = {
+						}
+					}
+					create_country_leader = {
+						name = "Ycthar Venthryse"
+						desc = "politics_OSG_venthryse_desc"
+						picture = "gfx/leaders/OSG/Portrait_OSG_Venthryse.dds"
+						expire = "1965.1.1"
+						ideology = theocrat_ideology
+						traits = {		
+						}
+					}
+					create_country_leader = {
+						name = "Lacthyr Noventhys"
+						desc = "politics_OSG_noventhys_desc"
+						picture = "gfx/leaders/OSG/Portrait_OSG_Noventhys.dds"
+						expire = "1965.1.1"
+						ideology = monarchy_absolute_ideology
+						traits = {		
 						}
 					}
 				}

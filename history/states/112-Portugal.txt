@@ -2,16 +2,16 @@ state={
 	id=112
 	name="STATE_112"
 	provinces={
-		362 363 3658 6451 6905 7919 
+		3092 3879 7018 4463 7038 7000 4416 6935
 	}
 	state_category = metropolis
 	manpower=904219
 	buildings_max_level_factor=1.000
 		history={
 		owner = ORD
-		victory_points = { 363 49 }
+		victory_points = { 4463 49 }
 		buildings = {
-		363 = { naval_base = 8 }
+		4463 = { naval_base = 8 }
 		dockyard = 5
 		industrial_complex = 2
 		arms_factory = 3

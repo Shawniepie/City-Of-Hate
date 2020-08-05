@@ -85,6 +85,16 @@ add_ideas = {
 	dwarven_ancestor_worship_religion
 }
 
+add_opinion_modifier = {
+	target = SKA
+	modifier = bitter_rivals
+}
+
+add_opinion_modifier = {
+	target = KUR
+	modifier = bitter_rivals
+}
+
 create_country_leader = {
 	name = "Joris Zilversteen"
 	desc = "politics_BER_zilversteen_desc"

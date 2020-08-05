@@ -908,5 +908,36 @@ ideas = {
 				consumer_goods_factor = -0.15
 			}
 		}
+		
+		ORD_union_interred_elves = {
+		
+			allowed = {
+					always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			cancel = {
+				OR = {
+					ORD = {
+						country_exists = no
+					}
+					ORD = {
+						is_subject = yes
+					}
+				}
+			}
+			
+			picture = saf_history_of_segregation
+			
+			removal_cost = -1
+			
+			targeted_modifier = {
+				tag = UNG
+				intel_network_gain = -0.15
+			}
+		}
 	}
 }

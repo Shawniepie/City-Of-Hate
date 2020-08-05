@@ -1587,7 +1587,7 @@ focus = {#Dealing with the Exiles
 
 focus = {#Soft Power
 	id = HLZ_soft_power
-	icon = GFX_goal_generic_major_alliance
+	icon = GFX_focus_hlz_soft_power
 	cost = 1
 	prerequisite = {
 		focus = HLZ_dealing_exiles
@@ -1629,6 +1629,7 @@ focus = {#Excommunicate Traitoris
 			has_government = monarchy_absolute
 		}
 	}
+	cancel_if_invalid = no
 	completion_reward = {
 		add_political_power = -50
 		add_popularity = {
@@ -1717,6 +1718,7 @@ focus = {#Push for Banishment
 	ai_will_do = {
 		factor = 12
 	}
+	cancel_if_invalid = no
 	completion_reward = {
 		add_political_power = -75
 		if = {
@@ -1863,7 +1865,7 @@ focus = {#No Rest for the Wicked
 
 focus = {#Hard Power
 	id = HLZ_hard_power
-	icon = GFX_goal_generic_secret_weapon
+	icon = GFX_focus_hlz_hard_power
 	cost = 1
 	prerequisite = {
 		focus = HLZ_dealing_exiles
@@ -2505,7 +2507,7 @@ focus = {#Support Smallholders
 	}
 	available = {
 		has_government = republic_merchant
-		has_country_flag = HLZ_support_smallholders
+		has_country_flag = HLZ_smallholders_supported
 	}
 	mutually_exclusive = {
 		focus = HLZ_support_bauernherren
@@ -2973,27 +2975,14 @@ focus = {#Defensive_Stratagems
 		factor = 5
 	}
 	completion_reward = {
-		304 = {
+		297 = {
 			add_building_construction = {
 				type = bunker
 				level = 2
 				instant_build = yes
 				province = {
-					all_provinces = yes
-					limit_to_border = yes
-				}
-			}
-		}
-		305 = {
-			add_building_construction = {
-				type = bunker
-				level = 2
-				instant_build = yes
-				province = {
-					id = 2151
-					id = 8510
-					id = 4214
-					id = 1291
+					id = 8149
+					id = 5422
 				}
 			}
 		}
@@ -3505,6 +3494,7 @@ focus = {#Mandate Smallholds
 	}
 	available = {
 		has_government = republic_peasant
+		has_country_flag = HLZ_mandate_smallholds
 	}
 	x = 58
 	y = 6
@@ -3686,7 +3676,7 @@ focus = {#Princely Army
 		add_tech_bonus = {
 		bonus = 0.5
 		uses = 1
-		category = infantry_equipment
+		category = infantry_weapons	
 		}
 		army_experience = 15
 	}
@@ -3993,7 +3983,7 @@ focus = {#Naval Invasion Specialization
 					original_tag = SVT
 					original_tag = TEI
 				}
-				random_owned_controlled_state = {
+				any_owned_state = {
 					is_coastal = yes
 				}
 				is_puppet_of = UNG
@@ -4042,7 +4032,7 @@ focus = {#Restore the Former Glory
 
 focus = {
 	id = HLZ_the_fate_of_the_aristocracy
-	icon = GFX_goal_generic_demand_territory
+	icon = GFX_focus_hlz_fate_nobility
 	cost = 10
 	x = 63
 	y = 4
@@ -4068,7 +4058,7 @@ focus = {
 }
 focus = {
 	id = HLZ_redden_the_blue_blood
-	icon = GFX_goal_tripartite_pact
+	icon = GFX_focus_hlz_redden_blue_blood
 	cost = 10
 	prerequisite = {
 		focus = HLZ_the_fate_of_the_aristocracy
@@ -4097,7 +4087,7 @@ focus = {
 }
 focus = {
 	id = HLZ_officers_and_diplomats
-	icon = GFX_focus_generic_military_academy
+	icon = GFX_focus_hlz_officers_diplomats
 	cost = 10
 	prerequisite = {
 		focus = HLZ_redden_the_blue_blood
@@ -4196,7 +4186,7 @@ focus = {
 	relative_position_id = HLZ_the_fate_of_the_aristocracy
 
 	available = {
-		has_country_flag = HLZ_the_fate_of_the_aristocracy_opt1_flag
+		has_country_flag = HLZ_the_fate_of_the_aristocracy_opt3_flag
 		OR = {
 			has_government = republic_merchant
 			has_government = republic_peasant
@@ -4213,7 +4203,7 @@ focus = {
 }
 focus = {
 	id = HLZ_compensation_for_losses
-	icon = GFX_focus_mex_privatisation
+	icon = GFX_focus_hlz_compensate_nobles
 	cost = 10
 	prerequisite = {
 		focus = HLZ_exile_the_nobility
@@ -4268,7 +4258,7 @@ focus = {
 }
 focus = {
 	id = HLZ_seize_the_wealth
-	icon = GFX_focus_usa_reestablish_the_gold_standard
+	icon = GFX_focus_hlz_seize_wealth
 	cost = 10
 	prerequisite = {
 		focus = HLZ_exile_the_nobility
@@ -4740,7 +4730,7 @@ focus = {
 
 focus = {#Pressler's Coup
 	id = HLZ_pressler_triumphant
-	icon = GFX_focus_generic_support_the_left_right
+	icon = GFX_focus_hlz_pressler_triumphant
 	cost = 1
 	available = {
 		has_country_leader = {

@@ -33,3 +33,8 @@ IRT_OSG = {
 	color = rgb { 170 213 31 }
 	color_ui = rgb { 179 219 39 }
 }
+
+PRK_OSG = {
+	color = rgb { 170 213 31 }
+	color_ui = rgb { 179 219 39 }
+}

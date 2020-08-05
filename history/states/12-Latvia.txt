@@ -2,7 +2,7 @@ state={
 	id=12
 	name="STATE_12"
 	provinces={
-		673 1736 4485 4860 7537 
+		6748 2388 6708 4314 6657 4704
 	}
 	state_category = town
 	manpower=10192
@@ -10,12 +10,12 @@ state={
 	
 	history={
 		owner = GMR
-		victory_points = {7537 12}
+		victory_points = {2388 12}
 		buildings = {
 			infrastructure = 4
 			industrial_complex = 2
 			dockyard = 1
-			7537 = {
+			2388 = {
 				naval_base = 1
 			}
 		}

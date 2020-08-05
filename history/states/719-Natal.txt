@@ -2,8 +2,17 @@ state={
 	id=719
 	name="STATE_719"
 	provinces={
-		163 2265 2499 2500 3062 6981 8318 
+		6203 1597
 	}
-	manpower=0
+	state_category = rural
+	manpower=8922
 	buildings_max_level_factor=1.000
+	history={
+		owner = RMT
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+		}
+		add_core_of = RMT
+	}
 }

@@ -1,0 +1,32 @@
+spriteTypes = {
+
+	spriteType = { 
+		 name = "GFX_steel_road_button"
+		textureFile = "gfx/interface/steel_road_button.dds" 
+		noOfFrames = 1
+	}
+	
+	spriteType = { 
+		 name = "GFX_steel_road_icon"
+		textureFile = "gfx/interface/steel_road_icon.dds" 
+		noOfFrames = 1
+	}
+	
+	spriteType = { 
+		 name = "GFX_steel_road_bg"
+		textureFile = "gfx/interface/steel_road_bg.dds" 
+		noOfFrames = 1
+	}
+	
+	spriteType = { 
+		 name = "GFX_bordered_window"
+		textureFile = "gfx/interface/bordered_window.dds" 
+		noOfFrames = 1
+	}
+	
+	spriteType = { 
+		 name = "GFX_flag_smallest_overlay"
+		textureFile = "gfx/interface/flag_smallest_overlay.dds" 
+		noOfFrames = 1
+	}
+}

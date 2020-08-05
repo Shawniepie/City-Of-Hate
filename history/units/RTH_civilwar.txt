@@ -39,7 +39,7 @@ units = {
 
 	division = {
 		name = "Quellion Peasant's Self-Defense Guild"
-		location = 6393
+		location = 1261
 		division_template = "Rose Wardens"
 		start_experience_factor = 0.3
 
@@ -47,7 +47,7 @@ units = {
 
 	division = {
 		name = "Risthlarin Peasant's Militia"
-		location = 7118
+		location = 7211
 		division_template = "Peasant's Guard"
 		start_experience_factor = 0.1
 
@@ -55,7 +55,7 @@ units = {
 	
 	division = {
 		name = "Vrinnis Militia"
-		location = 7989
+		location = 3138
 		division_template = "Peasant's Guard"
 		start_experience_factor = 0.1
 
@@ -63,7 +63,7 @@ units = {
 
 	division = {
 		name = "Ytholine City Watch"
-		location = 2541
+		location = 7241
 		division_template = "Rose Wardens"
 		start_experience_factor = 0.3
 
@@ -71,7 +71,7 @@ units = {
 	
 	division = {
 		name = "Astrenar Hunter's Union"
-		location = 8044
+		location = 7413
 		division_template = "Rose Wardens"
 		start_experience_factor = 0.3
 
@@ -79,7 +79,7 @@ units = {
 	
 	division = {
 		name = "Peakwatcher Sentries"
-		location = 2712
+		location = 7128
 		division_template = "Rose Wardens"
 		start_experience_factor = 0.3
 
@@ -87,7 +87,7 @@ units = {
 
 	division = {
 		name = "Khorinor Militia"
-		location = 4070
+		location = 7104
 		division_template = "Rose Wardens"
 		start_experience_factor = 0.1
 
@@ -95,7 +95,7 @@ units = {
 
 	division = {
 		name = "Zerinthaur Miner's Self-Defense League"
-		location = 6347
+		location = 7782
 		division_template = "Rose Wardens"
 		start_experience_factor = 0.3
 
@@ -103,7 +103,7 @@ units = {
 
 	division = {
 		name = "Ytholine Basin Garrison"
-		location = 7247
+		location = 758
 		division_template = "Peasant's Guard"
 		start_experience_factor = 0.5
 

@@ -2,7 +2,7 @@ state={
 	id=91
 	name="STATE_91"
 	provinces={
-		18 19 20 6107 7710 
+		7027 4268 6988 1696 718 6882 168 2504
 	}
 	state_category = town
 	manpower=18347
@@ -11,7 +11,7 @@ state={
 	}
 	buildings_max_level_factor=1.000
 		history={	
-		victory_points = {19 19}
+		victory_points = {1696 19}
 		owner = ORD
 		buildings = {	
 		infrastructure = 4

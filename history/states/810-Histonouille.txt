@@ -1,0 +1,17 @@
+state={
+	id=810
+	name="STATE_810"
+	provinces={
+		2539 6064 6044 4494
+	}
+	state_category = pastoral
+	manpower=2020
+	buildings_max_level_factor=1.000
+	history={
+		owner = LIR
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = LIR
+	}
+}

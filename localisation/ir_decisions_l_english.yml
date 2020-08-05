@@ -145,6 +145,8 @@
  ORD_irythyn_commissiary_desc:0 "The heartlands of the old Realm have fallen into our hands! We shall begin colonization efforts immediately - soon, the vermin shall long for the times they toiled under Arthenon."
  ORD_triferyn_commissiary:0 "Establish the Triferyn Commissiary"
  ORD_triferyn_commissiary_desc:0 "The northermost regions of the Northern Plains have at long last come into our possession. Some may complain about the cold in those areas, but if our Lirothline kin can survive in the snow, an Ordorian can do it better."
+ ORD_pyrkhiv_commissiary:0 "Establish the Pyrkhiv Commissiary"
+ ORD_pyrkhiv_commissiary_desc:0 "Though the lands of the Pyrkhiv vermin are even more of a primitive backwater than those of Anythygynaur, some of our more adventerous spirits have shown a willingness to settle here. Additionally, high command is muttering something about creating somewhat of a penal colony down there. We should consider this."
  ORD_slave_economy:0 "Slave Revolts"
  ORD_slave_economy_desc:0 "The vermin are revolting against their natural superiors. This behaviour cannot be tolerated."
  ORD_crush_slave_revolt:0 "Crush the Revolt"
@@ -173,4 +175,7 @@
  plunder_schneefilde_desc:0 "Our lands are poor, but the Northmen are wealthy beyond belief. If we muster enough warriors, we can crack open their capital's defenses and take their riches for ourselves! \n §RIf we do not lead this raid ourselves soon, another warlord may take the glory for themselves!§!"
  PRK_plunder_schneefilde:0 "Sack Schneefilde"
  PRK_plunder_schneefilde_desc:0 "We have amassed an army larger than even the Elders can remember. Surely, we shall be able to defeat the Northmen's armies and plunder their city!"
- 
+ perkav_piracy:0 "Perkav Piracy"
+ perkav_piracy_desc:0 "Our people do not till the land or raise animals like our Northern neighbours. We take what we want by force, gaining glory and gold from raiding the coasts and plundering the ships of those weaker than us!"
+ PRK_perkav_piracy:0 "Launch a Raid"
+ PRK_perkav_piracy_desc:0 "It is time to hoist the Jolly Roger and set sail for plunder once again. Krostov favours the bold!"

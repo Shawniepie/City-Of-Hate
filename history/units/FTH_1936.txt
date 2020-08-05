@@ -48,7 +48,7 @@ units = {
 
 	division = {
 		name = "1st Regiment 'Die Veteranen'"
-		location = 8280
+		location = 2442
 		division_template = "Prinztruppen"
 		start_experience_factor = 0.5
 
@@ -56,7 +56,7 @@ units = {
 	
 	division = {
 		name = "2nd Regiment 'Hafenwache'"
-		location = 1115
+		location = 8936
 		division_template = "Prinztruppen"
 		start_experience_factor = 0.5
 
@@ -64,7 +64,7 @@ units = {
 	
 	division = {
 		name = "1st Cavalry 'Hafenritter'"
-		location = 7319
+		location = 3561
 		division_template = "Prinzritter"
 		start_experience_factor = 0.7
 
@@ -72,7 +72,7 @@ units = {
 	
 	division = {
 		name = "Fritzhafen City Watch"
-		location = 8124
+		location = 8753
 		division_template = "Stadtwache"
 		start_experience_factor = 0.05
 

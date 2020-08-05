@@ -2,8 +2,18 @@ state={
 	id=715
 	name="STATE_715"
 	provinces={
-		670 1259 1260 2498 4203 7126 
+		4820 6307 3043 6255
 	}
-	manpower=0
+	state_category = town
+	manpower=12468
 	buildings_max_level_factor=1.000
+	history={
+		victory_points = { 4820 11 }
+		owner = RMT
+		buildings = {
+			infrastructure = 7
+			arms_factory = 2
+		}
+		add_core_of = RMT
+	}
 }

@@ -23,15 +23,15 @@ units = {
 
 	division = {
 		name = "Felweyne Freewatch"
-		location = 3966
+		location = 3638
 		division_template = "Freewatch"
 		start_experience_factor = 0.3
 
 	}
 	
 	division = {
-		name = "Visleth Freewatch"
-		location = 5991
+		name = "Dernth Freewatch"
+		location = 6217
 		division_template = "Freewatch"
 		start_experience_factor = 0.3
 
@@ -39,7 +39,7 @@ units = {
 	
 	division = {
 		name = "Countryside Freewatch"
-		location = 6452
+		location = 2395
 		division_template = "Freewatch"
 		start_experience_factor = 0.3
 
@@ -47,7 +47,7 @@ units = {
 
 	division = {
 		name = "1st Paragons"
-		location = 7643
+		location = 6178
 		division_template = "Paragons"
 		start_experience_factor = 0.4
 	}	

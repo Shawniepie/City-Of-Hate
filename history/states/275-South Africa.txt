@@ -2,7 +2,7 @@ state={
 	id=275
 	name="STATE_275"
 	provinces={
-		424 425 427 4591 5650 5651 5761 6488 
+		2753 8923 2139 931 4992
 	}
 	state_category = town
 	manpower=12351
@@ -12,7 +12,7 @@ state={
 	}
 	history={
 		owner = UNG
-		victory_points = { 427 16 }
+		victory_points = { 931 16 }
 		buildings = {
 			infrastructure = 6
 			industrial_complex = 2

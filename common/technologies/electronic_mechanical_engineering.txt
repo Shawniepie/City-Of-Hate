@@ -2,7 +2,7 @@ technologies = {
 	electronic_mechanical_engineering = {
 
 		# small boost to research speed
-		research_speed_factor = 0.02
+		research_speed_factor = 0.03
 		
 		path = {
 			leads_to_tech = radio 
@@ -107,6 +107,10 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				tag = USA
+				factor = 4
+			}
 		}
 		
 		categories = {
@@ -136,6 +140,13 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				OR = {
+					tag = ENG
+					tag = USA
+				}
+				factor = 5
+			}
 			modifier = {
 				date < "1938.1.1"
 				factor = 0.5
@@ -181,6 +192,13 @@ technologies = {
 		ai_will_do = {
 			factor = 1
 			modifier = {
+				OR = {
+					tag = ENG
+					tag = USA
+				}
+				factor = 5
+			}
+			modifier = {
 				date < "1939.1.1"
 				factor = 0.5
 			}
@@ -222,6 +240,13 @@ technologies = {
 		ai_will_do = {
 			factor = 1
 			modifier = {
+				OR = {
+					tag = ENG
+					tag = USA
+				}
+				factor = 4
+			}
+			modifier = {
 				date < "1940.1.1"
 				factor = 0.5
 			}
@@ -261,6 +286,13 @@ technologies = {
 		ai_will_do = {
 			factor = 1
 			modifier = {
+				OR = {
+					tag = ENG
+					tag = USA
+				}
+				factor = 4
+			}
+			modifier = {
 				date < "1941.1.1"
 				factor = 0.5
 			}
@@ -296,6 +328,13 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				OR = {
+					tag = ENG
+					tag = USA
+				}
+				factor = 5
+			}
 		}
 		
 		categories = {
@@ -307,7 +346,7 @@ technologies = {
 	mechanical_computing = {
 
 		# small boost to research speed
-		research_speed_factor = 0.03
+		research_speed_factor = 0.04
 		
 		path = {
 			leads_to_tech = computing_machine 
@@ -339,7 +378,7 @@ technologies = {
 	computing_machine = {
 
 		# small boost to research speed
-		research_speed_factor = 0.03
+		research_speed_factor = 0.05
 		
 		path = {
 			leads_to_tech = improved_computing_machine 
@@ -390,7 +429,7 @@ technologies = {
 	improved_computing_machine = {
 
 		# small boost to research speed
-		research_speed_factor = 0.05
+		research_speed_factor = 0.08
 		
 		path = {
 			leads_to_tech = advanced_computing_machine 
@@ -430,6 +469,11 @@ technologies = {
 				factor = 3
 				date > "1941.1.1"
 			}
+
+			modifier = {
+				factor = 2
+				tag = GER
+			}
 		}
 		
 		categories = {
@@ -443,7 +487,7 @@ technologies = {
 	advanced_computing_machine = {
 
 		# small boost to research speed
-		research_speed_factor = 0.05
+		research_speed_factor = 0.08
 		
 		path = {
 			leads_to_tech = advanced_encryption 
@@ -491,7 +535,9 @@ technologies = {
 		
 		research_cost = 1
 		start_year = 1938
-		
+		allow_branch = {
+			NOT = { has_dlc = "La Resistance" }
+		}
 		folder = {
 			name = electronics_folder
 			position = { x = 0 y = 6 }
@@ -507,6 +553,16 @@ technologies = {
 				num_of_military_factories < 50
 				factor = 1.5 # not a major
 			}
+			modifier = {
+				factor = 3
+
+				tag = GER
+			}
+			modifier = {
+				factor = 3
+
+				tag = SOV
+			}
 		}
 		
 		categories = {
@@ -519,7 +575,9 @@ technologies = {
 
 		# encryption 2
 		encryption = 1
-		
+		allow_branch = {
+			NOT = { has_dlc = "La Resistance" }
+		}
 		research_cost = 1
 		start_year = 1940
 		
@@ -538,6 +596,16 @@ technologies = {
 				num_of_military_factories < 50
 				factor = 1.5 # not a major
 			}
+			modifier = {
+				factor = 3
+
+				tag = GER
+			}
+			modifier = {
+				factor = 3
+
+				tag = SOV
+			}
 		}
 		
 		categories = {
@@ -550,7 +618,9 @@ technologies = {
 
 		# encryption 3
 		encryption = 1
-		
+		allow_branch = {
+			NOT = { has_dlc = "La Resistance" }
+		}
 		research_cost = 1
 		start_year = 1942
 		
@@ -569,6 +639,16 @@ technologies = {
 				num_of_military_factories < 50
 				factor = 1.5 # not a major
 			}
+			modifier = {
+				factor = 3
+
+				tag = GER
+			}
+			modifier = {
+				factor = 3
+
+				tag = SOV
+			}
 		}
 		
 		categories = {
@@ -581,7 +661,9 @@ technologies = {
 
 		# decryption 1
 		decryption = 1
-		
+		allow_branch = {
+			NOT = { has_dlc = "La Resistance" }
+		}
 		research_cost = 1.5
 		start_year = 1938
 		
@@ -596,6 +678,16 @@ technologies = {
 				num_of_military_factories < 50
 				factor = 1.5 # not a major
 			}
+			modifier = {
+				factor = 3
+
+				tag = GER
+			}
+			modifier = {
+				factor = 3
+
+				tag = SOV
+			}
 		}
 		
 		categories = {
@@ -608,7 +700,9 @@ technologies = {
 
 		# decryption 2
 		decryption = 1
-		
+		allow_branch = {
+			NOT = { has_dlc = "La Resistance" }
+		}
 		research_cost = 1.5
 		start_year = 1940
 		
@@ -623,6 +717,16 @@ technologies = {
 				num_of_military_factories < 50
 				factor = 1.5 # not a major
 			}
+			modifier = {
+				factor = 3
+
+				tag = GER
+			}
+			modifier = {
+				factor = 3
+
+				tag = SOV
+			}
 		}
 		
 		categories = {
@@ -635,7 +739,9 @@ technologies = {
 
 		# decryption 3
 		decryption = 1
-		
+		allow_branch = {
+			NOT = { has_dlc = "La Resistance" }
+		}
 		research_cost = 1.5
 		start_year = 1942
 		
@@ -649,6 +755,16 @@ technologies = {
 			modifier = {
 				num_of_military_factories < 50
 				factor = 1.5 # not a major
+			}
+			modifier = {
+				factor = 3
+
+				tag = GER
+			}
+			modifier = {
+				factor = 3
+
+				tag = SOV
 			}
 		}
 		
@@ -677,6 +793,14 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 0.75
+			modifier = {
+				OR = {
+					tag = ENG
+					tag = USA
+					tag = JAP
+				}
+				factor = 3
+			}
 			modifier = {
 				OR = {
 					can_research = improved_fire_control_system
@@ -712,6 +836,14 @@ technologies = {
 			factor = 0.75
 			modifier = {
 				OR = {
+					tag = ENG
+					tag = USA
+					tag = JAP
+				}
+				factor = 3
+			}
+			modifier = {
+				OR = {
 					can_research = advanced_fire_control_system
 					has_tech = advanced_fire_control_system
 				}
@@ -744,6 +876,15 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 0.75
+			modifier = {
+				OR = {
+					tag = ENG
+					tag = USA
+					tag = JAP
+				}
+				factor = 3
+			}
+			
 		}
 		
 		categories = {
@@ -957,7 +1098,7 @@ technologies = {
 	
 	atomic_research = {
 
-		research_speed_factor = 0.02
+		research_speed_factor = 0.04
 		
 		path = {
 			leads_to_tech = nuclear_reactor 
@@ -990,6 +1131,10 @@ technologies = {
 				date > "1943.1.1"
 			}
 			
+			modifier = {
+				factor = 2
+				tag = USA
+			}
 		}
 		
 		categories = {
@@ -1018,6 +1163,10 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 3
+			modifier = {
+				tag = USA
+				factor = 2
+			}
 		}
 		
 		categories = {
@@ -1049,5 +1198,23 @@ technologies = {
 		categories = {
 			nuclear
 		}
+	}
+
+	lar_decryption_bonus_tech = {
+				
+		research_cost = 1.5 #Carrier Variant
+		start_year = 1944
+
+		# only from focus!!! #####
+		allow = {
+			always = no
+		}
+		decryption_power = 10
+
+		
+		ai_will_do = {
+			factor = 0
+		}
+		################
 	}
 }

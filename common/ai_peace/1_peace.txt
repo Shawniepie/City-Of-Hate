@@ -1,7 +1,8 @@
 #AI peace deal logic, the real peace deals happen in the events.
 #Eat as much as possible without making the map ugly
 #Bastardized KR code since they know what they're doing, unlike me. Massive shoutout to the Kaiserreich devs for being competent and wise sages of code.
-peace_default = {
+
+peace_default = {#Default peace option
 	enable = {
 		always = yes
 	}
@@ -29,8 +30,8 @@ peace_default = {
 		modifier = {
 			factor = 0
 			OR = {
-				tag = UNG
-				tag = GMR
+				original_tag = UNG
+				original_tag = GMR
 				is_puppet_of = UNG
 			}
 			has_war_with = RTH
@@ -40,19 +41,27 @@ peace_default = {
 		#Skaelinger doesn't take Rthaur land
 		modifier = {
 			factor = 0
-			tag = SKA
+			original_tag = SKA
 			has_war_with = ORD
 		}
 		
 		#Leave ordoria to the Rthaur
 		modifier = {
 			factor = 0
-			OR = {
-				tag = SKA
-			}
+			original_tag = SKA
 			has_war_with = ORD
 			RTH = {
 				has_war_with = ORD
+			}
+		}
+		
+		#Stahlhof won't take Arkanisturm land if fighting for Resmayer
+		modifier = {
+			factor = 0
+			original_tag = STA
+			has_war_with = ARK
+			ARB = {
+				has_war_with = ARK
 			}
 		}
 		

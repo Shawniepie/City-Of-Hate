@@ -57,6 +57,8 @@ country_event = {#Pro-Ordorian Coup
 				division_template = "Outrider Watchers"
 			}
 			load_oob = "RTH_civilwar"
+			
+			add_ideas = GENERIC_civil_war_isolation
 		}
 		
 		hidden_effect = {
@@ -64,43 +66,48 @@ country_event = {#Pro-Ordorian Coup
 			EOR = {
 				add_state_core = 122
 				add_state_core = 131
-				add_state_core = 142
-				add_state_core = 139
-				add_state_core = 123
+				add_state_core = 132
+				add_state_core = 135
+				add_state_core = 128
 				add_state_core = 125
 				add_state_core = 126
 				add_state_core = 127
-				add_state_core = 129
+				add_state_core = 119
 				add_state_core = 130
 				add_state_core = 124
+				add_state_core = 145
 				
-				add_state_core = 141
 				add_state_core = 133
+				add_state_core = 141
 				add_state_core = 134
 				add_state_core = 132
 				add_state_core = 118
 				add_state_core = 140
 				add_state_core = 138
 				add_state_core = 137
-				add_state_core = 145
 				add_state_core = 128
 				add_state_core = 143
 				add_state_core = 144
 				add_state_core = 135
 				add_state_core = 136
 				add_state_core = 119
+				add_state_core = 139
+				add_state_core = 142
+				add_state_core = 129
+				add_state_core = 123
 				
 				transfer_state = 122
 				transfer_state = 131
-				transfer_state = 142
-				transfer_state = 139
-				transfer_state = 123
+				transfer_state = 132
+				transfer_state = 135
+				transfer_state = 128
 				transfer_state = 125
 				transfer_state = 126
 				transfer_state = 127
-				transfer_state = 129
+				transfer_state = 119
 				transfer_state = 130
 				transfer_state = 124
+				transfer_state = 145
 				
 				load_oob = "EOR_civilwar"
 			}
@@ -110,41 +117,34 @@ country_event = {#Pro-Ordorian Coup
 				puppet = EOR
 			}
 			EOR = {
-				set_politics = {
-					parties = {
-						monarchy_absolute= { 
-							popularity = 15
-						}
+				set_popularities = {
+					monarchy_absolute = 15 
 
-						monarchy_constitutional = {
-							popularity = 4
-						}
-		
-						republic_peasant = {
-							popularity = 0
-						}
-						republic_aristocrat = {
-							popularity = 15
-						}
-						republic_merchant = {
-							popularity = 0
-						}
-						theocrat = {
-							popularity = 2
-						}
-						puritan = {
-							popularity = 64
-						}
-					}
+					monarchy_constitutional = 4
+	
+					republic_peasant = 0
+
+					republic_aristocrat = 15
+
+					republic_merchant = 0
+
+					theocrat = 2
+
+					puritan = 64
+
+				}
+				set_politics = {
 					ruling_party = puritan
 				}
+				
+				add_ideas = GENERIC_civil_war_isolation
 			}
 		}
 		
 		EOR = {
 			declare_war_on = {
 				target = RTH
-				type = annex_everything
+				type = civil_war
 			}
 		}
 	}
@@ -172,47 +172,71 @@ country_event = {#Pro-Ordorian Coup
 				division_template = "Outrider Watchers"
 			}
 			load_oob = "RTH_civilwar"
+			
+			add_ideas = GENERIC_civil_war_isolation
 		}
 		
 		hidden_effect = {
-			remove_state_core = 122
-			remove_state_core = 131
-			remove_state_core = 142
-			remove_state_core = 139
-			remove_state_core = 123
-			remove_state_core = 125
-			remove_state_core = 126
-			remove_state_core = 127
-			remove_state_core = 129
-			remove_state_core = 130
-			remove_state_core = 124
 
 			EOR = {
 				add_state_core = 122
 				add_state_core = 131
-				add_state_core = 142
-				add_state_core = 139
-				add_state_core = 123
+				add_state_core = 132
+				add_state_core = 135
+				add_state_core = 128
 				add_state_core = 125
 				add_state_core = 126
 				add_state_core = 127
-				add_state_core = 129
+				add_state_core = 119
 				add_state_core = 130
 				add_state_core = 124
+				add_state_core = 145
+				
+				add_state_core = 133
+				add_state_core = 141
+				add_state_core = 134
+				add_state_core = 132
+				add_state_core = 118
+				add_state_core = 140
+				add_state_core = 138
+				add_state_core = 137
+				add_state_core = 128
+				add_state_core = 143
+				add_state_core = 144
+				add_state_core = 135
+				add_state_core = 136
+				add_state_core = 119
+				add_state_core = 139
+				add_state_core = 142
+				add_state_core = 129
+				add_state_core = 123
 				
 				transfer_state = 122
 				transfer_state = 131
-				transfer_state = 142
-				transfer_state = 139
-				transfer_state = 123
+				transfer_state = 132
+				transfer_state = 135
+				transfer_state = 128
 				transfer_state = 125
 				transfer_state = 126
 				transfer_state = 127
-				transfer_state = 129
+				transfer_state = 119
 				transfer_state = 130
 				transfer_state = 124
-				
+				transfer_state = 145
+
 				load_oob = "EOR_civilwar"
+				
+				delete_unit_template_and_units = {
+					division_template = "Rose Wardens"
+				}
+				
+				delete_unit_template_and_units = {
+					division_template = "Peasant's Guard"
+				}
+				
+				delete_unit_template_and_units = {
+					division_template = "Outrider Watchers"
+				}
 			}
 			
 			EOR = {
@@ -223,36 +247,32 @@ country_event = {#Pro-Ordorian Coup
 			puppet = EOR
 		}
 		hidden_effect = {
-			set_politics = {
-				parties = {
-					monarchy_absolute= { 
-						popularity = 15
-					}
-					monarchy_constitutional = {
-						popularity = 4
-					}	
-					republic_peasant = {
-						popularity = 0
-					}
-					republic_aristocrat = {
-						popularity = 15
-					}
-					republic_merchant = {
-						popularity = 0
-					}
-					theocrat = {
-						popularity = 2
-					}
-					puritan = {
-						popularity = 64
-					}
+			EOR = {
+				set_popularities = {
+					monarchy_absolute = 15
+
+					monarchy_constitutional = 4
+
+					republic_peasant = 0
+
+					republic_aristocrat = 15
+
+					republic_merchant = 0
+
+					theocrat = 2
+
+					puritan = 64
 				}
-				ruling_party = puritan
+				set_politics = {
+					ruling_party = puritan
+				}
+				declare_war_on = {
+					target = RTH
+					type = civil_war
+				}
+				
+				add_ideas = GENERIC_civil_war_isolation
 			}
-		}
-		declare_war_on = {
-			target = RTH
-			type = annex_everything
 		}
 	}
 }
@@ -535,5 +555,153 @@ country_event = {#Second Rthaur Revolution - Skaelinger Can't!
 	option = {#We're on our own
 		name = rth.13.a
 		add_stability = -0.01
+	}
+}
+
+country_event = {#Union Offers Pact
+	id = rth.14
+	title = rth.14.t
+	desc = rth.14.d
+	picture = GFX_report_event_spr_anarchist_success
+	
+	is_triggered_only = yes
+	
+	option = {#Yes
+		name = rth.14.a
+		ai_chance = {
+			factor = 6
+			modifier = {
+				factor = 0.5
+				UNG = {
+					has_completed_focus = UNG_interment_act
+				}
+			}
+		}
+		set_country_flag = RTH_anti_ordorian_front
+		add_political_power = -25
+		UNG = {
+			country_event = {
+				days = 3
+				id = ung.28
+			}
+		}
+	}
+	
+	option = {#No
+		name = rth.14.b
+		ai_chance = {
+			factor = 3
+		}
+		add_war_support = 0.1
+		UNG = {
+			country_event = {
+				days = 3
+				id = ung.28
+			}
+		}
+	}
+}
+
+country_event = {#Time to leave the AOF
+	id = rth.15
+	title = rth.15.t
+	desc = rth.15.d
+	picture = GFX_report_event_spr_poum_militia
+	
+	trigger = {
+		is_in_faction_with = UNG
+		has_country_flag = RTH_anti_ordorian_front
+		NOT = {
+			OR = {
+				ORD = {
+					owns_state = 85
+					is_subject = no
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 4
+	}
+	
+	fire_only_once = yes
+	
+	option = {#Toodles
+		name = rth.15.a
+		clr_country_flag = RTH_anti_ordorian_front
+		leave_faction = yes
+		UNG = {
+			country_event = {
+				days = 3
+				id = ung.29
+			}
+		}
+	}
+}
+
+country_event = { # Union Grants Support
+	id = rth.16
+	title = rth.16.t
+	desc = rth.16.d
+	picture = GFX_report_event_korean_war_march
+	
+	is_triggered_only = yes 
+	
+	option = {#Wonderful
+		name = rth.16.a
+		swap_ideas = {
+			remove_idea = RTH_inexperienced_commanders
+			add_idea = RTH_unblooded_commanders
+		}
+	}
+}
+
+country_event = { # Union Offers Conditional Support
+	id = rth.17
+	title = rth.17.t
+	desc = rth.17.d
+	picture = GFX_report_event_japanese_chinese_surrender
+	
+	is_triggered_only = yes 
+	
+	option = {#Lol no
+		name = rth.17.a
+		ai_chance = {
+			factor = 5
+		}
+		add_stability = 0.05
+		UNG = {
+			country_event = {
+				id = ung.38
+				days = 12
+			}
+		}
+	}
+	
+	option = {#If we must
+		name = rth.17.b
+		ai_chance = {
+			factor = 1
+		}
+		swap_ideas = {
+			remove_idea = RTH_inexperienced_commanders
+			add_idea = RTH_unblooded_commanders
+		}
+		UNG = {
+			send_equipment = {
+				equipment = infantry_equipment
+				amount = 3000
+				target = RTH
+			}
+		}
+		add_political_power = -35
+		add_ideas = alyssyna_lavynthis
+		UNG = {
+			country_event = {
+				id = ung.39
+				days = 12
+			}
+		}
 	}
 }

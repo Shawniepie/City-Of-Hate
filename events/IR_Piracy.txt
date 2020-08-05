@@ -1,0 +1,163 @@
+### PIRACY EVENTS
+
+add_namespace = arr
+
+country_event = { #Fleet Raided!
+	id = arr.1
+	title = arr.1.t
+	desc = arr.1.d
+	picture = GFX_report_event_panay_incident
+	
+	is_triggered_only = yes
+	
+	option = { #Let's see the damage...
+		name = arr.1.a
+		
+		custom_effect_tooltip = piracy_damage_assessment_tt
+		
+		add_manpower = -32
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = -57
+		}
+		navy_experience = 5
+		
+		hidden_effect = {
+			random_list = {
+				60 = {# Random Trade Cargo
+					country_event = arr.2
+					days = 2
+				}
+				
+				30 = {# Military Cargo
+					country_event = arr.3
+					days = 2
+				}
+				
+				7 = {# Scholarly Tomes!
+					country_event = arr.4
+					days = 2
+				}
+				
+				3 = {# A Priceless Artifact!
+					country_event = arr.5
+					days = 2
+				}
+			}
+		}
+	}
+}
+
+country_event = { #Trade Cargo Lost!
+	id = arr.2
+	title = arr.2.t
+	desc = arr.2.d
+	picture = GFX_report_event_panay_incident
+	
+	is_triggered_only = yes
+	
+	option = { #Curses!
+	name = arr.2.a
+		add_timed_idea = {
+			idea = ARR_economy_plundered
+			days = 80
+		}
+		PRK = {
+			country_event = {
+				id = prk.22
+				days = 1
+			}
+		}
+	}
+}
+
+country_event = { #Military Cargo Lost!
+	id = arr.3
+	title = arr.3.t
+	desc = arr.3.d
+	picture = GFX_report_event_panay_incident
+	
+	is_triggered_only = yes
+	
+	option = { #Curses!
+	name = arr.3.a
+		add_timed_idea = {
+			idea = ARR_military_plundered
+			days = 80
+		}
+		PRK = {
+			country_event = {
+				id = prk.23
+				days = 1
+			}
+		}
+	}
+}
+
+country_event = { #Scholarly Cargo Lost!
+	id = arr.4
+	title = arr.4.t
+	desc = arr.4.d
+	picture = GFX_report_event_panay_incident
+	
+	is_triggered_only = yes
+	
+	option = { #Curses!
+	name = arr.4.a
+		add_timed_idea = {
+			idea = ARR_tech_plundered
+			days = 80
+		}
+		PRK = {
+			country_event = {
+				id = prk.24
+				days = 1
+			}
+		}
+	}
+}
+
+country_event = { #Artifact Lost!
+	id = arr.5
+	title = arr.5.t
+	desc = arr.5.d
+	picture = GFX_report_event_panay_incident
+	
+	is_triggered_only = yes
+	
+	option = { #Curses!
+	name = arr.5.a
+		add_political_power = -50
+		PRK = {
+			country_event = {
+				id = prk.25
+				days = 1
+			}
+		}
+	}
+}
+
+country_event = { #Perkav Raiders Fought Off
+	id = arr.6
+	title = arr.6.t
+	desc = arr.6.d
+	picture = GFX_report_event_merchant_ship_01
+	
+	is_triggered_only = yes
+	
+	option = { #Excellent
+	name = arr.6.a
+		add_manpower = -13
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = -8
+		}
+		navy_experience = 10
+		PRK = {
+			country_event = {
+				id = prk.27
+				days = 1
+			}
+		}
+	}
+}

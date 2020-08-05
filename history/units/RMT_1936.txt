@@ -1,0 +1,174 @@
+﻿division_template = {
+	name = "Hearthguards"	
+	regiments = {
+		garrison = { x = 0 y = 0 }
+		garrison = { x = 0 y = 1 }
+		garrison = { x = 0 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Tunnel Fighters"
+	regiments = {
+		men_at_arms = { x = 0 y = 0 }
+		men_at_arms = { x = 0 y = 1 }
+		men_at_arms = { x = 0 y = 2 }
+        men_at_arms = { x = 1 y = 0 }
+		men_at_arms = { x = 1 y = 1 }
+		men_at_arms = { x = 1 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Mountainbreakers"
+	regiments = {
+		dwarven_warriors = { x = 0 y = 0 }
+		dwarven_warriors = { x = 0 y = 1 }
+		dwarven_warriors = { x = 0 y = 2 }
+        dwarven_warriors = { x = 1 y = 0 }
+		dwarven_warriors = { x = 1 y = 1 }
+		dwarven_warriors = { x = 1 y = 2 }
+	}
+	support = 	{
+		engineer = { x = 0 y = 0 }
+	}
+}
+
+units = {
+
+	division = {
+		name = "Clan Skyldske"
+		location = 6195
+		division_template = "Mountainbreakers"
+		start_experience_factor = 0.9
+
+	}
+
+	division = {
+		name = "Clan Kolkeskün"
+		location = 4799
+		division_template = "Mountainbreakers"
+		start_experience_factor = 0.6
+
+	}
+
+	division = {
+		name = "Clan Rünteger"
+		location = 2477
+		division_template = "Mountainbreakers"
+		start_experience_factor = 0.6
+
+	}
+
+	division = {
+		name = "Clan Löthdriggen"
+		location = 3864
+		division_template = "Mountainbreakers"
+		start_experience_factor = 0.6
+
+	}
+
+	division = {
+		name = "Clan Mösterhask"
+		location = 5401
+		division_template = "Mountainbreakers"
+		start_experience_factor = 0.6
+
+	}
+	
+	division = {
+		name = "Clan Thülskys"
+		location = 6777
+		division_template = "Mountainbreakers"
+		start_experience_factor = 0.6
+
+	}
+
+	division = {
+		name = "Ghosjinur Hearthguards"
+		location = 5924
+		division_template = "Hearthguards"
+		start_experience_factor = 0.5
+
+	}
+
+	division = {
+		name = "Kaltumor Fire-Forged"
+		location = 3602
+		division_template = "Hearthguards"
+		start_experience_factor = 0.7
+
+	}
+	
+	division = {
+		name = "Lagtu Hearthguards"
+		location = 6215
+		division_template = "Hearthguards"
+		start_experience_factor = 0.5
+
+	}
+	
+	division = {
+		name = "Pisckurin Hearthguards"
+		location = 1623
+		division_template = "Hearthguards"
+		start_experience_factor = 0.5
+
+	}
+	
+	division = {
+		name = "Tost Hearthguards"
+		location = 4526
+		division_template = "Hearthguards"
+		start_experience_factor = 0.5
+
+	}
+	
+	division = {
+		name = "Ghistus Hearthguards"
+		location = 4820
+		division_template = "Hearthguards"
+		start_experience_factor = 0.5
+
+	}
+	
+	division = {
+		name = "Kurgo Hearthguards"
+		location = 769
+		division_template = "Hearthguards"
+		start_experience_factor = 0.5
+
+	}
+	
+	division = {
+		name = "Linorvu Hearthguards"
+		location = 5179
+		division_template = "Hearthguards"
+		start_experience_factor = 0.5
+
+	}
+	
+}
+
+### STARTING PRODUCTION ###
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_0
+			creator = "RMT"
+		}
+		requested_factories = 8
+		progress = 0.48
+		efficiency = 92
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+			creator = "RMT" 
+		}
+		requested_factories = 5
+		progress = 0.3
+		efficiency = 88
+	}
+}

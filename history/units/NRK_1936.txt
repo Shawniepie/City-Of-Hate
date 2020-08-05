@@ -48,7 +48,7 @@ units = {
 
 	division = {
 		name = "1st Regiment 'Stahlkeule'"
-		location = 4243
+		location = 2938
 		division_template = "Prinztruppen"
 		start_experience_factor = 0.5
 
@@ -56,7 +56,7 @@ units = {
 	
 	division = {
 		name = "2nd Regiment 'Die Achsen von Uringer'"
-		location = 773
+		location = 2100
 		division_template = "Prinztruppen"
 		start_experience_factor = 0.5
 
@@ -64,7 +64,7 @@ units = {
 	
 	division = {
 		name = "1st Cavalry 'Reikritter'"
-		location = 1800
+		location = 2154
 		division_template = "Prinzritter"
 		start_experience_factor = 0.7
 
@@ -72,7 +72,7 @@ units = {
 	
 	division = {
 		name = "Neureik City Watch"
-		location = 5867
+		location = 1316
 		division_template = "Stadtwache"
 		start_experience_factor = 0.05
 

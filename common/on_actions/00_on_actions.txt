@@ -1,5 +1,161 @@
 on_actions = {
 
+	#Sets the Steel Road
+	on_startup = {
+		effect = {
+			every_country = {
+				set_steel_road = yes
+			}
+		}
+	}
+	
+	#Sets states within Perkav raiding range and allows Perkavland to raid
+	on_startup = {
+		effect = {
+			WSZ = {
+				set_perkav_raid_target = yes
+			}
+			FTH = {
+				set_perkav_raid_target = yes
+			}
+			BER = {
+				set_perkav_raid_target = yes
+			}
+			TEI = {
+				set_perkav_raid_target = yes
+			}
+			SVT = {
+				set_perkav_raid_target = yes
+			}
+			NOC = {
+				set_perkav_raid_target = yes
+			}
+			HLZ = {
+				set_perkav_raid_target = yes
+			}
+			PRK = {
+				set_country_flag = PRK_can_raid
+		}
+	}
+	
+	#Sets Politics and Faith
+	on_startup = {
+		effect = {
+			every_country = {
+				country_event = {
+					id = ir.political.1
+				}
+				country_event = {
+					id = ir.political.3
+				}
+			}
+		}
+	}
+	
+	#Tells AI to not immediately leave faction
+	on_join_faction = {
+		effect = {
+			ROOT = {
+				set_country_flag = faction_friends
+			}
+		}
+	}
+	
+	on_leave_faction = {
+		effect = {
+			ROOT = {
+				clr_country_flag = faction_friends
+			}
+		}
+	}
+
+	#Sets Politics when Government Change
+	on_government_change = {
+		effect = {
+			ROOT = {
+				country_event = {
+					id = ir.political.2
+					days = 1
+				}
+				country_event = {
+					id = ir.political.1
+					days = 3
+				}
+			}
+			every_country = {
+				limit = {
+					has_government = puritan
+				}
+				country_event = {
+					id = ir.political.2
+					days = 1
+				}
+				country_event = {
+					id = ir.political.1
+					days = 3
+				}
+			}
+			every_country = {
+				country_event = {
+					id = ir.political.4
+					days = 1
+				}
+				country_event = {
+					id = ir.political.3
+					days = 3
+				}
+			}
+		}
+	}
+	
+	on_ruling_party_change = {
+		effect = {
+			ROOT = {
+				country_event = {
+					id = ir.political.2
+					days = 1
+				}
+				country_event = {
+					id = ir.political.1
+					days = 3
+				}
+			}
+			every_country = {
+				country_event = {
+					id = ir.political.4
+					days = 1
+				}
+				country_event = {
+					id = ir.political.3
+					days = 3
+				}
+			}
+		}
+	}
+	
+	#Sets Politics when War Declared (Workaround for Civil Wars)
+	on_declare_war = {
+		effect = {
+			ROOT = {
+				country_event = {
+					id = ir.political.2
+					days = 1
+				}
+				country_event = {
+					id = ir.political.1
+					days = 3
+				}
+			}
+		}
+	}
+	
+	#Checks population change
+	on_daily = {
+		effect = {
+			check_population_change = yes
+		}
+	}
+	
 	# country random events
 	#on_bi_yearly_pulse = {
 	#

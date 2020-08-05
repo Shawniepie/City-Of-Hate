@@ -35,3 +35,30 @@ ordorian_buddies = {
 		value = 200
 	}	
 }
+
+union_buddies = {
+	enable = {
+		tag = GMR
+		has_country_flag = GMR_ungerdaler_buddies
+		ORD = {
+			is_independent = yes
+		}
+	}
+	
+	abort = {
+		NOT = {
+			has_country_flag = GMR_ungerdaler_buddies
+		}
+	}
+	
+	ai_strategy = {
+		type = befriend
+		id = "UNG"			
+		value = 200
+	}
+	ai_strategy = {
+		type = alliance
+		id = "UNG"			
+		value = 200
+	}
+}

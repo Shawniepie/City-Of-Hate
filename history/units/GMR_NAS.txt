@@ -1,36 +1,36 @@
 ﻿units = {
 
 	division = {
-		name = "Quent Enforcers"
-		location = 6502
+		name = "Visleth Enforcers"
+		location = 396
 		division_template = "Enforcers"
 		start_experience_factor = 0.3
 	}
 	
 	division = {
-		name = "Renthin Enforcers"
-		location = 3639
+		name = "Xenthire Enforcers"
+		location = 1384
 		division_template = "Enforcers"
 		start_experience_factor = 0.3
 	}
 	
 	division = {
 		name = "Nastrogdar Black Gargoyles"
-		location = 4931
+		location = 6489
 		division_template = "Black Gargoyles"
 		start_experience_factor = 0.5
 	}
 
 	division = {
-		name = "Derneth Black Gargoyles"
-		location = 8815
+		name = "Poryth Black Gargoyles"
+		location = 2820
 		division_template = "Black Gargoyles"
 		start_experience_factor = 0.5
 	}
 
 	division = {
-		name = "Imper Black Gargoyles"
-		location = 6472
+		name = "Lasproff Black Gargoyles"
+		location = 6340
 		division_template = "Black Gargoyles"
 		start_experience_factor = 0.5
 	}

@@ -2,7 +2,7 @@ state={
 	id=333
 	name="STATE_333"
 	provinces={
-		936 937 4223 4225 4226 5565 7014 8171 
+		9068 1237 9096 9074 4093 2202 9138 9159 4715
 	}
 	state_category = pastoral
 	resources = {

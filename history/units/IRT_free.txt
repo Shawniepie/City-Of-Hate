@@ -25,37 +25,37 @@ units = {
 
 	division = {
 		name = "Ierethayne Freewatch"
-		location = 3109
+		location = 3069
 		division_template = "Freewatch"
 		start_experience_factor = 0.3
 
 	}
 	
 	division = {
-		name = "Rothanar Freewatch"
-		location = 6038
+		name = "Kirgann Freewatch"
+		location = 2316
 		division_template = "Freewatch"
 		start_experience_factor = 0.3
 
 	}
 
 	division = {
-		name = "1st Silver Gargoyles"
-		location = 3110
+		name = "1st Ierethayne Silver Gargoyles"
+		location = 1768
 		division_template = "Silver Gargoyles"
 		start_experience_factor = 0.5
 	}
 	
 	division = {
-		name = "2nd Silver Gargoyles"
-		location = 3217
+		name = "2nd Ierethayne Silver Gargoyles"
+		location = 6630
 		division_template = "Silver Gargoyles"
 		start_experience_factor = 0.5
 	}
 
 	division = {
-		name = "3rd Silver Gargoyles"
-		location = 7537
+		name = "3rd Ierethayne Silver Gargoyles"
+		location = 6225
 		division_template = "Silver Gargoyles"
 		start_experience_factor = 0.5
 	}

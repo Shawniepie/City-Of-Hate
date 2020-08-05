@@ -16,35 +16,35 @@ units = {
 
 	division = {
 		name = "Botev's Warband"
-		location = 8189
+		location = 9001
 		division_template = "Perkav Raider Mercenaries"
 		start_experience_factor = 1
 	}
 	
 	division = {
 		name = "Warriors of Stehlík"
-		location = 420 #nice
+		location = 2841
 		division_template = "Perkav Raider Mercenaries"
 		start_experience_factor = 0.5
 	}
 	
 	division = {
 		name = "Vladislavovna's Warriors"
-		location = 840
+		location = 9048
 		division_template = "Perkav Raider Mercenaries"
 		start_experience_factor = 0.5
 	}
 	
 	division = {
 		name = "Szczesny's Raiders"
-		location = 7240
+		location = 4322
 		division_template = "Perkav Raider Mercenaries"
 		start_experience_factor = 0.5
 	}
 	
 	division = {
 		name = "Raiders of Macháčková"
-		location = 842
+		location = 2623
 		division_template = "Perkav Raider Mercenaries"
 		start_experience_factor = 0.5
 	}

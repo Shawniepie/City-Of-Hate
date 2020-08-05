@@ -1,27 +1,21 @@
 state={
 	id=13
 	name="STATE_13"
-
+	provinces={
+		6443 805 6476 4237 4101 6479 1365
+	}
+	
 	history={
 		owner = GMR
-		victory_points = { 2285 19}
+		victory_points = { 1731 8 }
 		buildings = {
-			infrastructure = 5
-			industrial_complex = 3
-			arms_factory = 1
-			dockyard = 1
-			2285 = {
-				naval_base = 3
-			}
+			infrastructure = 4
+			industrial_complex = 2
 		}
 		add_core_of = GMR
-
 	}
-
-	provinces={
-		343 2285 4564 5169 5196 5197 8219 
-	}
-	state_category = large_town
+	
+	state_category = town
 	manpower=18253
 	buildings_max_level_factor=1.000
 }

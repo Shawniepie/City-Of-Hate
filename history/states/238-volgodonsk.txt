@@ -2,14 +2,14 @@ state={
 	id=238
 	name="STATE_238"
 	provinces={
-		1235 1236 1237 1238 7043 7088 7089 8428 8442 
+		2245 4566 8258 3590
 	}
 	state_category = town
 	manpower=16091
 	buildings_max_level_factor=1.000
 	history={
 		owner = ARK
-		victory_points = { 1235 11 }
+		victory_points = { 4566 11 }
 		buildings = {
 			infrastructure = 5
 			industrial_complex = 1

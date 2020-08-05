@@ -36,7 +36,7 @@ units = {
 
 	division = {
 		name = "1st Pure Militia"
-		location = 2889
+		location = 3504
 		division_template = "Grove Guards"
 		start_experience_factor = 0.3
 
@@ -44,7 +44,7 @@ units = {
 
 	division = {
 		name = "2nd Pure Militia"
-		location = 17
+		location = 5221
 		division_template = "Grove Guards"
 		start_experience_factor = 0.3
 
@@ -52,7 +52,7 @@ units = {
 
 	division = {
 		name = "3rd Pure Militia"
-		location = 20
+		location = 7773
 		division_template = "Grove Guards"
 		start_experience_factor = 0.3
 
@@ -60,7 +60,7 @@ units = {
 
 	division = {
 		name = "4th Pure Militia"
-		location = 111
+		location = 7797
 		division_template = "Grove Guards"
 		start_experience_factor = 0.3
 
@@ -68,7 +68,7 @@ units = {
 
 	division = {
 		name = "5th Pure Militia"
-		location = 6202
+		location = 86
 		division_template = "Grove Guards"
 		start_experience_factor = 0.3
 
@@ -76,7 +76,7 @@ units = {
 	
 	division = {
 		name = "6th Pure Militia"
-		location = 3994
+		location = 7187
 		division_template = "Grove Guards"
 		start_experience_factor = 0.3
 
@@ -84,7 +84,7 @@ units = {
 
 	division = {
 		name = "7th Pure Militia"
-		location = 8554
+		location = 2441
 		division_template = "Grove Guards"
 		start_experience_factor = 0.3
 
@@ -92,23 +92,7 @@ units = {
 	
 	division = {
 		name = "8th Pure Militia"
-		location = 7121
-		division_template = "Grove Guards"
-		start_experience_factor = 0.3
-
-	}
-	
-	division = {
-		name = "9th Pure Militia"
-		location = 5468
-		division_template = "Grove Guards"
-		start_experience_factor = 0.3
-
-	}
-	
-	division = {
-		name = "10th Pure Militia"
-		location = 807
+		location = 4598
 		division_template = "Grove Guards"
 		start_experience_factor = 0.3
 
@@ -116,21 +100,21 @@ units = {
 
 	division = {
 		name = "1st Trueborn"
-		location = 6143
+		location = 4464
 		division_template = "Bladesingers"
 		start_experience_factor = 1.2
 	}
 
 	division = {
 		name = "2nd Trueborn"
-		location = 5302
+		location = 7628
 		division_template = "Bladesingers"
 		start_experience_factor = 0.5
 	}
 
 	division = {
 		name = "3rd Trueborn"
-		location = 457
+		location = 2502
 		division_template = "Bladesingers"
 		start_experience_factor = 0.5
 
@@ -138,63 +122,49 @@ units = {
 
 	division = {
 		name = "4th Trueborn"
-		location = 4186
+		location = 7739
 		division_template = "Bladesingers"
 		start_experience_factor = 0.5
 	}
 
 	division = {
 		name = "5th Trueborn"
-		location = 2540
+		location = 3159
 		division_template = "Bladesingers"
 		start_experience_factor = 0.5
 	}
 
 	division = {
 		name = "6th Trueborn"
-		location = 1649
+		location = 60
 		division_template = "Bladesingers"
 		start_experience_factor = 0.5
 	}
 
 	division = {
 		name = "7th Trueborn"
-		location = 7764
+		location = 1913
 		division_template = "Bladesingers"
 		start_experience_factor = 0.5
 	}
 
 	division = {
 		name = "8th Trueborn"
-		location = 8175
-		division_template = "Bladesingers"
-		start_experience_factor = 0.5
-	}
-
-	division = {
-		name = "9th Trueborn"
-		location = 5200
+		location = 3998
 		division_template = "Bladesingers"
 		start_experience_factor = 0.5
 	}
 
 	division = {
 		name = "1st Pure Rangers"
-		location = 57
+		location = 5124
 		division_template = "Pure Rangers"
 		start_experience_factor = 0.4
 	}
 
 	division = {
 		name = "2nd Pure Rangers"
-		location = 7542
-		division_template = "Pure Rangers"
-		start_experience_factor = 0.4
-	}
-
-	division = {
-		name = "3rd Pure Rangers"
-		location = 5903
+		location = 148
 		division_template = "Pure Rangers"
 		start_experience_factor = 0.4
 	}

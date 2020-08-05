@@ -24,36 +24,36 @@ division_template = {
 units = {
 
 	division = {
-		name = "Quent Militia"
-		location = 6502
+		name = "Visleth Fieldwatch"
+		location = 396
 		division_template = "Fieldwatch"
 		start_experience_factor = 0.3
 	}
 	
 	division = {
-		name = "Renthin Fieldwatch"
-		location = 3639
+		name = "Xenthire Fieldwatch"
+		location = 1384
 		division_template = "Fieldwatch"
 		start_experience_factor = 0.3
 	}
 	
 	division = {
-		name = "Nastrodoge Farmer's Guard"
-		location = 4931
+		name = "Nastrogdar Farmer's Guard"
+		location = 6489
 		division_template = "Farmer's Guard"
 		start_experience_factor = 0.5
 	}
 
 	division = {
-		name = "Derneth Farmer's Guard"
-		location = 8815
+		name = "Poryth Farmer's Guard"
+		location = 2820
 		division_template = "Farmer's Guard"
 		start_experience_factor = 0.5
 	}
 
 	division = {
-		name = "Imper Farmer's Guard"
-		location = 6472
+		name = "Lasproff Farmer's Guard"
+		location = 6340
 		division_template = "Farmer's Guard"
 		start_experience_factor = 0.5
 	}

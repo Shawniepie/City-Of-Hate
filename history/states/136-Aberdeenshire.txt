@@ -2,14 +2,13 @@ state={
 	id=136
 	name="STATE_136"
 	provinces={
-		2541 2706 6246 7247 7656 8049 
+		7313 7276 1973 4778 4959 3715
 	}
 	state_category = town
 	manpower=15293
-	resources = { oil = 13 }
 	buildings_max_level_factor=1.000
 		history={
-		victory_points = { 2541 16 }
+		victory_points = { 4959 16 }
 		owner = RTH
 		buildings = {	
 		infrastructure = 5

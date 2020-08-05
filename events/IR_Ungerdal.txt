@@ -16,6 +16,9 @@ country_event = {# Ordorian Overtures
 		name = ung.1.a
 		ai_chance = {
 			factor = 5
+			modifier = {
+				has_completed_focus = UNG_expansionism
+			}
 		}
 		hidden_effect = {
 			ORD = {
@@ -484,32 +487,24 @@ country_event = { #The Union Shattered
 				ORD = {
 					puppet = STA
 				}
-				STA = {
+				STA = {					
+					set_popularities = {
+						monarchy_absolute = 57 
+
+						monarchy_constitutional = 0
+						
+						republic_peasant = 9
+
+						republic_aristocrat = 0
+
+						republic_merchant = 6
+
+						theocrat = 12
+
+						puritan = 16
+
+					}
 					set_politics = {
-						parties = {
-							monarchy_absolute= { 
-								popularity = 57
-							}
-							monarchy_constitutional = {
-								popularity = 0
-							}
-							
-							republic_peasant = {
-								popularity = 9
-							}
-							republic_aristocrat = {
-								popularity = 0
-							}
-							republic_merchant = {
-								popularity = 6
-							}
-							theocrat = {
-								popularity = 12
-							}
-							puritan = {
-								popularity = 16
-							}
-						}
 						ruling_party = monarchy_absolute
 					}
 				}
@@ -522,9 +517,9 @@ country_event = { #The Union Shattered
 					UNG = {
 						is_in_faction = yes
 					}
-					UNG = {
-						dismantle_faction = yes
-					}
+				}
+				UNG = {
+					dismantle_faction = yes
 				}
 			}
 		}
@@ -861,5 +856,990 @@ country_event = {#Mutual Guarantees with Perkavland
 				active = yes
 			}
 		}
+	}
+}
+
+country_event = {#Looking Outwards
+	id = ung.25
+	title = ung.25.t 
+	desc = ung.25.d
+	picture = GFX_report_event_fascist_speech
+	
+	is_triggered_only = yes
+	
+	option = {#Expansionism
+		name = ung.25.a
+		ai_chance = {
+			factor = 1
+		}
+		add_war_support = 0.03
+		set_country_flag = UNG_expansionist_flag
+	}
+	
+	option = {#Soft Power
+		name = ung.25.b
+		ai_chance = {
+			factor = 20
+		}
+		add_stability = 0.03
+		set_country_flag = UNG_soft_power_flag
+	}
+}
+
+country_event = {#Tlarthingia Rejects
+	id = ung.26
+	title = ung.26.t 
+	desc = ung.26.d
+	picture = GFX_report_event_soviet_purge_trial
+	
+	is_triggered_only = yes
+	
+	option = {#Do Nothing
+		name = ung.26.a
+		ai_chance = {
+			factor = 5
+		}
+		TLA = {
+			add_opinion_modifier = {
+				target = UNG
+				modifier = annoyed_opinion
+			}
+			set_country_flag = UNG_tlarthingia_defiant
+		}
+	}
+	
+	option = {#Revoke Guarantees
+		name = ung.26.b
+		ai_chance = {
+			factor = 4
+		}
+		diplomatic_relation = {
+			country = TLA
+			relation = guarantee
+			active = no
+		}
+		TLA = {
+			add_opinion_modifier = {
+				target = UNG
+				modifier = threatened_opinion
+			}
+			set_country_flag = UNG_tlarthingia_defiant
+		}
+	}
+
+	option = {#War! - THIS OPTION SHOULD INCREASE SUPPORT FOR SCHWARZENBACH
+		name = ung.26.c
+		ai_chance = {
+			factor = 2
+		}
+		every_country = {
+			limit = {
+				is_subject_of = UNG
+			}
+			add_opinion_modifier = {
+				target = UNG
+				modifier = illegitimate_war
+			}
+		}
+		add_stability = -0.1
+		diplomatic_relation = {
+			country = TLA
+			relation = guarantee
+			active = no
+		}
+		declare_war_on = {
+			type = annex_everything
+			target = TLA
+		}
+	}
+}
+
+country_event = {# Rthauiaur Accepts
+	id = ung.27
+	title = ung.27.t
+	desc = ung.27.d
+	picture = GFX_report_event_spr_anarchists2
+
+	is_triggered_only = yes
+
+	option = { # Excellent
+		name = ung.27.a
+		if = {
+			limit = {
+				UNG = {
+					is_in_faction_with = ORD
+				}
+			}
+			leave_faction = yes
+		}
+		if = {
+			limit = {
+				is_in_faction = no
+			}
+			create_faction = anti_ordorian_alliance
+			add_to_faction = RTH
+		}
+		if = {
+			limit = {
+				is_in_faction = yes
+			}
+			add_to_faction = RTH
+			set_country_flag = UNG_anti_ordorian_alliance_flag
+		}
+		reverse_add_opinion_modifier = {
+			target = ORD
+			modifier = targeted_by_faction
+		}
+		ORD = {
+			add_opinion_modifier = {
+				target = RTH
+				modifier = targeted_by_faction
+			}
+		}
+	}
+}
+
+country_event = {# Rthauiaur Declines
+	id = ung.28
+	title = ung.28.t
+	desc = ung.28.d
+	picture = GFX_report_event_spr_falange_troops
+
+	is_triggered_only = yes
+
+	option = { # Damn
+		name = ung.28.a
+		add_political_power = -35
+		add_opinion_modifier = {
+			target = RTH
+			modifier = UNG_peasant_rabble
+		}
+		reverse_add_opinion_modifier = {
+			target = RTH
+			modifier = RTH_monarchist_scum
+		}
+	}
+}
+
+country_event = {# Rthauiaur Ends AOF
+	id = ung.29
+	title = ung.29.t
+	desc = ung.29.d
+	picture = GFX_report_event_spr_falange_troops
+
+	is_triggered_only = yes
+
+	option = { # Damn
+		name = ung.29.a
+		if = {
+			limit = {
+				has_country_flag = UNG_anti_ordorian_alliance_flag
+			}
+			dismantle_faction = yes
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = UNG_anti_ordorian_alliance_flag
+				}
+			}
+			RTH = {
+				leave_faction = yes
+			}
+		}
+	}
+}
+
+country_event = {# Lirothlind Accepts
+	id = ung.30
+	title = ung.30.t
+	desc = ung.30.d
+	picture = GFX_report_event_spr_anarchists2
+
+	is_triggered_only = yes
+
+	option = { # Excellent
+		name = ung.30.a
+		if = {
+			limit = {
+				UNG = {
+					is_in_faction_with = GMR
+				}
+			}
+			leave_faction = yes
+		}
+		if = {
+			limit = {
+				is_in_faction = no
+			}
+			create_faction = anti_arthenon_alliance
+			add_to_faction = LIR
+		}
+		if = {
+			limit = {
+				is_in_faction = yes
+			}
+			add_to_faction = LIR
+		}
+		reverse_add_opinion_modifier = {
+			target = GMR
+			modifier = targeted_by_faction
+		}
+		GMR = {
+			add_opinion_modifier = {
+				target = LIR
+				modifier = targeted_by_faction
+			}
+		}
+		if = {
+			limit = {
+				has_idea = UNG_trade_realm
+			}
+			remove_ideas = UNG_trade_realm
+		}
+		if = {
+			limit = {
+				GMR = {
+					has_idea = GMR_trade_union
+				}
+			}
+			GMR = {
+				remove_ideas = GMR_trade_union
+			}
+		}
+	}
+}
+
+country_event = {# Lirothlind Refuses
+	id = ung.31
+	title = ung.31.t
+	desc = ung.31.d
+	picture = GFX_report_event_spr_falange_troops
+
+	is_triggered_only = yes
+
+	option = { # Too bad
+		name = ung.31.a
+		remove_opinion_modifier = {
+			target = LIR
+			modifier = supportive_opinion
+		}
+		add_opinion_modifier = {
+			target = LIR
+			modifier = annoyed_opinion
+		}
+		LIR = {
+			remove_opinion_modifier = {
+				target = UNG
+				modifier = annoyed_opinion
+			}
+		}
+	}
+}
+
+country_event = {# Rimatu Accepts
+	id = ung.32
+	title = ung.32.t
+	desc = ung.32.d
+	picture = GFX_report_event_spr_anarchists2
+
+	is_triggered_only = yes
+
+	option = { # Excellent
+		name = ung.32.a
+		if = {
+			limit = {
+				UNG = {
+					is_in_faction_with = GMR
+				}
+			}
+			leave_faction = yes
+		}
+		if = {
+			limit = {
+				is_in_faction = no
+			}
+			create_faction = anti_arthenon_alliance
+			add_to_faction = RMT
+		}
+		if = {
+			limit = {
+				is_in_faction = yes
+			}
+			add_to_faction = RMT
+		}
+		reverse_add_opinion_modifier = {
+			target = GMR
+			modifier = targeted_by_faction
+		}
+		GMR = {
+			add_opinion_modifier = {
+				target = RMT
+				modifier = targeted_by_faction
+			}
+		}
+		if = {
+			limit = {
+				has_idea = UNG_trade_realm
+			}
+			remove_ideas = UNG_trade_realm
+		}
+		if = {
+			limit = {
+				GMR = {
+					has_idea = GMR_trade_union
+				}
+			}
+			GMR = {
+				remove_ideas = GMR_trade_union
+			}
+		}
+	}
+}
+
+country_event = {# Rimatu Refuses
+	id = ung.33
+	title = ung.33.t
+	desc = ung.33.d
+	picture = GFX_report_event_spr_falange_troops
+
+	is_triggered_only = yes
+
+	option = { # Too bad
+		name = ung.33.a
+		remove_opinion_modifier = {
+			target = RMT
+			modifier = supportive_opinion
+		}
+		add_opinion_modifier = {
+			target = RMT
+			modifier = annoyed_opinion
+		}
+		RMT = {
+			remove_opinion_modifier = {
+				target = UNG
+				modifier = annoyed_opinion
+			}
+		}
+	}
+}
+
+country_event = {#Trust Elves?
+	id = ung.34
+	title = ung.34.t
+	desc = ung.34.d
+	picture = GFX_report_event_long_march
+	
+	is_triggered_only = yes
+	
+	option = {#Trust Elves!
+		name = ung.34.a
+		ai_chance = {
+			factor = 5
+		}
+		set_country_flag = UNG_trusting_elves
+	}
+	
+	option = {#Mistrust Elves!
+		name = ung.34.b
+		ai_chance = {
+			factor = 3
+		}
+		set_country_flag = UNG_not_trusting_elves
+	}
+}
+
+country_event = {#Lax Lizards
+	id = ung.35
+	title = ung.35.t
+	desc = ung.35.d
+	picture = GFX_report_event_spr_falangist_troops2
+	
+	is_triggered_only = yes
+	
+	option = {#Remind them of their obligations
+		name = ung.35.a
+		ai_chance = {
+			factor = 5
+		}
+		set_country_flag = UNG_pressuring_tlarthingia
+	}
+	
+	option = {#Yeet Lizards
+		name = ung.35.b
+		ai_chance = {
+			factor = 3
+		}
+		set_country_flag = UNG_yeeting_tlarthingia
+	}
+}
+
+country_event = {#Position on Rthaur
+	id = ung.36
+	title = ung.36.t
+	desc = ung.36.d
+	picture = GFX_report_event_soviet_purge_trial
+	
+	is_triggered_only = yes
+	
+	option = {#Ally Rthaur
+		name = ung.36.a
+		ai_chance = {
+			factor = 5
+		}
+		set_country_flag = UNG_allying_rthaur
+	}
+	
+	option = {#Stab Rthaur
+		name = ung.36.b
+		ai_chance = {
+			factor = 3
+		}
+		set_country_flag = UNG_stabbing_rthaur
+	}
+}
+
+country_event = {#Northern Ally
+	id = ung.37
+	title = ung.37.t
+	desc = ung.37.d
+	picture = GFX_report_event_japanese_reply
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = UNG
+		has_completed_focus = UNG_war_ordoria
+		NOT = {
+			has_war_with = ORD
+		}
+		OR = {
+			owns_state = 85
+			ORD = {
+				is_subject_of = UNG
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 25
+	}
+	
+	option = {#Lirothlind
+		name = ung.37.a
+		ai_chance = {
+			factor = 3
+		}
+		set_country_flag = UNG_cold_elf_friends
+	}
+	
+	option = {#Rimatü
+		name = ung.37.b
+		ai_chance = {
+			factor = 3
+		}
+		set_country_flag = UNG_warm_dwarf_friends
+	}
+}
+
+country_event = {#Rthauiaur Gives the Finger
+	id = ung.38
+	title = ung.38.t
+	desc = ung.38.d
+	picture = GFX_report_event_second_vienna_award_pact
+	
+	is_triggered_only = yes
+	
+	option = {#Too bad
+		name = ung.38.a
+
+		add_opinion_modifier = {
+			target = RTH
+			modifier = annoyed_opinion
+		}
+		
+		reverse_add_opinion_modifier = {
+			target = RTH
+			modifier = annoyed_opinion
+		}
+	}
+}
+
+country_event = {#Rthauiaur Capitulates
+	id = ung.39
+	title = ung.39.t
+	desc = ung.39.d
+	picture = GFX_report_event_second_vienna_award_pact
+	
+	is_triggered_only = yes
+	
+	option = {#Wonderful
+		name = ung.39.a
+
+		add_opinion_modifier = {
+			target = RTH
+			modifier = supportive_opinion
+		}
+		
+		reverse_add_opinion_modifier = {
+			target = RTH
+			modifier = annoyed_opinion
+		}
+	}
+}
+
+country_event = {#Position on Stahlhof
+	id = ung.40
+	title = ung.40.t
+	desc = ung.40.d
+	picture = GFX_report_event_manchukuo_army
+	
+	is_triggered_only = yes
+	
+	option = {#Give Weapons
+		name = ung.40.a
+		ai_chance = {
+			factor = 3
+		}
+		set_country_flag = UNG_give_steel_to_stahlhof
+	}
+	
+	option = {#Don't
+		name = ung.40.b
+		ai_chance = {
+			factor = 4
+		}
+		set_country_flag = UNG_fuck_stahlhof
+	}
+}
+
+country_event = {#Support Rthaur?
+	id = ung.41
+	title = ung.41.t
+	desc = ung.41.d
+	picture = GFX_report_event_generic_usa_treaty
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_completed_focus = UNG_fuck_ordoria
+	}
+	
+	mean_time_to_happen = {
+		days = 165
+	}
+	
+	option = {#Unconditional Support
+		name = ung.41.a
+		ai_chance = {
+			factor = 8
+		}
+		add_political_power = -35
+		set_country_flag = UNG_unconditional_rthaur_support
+	}
+	
+	option = {#Conditional Support
+		name = ung.41.b
+		ai_chance = {
+			factor = 2
+		}
+		set_country_flag = UNG_conditional_rthaur_support
+	}
+}
+
+country_event = {#Arthenon Accepts
+	id = ung.42
+	title = ung.42.t
+	desc = ung.42.d
+	picture = GFX_report_event_french_liberation
+
+	is_triggered_only = yes
+
+	option = {#Good
+		name = ung.42.a
+		create_faction = two_thrones_alliance
+		add_to_faction = GMR
+		set_country_flag = twothrone_concord_member
+		GMR = {
+			set_country_flag = twothrone_concord_member
+		}
+	}
+}
+
+country_event = {#Arthenon Rejects
+	id = ung.43
+	title = ung.43.t
+	desc = ung.43.d
+	picture = GFX_report_event_china_politicians_captured
+
+	is_triggered_only = yes
+
+	option = {#Damn
+		name = ung.43.a
+		add_political_power = -25
+	}
+}
+
+country_event = {#Risk of Civil War
+	id = ung.44
+	title = ung.44.t
+	desc = ung.44.d
+	picture = GFX_report_event_ung_civil_warning
+	
+	trigger = {
+		tag = UNG
+		has_stability < 0.21
+		NOT = {
+			has_country_flag = UNG_unstable
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		set_country_flag = UNG_unstable
+	}
+	
+	option = {
+		name = ung.43.a
+		custom_effect_tooltip = UNG_civil_warning_tt
+	}
+}
+
+country_event = {#Restabilization
+	id = ung.45
+	title = ung.45.t
+	desc = ung.45.d
+	picture = GFX_report_event_ung_civil_warning
+	
+	trigger = {
+		tag = UNG
+		has_stability > 0.29
+		has_country_flag = UNG_unstable
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		clr_country_flag = UNG_unstable
+	}
+	
+	option = {
+		name = ung.45.a
+	}
+}
+
+country_event = {#Faustburg Plot
+	id = ung.46
+	title = ung.46.t
+	desc = ung.46.d
+	picture = GFX_report_event_carol_meeting
+	
+	fire_only_once = yes
+	
+	trigger = {
+		date > 1936.4.1
+	}
+
+	option = {#Arrest
+		name = ung.46.a
+		ai_chance = {
+			factor = 1
+		}
+		add_political_power = 50
+		add_stability = -0.05
+		set_country_flag = UNG_arrest_traitors
+		hidden_effect = {
+			unlock_national_focus = UNG_young_hochprinzessin
+		}
+	}
+	
+	option = {#Negotiate
+		name = ung.46.b
+		ai_chance = {
+			factor = 1
+		}
+		add_political_power = -50
+		add_stability = 0.-5
+		set_country_flag = UNG_discourse_traitors
+		hidden_effect = {
+			unlock_national_focus = UNG_young_hochprinzessin
+		}
+	}
+}
+
+country_event = {#Rebels Arrested
+	id = ung.47
+	title = ung.47.t
+	desc = ung.47.d
+	picture = GFX_report_event_chamberlain_announce
+	
+	is_triggered_only = yes
+
+	option = {#Constitutionalist
+		name = ung.47.a
+		ai_chance = {
+			factor = 6
+		}
+		add_stability = 0.1
+		add_political_power = 50
+		add_popularity = {
+			ideology = monarchy_constitutional
+			popularity = 0.05
+		}
+		set_country_flag = UNG_stay_the_course_flag
+
+	}
+	
+	option = {#Absolutist
+		name = ung.47.b
+		ai_chance = {
+			factor = 2
+		}
+		add_stability = 0.05
+		add_political_power = 75
+		add_popularity = {
+			ideology = monarchy_absolute
+			popularity = 0.05
+		}
+		set_country_flag = UNG_sicherheitsdiktat_flag
+	}
+}
+
+country_event = {#Nobility Revolts!
+	id = ung.48
+	title = ung.48.t
+	desc = ung.48.d
+	picture = GFX_report_event_spr_falangist_troops2
+	
+	is_triggered_only = yes
+
+	option = {#Rally the Defenses!
+		name = ung.48.a
+		add_stability = -0.1
+		random_list = {
+			40 = {
+				country_event = {
+					id = ung.49
+					days = 2
+				}
+			}
+			60 = {
+				country_event = {
+					id = ung.50
+					days = 2
+				}
+			}
+		}
+	}
+}
+
+country_event = {#Revolt Crushed
+	id = ung.49
+	title = ung.49.t
+	desc = ung.49.d
+	picture = GFX_report_event_spr_anarchist_uprising
+	
+	is_triggered_only = yes
+
+	option = {#Constitutionalist
+		name = ung.49.a
+		ai_chance = {
+			factor = 6
+		}
+		add_stability = 0.1
+		add_political_power = 50
+		add_popularity = {
+			ideology = monarchy_constitutional
+			popularity = 0.05
+		}
+		set_country_flag = UNG_stay_the_course_flag
+
+	}
+	
+	option = {#Absolutist
+		name = ung.49.b
+		ai_chance = {
+			factor = 2
+		}
+		add_stability = 0.05
+		add_political_power = 75
+		add_popularity = {
+			ideology = monarchy_absolute
+			popularity = 0.05
+		}
+		set_country_flag = UNG_sicherheitsdiktat_flag
+	}
+}
+
+country_event = {#Power Seized
+	id = ung.50
+	title = ung.50.t
+	desc = ung.50.d
+	picture = GFX_report_event_spain_civil_war_volunteers_02
+	
+	is_triggered_only = yes
+
+	option = {#Constitutionalist
+		name = ung.50.a
+		ai_chance = {
+			factor = 6
+		}
+		add_stability = -0.1
+		add_political_power = -75
+		add_popularity = {
+			ideology = republic_aristocrat
+			popularity = 0.35
+		}
+		add_political_power = {
+			ideology = monarchy_constitutional
+			popularity = -0.35
+		}
+		set_country_flag = UNG_noble_power_flag
+
+	}
+}
+
+country_event = {#Tlarthingia Accepts!
+	id = ung.51
+	title = ung.51.t
+	desc = ung.51.d
+	picture = GFX_report_event_hitler_handshake
+	
+	is_triggered_only = yes
+
+	option = {#Good
+		name = ung.51.a
+		add_political_power = 15
+		set_country_flag = UNG_allied_lizards_flag
+		if = {
+			limit = {
+				is_faction_leader = yes
+			}
+			add_to_faction = TLA
+		}
+		if = {
+			limit = {
+				is_in_faction = yes
+				is_faction_leader = no
+			}
+			leave_faction = yes
+			create_faction = neupakt_alliance
+			add_to_faction = TLA
+		}
+		if = {
+			limit = {
+				is_in_faction = no
+			}
+			create_faction = neupakt_alliance
+			add_to_faction = TLA
+		}
+	}
+}
+
+country_event = {#Tlarthingia Rejects!
+	id = ung.52
+	title = ung.52.t
+	desc = ung.52.d
+	picture = GFX_report_event_chamberlain_announce
+	
+	is_triggered_only = yes
+
+	option = {#Dang
+		name = ung.52.a
+		add_political_power = -15
+	}
+}
+
+country_event = {#the choice of Monarchy
+	id = ung.53
+	title = ung.53.t
+	desc = ung.53.d
+	picture = GFX_news_event_ast_parliament_house.dds
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #Hard power Monarchy
+		name = ung.53.a
+		add_idea = UNG_hard_power_constitution
+		complete_national_focus = UNG_hard_power
+
+		ai_chance = {
+			chance = 10
+			modifier = { monarchy_absolute < 0.2 
+				factor = 5
+			}
+		}
+	}
+	option = {#Soft power Monarchy
+	name = ung.53.b
+		add_idea = UNG_soft_power_constitution
+		complete_national_focus = UNG_soft_power
+
+		ai_chance = {
+			chance = 10
+			modifier = { monarchy_constitutional=< 0.2 
+				factor = 5
+			}
+			modifier = { republic_aristocrat =< 0.2
+				factor = 5
+			}
+		}
+	}
+}
+
+country_event = {#Irinthios Accepts!
+	id = ung.54
+	title = ung.54.t
+	desc = ung.54.d
+	picture = GFX_report_event_hitler_handshake
+	
+	is_triggered_only = yes
+
+	option = {#Good
+		name = ung.54.a
+		add_political_power = 15
+		set_country_flag = UNG_allied_irinthios_flag
+		if = {
+			limit = {
+				is_faction_leader = yes
+			}
+			add_to_faction = IRI
+		}
+		if = {
+			limit = {
+				is_in_faction = yes
+				is_faction_leader = no
+			}
+			leave_faction = yes
+			create_faction = steel_league_alliance
+			add_to_faction = IRI
+		}
+		if = {
+			limit = {
+				is_in_faction = no
+			}
+			create_faction = steel_league_alliance
+			add_to_faction = IRI
+		}
+	}
+}
+
+country_event = {#Irinthios Rejects!
+	id = ung.55
+	title = ung.55.t
+	desc = ung.55.d
+	picture = GFX_report_event_chamberlain_announce
+	
+	is_triggered_only = yes
+
+	option = {#Dang
+		name = ung.55.a
+		add_political_power = -15
 	}
 }

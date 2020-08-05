@@ -2,8 +2,19 @@ state={
 	id=398
 	name="STATE_398"
 	provinces={
-		2086 2087 3840 3845 6864 7351 
+		3532 6621 6591 6597 2817 6559 6590
 	}
-	manpower=0
+	state_category = large_city
+	manpower=502952
 	buildings_max_level_factor=1.000
+	history={
+		victory_points = { 6597 29 }
+		owner = IRI
+		buildings = {
+			infrastructure = 9
+			industrial_complex = 2
+			arms_factory = 6
+		}
+		add_core_of = IRI
+	}
 }

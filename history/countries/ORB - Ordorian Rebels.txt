@@ -57,7 +57,7 @@ set_popularities = {
 
 	monarchy_constitutional = 0
 
-	republic_peasant = 4
+	republic_peasant = 3
 
 	republic_aristocrat = 0
 

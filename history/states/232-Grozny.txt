@@ -2,21 +2,23 @@ state={
 	id=232
 	name="STATE_232"
 	provinces={
-		732 2134 2135 2136 5982 7366 7641 8907 
+		2797 5547 234 2465 5595 8241 1467 3425
 	}
-	state_category = city
-	manpower=489729
+	state_category = large_town
+	manpower=20984
 	buildings_max_level_factor=1.000
 	history={
-		victory_points = { 7641 47 }
+		victory_points = {1467 47 }
 		owner = HLZ
 		buildings = {
 			infrastructure = 7	
-			arms_factory = 2
-			industrial_complex = 3
-
+			arms_factory = 1
+			industrial_complex = 2
+			dockyard = 1
+			1467 = {
+				naval_base = 3
+			}
 		}
 		add_core_of = HLZ
-
 	}
 }

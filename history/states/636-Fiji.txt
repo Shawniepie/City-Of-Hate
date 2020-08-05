@@ -2,7 +2,7 @@ state={
 	id=636
 	name="STATE_636"
 	provinces={
-		1187 2521 3952 4882 7085 7875 8096 
+		4411 9684 3070 9679 1704 9677 
 	}
 	state_category = pastoral
 	manpower=823
@@ -13,8 +13,5 @@ state={
 			infrastructure = 1
 		}
 		add_core_of = PRK
-	}
-	resources = {
-		oil = 13
 	}
 }

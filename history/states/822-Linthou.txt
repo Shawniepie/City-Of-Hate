@@ -1,0 +1,19 @@
+state={
+	id=822
+	name="STATE_822"
+	provinces={
+		1210 6129 2932 6080
+	}
+	state_category = rural
+	manpower=8201
+	buildings_max_level_factor=1.000
+	history={
+		owner = LIR
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+			arms_factory = 1
+		}
+		add_core_of = LIR
+	}
+}

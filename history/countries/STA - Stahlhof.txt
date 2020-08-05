@@ -20,25 +20,43 @@ set_politics = {
 }
 
 set_popularities = {
-	monarchy_absolute = 54
+	monarchy_absolute = 71
 
 	monarchy_constitutional = 0
 
-	republic_peasant = 0
+	republic_peasant = 3
 
-	republic_aristocrat = 1
+	republic_aristocrat = 5
 
 	republic_merchant = 6
 
-	theocrat = 10
+	theocrat = 7
 
-	puritan = 29
+	puritan = 8
 }
 
 add_ideas = {
 	human_country
 	septism_religion
 }
+
+add_opinion_modifier = {
+	target = UNG
+	modifier = bitter_rivals
+}
+
+give_military_access = UNG
+give_military_access = HLZ
+give_military_access = NOC
+give_military_access = SPW
+give_military_access = SVT
+give_military_access = NRK
+give_military_access = TEI
+give_military_access = ARK
+give_military_access = SNF
+give_military_access = FTH
+give_military_access = WIS
+give_military_access = WSZ
 
 create_country_leader = {
 	name = "Alcanthyre Losennys"

@@ -1,12 +1,12 @@
 ﻿units = {
 	fleet = {
 		name = "Krell's Fleet"				
-		naval_base = 7533
+		naval_base = 4527
 		task_force = {
 			name = "Wendelin's Raiders"
-			location = 7533
+			location = 4527
 			ship = { 
-				name = "Topór" 
+				name = "Topór"
 				definition = heavy_cruiser 
 				equipment = { 
 					heavy_cruiser_1 = {
@@ -57,7 +57,7 @@
 						amount = 1
 						owner = PRK
 						version_name = "Czaszka-Class"
-					}zz
+					}
 				}
 			}
 			ship = { 

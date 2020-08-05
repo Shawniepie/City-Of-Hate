@@ -3,13 +3,13 @@ state={
 	id=541
 	name="STATE_541"
 	provinces={
-		1396 1399 6136 6436 7422 7427 7624 8325 15218 
+		8281 3503
 	}
 	state_category = town
 	manpower=6821
 	buildings_max_level_factor=1.000
 	history={
-		victory_points = { 8325 12 }
+		victory_points = { 3503 12 }
 		owner = BER
 		buildings = {
 			infrastructure = 6

@@ -58,7 +58,7 @@ units = {
 
 	division = {
 		name = "Irenthar Enforcers"
-		location = 3109
+		location = 3069
 		division_template = "Enforcers"
 		start_experience_factor = 0.3
 
@@ -66,7 +66,7 @@ units = {
 
 	division = {
 		name = "Felwerin Enforcers"
-		location = 3966
+		location = 3638
 		division_template = "Enforcers"
 		start_experience_factor = 0.3
 
@@ -74,7 +74,7 @@ units = {
 
 	division = {
 		name = "Cortineal Enforcers"
-		location = 7830
+		location = 6594
 		division_template = "Enforcers"
 		start_experience_factor = 0.3
 
@@ -82,7 +82,7 @@ units = {
 
 	division = {
 		name = "Nastrogdar Enforcers"
-		location = 4931
+		location = 6489
 		division_template = "Enforcers"
 		start_experience_factor = 0.3
 
@@ -90,7 +90,7 @@ units = {
 
 	division = {
 		name = "Caltireth Enforcers"
-		location = 3863
+		location = 6053
 		division_template = "Enforcers"
 		start_experience_factor = 0.3
 
@@ -98,7 +98,7 @@ units = {
 
 	division = {
 		name = "Trifersi Enforcers"
-		location = 8702
+		location = 4154
 		division_template = "Enforcers"
 		start_experience_factor = 0.3
 
@@ -106,7 +106,7 @@ units = {
 
 	division = {
 		name = "Navandon Enforcers"
-		location = 1334
+		location = 3119
 		division_template = "Enforcers"
 		start_experience_factor = 0.3
 
@@ -114,7 +114,7 @@ units = {
 
 	division = {
 		name = "Blacksteel Bodyguards"
-		location = 3109
+		location = 4797
 		division_template = "Black Gargoyles"
 		start_experience_factor = 1.2
 
@@ -122,21 +122,21 @@ units = {
 
 	division = {
 		name = "1st Black Gargoyles"
-		location = 8794
+		location = 5256
 		division_template = "Black Gargoyles"
 		start_experience_factor = 0.5
 	}
 	
 	division = {
 		name = "2nd Black Gargoyles"
-		location = 5752
+		location = 2388
 		division_template = "Black Gargoyles"
 		start_experience_factor = 0.5
 	}
 
 	division = {
 		name = "3rd Black Gargoyles"
-		location = 7359
+		location = 6630
 		division_template = "Black Gargoyles"
 		start_experience_factor = 0.5
 
@@ -144,84 +144,84 @@ units = {
 
 	division = {
 		name = "4th Black Gargoyles"
-		location = 3668
+		location = 6704
 		division_template = "Black Gargoyles"
 		start_experience_factor = 0.5
 	}
 
 	division = {
 		name = "5th Black Gargoyles"
-		location = 241
+		location = 6647
 		division_template = "Black Gargoyles"
 		start_experience_factor = 0.5
 	}
 
 	division = {
 		name = "6th Black Gargoyles"
-		location = 2650
+		location = 6670
 		division_template = "Black Gargoyles"
 		start_experience_factor = 0.5
 	}
 
 	division = {
 		name = "7th Black Gargoyles"
-		location = 5767
+		location = 3165
 		division_template = "Black Gargoyles"
 		start_experience_factor = 0.5
 	}
 
 	division = {
 		name = "8th Black Gargoyles"
-		location = 5037
+		location = 1384
 		division_template = "Black Gargoyles"
 		start_experience_factor = 0.5
 	}
 
 	division = {
 		name = "9th Black Gargoyles"
-		location = 8609
+		location = 165
 		division_template = "Black Gargoyles"
 		start_experience_factor = 0.5
 	}
 	
 	division = {
 		name = "10th Black Gargoyles"
-		location = 4111
+		location = 2045
 		division_template = "Black Gargoyles"
 		start_experience_factor = 0.5
 	}	
 
 	division = {
 		name = "11th Black Gargoyles"
-		location = 4600
+		location = 636
 		division_template = "Black Gargoyles"
 		start_experience_factor = 0.5
 	}	
 
 	division = {
 		name = "12th Black Gargoyles"
-		location = 3193
+		location = 4648
 		division_template = "Black Gargoyles"
 		start_experience_factor = 0.5
 	}
 	
 	division = {
 		name = "1st Sail Knights"
-		location = 8882
+		location = 311
 		division_template = "Sail Knights"
 		start_experience_factor = 0.4
 	}
 
 	division = {
 		name = "2nd Sail Knights"
-		location = 5048
+		location = 6237
 		division_template = "Sail Knights"
 		start_experience_factor = 0.4
 	}
 
 	division = {
 		name = "1st Outriders"
-		location = 5586
+		location = 755
 		division_template = "Outrider Scouts"
 		start_experience_factor = 0.4
 	}	

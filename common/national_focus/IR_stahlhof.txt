@@ -1,0 +1,2428 @@
+focus_tree = {
+	id = STA_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = STA
+		}
+	}
+	continuous_focus_position = { x = 50 y = 1350 }
+	default = no
+	focus = {
+		id = STA_das_stahlheer
+		icon = GFX_focus_generic_commonwealth_build_infantry
+		cost = 10
+		x = 30
+		y = 0
+		
+		available = {
+		
+		}
+		bypass = {
+		
+		}
+		completion_reward = {
+			army_experience = 15
+		}
+
+	}
+	focus = {
+		id = STA_the_bear_of_stahlhof
+		icon = GFX_focus_eng_expose_the_belly_of_the_bear
+		cost = 10
+		x = 55
+		y = 0
+		
+		available = {
+		
+		}
+		bypass = {
+		
+		}
+		completion_reward = {
+			add_political_power = 50
+			add_timed_idea = { idea = STA_the_bear_of_stahlhof_idea days = 180 }
+		}
+
+	}
+	focus = {
+		id = STA_veterans_of_the_elbenkrieg
+		icon = GFX_focus_generic_manpower
+		cost = 10
+		prerequisite = {
+			focus = STA_das_stahlheer
+		}
+		x = 22
+		y = 1
+		
+		available = {
+		
+		}
+		bypass = {
+		
+		}
+		completion_reward = {
+			army_experience = 15
+			add_tech_bonus = { bonus = 1 uses = 1 category = melee_equipment }
+		}
+
+	}
+	focus = {
+		id = STA_lessons_of_neureik
+		icon = GFX_goal_generic_production
+		cost = 10
+		prerequisite = {
+			focus = STA_das_stahlheer
+		}
+		x = 27
+		y = 1
+		
+		available = {
+		
+		}
+		bypass = {
+		
+		}
+		completion_reward = {
+		army_experience = 15
+		###Cavalry Research boost needs to be integrated here
+		}
+
+	}
+	focus = {
+		id = STA_fate_of_the_adalinatruppen
+		icon = GFX_goal_generic_cavalry
+		cost = 10
+		prerequisite = {
+			focus = STA_veterans_of_the_elbenkrieg
+		}
+		prerequisite = {
+			focus = STA_lessons_of_neureik
+		}
+		x = 5
+		y = 2
+		
+		continue_if_invalid = yes
+		available = {
+		has_manpower > 3500
+		}
+		bypass = {
+		
+		}
+		select_effect = {
+			add_manpower = -3500
+			country_event = { id = sta.7 hours = 6 }
+		}
+		completion_reward = {
+			custom_effect_tooltip = STA_fate_of_the_adalinatruppen_ctt
+		}
+
+	}
+	focus = {
+		id = STA_lessons_of_the_restoration_war
+		icon = GFX_goal_generic_construction2
+		cost = 10
+		prerequisite = {
+			focus = STA_fate_of_the_adalinatruppen
+		}
+		mutually_exclusive = {
+			focus = STA_the_last_march_of_the_faustburgsoldaten
+		}
+		x = 3
+		y = 3
+		
+		available = {
+			has_country_flag = STA_submission_flag
+		}
+		bypass = {
+		
+		}
+		completion_reward = {
+			army_experience = 10
+			add_war_support = 0.12
+		}
+
+	}
+	focus = {
+		id = STA_meat_for_the_grinder
+		icon = GFX_focus_RAJ_lions_of_the_great_war
+		cost = 10
+		prerequisite = {
+			focus = STA_lessons_of_the_restoration_war
+		}
+		x = 1
+		y = 4
+		
+		available = {
+		
+		}
+		bypass = {
+		
+		}
+		completion_reward = {
+			add_tech_bonus = { bonus = 1 uses = 1 category = mass_assault_doctrine }
+			add_ideas = STA_mass_recruiting_idea
+		}
+
+	}
+	focus = {
+		id = STA_swords_axes_and_maces
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10
+		prerequisite = {
+			focus = STA_lessons_of_the_restoration_war
+		}
+		x = 5
+		y = 4
+		
+		available = {
+		
+		}
+		bypass = {
+		
+		}
+		completion_reward = {
+			add_tech_bonus = { bonus = 1 uses = 1 category = light_melee_equipment }
+		}
+
+	}
+	focus = {
+		id = STA_every_village_a_weaponsmith
+		icon = GFX_focus_generic_combined_arms
+		cost = 10
+		prerequisite = {
+			focus = STA_swords_axes_and_maces
+		}
+		mutually_exclusive = {
+			focus = STA_every_village_a_soldier
+		}
+		x = 5
+		y = 6
+		
+		available = {
+		
+		}
+		bypass = {
+		
+		}
+		completion_reward = {
+			add_tech_bonus = { bonus = 1 uses = 1 category = heavy_melee_equipment }
+			add_ideas = STA_every_village_a_weaponsmith_idea
+		}
+
+	}
+	focus = {
+		id = STA_the_last_march_of_the_faustburgsoldaten
+		icon = GFX_focus_mex_arrest_general_cedillo
+		cost = 10
+		prerequisite = {
+			focus = STA_fate_of_the_adalinatruppen
+		}
+		mutually_exclusive = {
+			focus = STA_lessons_of_the_restoration_war
+		}
+		x = 10
+		y = 3
+		
+		available = {
+			has_country_flag = STA_expedition_flag
+		}
+		bypass = {
+		
+		}
+		completion_reward = {
+			custom_effect_tooltip = STA_the_last_march_of_the_faustburgsoldaten_ctt
+			hidden_effect = {
+				random_list = {
+					60 = { #Nobody noticed all died
+						ORD = { country_event = { id = sta.13 days = 2 } }
+						country_event = { id = sta.12 days = 2 }
+					}
+					30 = { #Ordorians were surprise attacked
+						ORD = { country_event = { id = sta.15 days = 2 } }
+						country_event = { id = sta.14 days = 2 }
+					}
+					10 = { #Most died rest contacts adelina
+						UNG = { country_event = { id = sta.18 days = 2 } }
+						ORD = { country_event = { id = sta.17 days = 2 } }
+						country_event = { id = sta.16 days = 2 }
+					}
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = STA_replenish_the_ranks
+		icon = GFX_focus_chi_army_reform
+		cost = 10
+		prerequisite = {
+			focus = STA_the_last_march_of_the_faustburgsoldaten
+		}
+		x = 10
+		y = 4
+		
+		available = {
+		
+		}
+		bypass = {
+		
+		}
+		completion_reward = {
+			add_ideas = STA_replenish_the_ranks_idea
+		}
+
+	}
+	focus = {
+		id = STA_perkav_plunderers
+		icon = GFX_focus_generic_commonwealth_build_infantry
+		cost = 10
+		prerequisite = {
+			focus = STA_replenish_the_ranks
+		}
+		x = 8
+		y = 5
+		
+		available = {
+		
+		}
+		bypass = {
+		
+		}
+		completion_reward = {
+			create_corps_commander = {
+			name = "Vratislav Morzenyk"
+			picture = "Portrait_Stahlhof_Vratislav_Morzenyk.dds"
+			traits = { urban_assault_specialist trickster commando }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 3
+			}
+			army_experience = 10
+		}
+
+	}
+	focus = {
+		id = STA_skaelinger_stalwarts
+		icon = GFX_focus_generic_commonwealth_build_infantry
+		cost = 10
+		prerequisite = {
+			focus = STA_replenish_the_ranks
+		}
+		x = 9
+		y = 6
+		
+		available = {
+		
+		}
+		bypass = {
+		
+		}
+		completion_reward = {
+			create_corps_commander = {
+			name = "Umrik Hellisgröfur"
+			picture = "Portrait_Stahlhof_Umrik_Hellisgröfur.dds"
+			traits = { hill_fighter trait_mountaineer }
+			skill = 4
+			attack_skill = 1
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 3
+			}
+			army_experience = 10
+		}
+
+	}
+	focus = {
+		id = STA_kurgur_killers
+		icon = GFX_focus_generic_commonwealth_build_infantry
+		cost = 10
+		prerequisite = {
+			focus = STA_replenish_the_ranks
+		}
+		x = 10
+		y = 7
+		
+		available = {
+		
+		}
+		bypass = {
+		
+		}
+		completion_reward = {
+			create_corps_commander = {
+			name = "Uulafga Bugdalluuh"
+			picture = "Portrait_Stahlhof_Uulafga_Bugdalluuh.dds"
+			traits = { desert_fox hill_fighter }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 2
+			}
+			army_experience = 10
+		}
+
+	}
+	focus = {
+		id = STA_snowelven_stalkers
+		icon = GFX_focus_generic_commonwealth_build_infantry
+		cost = 10
+		prerequisite = {
+			focus = STA_replenish_the_ranks
+		}
+		x = 11
+		y = 6
+		
+		available = {
+		
+		}
+		bypass = {
+		
+		}
+		completion_reward = {
+			create_corps_commander = {
+			name = "Illena Cier"
+			picture = "Portrait_Stahlhof_Illena_Cier.dds"
+			traits = { trait_cautious brilliant_strategist winter_specialist }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 5
+			logistics_skill = 1
+			}
+			army_experience = 10
+		}
+
+	}
+	focus = {
+		id = STA_bilodyan_brutes
+		icon = GFX_focus_generic_commonwealth_build_infantry
+		cost = 10
+		prerequisite = {
+			focus = STA_replenish_the_ranks
+		}
+		x = 12
+		y = 5
+		
+		available = {
+		
+		}
+		bypass = {
+		
+		}
+		completion_reward = {
+			create_corps_commander = {
+			name = "Balga Golemiyat Obezkosten"
+			picture = "Portrait_Stahlhof_Balga_Golemiyat_Obezkosten.dds"
+			traits = { trait_reckless war_hero }
+			skill = 3
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 1
+			logistics_skill = 1
+			}
+			army_experience = 10
+		}
+
+	}
+	focus = {
+		id = STA_foreign_officers
+		icon = GFX_focus_generic_little_entente
+		cost = 10
+		prerequisite = {
+			focus = STA_kurgur_killers
+			focus = STA_snowelven_stalkers
+			focus = STA_bilodyan_brutes
+		}
+		mutually_exclusive = {
+			focus = STA_stahlhof_kommando
+		}
+		x = 12
+		y = 8
+		
+		available = {
+		
+		}
+		bypass = {
+		
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = STA_replenish_the_ranks_idea
+				add_idea = STA_replenish_the_ranks_idea3
+			}
+		}
+
+	}
+	focus = {
+		id = STA_path_clearer_batallions
+		icon = GFX_focus_prc_infiltration
+		cost = 10
+		prerequisite = {
+			focus = STA_veterans_of_the_elbenkrieg
+		}
+		prerequisite = {
+			focus = STA_lessons_of_neureik
+		}
+		x = 19
+		y = 2
+		
+		available = {
+		
+		}
+		bypass = {
+		
+		}
+		completion_reward = {
+			custom_effect_tooltip = STA_path_clearer_batallions_ctt
+			hidden_effect = { set_technology = { STA_path_clearer_battalion_tech = 1 } }
+		}
+
+	}
+	focus = {
+		id = STA_a_convincing_act
+		icon = GFX_focus_generic_strike_at_democracy1
+		cost = 10
+		prerequisite = {
+			focus = STA_path_clearer_batallions
+		}
+		mutually_exclusive = {
+			focus = STA_limited_engagement
+		}
+		x = 17
+		y = 3
+		
+		available = {
+		
+		}
+		bypass = {
+			random_country = {
+				limit = {
+					original_tag = ORD
+				}
+				NOT = { owns_state = 96 }
+			}
+		}
+		completion_reward = {
+			custom_effect_tooltip = STA_a_convincing_act_ctt
+		}
+
+	}
+	focus = {
+		id = STA_stahlplan_zhertis
+		icon = GFX_goal_generic_position_armies
+		cost = 5
+		prerequisite = {
+			focus = STA_a_convincing_act
+		}
+		x = 15
+		y = 4
+		
+		available = {
+		
+		}
+		bypass = {
+		
+		}
+		completion_reward = {
+			custom_effect_tooltip = STA_stahlplan_zhertis_ctt
+		}
+
+	}
+	focus = {
+		id = STA_stahlplan_venoehr
+		icon = GFX_goal_generic_position_armies
+		cost = 5
+		prerequisite = {
+			focus = STA_a_convincing_act
+		}
+		x = 17
+		y = 4
+		
+		available = {
+		
+		}
+		bypass = {
+		
+		}
+		completion_reward = {
+			custom_effect_tooltip = STA_stahlplan_venoehr_ctt
+		}
+
+	}
+	focus = {
+		id = STA_stahlplan_anzitt
+		icon = GFX_goal_generic_position_armies
+		cost = 5
+		prerequisite = {
+			focus = STA_a_convincing_act
+		}
+		x = 19
+		y = 4
+		
+		available = {
+		
+		}
+		bypass = {
+		
+		}
+		completion_reward = {
+			custom_effect_tooltip = STA_stahlplan_anzitt_ctt
+		}
+
+	}
+	focus = {
+		id = STA_stahlplan_fratin
+		icon = GFX_goal_generic_position_armies
+		cost = 5
+		prerequisite = {
+			focus = STA_stahlplan_zhertis
+		}
+		prerequisite = {
+			focus = STA_stahlplan_venoehr
+		}
+		prerequisite = {
+			focus = STA_stahlplan_anzitt
+		}
+		x = 17
+		y = 5
+		
+		available = {
+		
+		}
+		bypass = {
+		
+		}
+		completion_reward = {
+			custom_effect_tooltip = STA_stahlplan_fratin_ctt
+		}
+
+	}
+	focus = {
+		id = STA_limited_engagement
+		icon = GFX_goal_demand_sudetenland
+		cost = 10
+		prerequisite = {
+			focus = STA_path_clearer_batallions
+		}
+		mutually_exclusive = {
+			focus = STA_a_convincing_act
+		}
+		x = 22
+		y = 3
+		
+		available = {
+		
+		}
+		bypass = {
+		
+		}
+		completion_reward = {
+			add_ideas = { STA_limited_engagement_idea }
+		}
+
+	}
+	focus = {
+		id = STA_rapid_retreats
+		icon = GFX_goal_generic_army_motorized
+		cost = 10
+		prerequisite = {
+			focus = STA_limited_engagement
+		}
+		x = 22
+		y = 4
+		
+		available = {
+		
+		}
+		bypass = {
+		
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = STA_limited_engagement_idea
+				add_idea = STA_limited_engagement_idea2
+			}
+		}
+
+	}
+	focus = {
+		id = STA_much_ado_about_nothing
+		icon = GFX_goal_generic_small_arms
+		cost = 10
+		prerequisite = {
+			focus = STA_rapid_retreats
+		}
+		x = 22
+		y = 5
+		
+		available = {
+		
+		}
+		bypass = {
+		
+		}
+		completion_reward = {
+			add_ideas = { STA_much_ado_about_nothing_idea }
+		}
+
+	}
+	focus = {
+		id = STA_neuzeit_krieg
+		icon = GFX_goal_generic_military_sphere
+		cost = 10
+		prerequisite = {
+			focus = STA_veterans_of_the_elbenkrieg
+		}
+		prerequisite = {
+			focus = STA_lessons_of_neureik
+		}
+		x = 30
+		y = 2
+		
+		available = {
+		
+		}
+		bypass = {
+		
+		}
+		completion_reward = {
+			add_ideas = { STA_neuzeit_krieg_idea }
+		}
+
+	}
+	focus = {
+		id = STA_uproot_the_old_guard
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		prerequisite = {
+			focus = STA_neuzeit_krieg
+		}
+		x = 26
+		y = 3
+		
+		available = {
+		
+		}
+		bypass = {
+		
+		}
+		completion_reward = {
+			create_corps_commander = {
+			name = "Cornelius Kondor"
+			picture = "Portrait_Stahlhof_Cornelius_Kondor.dds"
+			traits = { old_guard }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 4
+			logistics_skill = 1
+			}
+			create_corps_commander = {
+			name = "Dirk Eisenherz"
+			picture = "Portrait_Stahlhof_Dirk_Eisenherz.dds"
+			traits = { old_guard }
+			skill = 3
+			attack_skill = 1
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 3
+			}
+			create_corps_commander = {
+			name = "Petyr von Eckhart"
+			picture = "Portrait_Stahlhof_Petyr_von_Eckhart.dds"
+			traits = { old_guard brilliant_strategist }
+			skill = 4
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 4
+			}
+		}
+
+	}
+	focus = {
+		id = STA_meritocratic_autocracy
+		icon = GFX_focus_generic_military_academy
+		cost = 10
+		prerequisite = {
+			focus = STA_introduce_meritocracy_in_the_army
+		}
+		prerequisite = {
+			focus = STA_uproot_the_old_guard
+		}
+		mutually_exclusive = {
+			focus = STA_heed_the_rank_and_file
+		}
+		x = 25
+		y = 4
+		
+		available = {
+		
+		}
+		bypass = {
+		
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = STA_meritocratic_autocracy_idea
+				add_idea = STA_meritocratic_autocracy_idea2
+			}
+		}
+
+	}
+	focus = {
+		id = STA_introduce_meritocracy_in_the_army
+		icon = GFX_goal_generic_national_unity
+		cost = 10
+		prerequisite = {
+			focus = STA_neuzeit_krieg
+		}
+		x = 29
+		y = 3
+		
+		available = {
+		
+		}
+		bypass = {
+		
+		}
+		completion_reward = {
+			add_war_support = 0.10
+			add_ideas = { STA_meritocratic_autocracy_idea }
+		}
+
+	}
+	focus = {
+		id = STA_heed_the_rank_and_file
+		icon = GFX_goal_rhineland
+		cost = 10
+		prerequisite = {
+			focus = STA_introduce_meritocracy_in_the_army
+		}
+		prerequisite = {
+			focus = STA_uproot_the_old_guard
+		}
+		mutually_exclusive = {
+			focus = STA_meritocratic_autocracy
+		}
+		x = 28
+		y = 4
+		
+		available = {
+		
+		}
+		bypass = {
+		
+		}
+		completion_reward = {
+			add_ideas = { STA_soldier_support_idea }
+		}
+
+	}
+	focus = {
+		id = STA_soldiers_pensions
+		icon = GFX_focus_usa_reestablish_the_gold_standard
+		cost = 10
+		prerequisite = {
+			focus = STA_heed_the_rank_and_file
+		}
+		x = 28
+		y = 5
+		
+		available = {
+		
+		}
+		bypass = {
+		
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = STA_soldier_support_idea
+				add_idea = STA_soldier_support_idea2
+			}
+		}
+
+	}
+	focus = {
+		id = STA_witwengeld
+		icon = GFX_focus_mex_privatisation
+		cost = 10
+		prerequisite = {
+			focus = STA_soldiers_pensions
+		}
+		x = 28
+		y = 6
+		
+		available = {
+		
+		}
+		bypass = {
+		
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = STA_soldier_support_idea2
+				add_idea = STA_soldier_support_idea3
+			}
+		}
+
+	}
+	focus = {
+		id = STA_first_aid_field_training
+		icon = GFX_focus_generic_concessions
+		cost = 10
+		prerequisite = {
+			focus = STA_witwengeld
+		}
+		x = 28
+		y = 7
+		
+		available = {
+		
+		}
+		bypass = {
+		
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = STA_soldier_support_idea3
+				add_idea = STA_soldier_support_idea4
+			}
+		}
+
+	}
+	focus = {
+		id = STA_hasslers_prinzthron
+		icon = GFX_focus_generic_home_defense
+		cost = 10
+		prerequisite = {
+			focus = STA_neuzeit_krieg
+		}
+		x = 33
+		y = 3
+		
+		continue_if_invalid = yes
+		available = {
+			has_political_power > 250
+		}
+		select_effect = {
+			add_political_power = -250
+		}
+		bypass = {
+		
+		}
+		completion_reward = {
+			NRK = {
+			  add_political_power = 150
+			  random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 2
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 2
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			  }
+			}
+		}
+
+	}
+	focus = {
+		id = STA_the_favours_we_are_owed
+		icon = GFX_focus_hol_the_foundations_of_defense
+		cost = 10
+		prerequisite = {
+			focus = STA_hasslers_prinzthron
+		}
+		x = 34
+		y = 4
+		
+		available = {
+		
+		}
+		bypass = {
+		
+		}
+		select_effect = {
+			country_event = { id = sta.55 days = 3 }
+		}
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.05
+		}
+
+	}
+	focus = {
+		id = STA_alliance_of_equals
+		icon = GFX_goal_generic_major_alliance
+		cost = 10
+		prerequisite = {
+			focus = STA_the_favours_we_are_owed
+		}
+		mutually_exclusive = {
+			focus = STA_push_our_advantage
+		}
+		x = 32
+		y = 5
+		
+		available = {
+			has_country_flag = sta_alliance_of_equals_flag
+			has_country_flag = sta_treaty_agreed_flag
+		}
+		bypass = {
+		has_country_flag = sta_treaty_declined_flag
+		has_country_flag = sta_alliance_of_equals_flag
+		}
+		completion_reward = {
+			add_stability = 0.08
+			give_guarantee = NRK
+			NRK = { add_stability = 0.08 give_guarantee = STA }
+			
+		}
+
+	}
+	focus = {
+		id = STA_push_our_advantage
+		icon = GFX_goal_generic_demand_territory
+		cost = 10
+		prerequisite = {
+			focus = STA_the_favours_we_are_owed
+		}
+		mutually_exclusive = {
+			focus = STA_alliance_of_equals
+		}
+		x = 35
+		y = 5
+		
+		available = {
+			has_country_flag = sta_push_our_advantage_flag
+			has_country_flag = sta_treaty_agreed_flag
+		}
+		bypass = {
+		has_country_flag = sta_treaty_declined_flag
+		has_country_flag = sta_push_our_advantage_flag
+		}
+		completion_reward = {
+			STA = {
+				set_autonomy = {
+					target = NRK
+					autonomy_state = autonomy_IR_freiprinztum
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = STA_integrated_military_command
+		icon = GFX_focus_generic_military_mission
+		cost = 10
+		prerequisite = {
+			focus = STA_push_our_advantage
+		}
+		x = 35
+		y = 6
+		
+		available = {
+		
+		}
+		bypass = {
+		has_country_flag = sta_treaty_declined_flag
+		has_country_flag = sta_push_our_advantage_flag
+		}
+		completion_reward = {
+			add_ideas = { STA_integrated_military_command_idea }
+			NRK = { add_ideas = { STA_integrated_military_command_idea } }
+			add_political_power = 50
+		}
+
+	}
+	focus = {
+		id = STA_force_an_iron_fist
+		icon = GFX_goal_generic_political_pressure
+		cost = 10
+		prerequisite = {
+			focus = STA_integrated_military_command
+		}
+		x = 35
+		y = 7
+		
+		available = {
+		
+		}
+		bypass = {
+		has_country_flag = sta_treaty_declined_flag
+		has_country_flag = sta_push_our_advantage_flag
+		}
+		completion_reward = {
+		NRK = { add_ideas = { STA_force_an_iron_fist_idea } }
+		add_political_power = 50
+		add_war_support = 0.10
+		}
+
+	}
+	focus = {
+		id = STA_war_games
+		icon = GFX_goal_generic_army_artillery
+		cost = 10
+		prerequisite = {
+			focus = STA_das_stahlheer
+		}
+		x = 40
+		y = 1
+		
+		available = {
+		
+		}
+		bypass = {
+		
+		}
+		completion_reward = {
+			army_experience = 20
+			add_war_support = 0.05
+		}
+
+	}
+	focus = {
+		id = STA_trial_by_fire
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		cost = 10
+		prerequisite = {
+			focus = STA_war_games
+		}
+		x = 40
+		y = 2
+		
+		available = {
+		
+		}
+		bypass = {
+		
+		}
+		completion_reward = {
+			custom_effect_tooltip = STA_trial_by_fire_ctt
+		}
+
+	}
+	focus = {
+		id = STA_the_holzbrenn_opportunity
+		icon = GFX_goal_generic_position_armies
+		cost = 10
+		prerequisite = {
+			focus = STA_trial_by_fire
+		}
+		x = 38
+		y = 3
+		
+		available = {
+		
+		}
+		bypass = {
+		
+		}
+		completion_reward = {
+		
+		}
+
+	}
+	focus = {
+		id = STA_experience_bought_with_blood
+		icon = GFX_goal_generic_build_tank
+		cost = 10
+		prerequisite = {
+			focus = STA_trial_by_fire
+		}
+		x = 40
+		y = 3
+		
+		available = {
+			owns_state = 218
+		}
+		bypass = {
+		
+		}
+		completion_reward = {
+			army_experience = 15
+			add_war_support = 0.05
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = light_melee_equipment
+			}
+		}
+
+	}
+	focus = {
+		id = STA_the_question_of_mages
+		icon = GFX_focus_fra_loyalty_stalin
+		cost = 10
+		prerequisite = {
+			focus = STA_trial_by_fire
+		}
+		x = 42
+		y = 3
+		
+		available = {
+			owns_state = 218
+		}
+		bypass = {
+		
+		}
+		completion_reward = {
+			add_political_power = 80
+		}
+
+	}
+	focus = {
+		id = STA_approach_resmayer
+		icon = GFX_focus_fra_loyalty_trotzky
+		cost = 10
+		prerequisite = {
+			focus = STA_the_question_of_mages
+		}
+		x = 41
+		y = 4
+		
+		available = {
+			NOT = { 
+					ARK = { has_country_flag = ARK_archmage_assigned_flag }
+			}
+		}
+		bypass = {
+		
+		}
+		completion_reward = {
+		
+		}
+
+	}
+	focus = {
+		id = STA_discredit_the_lafdarites
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		cost = 10
+		prerequisite = {
+			focus = STA_approach_resmayer
+		}
+		x = 41
+		y = 5
+		
+		available = {
+		
+		}
+		bypass = {
+		
+		}
+		completion_reward = {
+		
+		}
+
+	}
+	focus = {
+		id = STA_nebeltoeter_squads
+		icon = GFX_goal_generic_secret_weapon
+		cost = 10
+		prerequisite = {
+			focus = STA_the_question_of_mages
+		}
+		x = 43
+		y = 4
+		
+		available = {
+			NOT = {
+				ARK = { has_country_flag = ARK_archmage_resmeyer_flag }
+			}
+			ARK = { 
+					has_country_flag = ARK_archmage_assigned_flag
+			}
+		}
+		bypass = {
+		
+		}
+		completion_reward = {
+			add_ideas = { STA_nebeltoeter_squads_idea }
+		}
+
+	}
+	focus = {
+		id = STA_assassinate_the_archmage
+		icon = GFX_focus_ger_assassinate_mussolini
+		cost = 10
+		prerequisite = {
+			focus = STA_nebeltoeter_squads
+		}
+		x = 43
+		y = 5
+		
+		available = {
+		
+		}
+		bypass = {
+		
+		}
+		completion_reward = {
+			#ARK = { 
+			#	hidden_effect = { set_global_flag = ARK_civilwar_flag set_country_flag = ARK_archmage_assigned_flag set_country_flag = ARK_archmage_resmeyer_flag clr_country_flag = ARK_archmage_lafdarin_flag }
+			#	kill_country_leader = yes
+			#	set_cosmetic_tag = ARR
+			#	start_civil_war = {
+			#		ruling_party = monarchy_absolute
+			#		
+			#		ideology = monarchy_constitutional
+			#		size = 0.5
+			#		states = { 
+			#			207 219 220 237 238 248
+			#		}
+			#	}
+			#	hidden_effect = { add_popularity = { ideology = monarchy_absolute popularity = 0.75 } save_global_event_target_as = ARR_cnt }
+			#	random_other_country = {
+			#		limit = {
+			#			original_tag = ARK
+			#			has_government = monarchy_constitutional
+			#		}
+			#		set_cosmetic_tag = ARL
+			#		save_global_event_target_as = ARL_cnt
+			#		add_popularity = { ideology = monarchy_constitutional popularity = 0.75 }
+			#	}
+			#}
+			ARK = { country_event = { id = sta.68 days = 3 } }
+			
+		}
+
+	}
+	focus = {
+		id = STA_intervene_openly
+		icon = GFX_goal_generic_major_war
+		cost = 3
+		prerequisite = {
+			focus = STA_assassinate_the_archmage
+		}
+		x = 42
+		y = 6
+		
+		available = {
+			ARK = { has_civilwar = yes }
+		}
+		bypass = {
+	
+		}
+		leads_to_war_with = event_target:ARL_cnt
+		completion_reward = {
+			
+			if = {
+				limit = {
+					country_exists = ARR
+				}
+				add_to_war = { 
+				targeted_alliance = ARR
+				enemy = ARL 
+				hostility_reason = asked_to_join
+				}
+			}
+			
+		}
+
+	}
+	focus = {
+		id = STA_intervene_covertly
+		icon = GFX_goal_generic_more_territorial_claims
+		cost = 3
+		prerequisite = {
+			focus = STA_assassinate_the_archmage
+		}
+		x = 44
+		y = 6
+		#x = 43
+		#y = 6
+		
+		available = {
+		
+		}
+		bypass = {
+		
+		}
+		completion_reward = {
+			set_rule = { can_send_volunteers = yes }
+			add_timed_idea = { idea = STA_intervene_covertly_idea days = 210 }
+		}
+
+	}
+	focus = {
+		id = STA_the_anti_ordorian_front
+		icon = GFX_goal_generic_military_sphere
+		cost = 10
+		prerequisite = {
+			focus = STA_the_bear_of_stahlhof
+		}
+		x = 48
+		y = 1
+		
+		available = {
+			has_political_power > 40
+		}
+		select_effect = {
+			add_political_power = -40
+		}
+		continue_if_invalid = yes
+		bypass = {
+		
+		}
+		completion_reward = {
+			add_popularity = { ideology = puritan popularity = 0.05 }
+			add_timed_idea = [ idea = puritan_drift_idea days = 365 }
+		}
+
+	}
+	focus = {
+		id = STA_freiwillige_heimatverteidiger
+		icon = GFX_goal_rhineland
+		cost = 10
+		prerequisite = {
+			focus = STA_the_anti_ordorian_front
+		}
+		x = 48
+		y = 2
+		
+		available = {
+			puritan > 0.15
+		}
+		bypass = {
+		
+		}
+		completion_reward = {
+			add_ideas = { STA_freiwillige_heimatverteidiger_idea }
+		}
+
+	}
+	focus = {
+		id = STA_spears_against_elves
+		icon = GFX_goal_generic_more_territorial_claims
+		cost = 10
+		prerequisite = {
+			focus = STA_freiwillige_heimatverteidiger
+		}
+		x = 48
+		y = 3
+		
+		available = {
+			puritan > 0.25
+		}
+		bypass = {
+		
+		}
+		completion_reward = {
+			add_equipment_to_stockpile = { type = light_melee_equipment amount = 250 producer = ROOT }
+		}
+
+	}
+	focus = {
+		id = STA_the_stahlheer
+		icon = GFX_focus_generic_manpower
+		cost = 10
+		prerequisite = {
+			focus = STA_spears_against_elves
+		}
+		mutually_exclusive = {
+			focus = STA_the_pragmatik_allianz
+		}
+		x = 47
+		y = 4
+		
+		available = {
+			puritan > 0.35
+		}
+		bypass = {
+		
+		}
+		completion_reward = {
+			hidden_effect = { load_oob = "STA_stahlhofarmyfocus" }
+			custom_effect_tooltip = STA_the_stahlheer_ctt
+		}
+
+	}
+	focus = {
+		id = STA_the_pragmatik_allianz
+		icon = GFX_goal_molotov_ribbentrop_pact
+		cost = 10
+		prerequisite = {
+			focus = STA_spears_against_elves
+		}
+		mutually_exclusive = {
+			focus = STA_the_stahlheer
+		}
+		x = 49
+		y = 4
+		
+		available = {
+			puritan > 0.35
+		}
+		bypass = {
+		
+		}
+		completion_reward = {
+		}
+
+	}
+	focus = {
+		id = STA_turn_to_the_caravaneers
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		cost = 10
+		prerequisite = {
+			focus = STA_the_bear_of_stahlhof
+		}
+		x = 52
+		y = 1
+		
+		available = {
+			has_political_power > 40
+		}
+		select_effect = {
+			add_political_power = -40
+		}
+		continue_if_invalid = yes
+		bypass = {
+		
+		}
+		completion_reward = {
+			add_popularity = { ideology = republic_merchant popularity = 0.05 }
+			add_timed_idea = [ idea = republic_merchant_drift_idea days = 365 }
+		}
+
+	}
+	focus = {
+		id = STA_contribute_to_the_war_effort
+		icon = GFX_goal_generic_small_arms
+		cost = 10
+		prerequisite = {
+			focus = STA_turn_to_the_caravaneers
+		}
+		x = 51
+		y = 2
+		
+		available = {
+			republic_merchant > 0.15
+		}
+		bypass = {
+			free_building_slots = {
+			building = arms_factory
+			size < 2
+			include_locked = yes
+			}
+		}
+		completion_reward = {
+			192 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_political_power = 50
+		}
+
+	}
+	focus = {
+		id = STA_demand_an_embargo
+		icon = GFX_goal_generic_trade
+		cost = 10
+		prerequisite = {
+			focus = STA_contribute_to_the_war_effort
+		}
+		x = 52
+		y = 3
+		
+		available = {
+			republic_merchant > 0.25
+		}
+		bypass = {
+		
+		}
+		completion_reward = {
+			UNG = {
+				add_ideas = { STA_embargo_union_idea }
+			}
+			add_opinion_modifier = {
+				target = UNG
+				modifier = STA_embargo_union_modifier
+			}
+		}
+
+	}
+	focus = {
+		id = STA_the_merchants_of_fritzhafen
+		icon = GFX_goal_generic_positive_trade_relations
+		cost = 10
+		prerequisite = {
+			focus = STA_demand_an_embargo
+		}
+		mutually_exclusive = {
+			focus = STA_der_nordhandel_wuergegriff
+		}
+		x = 51
+		y = 4
+		
+		available = {
+			republic_merchant > 0.35
+		}
+		bypass = {
+		
+		}
+		completion_reward = {
+		
+		}
+
+	}
+	focus = {
+		id = STA_der_nordhandel_wuergegriff
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		prerequisite = {
+			focus = STA_demand_an_embargo
+		}
+		mutually_exclusive = {
+			focus = STA_the_merchants_of_fritzhafen
+		}
+		x = 53
+		y = 4
+		
+		available = {
+			republic_merchant > 0.35
+		}
+		bypass = {
+		
+		}
+		completion_reward = {
+			add_ideas = { STA_nordhandel_idea }
+		}
+
+	}
+	focus = {
+		id = STA_the_iron_fist_of_schwarzenbach
+		icon = GFX_goal_generic_political_pressure
+		cost = 10
+		prerequisite = {
+			focus = STA_the_bear_of_stahlhof
+		}
+		x = 55
+		y = 1
+		
+		available = {
+		
+		}
+		bypass = {
+		
+		}
+		completion_reward = {
+			add_popularity = { ideology = monarchy_absolute popularity = 0.05 }
+			add_timed_idea = [ idea = monarchy_absolute_drift_idea days = 365 }
+			add_stability = 0.05
+			add_political_power = 50
+		}
+
+	}
+	focus = {
+		id = STA_the_steel_that_guards_us
+		icon = GFX_focus_generic_steel
+		cost = 20
+		prerequisite = {
+			focus = STA_the_iron_fist_of_schwarzenbach
+		}
+		x = 55
+		y = 2
+		
+		available = {
+			monarchy_absolute > 0.15
+		}
+		bypass = {
+		
+		}
+		completion_reward = {
+			add_resource = {
+				type = steel
+				amount = 7
+				state = 192
+			}
+			add_resource = {
+				type = steel
+				amount = 5
+				state = 198
+			}
+			add_resource = {
+				type = steel
+				amount = 3
+				state = 199
+			}
+		}
+
+	}
+	focus = {
+		id = STA_the_blood_that_binds_us
+		icon = GFX_goal_generic_dangerous_deal
+		cost = 10
+		prerequisite = {
+			focus = STA_the_steel_that_guards_us
+		}
+		x = 55
+		y = 3
+		
+		available = {
+			monarchy_absolute > 0.25
+		}
+		bypass = {
+		
+		}
+		completion_reward = {
+			add_ideas = { STA_binding_blood_idea }
+		}
+
+	}
+	focus = {
+		id = STA_the_crown_infallible
+		icon = GFX_focus_spa_no_compromise_on_carlist_ideals
+		cost = 10
+		prerequisite = {
+			focus = STA_the_blood_that_binds_us
+		}
+		x = 55
+		y = 4
+		
+		available = {
+			monarchy_absolute > 0.35
+		}
+		bypass = {
+		
+		}
+		completion_reward = {
+			add_timed_idea = { idea = STA_crown_infallible_idea days = 365 }
+		}
+
+	}
+	focus = {
+		id = STA_the_league_of_temples
+		icon = GFX_focus_generic_self_management
+		cost = 10
+		prerequisite = {
+			focus = STA_the_bear_of_stahlhof
+		}
+		x = 58
+		y = 1
+		
+		available = {
+			has_political_power > 40
+		}
+		select_effect = {
+			add_political_power = -40
+		}
+		continue_if_invalid = yes
+		bypass = {
+		
+		}
+		completion_reward = {
+			add_popularity = { ideology = theocrat popularity = 0.05 }
+			add_timed_idea = [ idea = theocrat_drift_idea days = 365 }
+		}
+
+	}
+	focus = {
+		id = STA_the_favour_of_the_seven
+		icon = GFX_focus_generic_diplomatic_treaty
+		cost = 10
+		prerequisite = {
+			focus = STA_the_league_of_temples
+		}
+		x = 59
+		y = 2
+		
+		available = {
+			theocrat > 0.15
+		}
+		bypass = {
+		
+		}
+		completion_reward = {
+			add_political_power = 100
+		}
+
+	}
+	focus = {
+		id = STA_divine_right_to_rule
+		icon = GFX_focus_focus_fra_fascist_threat
+		cost = 10
+		prerequisite = {
+			focus = STA_the_favour_of_the_seven
+		}
+		x = 58
+		y = 3
+		
+		available = {
+			theocrat > 0.25
+		}
+		bypass = {
+		
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = monarchy_absolute
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = theocrat
+				popularity = 0.05
+			}
+			add_stability = 0.05
+		}
+
+	}
+	focus = {
+		id = STA_the_priests_of_st_vichtlas
+		icon = GFX_focus_generic_military_academy
+		cost = 10
+		prerequisite = {
+			focus = STA_divine_right_to_rule
+		}
+		mutually_exclusive = {
+			focus = STA_break_with_the_orthodoxy
+		}
+		x = 57
+		y = 4
+		
+		available = {
+			theocrat > 0.35
+		}
+		bypass = {
+		
+		}
+		completion_reward = {
+		
+		}
+
+	}
+	focus = {
+		id = STA_break_with_the_orthodoxy
+		icon = GFX_focus_generic_military_mission
+		cost = 10
+		prerequisite = {
+			focus = STA_divine_right_to_rule
+		}
+		mutually_exclusive = {
+			focus = STA_the_priests_of_st_vichtlas
+		}
+		x = 59
+		y = 4
+		
+		available = {
+			theocrat > 0.35
+		}
+		bypass = {
+		
+		}
+		completion_reward = {
+		
+		}
+
+	}
+	focus = {
+		id = STA_reach_out_to_the_hornbergers
+		icon = GFX_goal_generic_improve_relations
+		cost = 10
+		prerequisite = {
+			focus = STA_the_bear_of_stahlhof
+		}
+		x = 62
+		y = 1
+		
+		available = {
+			has_political_power > 40
+		}
+		select_effect = {
+			add_political_power = -40
+		}
+		continue_if_invalid = yes
+		bypass = {
+		
+		}
+		completion_reward = {
+			add_popularity = { ideology = republic_aristocrat popularity = 0.05 }
+			add_timed_idea = [ idea = republic_aristocrat_drift_idea days = 365 }
+			add_ideas = { STA_divided_monarchists_idea }
+			add_stability = -0.2
+		}
+
+	}
+	focus = {
+		id = STA_meetings_on_neutral_ground
+		icon = GFX_goal_generic_position_armies
+		cost = 10
+		prerequisite = {
+			focus = STA_reach_out_to_the_hornbergers
+		}
+		x = 62
+		y = 2
+		
+		available = {
+			republic_aristocrat > 0.15
+		}
+		bypass = {
+		
+		}
+		completion_reward = {
+			add_stability = 0.1
+		}
+
+	}
+	focus = {
+		id = STA_the_unthinkable_deal
+		icon = GFX_goal_generic_dangerous_deal
+		cost = 10
+		prerequisite = {
+			focus = STA_meetings_on_neutral_ground
+		}
+		x = 62
+		y = 3
+		
+		available = {
+			republic_aristocrat > 0.25
+		}
+		bypass = {
+		
+		}
+		completion_reward = {
+			remove_idea = { STA_divided_monarchists_idea }
+			add_stability = 0.1
+		}
+
+	}
+	focus = {
+		id = STA_the_aristocrats_of_stahlhof
+		icon = GFX_goal_generic_demand_territory
+		cost = 10
+		prerequisite = {
+			focus = STA_the_unthinkable_deal
+		}
+		mutually_exclusive = {
+			focus = STA_blood_ties_to_wertszvoerde
+		}
+		x = 61
+		y = 4
+		
+		available = {
+			republic_aristocrat > 0.35
+		}
+		bypass = {
+		
+		}
+		completion_reward = {
+			add_stability = 0.05
+			add_ideas = { STA_joint_planning_commission_idea}
+		}
+
+	}
+	focus = {
+		id = STA_propaganda_bombardments
+		icon = GFX_goal_generic_propaganda
+		cost = 10
+		prerequisite = {
+			focus = STA_lessons_of_the_restoration_war
+		}
+		x = 3
+		y = 4
+		
+		available = {
+		
+		}
+		bypass = {
+		
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = STA_adelina_troop_loyalty_idea
+				add_idea = STA_adelina_troop_loyalty_idea2
+			}
+		}
+
+	}
+	focus = {
+		id = STA_every_village_a_soldier
+		icon = GFX_focus_focus_fra_revolution_upmost
+		cost = 10
+		prerequisite = {
+			focus = STA_meat_for_the_grinder
+		}
+		mutually_exclusive = {
+			focus = STA_every_village_a_weaponsmith
+		}
+		x = 1
+		y = 6
+		
+		available = {
+		
+		}
+		bypass = {
+		
+		}
+		completion_reward = {
+			add_ideas = { STA_every_village_a_solider_idea }
+		}
+
+	}
+	focus = {
+		id = STA_scare_the_faustburg_soldiers_into_submission
+		icon = GFX_focus_cze_german_puppet
+		cost = 10
+		prerequisite = {
+			focus = STA_propaganda_bombardments
+		}
+		x = 3
+		y = 5
+		
+		available = {
+		
+		}
+		bypass = {
+		
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = STA_adelina_troop_loyalty_idea2
+				add_idea = STA_adelina_troop_loyalty_idea3
+			}
+		}
+
+	}
+	focus = {
+		id = STA_steelcourt_iron_discipline
+		icon = GFX_goal_generic_army_doctrines
+		cost = 10
+		prerequisite = {
+			focus = STA_every_village_a_soldier
+			focus = STA_every_village_a_weaponsmith
+		}
+		prerequisite = {
+			focus = STA_scare_the_faustburg_soldiers_into_submission
+		}
+		x = 3
+		y = 7
+		
+		available = {
+		
+		}
+		bypass = {
+		
+		}
+		completion_reward = {
+			add_ideas = STA_iron_discipline_idea
+		}
+
+	}
+	focus = {
+		id = STA_der_stahlschritt
+		icon = GFX_focus_eng_move_to_secure_the_dominions
+		cost = 10
+		prerequisite = {
+			focus = STA_meritocratic_autocracy
+		}
+		x = 25
+		y = 5
+		
+		available = {
+		
+		}
+		bypass = {
+		
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = STA_meritocratic_autocracy_idea2
+				add_idea = STA_meritocratic_autocracy_idea3
+			}
+		}
+
+	}
+	focus = {
+		id = STA_authority_earned_is_unquestioned
+		icon = GFX_focus_generic_military_mission
+		cost = 10
+		prerequisite = {
+			focus = STA_der_stahlschritt
+		}
+		x = 25
+		y = 6
+		
+		available = {
+		
+		}
+		bypass = {
+		
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = STA_meritocratic_autocracy_idea3
+				add_idea = STA_meritocratic_autocracy_idea4
+			}
+		}
+
+	}
+	focus = {
+		id = STA_the_heldenmauer
+		icon = GFX_goal_generic_fortify_city
+		cost = 10
+		prerequisite = {
+			focus = STA_authority_earned_is_unquestioned
+		}
+		x = 25
+		y = 7
+		
+		available = {
+		
+		}
+		bypass = {
+		
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = STA_meritocratic_autocracy_idea4
+				add_idea = STA_meritocratic_autocracy_idea5
+			}
+		}
+
+	}
+	focus = {
+		id = STA_the_carrot_and_the_stick
+		icon = GFX_goal_generic_neutrality_focus
+		cost = 10
+		prerequisite = {
+			focus = STA_the_heldenmauer
+			focus = STA_force_an_iron_fist
+		}
+		prerequisite = {
+			focus = STA_first_aid_field_training
+			focus = STA_the_stahlreik_market
+		}
+		x = 30
+		y = 9
+		
+		available = {
+		
+		}
+		bypass = {
+		
+		}
+		completion_reward = {
+			add_stability = 0.1
+			add_war_support = 0.1
+		}
+
+	}
+	focus = {
+		id = STA_loyalty_through_fear
+		icon = GFX_focus_cze_german_puppet
+		cost = 10
+		prerequisite = {
+			focus = STA_force_an_iron_fist
+		}
+		prerequisite = {
+			focus = STA_the_heldenmauer
+		}
+		
+		x = 26
+		y = 8
+		
+		available = {
+		
+		}
+		bypass = {
+		
+		}
+		completion_reward = {
+			add_ideas = { STA_loyalty_through_fear_idea }
+		}
+
+	}
+	focus = {
+		id = STA_loyalty_through_love
+		icon = GFX_focus_generic_diplomatic_treaty
+		cost = 10
+		prerequisite = {
+			focus = STA_first_aid_field_training
+		}
+		prerequisite = {
+			focus = STA_the_stahlreik_market
+		}
+		x = 34
+		y = 8
+		
+		available = {
+		
+		}
+		bypass = {
+		
+		}
+		completion_reward = {
+			add_ideas = { STA_loyalty_through_love_idea }
+		}
+
+	}
+	focus = {
+		id = STA_authoritarian_benefactor
+		icon = GFX_focus_generic_concessions
+		cost = 10
+		prerequisite = {
+			focus = STA_loyalty_through_love
+		}
+		x = 33
+		y = 9
+		
+		available = {
+		
+		}
+		bypass = {
+		
+		}
+		completion_reward = {
+			add_stability = 0.2
+		}
+
+	}
+	focus = {
+		id = STA_sidestep_hatred
+		icon = GFX_goal_demand_sudetenland
+		cost = 10
+		prerequisite = {
+			focus = STA_loyalty_through_fear
+		}
+		x = 27
+		y = 9
+		
+		available = {
+		
+		}
+		bypass = {
+		
+		}
+		completion_reward = {
+			add_war_support = 0.2
+		}
+
+	}
+	focus = {
+		id = STA_improve_road_networks
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10
+		prerequisite = {
+			focus = STA_alliance_of_equals
+		}
+		x = 32
+		y = 6
+		
+		available = {
+			OR = {
+				200 = { infrastructure < 5 }
+				213 = { infrastructure < 5 }
+				216 = { infrastructure < 5 }
+				287 = { infrastructure < 5 }
+				316 = { infrastructure < 5 }
+			}
+		}
+		bypass = {
+		OR = {
+			AND = {
+				has_country_flag = sta_treaty_declined_flag
+				has_country_flag = sta_alliance_of_equals_flag
+			}
+			AND = {
+				200 = { infrastructure > 4 }
+				213 = { infrastructure > 4 }
+				216 = { infrastructure > 4 }
+				287 = { infrastructure > 4 }
+				316 = { infrastructure > 4 }
+			}
+		}
+		}
+		completion_reward = {
+			if = { 
+				limit = {
+					200 = { infrastructure < 5 }
+				}
+				200 = { set_building_level = { type = infrastructure level = 5 instant_build = yes } }
+			}
+			if = { 
+				limit = {
+					213 = { infrastructure < 5 }
+				}
+				213 = { set_building_level = { type = infrastructure level = 5 instant_build = yes } }
+			}
+			if = { 
+				limit = {
+					216 = { infrastructure < 5 }
+				}
+				216 = { set_building_level = { type = infrastructure level = 5 instant_build = yes } }
+			}
+			if = { 
+				limit = {
+					287 = { infrastructure < 5 }
+				}
+				287 = { set_building_level = { type = infrastructure level = 5 instant_build = yes } }
+			}
+			if = { 
+				limit = {
+					316 = { infrastructure < 5 }
+				}
+				316 = { set_building_level = { type = infrastructure level = 5 instant_build = yes } }
+			}
+		}
+
+	}
+	focus = {
+		id = STA_the_stahlreik_market
+		icon = GFX_goal_generic_positive_trade_relations
+		cost = 10
+		prerequisite = {
+			focus = STA_improve_road_networks
+		}
+		x = 32
+		y = 7
+		
+		available = {
+		
+		}
+		bypass = {
+		has_country_flag = sta_treaty_declined_flag
+		has_country_flag = sta_alliance_of_equals_flag
+		}
+		completion_reward = {
+			add_opinion_modifier = {
+				target = NRK
+				modifier = STA_stahlreik_market_opinion
+			}
+			NRK = {
+				add_opinion_modifier = {
+				target = STA
+				modifier = STA_stahlreik_market_opinion
+				}
+			}
+			add_ideas = {STA_stahlreik_market_idea}
+			NRK = { add_ideas = { STA_stahlreik_market_idea } }
+		}
+
+	}
+	focus = {
+		id = STA_der_pressler_pakt
+		icon = GFX_goal_generic_dangerous_deal
+		cost = 10
+		prerequisite = {
+			focus = STA_the_holzbrenn_opportunity
+		}
+		x = 38
+		y = 4
+		
+		available = {
+		
+		}
+		bypass = {
+		
+		}
+		completion_reward = {
+		
+		}
+
+	}
+	#focus = {
+	#	id = STA_posthoc_justification
+	#	icon = GFX_goal_generic_propaganda
+	#	cost = 10
+	#	prerequisite = {
+	#		focus = STA_intervene_openly
+	#	}
+	#	x = 42
+	#	y = 7
+	#	
+	#	available = {
+	#	
+	#	}
+	#	bypass = {
+	#	
+	#	}
+	#	completion_reward = {
+	#	
+	#	}
+#
+#	}
+	focus = {
+		id = STA_blood_ties_to_wertszvoerde
+		icon = GFX_focus_hol_the_foundations_of_defense
+		cost = 10
+		prerequisite = {
+			focus = STA_the_unthinkable_deal
+		}
+		mutually_exclusive = {
+			focus = STA_the_aristocrats_of_stahlhof
+		}
+		x = 63
+		y = 4
+		
+		available = {
+			republic_aristocrat > 0.35
+		}
+		bypass = {
+		
+		}
+		completion_reward = {
+		
+		}
+
+	}
+	focus = {
+		id = STA_stahlhof_kommando
+		icon = GFX_focus_generic_military_mission
+		cost = 10
+		prerequisite = {
+			focus = STA_perkav_plunderers
+			focus = STA_skaelinger_stalwarts
+			focus = STA_kurgur_killers
+		}
+		mutually_exclusive = {
+			focus = STA_foreign_officers
+		}
+		x = 8
+		y = 8
+		
+		available = {
+		
+		}
+		bypass = {
+		
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = STA_replenish_the_ranks_idea
+				add_idea = STA_replenish_the_ranks_idea2
+			}
+		}
+
+	}
+}

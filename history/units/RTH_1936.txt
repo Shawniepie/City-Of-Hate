@@ -39,7 +39,7 @@ units = {
 
 	division = {
 		name = "Quellion Peasant's Self-Defense Guild"
-		location = 6393
+		location = 1353
 		division_template = "Rose Wardens"
 		start_experience_factor = 0.3
 
@@ -47,7 +47,7 @@ units = {
 
 	division = {
 		name = "Thurgithon Peasant's Militia"
-		location = 3420
+		location = 473
 		division_template = "Rose Wardens"
 		start_experience_factor = 0.3
 
@@ -55,7 +55,7 @@ units = {
 	
 	division = {
 		name = "Vrinnis People's Watch"
-		location = 6379
+		location = 6954
 		division_template = "Rose Wardens"
 		start_experience_factor = 0.3
 
@@ -63,7 +63,7 @@ units = {
 
 	division = {
 		name = "Ytholine City Watch"
-		location = 2541
+		location = 4959
 		division_template = "Rose Wardens"
 		start_experience_factor = 0.3
 
@@ -71,7 +71,7 @@ units = {
 	
 	division = {
 		name = "Astrenar Hunter's Union"
-		location = 8044
+		location = 4347
 		division_template = "Rose Wardens"
 		start_experience_factor = 0.3
 
@@ -79,7 +79,7 @@ units = {
 
 	division = {
 		name = "Yctharon Forester's Lodge"
-		location = 2158
+		location = 6894
 		division_template = "Rose Wardens"
 		start_experience_factor = 0.3
 
@@ -87,7 +87,7 @@ units = {
 	
 	division = {
 		name = "Peakwatcher Sentries"
-		location = 6769
+		location = 7128
 		division_template = "Rose Wardens"
 		start_experience_factor = 0.3
 
@@ -95,15 +95,15 @@ units = {
 
 	division = {
 		name = "Gythus Southguard"
-		location = 3829
+		location = 1897
 		division_template = "Rose Wardens"
 		start_experience_factor = 0.3
 
 	}
 
 	division = {
-		name = "Zerinthaur Miner's Self-Defense League"
-		location = 1717
+		name = "Unspykaur Miner's Self-Defense League"
+		location = 7736
 		division_template = "Rose Wardens"
 		start_experience_factor = 0.3
 
@@ -111,7 +111,7 @@ units = {
 
 	division = {
 		name = "Ytholine Basin Garrison"
-		location = 7247
+		location = 7276
 		division_template = "Peasant's Guard"
 		start_experience_factor = 0.5
 
@@ -119,7 +119,7 @@ units = {
 
 	division = {
 		name = "Postal Woker's Self-Defense Guild"
-		location = 5506
+		location = 7095
 		division_template = "Outrider Watchers"
 		start_experience_factor = 0.4
 	}

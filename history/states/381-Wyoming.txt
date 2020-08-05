@@ -2,8 +2,19 @@ state={
 	id=381
 	name="STATE_381"
 	provinces={
-		3135 3139 3140 3141 7510 7960 7994 8354 
+		3229 3161 769 3286
 	}
-	manpower=0
+	state_category = large_city
+	manpower=628201
 	buildings_max_level_factor=1.000
+	history={
+		victory_points = { 769 23 }
+		owner = RMT
+		buildings = {
+			infrastructure = 7
+			industrial_complex = 2
+			arms_factory = 1
+		}
+		add_core_of = RMT
+	}
 }

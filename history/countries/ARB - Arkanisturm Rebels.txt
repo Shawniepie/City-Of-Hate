@@ -1,0 +1,122 @@
+﻿capital = 206
+
+set_oob = "empty"
+
+
+set_technology = {
+	infantry_weapons = 1
+	tech_support = 1
+	tech_recon = 1
+}
+
+1939.1.1 = {
+}
+
+set_politics = {
+	ruling_party = monarchy_absolute
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	monarchy_absolute = 53
+
+	monarchy_constitutional = 5
+
+	republic_peasant = 1
+
+	republic_aristocrat = 21
+
+	republic_merchant = 4
+
+	theocrat = 3
+
+	puritan = 3
+}
+
+add_ideas = {
+	human_country
+	arkanimism_religion
+}
+
+give_military_access = UNG
+give_military_access = HLZ
+give_military_access = NOC
+give_military_access = SPW
+give_military_access = SVT
+give_military_access = STA
+give_military_access = NRK
+give_military_access = TEI
+give_military_access = SNF
+give_military_access = FTH
+give_military_access = WIS
+give_military_access = WSZ
+
+add_opinion_modifier = {
+	target = SVT
+	modifier = bitter_rivals
+}
+
+create_country_leader = {
+	name = "Jithe Lafdaren"
+	desc = "politics_ARK_lafdaren_desc"
+	picture = "gfx/leaders/ARK/Portrait_ARK_Lafdaren.dds"
+	ideology = monarchy_constitutional_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Loster Ignawyne"
+	desc = "politics_ARK_ignawyne_desc"
+	picture = "gfx/leaders/ARK/Portrait_ARK_Ignawyne.dds"
+	ideology = republic_peasant_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Vignatius Harthennion"
+	desc = "politics_ARK_harthennion_desc"
+	picture = "gfx/leaders/ARK/Portrait_ARK_Harthennion.dds"
+	ideology = puritan_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Falstinnion Resmayer"
+	desc = "politics_ARK_resmayer_desc"
+	picture = "gfx/leaders/ARK/Portrait_ARK_Resmayer.dds"
+	ideology = monarchy_absolute_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Bhalus Ianin"
+	desc = "politics_ARK_ianin_desc"
+	picture = "gfx/leaders/ARK/Portrait_ARK_Ianin.dds"
+	ideology = theocrat_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Althwyne Serigan"
+	desc = "politics_ARK_serigan_desc"
+	picture = "gfx/leaders/ARK/Portrait_ARK_Serigan.dds"
+	ideology = republic_aristocrat_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Hautlir Polthore"
+	desc = "politics_ARK_polthore_desc"
+	picture = "gfx/leaders/ARK/Portrait_ARK_Polthore.dds"
+	ideology = republic_merchant_ideology
+	traits = {
+	}
+}

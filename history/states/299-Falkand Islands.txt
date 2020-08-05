@@ -2,13 +2,13 @@ state={
 	id=299
 	name="STATE_299"
 	provinces={
-		992 1305 2328 4048 4720 4721 5677 5981 8456 
+		3768 2688 8465 8445
 	}
 	state_category = town
 	manpower=12751
 	buildings_max_level_factor=1.000
 	history={
-		victory_points = { 4048 13 }
+		victory_points = { 8445 13 }
 		owner = HLZ
 		buildings = {
 			infrastructure = 5

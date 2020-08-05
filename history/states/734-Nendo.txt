@@ -2,8 +2,18 @@ state={
 	id=734
 	name="STATE_734"
 	provinces={
-		532 533 534 538 2940 3598 5886 5887 
+		3253 5911 5924 1728
 	}
-	manpower=0
+	state_category = town
+	manpower=12542
 	buildings_max_level_factor=1.000
+	history={
+		victory_points = { 5924 8 }
+		owner = RMT
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 3
+		}
+		add_core_of = RMT
+	}
 }

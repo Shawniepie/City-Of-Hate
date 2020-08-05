@@ -2,13 +2,13 @@ state={
 	id=416
 	name="STATE_416"
 	provinces={
-		1400 2987 3616 3648 3850 3878 4614 6141 6332 7765 7946 8451 
+		9548 185 5418 4944 2105 4542 9565 9571 485
 	}
 	state_category = large_town
 	manpower=344912
 	buildings_max_level_factor=1.000
 	history={
-		victory_points = { 3878 35 }
+		victory_points = { 4944 35 }
 		owner = PRK
 		buildings = {
 			infrastructure = 3

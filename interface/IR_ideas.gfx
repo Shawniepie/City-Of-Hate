@@ -1,0 +1,427 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_idea_generic_royal_marriage"
+		texturefile = "gfx/interface/ideas/generic_royal_marriage.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_generic_privateer"
+		texturefile = "gfx/interface/ideas/generic_privateer.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_merchant_captain"
+		texturefile = "gfx/interface/ideas/generic_merchant_captain.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_distinguished_admiral"
+		texturefile = "gfx/interface/ideas/generic_distinguished_admiral.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_knightly_paragon"
+		texturefile = "gfx/interface/ideas/generic_knightly_paragon.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_veteran"
+		texturefile = "gfx/interface/ideas/generic_veteran.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_folk_hero"
+		texturefile = "gfx/interface/ideas/generic_folk_hero.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_hlz_reinmann"
+		texturefile = "gfx/interface/ideas/hlz_reinmann.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_hlz_bloch"
+		texturefile = "gfx/interface/ideas/hlz_bloch.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_hlz_heuberger"
+		texturefile = "gfx/interface/ideas/hlz_heuberger.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_hlz_von_neureim"
+		texturefile = "gfx/interface/ideas/hlz_von_neureim.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_hlz_fugler"
+		texturefile = "gfx/interface/ideas/hlz_fugler.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_hlz_goeth"
+		texturefile = "gfx/interface/ideas/hlz_goeth.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_hlz_stelzner"
+		texturefile = "gfx/interface/ideas/hlz_stelzner.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_hlz_isthyne"
+		texturefile = "gfx/interface/ideas/hlz_isthyne.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_ung_union_forever"
+		texturefile = "gfx/interface/ideas/ung_union_forever.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_ung_elven_agents"
+		texturefile = "gfx/interface/ideas/ung_elven_agents.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_navy_female"
+		texturefile = "gfx/interface/ideas/idea_generic_navy_female_europe.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_political_advisor_female_africa"
+		texturefile = "gfx/interface/ideas/idea_generic_political_advisor_female_africa.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_army_female_africa"
+		texturefile = "gfx/interface/ideas/idea_generic_army_female_africa.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_army_female"
+		texturefile = "gfx/interface/ideas/idea_generic_army_female_arab.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_embargo"
+		texturefile = "gfx/interface/ideas/generic_embargo.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_merc_hiring_perkav_raiders"
+		texturefile = "gfx/interface/ideas/merc_hiring_perkav_raiders.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_generic_elf"
+		texturefile = "gfx/interface/ideas/generic_elf.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_gnome"
+		texturefile = "gfx/interface/ideas/generic_gnome.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_human"
+		texturefile = "gfx/interface/ideas/generic_human.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_dwarf"
+		texturefile = "gfx/interface/ideas/generic_dwarf.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_lizardman"
+		texturefile = "gfx/interface/ideas/generic_lizardman.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_orc"
+		texturefile = "gfx/interface/ideas/generic_orc.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_rosites"
+		texturefile = "gfx/interface/ideas/generic_rosites.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_temple"
+		texturefile = "gfx/interface/ideas/generic_temple.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_low_devastation"
+		texturefile = "gfx/interface/ideas/low_devastation.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_medium_devastation"
+		texturefile = "gfx/interface/ideas/medium_devastation.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_high_devastation"
+		texturefile = "gfx/interface/ideas/high_devastation.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_hlz_beziehungsburo"
+		texturefile = "gfx/interface/ideas/hlz_beziehungsburo.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_hlz_rechtsakademie"
+		texturefile = "gfx/interface/ideas/hlz_rechtsakademie.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_hlz_agricultural_boom"
+		texturefile = "gfx/interface/ideas/hlz_agricultural_boom.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_ung_refugee_crisis"
+		texturefile = "gfx/interface/ideas/ung_refugee_crisis.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_ung_ordorian_refugees"
+		texturefile = "gfx/interface/ideas/ung_ordorian_refugees.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_ung_kaltwetter_corps"
+		texturefile = "gfx/interface/ideas/ung_kaltwetter_corps.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_religion"
+		texturefile = "gfx/interface/ideas/generic_religion.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_monarchy_strengthening"
+		texturefile = "gfx/interface/ideas/generic_monarchy_strengthening.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_religion_septism"
+		texturefile = "gfx/interface/ideas/religion_septism.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_arkanimism_religion"
+		texturefile = "gfx/interface/ideas/arkanimism_religion.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_religion_krostovism"
+		texturefile = "gfx/interface/ideas/religion_krostovism.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_religion_chivraism"
+		texturefile = "gfx/interface/ideas/religion_chivraism.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_deity_hieyrenous"
+		texturefile = "gfx/interface/ideas/deity_hieyrenous.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_deity_bitha"
+		texturefile = "gfx/interface/ideas/deity_bitha.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_deity_nurhelm"
+		texturefile = "gfx/interface/ideas/deity_nurhelm.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_deity_anzella"
+		texturefile = "gfx/interface/ideas/deity_anzella.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_deity_hutrig"
+		texturefile = "gfx/interface/ideas/deity_hutrig.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_deity_daskellin"
+		texturefile = "gfx/interface/ideas/deity_daskellin.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_deity_tergewelft"
+		texturefile = "gfx/interface/ideas/deity_tergewelft.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_religion_selinism"
+		texturefile = "gfx/interface/ideas/religion_selinism.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_religion_arthenism"
+		texturefile = "gfx/interface/ideas/religion_arthenism.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_religion_dwarven_ancestor_worship"
+		texturefile = "gfx/interface/ideas/religion_dwarven_ancestor_worship.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_religion_itherynism"
+		texturefile = "gfx/interface/ideas/religion_itherynism.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_religion_lorthorism"
+		texturefile = "gfx/interface/ideas/religion_lorthorism.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_religion_molten_god"
+		texturefile = "gfx/interface/ideas/religion_molten_god.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_religion_ouborism"
+		texturefile = "gfx/interface/ideas/religion_ouborism.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_religion_sothrism"
+		texturefile = "gfx/interface/ideas/religion_sothrism.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_religion_damokegol"
+		texturefile = "gfx/interface/ideas/religion_damokegol.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_itheryn_labour"
+		texturefile = "gfx/interface/ideas/itheryn_labour.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_itheryn_vengeance"
+		texturefile = "gfx/interface/ideas/itheryn_vengeance.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_itheryn_justice"
+		texturefile = "gfx/interface/ideas/itheryn_justice.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_itheryn_wisdom"
+		texturefile = "gfx/interface/ideas/itheryn_wisdom.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_prk_tribal_nation"
+		texturefile = "gfx/interface/ideas/prk_tribal_nation.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_prk_perkav_script"
+		texturefile = "gfx/interface/ideas/prk_perkav_script.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_prk_beginnings_literacy"
+		texturefile = "gfx/interface/ideas/prk_beginnings_literacy.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_prk_perkav_census"
+		texturefile = "gfx/interface/ideas/prk_perkav_census.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_prk_oral_tradition"
+		texturefile = "gfx/interface/ideas/prk_oral_tradition.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_prk_riches_schneefilde"
+		texturefile = "gfx/interface/ideas/prk_riches_schneefilde.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_snf_schneefilde_sacked"
+		texturefile = "gfx/interface/ideas/snf_schneefilde_sacked.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_ordoria_hegemony"
+		texturefile = "gfx/interface/ideas/ordoria_hegemony.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_ord_rthaur_rebellion"
+		texturefile = "gfx/interface/ideas/ord_rthaur_rebellion.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_ord_rthaur_propaganda"
+		texturefile = "gfx/interface/ideas/ord_rthaur_propaganda.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_ord_foreign_labour"
+		texturefile = "gfx/interface/ideas/ord_foreign_labour.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_slavery"
+		texturefile = "gfx/interface/ideas/generic_slavery.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_ord_war_focussed_economy"
+		texturefile = "gfx/interface/ideas/ord_war_focussed_economy.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_elf_whoopass"
+		texturefile = "gfx/interface/ideas/generic_elf_whoopass.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_chain_of_command"
+		texturefile = "gfx/interface/ideas/generic_chain_of_command.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_rth_fires_revolution"
+		texturefile = "gfx/interface/ideas/rth_fires_revolution.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_rth_peasant_army"
+		texturefile = "gfx/interface/ideas/rth_peasant_army.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_rth_unblooded_commanders"
+		texturefile = "gfx/interface/ideas/rth_unblooded_commanders.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_rth_lavynthis"
+		texturefile = "gfx/interface/ideas/rth_lavynthis.dds"
+	}
+}

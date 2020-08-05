@@ -24,38 +24,38 @@ division_template = {
 units = {
 
 	division = {
-		name = "Westrenne Militia"
-		location = 4363
+		name = "Anzer Militia"
+		location = 366
 		division_template = "Foundry Militia"
 		start_experience_factor = 0.3
 	}
 	
 	division = {
-		name = "Naxgolin Militia"
-		location = 1784
+		name = "Kaltire Militia"
+		location = 6053
 		division_template = "Foundry Militia"
 		start_experience_factor = 0.3
 	}
 	
 	division = {
-		name = "Kaltire Soldiers"
-		location = 4363
+		name = "1st Kaltire Steel Soldiers"
+		location = 165
 		division_template = "Steel Soldiers"
 		start_experience_factor = 0.4
 	}
 
 	division = {
-		name = "1st Steel Soldiers"
-		location = 6827
+		name = "2nd Kaltire Steel Soldiers"
+		location = 6138
 		division_template = "Steel Soldiers"
 		start_experience_factor = 0.4
 	}	
 
 	division = {
-		name = "2nd Steel Soldiers"
-		location = 1923
+		name = "3rd Kaltire Steel Soldiers"
+		location = 3175
 		division_template = "Steel Soldiers"
 		start_experience_factor = 0.4
-	}	
+	}
 	
 }

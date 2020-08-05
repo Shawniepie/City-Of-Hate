@@ -3,10 +3,10 @@ state={
 	id=546
 	name="STATE_546"
 	provinces={
-		5297 5524 5525 5760 6134 7423 7428 15210 
+		8508 4776 8431
 	}
 	state_category = rural
-	manpower=2918
+	manpower=1459
 	buildings_max_level_factor=1.000
 	history={
 		owner = BER

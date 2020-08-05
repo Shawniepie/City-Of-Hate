@@ -1,0 +1,437 @@
+﻿add_namespace = elector
+
+country_event = {# Emperor is attempting to check the loyalty of supporting seats given to princedoms without taking a favour.
+	id = elector.1
+	title = elector.1.t
+	desc = elector.1.d
+	picture = GFX_report_event_generic_councilsupport
+
+	is_triggered_only = yes
+
+	option = { # We agree to support Emperor
+		name = elector.1.a
+		ai_chance = {
+			factor = 1 # Princedoms will act randomly if only there are no ambitions of theirs
+			
+			modifier = {
+				factor = 0.5 # Chances will decrease greatly under some conditions
+				OR = {
+					ROOT = {
+						is_major = yes
+					}
+					has_idea = anti_soviet_pact # Placeholder for now - there should be spirit like anti-imperial sentiments
+				}
+			}
+		}
+		hidden_effect = {
+			ROOT = {
+				add_ideas = unioncouncil_support
+				}
+			UNG = {
+				country_event = {
+					id = elector.2
+				}
+			}
+		}
+	}
+
+	option = { # We will vote against Emperor
+		name = elector.1.b
+		ai_chance = {
+			factor = 1
+		}
+		hidden_effect = {
+			ROOT = {
+				add_ideas = unioncouncil_antiimperialism
+				}
+			UNG = {
+				country_event = {
+					id = elector.3
+				}
+			}
+		}
+	}
+}
+
+country_event = {# Emperor gets vote loyalty report
+	id = elector.2
+	title = elector.2.t
+	desc = elector.2.d
+	picture = GFX_report_event_generic_councilsupport
+
+	is_triggered_only = yes
+
+	option = {
+		name = elector.2.a
+		UNG = {
+			clr_country_flag = flag_councilbusy
+			add_to_variable = {
+			var = UNG.unioncouncil_support
+			value = 1
+			}
+			UNG_recalc_council_icon_frames = yes
+		}
+	}
+}
+
+country_event = {# Emperor gets official complaint and veto
+	id = elector.3
+	title = elector.3.t
+	desc = elector.3.d
+	picture = GFX_report_event_generic_antiimperialism
+
+	is_triggered_only = yes
+
+	option = {
+		name = elector.3.a
+		UNG = {
+			clr_country_flag = flag_councilbusy
+			UNG_recalc_council_icon_frames = yes
+		}
+	}
+}
+#########################
+#### FAVOURS 4 (5-8) ####
+#########################
+
+country_event = {# When Emperor asks chosen princedom what can be done to get his vote or princedom wants Emperor's aid, princedom has to select an option that fits it.
+	id = elector.4
+	title = elector.4.t
+	desc = elector.4.d
+	picture = GFX_report_event_generic_councilfavour
+
+	is_triggered_only = yes
+
+	option = { # Princedom wants political power
+		name = elector.4.a
+		UNG = {
+			country_event = {
+				id = elector.5
+			}
+		}
+	}
+	option = { # Princedom wants industrial investment
+		name = elector.4.b
+		UNG = {
+			country_event = {
+				id = elector.6
+			}
+		}
+	}
+	option = { # Princedom wants manpower
+		name = elector.4.c
+		UNG = {
+			country_event = {
+				id = elector.7
+			}
+		}
+	}
+	option = { # Princedom hates Emperor
+		name = elector.4.e
+		UNG = {
+			country_event = {
+				id = elector.8
+			}
+		}
+	}
+}
+
+country_event = {# Emperor is asked in response to give political power
+	id = elector.5
+	title = elector.5.t
+	desc = elector.5.d
+	picture = GFX_report_event_generic_councilfavourreq
+
+	is_triggered_only = yes
+
+	option = { # Sure
+		name = elector.5.a
+		ai_chance = { # AI will play more passively, having predictably slow but determined voters gain
+			factor = 0.4
+		}
+		UNG = {
+			clr_country_flag = flag_councilbusy
+		}
+		add_political_power = -100
+		FROM = {
+			add_ideas = unioncouncil_support
+		}
+		add_to_variable = {
+		var = UNG.unioncouncil_support
+		value = 1
+		}
+	}
+	option = { # No way. There SHOULD be proper response for princedom in such case in case of player leading princedom
+		name = elector.5.b
+		UNG = {
+			clr_country_flag = flag_councilbusy
+		}
+		FROM = {
+			add_ideas = unioncouncil_antiimperialism
+		}
+		ai_chance = {
+			factor = 0.6
+		}
+	}
+}
+
+country_event = {# Emperor is asked in response to give industrial investment
+	id = elector.6
+	title = elector.6.t
+	desc = elector.6.d
+	picture = GFX_report_event_generic_councilfavourreq
+
+	is_triggered_only = yes
+
+	option = { # Sure
+		name = elector.6.a
+		ai_chance = { # AI will play more passively, having predictably slow but determined voters gain
+			factor = 0.4
+		}
+		UNG = {
+			clr_country_flag = flag_councilbusy
+			unioncouncil_industrialfavour_level_up = yes
+		}
+		FROM = {
+			add_ideas = unioncouncil_support
+		}
+		add_to_variable = {
+		var = UNG.unioncouncil_support
+		value = 1
+		}
+	}
+	option = { # No way. There SHOULD be proper response for princedom in such case in case of player leading princedom
+		name = elector.6.b
+		UNG = {
+			clr_country_flag = flag_councilbusy
+		}
+		FROM = {
+			add_ideas = unioncouncil_antiimperialism
+		}
+		ai_chance = {
+			factor = 0.6
+		}
+	}
+}
+country_event = {# Emperor is asked in response to give manpower
+	id = elector.7
+	title = elector.7.t
+	desc = elector.7.d
+	picture = GFX_report_event_generic_councilfavourreq
+
+	is_triggered_only = yes
+
+	option = { # Sure
+		name = elector.7.a
+		ai_chance = { # AI will play more passively, having predictably slow but determined voters gain
+			factor = 0.4
+		}
+		UNG = {
+			clr_country_flag = flag_councilbusy
+			unioncouncil_armyfavour_level_up = yes
+		}
+		FROM = {
+			add_ideas = unioncouncil_support
+		}
+		add_to_variable = {
+		var = UNG.unioncouncil_support
+		value = 1
+		}
+	}
+	option = { # No way. There SHOULD be proper response for princedom in such case in case of player leading princedom
+		name = elector.7.b
+		UNG = {
+			clr_country_flag = flag_councilbusy
+		}
+		FROM = {
+			add_ideas = unioncouncil_antiimperialism
+		}
+		ai_chance = {
+			factor = 0.6
+		}
+	}
+}
+
+country_event = {# Emperor is being greatly insulted by disloyal subject
+	id = elector.8
+	title = elector.8.t
+	desc = elector.8.d
+	picture = GFX_report_event_generic_antiimperialism
+
+	is_triggered_only = yes
+
+	option = { # Outrage
+		UNG = {
+			clr_country_flag = flag_councilbusy
+		}
+		name = elector.8.a
+		FROM = {
+			add_ideas = unioncouncil_antiimperialism
+		}
+	}
+}
+
+country_event = {# Princedom gets information that it is no longer under Emperor authority
+	id = elector.9
+	title = elector.9.t
+	desc = elector.9.d
+	picture = GFX_report_event_generic_antiimperialism
+
+	is_triggered_only = yes
+
+	option = {
+		name = elector.9.a
+	}
+}
+##############################
+#### IMPERIAL LAWS SYSTEM ####
+##############################
+
+country_event = {# Event informing that Enact Ewigeverfassung Law Tier 1 Voting passed
+	id = elector.10
+	title = elector.10.t
+	desc = elector.10.d
+	picture = GFX_report_event_generic_council
+
+	is_triggered_only = yes
+
+	option = {
+		name = elector.10.a
+	}
+}
+
+country_event = {# Event informing that Kaiserliche Autarkie Law Tier 2 Voting passed
+	id = elector.11
+	title = elector.11.t
+	desc = elector.11.d
+	picture = GFX_report_event_generic_council
+
+	is_triggered_only = yes
+
+	option = {
+		name = elector.11.a
+	}
+}
+
+country_event = {# Event informing that Legitimize Ungerdaler Ältestenrat Law Tier 3 Voting passed
+	id = elector.12
+	title = elector.12.t
+	desc = elector.12.d
+	picture = GFX_report_event_generic_council
+
+	is_triggered_only = yes
+
+	option = {
+		name = elector.12.a
+	}
+}
+
+country_event = {# Event informing that Enforce Gemeinsame Verteidigungspolitik Law Tier 4 Voting passed
+	id = elector.13
+	title = elector.13.t
+	desc = elector.13.d
+	picture = GFX_report_event_generic_council
+
+	is_triggered_only = yes
+
+	option = {
+		name = elector.13.a
+	}
+}
+
+country_event = {# Event informing that Enact Kaiserliche Wehrpflicht Law Tier 5 Voting passed
+	id = elector.14
+	title = elector.14.t
+	desc = elector.14.d
+	picture = GFX_report_event_generic_council
+
+	is_triggered_only = yes
+
+	option = {
+		name = elector.14.a
+	}
+}
+
+country_event = {# Event informing that Adelshäusvereint Law Tier 6 WHICH MEANS ALL ARE BEING diploannexed, well... almost all
+	id = elector.15
+	title = elector.15.t
+	desc = elector.15.d
+	picture = GFX_report_event_generic_council
+
+	is_triggered_only = yes
+
+	option = { # diploannex
+		name = elector.15.a
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 15
+				has_idea = unioncouncil_support
+			}
+		}
+		UNG = {
+			country_event = {
+				id = elector.16
+			}
+		}
+	}
+	option = { # We are already discontent, so no
+		name = elector.15.b
+		ai_chance = {
+			base = 0.5
+			modifier = {
+				factor = 10
+				has_idea = unioncouncil_antiimperialism
+			}
+		}
+		remove_ideas = unioncouncil_antiimperialism
+		ROOT = { end_puppet = UNG }
+	}
+	
+	option = { # PREPARE TO DIE BLYAT
+		name = elector.15.c
+		ai_chance = {
+			base = 0
+		}
+		ROOT = {
+			declare_war_on = {
+				target = UNG
+				type = puppet_wargoal_focus
+			}
+		}
+	}
+}
+
+country_event = {
+	id = elector.16
+	title = elector.16.t
+	desc = elector.16.d
+	picture = GFX_report_event_generic_council
+
+	is_triggered_only = yes
+
+	option = {
+		name = elector.16.a
+		ai_chance = {
+			base = 1
+		}
+		annex_country = { target = FROM transfer_troops = yes }
+	}
+}
+
+country_event = { # Councilmen oppose shuffle
+	id = elector.17
+	title = elector.17.t
+	desc = elector.17.d
+	picture = GFX_report_event_generic_council
+
+	is_triggered_only = yes
+
+	option = { # We cant do anything
+		name = elector.17.a
+		ai_chance = {
+			base = 1
+		}
+		annex_country = { target = FROM transfer_troops = yes }
+	}
+}

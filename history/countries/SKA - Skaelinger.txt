@@ -55,6 +55,21 @@ add_ideas = {
 		active = yes
 	}
 	
+	add_opinion_modifier = {
+		target = RMT
+		modifier = bitter_rivals
+	}
+	
+	add_opinion_modifier = {
+		target = BER
+		modifier = bitter_rivals
+	}
+	
+	add_opinion_modifier = {
+		target = KUR
+		modifier = bitter_rivals
+	}
+	
 create_country_leader = {
 	name = "Ystvigg Hellirfast"
 	desc = "politics_SKA_hellirfast_desc"

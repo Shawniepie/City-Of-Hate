@@ -48,7 +48,7 @@ units = {
 
 	division = {
 		name = "1st Regiment 'Magier'"
-		location = 1237
+		location = 3771
 		division_template = "Zaubertruppen"
 		start_experience_factor = 0.5
 
@@ -56,7 +56,7 @@ units = {
 	
 	division = {
 		name = "2nd Regiment 'Zaubermänner'"
-		location = 6607
+		location = 4566
 		division_template = "Zaubertruppen"
 		start_experience_factor = 0.5
 
@@ -64,7 +64,7 @@ units = {
 	
 	division = {
 		name = "1st Cavalry 'Einhornritter'"
-		location = 4338
+		location = 5334
 		division_template = "Einhorn-Kavallerie"
 		start_experience_factor = 0.7
 
@@ -72,7 +72,7 @@ units = {
 	
 	division = {
 		name = "Tower Guard"
-		location = 5870
+		location = 1829
 		division_template = "Turmwache"
 		start_experience_factor = 0.05
 

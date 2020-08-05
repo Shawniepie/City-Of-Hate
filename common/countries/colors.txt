@@ -20,6 +20,26 @@ ORB = {
 	color_ui = rgb { 229 143 111 }
 }
 
+IST = {
+	color = rgb { 50  119  52 }
+	color_ui = rgb { 58 126 59 }
+}
+
+VAR = {
+	color = rgb { 135  35  20 }
+	color_ui = rgb { 140  40  25 }
+}
+
+YTH = {
+	color = rgb { 48  119  122 }
+	color_ui = rgb { 57  126  130 }
+}
+
+VUD = {
+	color = rgb { 126  130  126 }
+	color_ui = rgb { 132  137  132 }
+}
+
 EOR = {
 	color = rgb { 140 200 0 }
 	color_ui = rgb { 145 215 55 }
@@ -48,6 +68,11 @@ HLZ = {
 ARK = {
 	color = rgb { 196 60 108 }
 	color_ui = rgb { 214 78 122 }
+}
+
+ARB = {
+	color = rgb { 104 107 127 }
+	color_ui = rgb { 100 112 134 }
 }
 
 FTH = {
@@ -163,6 +188,26 @@ BER = {
 KUR = {
 	color = rgb { 91 91 26 }
 	color_ui = rgb { 98 98 34 }
+}
+
+IRI = {
+	color = rgb { 181 0 147 }
+	color_ui = rgb { 194 12 159 }
+}
+
+RMT = {
+	color = rgb { 249 4 0 }
+	color_ui = rgb { 255 15 11 }
+}
+
+LIR = {
+	color = rgb { 67 243 249 }
+	color_ui = rgb { 74 250 256 }
+}
+
+MER = {
+	color = rgb { 0 250 144 }
+	color_ui = rgb { 7 255 150 }
 }
 
 D01 = {

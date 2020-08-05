@@ -1,8 +1,7 @@
 ﻿units = {
-
 	division = {
 		name = "Clan Hafahlíf"
-		location = 287
+		location = 5584
 		division_template = "Mountainbreakers"
 		start_experience_factor = 0.8
 
@@ -10,7 +9,15 @@
 
 	division = {
 		name = "Clan Hraustr"
-		location = 8110
+		location = 5329
+		division_template = "Mountainbreakers"
+		start_experience_factor = 0.8
+
+	}
+
+	division = {
+		name = "Clan Hvassøx"
+		location = 7076
 		division_template = "Mountainbreakers"
 		start_experience_factor = 0.8
 
@@ -18,7 +25,7 @@
 
 	division = {
 		name = "Clan Stinnrstál"
-		location = 2090
+		location = 7212
 		division_template = "Mountainbreakers"
 		start_experience_factor = 0.8
 
@@ -26,7 +33,7 @@
 	
 	division = {
 		name = "Clan Hellirfast"
-		location = 2091
+		location = 7075
 		division_template = "Mountainbreakers"
 		start_experience_factor = 1.0
 
@@ -34,31 +41,31 @@
 
 	division = {
 		name = "Jolskane Hearthguards"
-		location = 7426
+		location = 2563
+		division_template = "Hearthguards"
+		start_experience_factor = 0.6
+
+	}
+
+	division = {
+		name = "Skaeskind Pass Watch"
+		location = 6793
 		division_template = "Hearthguards"
 		start_experience_factor = 0.6
 
 	}
 	
 	division = {
-		name = "Alstur Border Garrison"
-		location = 7304
+		name = "Alstir Border Garrison"
+		location = 6966
 		division_template = "Hearthguards"
 		start_experience_factor = 0.6
 
 	}
 	
 	division = {
-		name = "Vintalr Southguard"
-		location = 1420
-		division_template = "Hearthguards"
-		start_experience_factor = 0.7
-
-	}
-	
-	division = {
-		name = "Asdringr Southguard"
-		location = 7838
+		name = "Votrosr Southguard"
+		location = 2320
 		division_template = "Hearthguards"
 		start_experience_factor = 0.7
 
@@ -66,24 +73,24 @@
 	
 	division = {
 		name = "1st Miner's Militia"
-		location = 304
-		division_template = "Tunnel Fighters"
+		location = 7573
+		division_template = "Hearthguards"
 		start_experience_factor = 0.5
 
 	}
 	
 	division = {
 		name = "2nd Miner's Militia"
-		location = 278
-		division_template = "Tunnel Fighters"
+		location = 1249
+		division_template = "Hearthguards"
 		start_experience_factor = 0.5
 
 	}
 	
 	division = {
 		name = "3rd Miner's Militia"
-		location = 277
-		division_template = "Tunnel Fighters"
+		location = 1299
+		division_template = "Hearthguards"
 		start_experience_factor = 0.5
 
 	}

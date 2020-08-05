@@ -1,0 +1,17 @@
+state={
+	id=802
+	name="STATE_802"
+	provinces={
+		61 222 3570 1199 5054 5070 4525 5784 5801 1224 5780
+	}
+	state_category = rural
+	manpower=7932
+	buildings_max_level_factor=1.000
+	history={
+		owner = LIR
+		buildings = {
+			infrastructure = 5
+		}
+		add_core_of = LIR
+	}
+}

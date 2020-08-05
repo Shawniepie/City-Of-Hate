@@ -1,0 +1,17 @@
+state={
+	id=821
+	name="STATE_821"
+	provinces={
+		1798 218 1762 6090
+	}
+	state_category = rural
+	manpower=9021
+	buildings_max_level_factor=1.000
+	history={
+		owner = LIR
+		buildings = {
+			infrastructure = 5
+		}
+		add_core_of = LIR
+	}
+}

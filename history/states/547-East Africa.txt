@@ -2,6 +2,15 @@ state={
 	id=547
 	name="STATE_547"
 	provinces={
-		336 340 341 705 952 4138 4139 4140 
+		1034 4247 3688
+	}
+	manpower=1642
+	buildings_max_level_factor=1.000
+	history={
+		owner = BER
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = BER
 	}
 }

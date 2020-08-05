@@ -4,7 +4,7 @@ state={
 	state_category = metropolis
 	manpower = 929127
 	provinces={
-		4451 4644 4645 4646 8149 8514 8702 8703 
+		6034 228 6027 2379 6074 6017 2203 5994
 	}
 
 	resources = {
@@ -13,7 +13,7 @@ state={
 	
 	history={
 		owner = GMR
-		victory_points = {8702 49}
+		victory_points = {2379 49}
 		buildings = {
 			infrastructure = 6
 			industrial_complex = 3

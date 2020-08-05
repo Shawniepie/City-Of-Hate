@@ -48,7 +48,7 @@ units = {
 
 	division = {
 		name = "Arngus Mirewatch"
-		location = 2626
+		location = 3901
 		division_template = "Mirewatch"
 		start_experience_factor = 0.6
 
@@ -56,7 +56,7 @@ units = {
 	
 	division = {
 		name = "Thurruth Mirewatch"
-		location = 3707
+		location = 7165
 		division_template = "Mirewatch"
 		start_experience_factor = 0.6
 
@@ -64,7 +64,7 @@ units = {
 	
 	division = {
 		name = "Gurluth Mirewatch"
-		location = 7581
+		location = 119
 		division_template = "Mirewatch"
 		start_experience_factor = 0.8
 
@@ -72,7 +72,7 @@ units = {
 	
 	division = {
 		name = "Putrun Mirewatch"
-		location = 3841
+		location = 6663
 		division_template = "Mirewatch"
 		start_experience_factor = 0.7
 
@@ -80,7 +80,7 @@ units = {
 	
 	division = {
 		name = "Cist Mirewatch"
-		location = 2085
+		location = 6939
 		division_template = "Mirewatch"
 		start_experience_factor = 0.7
 
@@ -88,7 +88,7 @@ units = {
 	
 	division = {
 		name = "Maleet Mirewatch"
-		location = 3842
+		location = 3194
 		division_template = "Mirewatch"
 		start_experience_factor = 0.7
 
@@ -96,7 +96,7 @@ units = {
 	
 	division = {
 		name = "Gurn Mirewatch"
-		location = 1220
+		location = 813
 		division_template = "Mirewatch"
 		start_experience_factor = 0.7
 
@@ -104,7 +104,7 @@ units = {
 	
 	division = {
 		name = "Luudz' Wyrmriders"
-		location = 6284
+		location = 3125
 		division_template = "Wyrmriders"
 		start_experience_factor = 0.7
 
@@ -112,7 +112,7 @@ units = {
 	
 	division = {
 		name = "Glorrin Drake Cavalry"
-		location = 5739
+		location = 7633
 		division_template = "Drake Cavalry"
 		start_experience_factor = 0.7
 
@@ -120,7 +120,7 @@ units = {
 	
 	division = {
 		name = "Issthvin Unblooded"
-		location = 3526
+		location = 5317
 		division_template = "Unblooded Militia"
 		start_experience_factor = 0.05
 
@@ -128,7 +128,7 @@ units = {
 	
 	division = {
 		name = "Norl Unblooded"
-		location = 80
+		location = 6699
 		division_template = "Unblooded Militia"
 		start_experience_factor = 0.05
 
@@ -136,7 +136,7 @@ units = {
 	
 	division = {
 		name = "Quure Unblooded"
-		location = 1601
+		location = 6968
 		division_template = "Unblooded Militia"
 		start_experience_factor = 0.05
 
@@ -144,7 +144,7 @@ units = {
 	
 	division = {
 		name = "Sorth Unblooded"
-		location = 5368
+		location = 3125
 		division_template = "Unblooded Militia"
 		start_experience_factor = 0.05
 
@@ -152,7 +152,7 @@ units = {
 	
 	division = {
 		name = "Garythie Unblooded"
-		location = 7594
+		location = 2097
 		division_template = "Unblooded Militia"
 		start_experience_factor = 0.05
 
@@ -160,7 +160,7 @@ units = {
 	
 	division = {
 		name = "Lurve Unblooded"
-		location = 5189
+		location = 2204
 		division_template = "Unblooded Militia"
 		start_experience_factor = 0.05
 

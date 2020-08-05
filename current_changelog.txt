@@ -1,9 +1,25 @@
--Shuffled some foci in the Ordorian tree to make mutually exclusive choices clearer
--Reworked Holzbrenn's focus tree
--Fixed OoB error where the Kurgur would have a random unit on the other continent
--Fixed a graphics bug with the Compensation for Nobles idea for Ordoria
--Transferred a province from Nohora to Hisjine
--Slightly edited the Super Secret File
--Rebalanced Second Rthaur Revolution and Traditionalist Civil War
--Updated Holzbrenn's flags to HD versions
--Changed the Traditionalist Civil War from a dynamic tag to a specific tag, ORB. This prevents a bug which caused the dynamic tag to gain all of Ordoria's land if the Second Rthaur Revolution fired.
+-Redid map
+-Added Stahlhof and Ungerdal focus trees
+-Updated for La Resistance
+-Added some focus icons for Holzbrenn I forgot last time
+-Added Annex events for Rimatü and Lirothlind
+-Added Perkav Commissiary decision for Ordoria
+-Puppeting the Realm's city-states should now not produce bordergore
+-Added more localization for Commissiaries
+-Changed Gulthur's portrait to not just be a dude in a mask
+-Added some news events
+-Added name lists for all countries, mostly pillaged from vanilla, though some nations (those with no direct cultural analogues) have their own names.
+-Added portraits for army leaders. Thanks, DMHeroes!
+-Send an operative to gather intel on Kaiserreich code and used that to get "Similar Ideology" opinion bonuses to work
+-Wololo'd the Arkanisturm into believing the correct religion (they're heretics now! Or, well, technically everyone *else* in the Union are heretics. Long story.)
+-Fiddled with resistance percentages. Overall, occupation is now much more punishing, but claims now massively reduce unrest.
+-Fixed Holzbrenn's location to be correctly on the coast.
+-Cleaned up some Ordorian focus icons.
+-Gave the Freiprinzen military access to each others' lands, so they could actually help each other during wars.
+-Told the Freiprinzen to actually help the Union out in wars
+-Added balkanization option for Ordoria. More to come once I can be bothered or find someone to help, adding countries is a slogfest.
+-Added Merchant's Hand since Sulfurisle was too far away for trade
+-Made it impossible for anyone to join AI civil wars or be called into civil wars by the AI. Players can still join player civil wars.
+-Added additional operatives
+-Added female leaders
+-Made it impossible to take over faction leadership

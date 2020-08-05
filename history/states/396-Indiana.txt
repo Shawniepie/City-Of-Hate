@@ -1,10 +1,25 @@
-
 state={
 	id=396
 	name="STATE_396"
 	provinces={
-		1188 5455 5456 6755 8031 
+		3904 6542 6505 562 3089 6424 6436 2341
 	}
-	manpower=0
+	state_category = megalopolis
+	manpower=681539
 	buildings_max_level_factor=1.000
+	history={
+		victory_points = { 6505 35 }
+		owner = IRI
+		buildings = {
+			infrastructure = 9
+			industrial_complex = 5
+			arms_factory = 4
+			dockyard = 2
+			6505 = {
+				bunker = 6
+				naval_base = 9
+			}
+		}
+		add_core_of = IRI
+	}
 }

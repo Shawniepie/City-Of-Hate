@@ -1,0 +1,115 @@
+﻿capital = 383
+
+set_oob = "RMT_1936"
+
+
+set_technology = {
+	infantry_weapons = 1
+	tech_support = 1
+	tech_recon = 1
+	dwarven_warriors = 1
+}
+
+1939.1.1 = {
+}
+
+set_politics = {
+	ruling_party = monarchy_absolute
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	monarchy_absolute = 48
+
+	monarchy_constitutional = 6
+
+	republic_peasant = 0
+
+	republic_aristocrat = 14
+
+	republic_merchant = 32
+
+	theocrat = 0
+
+	puritan = 0
+}
+
+add_ideas = {
+	dwarf_country
+	dwarven_ancestor_worship_religion
+}
+
+add_opinion_modifier = {
+	target = LIR
+	modifier = bitter_rivals
+}
+
+add_opinion_modifier = {
+	target = SKA
+	modifier = bitter_rivals
+}
+
+create_country_leader = {
+	name = "Valkrün Skyldske"
+	desc = "politics_RMT_skyldske_desc"
+	picture = "gfx/leaders/RMT/Portrait_RMT_Skyldske.dds"
+	ideology = monarchy_constitutional_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Bjarne Röndskun"
+	desc = "politics_RMT_rondskun_desc"
+	picture = "gfx/leaders/RMT/Portrait_RMT_Rondskun.dds"
+	ideology = republic_peasant_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Søren Räsk"
+	desc = "politics_RMT_rask_desc"
+	picture = "gfx/leaders/RMT/Portrait_RMT_Rask.dds"
+	ideology = puritan_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Joris Skyldske"
+	desc = "politics_RMT_skyldske_desc"
+	picture = "gfx/leaders/RMT/Portrait_RMT_Skyldske.dds"
+	ideology = monarchy_absolute_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Elena Thurgensen"
+	desc = "politics_RMT_thurgensen_desc"
+	picture = "gfx/leaders/RMT/Portrait_RMT_Thurgensen.dds"
+	ideology = theocrat_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Valkrün Skyldske"
+	desc = "politics_RMT_skyldske_desc"
+	picture = "gfx/leaders/RMT/Portrait_RMT_Skyldske.dds"
+	ideology = republic_aristocrat_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Maibritt Narkünd"
+	desc = "politics_RMT_narkund_desc"
+	picture = "gfx/leaders/RMT/Portrait_RMT_Narkund.dds"
+	ideology = republic_merchant_ideology
+	traits = {
+	}
+}

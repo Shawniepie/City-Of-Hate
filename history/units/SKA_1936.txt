@@ -38,7 +38,7 @@ units = {
 
 	division = {
 		name = "Clan Hafahlíf"
-		location = 284
+		location = 5584
 		division_template = "Mountainbreakers"
 		start_experience_factor = 0.8
 
@@ -46,7 +46,7 @@ units = {
 
 	division = {
 		name = "Clan Hraustr"
-		location = 2059
+		location = 5329
 		division_template = "Mountainbreakers"
 		start_experience_factor = 0.8
 
@@ -54,7 +54,7 @@ units = {
 
 	division = {
 		name = "Clan Hvassøx"
-		location = 2061
+		location = 7076
 		division_template = "Mountainbreakers"
 		start_experience_factor = 0.8
 
@@ -62,7 +62,7 @@ units = {
 
 	division = {
 		name = "Clan Stinnrstál"
-		location = 8562
+		location = 7212
 		division_template = "Mountainbreakers"
 		start_experience_factor = 0.8
 
@@ -70,7 +70,7 @@ units = {
 	
 	division = {
 		name = "Clan Hellirfast"
-		location = 5969
+		location = 7075
 		division_template = "Mountainbreakers"
 		start_experience_factor = 1.0
 
@@ -78,7 +78,7 @@ units = {
 
 	division = {
 		name = "Jolskane Hearthguards"
-		location = 4063
+		location = 2563
 		division_template = "Hearthguards"
 		start_experience_factor = 0.6
 
@@ -86,39 +86,39 @@ units = {
 
 	division = {
 		name = "Skaeskind Pass Watch"
-		location = 287
+		location = 6793
 		division_template = "Hearthguards"
 		start_experience_factor = 0.6
 
 	}
 	
 	division = {
-		name = "Alstur Border Garrison"
-		location = 8260
+		name = "Alstir Border Garrison"
+		location = 6966
 		division_template = "Hearthguards"
 		start_experience_factor = 0.6
 
 	}
 	
 	division = {
-		name = "Vintalr Southguard"
-		location = 1033
+		name = "Votrosr Southguard"
+		location = 2320
 		division_template = "Hearthguards"
 		start_experience_factor = 0.7
 
 	}
 	
 	division = {
-		name = "Asdringr Southguard"
-		location = 1499
+		name = "Solskadr Southguard"
+		location = 7573
 		division_template = "Hearthguards"
 		start_experience_factor = 0.7
 
 	}
 	
 	division = {
-		name = "Kjallger Southguard"
-		location = 3696
+		name = "Linkadr Southguard"
+		location = 1249
 		division_template = "Hearthguards"
 		start_experience_factor = 0.7
 
@@ -126,7 +126,7 @@ units = {
 	
 	division = {
 		name = "Eastpoint Watch"
-		location = 3244
+		location = 1299
 		division_template = "Hearthguards"
 		start_experience_factor = 0.7
 

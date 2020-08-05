@@ -2,8 +2,23 @@ state={
 	id=388
 	name="STATE_388"
 	provinces={
-		4824 5824 5825 7421 8590 
+		5997 5975 5964 4453 5954 207 1810 4811
 	}
-	manpower=0
+	state_category = city
+	manpower=125399
 	buildings_max_level_factor=1.000
+	history={
+		victory_points = { 5964 31 }
+		owner = LIR
+		buildings = {
+			infrastructure = 7
+			industrial_complex = 1
+			arms_factory = 3
+			dockyard = 1
+			5964 = {
+				naval_base = 4
+			}
+		}
+		add_core_of = LIR
+	}
 }

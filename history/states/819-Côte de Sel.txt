@@ -1,0 +1,18 @@
+state={
+	id=819
+	name="STATE_819"
+	provinces={
+		2850 5963 1729 5934 460 5966 5983
+	}
+	state_category = pastoral
+	manpower=1501
+	buildings_max_level_factor=1.000
+	history={
+		owner = LIR
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 1
+		}
+		add_core_of = LIR
+	}
+}

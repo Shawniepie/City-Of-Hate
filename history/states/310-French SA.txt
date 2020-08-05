@@ -2,16 +2,16 @@ state={
 	id=310
 	name="STATE_310"
 	provinces={
-		774 778 3778 3779 4109 4110 8160 8391 
+		8990 5031 2067 1481 8943 8891 8863 3414 8865 
 	}
 	state_category = pastoral
 	manpower=3281
 	buildings_max_level_factor=1.000
 	history={
-		owner = NRK
+		owner = SPW
 		buildings = {
 			infrastructure = 2
 		}
-		add_core_of = NRK
+		add_core_of = SPW
 		}
 }

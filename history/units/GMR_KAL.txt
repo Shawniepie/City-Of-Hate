@@ -1,38 +1,38 @@
 ﻿units = {
 
 	division = {
-		name = "Westrenne Enforcers"
-		location = 4363
+		name = "Anzer Enforcers"
+		location = 366
 		division_template = "Enforcers"
 		start_experience_factor = 0.3
 	}
 	
 	division = {
-		name = "Naxgolin Enforcers"
-		location = 1784
+		name = "Caltireth Enforcers"
+		location = 6053
 		division_template = "Enforcers"
 		start_experience_factor = 0.3
 	}
 	
 	division = {
 		name = "1st Caltireth Black Gargoyles"
-		location = 4363
+		location = 165
 		division_template = "Black Gargoyles"
 		start_experience_factor = 0.4
 	}
 
 	division = {
 		name = "2nd Caltireth Black Gargoyles"
-		location = 6827
+		location = 6138
 		division_template = "Black Gargoyles"
 		start_experience_factor = 0.4
 	}	
 
 	division = {
 		name = "3rd Caltireth Black Gargoyles"
-		location = 1923
+		location = 3175
 		division_template = "Black Gargoyles"
 		start_experience_factor = 0.4
-	}	
+	}
 	
 }

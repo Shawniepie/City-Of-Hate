@@ -2,13 +2,13 @@ state={
 	id=274
 	name="STATE_274"
 	provinces={
-		422 423 844 845 846 7573 7906 8009 8056 
+		9064 714 3957 9012 8982 569
 	}
 	state_category = town
 	manpower=15921
 	buildings_max_level_factor=1.000
 	history={
-		victory_points = { 7573 12 }
+		victory_points = { 9064 12 }
 		owner = UNG
 		buildings = {
 			infrastructure = 6

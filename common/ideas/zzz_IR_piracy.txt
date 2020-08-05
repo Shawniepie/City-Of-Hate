@@ -1,0 +1,129 @@
+ideas = {
+	
+	country = {
+
+		ARR_economy_plundered = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = generic_embargo
+			
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.15
+				production_speed_buildings_factor = -0.15
+				production_factory_efficiency_gain_factor = -0.1
+			}
+		}
+		
+		ARR_economic_booty = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = chi_hyper_inflation3
+			
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.1
+				production_speed_buildings_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.05
+			}
+		}
+		
+		ARR_military_plundered = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = chi_army_corruption
+			
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_factory = -0.15
+				no_supply_grace = -3
+				land_reinforce_rate	 = -0.05
+			}
+		}
+		
+		ARR_military_booty = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = jap_militarism_showa
+			
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_factory = 0.1
+				no_supply_grace = 2
+				land_reinforce_rate	 = 0.02
+			}
+		}
+		
+		ARR_tech_plundered = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = prk_oral_tradition
+			
+			removal_cost = -1
+			
+			modifier = {
+				research_speed_factor = -0.15
+				experience_gain_army = -0.1
+			}
+		}
+		
+		ARR_tech_booty = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = generic_research_bonus
+			
+			removal_cost = -1
+			
+			modifier = {
+				research_speed_factor = 0.1
+				experience_gain_army = 0.05
+			}
+		}
+	}
+}

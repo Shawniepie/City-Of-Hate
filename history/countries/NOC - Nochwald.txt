@@ -52,16 +52,29 @@ set_politics = {
 	elections_allowed = no
 }
 
+give_military_access = UNG
+give_military_access = HLZ
+give_military_access = SPW
+give_military_access = SVT
+give_military_access = STA
+give_military_access = NRK
+give_military_access = TEI
+give_military_access = ARK
+give_military_access = SNF
+give_military_access = FTH
+give_military_access = WIS
+give_military_access = WSZ
+
 set_popularities = {
 	monarchy_absolute = 5
 
-	monarchy_constitutional = 17
+	monarchy_constitutional = 22
 
-	republic_peasant = 22
+	republic_peasant = 18
 
 	republic_aristocrat = 9
 
-	republic_merchant = 9
+	republic_merchant = 13
 
 	theocrat = 14
 

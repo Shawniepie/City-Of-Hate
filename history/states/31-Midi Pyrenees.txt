@@ -2,14 +2,14 @@ state={
 	id=31
 	name="STATE_31"
 	provinces={
-		3044 3115 3626 6502 8883 
+		6408 4634 6419 5256 1617 2779 6377 3212
 	}
 	state_category = town
 	manpower=18291
 	buildings_max_level_factor=1.000
 		history={
 		owner = GMR
-		victory_points = {6502 8}
+		victory_points = {5256 8}
 		buildings = {
 			infrastructure = 4
 			arms_factory = 1

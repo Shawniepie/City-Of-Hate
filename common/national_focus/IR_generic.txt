@@ -1341,7 +1341,7 @@ focus_tree = {
 			has_country_flag = generic_break_guilds
 		}
 		mutually_exclusive = {
-			focus = GENERIC_curtail_guilds
+			focus = GENERIC_empower_guilds
 		}
 		completion_reward ={
 			add_tech_bonus = {

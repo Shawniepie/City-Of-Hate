@@ -1,7 +1,66 @@
 ideas = {
 	
 	country = {
-
+	
+		UNG_unruly_nobility = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = ung_ordorian_refugees
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.05
+				war_support_factor = -0.2
+			}
+		}
+		
+		UNG_defiant_nobility = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = ung_ordorian_refugees
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_weekly = -0.02
+				political_power_gain = -1
+			}
+		}
+		
+		UNG_ordorian_refugees = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = ung_ordorian_refugees
+			
+			removal_cost = -1
+			
+			modifier = {
+				war_support_factor = -0.1
+			}
+		}
+		
 		UNG_ordorian_meddling = {
 			
 			allowed = {
@@ -36,6 +95,71 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
+				consumer_goods_factor = -0.1
+				production_speed_buildings_factor = 0.075
+				local_resources_factor = 0.15
+			}
+		}
+		
+		UNG_trade_bergial = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = generic_sea_focused_navy
+			
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.1
+				production_speed_buildings_factor = 0.075
+				local_resources_factor = 0.15
+			}
+		}
+		
+		UNG_trade_bergial_ii = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = generic_sea_focused_navy
+			
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.15
+				production_speed_buildings_factor = 0.1
+				local_resources_factor = 0.2
+			}
+		}
+		
+		UNG_two_thrones_idea = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = generic_monarchist_uprising
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.1
+				research_speed_factor = 0.05
 				consumer_goods_factor = -0.1
 				production_speed_buildings_factor = 0.075
 				local_resources_factor = 0.15
@@ -237,6 +361,158 @@ ideas = {
 			targeted_modifier = {
 					tag = PRK
 					defense_bonus_against = 0.15
+			}
+		}
+		
+		UNG_embargoed_bergial = {
+		
+		allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			cancel = {
+				OR = {
+					BER = {
+						is_subject_of = UNG
+					}
+					BER = {
+						exists = NO
+					}
+				}
+			}
+			
+			picture = generic_embargo
+			
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.05
+				production_factory_efficiency_gain_factor = -0.1
+			}
+		}
+		
+		UNG_elven_agents_idea = {
+		
+		allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = ung_elven_agents
+			
+			removal_cost = -1
+			
+			modifier = {
+				operative_slot = 1
+			}
+		}
+		
+		UNG_steel_road_dominated = {
+		
+		allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = generic_economic_increase
+			
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_buildings_factor = 0.25
+				consumer_goods_factor = -0.2
+				min_export = -0.15
+				stability_factor = 0.05
+			}
+		}
+	
+		UNG_union_forever_idea = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = ung_union_forever
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.15
+				war_support_factor = 0.1
+				conscription_factor = 0.15
+				compliance_gain = 0.25
+				special_forces_min = 100
+			}
+		}
+		
+		marriage_UNG_IRI = {
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = generic_royal_marriage
+			
+			removal_cost = -1
+			
+			modifier = {
+				custom_effect_tt = royal_marriage_warning_tt
+			}
+		}
+		
+		marriage_UNG_GMR = {
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = generic_royal_marriage
+			
+			removal_cost = -1
+			
+			modifier = {
+				custom_effect_tt = royal_marriage_warning_tt
+			}
+		}
+		
+		UNG_trade_monopolized = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = generic_foreign_capital
+			
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.1
+				production_speed_buildings_factor = 0.15
+				production_factory_efficiency_gain_factor = 0.01
 			}
 		}
 	}

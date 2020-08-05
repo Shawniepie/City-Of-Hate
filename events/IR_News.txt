@@ -1,0 +1,220 @@
+﻿###########################
+# News Events
+###########################
+
+add_namespace = news
+
+# Ordoria stays Puritan
+news_event = {
+	id = news.1
+	title = news.1.t
+	desc = news.1.d
+	picture = GFX_news_event_ord_traditionalists
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.1.a
+		trigger = {
+			NOT = {
+				TAG = ORD
+				TAG = RTH
+			}
+		}
+	}
+	option = {
+		name = news.1.b
+		trigger = { TAG = ORD }
+	}
+	option = {
+		name = news.1.c
+		trigger = { TAG = RTH }
+	}
+}
+
+# Ordoria goes Theocrat
+news_event = {
+	id = news.2
+	title = news.2.t
+	desc = news.2.d
+	picture = GFX_news_event_019
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.2.a
+		trigger = {
+			NOT = {
+				TAG = ORD
+				TAG = RTH
+			}
+		}
+	}
+	option = {
+		name = news.2.b
+		trigger = { TAG = ORD }
+	}
+	option = {
+		name = news.2.c
+		trigger = { TAG = RTH }
+	}
+}
+
+# Ordoria goes Moderate
+news_event = {
+	id = news.3
+	title = news.3.t
+	desc = news.3.d
+	picture = GFX_news_event_ord_moderates
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.3.a
+		trigger = {
+			NOT = {
+				TAG = ORD
+				TAG = RTH
+			}
+		}
+	}
+	option = {
+		name = news.3.b
+		trigger = { TAG = ORD }
+	}
+	option = {
+		name = news.3.c
+		trigger = { TAG = RTH }
+	}
+}
+
+# Ordorian Deadlock
+news_event = {
+	id = news.4
+	title = news.4.t
+	desc = news.4.d
+	picture = GFX_news_event_009
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.4.a
+		trigger = {
+			NOT = {
+				TAG = ORD
+				TAG = RTH
+			}
+		}
+	}
+	option = {
+		name = news.4.b
+		trigger = { TAG = ORD }
+	}
+	option = {
+		name = news.4.c
+		trigger = { TAG = RTH }
+	}
+}
+
+# Ordorian Civil War
+news_event = {
+	id = news.5
+	title = news.5.t
+	desc = news.5.d
+	picture = GFX_news_event_004
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.5.a
+		trigger = {
+			NOT = {
+				TAG = ORD
+				TAG = RTH
+			}
+		}
+	}
+	option = {
+		name = news.5.b
+		trigger = { TAG = ORB }
+	}
+	option = {
+		name = news.5.c
+		trigger = { TAG = ORD }
+	}
+	option = {
+		name = news.5.e
+		trigger = { TAG = RTH }
+	}
+}
+
+# Trads BTFO
+news_event = {
+	id = news.6
+	title = news.6.t
+	desc = news.6.d
+	picture = GFX_news_event_040
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.6.a
+		trigger = {
+			NOT = {
+				TAG = ORD
+				TAG = RTH
+			}
+		}
+	}
+	option = {
+		name = news.6.b
+		trigger = { TAG = ORD }
+	}
+
+	option = {
+		name = news.6.C
+		trigger = { TAG = RTH }
+	}
+}
+
+# Trads Win
+news_event = {
+	id = news.7
+	title = news.7.t
+	desc = news.7.d
+	picture = GFX_news_event_017
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.7.a
+		trigger = {
+			NOT = {
+				TAG = ORD
+				TAG = RTH
+			}
+		}
+	}
+	option = {
+		name = news.7.b
+		trigger = { TAG = ORD }
+	}
+
+	option = {
+		name = news.7.C
+		trigger = { TAG = RTH }
+	}
+}

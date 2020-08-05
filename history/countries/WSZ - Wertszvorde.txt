@@ -73,6 +73,19 @@ add_ideas = {
 	nurhelm_patron
 }
 
+give_military_access = UNG
+give_military_access = HLZ
+give_military_access = NOC
+give_military_access = SPW
+give_military_access = SVT
+give_military_access = STA
+give_military_access = NRK
+give_military_access = TEI
+give_military_access = ARK
+give_military_access = SNF
+give_military_access = FTH
+give_military_access = WIS
+
 create_country_leader = {
 	name = "Kristin Kindl"
 	desc = "politics_WSZ_kindl_desc"

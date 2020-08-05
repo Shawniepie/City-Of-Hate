@@ -1,0 +1,99 @@
+###Ideology Vibe Checks
+
+# checks whether the country in scope has the same government as ROOT (the country running the event/focus)
+has_same_government_as_ROOT = {
+	OR = {
+		AND = {
+			has_government = monarchy_absolute
+			ROOT = { has_government = monarchy_absolute }
+		}
+		AND = {
+			has_government = monarchy_constitutional
+			ROOT = { has_government = monarchy_constitutional }
+		}
+		AND = {
+			has_government = republic_aristocrat
+			ROOT = { has_government = republic_aristocrat }
+		}
+		AND = {
+			has_government = republic_merchant
+			ROOT = { has_government = republic_merchant }
+		}
+		AND = {
+			has_government = republic_peasant
+			ROOT = { has_government = republic_peasant }
+		}
+		AND = {
+			has_government = theocrat
+			ROOT = { has_government = theocrat }
+		}
+		AND = {
+			has_government = puritan
+			ROOT = { has_government = puritan }
+		}
+	}
+}
+
+#Checks to see if country is a monarchy
+
+is_monarchy = {
+	OR = {
+		has_government = monarchy_absolute
+		has_government = monarchy_constitutional
+	}
+}
+
+#Checks to see if country has an aristocracy
+
+has_aristocracy = {
+	OR = {
+		has_government = monarchy_absolute
+		has_government = monarchy_constitutional
+		has_government = republic_aristocrat
+	}
+}
+
+#Checks to see if country is a republic
+
+is_republic = {
+	OR = {
+		has_government = republic_aristocrat
+		has_government = republic_merchant
+		has_government = republic_peasant
+	}
+}
+
+#Checks to see if country has same race as ROOT
+
+has_same_race_as_ROOT = {
+	OR = {
+		AND = {
+			has_idea = human_country
+			ROOT = { has_idea = human_country }
+		}
+		AND = {
+			has_idea = elf_country
+			ROOT = { has_idea = elf_country }
+		}
+		AND = {
+			has_idea = dwarf_country
+			ROOT = { has_idea = dwarf_country }
+		}
+		AND = {
+			has_idea = gnome_country
+			ROOT = { has_idea = gnome_country }
+		}
+		AND = {
+			has_idea = human_country
+			ROOT = { has_idea = human_country }
+		}
+		AND = {
+			has_idea = lizardmen_country
+			ROOT = { has_idea = lizardmen_country }
+		}
+		AND = {
+			has_idea = orc_country
+			ROOT = { has_idea = orc_country }
+		}
+	}
+}

@@ -10,7 +10,7 @@ ideas = {
 				always = yes
 			}
 			
-			picture = generic_political_advisor_india_2
+			picture = generic_human
 			
 			traits = {
 				human_racial_bonuses
@@ -718,6 +718,24 @@ ideas = {
 			modifier = {
 				army_org_factor = 0.1
 				planning_speed = 0.05
+			}
+		}
+		
+		GENERIC_civil_war_isolation = {
+		
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = chi_war_of_resistance3
+			
+			modifier = {
+				ai_call_ally_desire_factor = -1250
+				ai_join_ally_desire_factor = -1250
 			}
 		}
 	}

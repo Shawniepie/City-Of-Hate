@@ -38,7 +38,7 @@ units = {
 
 	division = {
 		name = "Clan Gulthur"
-		location = 1904
+		location = 2822
 		division_template = "Kurgur Deathriders"
 		start_experience_factor = 0.8
 
@@ -46,7 +46,7 @@ units = {
 
 	division = {
 		name = "Clan Haskur"
-		location = 1741
+		location = 681
 		division_template = "Kurgur Deathriders"
 		start_experience_factor = 0.3
 
@@ -54,7 +54,7 @@ units = {
 
 	division = {
 		name = "Clan Vulgur"
-		location = 6104
+		location = 3685
 		division_template = "Kurgur Deathriders"
 		start_experience_factor = 0.3
 
@@ -62,7 +62,7 @@ units = {
 
 	division = {
 		name = "Clan Hulmor"
-		location = 3404
+		location = 2446
 		division_template = "Kurgur Deathriders"
 		start_experience_factor = 0.3
 
@@ -70,7 +70,7 @@ units = {
 
 	division = {
 		name = "Clan Vanghur"
-		location = 722
+		location = 552
 		division_template = "Kurgur Deathriders"
 		start_experience_factor = 0.3
 
@@ -78,7 +78,7 @@ units = {
 
 	division = {
 		name = "Clan Listvor"
-		location = 7605
+		location = 4771
 		division_template = "Kurgur Deathriders"
 		start_experience_factor = 0.3
 
@@ -86,7 +86,7 @@ units = {
 
 	division = {
 		name = "Clan Gangorr"
-		location = 1746
+		location = 526
 		division_template = "Kurgur Deathriders"
 		start_experience_factor = 0.3
 
@@ -94,7 +94,7 @@ units = {
 
 	division = {
 		name = "Clan Multhur"
-		location = 2503
+		location = 7129
 		division_template = "Kurgur Raiders"
 		start_experience_factor = 0.3
 
@@ -102,7 +102,7 @@ units = {
 
 	division = {
 		name = "Clan Hingvar"
-		location = 2956
+		location = 1705
 		division_template = "Kurgur Raiders"
 		start_experience_factor = 0.3
 
@@ -110,7 +110,7 @@ units = {
 	
 	division = {
 		name = "Clan Vingharr"
-		location = 1479
+		location = 5390
 		division_template = "Kurgur Raiders"
 		start_experience_factor = 0.3
 
@@ -118,7 +118,7 @@ units = {
 
 	division = {
 		name = "Clan Yulharg"
-		location = 44
+		location = 1691
 		division_template = "Kurgur Raiders"
 		start_experience_factor = 0.3
 
@@ -126,7 +126,7 @@ units = {
 
 	division = {
 		name = "Clan Halghan"
-		location = 3473
+		location = 3777
 		division_template = "Kurgur Raiders"
 		start_experience_factor = 0.3
 
@@ -134,7 +134,7 @@ units = {
 
 	division = {
 		name = "Clan Vistgorr"
-		location = 2288
+		location = 2764
 		division_template = "Kurgur Raiders"
 		start_experience_factor = 0.3
 
@@ -142,7 +142,7 @@ units = {
 
 	division = {
 		name = "Clan Liskargg"
-		location = 43
+		location = 4150
 		division_template = "Kurgur Raiders"
 		start_experience_factor = 0.3
 
@@ -150,7 +150,7 @@ units = {
 
 	division = {
 		name = "Clan Welging"
-		location = 6600
+		location = 2446
 		division_template = "Kurgur Raiders"
 		start_experience_factor = 0.3
 
@@ -158,7 +158,7 @@ units = {
 
 	division = {
 		name = "Clan Porgur"
-		location = 5445
+		location = 7656
 		division_template = "Kurgur Raiders"
 		start_experience_factor = 0.3
 
@@ -166,7 +166,7 @@ units = {
 	
 	division = {
 		name = "Clan Jinghor"
-		location = 4344
+		location = 295
 		division_template = "Kurgur Raiders"
 		start_experience_factor = 0.3
 
@@ -174,7 +174,7 @@ units = {
 
 	division = {
 		name = "Clan Ilgorgur"
-		location = 1744
+		location = 3306
 		division_template = "Kurgur Raiders"
 		start_experience_factor = 0.3
 
@@ -182,7 +182,7 @@ units = {
 
 	division = {
 		name = "Clan Hiskor"
-		location = 5035
+		location = 7565
 		division_template = "Kurgur Raiders"
 		start_experience_factor = 0.3
 

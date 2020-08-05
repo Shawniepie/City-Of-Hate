@@ -85,8 +85,8 @@ country_event = {#Schneefilde Accepts
 	option = {#Yay
 		name = prk.3.a
 		PRK = {
-			transfer_state = 335
-			add_state_core = 335
+			transfer_state = 253
+			add_state_core = 253
 		}
 	}
 }
@@ -118,15 +118,15 @@ country_event = {#Schneefilde Rejects
 		start_border_war = {
 			change_state_after_war = yes
 			attacker = {
-				state = 420 #nice
-				num_provinces = 4
+				state = 622 #nice
+				num_provinces = 2
 				on_win = prk.5
 				on_lose = prk.6
 				on_cancel = prk.6
 			}
 			defender = {
-				state = 335
-				num_provinces = 4
+				state = 253
+				num_provinces = 2
 				on_win = snf.3
 				on_lose = snf.4
 				on_cancel = snf.3
@@ -135,7 +135,7 @@ country_event = {#Schneefilde Rejects
 	}
 }
 
-country_event = {#Victory in Barsoringer
+country_event = {#Victory in Gielhasser
 	id = prk.5
 	title = prk.5.t
 	desc = prk.5.d
@@ -147,13 +147,13 @@ country_event = {#Victory in Barsoringer
 		name = prk.5.a
 		add_political_power = 35
 		PRK = {
-			transfer_state = 335
-			add_state_core = 335
+			transfer_state = 253
+			add_state_core = 253
 		}
 	}
 }
 
-country_event = {#Defeat in Barsoringer
+country_event = {#Defeat in Gielhasser
 	id = prk.6
 	title = prk.6.t
 	desc = prk.6.d
@@ -416,6 +416,16 @@ country_event = {#Conversion Time
 			remove_idea = krostov_religion
 			add_idea = septism_religion
 		}
+		every_country = {
+			country_event = {
+				id = ir.political.4
+			}
+		}
+		every_country = {
+			country_event = {
+				id = ir.political.3
+			}
+		}
 	}
 }
 
@@ -431,6 +441,7 @@ country_event = {#Reactionary Civil War!
 		UNG = {
 			set_country_flag = UNG_perkav_rebels
 		}
+		add_ideas = GENERIC_civil_war_isolation
 	}
 	
 	trigger = {
@@ -511,6 +522,8 @@ country_event = {#Reactionary Civil War!
 					name = PRK_monarchy_constitutional_reactionary
 				}
 				set_country_flag = PRK_reactionaries_flag
+				
+				add_ideas = GENERIC_civil_war_isolation
 				
 				retire_country_leader = yes
 				
@@ -657,6 +670,8 @@ country_event = {#Reactionary Civil War!
 				long_name = PRK_monarchy_constitutional_reactionary
 				name = PRK_monarchy_constitutional_reactionary
 			}
+			
+			add_ideas = GENERIC_civil_war_isolation
 			
 			retire_country_leader = yes
 			
@@ -867,5 +882,162 @@ country_event = {#Freiprinztum?
 				id = ung.24
 			}
 		}
+	}
+}
+
+country_event = {#Goods Plundered!
+	id = prk.22
+	title = prk.22.t
+	desc = prk.22.d
+	picture = GFX_report_event_perkavland_sacked
+	
+	is_triggered_only = yes
+	
+	option = {#Yay
+		name = prk.22.a
+		add_timed_idea = {
+			idea = ARR_economic_booty
+			days = 80
+		}
+		add_manpower = -13
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = -8
+		}
+		navy_experience = 10
+	}
+}
+
+country_event = {#Arms Plundered!
+	id = prk.23
+	title = prk.23.t
+	desc = prk.23.d
+	picture = GFX_report_event_perkavland_sacked
+	
+	is_triggered_only = yes
+	
+	option = {#Yay
+		name = prk.23.a
+		add_timed_idea = {
+			idea = ARR_military_booty
+			days = 80
+		}
+		add_manpower = -13
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = -8
+		}
+		navy_experience = 10
+	}
+}
+
+country_event = {#Tech Plundered!
+	id = prk.24
+	title = prk.24.t
+	desc = prk.24.d
+	picture = GFX_report_event_perkavland_sacked
+	
+	is_triggered_only = yes
+	
+	option = {#Yay
+		name = prk.24.a
+		add_timed_idea = {
+			idea = ARR_tech_booty
+			days = 80
+		}
+		add_manpower = -13
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = -8
+		}
+		navy_experience = 10
+	}
+}
+
+country_event = {#Artifact Plundered!
+	id = prk.25
+	title = prk.25.t
+	desc = prk.25.d
+	picture = GFX_report_event_perkavland_sacked
+	
+	is_triggered_only = yes
+	
+	option = {#Yay
+		name = prk.25.a
+		grant_magic_item_to_country_leader = yes
+		add_manpower = -13
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = -8
+		}
+		navy_experience = 10
+		
+	}
+	
+	option = {#Yay
+		name = prk.25.b
+		random_unit_leader = {
+			grant_magic_item_to_commander = yes
+		}
+		add_manpower = -13
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = -8
+		}
+		navy_experience = 10
+	}
+}
+
+country_event = {#Reset Raid
+	id = prk.26
+	title = prk.26.t
+	desc = prk.26.d
+	picture = GFX_report_event_czech_soldiers_01
+	
+	trigger = {
+		has_country_flag = PRK_recent_raid
+	}
+	
+	mean_time_to_happen = {
+		days = 182
+	}
+	
+	option = {#Yay
+		name = prk.26.a
+		clr_country_flag = PRK_recent_raid
+	}
+}
+
+country_event = {#Raiders Fought Off
+	id = prk.27
+	title = prk.27.t
+	desc = prk.27.d
+	picture = GFX_report_event_panay_incident
+	
+	is_triggered_only = yes
+	
+	option = {#Dang
+		name = prk.27.a
+		add_manpower = -32
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = -57
+		}
+		navy_experience = 5
+	}
+}
+
+country_event = {#Union-Bergialer Joint Patrols
+	id = prk.28
+	title = prk.28.t
+	desc = prk.28.d
+	picture = GFX_report_event_panay_incident
+	
+	is_triggered_only = yes
+	
+	option = { #Curses
+		name = prk.28.a
+		set_country_flag = UNG_fight_perkav_pirates
+		custom_effect_tooltip = PRK_raids_harder_tt
 	}
 }

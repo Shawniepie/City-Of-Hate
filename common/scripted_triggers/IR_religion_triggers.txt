@@ -1,0 +1,103 @@
+###Religion Vibe Checks
+
+# checks if country adheres to Ungerdaler faith
+is_ungerdaler_faith = {
+	OR = {
+		has_idea = septism_religion
+		has_idea = hieyrenous_patron
+		has_idea = daskellin_patron
+		has_idea = tergewelft_patron
+		has_idea = anzella_patron
+		has_idea = nurhelm_patron
+		has_idea = hutrig_patron
+		has_idea = bitha_patron
+	}
+}
+
+# checks if country adheres to Itheryn faith
+is_itheryn_faith = {
+	OR = {
+		has_idea = itherynism_religion
+		has_idea = itheryn_wisdom_patron
+		has_idea = itheryn_vengeance_patron
+		has_idea = itheryn_labour_patron
+		has_idea = itheryn_justice_patron
+	}
+}
+
+#Checks if religion is the same as ROOT
+has_same_faith_as_ROOT = {
+	OR = {
+		AND = {
+			is_ungerdaler_faith = yes
+			ROOT = { is_ungerdaler_faith = yes }
+		}
+		AND = {
+			is_itheryn_faith = yes
+			ROOT = { is_itheryn_faith = yes }
+		}
+		AND = {
+			has_idea = krostov_religion
+			ROOT = { has_idea = krostov_religion }
+		}
+		AND = {
+			has_idea = arthenism_religion
+			ROOT = { has_idea = arthenism_religion }
+		}
+		AND = {
+			has_idea = lorthorism_religion
+			ROOT = { has_idea = lorthorism_religion }
+		}
+		AND = {
+			has_idea = sothrism_religion
+			ROOT = { has_idea = sothrism_religion }
+		}
+		AND = {
+			has_idea = dwarven_ancestor_worship_religion
+			ROOT = { has_idea = dwarven_ancestor_worship_religion }
+		}
+		AND = {
+			has_idea = ouborism_religion
+			ROOT = { has_idea = ouborism_religion }
+		}
+		AND = {
+			has_idea = molten_god_religion
+			ROOT = { has_idea = molten_god_religion }
+		}
+		AND = {
+			has_idea = damokegol_religion
+			ROOT = { has_idea = damokegol_religion }
+		}
+		AND = {
+			has_idea = selenism_religion
+			ROOT = { has_idea = selenism_religion }
+		}
+		AND = {
+			has_idea = chivraism_religion
+			ROOT = { has_idea = chivraism_religion }
+		}
+	}
+}
+
+#Checks for heresy
+is_heretical = {
+	OR = {
+		AND = {
+			is_ungerdaler_faith = yes
+			ROOT = { has_idea = arkanimism_religion }
+		}
+		AND = {
+			has_idea = arkanimism_religion
+			ROOT = { is_ungerdaler_faith = yes }
+		}
+		AND = {
+			is_itheryn_faith = yes
+			ROOT = { has_idea = chivraism_religion }
+		}
+		AND = {
+			has_idea = chivraism_religion
+			ROOT = { is_itheryn_faith = yes }
+		}
+	}
+}
+

@@ -1,10 +1,10 @@
 ﻿units = {
 	fleet = {					
 		name = "Krell's Fleet"				
-		naval_base = 7533
+		naval_base = 4527
 		task_force = {
 			name = "Wendelin's Raiders"
-			location = 7533
+			location = 4527
 			ship = { 
 				name = "Topór"
 				pride_of_the_fleet = yes

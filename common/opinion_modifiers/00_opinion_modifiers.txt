@@ -10,76 +10,59 @@
 
 opinion_modifiers = {
 
-	### VANILLA STFF ###
-
-	holds_our_cores = {
-		value = -30
-	}
-	holds_our_claims = {
-		value = -15
-	}
-	claims_on_us = { 
-		value = -10
-	}
-	at_war_with_faction = {
-		value = -25
-	}
-	
-	attache_sent = {
-		value = 30
-	}
-	
-	attache_sent_to_enemy = {
-		value = -20
-	}
-
-	at_war = {
-		value = -75
-	}
-	
-	justifying_war_goal = {
-		value = -10
-		min_trust = -10
-		days = 10
-		decay = 1
-	}
-	
-	in_faction = {
-		value = 50
-	}
-	
-	military_access = {
-		value = 30
-	}
-	
-	non_aggression_pact = {
-		value = 25
-	}
-	
-	long_term_trade_partner = {
-		value = 1
-	}
-
-	in_faction = {
-		value = 100
-	}
-	
 	### MOD STUFF ###
 
 	staunch_allies = {
-		value = 100
-	}
-	
-	bitter_rivals = {
-		value = -100
-	}
-	
-	puppet_opinion = {
 		value = 75
 	}
 	
-	in_faction = {
-		value = 100
+	bitter_rivals = {
+		value = -75
+	}
+	
+	threatened_opinion = {
+		value = -50
+	}
+	
+	annoyed_opinion = {
+		value = -25
+	}
+	
+	dislike_opinion = {
+		value = -35
+	}
+	
+	illegitimate_war = {
+		value = -35
+	}
+	
+	trusted_opinion = {
+		value = 50
+	}
+	
+	liked_opinion = {
+		value = 35
+	}
+	
+	supportive_opinion = {
+		value = 25
+	}
+	
+	puppet_opinion = {
+		value = 15
+	}
+	
+	hampered_trade = {
+		value = -40
+	}
+	
+	trade_monopoly = {
+		value = 35
+	}
+	
+	embargo_trade = {
+		trade = yes
+		value = -250
 	}
 	
 	closed_economy_trade_modifier = {
@@ -102,6 +85,10 @@ opinion_modifiers = {
 		value = 15
 	}
 	
+	targeted_by_faction = {
+		value = -50
+	}
+	
 	UNG_heavy_concessions = {
 		value = -50
 	}
@@ -118,8 +105,32 @@ opinion_modifiers = {
 		value = -15
 	}
 	
+	RTH_monarchist_scum = {
+		value = -25
+	}
+	
 	UNG_exchange = {
 		value = 5
+	}
+	
+	UNG_expansionist_opinion = {
+		value = -25
+	}
+	
+	UNG_diplomatic_opinion = {
+		value = 25
+	}
+	
+	UNG_tensions = {
+		value = -15
+	}
+	
+	UNG_peasant_rabble = {
+		value = -25
+	}
+	
+	UNG_cold_war = {
+		value = -25
 	}
 	
 	HLZ_mad_freiprinz_opinion = {
@@ -171,27 +182,39 @@ opinion_modifiers = {
 	}
 	
 	IR_same_ideology = {
-		value = 25
-	}
-	
-	IR_similar_ideology = {
 		value = 10
 	}
 	
-	IR_different_ideology = {
-		value = -10
+	IR_similar_ideology = {
+		value = 5
 	}
 	
-	puritan_good_race = {
-		value = 5
+	IR_different_ideology = {
+		value = -5
+	}
+	
+	IR_vile_aristocrats = {
+		value = -25
+	}
+	
+	IR_vile_peasants = {
+		value = -25
+	}
+	
+	IR_puritan_pure_brothers = {
+		value = 35
+	}
+	
+	IR_puritan_good_race = {
+		value = 15
 	}
 	
 	IR_puritan_vermin = {
 		value = -200
 	}
 	
-	puritan_extremists = {
-		value = -5
+	IR_puritan_extremists = {
+		value = -10
 	}
 	
 	IR_puritan_butchers = {
@@ -202,15 +225,77 @@ opinion_modifiers = {
 		value = -200
 	}
 	
-	theocrat_good_faith = {
-		value = 50
-	}
-	
-	theocrat_similar_faith = {
-		value = 30
+	IR_same_faith = {
+		value = 5
 	}
 	
 	IR_heathens = {
+		value = -5
+	}
+	
+	IR_heretics = {
+		value = -10
+	}
+	
+	IR_same_faith_theocrat = {
+		value = 25
+	}
+	
+	IR_heathens_theocrat = {
+		value = -25
+	}
+	
+	IR_heretics_theocrat = {
+		value = -35
+	}
+
+	### VANILLA STUFF ###
+
+	holds_our_cores = {
 		value = -30
+	}
+	holds_our_claims = {
+		value = -15
+	}
+	claims_on_us = { 
+		value = -10
+	}
+	at_war_with_faction = {
+		value = -25
+	}
+	
+	attache_sent = {
+		value = 30
+	}
+	
+	attache_sent_to_enemy = {
+		value = -20
+	}
+
+	at_war = {
+		value = -75
+	}
+	
+	justifying_war_goal = {
+		value = -10
+		min_trust = -10
+		days = 10
+		decay = 1
+	}
+	
+	in_faction = {
+		value = 50
+	}
+	
+	military_access = {
+		value = 10
+	}
+	
+	non_aggression_pact = {
+		value = 25
+	}
+	
+	long_term_trade_partner = {
+		value = 1
 	}
 }

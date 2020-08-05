@@ -1,0 +1,35 @@
+@COUNCIL_TEXT_X = 140
+@HEADERS_Y = 67
+@STATUS_Y = 52
+guiTypes = {
+
+	containerWindowType = {
+		name = "ung_council_decision_ui_window"
+		position = { x = 0 y = 0 }
+		size = { width = 100% height= 92 }
+
+		iconType = {
+			name ="council_icon"
+			spriteType = "GFX_decision_category_ung_council_ui"
+			position = { x= 190	 y = 5 } #x190 x70v
+		}
+
+		instantTextBoxType = {
+			name ="unioncouncil_support_header"
+			position = { x = @COUNCIL_TEXT_X y = @HEADERS_Y }
+			font = "hoi_24header"
+			text = "UNG_unioncouncil_support_header"
+			format = center
+			maxHeight = 24
+		}
+
+		instantTextBoxType = {
+			name ="status_council"
+			position = { x = @COUNCIL_TEXT_X y = @STATUS_Y }
+			font = "hoi_18mbs"
+			text = "UNG_unioncouncil_support_amount"
+			format = center
+		}
+
+	}
+}

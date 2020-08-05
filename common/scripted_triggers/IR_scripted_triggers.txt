@@ -1,0 +1,235 @@
+###General Scripted Triggers
+
+# checks if any country holds a state that is within range of Perkav raiders
+
+perkav_raiding_target_exists = {
+	
+	any_country = {
+		NOT = {
+			OR = {
+				tag = PRK
+				is_subject_of = PRK
+				is_in_faction_with = PRK
+				PRK = {
+					is_subject_of = ROOT
+				}
+			}
+		}
+		any_state = {
+			has_state_flag = PRK_coastal_state_in_raid_range_flag	
+			is_owned_by = PREV
+		}
+	}
+}
+	
+
+# checks if THIS is in any way fighting alongside or against ROOT
+
+is_fighting_alongside_ROOT = {
+	OR = {
+		THIS = {
+			is_in_faction_with = ROOT
+			has_war_together_with = ROOT
+			has_guaranteed = ROOT
+			NOT = {
+				has_war_with = ROOT
+			}
+		}
+		ROOT = {
+			NOT = {
+				has_volunteers_amount_from = {
+					tag = PREV
+					count < 1
+				}
+			}
+		}
+	}
+}
+
+# checks if a country has a relevant Royal Marriage and can thus call someone to arms. I'd love to figure out how to make this into a dynamic variable, probably with ROOT and FROM, but I don't know how at the moment. This'll have to do.
+
+has_royal_marriage = {
+	OR = {
+		AND = {
+			tag = UNG
+			has_defensive_war = yes
+			has_idea = marriage_UNG_IRI
+			is_independent = yes
+			IRI = {
+				is_independent = yes
+				is_fighting_alongside_ROOT = no
+			}
+		}
+		AND = {
+			tag = UNG
+			has_defensive_war = yes
+			has_idea = marriage_UNG_GMR
+			is_independent = yes
+			GMR = {
+				is_independent = yes
+				is_fighting_alongside_ROOT = no
+			}
+		}
+		AND = {
+			tag = IRI
+			has_defensive_war = yes
+			has_idea = marriage_IRI_UNG
+			is_independent = yes
+			UNG = {
+				is_independent = yes
+				is_fighting_alongside_ROOT = no
+			}
+		}
+		AND = {
+			tag = GMR
+			has_defensive_war = yes
+			has_idea = marriage_GMR_UNG
+			is_independent = yes
+			UNG = {
+				is_independent = yes
+				is_fighting_alongside_ROOT = no
+			}
+		}
+	}
+}
+
+# checks if country exists and is independent - MUST use is_not_independent, cannot use is_independent = no
+
+is_independent = {
+	AND = {
+		country_exists = THIS
+		THIS = {
+			is_subject = no
+		}
+	}
+}
+
+is_not_independent = {
+	OR = {
+		NOT = {
+			country_exists = THIS
+		}
+		THIS = {
+			is_subject = yes
+		}
+	}
+}
+
+#Checks if THIS is in sphere of influence of ROOT
+
+is_sphered = {
+	OR = {
+		THIS = {
+			is_subject_of = ROOT
+		}
+		THIS = {
+			is_in_faction_with = ROOT
+		}
+	}
+}
+
+is_not_sphered = {
+	AND = {
+		NOT = {
+			THIS = {
+				is_in_faction_with = ROOT
+			}
+		}		
+		THIS = {
+			NOT = {
+				is_subject_of = ROOT
+			}
+		}
+	}
+}
+
+# Checks if country is a threat
+
+is_not_threat = {
+	OR = {
+		NOT = {
+			country_exists = THIS
+		}
+		THIS = {
+			is_sphered = yes
+		}
+	}
+}
+
+# Checks if ROOT is in control of the Freiprinzen
+
+dominates_freiprinzen = {
+	OR = {
+		controls_state = 228
+		NOC = {
+			is_subject_of = ROOT
+		}
+	}
+	OR = {
+		controls_state = 227
+		SVT = {
+			is_subject_of = ROOT
+		}
+	}
+	OR = {
+		controls_state = 192
+		STA = {
+			is_subject_of = ROOT
+		}
+	}
+	OR = {
+		controls_state = 284
+		NRK = {
+			is_subject_of = ROOT
+		}
+	}
+	OR = {
+		controls_state = 226
+		SPW = {
+			is_subject_of = ROOT
+		}
+	}
+	OR = {
+		controls_state = 225
+		TEI = {
+			is_subject_of = ROOT
+		}
+	}
+	OR = {
+		controls_state = 206
+		ARK = {
+			is_subject_of = ROOT
+		}
+	}
+	OR = {
+		controls_state = 233
+		FAU = {
+			is_subject_of = ROOT
+		}
+	}
+	OR = {
+		controls_state = 224
+		SNF = {
+			is_subject_of = ROOT
+		}
+	}
+	OR = {
+		controls_state = 234
+		WIS = {
+			is_subject_of = ROOT
+		}
+	}
+	OR = {
+		controls_state = 235
+		WSZ = {
+			is_subject_of = ROOT
+		}
+	}
+	OR = {
+		controls_state = 236
+		FTH = {
+			is_subject_of = ROOT
+		}
+	}
+}
+	

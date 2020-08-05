@@ -173,3 +173,209 @@ country_event = {#Ungerdaler United Front
 		add_political_power = -25
 	}
 }
+
+country_event = {#Royal Marriage Call to Arms!
+	id = alliance.2
+	title = alliance.2.t
+	desc = alliance.2.d
+	picture = GFX_report_event_hungary_refused
+	
+	is_triggered_only = yes
+
+	immediate = {
+		set_country_flag = already_called_to_rm_war
+	}
+
+	option = {#To arms!
+		name = alliance.2.a
+		ai_chance = {
+			factor = 7
+			modifier = {
+				has_war = yes
+				factor = 0.2
+			}
+		}
+			
+		clr_country_flag = already_called_to_rm_war
+		
+		every_country = {
+			limit = {
+				has_offensive_war_with = FROM
+			}
+			ROOT = {
+				add_to_war = {
+					targeted_alliance = FROM
+					enemy  = PREV
+				}
+			}
+		}
+		
+		FROM = {
+			country_event = {
+				id = alliance.3
+				days = 4
+			}
+		}
+	}
+	
+	option = {#Nay
+		name = alliance.2.b
+		ai_chance = {
+			factor = 4
+		}
+		
+		FROM = {
+			country_event = {
+				id = alliance.4
+				days = 4
+			}
+		}
+		add_political_power = -25
+		
+		hidden_effect = {
+			country_event = {
+				id = alliance.5
+				days = 70
+			}
+		}		
+		custom_effect_tooltip = decline_rm_war_tt
+	}
+}
+
+country_event = { #Our Kin Joins!
+	id = alliance.3
+	title = alliance.3.t
+	desc = alliance.3.d
+	picture = GFX_report_event_french_liberation
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = alliance.3.a
+		add_war_support = 0.02
+	}
+}
+
+country_event = { #Our Kin Does Not Join!
+	id = alliance.4
+	title = alliance.4.t
+	desc = alliance.4.d
+	picture = GFX_report_event_finnish_letter
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = alliance.4.a
+		add_war_support = -0.02
+	}
+}
+
+country_event = { #Re-enables being called into a RM defensive war
+	id = alliance.5
+	hidden = yes
+	
+	trigger = {
+		has_country_flag = already_called_to_rm_war
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		clr_country_flag = already_called_to_rm_war
+	}
+	
+	option = {
+		
+	}
+}
+
+country_event = {#Distress signal for attacked country with RM
+	id = alliance.6
+	hidden = yes
+	
+	trigger = {
+		has_royal_marriage = yes
+		has_defensive_war = yes
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		if = {
+			limit = {
+				tag = UNG
+				has_idea = marriage_UNG_IRI
+				IRI = {
+					is_fighting_alongside_ROOT = no
+					NOT = {
+						has_country_flag = already_called_to_rm_war
+					}
+				}
+			}
+			IRI = {
+				country_event = {
+					id = alliance.2
+					days = 1
+				}
+			}
+		}
+		if = {
+			limit = {
+				tag = UNG
+				has_idea = marriage_UNG_GMR
+				GMR = {
+					is_fighting_alongside_ROOT = no
+					NOT = {
+						has_country_flag = already_called_to_rm_war
+					}
+				}
+			}
+			GMR = {
+				country_event = {
+					id = alliance.2
+					days = 7
+				}
+			}
+		}
+		if = {
+			limit = {
+				tag = IRI
+				has_idea = marriage_IRI_UNG
+				UNG = {
+					is_fighting_alongside_ROOT = no
+					NOT = {
+						has_country_flag = already_called_to_rm_war
+					}
+				}
+			}
+			UNG = {
+				country_event = {
+					id = alliance.2
+					days = 7
+				}
+			}
+		}
+		if = {
+			limit = {
+				tag = GMR
+				has_idea = marriage_GMR_UNG
+				UNG = {
+					is_fighting_alongside_ROOT = no
+					NOT = {
+						has_country_flag = already_called_to_rm_war
+					}
+				}
+			}
+			UNG = {
+				country_event = {
+					id = alliance.2
+					days = 7
+				}
+			}
+		}
+	}
+}

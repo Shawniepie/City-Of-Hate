@@ -1,0 +1,82 @@
+﻿### TLARTHINGIAN EVENTS
+
+add_namespace = tla
+
+### UNION
+
+country_event = { #Adaliana Demands Subjugation
+	id = tla.1
+	title = tla.1.t
+	desc = tla.1.d
+	picture = GFX_report_event_romania_poland_visit
+	
+	is_triggered_only = yes
+	
+	option = {#Fine
+		name = tla.1.a
+		ai_chance = {
+			factor = 4
+		}
+		add_stability = -0.05
+		UNG = {
+			set_autonomy = {
+				target = TLA
+				autonomy_state = autonomy_IR_freiprinztum
+			}
+		}
+	}
+
+	option = {#Never!
+		name = tla.1.b
+		ai_chance = {
+			factor = 6
+		}
+		add_war_support = 0.05
+		UNG = {
+			country_event = {
+				id = ung.26
+				days = 5
+			}
+		}
+	}
+}
+
+country_event = {# Union Offers Alliance
+	id = tla.2
+	title = tla.2.t
+	desc = tla.2.d
+	picture = GFX_report_event_romania_poland_visit
+	
+	is_triggered_only = yes
+	
+	option = {#Yes
+		name = tla.2.a
+		ai_chance = {
+			factor = 9
+		}
+		UNG = {
+			country_event = {
+				id = ung.51
+				days = 4
+			}
+		}
+		
+	}
+	
+	option = {#No
+		name = tla.2.b
+		ai_chance = {
+			factor = 1
+			modifier = {
+				has_war_with = IRI
+				factor = 0
+			}
+		}
+		UNG = {
+			country_event = {
+				id = ung.52
+				days = 4
+			}
+		}
+	}
+}

@@ -2,7 +2,7 @@ state={
 	id=791
 	name="STATE_791"
 	provinces={
-		830 831 832 833 1088 1089 1090 1091 2524 4919 7341 
+		2792 2672 7482 7464 7446 1455 7415 2948 914 
 	}
 	state_category = pastora
 	manpower=3217

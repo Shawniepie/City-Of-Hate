@@ -152,7 +152,7 @@ ideas = {
 				always = yes
 			}
 			
-			picture = generic_export_focus
+			picture = export_focus
 			
 			removal_cost = -1
 			

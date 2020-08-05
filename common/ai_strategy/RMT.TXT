@@ -1,0 +1,42 @@
+# befriend
+# conquer
+# antagonize
+# build_ship
+# build_army
+# unit_ratio
+# build_building
+# research_tech
+# garrison
+# protect
+# influence
+
+stab_the_baguette_elves = {
+	enable = {
+		original_tag = RMT
+		country_exists = LIR
+		815 = {
+			is_owned_by = LIR
+		}
+	}
+	abort = {
+		815 = {
+			is_owned_by = RMT
+		}
+	}
+	
+	ai_strategy = {
+		type = conquer
+		id = "LIR"			
+		value = 200
+	}
+	ai_strategy = {
+		type = invade
+		id = "LIR"			
+		value = 200
+	}
+	ai_strategy = {
+		type = declare_war
+		id = "LIR"
+		value = 200
+	}
+}

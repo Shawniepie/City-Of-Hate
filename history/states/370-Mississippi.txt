@@ -2,12 +2,12 @@ state={
 	id=370
 	name="STATE_370"
 	provinces={
-		401 402 403 404 1222 1223 3023 3026 6975 8515 
+		2838 8014 4253 2173
 	}
 	state_category = city
 	manpower=592210
 	history={
-		victory_points = { 402 40 }
+		victory_points = { 4253 40 }
 		owner = BER
 		buildings = {
 			infrastructure = 8

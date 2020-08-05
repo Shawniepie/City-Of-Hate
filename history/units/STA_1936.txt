@@ -48,7 +48,7 @@ units = {
 
 	division = {
 		name = "1st Regiment 'Elftöter'"
-		location = 4951
+		location = 7955
 		division_template = "Prinztruppen"
 		start_experience_factor = 0.5
 
@@ -56,7 +56,7 @@ units = {
 	
 	division = {
 		name = "2nd Regiment 'Nordwacht'"
-		location = 8210
+		location = 8038
 		division_template = "Prinztruppen"
 		start_experience_factor = 0.5
 
@@ -64,7 +64,7 @@ units = {
 	
 	division = {
 		name = "1st Cavalry 'Haus Schwarzenbaum'"
-		location = 2249
+		location = 262
 		division_template = "Stahlritter"
 		start_experience_factor = 0.7
 
@@ -72,7 +72,7 @@ units = {
 	
 	division = {
 		name = "1st Scouts 'Elfjäger'"
-		location = 4705
+		location = 4649
 		division_template = "Späher"
 		start_experience_factor = 1.0
 
@@ -80,7 +80,7 @@ units = {
 	
 	division = {
 		name = "Stahlhof City Watch"
-		location = 2246
+		location = 8164
 		division_template = "Stadtwache"
 		start_experience_factor = 0.05
 

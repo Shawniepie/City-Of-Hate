@@ -2,16 +2,16 @@ state={
 	id=311
 	name="STATE_311"
 	provinces={
-		1883 1885 1887 1888 5646 6581 6695 7553 8140 
+		2327 4852 8928 8934 2685 8875 8893 2075
 	}
 	state_category = rural
 	manpower=8772
 	buildings_max_level_factor=1.000
 	history={
-		owner = NRK
+		owner = SPW
 		buildings = {
 			infrastructure = 5	
 		}
-		add_core_of = NRK
+		add_core_of = SPW
 		}
 }

@@ -1,0 +1,112 @@
+﻿division_template = {
+	name = "Turmwache"	
+	regiments = {
+		garrison = { x = 0 y = 0 }
+		garrison = { x = 0 y = 1 }
+		garrison = { x = 0 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Zaubertruppen"
+	regiments = {
+		men_at_arms = { x = 0 y = 0 }
+		men_at_arms = { x = 0 y = 1 }
+		men_at_arms = { x = 0 y = 2 }
+        men_at_arms = { x = 1 y = 0 }
+		men_at_arms = { x = 1 y = 1 }
+		men_at_arms = { x = 1 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Einhorn-Kavallerie"
+	regiments = {
+		heavy_cavalry = { x = 0 y = 0 }
+        heavy_cavalry = { x = 0 y = 1 }
+        heavy_cavalry = { x = 0 y = 2 }
+		heavy_cavalry = { x = 1 y = 0 }
+		heavy_cavalry = { x = 1 y = 1 }
+		heavy_cavalry = { x = 1 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Zauberspäher"
+	regiments = {
+		light_cavalry = { x = 0 y = 0 }
+        light_cavalry = { x = 0 y = 1 }
+        light_cavalry = { x = 1 y = 0 }
+		light_cavalry = { x = 1 y = 1 }
+	}
+	support = {
+	    recon = { x = 0 y = 0 }
+	}
+}
+
+units = {
+
+	division = {
+		name = "1st Lafdarenites 'Jithe's Magier'"
+		location = 8348
+		division_template = "Zaubertruppen"
+		start_experience_factor = 0.7
+
+	}
+	
+	division = {
+		name = "2nd Lafdarenites 'Treue Zaubermänner'"
+		location = 4575
+		division_template = "Zaubertruppen"
+		start_experience_factor = 0.55
+
+	}
+	
+	division = {
+		name = "3rd Lafdarenites 'Heckezauberer'"
+		location = 2750
+		division_template = "Zaubertruppen"
+		start_experience_factor = 0.7
+
+	}
+	
+	division = {
+		name = "4th Lafdarenites 'Erzmagiertreue'"
+		location = 1578
+		division_template = "Zaubertruppen"
+		start_experience_factor = 0.55
+
+	}
+	
+	division = {
+		name = "5th Lafdarenites 'Salzdinger Stäbe'"
+		location = 8561
+		division_template = "Zaubertruppen"
+		start_experience_factor = 0.7
+
+	}
+	
+	division = {
+		name = "6th Lafdarenites 'Ersties'"
+		location = 8512
+		division_template = "Zaubertruppen"
+		start_experience_factor = 0.55
+
+	}
+	
+	division = {
+		name = "1st Lafdarenite Cavalry 'Einhornritter'"
+		location = 824
+		division_template = "Einhorn-Kavallerie"
+		start_experience_factor = 0.8
+
+	}
+	
+	division = {
+		name = "Tower Guard"
+		location = 1829
+		division_template = "Turmwache"
+		start_experience_factor = 0.1
+
+	}
+}

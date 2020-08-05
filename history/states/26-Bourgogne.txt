@@ -4,13 +4,13 @@ state={
 	state_category = large_town
 
 	provinces={
-		516 517 518 838 5991 6037 8027 
+		5370 6549 396 6509 6480 6441 3996 3782
 	}
 	manpower=34533
 	buildings_max_level_factor=1.000
 	history={
 		owner = GMR
-		victory_points = { 5991 18 }
+		victory_points = { 396 18 }
 		buildings = {
 			infrastructure = 6
 			industrial_complex = 2

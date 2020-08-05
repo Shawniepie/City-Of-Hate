@@ -2,21 +2,21 @@
 state={
 	id=369
 	name="STATE_369"
-	provinces={
-		616 617 618 619 5372 5373 5374 5375 8771 
+	provinces={	
+		8397 8402
 	}
 	state_category = large_city
 	manpower=908721
 	buildings_max_level_factor=1.000
 	history={
-		victory_points = { 617 49 }
+		victory_points = { 8402 49 }
 		owner = BER
 		buildings = {
 			infrastructure = 10
 			industrial_complex = 3
 			arms_factory = 2
 			dockyard = 1
-			617 = {
+			8402 = {
 				naval_base = 8
 			}
 		}

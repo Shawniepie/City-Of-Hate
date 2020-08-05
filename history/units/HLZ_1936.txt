@@ -48,7 +48,7 @@ units = {
 
 	division = {
 		name = "1st Regiment 'Hafenmänner'"
-		location = 7718
+		location = 2797
 		division_template = "Prinztruppen"
 		start_experience_factor = 0.5
 
@@ -56,7 +56,7 @@ units = {
 	
 	division = {
 		name = "2nd Regiment 'Elfbrenner'"
-		location = 5176
+		location = 694
 		division_template = "Prinztruppen"
 		start_experience_factor = 0.5
 
@@ -64,7 +64,7 @@ units = {
 	
 	division = {
 		name = "1st Cavalry 'Holzritter'"
-		location = 4048
+		location = 8445
 		division_template = "Prinzritter"
 		start_experience_factor = 0.7
 
@@ -72,7 +72,7 @@ units = {
 	
 	division = {
 		name = "Holzbrenn City Watch"
-		location = 7641
+		location = 4558
 		division_template = "Stadtwache"
 		start_experience_factor = 0.05
 

@@ -1,0 +1,125 @@
+﻿capital = 378
+
+set_oob = "MER_1936"
+
+
+set_technology = {
+	infantry_weapons = 1
+	tech_support = 1
+	tech_recon = 1
+}
+
+if = {
+	limit = {
+		not = { has_dlc = "Man the Guns" }
+	}
+	set_technology = {
+		early_destroyer = 1
+		transport = 1
+	}
+}
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_technology = {
+		early_ship_hull_light = 1
+		basic_battery = 1
+		basic_light_battery = 1
+		mtg_transport = 1
+	}
+}
+
+1939.1.1 = {
+}
+
+set_politics = {
+	ruling_party = republic_merchant
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	monarchy_absolute = 1
+
+	monarchy_constitutional = 2
+
+	republic_peasant = 9
+
+	republic_aristocrat = 6
+
+	republic_merchant = 56
+
+	theocrat = 23
+
+	puritan = 3
+}
+
+add_ideas = {
+	human_country
+	selenism_religion
+}
+
+create_country_leader = {
+	name = "Aristandros Loriadis"
+	desc = "politics_MER_loriadis_desc"
+	picture = "gfx/leaders/MER/Portrait_MER_Loriadis.dds"
+	ideology = monarchy_constitutional_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Prothoenor Nicoloulis"
+	desc = "politics_MER_nicoloulis_desc"
+	picture = "gfx/leaders/MER/Portrait_MER_Nicoloulis.dds"
+	ideology = republic_peasant_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Merops Managopoulos"
+	desc = "politics_MER_hinglur_desc"
+	picture = "gfx/leaders/MER/Portrait_MER_Hinglur.dds"
+	ideology = puritan_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Theophane Condou"
+	desc = "politics_MER_condou_desc"
+	picture = "gfx/leaders/MER/Portrait_MER_Condou.dds"
+	ideology = monarchy_absolute_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Chryse Angelakou"
+	desc = "politics_MER_angelakou_desc"
+	picture = "gfx/leaders/MER/Portrait_MER_Angelakou.dds"
+	ideology = theocrat_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Ismene Saranteli"
+	desc = "politics_MER_saranteli_desc"
+	picture = "gfx/leaders/MER/Portrait_MER_Saranteli.dds"
+	ideology = republic_aristocrat_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Althaea Lampreli"
+	desc = "politics_MER_lampreli_desc"
+	picture = "gfx/leaders/MER/Portrait_MER_Lampreli.dds"
+	ideology = republic_merchant_ideology
+	traits = {
+	}
+}

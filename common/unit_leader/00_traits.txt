@@ -51,6 +51,137 @@
 #}
 leader_traits = {
 
+##################################
+# Mod Traits
+##################################
+	has_magic_sword_commander = {
+		type = all
+		trait_type = basic_trait
+		gain_xp = {
+			always = no # not gainable
+		}
+		allowed = {
+			always = yes
+		}
+		
+		new_commander_weight = {
+			factor = 1 # Big Rare
+		}
+		
+		modifier = {
+			army_attack_factor = 0.05
+			land_reinforce_rate = 0.02
+			navy_max_range_factor = 0.05
+			naval_hit_chance = 0.02
+		}
+	}
+	
+	has_magic_ring_commander = {
+		type = all
+		trait_type = basic_trait
+		gain_xp = {
+			always = no # not gainable
+		}
+		allowed = {
+			always = yes
+		}
+		
+		new_commander_weight = {
+			factor = 1 # Big Rare
+		}
+		
+		modifier = {
+			army_speed_factor = 0.05
+			army_morale_factor = 0.02
+			naval_speed_factor = 0.05
+			navy_submarine_detection_factor = 0.02
+		}
+	}
+	
+	has_magic_armour_commander = {
+		type = all
+		trait_type = basic_trait
+		gain_xp = {
+			always = no # not gainable
+		}
+		allowed = {
+			always = yes
+		}
+		
+		new_commander_weight = {
+			factor = 1 # Big Rare
+		}
+		
+		modifier = {
+			army_defence_factor = 0.05
+			dig_in_speed_factor = 0.02
+			naval_retreat_speed = 0.05
+			naval_coordination = 0.02
+		}
+	}
+	
+	noctheurge = {
+		type = land
+		trait_type = personality_trait
+		gain_xp = {
+			always = no # not gainable
+		}
+		allowed = {
+			OR = {
+				FROM = {
+					original_tag = GMR
+				}
+				AND = {
+					FROM = {
+						tag = UNG
+						has_country_flag = UNG_shadowsun_done
+					}
+				}
+			}
+		}
+		
+		mutually_exclusive = lumotheurge # trait key
+		
+		new_commander_weight = {
+			factor = 1 # Big Rare
+		}
+		
+		modifier = {
+			recon_factor = 0.05
+			decryption_factor = 0.05
+		}
+		planning_skill = 1
+	}
+	
+	lumotheurge = {
+		type = land
+		trait_type = personality_trait
+		gain_xp = {
+			always = no # not gainable
+		}
+		allowed = {
+			OR = {
+				FROM = {
+					original_tag = GMR
+				}
+				AND = {
+					FROM = {
+						tag = UNG
+						has_country_flag = UNG_shadowsun_done
+					}
+				}
+			}
+		}
+		
+		mutually_exclusive = noctheurge # trait key
+		
+		new_commander_weight = {
+			factor = 1  # Big Rare
+		}
+		
+		attack_skill = 1
+		defense_skill = 1
+	}
 	
 ##################################
 # Common Traits

@@ -1,16 +1,16 @@
 ﻿units = {
 
 	division = {
-		name = "Dorissus Enforcers"
-		location = 2285
+		name = "Xarinthe Enforcers"
+		location = 2388
 		division_template = "Enforcers"
 		start_experience_factor = 0.3
 
 	}
 	
 	division = {
-		name = "Berinthe Enforcers"
-		location = 1564
+		name = "Tyruth Enforcers"
+		location = 4863
 		division_template = "Enforcers"
 		start_experience_factor = 0.3
 
@@ -18,21 +18,21 @@
 	
 	division = {
 		name = "Kortinall Black Gargoyles"
-		location = 7830
+		location = 6594
 		division_template = "Black Gargoyles"
 		start_experience_factor = 0.5
 	}
 
 	division = {
-		name = "Gerneth Black Gargoyles"
-		location = 5987
+		name = "Berinthe Black Gargoyles"
+		location = 6593
 		division_template = "Black Gargoyles"
 		start_experience_factor = 0.5
 	}
 
 	division = {
 		name = "Heswith Black Gargoyles"
-		location = 827
+		location = 6555
 		division_template = "Black Gargoyles"
 		start_experience_factor = 0.5
 	}

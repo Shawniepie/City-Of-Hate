@@ -2,18 +2,18 @@ state={
 	id=558
 	name="STATE_558"
 	provinces={
-		5002 5377 6355 6441 7147 8314 
+		8201 2428
 	}
 	state_category = town
 	manpower=14019
 	buildings_max_level_factor=1.000
 	history={
-		victory_points = { 5002 16 }
+		victory_points = { 8201 16 }
 		owner = BER
 		buildings = {
 			infrastructure = 5
 			dockyard = 2
-			5002 = {
+			8201 = {
 				naval_base = 3
 			}
 		}

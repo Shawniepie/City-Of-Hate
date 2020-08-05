@@ -12,7 +12,6 @@ ideas = {
 					original_tag = WIS
 					original_tag = WSZ
 					original_tag = FTH
-					original_tag = ARK
 					original_tag = TEI
 					original_tag = NRK
 					original_tag = STA
@@ -22,6 +21,7 @@ ideas = {
 					original_tag = NOC
 					original_tag = FAU
 					has_country_flag = PRK_converted_to_septism
+					has_country_flag = ARK_converted_to_septism
 				}
 			}
 			
@@ -55,7 +55,6 @@ ideas = {
 							original_tag = WIS
 							original_tag = WSZ
 							original_tag = FTH
-							original_tag = ARK
 							original_tag = TEI
 							original_tag = NRK
 							original_tag = STA
@@ -68,6 +67,7 @@ ideas = {
 						}
 					}
 					has_country_flag = PRK_converted_to_septism
+					has_country_flag = ARK_converted_to_septism
 				}
 			}
 			
@@ -93,7 +93,6 @@ ideas = {
 					original_tag = WIS
 					original_tag = WSZ
 					original_tag = FTH
-					original_tag = ARK
 					original_tag = TEI
 					original_tag = NRK
 					original_tag = STA
@@ -103,9 +102,10 @@ ideas = {
 					original_tag = NOC
 					original_tag = FAU
 					has_country_flag = PRK_converted_to_septism
+					has_country_flag = ARK_converted_to_septism
 				}
 			}
-		
+			
 			allowed = {
 				OR = {
 					original_tag = UNG
@@ -136,7 +136,6 @@ ideas = {
 							original_tag = WIS
 							original_tag = WSZ
 							original_tag = FTH
-							original_tag = ARK
 							original_tag = TEI
 							original_tag = NRK
 							original_tag = STA
@@ -149,6 +148,7 @@ ideas = {
 						}
 					}
 					has_country_flag = PRK_converted_to_septism
+					has_country_flag = ARK_converted_to_septism
 				}
 			}
 			
@@ -174,7 +174,6 @@ ideas = {
 					original_tag = WIS
 					original_tag = WSZ
 					original_tag = FTH
-					original_tag = ARK
 					original_tag = TEI
 					original_tag = NRK
 					original_tag = STA
@@ -184,6 +183,7 @@ ideas = {
 					original_tag = NOC
 					original_tag = FAU
 					has_country_flag = PRK_converted_to_septism
+					has_country_flag = ARK_converted_to_septism
 				}
 			}
 			
@@ -217,7 +217,6 @@ ideas = {
 							original_tag = WIS
 							original_tag = WSZ
 							original_tag = FTH
-							original_tag = ARK
 							original_tag = TEI
 							original_tag = NRK
 							original_tag = STA
@@ -230,6 +229,7 @@ ideas = {
 						}
 					}
 					has_country_flag = PRK_converted_to_septism
+					has_country_flag = ARK_converted_to_septism
 				}
 			}
 			
@@ -255,7 +255,6 @@ ideas = {
 					original_tag = WIS
 					original_tag = WSZ
 					original_tag = FTH
-					original_tag = ARK
 					original_tag = TEI
 					original_tag = NRK
 					original_tag = STA
@@ -265,9 +264,10 @@ ideas = {
 					original_tag = NOC
 					original_tag = FAU
 					has_country_flag = PRK_converted_to_septism
+					has_country_flag = ARK_converted_to_septism
 				}
 			}
-
+			
 			allowed = {
 				OR = {
 					original_tag = UNG
@@ -298,7 +298,6 @@ ideas = {
 							original_tag = WIS
 							original_tag = WSZ
 							original_tag = FTH
-							original_tag = ARK
 							original_tag = TEI
 							original_tag = NRK
 							original_tag = STA
@@ -311,6 +310,7 @@ ideas = {
 						}
 					}
 					has_country_flag = PRK_converted_to_septism
+					has_country_flag = ARK_converted_to_septism
 				}
 			}
 			
@@ -336,7 +336,6 @@ ideas = {
 					original_tag = WIS
 					original_tag = WSZ
 					original_tag = FTH
-					original_tag = ARK
 					original_tag = TEI
 					original_tag = NRK
 					original_tag = STA
@@ -346,9 +345,10 @@ ideas = {
 					original_tag = NOC
 					original_tag = FAU
 					has_country_flag = PRK_converted_to_septism
+					has_country_flag = ARK_converted_to_septism
 				}
 			}
-		
+			
 			allowed = {
 				OR = {
 					original_tag = UNG
@@ -379,7 +379,6 @@ ideas = {
 							original_tag = WIS
 							original_tag = WSZ
 							original_tag = FTH
-							original_tag = ARK
 							original_tag = TEI
 							original_tag = NRK
 							original_tag = STA
@@ -392,6 +391,7 @@ ideas = {
 						}
 					}
 					has_country_flag = PRK_converted_to_septism
+					has_country_flag = ARK_converted_to_septism
 				}
 			}
 			
@@ -417,7 +417,6 @@ ideas = {
 					original_tag = WIS
 					original_tag = WSZ
 					original_tag = FTH
-					original_tag = ARK
 					original_tag = TEI
 					original_tag = NRK
 					original_tag = STA
@@ -427,9 +426,10 @@ ideas = {
 					original_tag = NOC
 					original_tag = FAU
 					has_country_flag = PRK_converted_to_septism
+					has_country_flag = ARK_converted_to_septism
 				}
 			}
-		
+			
 			allowed = {
 				OR = {
 					original_tag = UNG
@@ -460,7 +460,6 @@ ideas = {
 							original_tag = WIS
 							original_tag = WSZ
 							original_tag = FTH
-							original_tag = ARK
 							original_tag = TEI
 							original_tag = NRK
 							original_tag = STA
@@ -473,6 +472,7 @@ ideas = {
 						}
 					}
 					has_country_flag = PRK_converted_to_septism
+					has_country_flag = ARK_converted_to_septism
 				}
 			}
 			
@@ -498,7 +498,6 @@ ideas = {
 					original_tag = WIS
 					original_tag = WSZ
 					original_tag = FTH
-					original_tag = ARK
 					original_tag = TEI
 					original_tag = NRK
 					original_tag = STA
@@ -508,9 +507,10 @@ ideas = {
 					original_tag = NOC
 					original_tag = FAU
 					has_country_flag = PRK_converted_to_septism
+					has_country_flag = ARK_converted_to_septism
 				}
 			}
-		
+			
 			allowed = {
 				OR = {
 					original_tag = UNG
@@ -541,7 +541,6 @@ ideas = {
 							original_tag = WIS
 							original_tag = WSZ
 							original_tag = FTH
-							original_tag = ARK
 							original_tag = TEI
 							original_tag = NRK
 							original_tag = STA
@@ -554,6 +553,7 @@ ideas = {
 						}
 					}
 					has_country_flag = PRK_converted_to_septism
+					has_country_flag = ARK_converted_to_septism
 				}
 			}
 			
@@ -579,7 +579,6 @@ ideas = {
 					original_tag = WIS
 					original_tag = WSZ
 					original_tag = FTH
-					original_tag = ARK
 					original_tag = TEI
 					original_tag = NRK
 					original_tag = STA
@@ -589,9 +588,10 @@ ideas = {
 					original_tag = NOC
 					original_tag = FAU
 					has_country_flag = PRK_converted_to_septism
+					has_country_flag = ARK_converted_to_septism
 				}
 			}
-		
+			
 			allowed = {
 				OR = {
 					original_tag = UNG
@@ -622,7 +622,6 @@ ideas = {
 							original_tag = WIS
 							original_tag = WSZ
 							original_tag = FTH
-							original_tag = ARK
 							original_tag = TEI
 							original_tag = NRK
 							original_tag = STA
@@ -635,6 +634,7 @@ ideas = {
 						}
 					}
 					has_country_flag = PRK_converted_to_septism
+					has_country_flag = ARK_converted_to_septism
 				}
 			}
 			
@@ -646,6 +646,37 @@ ideas = {
 			
 			traits = {
 				bitha_bonuses
+			}
+			
+			removal_cost = -1
+		}
+		
+		arkanimism_religion = {
+			
+			visible = {
+				NOT = {
+					has_country_flag = ARK_converted_to_septism
+				}
+			}
+			
+			allowed = {
+				original_tag = ARK
+			}
+			
+			available = {
+				NOT = {
+					has_country_flag = ARK_converted_to_septism
+				}
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = religion_arkanimism
+			
+			traits = {
+				arkanimism_bonuses
 			}
 			
 			removal_cost = -1
@@ -850,6 +881,10 @@ ideas = {
 					original_tag = RTH
 					original_tag = EOR
 					original_tag = ORB
+					original_tag = VUD
+					original_tag = YTH
+					original_tag = VAR
+					original_tag = IST
 				}
 			}
 			
@@ -859,6 +894,10 @@ ideas = {
 					original_tag = RTH
 					original_tag = EOR
 					original_tag = ORB
+					original_tag = VUD
+					original_tag = YTH
+					original_tag = VAR
+					original_tag = IST
 				}
 			}
 			
@@ -881,6 +920,10 @@ ideas = {
 					original_tag = RTH
 					original_tag = EOR
 					original_tag = ORB
+					original_tag = VUD
+					original_tag = YTH
+					original_tag = VAR
+					original_tag = IST
 				}
 			}
 			
@@ -890,6 +933,10 @@ ideas = {
 					original_tag = RTH
 					original_tag = EOR
 					original_tag = ORB
+					original_tag = VUD
+					original_tag = YTH
+					original_tag = VAR
+					original_tag = IST
 				}
 			}
 			
@@ -912,6 +959,10 @@ ideas = {
 					original_tag = RTH
 					original_tag = EOR
 					original_tag = ORB
+					original_tag = VUD
+					original_tag = YTH
+					original_tag = VAR
+					original_tag = IST
 				}
 			}
 			
@@ -921,6 +972,10 @@ ideas = {
 					original_tag = RTH
 					original_tag = EOR
 					original_tag = ORB
+					original_tag = VUD
+					original_tag = YTH
+					original_tag = VAR
+					original_tag = IST
 				}
 			}
 			
@@ -943,6 +998,10 @@ ideas = {
 					original_tag = RTH
 					original_tag = EOR
 					original_tag = ORB
+					original_tag = VUD
+					original_tag = YTH
+					original_tag = VAR
+					original_tag = IST
 				}
 			}
 			
@@ -952,6 +1011,10 @@ ideas = {
 					original_tag = RTH
 					original_tag = EOR
 					original_tag = ORB
+					original_tag = VUD
+					original_tag = YTH
+					original_tag = VAR
+					original_tag = IST
 				}
 			}
 			
@@ -974,6 +1037,10 @@ ideas = {
 					original_tag = RTH
 					original_tag = EOR
 					original_tag = ORB
+					original_tag = VUD
+					original_tag = YTH
+					original_tag = VAR
+					original_tag = IST
 				}
 			}
 			
@@ -983,6 +1050,10 @@ ideas = {
 					original_tag = RTH
 					original_tag = EOR
 					original_tag = ORB
+					original_tag = VUD
+					original_tag = YTH
+					original_tag = VAR
+					original_tag = IST
 				}
 			}
 			
@@ -1073,6 +1144,69 @@ ideas = {
 			
 			traits = {
 				damokegol_bonuses
+			}
+			
+			removal_cost = -1
+		}
+		
+		selenism_religion = {
+			
+			visible = {
+				OR = {
+					original_tag = IRI
+					original_tag = MER
+				}
+			}
+			
+			allowed = {
+				OR = {
+					original_tag = IRI
+					original_tag = MER
+				}
+			}
+			
+			available = {
+				OR = {
+					original_tag = IRI
+					original_tag = MER
+				}
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = religion_selinism
+			
+			traits = {
+				selinism_bonuses
+			}
+			
+			removal_cost = -1
+		}
+		
+		chivraism_religion = {
+			
+			visible = {
+				original_tag = LIR
+			}
+			
+			allowed = {
+				original_tag = LIR
+			}
+			
+			available = {
+				original_tag = LIR
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = religion_chivraism
+			
+			traits = {
+				chivraism_bonuses
 			}
 			
 			removal_cost = -1

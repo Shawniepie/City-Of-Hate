@@ -1,0 +1,39 @@
+#########################################################################
+# OPINION MODIFIERS
+##########################################################################
+# value
+# min_trust
+# max_trust
+# decay
+# months/years/days = timer
+# trade = yes/no
+
+opinion_modifiers = {
+	
+	STA_union_attacked = {
+		value = -25
+	}
+	
+	STA_union_attacked_planned = {
+		value = -40
+	}
+	
+	STA_sta_murdered_troops = {
+		value = -50
+	}
+	
+	STA_stahlreik_market_opinion = {
+		value = 75
+		trade = yes
+	}
+	
+	STA_conducted_inner_hostilities_opinion = {
+		value = -25
+	}
+	
+	STA_emgargo_union_modifier = {
+		value = -200
+		trade = yes
+	}
+	
+}

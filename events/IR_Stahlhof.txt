@@ -107,30 +107,30 @@ country_event = {# Negotiations - Exchange
 			if = {
 				limit = {
 					ORD = {
-						owns_state = 103
-						controls_state = 103
+						owns_state = 106
+						controls_state = 106
 					}
 				}
-			transfer_state = 103
+			transfer_state = 106
 			}
 			if = {
 				limit = {
 					ORD = {
-						owns_state = 104
-						controls_state = 104
+						owns_state = 105
+						controls_state = 105
 					}
 				}
-			transfer_state = 104
+			transfer_state = 105
 			}
 		}
 		remove_state_core = 193
 		remove_state_core = 194
-		add_state_core = 103
-		103= {
+		add_state_core = 106
+		106= {
 			set_state_name = "Elfstein"
 		}
-		add_state_core = 104
-		104= {
+		add_state_core = 105
+		105= {
 			set_state_name = "Elfwald"
 		}
 		hidden_effect = {
@@ -248,5 +248,1212 @@ country_event = {#Ordorian Proposal
 				days = 1
 			}
 		}
+	}
+}
+
+country_event = {#Fate of the Adelina Truppen
+	id = sta.7
+	title = sta.7.t
+	desc = sta.7.d
+	picture = GFX_report_event_pierre_laval
+	
+	is_triggered_only = yes
+	
+	option = { #Force them into submission
+		name = sta.7.a
+		ai_chance = {
+			factor = 1
+		}
+		hidden_effect = {
+			set_country_flag = STA_submission_flag
+		}
+	}
+	
+	option = { #Send them on an "expedition".
+		name = sta.7.b
+		ai_chance = {
+			factor = 2
+		}
+		hidden_effect = {
+			set_country_flag = STA_expedition_flag
+		}
+	}
+}
+
+country_event = {#Request Equipment
+	id = sta.8
+	title = sta.8.t
+	desc = sta.8.d
+	picture = GFX_report_event_pierre_laval
+	
+	is_triggered_only = yes
+	
+	option = { #Yes
+		name = sta.8.a
+		add_political_power = 30
+		trigger = {
+			has_equipment = { 
+				OR = {
+					light_melee_equipment_1 > 124
+					light_melee_equipment_2 > 124
+					light_melee_equipment_3 > 124
+					light_melee_equipment_4 > 124
+				}
+			}
+		}
+		ai_chance = {
+			factor = 2
+		}
+		STA = { add_equipment_to_stockpile = { type = light_melee_equipment amount = 125 producer = UNG } }
+		hidden_effect = {
+			STA = { country_event = { id = sta.9 hours = 12 } }
+		}
+	}
+	
+	option = { #No
+		name = sta.8.b
+		add_political_power = -30
+		add_popularity = { ideology = party_ideology@ruling_party popularity = -0.02 }
+		trigger = {
+			has_equipment = { 
+				OR = {
+					light_melee_equipment_1 > 124
+					light_melee_equipment_2 > 124
+					light_melee_equipment_3 > 124
+					light_melee_equipment_4 > 124
+				}
+			}
+		}
+		ai_chance = {
+			factor = 1
+		}
+		hidden_effect = {
+			STA = { country_event = { id = sta.10 hours = 12 } }
+		}
+	}
+	
+	option = { #We cant
+		name = sta.8.c
+		add_political_power = -30
+		trigger = {
+		NOT = {
+			has_equipment = {
+				OR = {
+					light_melee_equipment_1 > 124
+					light_melee_equipment_2 > 124
+					light_melee_equipment_3 > 124
+					light_melee_equipment_4 > 124
+				}
+			}
+		 }
+		}
+		ai_chance = {
+			factor = 3
+		}
+		hidden_effect = {
+			STA = { country_event = { id = sta.11 hours = 12 } }
+		}
+	}
+}
+
+country_event = {#Equipment reply yes
+	id = sta.9
+	title = sta.9.t
+	desc = sta.9.d
+	picture = GFX_report_event_pierre_laval
+	
+	is_triggered_only = yes
+
+	option = { #Yes reply
+		name = sta.9.a
+	}
+}
+
+country_event = { #Equipment reply no
+	id = sta.10
+	title = sta.10.t
+	desc = sta.10.d
+	picture = GFX_report_event_pierre_laval
+	
+	is_triggered_only = yes
+
+	option = { #Yes reply
+		name = sta.10.a
+	}
+}
+
+country_event = {#Equipment reply can't
+	id = sta.11
+	title = sta.11.t
+	desc = sta.11.d
+	picture = GFX_report_event_pierre_laval
+	
+	is_triggered_only = yes
+
+	option = { #Yes reply
+		name = sta.11.a
+	}
+}
+
+country_event = {#STA Success Faustburg
+	id = sta.12
+	title = sta.12.t
+	desc = sta.12.d
+	picture = GFX_report_event_pierre_laval
+	
+	is_triggered_only = yes
+
+	option = { #Reply
+		name = sta.12.a
+		swap_ideas = {
+				remove_idea = STA_adelina_troop_loyalty_idea
+				add_idea = STA_adelina_troop_loyalty_idea_dealt
+			}
+	}
+}
+
+country_event = {#ORD We got tipped
+	id = sta.13
+	title = sta.13.t
+	desc = sta.13.d
+	picture = GFX_report_event_pierre_laval
+	
+	is_triggered_only = yes
+
+	option = { #Reply
+		name = sta.13.a
+		hidden_effect = {
+			ORD = {
+				add_opinion_modifier = { target = UNG modifier = STA_union_attacked }
+			}
+		}
+	}
+}
+
+country_event = {#STA ordorians didnt find tip
+	id = sta.14
+	title = sta.14.t
+	desc = sta.14.d
+	picture = GFX_report_event_pierre_laval
+	
+	is_triggered_only = yes
+
+	option = { #Reply
+		name = sta.14.a
+		swap_ideas = {
+				remove_idea = STA_adelina_troop_loyalty_idea
+				add_idea = STA_adelina_troop_loyalty_idea_dealt
+			}
+	}
+}
+
+country_event = {#ORD we have been attacked by the union
+	id = sta.15
+	title = sta.15.t
+	desc = sta.15.d
+	picture = GFX_report_event_pierre_laval
+	
+	is_triggered_only = yes
+
+	option = { #Reply
+		name = sta.15.a
+		hidden_effect = {
+			ORD = {
+				add_opinion_modifier = { target = UNG modifier = STA_union_attacked }
+			}
+		}
+	}
+}
+
+country_event = {#STA They survived and escaped
+	id = sta.16
+	title = sta.16.t
+	desc = sta.16.d
+	picture = GFX_report_event_pierre_laval
+	
+	is_triggered_only = yes
+
+	option = { #Reply
+		name = sta.16.a
+		swap_ideas = {
+				remove_idea = STA_adelina_troop_loyalty_idea
+				add_idea = STA_adelina_troop_loyalty_idea_dealt
+			}
+	}
+}
+
+country_event = {#ORD The union and Stahlhof attacked us
+	id = sta.17
+	title = sta.17.t
+	desc = sta.17.d
+	picture = GFX_report_event_pierre_laval
+	
+	is_triggered_only = yes
+
+	option = { #Reply
+		name = sta.17.a
+		hidden_effect = {
+			ORD = {
+				add_opinion_modifier = { target = UNG modifier = STA_union_attacked_planned }
+				add_opinion_modifier = { target = STA modifier = STA_union_attacked_planned }
+			}
+		}
+	}
+}
+
+country_event = {#UNG Stahlhof got rid of our troops
+	id = sta.18
+	title = sta.18.t
+	desc = sta.18.d
+	picture = GFX_report_event_pierre_laval
+	
+	is_triggered_only = yes
+
+	option = { #Reply
+		name = sta.18.a
+		hidden_effect = {
+			UNG = {
+				add_opinion_modifier = { target = STA modifier = STA_sta_murdered_troops }
+			}
+		}
+	}
+}
+
+### BORDER WAR NR 1 ###
+country_event = {#Attacker Win
+	id = sta.19
+	title = sta.19.t
+	desc = sta.19.d
+	picture = GFX_report_event_pierre_laval
+	
+	is_triggered_only = yes
+
+	option = { #
+		name = sta.19.a
+		transfer_state = 96
+	}
+}
+country_event = {#Attacker Lose
+	id = sta.20
+	title = sta.20.t
+	desc = sta.20.d
+	picture = GFX_report_event_pierre_laval
+	
+	is_triggered_only = yes
+
+	option = { #
+		name = sta.20.a
+
+	}
+}
+country_event = {#Attacker Cancel
+	id = sta.21
+	title = sta.21.t
+	desc = sta.21.d
+	picture = GFX_report_event_pierre_laval
+	
+	is_triggered_only = yes
+
+	option = { #
+		name = sta.21.a
+
+	}
+}
+
+country_event = {#Defender Win
+	id = sta.22
+	title = sta.22.t
+	desc = sta.22.d
+	picture = GFX_report_event_pierre_laval
+	
+	is_triggered_only = yes
+
+	option = { #
+		name = sta.22.a
+
+	}
+}
+country_event = {#Defender Lose
+	id = sta.23
+	title = sta.23.t
+	desc = sta.23.d
+	picture = GFX_report_event_pierre_laval
+	
+	is_triggered_only = yes
+
+	option = { #
+		name = sta.23.a
+
+	}
+}
+country_event = {#Defender Cancel
+	id = sta.24
+	title = sta.24.t
+	desc = sta.24.d
+	picture = GFX_report_event_pierre_laval
+	
+	is_triggered_only = yes
+
+	option = { #
+		name = sta.24.a
+
+	}
+}
+
+### BORDER WAR NR 2 ###
+country_event = {#Attacker Win
+	id = sta.25
+	title = sta.25.t
+	desc = sta.25.d
+	picture = GFX_report_event_pierre_laval
+	
+	is_triggered_only = yes
+
+	option = { #
+		name = sta.25.a
+		transfer_state = 105
+	}
+}
+country_event = {#Attacker Lose
+	id = sta.26
+	title = sta.26.t
+	desc = sta.26.d
+	picture = GFX_report_event_pierre_laval
+	
+	is_triggered_only = yes
+
+	option = { #
+		name = sta.26.a
+
+	}
+}
+country_event = {#Attacker Cancel
+	id = sta.27
+	title = sta.27.t
+	desc = sta.27.d
+	picture = GFX_report_event_pierre_laval
+	
+	is_triggered_only = yes
+
+	option = { #
+		name = sta.27.a
+
+	}
+}
+
+country_event = {#Defender Win
+	id = sta.28
+	title = sta.28.t
+	desc = sta.28.d
+	picture = GFX_report_event_pierre_laval
+	
+	is_triggered_only = yes
+
+	option = { #
+		name = sta.28.a
+
+	}
+}
+country_event = {#Defender Lose
+	id = sta.29
+	title = sta.29.t
+	desc = sta.29.d
+	picture = GFX_report_event_pierre_laval
+	
+	is_triggered_only = yes
+
+	option = { #
+		name = sta.29.a
+
+	}
+}
+country_event = {#Defender Cancel
+	id = sta.30
+	title = sta.30.t
+	desc = sta.30.d
+	picture = GFX_report_event_pierre_laval
+	
+	is_triggered_only = yes
+
+	option = { #
+		name = sta.30.a
+
+	}
+}
+
+### BORDER WAR NR 3 ###
+country_event = {#Attacker Win
+	id = sta.31
+	title = sta.31.t
+	desc = sta.31.d
+	picture = GFX_report_event_pierre_laval
+	
+	is_triggered_only = yes
+
+	option = { #
+		name = sta.31.a
+		transfer_state = 106
+	}
+}
+country_event = {#Attacker Lose
+	id = sta.32
+	title = sta.32.t
+	desc = sta.32.d
+	picture = GFX_report_event_pierre_laval
+	
+	is_triggered_only = yes
+
+	option = { #
+		name = sta.32.a
+
+	}
+}
+country_event = {#Attacker Cancel
+	id = sta.33
+	title = sta.33.t
+	desc = sta.33.d
+	picture = GFX_report_event_pierre_laval
+	
+	is_triggered_only = yes
+
+	option = { #
+		name = sta.33.a
+
+	}
+}
+
+country_event = {#Defender Win
+	id = sta.34
+	title = sta.34.t
+	desc = sta.34.d
+	picture = GFX_report_event_pierre_laval
+	
+	is_triggered_only = yes
+
+	option = { #
+		name = sta.34.a
+
+	}
+}
+country_event = {#Defender Lose
+	id = sta.35
+	title = sta.35.t
+	desc = sta.35.d
+	picture = GFX_report_event_pierre_laval
+	
+	is_triggered_only = yes
+
+	option = { #
+		name = sta.35.a
+
+	}
+}
+country_event = {#Defender Cancel
+	id = sta.36
+	title = sta.36.t
+	desc = sta.36.d
+	picture = GFX_report_event_pierre_laval
+	
+	is_triggered_only = yes
+
+	option = { #
+		name = sta.36.a
+
+	}
+}
+
+### BORDER WAR NR 4 ###
+country_event = {#Attacker Win
+	id = sta.37
+	title = sta.37.t
+	desc = sta.37.d
+	picture = GFX_report_event_pierre_laval
+	
+	is_triggered_only = yes
+
+	option = { #
+		name = sta.37.a
+		transfer_state = 104
+	}
+}
+country_event = {#Attacker Lose
+	id = sta.38
+	title = sta.38.t
+	desc = sta.38.d
+	picture = GFX_report_event_pierre_laval
+	
+	is_triggered_only = yes
+
+	option = { #
+		name = sta.38.a
+
+	}
+}
+country_event = {#Attacker Cancel
+	id = sta.39
+	title = sta.39.t
+	desc = sta.39.d
+	picture = GFX_report_event_pierre_laval
+	
+	is_triggered_only = yes
+
+	option = { #
+		name = sta.39.a
+
+	}
+}
+
+country_event = {#Defender Win
+	id = sta.40
+	title = sta.40.t
+	desc = sta.40.d
+	picture = GFX_report_event_pierre_laval
+	
+	is_triggered_only = yes
+
+	option = { #
+		name = sta.40.a
+
+	}
+}
+country_event = {#Defender Lose
+	id = sta.41
+	title = sta.41.t
+	desc = sta.41.d
+	picture = GFX_report_event_pierre_laval
+	
+	is_triggered_only = yes
+
+	option = { #
+		name = sta.41.a
+
+	}
+}
+country_event = {#Defender Cancel
+	id = sta.42
+	title = sta.42.t
+	desc = sta.42.d
+	picture = GFX_report_event_pierre_laval
+	
+	is_triggered_only = yes
+
+	option = { #
+		name = sta.42.a
+
+	}
+}
+
+### BORDER WAR NR 5 ###
+country_event = {#Attacker Win
+	id = sta.43
+	title = sta.43.t
+	desc = sta.43.d
+	picture = GFX_report_event_pierre_laval
+	
+	is_triggered_only = yes
+
+	option = { #
+		name = sta.43.a
+		transfer_state = 107
+	}
+}
+country_event = {#Attacker Lose
+	id = sta.44
+	title = sta.44.t
+	desc = sta.44.d
+	picture = GFX_report_event_pierre_laval
+	
+	is_triggered_only = yes
+
+	option = { #
+		name = sta.44.a
+
+	}
+}
+country_event = {#Attacker Cancel
+	id = sta.45
+	title = sta.45.t
+	desc = sta.45.d
+	picture = GFX_report_event_pierre_laval
+	
+	is_triggered_only = yes
+
+	option = { #
+		name = sta.45.a
+
+	}
+}
+
+country_event = {#Defender Win
+	id = sta.46
+	title = sta.46.t
+	desc = sta.46.d
+	picture = GFX_report_event_pierre_laval
+	
+	is_triggered_only = yes
+
+	option = { #
+		name = sta.46.a
+
+	}
+}
+country_event = {#Defender Lose
+	id = sta.47
+	title = sta.47.t
+	desc = sta.47.d
+	picture = GFX_report_event_pierre_laval
+	
+	is_triggered_only = yes
+
+	option = { #
+		name = sta.47.a
+
+	}
+}
+country_event = {#Defender Cancel
+	id = sta.48
+	title = sta.48.t
+	desc = sta.48.d
+	picture = GFX_report_event_pierre_laval
+	
+	is_triggered_only = yes
+
+	option = { #
+		name = sta.48.a
+
+	}
+}
+
+### BORDER WAR NR 6 ###
+country_event = {#Attacker Win
+	id = sta.49
+	title = sta.49.t
+	desc = sta.49.d
+	picture = GFX_report_event_pierre_laval
+	
+	is_triggered_only = yes
+
+	option = { #
+		name = sta.49.a
+		transfer_state = 107
+	}
+}
+country_event = {#Attacker Lose
+	id = sta.50
+	title = sta.50.t
+	desc = sta.50.d
+	picture = GFX_report_event_pierre_laval
+	
+	is_triggered_only = yes
+
+	option = { #
+		name = sta.50.a
+
+	}
+}
+country_event = {#Attacker Cancel
+	id = sta.51
+	title = sta.51.t
+	desc = sta.51.d
+	picture = GFX_report_event_pierre_laval
+	
+	is_triggered_only = yes
+
+	option = { #
+		name = sta.51.a
+
+	}
+}
+
+country_event = {#Defender Win
+	id = sta.52
+	title = sta.52.t
+	desc = sta.52.d
+	picture = GFX_report_event_pierre_laval
+	
+	is_triggered_only = yes
+
+	option = { #
+		name = sta.52.a
+
+	}
+}
+country_event = {#Defender Lose
+	id = sta.53
+	title = sta.53.t
+	desc = sta.53.d
+	picture = GFX_report_event_pierre_laval
+	
+	is_triggered_only = yes
+
+	option = { #
+		name = sta.53.a
+
+	}
+}
+country_event = {#Defender Cancel
+	id = sta.54
+	title = sta.54.t
+	desc = sta.54.d
+	picture = GFX_report_event_pierre_laval
+	
+	is_triggered_only = yes
+
+	option = { #
+		name = sta.54.a
+
+	}
+}
+
+### REGULAR STAHLHOF EVENTS
+
+country_event = { ##Neureik Treaty
+	id = sta.55
+	title = sta.55.t
+	desc = sta.55.d
+	picture = GFX_report_event_pierre_laval
+	
+	is_triggered_only = yes
+
+	option = { #Alliance of Equals
+		name = sta.55.a
+		set_country_flag = sta_alliance_of_equals_flag
+		hidden_effect = {
+			NRK = {
+				country_event = {id = sta.56 days = 40}
+			}
+		}
+	}
+	
+	option = { #Push our Advantage
+		name = sta.55.b
+		
+		hidden_effect = {
+			NRK = {
+				country_event = {id = sta.57 days = 40}
+			}
+			set_country_flag = sta_push_our_advantage_flag
+		}
+	}
+}
+
+country_event = {#NRK Stahlhof demands treaty subtle
+	id = sta.56
+	title = sta.56.t
+	desc = sta.56.d
+	picture = GFX_report_event_pierre_laval
+	
+	is_triggered_only = yes
+
+	option = { #Yes
+		name = sta.56.a
+		hidden_effect = {
+			STA = { country_event = { id = sta.58 days = 1 } }
+		}
+		ai_chance = { base = 5 }
+	}
+	
+	option = { #Neutral
+		name = sta.56.b
+		add_stability = -0.35
+		add_war_support = -0.2
+		add_political_power = -150
+		hidden_effect = {
+			STA = { country_event = { id = sta.59 days = 1 } }
+		}
+	}
+}
+
+country_event = {#NRK Stahlhof demands treaty demanding
+	id = sta.57
+	title = sta.57.t
+	desc = sta.57.d
+	picture = GFX_report_event_pierre_laval
+	
+	is_triggered_only = yes
+
+	option = { #Yes
+		name = sta.57.a
+		hidden_effect = {
+			STA = { country_event = { id = sta.58 days = 1 } }
+		}
+		ai_chance = { base = 5 }
+	}
+	
+	option = { #Neutral
+		name = sta.57.b
+		add_stability = -0.35
+		add_war_support = -0.2
+		add_political_power = -150
+		hidden_effect = {
+			STA = { country_event = { id = sta.59 days = 1 } }
+		}
+	}
+}
+
+country_event = {#STA They agreed
+	id = sta.58
+	title = sta.58.t
+	desc = sta.58.d
+	picture = GFX_report_event_pierre_laval
+	
+	is_triggered_only = yes
+
+	option = { #
+		name = sta.58.a
+		hidden_effect = {
+			STA = { set_country_flag = sta_treaty_agreed_flag }
+		}
+	}
+}
+
+country_event = {#STA They disagreed
+	id = sta.59
+	title = sta.59.t
+	desc = sta.59.d
+	picture = GFX_report_event_pierre_laval
+	
+	is_triggered_only = yes
+
+	option = { #
+		name = sta.59.a
+		hidden_effect = {
+			STA = { set_country_flag = sta_treaty_declined_flag }
+		}
+	}
+}
+
+### BORDER WAR NR 7 ARKANISTURM ###
+country_event = {#Attacker Win
+	id = sta.60
+	title = sta.60.t
+	desc = sta.60.d
+	picture = GFX_report_event_pierre_laval
+	
+	is_triggered_only = yes
+
+	option = { #
+		name = sta.60.a
+		transfer_state = 218
+	}
+}
+country_event = {#Attacker Lose
+	id = sta.61
+	title = sta.61.t
+	desc = sta.61.d
+	picture = GFX_report_event_pierre_laval
+	
+	is_triggered_only = yes
+
+	option = { #
+		name = sta.61.a
+
+	}
+}
+country_event = {#Attacker Cancel
+	id = sta.62
+	title = sta.62.t
+	desc = sta.62.d
+	picture = GFX_report_event_pierre_laval
+	
+	is_triggered_only = yes
+
+	option = { #
+		name = sta.62.a
+
+	}
+}
+
+country_event = {#Defender Win
+	id = sta.63
+	title = sta.63.t
+	desc = sta.63.d
+	picture = GFX_report_event_pierre_laval
+	
+	is_triggered_only = yes
+
+	option = { #
+		name = sta.63.a
+
+	}
+}
+country_event = {#Defender Lose
+	id = sta.64
+	title = sta.64.t
+	desc = sta.64.d
+	picture = GFX_report_event_pierre_laval
+	
+	is_triggered_only = yes
+
+	option = { #
+		name = sta.64.a
+
+	}
+}
+country_event = {#Defender Cancel
+	id = sta.65
+	title = sta.65.t
+	desc = sta.65.d
+	picture = GFX_report_event_pierre_laval
+	
+	is_triggered_only = yes
+
+	option = { #
+		name = sta.65.a
+
+	}
+}
+country_event = {#Arkanisturm drop tag
+	id = sta.66
+	title = sta.66.t
+	desc = sta.66.d
+	picture = GFX_report_event_pierre_laval
+	
+	trigger = {
+		original_tag = ARK
+		has_global_flag = ARK_civilwar_flag
+		ARK = { has_civil_war = no}
+	}
+	
+	mean_time_to_happen = {days = 2}
+	is_triggered_only = no
+	fire_only_once = yes
+	
+	option = { #
+		name = sta.66.a
+		drop_cosmetic_tag = true
+		if = {
+			limit = {
+				NOT = { is_subject_of = UNG }
+			}
+			UNG = {
+				set_autonomy = {
+					target = ROOT
+					autonomy_state = autonomy_IR_freiprinztum
+				}
+			}
+			
+		}
+	}
+}
+country_event = { # Arkanisturm Civil War
+	id = sta.67
+	title = sta.67.t	
+	desc = sta.67.d
+	picture = GFX_report_event_spain_civil_war_volunteers_02
+	
+	is_triggered_only = yes
+	
+	immediate = {
+	
+		hidden_effect = {
+			
+			every_state = {
+				limit = {
+					is_core_of = ARK
+				}
+				ARK = {
+					remove_state_core = PREV
+				}
+			}
+			
+			ARK = {
+				set_capital = 206
+			}
+			
+			ARB = {
+				add_state_core = 248
+				add_state_core = 238
+				add_state_core = 237
+				add_state_core = 219
+				add_state_core = 220
+				add_state_core = 207
+				add_state_core = 218
+				
+				set_capital = 218
+			}
+			
+			every_state = {
+				limit = {
+					is_owned_by = ARK
+					NOT = {
+						is_core_of = ARB
+					}
+				}
+				ARK = {
+					add_state_core = PREV
+				}
+			}
+
+			delete_unit_template_and_units = {
+					division_template = "Turmwache"
+				}
+			delete_unit_template_and_units = {
+				division_template = "Zaubertruppen"
+			}
+			delete_unit_template_and_units = {
+				division_template = "Einhorn-Kavallerie"
+			}
+			
+			if = {
+				limit = {
+					ARK = {
+						is_subject_of = UNG
+					}
+				}
+				set_country_flag = ARK_is_freiprinz
+			}
+			
+			add_ideas = GENERIC_civil_war_isolation
+		}
+	}
+	
+	option = { # For Lafdaren's Memory!
+		name = sta.67.a
+		add_stability = -0.25
+		add_popularity = {
+			ideology = monarchy_absolute
+			popularity = -0.35
+		}
+		ai_chance = {
+			factor = 100
+		}
+		hidden_effect = {
+		
+			ARB = {
+				annex_country = {
+					target = ARK
+					transfer_troops = no
+				}
+			}
+			
+			every_state = {
+				limit = {
+					is_owned_by = ARB
+					is_core_of = ARK
+				}
+				ARK = {
+					transfer_state = PREV
+				}
+			}
+			
+			if = {
+				limit = {
+					has_country_flag = ARK_is_freiprinz
+				}
+				UNG = {
+					set_autonomy = {
+						target = ARK
+						autonomy_state = autonomy_IR_freiprinztum
+					}
+				}
+			}
+			
+			load_oob = "ARK_civilwar"
+			
+			delete_unit_template_and_units = {
+				division_template = "Zauberspäher"
+			}
+			
+			ARB = {
+				load_oob = "ARB_civilwar"
+				add_ideas = GENERIC_civil_war_isolation
+			}
+			
+			declare_war_on = {
+				target = ARB
+				type = civil_war
+			}
+		}
+	}
+
+	option = { # For Resmayer!
+		name = sta.67.b
+		add_stability = -0.25
+		add_popularity = {
+			ideology = monarchy_absolute
+			popularity = -0.35
+		}
+		ai_chance = {
+			factor = 100
+		}
+		hidden_effect = {
+		
+			ARB = {
+				annex_country = {
+					target = ARK
+					transfer_troops = no
+				}
+			}
+			
+			every_state = {
+				limit = {
+					is_owned_by = ARB
+					is_core_of = ARK
+				}
+				ARK = {
+					transfer_state = PREV
+				}
+			}
+			
+			if = {
+				limit = {
+					has_country_flag = ARK_is_freiprinz
+				}
+				UNG = {
+					set_autonomy = {
+						target = ARK
+						autonomy_state = autonomy_IR_freiprinztum
+					}
+				}
+			}	
+			
+			load_oob = "ARK_civilwar"
+			
+			delete_unit_template_and_units = {
+				division_template = "Zauberspäher"
+			}
+			
+			ARB = {
+				load_oob = "ARB_civilwar"
+				add_ideas = GENERIC_civil_war_isolation
+			}
+			
+			declare_war_on = {
+				target = ARB
+				type = civil_war
+			}
+		}
+		ARB = {
+			change_tag_from = ARK
+		}
+	}
+}
+country_event = { #Lafdaren Elected
+id = sta.68
+	title = sta.68.t
+	desc = sta.68.d
+	picture = GFX_report_event_german_inspect_troops
+	
+	is_triggered_only = yes
+	
+	option = { #Damn
+		name = sta.68.a
+		set_country_flag = STA_ready_wizard_intervention
+		custom_effect_tooltip = STA_wizard_intervention
+	}
+}
+
+country_event = { #Resmayer Elected
+id = sta.69
+	title = sta.69.t
+	desc = sta.69.d
+	picture = GFX_report_event_german_inspect_troops
+	
+	is_triggered_only = yes
+	
+	option = { #Damn
+		name = sta.69.a
+		add_political_power = 50
 	}
 }

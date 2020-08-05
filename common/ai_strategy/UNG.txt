@@ -35,3 +35,166 @@ ordorian_buddies = {
 		value = 200
 	}	
 }
+
+realm_buddies = {
+	enable = {
+		tag = UNG
+		is_in_faction_with = GMR
+		ORD = {
+			is_independent = yes
+		}
+	}
+	
+	abort = {
+		ORD = {
+			is_not_independent = yes
+		}
+	}
+	
+	ai_strategy = {
+		type = befriend
+		id = "GMR"			
+		value = 200
+	}
+	ai_strategy = {
+		type = alliance
+		id = "GMR"			
+		value = 200
+	}
+}
+
+boatmurder = {
+	enable = {
+		original_tag = UNG
+		country_exists = BER
+		has_completed_focus = UNG_hostile_takeover
+		NOT = {
+			has_completed_focus = UNG_stabilize_trade
+		}
+	}
+	abort = {
+		OR = {
+			NOT = {
+				country_exists = BER
+			}
+			BER = {
+				is_puppet_of = UNG
+			}
+			369 = {
+				is_owned_by = UNG
+			}
+			has_completed_focus = UNG_stabilize_trade
+		}
+	}
+	ai_strategy = {
+		type = declare_war
+		id = "BER"			
+		value = 200
+	}
+}
+
+perkav_detente = {
+	enable = {
+		original_tag = UNG
+		has_completed_focus = UNG_appeasement
+	}
+	abort = {
+		has_war_with = PRK
+	}
+	ai_strategy = {
+		type = befriend 
+		id = "PRK"
+		value = 200
+	}
+}
+
+lizard_friends = {
+	enable = {
+		original_tag = UNG
+		has_guaranteed = TLA
+	}
+	abort = {
+		has_war_with = TLA
+	}
+	ai_strategy = {
+		type = befriend 
+		id = "TLA"
+		value = 200
+	}
+}
+
+cant_reach_rthaur = {
+	enable = {
+		original_tag = ung
+		has_completed_focus = UNG_both_sides
+		NOT = {
+			OR = {
+				has_war_with = ORD
+				any_neighbor_country = {
+					tag = RTH
+				}
+				any_country = {
+					limit = {
+						is_subject_of = UNG
+					}
+					any_neighbor_country = {
+						tag = RTH
+					}
+				}
+			}
+		}
+	}
+	abort = {
+		OR = {
+			has_war_with = ORD
+			any_neighbor_country = {
+				tag = RTH
+			}
+			any_country = {
+				limit = {
+					is_subject_of = UNG
+				}
+				any_neighbor_country = {
+					tag = RTH
+				}
+			}
+		}
+	}
+	ai_strategy = {
+		type = declare_war  
+		id = "RTH"
+		value = -200
+	}
+	ai_strategy = {
+		type = declare_war  
+		id = "ORD"
+		value = 150
+	}
+}
+
+help_ya_boi = {
+	enable = {
+		is_subject_of = UNG
+		NOT = {
+			tag = STA
+		}
+	}
+	abort = {
+		OR = {
+			NOT = {
+				is_subject_of = UNG
+			}
+			tag = STA
+		}
+	}
+	ai_strategy = {
+		type = befriend  
+		id = "UNG"
+		value = 200
+	}
+	ai_strategy = {
+		type = alliance   
+		id = "UNG"
+		value = 200
+	}
+}

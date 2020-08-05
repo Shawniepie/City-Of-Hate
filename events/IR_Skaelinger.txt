@@ -170,15 +170,22 @@ country_event = { #Ordoria Demands Concessions
 		}
 		white_peace = ORD
 		ORD = {
-			transfer_state = 190
-			transfer_state = 191
-			transfer_state = 148
-			transfer_state = 147
-			transfer_state = 120
-			transfer_state = 171
-			transfer_state = 189
-			transfer_state = 175
+			transfer_state = 155
+			transfer_state = 153
+			transfer_state = 150
+			transfer_state = 154
+			transfer_state = 188
+			transfer_state = 180
+			transfer_state = 165
+			transfer_state = 161
 			transfer_state = 184
+			transfer_state = 147
+			transfer_state = 191
+			transfer_state = 189
+			transfer_state = 120
+			transfer_state = 181
+			transfer_state = 121
+			transfer_state = 178
 		}
 		hidden_effect = {
 			ORD = {
@@ -302,29 +309,20 @@ country_event = { #Second Rthaur Revolution
 			kill_country_leader = yes
 			set_popularities = {
 
-				monarchy_absolute= { 
-					popularity = 0
-				}
+				monarchy_absolute = 0
 
-				monarchy_constitutional = {
-					popularity = 65
-				}
+				monarchy_constitutional = 65
 				
-				republic_peasant = {
-					popularity = 15
-				}
-				republic_aristocrat = {
-					popularity = 10
-				}
-				republic_merchant = {
-					popularity = 5
-				}
-				theocrat = {
-					popularity = 5
-				}
-				puritan = {
-					popularity = 0
-				}
+				republic_peasant = 15
+
+				republic_aristocrat = 10
+
+				republic_merchant = 5
+
+				theocrat = 5
+
+				puritan = 0
+
 			}
 			set_politics = {
 				ruling_party = monarchy_constitutional

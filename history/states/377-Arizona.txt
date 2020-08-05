@@ -2,13 +2,13 @@
 	id=377
 	name="STATE_377"
 	provinces={
-		1917 2083 2084 3841 3842 6417 
+		5300 5623 6648 6663 6675 6709 6695 6671 6732 2165 6769 6758
 	}
 	state_category = city
 	manpower=598116
 	buildings_max_level_factor=1.000
 	history={
-		victory_points = { 3841 39 }
+		victory_points = { 6663 39 }
 		owner = TLA
 		buildings = {
 			infrastructure = 7

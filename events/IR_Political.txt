@@ -2,445 +2,89 @@
 
 add_namespace = ir.political
 
-
-country_event = {#Opinion stuff
+country_event = {#Sets opinion modifiers
 	id = ir.political.1
 		
 	hidden = yes
 	
+	is_triggered_only = yes
+	
+	option = {
+		set_opinion_modifiers = yes
+	}
+}
+
+country_event = {#Clears opinion modifiers
+	id = ir.political.2
+
+	hidden = yes
+
+	is_triggered_only = yes
+
+	option = {
+		clear_opinion_modifier = yes
+	}
+}
+
+country_event = {#Sets faith
+	id = ir.political.3
+
+	hidden = yes
+
+	is_triggered_only = yes
+
+	option = {
+		set_religions = yes
+	}
+}
+
+country_event = {#Clears faith
+	id = ir.political.4
+
+	hidden = yes
+
+	is_triggered_only = yes
+
+	option = {
+		clear_religious_opinion_modifier = yes
+	}
+}
+
+country_event = {#Clears Civil War NS
+	id = ir.political.5
+	title = ir.political.5.t
+	desc = ir.political.5.d
+	picture = GFX_report_event_communist_leader
+	
 	trigger = {
-		OR = {
-			AND = {
-				NOT = {
-					has_government = republic_peasant
-				}
-				has_country_flag = opinion_set_rosite
-			}
-			
-			AND = {
-				NOT = {
-					has_government = republic_merchant
-				}
-				has_country_flag = opinion_set_guildist
-			}
-			
-			AND = {
-				NOT = {
-					has_government = republic_aristocrat
-				}
-				has_country_flag = opinion_set_aristocratic
-			}
-			
-			AND = {
-				NOT = {
-					has_government = monarchy_absolute
-				}
-				has_country_flag = opinion_set_absolutist
-			}
-			
-			AND = {
-				NOT = {
-					has_government = monarchy_constitutional
-				}
-				has_country_flag = opinion_set_constitutionalist
-			}
-			
-			AND = {
-				NOT = {
-					has_government = theocrat
-				}
-				has_country_flag = opinion_set_theocratic
-			}
-			
-			AND = {
-				NOT = {
-					has_government = puritan
-				}
-				has_country_flag = opinion_set_puritan
-			}
-		}
+		has_idea = GENERIC_civil_war_isolation
+		has_war = no
 	}
 	
 	mean_time_to_happen = {
 		days = 5
 	}
 	
-	immediate = {
-		clr_country_flag = opinion_set_rosite
-		clr_country_flag = opinion_set_guildist
-		clr_country_flag = opinion_set_aristocratic
-		clr_country_flag = opinion_set_absolutist
-		clr_country_flag = opinion_set_constitutionalist
-		clr_country_flag = opinion_set_theocratic
-		clr_country_flag = opinion_set_puritan
-
-		every_country = {
-			remove_opinion_modifier = {
-				target = ROOT
-				modifier = IR_same_ideology
-			}
-		}
-		ROOT = {
-			remove_opinion_modifier = {
-				target = PREV
-				modifier = IR_same_ideology
-			}
-		}
+	option = {
+		name = ir.political.5.a
 		
-		every_country = {
-			remove_opinion_modifier = {
-				target = ROOT
-				modifier = IR_similar_ideology
-			}
-		}
-		ROOT = {
-			remove_opinion_modifier = {
-				target = PREV
-				modifier = IR_similar_ideology
-			}
-		}
-		
-		every_country = {
-			remove_opinion_modifier = {
-				target = ROOT
-				modifier = IR_different_ideology
-			}
-		}
-		ROOT = {
-			remove_opinion_modifier = {
-				target = PREV
-				modifier = IR_different_ideology
-			}
-		}
-		
-		if = {
-			limit = {
-				has_country_flag = IR_republican_government
-			}
-			every_country = {
-				limit = {
-					has_country_flag = IR_republican_government
-					if = {
-						limit = {
-							ROOT = {
-								has_government = republic_merchant
-							}
-						}
-						NOT = {
-							has_government = republic_merchant
-						}
-					}
-					if = {
-						limit = {
-							ROOT = {
-								has_government = republic_peasant
-							}
-						}
-						NOT = {
-							has_government = republic_peasant
-						}
-					}
-				}
-				add_opinion_modifier = {
-					target = ROOT
-					modifier = IR_similar_ideology
-				}
-				reverse_add_opinion_modifier = {
-					target = ROOT
-					modifier = IR_similar_ideology
-				}
-			}
-			every_country = {
-				limit = {
-					OR = {
-						has_country_flag = IR_monarchist_government
-						has_country_flag = IR_religious_government
-						has_country_flag = IR_puritan_government
-					}
-				}
-				add_opinion_modifier = {
-					target = ROOT
-					modifier = IR_different_ideology
-				}
-				reverse_add_opinion_modifier = {
-					target = ROOT
-					modifier = IR_different_ideology
-				}
-			}
-		}
-		
-		if = {
-			limit = {
-				has_country_flag = IR_monarchist_government
-			}
-			every_country = {
-				limit = {
-					has_country_flag = IR_monarchist_government
-					if = {
-						limit = {
-							ROOT = {
-								has_government = monarchy_absolute
-							}
-						}
-						NOT = {
-							has_government = monarchy_absolute
-						}
-					}
-					if = {
-						limit = {
-							ROOT = {
-								has_government = monarchy_constitutional
-							}
-						}
-						NOT = {
-							has_government = monarchy_constitutional
-						}
-					}
-				}
-				add_opinion_modifier = {
-					target = ROOT
-					modifier = IR_similar_ideology
-				}
-				reverse_add_opinion_modifier = {
-					target = ROOT
-					modifier = IR_similar_ideology
-				}
-			}
-			every_country = {
-				limit = {
-					OR = {
-						has_country_flag = IR_republican_government
-						has_country_flag = IR_religious_government
-						has_country_flag = IR_puritan_government
-					}
-				}
-				add_opinion_modifier = {
-					target = ROOT
-					modifier = IR_different_ideology
-				}
-				reverse_add_opinion_modifier = {
-					target = ROOT
-					modifier = IR_different_ideology
-				}
-			}
-		}
-		
-		if = {
-			limit = {
-				has_country_flag = IR_religious_government
-			}
-			every_country = {
-				limit = {
-					has_country_flag = IR_religious_government
-					if = {
-						limit = {
-							ROOT = {
-								has_country_flag = IR_ungerdal_faith
-							}
-						}
-						NOT = {
-							has_country_flag = IR_ungerdal_faith
-						}
-					}
-					if = {
-						limit = {
-							ROOT = {
-								has_country_flag = IR_dwarf_faith
-							}
-						}
-						NOT = {
-							has_country_flag = IR_dwarf_faith
-						}
-					}
-					
-					if = {
-						limit = {
-							ROOT = {
-								has_country_flag = IR_elf_faith
-							}
-						}
-						NOT = {
-							has_country_flag = IR_elf_faith
-						}
-					}
-					
-					if = {
-						limit = {
-							ROOT = {
-								has_country_flag = IR_realm_faith
-							}
-						}
-						NOT = {
-							has_country_flag = IR_realm_faith
-						}
-					}
-					
-					if = {
-						limit = {
-							ROOT = {
-								has_country_flag = IR_plains_faith
-							}
-						}
-						NOT = {
-							has_country_flag = IR_plains_faith
-						}
-					}
-				}
-				add_opinion_modifier = {
-					target = ROOT
-					modifier = IR_heathens
-				}
-				reverse_add_opinion_modifier = {
-					target = ROOT
-					modifier = IR_heathens
-				}
-			}
-			every_country = {
-				limit = {
-					OR = {
-						has_country_flag = IR_republican_government
-						has_country_flag = IR_monarchist_government
-						has_country_flag = IR_puritan_government
-					}
-				}
-				add_opinion_modifier = {
-					target = ROOT
-					modifier = IR_different_ideology
-				}
-				reverse_add_opinion_modifier = {
-					target = ROOT
-					modifier = IR_different_ideology
-				}
-			}
-		}
-		
-		if = {
-			limit = {
-				has_country_flag = IR_puritan_government
-			}
-			every_country = {
-				limit = {
-					has_country_flag = IR_puritan_government
-					if = {
-						limit = {
-							ROOT = {
-								has_idea = human_country
-							}
-						}
-						NOT = {
-							has_government = human_country
-						}
-					}
-					if = {
-						limit = {
-							ROOT = {
-								has_government = elf_country
-							}
-						}
-						NOT = {
-							has_government = elf_country
-						}
-					}
-					if = {
-						limit = {
-							ROOT = {
-								has_idea = dwarf_country
-							}
-						}
-						NOT = {
-							has_government = dwarf_country
-						}
-					}
-				}
-				add_opinion_modifier = {
-					target = ROOT
-					modifier = IR_wrong_puritans
-				}
-				reverse_add_opinion_modifier = {
-					target = ROOT
-					modifier = IR_wrong_puritans
-				}
-			}
-			every_country = {
-				limit = {
-					OR = {
-						has_country_flag = IR_republican_government
-						has_country_flag = IR_religious_government
-						has_country_flag = IR_puritan_government
-					}
-				}
-				add_opinion_modifier = {
-					target = ROOT
-					modifier = IR_different_ideology
-				}
-				reverse_add_opinion_modifier = {
-					target = ROOT
-					modifier = IR_different_ideology
-				}
-			}
-			if = {
-				limit = {
-					has_idea = human_country
-				}
-				every_country = {
-					limit = {
-						NOT = {
-							has_idea = human_country
-						}
-					}
-					add_opinion_modifier = {
-						target = ROOT
-						modifier = IR_puritan_butchers
-					}
-					reverse_add_opinion_modifier = {
-						target = ROOT
-						modifier = IR_puritan_vermin
-					}
-				}
-			}
-
-			if = {
-				limit = {
-					has_idea = dwarf_country
-				}
-				every_country = {
-					limit = {
-						NOT = {
-							has_idea = dwarf_country
-						}
-					}
-					add_opinion_modifier = {
-						target = ROOT
-						modifier = IR_puritan_butchers
-					}
-					reverse_add_opinion_modifier = {
-						target = ROOT
-						modifier = IR_puritan_vermin
-					}
-				}
-			}
-			
-			if = {
-				limit = {
-					has_idea = elf_country
-				}
-				every_country = {
-					limit = {
-						NOT = {
-							has_idea = elf_country
-						}
-					}
-					add_opinion_modifier = {
-						target = ROOT
-						modifier = IR_puritan_butchers
-					}
-					reverse_add_opinion_modifier = {
-						target = ROOT
-						modifier = IR_puritan_vermin
-					}
-				}
-			}
-		}
+		remove_ideas = GENERIC_civil_war_isolation
 	}
 }
-	
+
+#country_event = {#Faction Opinion
+#	id = ir.political.6
+#
+#	hidden = yes
+#
+#	is_triggered_only = yes
+#
+#	option = {
+#		any_other_country = {
+#			limit = {
+#				is_in_faction_with = ROOT
+#				is_faction_leader = ROOT
+#			}
+#		}
+#	}
+#}

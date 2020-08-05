@@ -452,6 +452,10 @@ country_event = {# Moderate Victory
 
 	option = {
 		name = ord.5.a
+		news_event = {
+			id = news.3
+			days = 3
+		}
 		set_politics = {
 			ruling_party = monarchy_absolute
 			}
@@ -506,7 +510,11 @@ country_event = {# Imperialist Victory
 		add_popularity = {
 			ideology = puritan
 			popularity = 0.15
-			}
+		}
+		news_event = {
+			id = news.1
+			days = 3
+		}
 		hidden_effect = {
 			set_country_flag = ORD_empire_purity
 			random_country = {
@@ -543,11 +551,15 @@ country_event = {# Theocrat Victory
 		name = ord.7.a
 		set_politics = {
 			ruling_party = theocrat
-			}
+		}
+		news_event = {
+			id = news.2
+			days = 3
+		}
 		add_popularity = {
 			ideology = theocrat
 			popularity = 0.15
-			}
+		}
 		hidden_effect = {
 			set_country_flag = ORD_pure_priests_flag
 			random_country = {
@@ -582,6 +594,10 @@ country_event = {# A House Divided
 
 	option = {# Theocrat-Puritan Alliance
 		name = ord.8.a
+		news_event = {
+			id = news.4
+			days = 3
+		}
 		add_stability = -0.15
 		add_popularity = {
 		ideology = puritan
@@ -1036,12 +1052,12 @@ country_event = { # Medium Demands - Stahlhof Complies
 			if = {
 				limit = {
 					STA = {
-						owns_state = 193
-						controls_state = 193
+						owns_state = 195
+						controls_state = 195
 					}
 				}
 			}
-			transfer_state = 193
+			transfer_state = 195
 		}
 		ORD = {
 			if = {
@@ -1059,9 +1075,9 @@ country_event = { # Medium Demands - Stahlhof Complies
 		194= {
 			set_state_name = "Ythlycthis"
 		}
-		add_state_core = 193
-		193= {
-			set_state_name = "Utrocyle"
+		add_state_core = 195
+		195= {
+			set_state_name = "Quenthyne"
 		}
 	}
 }
@@ -1120,11 +1136,11 @@ country_event = { # Exchange - Stahlhof Complies
 			if = {
 				limit = {
 					STA = {
-						owns_state = 193
-						controls_state = 193
+						owns_state = 195
+						controls_state = 195
 				}
 			}
-			transfer_state = 193
+			transfer_state = 195
 			}
 			if = {
 				limit = {
@@ -1136,15 +1152,15 @@ country_event = { # Exchange - Stahlhof Complies
 			transfer_state = 194
 			}
 		}
-		remove_state_core = 103
-		remove_state_core = 104
+		remove_state_core = 106
+		remove_state_core = 105
 		add_state_core = 194
 		194= {
 			set_state_name = "Ythlycthis"
 		}
-		add_state_core = 193
-		193= {
-			set_state_name = "Utrocyle"
+		add_state_core = 195
+		195= {
+			set_state_name = "Quenthyne"
 		}
 	}
 }
@@ -1247,6 +1263,10 @@ country_event = { # Traditionalist Coup Fails
 			ideology = puritan
 			popularity = -0.35
 		}
+		news_event = {
+			id = news.6
+			days = 2
+		}
 	}
 }
 
@@ -1292,12 +1312,16 @@ country_event = { # Traditionalist Coup Succeeds
 			set_country_flag = ORD_foreign_imperialist
 			set_country_flag = ORD_domestic_imperialist
 		}
+		news_event = {
+			id = news.7
+			days = 2
+		}
 	}
 }
 
 country_event = { # Traditionalist Civil War
 	id = ord.28
-	title = ord.28.t
+	title = ord.28.t	
 	desc = ord.28.d
 	picture = GFX_report_event_spain_civil_war_volunteers_02
 	
@@ -1349,20 +1373,20 @@ country_event = { # Traditionalist Civil War
 				add_state_core = 106
 				add_state_core = 105
 				add_state_core = 104
-				add_state_core = 103
+				add_state_core = 113
 				add_state_core = 102
-				add_state_core = 92
+				add_state_core = 109
 				add_state_core = 98
 				add_state_core = 97
 				add_state_core = 100
 				add_state_core = 80
-				add_state_core = 81
-				add_state_core = 91
+				add_state_core = 116
+				add_state_core = 110
 				add_state_core = 107
 				add_state_core = 84
-				add_state_core = 88
+				add_state_core = 115
 				add_state_core = 87
-				add_state_core = 83
+				add_state_core = 108
 				add_state_core = 86
 				
 				set_capital = 85
@@ -1388,6 +1412,7 @@ country_event = { # Traditionalist Civil War
 			}
 			
 			set_country_flag = ORD_trad_civil_war_flag
+			add_ideas = GENERIC_civil_war_isolation
 		}
 	}
 	
@@ -1408,6 +1433,7 @@ country_event = { # Traditionalist Civil War
 					target = ORD
 					transfer_troops = no
 				}
+				add_ideas = GENERIC_civil_war_isolation
 			}
 			
 			every_state = {
@@ -1433,7 +1459,11 @@ country_event = { # Traditionalist Civil War
 			
 			declare_war_on = {
 				target = ORB
-				type = annex_everything
+				type = civil_war
+			}
+			news_event = {
+				id = news.5
+				days = 2
 			}
 		}
 	}
@@ -1455,6 +1485,7 @@ country_event = { # Traditionalist Civil War
 					target = ORD
 					transfer_troops = no
 				}
+				add_ideas = GENERIC_civil_war_isolation
 			}
 			
 			every_state = {
@@ -1480,11 +1511,15 @@ country_event = { # Traditionalist Civil War
 			
 			declare_war_on = {
 				target = ORB
-				type = annex_everything
+				type = civil_war
 			}
 			
 			ORB = {
 				change_tag_from = ORD
+			}
+			news_event = {
+				id = news.5
+				days = 2
 			}
 		}
 	}
@@ -1693,15 +1728,22 @@ country_event = { #Concessions - Skaelinger Accepts
 	
 	option = {#Good
 		name = ord.31.a
-		add_state_core = 190
-		add_state_core = 191
-		add_state_core = 148
-		add_state_core = 147
-		add_state_core = 120
-		add_state_core = 171
-		add_state_core = 189
-		add_state_core = 175
+		add_state_core = 155
+		add_state_core = 153
+		add_state_core = 150
+		add_state_core = 154
+		add_state_core = 188
+		add_state_core = 180
+		add_state_core = 165
+		add_state_core = 161
 		add_state_core = 184
+		add_state_core = 147
+		add_state_core = 191
+		add_state_core = 189
+		add_state_core = 120
+		add_state_core = 181
+		add_state_core = 121
+		add_state_core = 178
 	}
 }
 
@@ -1986,7 +2028,7 @@ country_event = { #Second Rthaur Rebellion!
 			}
 		}
 		has_idea = ORD_rthaur_propaganda
-		republic_peasant > 0.45
+		republic_peasant > 0.4
 	}
 	
 	mean_time_to_happen = {
@@ -2018,31 +2060,31 @@ country_event = { #Second Rthaur Rebellion!
 			RTH = {
 				add_state_core = 118
 				add_state_core = 132
-				add_state_core = 140
+				add_state_core = 129
 				add_state_core = 137
 				add_state_core = 145
 				add_state_core = 143
 				add_state_core = 128
-				add_state_core = 103
-				add_state_core = 104
-				add_state_core = 105
+				add_state_core = 141
+				add_state_core = 142
+				add_state_core = 136
 				add_state_core = 106
 				add_state_core = 133
 				add_state_core = 119
 				add_state_core = 135
 				add_state_core = 144
-				add_state_core = 107
+				add_state_core = 139
 				add_state_core = 84
 				add_state_core = 93
 				add_state_core = 90
-				add_state_core = 76
+				add_state_core = 94
 				add_state_core = 88
-				add_state_core = 89
+				add_state_core = 91
 				add_state_core = 114
-				add_state_core = 113
-				add_state_core = 77
+				add_state_core = 87
+				add_state_core = 126
 				add_state_core = 86
-				add_state_core = 78
+				add_state_core = 81
 				add_state_core = 115
 			}
 			
@@ -2115,7 +2157,7 @@ country_event = { #Second Rthaur Rebellion!
 			
 			declare_war_on = {
 				target = RTH
-				type = annex_everything
+				type = civil_war
 			}
 			if = {
 				limit = {
@@ -2177,7 +2219,7 @@ country_event = { #Second Rthaur Rebellion!
 			
 			declare_war_on = {
 				target = RTH
-				type = annex_everything
+				type = civil_war
 			}
 			if = {
 				limit = {
@@ -2893,9 +2935,9 @@ country_event = {#Civil War - Traditionalist Victory
 
 					republic_merchant = 0
 
-					theocrat = 28
+					theocrat = 26
 
-					puritan = 67
+					puritan = 68
 				}
 			}
 		}
@@ -2991,9 +3033,9 @@ country_event = {#Civil War - Traditionalists Debate Policy
 
 					republic_merchant = 0
 
-					theocrat = 28
+					theocrat = 26
 
-					puritan = 67
+					puritan = 68
 				}
 				
 				set_country_flag = ORD_autumn_debate_done
@@ -3037,9 +3079,9 @@ country_event = {#Civil War - Traditionalists Debate Policy
 
 					republic_merchant = 0
 
-					theocrat = 67
+					theocrat = 68
 
-					puritan = 28
+					puritan = 26
 				}
 			}
 			set_country_flag = ORD_autumn_debate_done

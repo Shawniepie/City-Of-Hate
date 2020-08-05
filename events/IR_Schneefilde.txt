@@ -57,7 +57,7 @@ country_event = {#Give Lands to Perkavland?
 	}
 }
 
-country_event = {#Victory in Barsoringer
+country_event = {#Victory in Gielhasser
 	id = snf.3
 	title = snf.3.t
 	desc = snf.3.d
@@ -71,7 +71,7 @@ country_event = {#Victory in Barsoringer
 	}
 }
 
-country_event = {#Defeat in Barsoringer
+country_event = {#Defeat in Gielhasser
 	id = snf.4
 	title = snf.4.t
 	desc = snf.4.d

@@ -28,6 +28,8 @@ ideologies = {
 		
 		modifiers = {
 			justify_war_goal_when_in_major_war_time = -0.80
+			root_out_resistance_effectiveness_factor = 0.1
+			compliance_gain = -0.05
 		}
 
 		ai_fascist = yes # uses the fascist AI behaviour

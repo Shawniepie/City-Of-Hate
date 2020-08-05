@@ -1,0 +1,18 @@
+state={
+	id=813
+	name="STATE_813"
+	provinces={
+		287 5605 5020 887
+	}
+	state_category = pastoral
+	manpower=1090
+	buildings_max_level_factor=1.000
+	history={
+		owner = LIR
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+		add_core_of = LIR
+	}
+}

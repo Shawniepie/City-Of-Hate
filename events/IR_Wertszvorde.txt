@@ -13,7 +13,7 @@ country_event = {#Give Lands to Perkavland?
 	is_triggered_only = yes
 	
 	option = {#Fine
-		name = prk.1.a
+		name = wsz.1.a
 		ai_chance = {
 			factor = 3
 		}

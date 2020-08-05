@@ -36,7 +36,7 @@ units = {
 
 	division = {
 		name = "1st King's Militia"
-		location = 7506
+		location = 7152
 		division_template = "Grove Guards"
 		start_experience_factor = 0.3
 
@@ -44,7 +44,7 @@ units = {
 
 	division = {
 		name = "2nd King's Militia"
-		location = 7061
+		location = 7236
 		division_template = "Grove Guards"
 		start_experience_factor = 0.3
 
@@ -52,7 +52,7 @@ units = {
 
 	division = {
 		name = "3rd King's Militia"
-		location = 7950
+		location = 2290
 		division_template = "Grove Guards"
 		start_experience_factor = 0.3
 
@@ -60,7 +60,7 @@ units = {
 
 	division = {
 		name = "4th King's Militia"
-		location = 3048
+		location = 1952
 		division_template = "Grove Guards"
 		start_experience_factor = 0.3
 
@@ -68,7 +68,7 @@ units = {
 
 	division = {
 		name = "5th King's Militia"
-		location = 3770
+		location = 995
 		division_template = "Grove Guards"
 		start_experience_factor = 0.3
 
@@ -76,7 +76,7 @@ units = {
 	
 	division = {
 		name = "6th King's Militia"
-		location = 3498
+		location = 7174
 		division_template = "Grove Guards"
 		start_experience_factor = 0.3
 
@@ -84,7 +84,7 @@ units = {
 
 	division = {
 		name = "7th King's Militia"
-		location = 7336
+		location = 2401
 		division_template = "Grove Guards"
 		start_experience_factor = 0.3
 
@@ -92,7 +92,7 @@ units = {
 
 	division = {
 		name = "8th King's Militia"
-		location = 363
+		location = 2826
 		division_template = "Grove Guards"
 		start_experience_factor = 0.3
 
@@ -100,7 +100,7 @@ units = {
 	
 	division = {
 		name = "9th King's Militia"
-		location = 1942
+		location = 4636
 		division_template = "Grove Guards"
 		start_experience_factor = 0.3
 
@@ -108,21 +108,21 @@ units = {
 
 	division = {
 		name = "1st Loyalists"
-		location = 577
+		location = 3838
 		division_template = "Bladesingers"
 		start_experience_factor = 1.2
 	}
 
 	division = {
 		name = "2nd Loyalists"
-		location = 5228
+		location = 6796
 		division_template = "Bladesingers"
 		start_experience_factor = 0.5
 	}
 
 	division = {
 		name = "3rd Loyalists"
-		location = 6740
+		location = 6818
 		division_template = "Bladesingers"
 		start_experience_factor = 0.5
 
@@ -130,49 +130,49 @@ units = {
 
 	division = {
 		name = "4th Loyalists"
-		location = 5179
+		location = 1350
 		division_template = "Bladesingers"
 		start_experience_factor = 0.5
 	}
 
 	division = {
 		name = "5th Loyalists"
-		location = 2983
+		location = 408
 		division_template = "Bladesingers"
 		start_experience_factor = 0.5
 	}
 
 	division = {
 		name = "6th Loyalists"
-		location = 3449
+		location = 3312
 		division_template = "Bladesingers"
 		start_experience_factor = 0.5
 	}
 
 	division = {
 		name = "7th Loyalists"
-		location = 789
+		location = 4185
 		division_template = "Bladesingers"
 		start_experience_factor = 0.5
 	}
 
 	division = {
 		name = "8th Loyalists"
-		location = 6654
+		location = 7275
 		division_template = "Bladesingers"
 		start_experience_factor = 0.5
 	}
 
 	division = {
 		name = "9th Loyalists"
-		location = 3772
+		location = 5188
 		division_template = "Bladesingers"
 		start_experience_factor = 0.5
 	}
 	
 	division = {
 		name = "10th Loyalists"
-		location = 746
+		location = 7152
 		division_template = "Bladesingers"
 		start_experience_factor = 0.5
 	}
@@ -180,35 +180,35 @@ units = {
 	
 	division = {
 		name = "11th Loyalists"
-		location = 806
+		location = 2408
 		division_template = "Bladesingers"
 		start_experience_factor = 0.5
 	}
 
 	division = {
 		name = "1st King's Rangers"
-		location = 5228
+		location = 6854
 		division_template = "King's Rangers"
 		start_experience_factor = 0.4
 	}
 
 	division = {
 		name = "2nd King's Rangers"
-		location = 570
+		location = 2504
 		division_template = "King's Rangers"
 		start_experience_factor = 0.4
 	}
 
 	division = {
 		name = "3rd King's Rangers"
-		location = 7586
+		location = 2983
 		division_template = "King's Rangers"
 		start_experience_factor = 0.4
 	}
 
 	division = {
 		name = "4th King's Rangers"
-		location = 4776
+		location = 3134
 		division_template = "King's Rangers"
 		start_experience_factor = 0.4
 	}	

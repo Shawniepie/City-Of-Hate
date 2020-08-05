@@ -27,7 +27,7 @@ plunder_schneefilde = {
 			}
 			divisions_in_border_state = {
 				size > 4
-				state = 638
+				state = 621
 				border_state = 224
 			}
 			has_army_manpower = {
@@ -54,8 +54,8 @@ plunder_schneefilde = {
 			start_border_war = {
 				change_state_after_war = no
 				attacker = {
-					state = 638
-					num_provinces = 3
+					state = 621
+					num_provinces = 4
 					on_win = perkav_schneefilder_sack.1
 					on_lose = perkav_schneefilder_sack.2
 					on_cancel = perkav_schneefilder_sack.3
@@ -66,6 +66,120 @@ plunder_schneefilde = {
 					on_win = schneefilde_schneefilder_sack.1
 					on_lose = schneefilde_schneefilder_sack.2
 					on_cancel = schneefilde_schneefilder_sack.3
+				}
+			}
+		}
+	}
+}
+
+perkav_piracy = {
+	
+	PRK_perkav_piracy = {
+		
+		icon = GFX_decision_generic_raid
+		
+		allowed = {
+			tag = PRK
+		}
+		
+		available = {
+			tag = PRK
+			custom_trigger_tooltip = {
+				tooltip = PRK_coastal_state_in_raid_range_flag
+				perkav_raiding_target_exists = yes
+			}
+			ships_in_state_ports = {
+				type = destroyer
+				size > 2
+				state = 413
+			}
+			has_country_flag = PRK_can_raid
+			NOT = {
+				has_country_flag = PRK_recent_raid
+			}
+		}
+
+		visible = {
+			tag = PRK
+		}
+
+		ai_will_do = {
+			factor = 200
+		}
+		
+		complete_effect = {
+			custom_effect_tooltip = piracy_random_tt
+			set_country_flag = PRK_recent_raid
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = {
+							has_country_flag = UNG_fight_perkav_pirates
+						}
+					}
+					random_list = {
+						60 = { #Merchant Fleet Raided!
+							random_country = {
+								limit = {
+									any_owned_state = {
+										has_state_flag = PRK_coastal_state_in_raid_range_flag
+									}
+								}
+								country_event = {
+									id = arr.1
+									days = 13
+								}
+							}
+						}
+						
+						40 = { #Raid Fails!
+							random_country = {
+								limit = {
+									any_owned_state = {
+										has_state_flag = PRK_coastal_state_in_raid_range_flag
+									}
+								}
+								country_event = {
+									id = arr.6
+									days = 13
+								}
+							}
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_country_flag = UNG_fight_perkav_pirates
+					}
+					random_list = {
+						40 = { #Merchant Fleet Raided!
+							random_country = {
+								limit = {
+									any_owned_state = {
+										has_state_flag = PRK_coastal_state_in_raid_range_flag
+									}
+								}
+								country_event = {
+									id = arr.1
+									days = 13
+								}
+							}
+						}
+						
+						60 = { #Raid Fails!
+							random_country = {
+								limit = {
+									any_owned_state = {
+										has_state_flag = PRK_coastal_state_in_raid_range_flag
+									}
+								}
+								country_event = {
+									id = arr.6
+									days = 13
+								}
+							}
+						}
+					}
 				}
 			}
 		}

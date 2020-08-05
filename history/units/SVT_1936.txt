@@ -48,7 +48,7 @@ units = {
 
 	division = {
 		name = "1st Regiment 'Speere von Taubering'"
-		location = 2710
+		location = 2988
 		division_template = "Prinztruppen"
 		start_experience_factor = 0.5
 
@@ -56,7 +56,7 @@ units = {
 	
 	division = {
 		name = "2nd Regiment 'Sakralschwerter'"
-		location = 2063
+		location = 1196
 		division_template = "Prinztruppen"
 		start_experience_factor = 0.5
 
@@ -64,7 +64,7 @@ units = {
 	
 	division = {
 		name = "1st Cavalry 'Heiligritter'"
-		location = 3957
+		location = 5391
 		division_template = "Tempelritter"
 		start_experience_factor = 0.7
 
@@ -72,7 +72,7 @@ units = {
 	
 	division = {
 		name = "Temple Guard"
-		location = 970
+		location = 9285
 		division_template = "Tempelwache"
 		start_experience_factor = 0.3
 

@@ -2,8 +2,23 @@ state={
 	id=401
 	name="STATE_401"
 	provinces={
-		4924 5443 5444 6206 6593 6832 7401 8676 
+		6677 6652 6650 4717 2074 6577 1540 5211
 	}
-	manpower=0
+	state_category = large_city
+	manpower=472913
 	buildings_max_level_factor=1.000
+	history={
+		victory_points = { 4717 21 }
+		owner = IRI
+		buildings = {
+			infrastructure = 7
+			industrial_complex = 2
+			arms_factory = 2
+			dockyard = 2
+			4717 = {
+				naval_base = 1
+			}
+		}
+		add_core_of = IRI
+	}
 }

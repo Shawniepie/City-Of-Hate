@@ -18,10 +18,151 @@ default = {
 	surnames = { Smith Jones Taylor Brown Williams Wilson Evans Walker White Roberts }
 	callsigns = { Easy Kill The Lightning The Devil Grasshopper Handsome Moose Mouse Pebbles Sunshine Demon}
 }
+
+###############################################################
+# Tlarthingian Lizards
+###############################################################
+
+TLA = {
+	male = {
+		names = {
+			Halgon Thorfer Lanze Thurg
+		}
+	}
+	female = {
+		names = {
+			Nokkella Halthalla Vinthalla
+		}
+	}
+	surnames = {
+		Vingur Huunz Thulfer Dalgur
+	}
+}
+
+###############################################################
+# Sulfurisle Gnomes
+###############################################################
+
+SUL = {
+	male = {
+		names = {
+			Jeffie Dannis Lefte Harnie Wesney Janthie
+		}
+	}
+	female = {
+		names = {
+			Ingie Hancha Irthie Plonda Tinsie
+		}
+	}
+	surnames = {
+		Handa Leve Riss Danga Lorpo Diftie
+	}
+}
+
+###############################################################
+# Ordorian Elves
+###############################################################
+
+ORD = {
+	male = {
+		names = {
+			Thorys Lancthyr Usyne Wycthir Istvenys Wyngeryn Lorthyrys Orthyryn Asdyrgys Lycthyrys Pythylyn Uthyrs
+		}
+	}
+	female = {
+		names = {
+			Ancyta Lythrica Thorya Lycthynith Pythrys Wythene Ycthyna Systhyn
+		}
+	}
+	surnames = {
+		Dythene Incythre Lothinnys Ythynne Wycynnis Hynthythe Lyliryn
+	}
+}
+
+VAR = {
+	male = {
+		names = {
+			Thorys Lancthyr Usyne Wycthir Istvenys Wyngeryn Lorthyrys Orthyryn Asdyrgys Lycthyrys Pythylyn Uthyrs
+		}
+	}
+	female = {
+		names = {
+			Ancyta Lythrica Thorya Lycthynith Pythrys Wythene Ycthyna Systhyn
+		}
+	}
+	surnames = {
+		Dythene Incythre Lothinnys Ythynne Wycynnis Hynthythe Lyliryn
+	}
+}
+
+VUD = {
+	male = {
+		names = {
+			Thorys Lancthyr Usyne Wycthir Istvenys Wyngeryn Lorthyrys Orthyryn Asdyrgys Lycthyrys Pythylyn Uthyrs
+		}
+	}
+	female = {
+		names = {
+			Ancyta Lythrica Thorya Lycthynith Pythrys Wythene Ycthyna Systhyn
+		}
+	}
+	surnames = {
+		Dythene Incythre Lothinnys Ythynne Wycynnis Hynthythe Lyliryn
+	}
+}
+
+YTH = {
+	male = {
+		names = {
+			Thorys Lancthyr Usyne Wycthir Istvenys Wyngeryn Lorthyrys Orthyryn Asdyrgys Lycthyrys Pythylyn Uthyrs
+		}
+	}
+	female = {
+		names = {
+			Ancyta Lythrica Thorya Lycthynith Pythrys Wythene Ycthyna Systhyn
+		}
+	}
+	surnames = {
+		Dythene Incythre Lothinnys Ythynne Wycynnis Hynthythe Lyliryn
+	}
+}
+
+IST = {
+	male = {
+		names = {
+			Thorys Lancthyr Usyne Wycthir Istvenys Wyngeryn Lorthyrys Orthyryn Asdyrgys Lycthyrys Pythylyn Uthyrs
+		}
+	}
+	female = {
+		names = {
+			Ancyta Lythrica Thorya Lycthynith Pythrys Wythene Ycthyna Systhyn
+		}
+	}
+	surnames = {
+		Dythene Incythre Lothinnys Ythynne Wycynnis Hynthythe Lyliryn
+	}
+}
+
+RTH = {
+	male = {
+		names = {
+			Thorys Lancthyr Usyne Wycthir Istvenys Wyngeryn Lorthyrys Orthyryn Asdyrgys Lycthyrys Pythylyn Uthyrs
+		}
+	}
+	female = {
+		names = {
+			Ancyta Lythrica Thorya Lycthynith Pythrys Wythene Ycthyna Systhyn
+		}
+	}
+	surnames = {
+		Dythene Incythre Derathur Ythynne Wycynnis Hynthythe Lyliryn
+	}
+}
  
 ###############################################################
-# The Union
+# Perkavland
 ###############################################################
+
 PRK = {
 	male = {
 		names = {
@@ -52,6 +193,327 @@ PRK = {
 	}
 }
 
+###############################################################
+# Dwarves of the Mountains
+###############################################################
+
+SKA = {
+	male = {
+		names = { Adolph Jens Sverre Odd Johan Frederik Lorentz Ole Hans
+			Harald Haakon Olaf Paul Petter Carl Christian Kaare Jacob Søren Wilhelm Tryggve Daniel
+		 }
+	}
+	
+	female = {
+		names = { Trine Kajsa Helga Paula Olivia Nela Monika Torhild Trude Ingeborg Gerda }
+	}
+
+	surnames = { Munthe Sejersted Ræder Dahl Nordhaug Hamre Fleischer Eriksen Berg Hauge
+			Prytz Lund Nørregaard Vilberg Hauge Sunde Petersen Brandt Lie Wergeland Frisvold
+			Teige Carenwall Falck
+	  }
+}
+
+RMT = {
+	male = {
+		names = {
+		 	Dan David Fredrik Gustav Johan Martin Olof Nils Peter Per Dennis Alexander Felix Magnus 
+			Tobias Erik Niklas Björn Emil Robin Jonas John Rikard Daniel Anton Andreas Rufus Daniel 
+		}
+	}
+	female = {
+		names = { Anna Linda Sara Caroline Eira Katya Greta Pernilla Malin Linnéa Ebba Tove Astrid Camilla Lotta Eva }
+	}
+	
+	surnames = { 
+		Andersson Anward Björk Johansson Kiby Lind Norrevik Palmqvist Zetterman Wester Cornelius
+		Hasselström Knubb Sjöman Dahlberg Borg Wendel Sparrhult Oltner Hemmingsson Jenelius
+		Nisshagen Karlsson Bodlund Elgerot Lundström Blomberg Viklund Lindgren Lagerqvist
+		Brolin Cederholm Wickerström Tisander Rickne Ivarsson Åslund Norrevik Ekre
+		Sjöberg Lerström Hargelid Carlberg Ström Hultdin Renström Tronde
+	}
+}
+
+###############################################################
+# The Kurgur
+###############################################################
+KUR = {
+	male = {
+		names = {
+			Uurgor Ludger Zhuurst Vungoor Luudver Wenguren Thurguuz Ludbarg Wenguurst Luventhur
+		}
+	}
+	female = {
+		names = {
+			Lidvuur Wanginuurst Purthiguur Wengirst Vinguur Ludgir
+		}
+	}
+	surnames = {
+		Ghruust Nagdur Bolg Vanguuz Lithnagur Wigurz Plistuurz Whilguz
+	}
+}
+
+###############################################################
+# The Northern Plains
+###############################################################
+GMR = {
+	male = {
+		names = {
+		 	Altharon Manthurge Loventhor Wender Jaste Inloquard Wustlander Daven Lenthis
+			Polgard Hemme Wengedin Veorn Virr Anthar Ovand Trabaster
+		}
+	}
+	female = {
+		names = { Alice Thandyla Nastasia Lendina Venzella Anthara Thinna }
+	}
+	
+	surnames = { 
+		Lonthor Ingvaron Landaron Winger Inthavis Anthaross Ledefell Pingist Erenheldis
+	}
+}
+
+NPC = {
+	male = {
+		names = {
+		 	Altharon Manthurge Loventhor Wender Jaste Inloquard Wustlander Daven Lenthis
+			Polgard Hemme Wengedin Veorn Virr Anthar Ovand Jace
+		}
+	}
+	female = {
+		names = { Alice Thandyla Nastasia Lendina Venzella Anthara Thinna }
+	}
+	
+	surnames = { 
+		Lonthor Ingvaron Landaron Winger Inthavis Anthaross Ledefell Pingist Erenheldis
+	}
+}
+
+IRT = {
+	male = {
+		names = {
+		 	Altharon Manthurge Loventhor Wender Jaste Inloquard Wustlander Daven Lenthis
+			Polgard Hemme Wengedin Veorn Virr Anthar Ovand Jace
+		}
+	}
+	female = {
+		names = { Alice Thandyla Nastasia Lendina Venzella Anthara Thinna }
+	}
+	
+	surnames = { 
+		Lonthor Ingvaron Landaron Winger Inthavis Anthaross Ledefell Pingist Erenheldis
+	}
+}
+
+KAL = {
+	male = {
+		names = {
+		 	Altharon Manthurge Loventhor Wender Jaste Inloquard Wustlander Daven Lenthis
+			Polgard Hemme Wengedin Veorn Virr Anthar Ovand Jace
+		}
+	}
+	female = {
+		names = { Alice Thandyla Nastasia Lendina Venzella Anthara Thinna }
+	}
+	
+	surnames = { 
+		Lonthor Ingvaron Landaron Winger Inthavis Anthaross Ledefell Pingist Erenheldis
+	}
+}
+
+KRT = {
+	male = {
+		names = {
+		 	Altharon Manthurge Loventhor Wender Jaste Inloquard Wustlander Daven Lenthis
+			Polgard Hemme Wengedin Veorn Virr Anthar Ovand Jace
+		}
+	}
+	female = {
+		names = { Alice Thandyla Nastasia Lendina Venzella Anthara Thinna }
+	}
+	
+	surnames = { 
+		Lonthor Ingvaron Landaron Winger Inthavis Anthaross Ledefell Pingist Erenheldis
+	}
+}
+
+NAS = {
+	male = {
+		names = {
+		 	Altharon Manthurge Loventhor Wender Jaste Inloquard Wustlander Daven Lenthis
+			Polgard Hemme Wengedin Veorn Virr Anthar Ovand Jace
+		}
+	}
+	female = {
+		names = { Alice Thandyla Nastasia Lendina Venzella Anthara Thinna }
+	}
+	
+	surnames = { 
+		Lonthor Ingvaron Landaron Winger Inthavis Anthaross Ledefell Pingist Erenheldis
+	}
+}
+
+NAV = {
+	male = {
+		names = {
+		 	Altharon Manthurge Loventhor Wender Jaste Inloquard Wustlander Daven Lenthis
+			Polgard Hemme Wengedin Veorn Virr Anthar Ovand Jace
+		}
+	}
+	female = {
+		names = { Alice Thandyla Nastasia Lendina Venzella Anthara Thinna }
+	}
+	
+	surnames = { 
+		Lonthor Ingvaron Landaron Winger Inthavis Anthaross Ledefell Pingist Erenheldis
+	}
+}
+
+TRI = {
+	male = {
+		names = {
+		 	Altharon Manthurge Loventhor Wender Jaste Inloquard Wustlander Daven Lenthis
+			Polgard Hemme Wengedin Veorn Virr Anthar Ovand Jace
+		}
+	}
+	female = {
+		names = { Alice Thandyla Nastasia Lendina Venzella Anthara Thinna }
+	}
+	
+	surnames = { 
+		Lonthor Ingvaron Landaron Winger Inthavis Anthaross Ledefell Pingist Erenheldis
+	}
+}
+
+FEL = {
+	male = {
+		names = {
+		 	Altharon Manthurge Loventhor Wender Jaste Inloquard Wustlander Daven Lenthis
+			Polgard Hemme Wengedin Veorn Virr Anthar Ovand Jace
+		}
+	}
+	female = {
+		names = { Alice Thandyla Nastasia Lendina Venzella Anthara Thinna }
+	}
+	
+	surnames = { 
+		Lonthor Ingvaron Landaron Winger Inthavis Anthaross Ledefell Pingist Erenheldis
+	}
+}
+
+###############################################################
+# Lirothlind
+###############################################################
+
+LIR = {
+	male = {
+		names = {  
+			Achille Adolphe Adrien Aimable Alphonse Amédée Antoine Armand August Augustin
+			Charles Daniel Denis Édouard Elie Éttiene Eugène Félicien Félix Fernand
+			François Frédéric Georges Guillaume Gustave Henri Hubert Hugo Jacques Jean
+			Joseph Jules Julien Lazare Léopold Leroy Louis Lucien Matthieu Michel
+			Napoléon Nicolas Patrice Paul Philippe Pierre Robert Thibaut Thierry Thomas
+		 }
+	}
+	female = {
+		names = { Anne Marie Françoise Gisèle Marguerite Marianne Simone Anaïs Irène Nathalie Elsa }
+	}
+	surnames = {
+		Anthoine "Baraguey d'Hilliers" Bazaine Billot Bosquet "Boué de Lapeyrère" Bouët-Willaumez Boulanger Bourbaki
+		Bugeaud Caillard Canrobert Courbet Cousin-Mountauban Davout "de Castellane" "de Castelnau" 
+		"de Langle de Cary" "de MacMahon" "de Montaignac" "de Saint Arnaud" d'Orleans Dubail Dubois Duchêne Dupetit-Thouars Exelmans
+		Foch Forey "Franchet d'Espèrey" Gallieni Gouraud Guillaumat Hamelin Harispe Hoche Humbert
+		Jaurès Joffre Lebouef Lyautey Murat "Ney d'Elchingen" Nivelle Péllissier Petain Vaillant
+	}
+}
+
+###############################################################
+# Irinthians
+###############################################################
+
+IRI = {
+	male = {
+		names = { 
+			Adamantios Alexandros Anastasios Andreas Antonios Aristidis Athanasios Augustinos Benizelos Charalambos
+			Charilaos Dimitrios Diomidis Eleftherios Emmanouil Epameinontas Evripidis Gennaios Georgios Ilias
+			Ionnis Kitsos Konstantinos Kyriakos Kyriakoulis Leonidas Makarios Markos Mikhael Militiadis
+			Nikolaos Odysseas Othon Panagiotis Pavlos Petros Sofoklis Sotiris Spyridion Spyros
+			Staikos Stefanos Stylianos Themistoklis Theodoros Tharyvoulos Tzannis Vasos Viktor Zinovios
+		  }
+	}
+	female = {
+		names = {
+			Alexandra Adriane Adriana Agathe Agatha Agne Agnes Aikaterine Alexeia Anastasia Anastasia 
+			Anna Anthe Anthousa Antipatra Antonia Apollonia Athanasia Barbara Basillike
+			Chrysogone Damiane Demetra Dionysia Dorothea Dorothy Aigidia Eirene Irene Elaiodora Epiphania 
+			Eudokia Eudocia Eudoxia Eugenia Eulalia Eunike Euphemia Euphrasia Euphrosyne Euphrosyne
+			Eupraxia Eusebia Eustathia Evanthia Gabrielia Garyphallia Georgia Gregoria Helene Helen 
+			Ioanna Joan Ioulia Julia Iouliana Juliana Ioustina Justina Kale Konstantia Constantia 
+			Konstantine Constantina Kyra Kyriake Hypatia Zoe
+		}
+	}
+	surnames = {
+		Altanis Charalambis Christakis-Zografos Danglis Dousmanis Foumis Gonatas Hatzianestis Kallergis Kanaris Katsimiros
+		Kolokotronis Kondylis Kountouriotis Kriezis Makriyannis Manos Mavrocordatos Mavrovouniotis Metaxas Mouskos
+		Nider Othonaios Palaskas Pangalos Papadiamantopoulos Papadopoulos Papagos Papoulas Parakevopouolos Plapoutas
+		Plastiras Sapountzakis Sarafis Smolenskis Sofoulis Soutsos Spyromilios Staikopoulos Stanotas 
+		Trikoupis Tsakalotos Tsolakoglou  Tzavelas Vassos Venizelos Voulgaris Zaimis Zymvrakakis
+	 }
+}
+
+MER = {
+	male = {
+		names = { 
+			Adamantios Alexandros Anastasios Andreas Antonios Aristidis Athanasios Augustinos Benizelos Charalambos
+			Charilaos Dimitrios Diomidis Eleftherios Emmanouil Epameinontas Evripidis Gennaios Georgios Ilias
+			Ionnis Kitsos Konstantinos Kyriakos Kyriakoulis Leonidas Makarios Markos Mikhael Militiadis
+			Nikolaos Odysseas Othon Panagiotis Pavlos Petros Sofoklis Sotiris Spyridion Spyros
+			Staikos Stefanos Stylianos Themistoklis Theodoros Tharyvoulos Tzannis Vasos Viktor Zinovios
+		  }
+	}
+	female = {
+		names = {
+			Alexandra Adriane Adriana Agathe Agatha Agne Agnes Aikaterine Alexeia Anastasia Anastasia 
+			Anna Anthe Anthousa Antipatra Antonia Apollonia Athanasia Barbara Basillike
+			Chrysogone Damiane Demetra Dionysia Dorothea Dorothy Aigidia Eirene Irene Elaiodora Epiphania 
+			Eudokia Eudocia Eudoxia Eugenia Eulalia Eunike Euphemia Euphrasia Euphrosyne Euphrosyne
+			Eupraxia Eusebia Eustathia Evanthia Gabrielia Garyphallia Georgia Gregoria Helene Helen 
+			Ioanna Joan Ioulia Julia Iouliana Juliana Ioustina Justina Kale Konstantia Constantia 
+			Konstantine Constantina Kyra Kyriake Hypatia Zoe
+		}
+	}
+	surnames = {
+		Altanis Charalambis Christakis-Zografos Danglis Dousmanis Foumis Gonatas Hatzianestis Kallergis Kanaris Katsimiros
+		Kolokotronis Kondylis Kountouriotis Kriezis Makriyannis Manos Mavrocordatos Mavrovouniotis Metaxas Mouskos
+		Nider Othonaios Palaskas Pangalos Papadiamantopoulos Papadopoulos Papagos Papoulas Parakevopouolos Plapoutas
+		Plastiras Sapountzakis Sarafis Smolenskis Sofoulis Soutsos Spyromilios Staikopoulos Stanotas 
+		Trikoupis Tsakalotos Tsolakoglou  Tzavelas Vassos Venizelos Voulgaris Zaimis Zymvrakakis
+	 }
+}
+
+###############################################################
+# Bergial
+###############################################################
+
+BER = {
+	male = {
+		names = { 
+			Adriaan Albert Anthony Antonius Berend Bodo Carsten Christiaan Cornelis Dirk Ferdinand Freek Frits Gerard Godfried Govert Hendrik Henri Jacob Jacobus Jan "Jan Willem" Johan Johannes Laurens Mathias Matthijs Nicolaas Peter Petrus Philippus Pieter Quirinus Sijmen Theodorus Tjerk Willem
+		 }
+	}
+	
+	female = {
+		names = { Coba Corrie Frieda Hannie Helena Ina Jet Joke Miep Reina Truus }
+	}
+
+	surnames = { 
+	Boers "'t Mannetje" Best "Bischoff van Asterkerk" "de Visser" "den Bergialer" "den Ouden" "Jacometti" "van den Meer" "van den Briel" "van den Hof" "van der Bijl" "van Barmzande" "van Joerestinde" "van Setten" "van den Bergen" "van Ticht Bergmann" "Wittert van Hoogland" Bosch Bruggink Bruinier Buijs Buurman Carstens "den Breejen" Elias Folmer Giesen Ham Harberts Hilberdink Hoogewerff Hoving Jaapies Janssen Jolles Kaak Kraak Krouwel Kuiper Landzaat Leegstra Lukkien Maas Migchelbrink Reijnierse Rijnders Roelofsen Sandberg Scherpenhuijzen Schippers Steen Tebrunsvelt Varwijk Verhoef Visscher Vos Winkelman
+	 }
+}
+
+###############################################################
+# The Union
+###############################################################
+
 UNG = {
 	male = {
 		names = {  Maximilian Felix Erich Gerhard Gunther Otto Walter Wilhelm Heinz Hermann Heinrich 
@@ -65,8 +527,7 @@ UNG = {
 		Muller Schmidt Schneider Fischer Meyer Weber Schulz Wagner Hartmann Rall Barkhorn 
 		Becker Hoffmann Graf Erhler Hafner Lipfert Brendel Stotz Kirschner Lang Sturm 
 		Beisswenger Duttmann Wilbs Berglen Behrmann 
-		}
-	callsigns = { Bubi Assi The Black Devil The Blond Knight Of Germany Dolfo Fighter of Libau Petit Rouge Pritzl The Red Baron The Red Battle-flyer The Red Knight Reeste }
+	}
 }
 
 HLZ = {
@@ -82,8 +543,7 @@ HLZ = {
 		Muller Schmidt Schneider Fischer Meyer Weber Schulz Wagner Hartmann Rall Barkhorn 
 		Becker Hoffmann Graf Erhler Hafner Lipfert Brendel Stotz Kirschner Lang Sturm 
 		Beisswenger Duttmann Wilbs Berglen Behrmann 
-		}
-	callsigns = { Bubi Assi The Black Devil The Blond Knight Of Germany Dolfo Fighter of Libau Petit Rouge Pritzl The Red Baron The Red Battle-flyer The Red Knight Reeste }
+	}
 }
 
 NOC = {
@@ -99,8 +559,7 @@ NOC = {
 		Muller Schmidt Schneider Fischer Meyer Weber Schulz Wagner Hartmann Rall Barkhorn 
 		Becker Hoffmann Graf Erhler Hafner Lipfert Brendel Stotz Kirschner Lang Sturm 
 		Beisswenger Duttmann Wilbs Berglen Behrmann 
-		}
-	callsigns = { Bubi Assi The Black Devil The Blond Knight Of Germany Dolfo Fighter of Libau Petit Rouge Pritzl The Red Baron The Red Battle-flyer The Red Knight Reeste }
+	}
 }
 
 SVT = {
@@ -116,8 +575,7 @@ SVT = {
 		Muller Schmidt Schneider Fischer Meyer Weber Schulz Wagner Hartmann Rall Barkhorn 
 		Becker Hoffmann Graf Erhler Hafner Lipfert Brendel Stotz Kirschner Lang Sturm 
 		Beisswenger Duttmann Wilbs Berglen Behrmann 
-		}
-	callsigns = { Bubi Assi The Black Devil The Blond Knight Of Germany Dolfo Fighter of Libau Petit Rouge Pritzl The Red Baron The Red Battle-flyer The Red Knight Reeste }
+	}
 }
 
 SPW = {
@@ -133,8 +591,7 @@ SPW = {
 		Muller Schmidt Schneider Fischer Meyer Weber Schulz Wagner Hartmann Rall Barkhorn 
 		Becker Hoffmann Graf Erhler Hafner Lipfert Brendel Stotz Kirschner Lang Sturm 
 		Beisswenger Duttmann Wilbs Berglen Behrmann 
-		}
-	callsigns = { Bubi Assi The Black Devil The Blond Knight Of Germany Dolfo Fighter of Libau Petit Rouge Pritzl The Red Baron The Red Battle-flyer The Red Knight Reeste }
+	}
 }
 
 STA = {
@@ -150,8 +607,7 @@ STA = {
 		Muller Schmidt Schneider Fischer Meyer Weber Schulz Wagner Hartmann Rall Barkhorn 
 		Becker Hoffmann Graf Erhler Hafner Lipfert Brendel Stotz Kirschner Lang Sturm 
 		Beisswenger Duttmann Wilbs Berglen Behrmann 
-		}
-	callsigns = { Bubi Assi The Black Devil The Blond Knight Of Germany Dolfo Fighter of Libau Petit Rouge Pritzl The Red Baron The Red Battle-flyer The Red Knight Reeste }
+	}
 }
 
 NRK = {
@@ -167,8 +623,7 @@ NRK = {
 		Muller Schmidt Schneider Fischer Meyer Weber Schulz Wagner Hartmann Rall Barkhorn 
 		Becker Hoffmann Graf Erhler Hafner Lipfert Brendel Stotz Kirschner Lang Sturm 
 		Beisswenger Duttmann Wilbs Berglen Behrmann 
-		}
-	callsigns = { Bubi Assi The Black Devil The Blond Knight Of Germany Dolfo Fighter of Libau Petit Rouge Pritzl The Red Baron The Red Battle-flyer The Red Knight Reeste }
+	}
 }
 
 TEI = {
@@ -184,8 +639,7 @@ TEI = {
 		Muller Schmidt Schneider Fischer Meyer Weber Schulz Wagner Hartmann Rall Barkhorn 
 		Becker Hoffmann Graf Erhler Hafner Lipfert Brendel Stotz Kirschner Lang Sturm 
 		Beisswenger Duttmann Wilbs Berglen Behrmann 
-		}
-	callsigns = { Bubi Assi The Black Devil The Blond Knight Of Germany Dolfo Fighter of Libau Petit Rouge Pritzl The Red Baron The Red Battle-flyer The Red Knight Reeste }
+	}
 }
 
 SNF = {
@@ -201,8 +655,7 @@ SNF = {
 		Muller Schmidt Schneider Fischer Meyer Weber Schulz Wagner Hartmann Rall Barkhorn 
 		Becker Hoffmann Graf Erhler Hafner Lipfert Brendel Stotz Kirschner Lang Sturm 
 		Beisswenger Duttmann Wilbs Berglen Behrmann 
-		}
-	callsigns = { Bubi Assi The Black Devil The Blond Knight Of Germany Dolfo Fighter of Libau Petit Rouge Pritzl The Red Baron The Red Battle-flyer The Red Knight Reeste }
+	}
 }
 
 ARK = {
@@ -218,8 +671,7 @@ ARK = {
 		Muller Schmidt Schneider Fischer Meyer Weber Schulz Wagner Hartmann Rall Barkhorn 
 		Becker Hoffmann Graf Erhler Hafner Lipfert Brendel Stotz Kirschner Lang Sturm 
 		Beisswenger Duttmann Wilbs Berglen Behrmann 
-		}
-	callsigns = { Bubi Assi The Black Devil The Blond Knight Of Germany Dolfo Fighter of Libau Petit Rouge Pritzl The Red Baron The Red Battle-flyer The Red Knight Reeste }
+	}
 }
 
 FAU = {
@@ -235,8 +687,7 @@ FAU = {
 		Muller Schmidt Schneider Fischer Meyer Weber Schulz Wagner Hartmann Rall Barkhorn 
 		Becker Hoffmann Graf Erhler Hafner Lipfert Brendel Stotz Kirschner Lang Sturm 
 		Beisswenger Duttmann Wilbs Berglen Behrmann 
-		}
-	callsigns = { Bubi Assi The Black Devil The Blond Knight Of Germany Dolfo Fighter of Libau Petit Rouge Pritzl The Red Baron The Red Battle-flyer The Red Knight Reeste }
+	}
 }
 
 WIS = {
@@ -252,8 +703,7 @@ WIS = {
 		Muller Schmidt Schneider Fischer Meyer Weber Schulz Wagner Hartmann Rall Barkhorn 
 		Becker Hoffmann Graf Erhler Hafner Lipfert Brendel Stotz Kirschner Lang Sturm 
 		Beisswenger Duttmann Wilbs Berglen Behrmann 
-		}
-	callsigns = { Bubi Assi The Black Devil The Blond Knight Of Germany Dolfo Fighter of Libau Petit Rouge Pritzl The Red Baron The Red Battle-flyer The Red Knight Reeste }
+	}
 }
 
 WSZ = {
@@ -269,8 +719,7 @@ WSZ = {
 		Muller Schmidt Schneider Fischer Meyer Weber Schulz Wagner Hartmann Rall Barkhorn 
 		Becker Hoffmann Graf Erhler Hafner Lipfert Brendel Stotz Kirschner Lang Sturm 
 		Beisswenger Duttmann Wilbs Berglen Behrmann 
-		}
-	callsigns = { Bubi Assi The Black Devil The Blond Knight Of Germany Dolfo Fighter of Libau Petit Rouge Pritzl The Red Baron The Red Battle-flyer The Red Knight Reeste }
+	}
 }
 
 FTH = {
@@ -286,6 +735,5 @@ FTH = {
 		Muller Schmidt Schneider Fischer Meyer Weber Schulz Wagner Hartmann Rall Barkhorn 
 		Becker Hoffmann Graf Erhler Hafner Lipfert Brendel Stotz Kirschner Lang Sturm 
 		Beisswenger Duttmann Wilbs Berglen Behrmann 
-		}
-	callsigns = { Bubi Assi The Black Devil The Blond Knight Of Germany Dolfo Fighter of Libau Petit Rouge Pritzl The Red Baron The Red Battle-flyer The Red Knight Reeste }
+	}
 }

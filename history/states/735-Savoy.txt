@@ -2,8 +2,16 @@ state={
 	id=735
 	name="STATE_735"
 	provinces={
-		535 536 537 2336 3280 8151 8643 
+		6721 2020 6694
 	}
-	manpower=0
+	state_category = pastoral
+	manpower=3022
 	buildings_max_level_factor=1.000
+	history={
+		owner = RMT
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = RMT
+	}
 }

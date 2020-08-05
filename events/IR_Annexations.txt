@@ -64,12 +64,26 @@ country_event = { #Conquest of Stahlhof
 				remove_ideas = OSG_settler_government
 			}
 			
-			192 = {
-				set_state_name = "Stahlhof"
-			}			
-			set_province_name = {
-				id = 2246
-				name = "Stahlhof"
+			every_state = {
+				limit = {
+					OR = {
+						is_core_of = HLZ
+						is_core_of = NRK
+						is_core_of = ARK
+					}
+				}
+				remove_core_of = STA
+			}
+			
+			every_state = {
+				limit = {
+					OR = {
+						is_core_of = HLZ
+						is_core_of = NRK
+						is_core_of = ARK
+					}
+				}
+				reset_state_name = yes
 			}
 		}
 	}
@@ -104,10 +118,12 @@ country_event = { #Conquest of Stahlhof
 		name = annex.1.a
 		trigger = {
 			NOT = {
-				tag = UNG
-				is_subject_of = UNG
-				UNG = {
-					is_subject_of = ROOT
+				OR = {
+					tag = UNG
+					is_subject_of = UNG
+					UNG = {
+						is_subject_of = ROOT
+					}
 				}
 			}
 		}
@@ -275,9 +291,6 @@ country_event = { #Conquest of Rthauiaur
 					tag = SKA
 					tag = UNG
 					is_subject_of = UNG
-					UNG = {
-						is_subject_of = ROOT
-					}
 				}
 			}
 		}
@@ -292,38 +305,56 @@ country_event = { #Conquest of Rthauiaur
 			}
 			factor = 100
 		}
-		
-		every_state = {
+			
+		if = {
 			limit = {
-				is_core_of = EOR
-				NOT = {
-					is_core_of = ROOT
-					is_claimed_by = ROOT
+				any_state = {
+					is_core_of = RTH
 				}
 			}
-			RTH = {
-				add_state_core = PREV
+			every_state = {
+				limit = {
+					is_core_of = EOR
+					NOT = {
+						is_core_of = ROOT
+						is_claimed_by = ROOT
+					}
+				}
+				RTH = {
+					add_state_core = PREV
+				}
+				EOR = {
+					remove_state_core = PREV
+				}
 			}
-			EOR = {
-				remove_state_core = PREV
-			}
-		}
 
-		every_state = {
-			limit = {
-				is_core_of = RTH
-				is_controlled_by = ROOT
-				NOT = {
-					is_core_of = ROOT
-					is_claimed_by = ROOT
+			every_state = {
+				limit = {
+					is_core_of = RTH
+					is_controlled_by = ROOT
+					NOT = {
+						is_core_of = ROOT
+						is_claimed_by = ROOT
+					}
+				}
+				RTH = {
+					transfer_state = PREV
 				}
 			}
-			RTH = {
-				transfer_state = PREV
-			}
-		}
 			puppet = RTH
 			set_country_flag = conquest_of_rthauiaur
+		}
+		
+		if = {
+			limit = {
+				NOT = {
+					any_state = {
+						is_core_of = RTH
+					}
+				}
+			}
+			revive_rthaur = yes
+		}
 	}
 	
 	option = { # Annex
@@ -572,7 +603,7 @@ country_event = { #Conquest of Holzbrenn
 						has_country_flag = STA_defect
 					}
 					STA = {
-						is_puppet_of = ORD
+						is_subject_of = ORD
 					}
 				}
 			}
@@ -624,7 +655,12 @@ country_event = { #Conquest of Holzbrenn
 						has_country_flag = STA_defect
 					}
 					STA = {
-						is_puppet_of = ORD
+						is_subject_of = ORD
+					}
+					tag = UNG
+					is_subject_of = UNG
+					UNG = {
+						is_subject_of = ROOT
 					}
 				}
 			}
@@ -713,7 +749,7 @@ country_event = { #Conquest of Holzbrenn
 				has_country_flag = STA_defect
 			}
 			STA = {
-				is_puppet_of = ORD
+				is_subject_of = ORD
 			}
 		}
 		
@@ -799,7 +835,7 @@ country_event = { #Conquest of Neureik
 						has_country_flag = STA_defect
 					}
 					STA = {
-						is_puppet_of = ORD
+						is_subject_of = ORD
 					}
 				}
 			}
@@ -845,7 +881,12 @@ country_event = { #Conquest of Neureik
 						has_country_flag = STA_defect
 					}
 					STA = {
-						is_puppet_of = ORD
+						is_subject_of = ORD
+					}
+					tag = UNG
+					is_subject_of = UNG
+					UNG = {
+						is_subject_of = ROOT
 					}
 				}
 			}
@@ -934,7 +975,7 @@ country_event = { #Conquest of Neureik
 				has_country_flag = STA_defect
 			}
 			STA = {
-				is_puppet_of = ORD
+				is_subject_of = ORD
 			}
 		}
 		
@@ -1020,7 +1061,7 @@ country_event = { #Conquest of Arkanisturm
 						has_country_flag = STA_defect
 					}
 					STA = {
-						is_puppet_of = ORD
+						is_subject_of = ORD
 					}
 				}
 			}
@@ -1066,7 +1107,12 @@ country_event = { #Conquest of Arkanisturm
 						has_country_flag = STA_defect
 					}
 					STA = {
-						is_puppet_of = ORD
+						is_subject_of = ORD
+					}
+					tag = UNG
+					is_subject_of = UNG
+					UNG = {
+						is_subject_of = ROOT
 					}
 				}
 			}
@@ -1155,7 +1201,7 @@ country_event = { #Conquest of Arkanisturm
 				has_country_flag = STA_defect
 			}
 			STA = {
-				is_puppet_of = ORD
+				is_subject_of = ORD
 			}
 		}
 		
@@ -1230,12 +1276,27 @@ country_event = { #Conquest of Nochwald
 				kill_country_leader = yes
 				remove_ideas = OSG_settler_government
 			}
-			228 = {
-				set_state_name = "Nochwald"
-			}			
-			set_province_name = {
-				id = 1101
-				name = "Nochwald"
+			
+			every_state = {
+				limit = {
+					OR = {
+						is_core_of = SVT
+						is_core_of = SPW
+						is_core_of = TEI
+					}
+				}
+				remove_core_of = NOC
+			}
+			
+			every_state = {
+				limit = {
+					OR = {
+						is_core_of = SVT
+						is_core_of = SPW
+						is_core_of = TEI
+					}
+				}
+				reset_state_name = yes
 			}
 		}
 	}
@@ -1290,7 +1351,7 @@ country_event = { #Conquest of Nochwald
 						has_country_flag = STA_defect
 					}
 					STA = {
-						is_puppet_of = ORD
+						is_subject_of = ORD
 					}
 				}
 			}
@@ -1336,7 +1397,12 @@ country_event = { #Conquest of Nochwald
 						has_country_flag = STA_defect
 					}
 					STA = {
-						is_puppet_of = ORD
+						is_subject_of = ORD
+					}
+					tag = UNG
+					is_subject_of = UNG
+					UNG = {
+						is_subject_of = ROOT
 					}
 				}
 			}
@@ -1425,7 +1491,7 @@ country_event = { #Conquest of Nochwald
 				has_country_flag = STA_defect
 			}
 			STA = {
-				is_puppet_of = ORD
+				is_subject_of = ORD
 			}
 		}
 		
@@ -1511,7 +1577,7 @@ country_event = { #Conquest of Spochwald
 						has_country_flag = STA_defect
 					}
 					STA = {
-						is_puppet_of = ORD
+						is_subject_of = ORD
 					}
 				}
 			}
@@ -1557,7 +1623,12 @@ country_event = { #Conquest of Spochwald
 						has_country_flag = STA_defect
 					}
 					STA = {
-						is_puppet_of = ORD
+						is_subject_of = ORD
+					}
+					tag = UNG
+					is_subject_of = UNG
+					UNG = {
+						is_subject_of = ROOT
 					}
 				}
 			}
@@ -1646,7 +1717,7 @@ country_event = { #Conquest of Spochwald
 				has_country_flag = STA_defect
 			}
 			STA = {
-				is_puppet_of = ORD
+				is_subject_of = ORD
 			}
 		}
 		
@@ -1732,7 +1803,7 @@ country_event = { #Conquest of St. Vichtlas
 						has_country_flag = STA_defect
 					}
 					STA = {
-						is_puppet_of = ORD
+						is_subject_of = ORD
 					}
 				}
 			}
@@ -1778,7 +1849,12 @@ country_event = { #Conquest of St. Vichtlas
 						has_country_flag = STA_defect
 					}
 					STA = {
-						is_puppet_of = ORD
+						is_subject_of = ORD
+					}
+					tag = UNG
+					is_subject_of = UNG
+					UNG = {
+						is_subject_of = ROOT
 					}
 				}
 			}
@@ -1867,7 +1943,7 @@ country_event = { #Conquest of St. Vichtlas
 				has_country_flag = STA_defect
 			}
 			STA = {
-				is_puppet_of = ORD
+				is_subject_of = ORD
 			}
 		}
 		
@@ -1953,7 +2029,7 @@ country_event = { #Conquest of Teigerholen
 						has_country_flag = STA_defect
 					}
 					STA = {
-						is_puppet_of = ORD
+						is_subject_of = ORD
 					}
 				}
 			}
@@ -1999,7 +2075,12 @@ country_event = { #Conquest of Teigerholen
 						has_country_flag = STA_defect
 					}
 					STA = {
-						is_puppet_of = ORD
+						is_subject_of = ORD
+					}
+					tag = UNG
+					is_subject_of = UNG
+					UNG = {
+						is_subject_of = ROOT
 					}
 				}
 			}
@@ -2088,7 +2169,7 @@ country_event = { #Conquest of Teigerholen
 				has_country_flag = STA_defect
 			}
 			STA = {
-				is_puppet_of = ORD
+				is_subject_of = ORD
 			}
 		}
 		
@@ -2174,7 +2255,7 @@ country_event = { #Conquest of Schneefilde
 						has_country_flag = STA_defect
 					}
 					STA = {
-						is_puppet_of = ORD
+						is_subject_of = ORD
 					}
 				}
 			}
@@ -2220,7 +2301,12 @@ country_event = { #Conquest of Schneefilde
 						has_country_flag = STA_defect
 					}
 					STA = {
-						is_puppet_of = ORD
+						is_subject_of = ORD
+					}
+					tag = UNG
+					is_subject_of = UNG
+					UNG = {
+						is_subject_of = ROOT
 					}
 				}
 			}
@@ -2309,7 +2395,7 @@ country_event = { #Conquest of Schneefilde
 				has_country_flag = STA_defect
 			}
 			STA = {
-				is_puppet_of = ORD
+				is_subject_of = ORD
 			}
 		}
 		
@@ -2444,7 +2530,7 @@ country_event = { #Conquest of Wistingen
 						has_country_flag = STA_defect
 					}
 					STA = {
-						is_puppet_of = ORD
+						is_subject_of = ORD
 					}
 				}
 			}
@@ -2490,7 +2576,12 @@ country_event = { #Conquest of Wistingen
 						has_country_flag = STA_defect
 					}
 					STA = {
-						is_puppet_of = ORD
+						is_subject_of = ORD
+					}
+					tag = UNG
+					is_subject_of = UNG
+					UNG = {
+						is_subject_of = ROOT
 					}
 				}
 			}
@@ -2579,7 +2670,7 @@ country_event = { #Conquest of Wistingen
 				has_country_flag = STA_defect
 			}
 			STA = {
-				is_puppet_of = ORD
+				is_subject_of = ORD
 			}
 		}
 		
@@ -2654,13 +2745,13 @@ country_event = { #Conquest of Skaelinger
 				kill_country_leader = yes
 				remove_ideas = OSG_settler_government
 			}
-			146 = {
-				set_state_name = "Skylynaur"
-			}			
-			set_province_name = {
-				id = 325
-				name = "Skylynaur"
-			}
+			every_state = {
+				limit = {
+					is_core_of = SKA
+				}
+				reset_state_name = yes
+			}		
+			
 		}
 	}
 
@@ -2697,9 +2788,6 @@ country_event = { #Conquest of Skaelinger
 				OR = {
 					tag = UNG
 					is_subject_of = UNG
-					UNG = {
-						is_subject_of = ROOT
-					}
 				}
 			}
 		}
@@ -2868,7 +2956,7 @@ country_event = { #Conquest of Fritzhafen
 						has_country_flag = STA_defect
 					}
 					STA = {
-						is_puppet_of = ORD
+						is_subject_of = ORD
 					}
 				}
 			}
@@ -2914,7 +3002,12 @@ country_event = { #Conquest of Fritzhafen
 						has_country_flag = STA_defect
 					}
 					STA = {
-						is_puppet_of = ORD
+						is_subject_of = ORD
+					}
+					tag = UNG
+					is_subject_of = UNG
+					UNG = {
+						is_subject_of = ROOT
 					}
 				}
 			}
@@ -3003,7 +3096,7 @@ country_event = { #Conquest of Fritzhafen
 				has_country_flag = STA_defect
 			}
 			STA = {
-				is_puppet_of = ORD
+				is_subject_of = ORD
 			}
 		}
 		
@@ -3089,7 +3182,7 @@ country_event = { #Conquest of Wertszvorde
 						has_country_flag = STA_defect
 					}
 					STA = {
-						is_puppet_of = ORD
+						is_subject_of = ORD
 					}
 				}
 			}
@@ -3135,7 +3228,12 @@ country_event = { #Conquest of Wertszvorde
 						has_country_flag = STA_defect
 					}
 					STA = {
-						is_puppet_of = ORD
+						is_subject_of = ORD
+					}
+					tag = UNG
+					is_subject_of = UNG
+					UNG = {
+						is_subject_of = ROOT
 					}
 				}
 			}
@@ -3224,7 +3322,7 @@ country_event = { #Conquest of Wertszvorde
 				has_country_flag = STA_defect
 			}
 			STA = {
-				is_puppet_of = ORD
+				is_subject_of = ORD
 			}
 		}
 		
@@ -3332,7 +3430,12 @@ country_event = { #Conquest of Ungerdal
 						has_country_flag = STA_defect
 					}
 					STA = {
-						is_puppet_of = ORD
+						is_subject_of = ORD
+					}
+					tag = UNG
+					is_subject_of = UNG
+					UNG = {
+						is_subject_of = ROOT
 					}
 				}
 			}
@@ -3396,7 +3499,7 @@ country_event = { #Conquest of Ungerdal
 						has_country_flag = STA_defect
 					}
 					STA = {
-						is_puppet_of = ORD
+						is_subject_of = ORD
 					}
 				}
 			}
@@ -3455,7 +3558,7 @@ country_event = { #Conquest of Ungerdal
 				has_country_flag = STA_defect
 			}
 			STA = {
-				is_puppet_of = ORD
+				is_subject_of = ORD
 			}
 		}
 		
@@ -3512,6 +3615,9 @@ country_event = { #Conquest of Ordoria
 				}
 			owns_state = 85
 		}
+		85 = {
+			is_core_of = ORD
+		}
 		NOT = {
 			ROOT = {
 				has_country_flag = conquest_of_ordoria
@@ -3522,16 +3628,12 @@ country_event = { #Conquest of Ordoria
 	option = {# Liberate
 		name = annex.16.a
 		trigger = {
-			OR = {
-				NOT = {
+			NOT = {
+				OR = {
 					tag = UNG
-					ROOT = {
-						is_subject_of = UNG
-					}
-					UNG = {
-						is_subject_of = ROOT
-					}
+					is_subject_of = UNG
 				}
+				has_country_flag = twothrone_concord_member
 			}
 		}
 
@@ -3543,7 +3645,7 @@ country_event = { #Conquest of Ordoria
 					has_government = theocrat
 				}
 			}
-			factor = 100
+			factor = 5
 		}
 
 		every_state = {
@@ -3565,6 +3667,12 @@ country_event = { #Conquest of Ordoria
 	
 	option = { # Annex
 		name = annex.16.b
+
+		trigger = {
+			NOT = {
+				has_country_flag = twothrone_concord_member
+			}
+		}
 
 		ai_chance = {
 			factor = 50
@@ -3612,10 +3720,13 @@ country_event = { #Conquest of Ordoria
 					is_subject_of = ROOT
 				}
 			}
+			NOT = {
+				has_country_flag = twothrone_concord_member
+			}
 		}
 		
 		ai_chance = {
-			factor = 100
+			factor = 1
 		}
 		
 		every_state = {
@@ -3637,6 +3748,149 @@ country_event = { #Conquest of Ordoria
 				target = ORD
 				autonomy_state = autonomy_IR_freiprinztum
 			}
+		}
+	}
+	
+	option = { #Grant to Rthauiaur
+		name = annex.16.e
+		trigger = {
+			OR = {
+				is_in_faction_with = RTH
+			}
+			RTH = {
+				is_subject_of = ROOT
+			}
+			AND = {
+				tag = SKA
+				has_war_together_with = RTH
+			}
+		}
+		
+		ai_chance = {
+			factor = 100
+		}
+		
+		every_state = {
+			limit = {
+				is_core_of = ORD
+			}
+			remove_core_of = PREV
+			RTH = {
+				transfer_state = PRV
+			}
+		}
+	}
+	
+	option = { # Balkanize
+		name = annex.16.f
+		trigger = {
+			NOT = {
+				OR = {
+					tag = UNG
+					is_subject_of = UNG
+				}
+				has_country_flag = twothrone_concord_member
+			}
+		}
+
+		ai_chance = {
+			modifier = {
+				factor = 0
+				OR = {
+					has_government = puritan
+					has_government = theocrat
+				}
+			}
+			factor = 20
+		}
+		
+		partition_ordoria = yes
+		puppet = IST
+		puppet = VAR
+		puppet = YTH
+		puppet = VUD
+		set_country_flag = conquest_of_ordoria
+	}
+	
+	option = { # Balkanize Freiprinztümer
+		name = annex.16.g
+		trigger = {
+			OR = {
+				tag = UNG
+				ROOT = {
+					is_subject_of = UNG
+				}
+				UNG = {
+					is_subject_of = ROOT
+				}
+			}
+			NOT = {
+				has_country_flag = twothrone_concord_member
+			}
+		}
+		
+		ai_chance = {
+			factor = 10
+		}
+		
+		partition_ordoria = yes
+			
+		UNG = {
+			set_autonomy = {
+				target = IST
+				autonomy_state = autonomy_IR_freiprinztum
+			}
+		}
+		UNG = {
+			set_autonomy = {
+				target = VAR
+				autonomy_state = autonomy_IR_freiprinztum
+			}
+		}
+		UNG = {
+			set_autonomy = {
+				target = YTH
+				autonomy_state = autonomy_IR_freiprinztum
+			}
+		}
+		UNG = {
+			set_autonomy = {
+				target = VUD
+				autonomy_state = autonomy_IR_freiprinztum
+			}
+		}
+	}
+	
+	option = {#Partition between UNG and GMR
+		name = annex.16.h
+		
+		trigger = {
+			has_country_flag = twothrone_concord_member
+		}
+		
+		partition_ordoria = yes
+		
+		UNG = {
+			set_autonomy = {
+				target = IST
+				autonomy_state = autonomy_IR_freiprinztum
+			}
+		}
+		UNG = {
+			set_autonomy = {
+				target = VAR
+				autonomy_state = autonomy_IR_freiprinztum
+			}
+		}
+		
+		UNG = {
+			set_country_flag = conquest_of_ordoria
+		}
+		
+		GMR = {
+			puppet = YTH
+			puppet = VUD
+			set_country_flag = conquest_of_ordoria
 		}
 	}
 }
@@ -3726,9 +3980,6 @@ country_event = { #Conquest of the Realm
 					tag = UNG
 					ROOT = {
 						is_subject_of = UNG
-					}
-					UNG = {
-						is_subject_of = ROOT
 					}
 				}
 			}
@@ -3979,274 +4230,7 @@ country_event = { #Conquest of the Realm
 			factor = 100
 		}
 		
-		hidden_effect = {
-		
-			1 = {
-				set_state_name = "Ierethayne"
-			}
-			set_province_name = {
-				id = 3109
-				name = "Ierethayne"
-			}
-			
-			28 = {
-				set_state_name = "Felweyne"
-			}
-			set_province_name = {
-				id = 3966
-				name = "Felweyne"
-			}
-			
-			17 = {
-				set_state_name = "Kortinall"
-			}
-			
-			set_province_name = {
-				id = 7830
-				name = "Kortinall"
-			}
-			
-			72 = {
-				set_state_name = "Navandonne"
-			}
-			
-			set_province_name = {
-				id = 1334
-				name = "Navandonne"
-			}
-			
-			34 = {
-				set_state_name = "Kaltire"
-			}
-			
-			set_province_name = {
-				id = 3863
-				name = "Kaltire"
-			}
-			
-			17 = {
-				set_state_name = "Nastrodoge"
-			}
-			
-			set_province_name = {
-				id = 4931
-				name = "Nastrodoge"
-			}
-			
-			29 = {
-				set_state_name = "Trifell"
-			}
-			
-			set_province_name = {
-				id = 8702
-				name = "Trifell"
-			}
-
-			every_state = {
-				limit = {
-					is_core_of = GMR
-				}
-				GMR = {
-					remove_state_core = PREV
-				}
-			}
-		}
-		
-		hidden_effect = {
-			NAS = {
-				add_state_core = 31
-				add_state_core = 32
-				add_state_core = 25
-				add_state_core = 51
-				add_state_core = 33
-				add_state_core = 61
-				add_state_core = 62
-				add_state_core = 52
-				add_state_core = 20
-				add_state_core = 21
-				add_state_core = 16
-				add_state_core = 22
-				add_state_core = 56
-				add_state_core = 53
-				
-				transfer_state = 31
-				transfer_state = 32
-				transfer_state = 25
-				transfer_state = 51
-				transfer_state = 33
-				transfer_state = 61
-				transfer_state = 62
-				transfer_state = 52
-				transfer_state = 20
-				transfer_state = 21
-				transfer_state = 16
-				transfer_state = 22
-				transfer_state = 56
-				transfer_state = 53
-			}
-		}
-		
-		hidden_effect = {
-			KAL = {
-				add_state_core = 65
-				add_state_core = 58
-				add_state_core = 37
-				add_state_core = 30
-				add_state_core = 36
-				add_state_core = 723
-				add_state_core = 58
-				add_state_core = 35
-				add_state_core = 59
-				add_state_core = 60
-				add_state_core = 34
-				add_state_core = 63
-				
-				transfer_state = 65
-				transfer_state = 58
-				transfer_state = 37
-				transfer_state = 30
-				transfer_state = 36
-				transfer_state = 723
-				transfer_state = 58
-				transfer_state = 35
-				transfer_state = 59
-				transfer_state = 60
-				transfer_state = 34
-				transfer_state = 63
-			}
-		}
-		
-		hidden_effect = {
-			TRI = {
-				add_state_core = 67
-				add_state_core = 68
-				add_state_core = 69
-				add_state_core = 70
-				add_state_core = 40
-				add_state_core = 29
-				add_state_core = 49
-				add_state_core = 57
-				add_state_core = 54
-				add_state_core = 55
-				add_state_core = 64
-				
-				transfer_state = 67
-				transfer_state = 68
-				transfer_state = 69
-				transfer_state = 70
-				transfer_state = 40
-				transfer_state = 29
-				transfer_state = 49
-				transfer_state = 57
-				transfer_state = 54
-				transfer_state = 55
-				transfer_state = 64
-			}
-		}
-			
-		hidden_effect = {
-			IRT = {
-				add_state_core = 1
-				add_state_core = 2
-				add_state_core = 3
-				add_state_core = 4
-				add_state_core = 5
-				add_state_core = 6
-				add_state_core = 7
-				add_state_core = 8
-				add_state_core = 9
-				add_state_core = 10
-				add_state_core = 11
-				add_state_core = 12
-				add_state_core = 15
-				
-				transfer_state = 1
-				transfer_state = 2
-				transfer_state = 3
-				transfer_state = 4
-				transfer_state = 5
-				transfer_state = 6
-				transfer_state = 7
-				transfer_state = 8
-				transfer_state = 9
-				transfer_state = 10
-				transfer_state = 11
-				transfer_state = 12
-				transfer_state = 15
-			}
-		}
-		
-		hidden_effect = {
-			NAV = {
-				add_state_core = 72
-				add_state_core = 46
-				add_state_core = 74
-				add_state_core = 75
-				add_state_core = 73
-				add_state_core = 47
-				add_state_core = 71
-				add_state_core = 66
-				
-				transfer_state = 72
-				transfer_state = 46
-				transfer_state = 74
-				transfer_state = 75
-				transfer_state = 73
-				transfer_state = 47
-				transfer_state = 71
-				transfer_state = 66
-			}
-		}
-		
-		hidden_effect = {
-			KRT = {
-				add_state_core = 17
-				add_state_core = 18
-				add_state_core = 19
-				add_state_core = 13
-				add_state_core = 45
-				add_state_core = 23
-				add_state_core = 24
-				add_state_core = 50
-				add_state_core = 14
-				
-				transfer_state = 17
-				transfer_state = 18
-				transfer_state = 19
-				transfer_state = 13
-				transfer_state = 45
-				transfer_state = 23
-				transfer_state = 24
-				transfer_state = 50
-				transfer_state = 14
-			}
-		}
-		
-		hidden_effect = {
-			FEL = {
-				add_state_core = 28
-				add_state_core = 27
-				add_state_core = 26
-				add_state_core = 41
-				add_state_core = 38
-				add_state_core = 39
-				add_state_core = 42
-				add_state_core = 44
-				add_state_core = 43
-				add_state_core = 48
-				
-				transfer_state = 28
-				transfer_state = 27
-				transfer_state = 26
-				transfer_state = 41
-				transfer_state = 38
-				transfer_state = 39
-				transfer_state = 42
-				transfer_state = 44
-				transfer_state = 43
-				transfer_state = 48
-			}
-		}
+		shatter_the_realm = yes
 		
 		puppet = IRT
 		puppet = KAL
@@ -4287,274 +4271,7 @@ country_event = { #Conquest of the Realm
 			factor = 100
 		}
 		
-		hidden_effect = {
-		
-			1 = {
-				set_state_name = "Ierethayne"
-			}
-			set_province_name = {
-				id = 3109
-				name = "Ierethayne"
-			}
-			
-			28 = {
-				set_state_name = "Felweyne"
-			}
-			set_province_name = {
-				id = 3966
-				name = "Felweyne"
-			}
-			
-			17 = {
-				set_state_name = "Kortinall"
-			}
-			
-			set_province_name = {
-				id = 7830
-				name = "Kortinall"
-			}
-			
-			72 = {
-				set_state_name = "Navandonne"
-			}
-			
-			set_province_name = {
-				id = 1334
-				name = "Navandonne"
-			}
-			
-			34 = {
-				set_state_name = "Kaltire"
-			}
-			
-			set_province_name = {
-				id = 3863
-				name = "Kaltire"
-			}
-			
-			17 = {
-				set_state_name = "Nastrodoge"
-			}
-			
-			set_province_name = {
-				id = 4931
-				name = "Nastrodoge"
-			}
-			
-			29 = {
-				set_state_name = "Trifell"
-			}
-			
-			set_province_name = {
-				id = 8702
-				name = "Trifell"
-			}
-
-			every_state = {
-				limit = {
-					is_core_of = GMR
-				}
-				GMR = {
-					remove_state_core = PREV
-				}
-			}
-		}
-		
-		hidden_effect = {
-			NAS = {
-				add_state_core = 31
-				add_state_core = 32
-				add_state_core = 25
-				add_state_core = 51
-				add_state_core = 33
-				add_state_core = 61
-				add_state_core = 62
-				add_state_core = 52
-				add_state_core = 20
-				add_state_core = 21
-				add_state_core = 16
-				add_state_core = 22
-				add_state_core = 56
-				add_state_core = 53
-				
-				transfer_state = 31
-				transfer_state = 32
-				transfer_state = 25
-				transfer_state = 51
-				transfer_state = 33
-				transfer_state = 61
-				transfer_state = 62
-				transfer_state = 52
-				transfer_state = 20
-				transfer_state = 21
-				transfer_state = 16
-				transfer_state = 22
-				transfer_state = 56
-				transfer_state = 53
-			}
-		}
-		
-		hidden_effect = {
-			KAL = {
-				add_state_core = 65
-				add_state_core = 58
-				add_state_core = 37
-				add_state_core = 30
-				add_state_core = 36
-				add_state_core = 723
-				add_state_core = 58
-				add_state_core = 35
-				add_state_core = 59
-				add_state_core = 60
-				add_state_core = 34
-				add_state_core = 63
-				
-				transfer_state = 65
-				transfer_state = 58
-				transfer_state = 37
-				transfer_state = 30
-				transfer_state = 36
-				transfer_state = 723
-				transfer_state = 58
-				transfer_state = 35
-				transfer_state = 59
-				transfer_state = 60
-				transfer_state = 34
-				transfer_state = 63
-			}
-		}
-		
-		hidden_effect = {
-			TRI = {
-				add_state_core = 67
-				add_state_core = 68
-				add_state_core = 69
-				add_state_core = 70
-				add_state_core = 40
-				add_state_core = 29
-				add_state_core = 49
-				add_state_core = 57
-				add_state_core = 54
-				add_state_core = 55
-				add_state_core = 64
-				
-				transfer_state = 67
-				transfer_state = 68
-				transfer_state = 69
-				transfer_state = 70
-				transfer_state = 40
-				transfer_state = 29
-				transfer_state = 49
-				transfer_state = 57
-				transfer_state = 54
-				transfer_state = 55
-				transfer_state = 64
-			}
-		}
-			
-		hidden_effect = {
-			IRT = {
-				add_state_core = 1
-				add_state_core = 2
-				add_state_core = 3
-				add_state_core = 4
-				add_state_core = 5
-				add_state_core = 6
-				add_state_core = 7
-				add_state_core = 8
-				add_state_core = 9
-				add_state_core = 10
-				add_state_core = 11
-				add_state_core = 12
-				add_state_core = 15
-				
-				transfer_state = 1
-				transfer_state = 2
-				transfer_state = 3
-				transfer_state = 4
-				transfer_state = 5
-				transfer_state = 6
-				transfer_state = 7
-				transfer_state = 8
-				transfer_state = 9
-				transfer_state = 10
-				transfer_state = 11
-				transfer_state = 12
-				transfer_state = 15
-			}
-		}
-		
-		hidden_effect = {
-			NAV = {
-				add_state_core = 72
-				add_state_core = 46
-				add_state_core = 74
-				add_state_core = 75
-				add_state_core = 73
-				add_state_core = 47
-				add_state_core = 71
-				add_state_core = 66
-				
-				transfer_state = 72
-				transfer_state = 46
-				transfer_state = 74
-				transfer_state = 75
-				transfer_state = 73
-				transfer_state = 47
-				transfer_state = 71
-				transfer_state = 66
-			}
-		}
-		
-		hidden_effect = {
-			KRT = {
-				add_state_core = 17
-				add_state_core = 18
-				add_state_core = 19
-				add_state_core = 13
-				add_state_core = 45
-				add_state_core = 23
-				add_state_core = 24
-				add_state_core = 50
-				add_state_core = 14
-				
-				transfer_state = 17
-				transfer_state = 18
-				transfer_state = 19
-				transfer_state = 13
-				transfer_state = 45
-				transfer_state = 23
-				transfer_state = 24
-				transfer_state = 50
-				transfer_state = 14
-			}
-		}
-		
-		hidden_effect = {
-			FEL = {
-				add_state_core = 28
-				add_state_core = 27
-				add_state_core = 26
-				add_state_core = 41
-				add_state_core = 38
-				add_state_core = 39
-				add_state_core = 42
-				add_state_core = 44
-				add_state_core = 43
-				add_state_core = 48
-				
-				transfer_state = 28
-				transfer_state = 27
-				transfer_state = 26
-				transfer_state = 41
-				transfer_state = 38
-				transfer_state = 39
-				transfer_state = 42
-				transfer_state = 44
-				transfer_state = 43
-				transfer_state = 48
-			}
-		}
+		shatter_the_realm = yes
 		
 		UNG = {
 			set_autonomy = {
@@ -4671,7 +4388,7 @@ country_event = { #Conquest of Faustburg
 						has_country_flag = STA_defect
 					}
 					STA = {
-						is_puppet_of = ORD
+						is_subject_of = ORD
 					}
 				}
 			}
@@ -4717,7 +4434,7 @@ country_event = { #Conquest of Faustburg
 						has_country_flag = STA_defect
 					}
 					STA = {
-						is_puppet_of = ORD
+						is_subject_of = ORD
 					}
 				}
 			}
@@ -4806,7 +4523,7 @@ country_event = { #Conquest of Faustburg
 				has_country_flag = STA_defect
 			}
 			STA = {
-				is_puppet_of = ORD
+				is_subject_of = ORD
 			}
 		}
 		
@@ -4925,21 +4642,18 @@ country_event = { #Conquest of Ierethayne
 					OR = {
 						tag = UNG
 						is_subject_of = UNG
-						UNG = {
-							is_subject_of = ROOT
-						}
 					}
 				}
 				NOT = {
 					country_exists = GMR
 					GMR = {
-						is_puppet_of = ROOT
+						is_subject_of = ROOT
 					}
 				}
 				NOT = {
 					country_exists = NPC
 					NPC = {
-						is_puppet_of = ROOT
+						is_subject_of = ROOT
 					}
 				}
 			}
@@ -4969,8 +4683,10 @@ country_event = { #Conquest of Ierethayne
 				add_state_core = 9
 				add_state_core = 10
 				add_state_core = 11
-				add_state_core = 12
-				add_state_core = 15
+				add_state_core = 13
+				add_state_core = 14
+				add_state_core = 41
+				add_state_core = 31
 			}
 		}
 
@@ -5008,13 +4724,13 @@ country_event = { #Conquest of Ierethayne
 				NOT = {
 					country_exists = GMR
 					GMR = {
-						is_puppet_of = ROOT
+						is_subject_of = ROOT
 					}
 				}
 				NOT = {
 					country_exists = NPC
 					NPC = {
-						is_puppet_of = ROOT
+						is_subject_of = ROOT
 					}
 				}
 			}
@@ -5085,8 +4801,10 @@ country_event = { #Conquest of Ierethayne
 				add_state_core = 9
 				add_state_core = 10
 				add_state_core = 11
-				add_state_core = 12
-				add_state_core = 15
+				add_state_core = 13
+				add_state_core = 14
+				add_state_core = 41
+				add_state_core = 31
 			}
 		}
 		
@@ -5117,7 +4835,7 @@ country_event = { #Conquest of Ierethayne
 		trigger = {
 			country_exists = GMR
 			GMR = {
-				is_puppet_of = ROOT
+				is_subject_of = ROOT
 			}
 		}
 		
@@ -5146,7 +4864,7 @@ country_event = { #Conquest of Ierethayne
 		trigger = {
 			country_exists = NPC
 			NPC = {
-				is_puppet_of = ROOT
+				is_subject_of = ROOT
 			}
 		}
 		
@@ -5268,21 +4986,18 @@ country_event = { #Conquest of Trifell
 					OR = {
 						tag = UNG
 						is_subject_of = UNG
-						UNG = {
-							is_subject_of = ROOT
-						}
 					}
 				}
 				NOT = {
 					country_exists = GMR
 					GMR = {
-						is_puppet_of = ROOT
+						is_subject_of = ROOT
 					}
 				}
 				NOT = {
 					country_exists = NPC
 					NPC = {
-						is_puppet_of = ROOT
+						is_subject_of = ROOT
 					}
 				}
 			}
@@ -5301,17 +5016,19 @@ country_event = { #Conquest of Trifell
 		
 		hidden_effect = {
 			TRI = {
-				add_state_core = 67
-				add_state_core = 68
-				add_state_core = 69
-				add_state_core = 70
-				add_state_core = 40
 				add_state_core = 29
-				add_state_core = 49
-				add_state_core = 57
+				add_state_core = 65
+				add_state_core = 59
+				add_state_core = 53
 				add_state_core = 54
-				add_state_core = 55
-				add_state_core = 64
+				add_state_core = 58
+				add_state_core = 48
+				add_state_core = 47
+				add_state_core = 44
+				add_state_core = 43
+				add_state_core = 42
+				add_state_core = 74
+				add_state_core = 15
 			}
 		}
 		
@@ -5349,13 +5066,13 @@ country_event = { #Conquest of Trifell
 				NOT = {
 					country_exists = GMR
 					GMR = {
-						is_puppet_of = ROOT
+						is_subject_of = ROOT
 					}
 				}
 				NOT = {
 					country_exists = NPC
 					NPC = {
-						is_puppet_of = ROOT
+						is_subject_of = ROOT
 					}
 				}
 			}
@@ -5415,17 +5132,19 @@ country_event = { #Conquest of Trifell
 		
 		hidden_effect = {
 			TRI = {
-				add_state_core = 67
-				add_state_core = 68
-				add_state_core = 69
-				add_state_core = 70
-				add_state_core = 40
 				add_state_core = 29
-				add_state_core = 49
-				add_state_core = 57
+				add_state_core = 65
+				add_state_core = 59
+				add_state_core = 53
 				add_state_core = 54
-				add_state_core = 55
-				add_state_core = 64
+				add_state_core = 58
+				add_state_core = 48
+				add_state_core = 47
+				add_state_core = 44
+				add_state_core = 43
+				add_state_core = 42
+				add_state_core = 74
+				add_state_core = 15
 			}
 		}
 		
@@ -5456,7 +5175,7 @@ country_event = { #Conquest of Trifell
 		trigger = {
 			country_exists = GMR
 			GMR = {
-				is_puppet_of = ROOT
+				is_subject_of = ROOT
 			}
 		}
 		
@@ -5485,7 +5204,7 @@ country_event = { #Conquest of Trifell
 		trigger = {
 			country_exists = GMR
 			NPC = {
-				is_puppet_of = ROOT
+				is_subject_of = ROOT
 			}
 		}
 		
@@ -5554,15 +5273,23 @@ country_event = { #Conquest of Nastrogdar
 					long_name = NAS_monarchy_absolute_party
 					name = NAS_monarchy_absolute_party
 				}
+				every_state = {
+					limit = {
+							is_core_of = KRT
+					}
+					remove_core_of = NAS
+				}
 				kill_country_leader = yes
 				remove_ideas = OSG_settler_government
 			}
-			17 = {
-				set_state_name = "Nastrogdar"
-			}			
-			set_province_name = {
-				id = 8702
-				name = "Nastrogdar"
+			every_state = {
+				limit = {
+					OR = {
+						is_core_of = NOC
+						is_core_of = NAS
+					}
+				}
+				reset_state_name = yes
 			}
 		}
 	}
@@ -5607,21 +5334,18 @@ country_event = { #Conquest of Nastrogdar
 					OR = {
 						tag = UNG
 						is_subject_of = UNG
-						UNG = {
-							is_subject_of = ROOT
-						}
 					}
 				}
 				NOT = {
 					country_exists = GMR
 					GMR = {
-						is_puppet_of = ROOT
+						is_subject_of = ROOT
 					}
 				}
 				NOT = {
 					country_exists = NPC
 					NPC = {
-						is_puppet_of = ROOT
+						is_subject_of = ROOT
 					}
 				}
 			}
@@ -5640,20 +5364,14 @@ country_event = { #Conquest of Nastrogdar
 		
 		hidden_effect = {
 			NAS = {
-				add_state_core = 31
-				add_state_core = 32
 				add_state_core = 25
-				add_state_core = 51
-				add_state_core = 33
-				add_state_core = 61
-				add_state_core = 62
-				add_state_core = 52
+				add_state_core = 26
+				add_state_core = 73
 				add_state_core = 20
 				add_state_core = 21
-				add_state_core = 16
 				add_state_core = 22
-				add_state_core = 56
-				add_state_core = 53
+				add_state_core = 723
+				add_state_core = 49
 			}
 		}
 		
@@ -5691,13 +5409,13 @@ country_event = { #Conquest of Nastrogdar
 				NOT = {
 					country_exists = GMR
 					GMR = {
-						is_puppet_of = ROOT
+						is_subject_of = ROOT
 					}
 				}
 				NOT = {
 					country_exists = NPC
 					NPC = {
-						is_puppet_of = ROOT
+						is_subject_of = ROOT
 					}
 				}
 			}
@@ -5757,20 +5475,14 @@ country_event = { #Conquest of Nastrogdar
 		
 		hidden_effect = {
 			NAS = {
-				add_state_core = 31
-				add_state_core = 32
 				add_state_core = 25
-				add_state_core = 51
-				add_state_core = 33
-				add_state_core = 61
-				add_state_core = 62
-				add_state_core = 52
+				add_state_core = 26
+				add_state_core = 73
 				add_state_core = 20
 				add_state_core = 21
-				add_state_core = 16
 				add_state_core = 22
-				add_state_core = 56
-				add_state_core = 53
+				add_state_core = 723
+				add_state_core = 49
 			}
 		}
 		
@@ -5801,7 +5513,7 @@ country_event = { #Conquest of Nastrogdar
 		trigger = {
 			country_exists = GMR
 			GMR = {
-				is_puppet_of = ROOT
+				is_subject_of = ROOT
 			}
 		}
 		
@@ -5830,7 +5542,7 @@ country_event = { #Conquest of Nastrogdar
 		trigger = {
 			country_exists = GMR
 			NPC = {
-				is_puppet_of = ROOT
+				is_subject_of = ROOT
 			}
 		}
 		
@@ -5903,21 +5615,18 @@ country_event = { #Conquest of Kortinall
 					OR = {
 						tag = UNG
 						is_subject_of = UNG
-						UNG = {
-							is_subject_of = ROOT
-						}
 					}
 				}
 				NOT = {
 					country_exists = GMR
 					GMR = {
-						is_puppet_of = ROOT
+						is_subject_of = ROOT
 					}
 				}
 				NOT = {
 					country_exists = NPC
 					NPC = {
-						is_puppet_of = ROOT
+						is_subject_of = ROOT
 					}
 				}
 			}
@@ -5936,13 +5645,18 @@ country_event = { #Conquest of Kortinall
 		
 		hidden_effect = {
 			KRT = {
-				transfer_state = 17
-				transfer_state = 18
-				transfer_state = 19
-				transfer_state = 13
-				transfer_state = 45
-				transfer_state = 23
-				transfer_state = 24
+				add_state_core = 36
+				add_state_core = 75
+				add_state_core = 35
+				add_state_core = 17
+				add_state_core = 18
+				add_state_core = 16
+				add_state_core = 27
+				add_state_core = 23
+				add_state_core = 24
+				add_state_core = 12
+				add_state_core = 30
+				add_state_core = 19
 			}
 		}
 		
@@ -5980,13 +5694,13 @@ country_event = { #Conquest of Kortinall
 				NOT = {
 					country_exists = GMR
 					GMR = {
-						is_puppet_of = ROOT
+						is_subject_of = ROOT
 					}
 				}
 				NOT = {
 					country_exists = NPC
 					NPC = {
-						is_puppet_of = ROOT
+						is_subject_of = ROOT
 					}
 				}
 			}
@@ -6046,18 +5760,18 @@ country_event = { #Conquest of Kortinall
 		
 		hidden_effect = {
 			KRT = {
-				add_state_core = 65
-				add_state_core = 58
-				add_state_core = 37
-				add_state_core = 30
 				add_state_core = 36
-				add_state_core = 723
-				add_state_core = 58
+				add_state_core = 75
 				add_state_core = 35
-				add_state_core = 59
-				add_state_core = 60
-				add_state_core = 34
-				add_state_core = 63
+				add_state_core = 17
+				add_state_core = 18
+				add_state_core = 16
+				add_state_core = 27
+				add_state_core = 23
+				add_state_core = 24
+				add_state_core = 12
+				add_state_core = 30
+				add_state_core = 19
 			}
 		}
 		
@@ -6088,7 +5802,7 @@ country_event = { #Conquest of Kortinall
 		trigger = {
 			country_exists = GMR
 			GMR = {
-				is_puppet_of = ROOT
+				is_subject_of = ROOT
 			}
 		}
 		
@@ -6117,7 +5831,7 @@ country_event = { #Conquest of Kortinall
 		trigger = {
 			country_exists = GMR
 			NPC = {
-				is_puppet_of = ROOT
+				is_subject_of = ROOT
 			}
 		}
 		
@@ -6190,21 +5904,18 @@ country_event = { #Conquest of Felweyne
 					OR = {
 						tag = UNG
 						is_subject_of = UNG
-						UNG = {
-							is_subject_of = ROOT
-						}
 					}
 				}
 				NOT = {
 					country_exists = GMR
 					GMR = {
-						is_puppet_of = ROOT
+						is_subject_of = ROOT
 					}
 				}
 				NOT = {
 					country_exists = NPC
 					NPC = {
-						is_puppet_of = ROOT
+						is_subject_of = ROOT
 					}
 				}
 			}
@@ -6223,16 +5934,16 @@ country_event = { #Conquest of Felweyne
 		
 		hidden_effect = {
 			FEL = {
+				add_state_core = 40
 				add_state_core = 28
-				add_state_core = 27
-				add_state_core = 26
-				add_state_core = 41
+				add_state_core = 37
+				add_state_core = 32
+				add_state_core = 50
 				add_state_core = 38
 				add_state_core = 39
-				add_state_core = 42
-				add_state_core = 44
-				add_state_core = 43
-				add_state_core = 48
+				add_state_core = 52
+				add_state_core = 46
+				add_state_core = 33
 			}
 		}
 		
@@ -6270,13 +5981,13 @@ country_event = { #Conquest of Felweyne
 				NOT = {
 					country_exists = GMR
 					GMR = {
-						is_puppet_of = ROOT
+						is_subject_of = ROOT
 					}
 				}
 				NOT = {
 					country_exists = NPC
 					NPC = {
-						is_puppet_of = ROOT
+						is_subject_of = ROOT
 					}
 				}
 			}
@@ -6336,16 +6047,16 @@ country_event = { #Conquest of Felweyne
 		
 		hidden_effect = {
 			FEL = {
+				add_state_core = 40
 				add_state_core = 28
-				add_state_core = 27
-				add_state_core = 26
-				add_state_core = 41
+				add_state_core = 37
+				add_state_core = 32
+				add_state_core = 50
 				add_state_core = 38
 				add_state_core = 39
-				add_state_core = 42
-				add_state_core = 44
-				add_state_core = 43
-				add_state_core = 48
+				add_state_core = 52
+				add_state_core = 46
+				add_state_core = 33
 			}
 		}
 		
@@ -6376,7 +6087,7 @@ country_event = { #Conquest of Felweyne
 		trigger = {
 			country_exists = GMR
 			GMR = {
-				is_puppet_of = ROOT
+				is_subject_of = ROOT
 			}
 		}
 		
@@ -6405,7 +6116,7 @@ country_event = { #Conquest of Felweyne
 		trigger = {
 			country_exists = GMR
 			NPC = {
-				is_puppet_of = ROOT
+				is_subject_of = ROOT
 			}
 		}
 		
@@ -6478,21 +6189,18 @@ country_event = { #Conquest of Navandonne
 					OR = {
 						tag = UNG
 						is_subject_of = UNG
-						UNG = {
-							is_subject_of = ROOT
-						}
 					}
 				}
 				NOT = {
 					country_exists = GMR
 					GMR = {
-						is_puppet_of = ROOT
+						is_subject_of = ROOT
 					}
 				}
 				NOT = {
 					country_exists = NPC
 					NPC = {
-						is_puppet_of = ROOT
+						is_subject_of = ROOT
 					}
 				}
 			}
@@ -6512,11 +6220,11 @@ country_event = { #Conquest of Navandonne
 		hidden_effect = {
 			NAV = {
 				add_state_core = 72
-				add_state_core = 46
-				add_state_core = 74
-				add_state_core = 75
-				add_state_core = 73
-				add_state_core = 47
+				add_state_core = 68
+				add_state_core = 70
+				add_state_core = 69
+				add_state_core = 44
+				add_state_core = 67
 				add_state_core = 71
 				add_state_core = 66
 			}
@@ -6556,13 +6264,13 @@ country_event = { #Conquest of Navandonne
 				NOT = {
 					country_exists = GMR
 					GMR = {
-						is_puppet_of = ROOT
+						is_subject_of = ROOT
 					}
 				}
 				NOT = {
 					country_exists = NPC
 					NPC = {
-						is_puppet_of = ROOT
+						is_subject_of = ROOT
 					}
 				}
 			}
@@ -6623,11 +6331,11 @@ country_event = { #Conquest of Navandonne
 		hidden_effect = {
 			NAV = {
 				add_state_core = 72
-				add_state_core = 46
-				add_state_core = 74
-				add_state_core = 75
-				add_state_core = 73
-				add_state_core = 47
+				add_state_core = 68
+				add_state_core = 70
+				add_state_core = 69
+				add_state_core = 44
+				add_state_core = 67
 				add_state_core = 71
 				add_state_core = 66
 			}
@@ -6660,7 +6368,7 @@ country_event = { #Conquest of Navandonne
 		trigger = {
 			country_exists = GMR
 			GMR = {
-				is_puppet_of = ROOT
+				is_subject_of = ROOT
 			}
 		}
 		
@@ -6689,7 +6397,7 @@ country_event = { #Conquest of Navandonne
 		trigger = {
 			country_exists = GMR
 			NPC = {
-				is_puppet_of = ROOT
+				is_subject_of = ROOT
 			}
 		}
 		
@@ -6762,21 +6470,18 @@ country_event = { #Conquest of Kaltire
 					OR = {
 						tag = UNG
 						is_subject_of = UNG
-						UNG = {
-							is_subject_of = ROOT
-						}
 					}
 				}
 				NOT = {
 					country_exists = GMR
 					GMR = {
-						is_puppet_of = ROOT
+						is_subject_of = ROOT
 					}
 				}
 				NOT = {
 					country_exists = NPC
 					NPC = {
-						is_puppet_of = ROOT
+						is_subject_of = ROOT
 					}
 				}
 			}
@@ -6795,18 +6500,16 @@ country_event = { #Conquest of Kaltire
 		
 		hidden_effect = {
 			KAL = {
-				add_state_core = 65
-				add_state_core = 58
-				add_state_core = 37
-				add_state_core = 30
-				add_state_core = 36
-				add_state_core = 723
-				add_state_core = 58
-				add_state_core = 35
-				add_state_core = 59
-				add_state_core = 60
 				add_state_core = 34
+				add_state_core = 62
+				add_state_core = 56
 				add_state_core = 63
+				add_state_core = 64
+				add_state_core = 45
+				add_state_core = 57
+				add_state_core = 55
+				add_state_core = 61
+				add_state_core = 60
 			}
 		}
 		
@@ -6844,13 +6547,13 @@ country_event = { #Conquest of Kaltire
 				NOT = {
 					country_exists = GMR
 					GMR = {
-						is_puppet_of = ROOT
+						is_subject_of = ROOT
 					}
 				}
 				NOT = {
 					country_exists = NPC
 					NPC = {
-						is_puppet_of = ROOT
+						is_subject_of = ROOT
 					}
 				}
 			}
@@ -6910,18 +6613,16 @@ country_event = { #Conquest of Kaltire
 		
 		hidden_effect = {
 			KAL = {
-				add_state_core = 65
-				add_state_core = 58
-				add_state_core = 37
-				add_state_core = 30
-				add_state_core = 36
-				add_state_core = 723
-				add_state_core = 58
-				add_state_core = 35
-				add_state_core = 59
-				add_state_core = 60
 				add_state_core = 34
+				add_state_core = 62
+				add_state_core = 56
 				add_state_core = 63
+				add_state_core = 64
+				add_state_core = 45
+				add_state_core = 57
+				add_state_core = 55
+				add_state_core = 61
+				add_state_core = 60
 			}
 		}
 		
@@ -6952,7 +6653,7 @@ country_event = { #Conquest of Kaltire
 		trigger = {
 			country_exists = GMR
 			GMR = {
-				is_puppet_of = ROOT
+				is_subject_of = ROOT
 			}
 		}
 		
@@ -6981,7 +6682,7 @@ country_event = { #Conquest of Kaltire
 		trigger = {
 			country_exists = GMR
 			NPC = {
-				is_puppet_of = ROOT
+				is_subject_of = ROOT
 			}
 		}
 		
@@ -7042,28 +6743,28 @@ country_event = { #Conquest of the Confederation
 				owns_state = 29
 				owns_state = 72
 			}
-			AND = {
-				20 = {
-					is_core_of = NPC
-				}
-				34 = {
-					is_core_of = NPC
-				}
-				1 = {
-					is_core_of = NPC
-				}
-				17 = {
-					is_core_of = NPC
-				}
-				28 = {
-					is_core_of = NPC
-				}
-				29 = {
-					is_core_of = NPC
-				}
-				72 = {
-					is_core_of = NPC
-				}
+		}
+		AND = {
+			20 = {
+				is_core_of = NPC
+			}
+			34 = {
+				is_core_of = NPC
+			}
+			1 = {
+				is_core_of = NPC
+			}
+			17 = {
+				is_core_of = NPC
+			}
+			28 = {
+				is_core_of = NPC
+			}
+			29 = {
+				is_core_of = NPC
+			}
+			72 = {
+				is_core_of = NPC
 			}
 		}
 		NOT = {
@@ -7343,274 +7044,7 @@ country_event = { #Conquest of the Confederation
 			factor = 100
 		}
 		
-		hidden_effect = {
-		
-			1 = {
-				set_state_name = "Ierethayne"
-			}
-			set_province_name = {
-				id = 3109
-				name = "Ierethayne"
-			}
-			
-			28 = {
-				set_state_name = "Felweyne"
-			}
-			set_province_name = {
-				id = 3966
-				name = "Felweyne"
-			}
-			
-			17 = {
-				set_state_name = "Kortinall"
-			}
-			
-			set_province_name = {
-				id = 7830
-				name = "Kortinall"
-			}
-			
-			72 = {
-				set_state_name = "Navandonne"
-			}
-			
-			set_province_name = {
-				id = 1334
-				name = "Navandonne"
-			}
-			
-			34 = {
-				set_state_name = "Kaltire"
-			}
-			
-			set_province_name = {
-				id = 3863
-				name = "Kaltire"
-			}
-			
-			17 = {
-				set_state_name = "Nastrodoge"
-			}
-			
-			set_province_name = {
-				id = 4931
-				name = "Nastrodoge"
-			}
-			
-			29 = {
-				set_state_name = "Trifell"
-			}
-			
-			set_province_name = {
-				id = 8702
-				name = "Trifell"
-			}
-
-			every_state = {
-				limit = {
-					is_core_of = NPC
-				}
-				NPC = {
-					remove_state_core = PREV
-				}
-			}
-		}
-		
-		hidden_effect = {
-			NAS = {
-				add_state_core = 31
-				add_state_core = 32
-				add_state_core = 25
-				add_state_core = 51
-				add_state_core = 33
-				add_state_core = 61
-				add_state_core = 62
-				add_state_core = 52
-				add_state_core = 20
-				add_state_core = 21
-				add_state_core = 16
-				add_state_core = 22
-				add_state_core = 56
-				add_state_core = 53
-				
-				transfer_state = 31
-				transfer_state = 32
-				transfer_state = 25
-				transfer_state = 51
-				transfer_state = 33
-				transfer_state = 61
-				transfer_state = 62
-				transfer_state = 52
-				transfer_state = 20
-				transfer_state = 21
-				transfer_state = 16
-				transfer_state = 22
-				transfer_state = 56
-				transfer_state = 53
-			}
-		}
-		
-		hidden_effect = {
-			KAL = {
-				add_state_core = 65
-				add_state_core = 58
-				add_state_core = 37
-				add_state_core = 30
-				add_state_core = 36
-				add_state_core = 723
-				add_state_core = 58
-				add_state_core = 35
-				add_state_core = 59
-				add_state_core = 60
-				add_state_core = 34
-				add_state_core = 63
-				
-				transfer_state = 65
-				transfer_state = 58
-				transfer_state = 37
-				transfer_state = 30
-				transfer_state = 36
-				transfer_state = 723
-				transfer_state = 58
-				transfer_state = 35
-				transfer_state = 59
-				transfer_state = 60
-				transfer_state = 34
-				transfer_state = 63
-			}
-		}
-		
-		hidden_effect = {
-			TRI = {
-				add_state_core = 67
-				add_state_core = 68
-				add_state_core = 69
-				add_state_core = 70
-				add_state_core = 40
-				add_state_core = 29
-				add_state_core = 49
-				add_state_core = 57
-				add_state_core = 54
-				add_state_core = 55
-				add_state_core = 64
-				
-				transfer_state = 67
-				transfer_state = 68
-				transfer_state = 69
-				transfer_state = 70
-				transfer_state = 40
-				transfer_state = 29
-				transfer_state = 49
-				transfer_state = 57
-				transfer_state = 54
-				transfer_state = 55
-				transfer_state = 64
-			}
-		}
-			
-		hidden_effect = {
-			IRT = {
-				add_state_core = 1
-				add_state_core = 2
-				add_state_core = 3
-				add_state_core = 4
-				add_state_core = 5
-				add_state_core = 6
-				add_state_core = 7
-				add_state_core = 8
-				add_state_core = 9
-				add_state_core = 10
-				add_state_core = 11
-				add_state_core = 12
-				add_state_core = 15
-				
-				transfer_state = 1
-				transfer_state = 2
-				transfer_state = 3
-				transfer_state = 4
-				transfer_state = 5
-				transfer_state = 6
-				transfer_state = 7
-				transfer_state = 8
-				transfer_state = 9
-				transfer_state = 10
-				transfer_state = 11
-				transfer_state = 12
-				transfer_state = 15
-			}
-		}
-		
-		hidden_effect = {
-			NAV = {
-				add_state_core = 72
-				add_state_core = 46
-				add_state_core = 74
-				add_state_core = 75
-				add_state_core = 73
-				add_state_core = 47
-				add_state_core = 71
-				add_state_core = 66
-				
-				transfer_state = 72
-				transfer_state = 46
-				transfer_state = 74
-				transfer_state = 75
-				transfer_state = 73
-				transfer_state = 47
-				transfer_state = 71
-				transfer_state = 66
-			}
-		}
-		
-		hidden_effect = {
-			KRT = {
-				add_state_core = 17
-				add_state_core = 18
-				add_state_core = 19
-				add_state_core = 13
-				add_state_core = 45
-				add_state_core = 23
-				add_state_core = 24
-				add_state_core = 50
-				add_state_core = 14
-				
-				transfer_state = 17
-				transfer_state = 18
-				transfer_state = 19
-				transfer_state = 13
-				transfer_state = 45
-				transfer_state = 23
-				transfer_state = 24
-				transfer_state = 50
-				transfer_state = 14
-			}
-		}
-		
-		hidden_effect = {
-			FEL = {
-				add_state_core = 28
-				add_state_core = 27
-				add_state_core = 26
-				add_state_core = 41
-				add_state_core = 38
-				add_state_core = 39
-				add_state_core = 42
-				add_state_core = 44
-				add_state_core = 43
-				add_state_core = 48
-				
-				transfer_state = 28
-				transfer_state = 27
-				transfer_state = 26
-				transfer_state = 41
-				transfer_state = 38
-				transfer_state = 39
-				transfer_state = 42
-				transfer_state = 44
-				transfer_state = 43
-				transfer_state = 48
-			}
-		}
+		shatter_the_realm = yes
 		
 		puppet = IRT
 		puppet = KAL
@@ -7657,7 +7091,7 @@ country_event = { #Conquest of the Confederation
 				set_state_name = "Ierethayne"
 			}
 			set_province_name = {
-				id = 3109
+				id = 3069
 				name = "Ierethayne"
 			}
 			
@@ -7696,7 +7130,7 @@ country_event = { #Conquest of the Confederation
 				name = "Kaltire"
 			}
 			
-			17 = {
+			20 = {
 				set_state_name = "Nastrodoge"
 			}
 			
@@ -7716,209 +7150,15 @@ country_event = { #Conquest of the Confederation
 
 			every_state = {
 				limit = {
-					is_core_of = NPC
+					is_core_of = GMR
 				}
-				NPC = {
+				GMR = {
 					remove_state_core = PREV
 				}
 			}
 		}
 		
-		hidden_effect = {
-			NAS = {
-				add_state_core = 31
-				add_state_core = 32
-				add_state_core = 25
-				add_state_core = 51
-				add_state_core = 33
-				add_state_core = 61
-				add_state_core = 62
-				add_state_core = 52
-				add_state_core = 20
-				add_state_core = 21
-				add_state_core = 16
-				add_state_core = 22
-				add_state_core = 56
-				add_state_core = 53
-				
-				transfer_state = 31
-				transfer_state = 32
-				transfer_state = 25
-				transfer_state = 51
-				transfer_state = 33
-				transfer_state = 61
-				transfer_state = 62
-				transfer_state = 52
-				transfer_state = 20
-				transfer_state = 21
-				transfer_state = 16
-				transfer_state = 22
-				transfer_state = 56
-				transfer_state = 53
-			}
-		}
-		
-		hidden_effect = {
-			KAL = {
-				add_state_core = 65
-				add_state_core = 58
-				add_state_core = 37
-				add_state_core = 30
-				add_state_core = 36
-				add_state_core = 723
-				add_state_core = 58
-				add_state_core = 35
-				add_state_core = 59
-				add_state_core = 60
-				add_state_core = 34
-				add_state_core = 63
-				
-				transfer_state = 65
-				transfer_state = 58
-				transfer_state = 37
-				transfer_state = 30
-				transfer_state = 36
-				transfer_state = 723
-				transfer_state = 58
-				transfer_state = 35
-				transfer_state = 59
-				transfer_state = 60
-				transfer_state = 34
-				transfer_state = 63
-			}
-		}
-		
-		hidden_effect = {
-			TRI = {
-				add_state_core = 67
-				add_state_core = 68
-				add_state_core = 69
-				add_state_core = 70
-				add_state_core = 40
-				add_state_core = 29
-				add_state_core = 49
-				add_state_core = 57
-				add_state_core = 54
-				add_state_core = 55
-				add_state_core = 64
-				
-				transfer_state = 67
-				transfer_state = 68
-				transfer_state = 69
-				transfer_state = 70
-				transfer_state = 40
-				transfer_state = 29
-				transfer_state = 49
-				transfer_state = 57
-				transfer_state = 54
-				transfer_state = 55
-				transfer_state = 64
-			}
-		}
-			
-		hidden_effect = {
-			IRT = {
-				add_state_core = 1
-				add_state_core = 2
-				add_state_core = 3
-				add_state_core = 4
-				add_state_core = 5
-				add_state_core = 6
-				add_state_core = 7
-				add_state_core = 8
-				add_state_core = 9
-				add_state_core = 10
-				add_state_core = 11
-				add_state_core = 12
-				add_state_core = 15
-				
-				transfer_state = 1
-				transfer_state = 2
-				transfer_state = 3
-				transfer_state = 4
-				transfer_state = 5
-				transfer_state = 6
-				transfer_state = 7
-				transfer_state = 8
-				transfer_state = 9
-				transfer_state = 10
-				transfer_state = 11
-				transfer_state = 12
-				transfer_state = 15
-			}
-		}
-		
-		hidden_effect = {
-			NAV = {
-				add_state_core = 72
-				add_state_core = 46
-				add_state_core = 74
-				add_state_core = 75
-				add_state_core = 73
-				add_state_core = 47
-				add_state_core = 71
-				add_state_core = 66
-				
-				transfer_state = 72
-				transfer_state = 46
-				transfer_state = 74
-				transfer_state = 75
-				transfer_state = 73
-				transfer_state = 47
-				transfer_state = 71
-				transfer_state = 66
-			}
-		}
-		
-		hidden_effect = {
-			KRT = {
-				add_state_core = 17
-				add_state_core = 18
-				add_state_core = 19
-				add_state_core = 13
-				add_state_core = 45
-				add_state_core = 23
-				add_state_core = 24
-				add_state_core = 50
-				add_state_core = 14
-				
-				transfer_state = 17
-				transfer_state = 18
-				transfer_state = 19
-				transfer_state = 13
-				transfer_state = 45
-				transfer_state = 23
-				transfer_state = 24
-				transfer_state = 50
-				transfer_state = 14
-			}
-		}
-		
-		hidden_effect = {
-			FEL = {
-				add_state_core = 28
-				add_state_core = 27
-				add_state_core = 26
-				add_state_core = 41
-				add_state_core = 38
-				add_state_core = 39
-				add_state_core = 42
-				add_state_core = 44
-				add_state_core = 43
-				add_state_core = 48
-				
-				transfer_state = 28
-				transfer_state = 27
-				transfer_state = 26
-				transfer_state = 41
-				transfer_state = 38
-				transfer_state = 39
-				transfer_state = 42
-				transfer_state = 44
-				transfer_state = 43
-				transfer_state = 48
-			}
-		}
+		shatter_the_realm = yes
 		
 		UNG = {
 			set_autonomy = {
@@ -8023,9 +7263,6 @@ country_event = { #Conquest of Perkavland
 				OR = {
 					tag = UNG
 					is_subject_of = UNG
-					UNG = {
-						is_subject_of = ROOT
-					}
 				}
 			}
 		}
@@ -8177,9 +7414,6 @@ country_event = { #Conquest of Bergial
 				OR = {
 					tag = UNG
 					is_subject_of = UNG
-					UNG = {
-						is_subject_of = ROOT
-					}
 				}
 			}
 		}
@@ -8299,27 +7533,32 @@ country_event = { #Conquest of Tlarthingia
 	}
 
 	trigger = {
-		NOT = {
-			original_tag = TLA
-		}
-		OR = {
-			AND = {
-				TLA = {
-					has_capitulated = yes
-				}
-				controls_state = 372
-			}
-			AND = {
+		AND = {
+			OR = {
 				NOT = {
-					country_exists = TLA
+					original_tag = TLA
+					original_tag = IRI
 				}
-				controls_state = 372
 			}
-			owns_state = 372
-		}
-		NOT = {
-			ROOT = {
-				has_country_flag = conquest_of_tlarthingia
+			OR = {
+				AND = {
+					TLA = {
+						has_capitulated = yes
+					}
+					controls_state = 372
+				}
+				AND = {
+					NOT = {
+						country_exists = TLA
+					}
+					controls_state = 372
+				}
+				owns_state = 372
+			}
+			NOT = {
+				ROOT = {
+					has_country_flag = conquest_of_tlarthingia
+				}
 			}
 		}
 	}
@@ -8331,9 +7570,6 @@ country_event = { #Conquest of Tlarthingia
 				OR = {
 					tag = UNG
 					is_subject_of = UNG
-					UNG = {
-						is_subject_of = ROOT
-					}
 				}
 			}
 		}
@@ -8485,9 +7721,6 @@ country_event = { #Conquest of Kurgur
 				OR = {
 					tag = UNG
 					is_subject_of = UNG
-					UNG = {
-						is_subject_of = ROOT
-					}
 				}
 			}
 		}
@@ -8592,6 +7825,1134 @@ country_event = { #Conquest of Kurgur
 		UNG = {
 			set_autonomy = {
 				target = KUR
+				autonomy_state = autonomy_IR_freiprinztum
+			}
+		}
+	}
+}
+
+country_event = { #Conquest of Irinthios
+	id = annex.31
+	title = annex.31.t
+	desc = annex.31.d
+	mean_time_to_happen = {
+		days = 15
+	}
+
+	trigger = {
+		NOT = {
+			original_tag = IRI
+		}
+		OR = {
+			AND = {
+				IRI = {
+					has_capitulated = yes
+				}
+				controls_state = 396
+			}
+			AND = {
+				NOT = {
+					country_exists = IRI
+				}
+				controls_state = 396
+			}
+			owns_state = 396
+		}
+		NOT = {
+			ROOT = {
+				has_country_flag = conquest_of_irinthios
+			}
+		}
+	}
+
+	option = {# Liberate
+		name = annex.31.a
+		trigger = {
+			NOT = {
+				OR = {
+					tag = UNG
+					is_subject_of = UNG
+				}
+			}
+		}
+
+		ai_chance = {
+			modifier = {
+				factor = 0
+				OR = {
+					has_government = puritan
+					has_government = theocrat
+				}
+			}
+			factor = 100
+		}
+
+		every_state = {
+			limit = {
+				is_core_of = IRI
+				is_controlled_by = ROOT
+				NOT = {
+					is_core_of = ROOT
+					is_claimed_by = ROOT
+				}
+			}
+			IRI = {
+				transfer_state = PREV
+			}
+		}
+			puppet = IRI
+			set_country_flag = conquest_of_irinthios
+	}
+	
+	option = { # Annex
+		name = annex.31.b
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						has_government = puritan
+						has_government = theocrat
+					}
+				}
+			}
+		}
+
+		set_country_flag = conquest_of_irinthios
+
+		custom_effect_tooltip = annex_tt
+
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = {
+						OR = {
+							has_government = puritan
+							has_government = theocrat
+						}
+					}
+				}
+				add_political_power = -50
+				add_stability = -0.05
+				add_war_support = -0.05
+			}
+		}
+	}
+
+	option = { # Freiprinztum
+		name = annex.31.c
+		trigger = {
+			OR = {
+				tag = UNG
+				ROOT = {
+					is_subject_of = UNG
+				}
+				UNG = {
+					is_subject_of = ROOT
+				}
+			}
+		}
+		
+		ai_chance = {
+			factor = 100
+		}
+		
+		every_state = {
+			limit = {
+				is_core_of = IRI
+				is_controlled_by = ROOT
+				NOT = {
+					is_core_of = ROOT
+					is_claimed_by = ROOT
+				}
+			}
+			IRI = {
+				transfer_state = PREV
+			}
+		}
+		
+		UNG = {
+			set_autonomy = {
+				target = IRI
+				autonomy_state = autonomy_IR_freiprinztum
+			}
+		}
+	}
+}
+
+country_event = { #Conquest of Rimatü
+	id = annex.32
+	title = annex.32.t
+	desc = annex.32.d
+	mean_time_to_happen = {
+		days = 15
+	}
+
+	trigger = {
+		NOT = {
+			original_tag = RMT
+		}
+		OR = {
+			AND = {
+				RMT = {
+					has_capitulated = yes
+				}
+				controls_state = 383
+			}
+			AND = {
+				NOT = {
+					country_exists = RMT
+				}
+				controls_state = 383
+			}
+			owns_state = 383
+		}
+		NOT = {
+			ROOT = {
+				has_country_flag = conquest_of_rimatu
+			}
+		}
+	}
+
+	option = {# Liberate
+		name = annex.32.a
+		trigger = {
+			NOT = {
+				tag = UNG
+				is_subject_of = UNG
+			}
+		}
+
+		ai_chance = {
+			modifier = {
+				factor = 0
+				OR = {
+					has_government = puritan
+					has_government = theocrat
+					tag = SKA
+				}
+			}
+			factor = 100
+		}
+
+		every_state = {
+			limit = {
+				is_core_of = RMT
+				is_controlled_by = ROOT
+				NOT = {
+					is_core_of = ROOT
+					is_claimed_by = ROOT
+				}
+			}
+			RMT = {
+				transfer_state = PREV
+			}
+		}
+			puppet = RMT
+			set_country_flag = conquest_of_rimatu
+	}
+	
+	option = { # Annex
+		name = annex.32.b
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						has_government = puritan
+						has_government = theocrat
+						tag = SKA
+					}
+				}
+			}
+		}
+
+		set_country_flag = conquest_of_rimatu
+
+		custom_effect_tooltip = annex_rimatu_tt
+
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = {
+						OR = {
+							has_government = puritan
+							has_government = theocrat
+							tag = SKA
+						}
+					}
+				}
+				add_political_power = -50
+				add_stability = -0.05
+				add_war_support = -0.05
+			}
+		}
+	}
+
+	option = { # Freiprinztum
+		name = annex.32.c
+		trigger = {
+			OR = {
+				tag = UNG
+				ROOT = {
+					is_subject_of = UNG
+				}
+				UNG = {
+					is_subject_of = ROOT
+				}
+			}
+		}
+		
+		ai_chance = {
+			factor = 100
+		}
+		
+		every_state = {
+			limit = {
+				is_core_of = RMT
+				is_controlled_by = ROOT
+				NOT = {
+					is_core_of = ROOT
+					is_claimed_by = ROOT
+				}
+			}
+			RMT = {
+				transfer_state = PREV
+			}
+		}
+		
+		UNG = {
+			set_autonomy = {
+				target = RMT
+				autonomy_state = autonomy_IR_freiprinztum
+			}
+		}
+	}
+	
+	option = { # Grant to Skaelinger
+		name = annex.32.e
+		trigger = {
+			NOT = {
+				tag = SKA
+			}
+			OR = {
+				is_in_faction_with = SKA
+				SKA = {
+					is_subject_of = ROOT
+				}
+				ROOT = {
+					is_subject_of = SKA
+				}
+			}
+		}
+		
+		ai_chance = {
+			modifier = {
+				factor = 100
+				OR = {
+					is_in_faction_with = SKA
+					SKA = {
+						is_subject_of = ROOT
+					}
+					ROOT = {
+						is_subject_of = SKA
+					}	
+				}
+			}
+			modifier = {
+				factor = 50
+				SKA = {
+					is_subject_of = ROOT
+				}			
+			}
+			factor = 100
+		}
+		
+		every_state = {
+			limit = {
+				is_core_of = RMT
+				is_controlled_by = ROOT
+				NOT = {
+					is_core_of = ROOT
+					is_claimed_by = ROOT
+				}
+			}
+			SKA = {
+				transfer_state = PREV
+			}
+		}
+	}
+}
+
+country_event = { #Conquest of Lirothlind
+	id = annex.33
+	title = annex.33.t
+	desc = annex.33.d
+	mean_time_to_happen = {
+		days = 15
+	}
+
+	trigger = {
+		NOT = {
+			original_tag = LIR
+		}
+		OR = {
+			AND = {
+				LIR = {
+					has_capitulated = yes
+				}
+				controls_state = 391
+			}
+			AND = {
+				NOT = {
+					country_exists = LIR
+				}
+				controls_state = 391
+			}
+			owns_state = 391
+		}
+		NOT = {
+			ROOT = {
+				has_country_flag = conquest_of_lirothlind
+			}
+		}
+	}
+
+	option = {# Liberate
+		name = annex.33.a
+		trigger = {
+			NOT = {
+				OR = {
+					tag = UNG
+					is_subject_of = UNG
+				}
+			}
+		}
+
+		ai_chance = {
+			modifier = {
+				factor = 0
+				OR = {
+					has_government = puritan
+					has_government = theocrat
+				}
+			}
+			factor = 100
+		}
+
+		every_state = {
+			limit = {
+				is_core_of = LIR
+				is_controlled_by = ROOT
+				NOT = {
+					is_core_of = ROOT
+					is_claimed_by = ROOT
+				}
+			}
+			LIR = {
+				transfer_state = PREV
+			}
+		}
+			puppet = LIR
+			set_country_flag = conquest_of_lirothlind
+	}
+	
+	option = { # Annex
+		name = annex.33.b
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						has_government = puritan
+						has_government = theocrat
+					}
+				}
+			}
+		}
+
+		set_country_flag = conquest_of_lirothlind
+
+		custom_effect_tooltip = annex_tt
+
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = {
+						OR = {
+							has_government = puritan
+							has_government = theocrat
+						}
+					}
+				}
+				add_political_power = -50
+				add_stability = -0.05
+				add_war_support = -0.05
+			}
+		}
+	}
+
+	option = { # Freiprinztum
+		name = annex.33.c
+		trigger = {
+			OR = {
+				tag = UNG
+				ROOT = {
+					is_subject_of = UNG
+				}
+				UNG = {
+					is_subject_of = ROOT
+				}
+			}
+		}
+		
+		ai_chance = {
+			factor = 100
+		}
+		
+		every_state = {
+			limit = {
+				is_core_of = LIR
+				is_controlled_by = ROOT
+				NOT = {
+					is_core_of = ROOT
+					is_claimed_by = ROOT
+				}
+			}
+			LIR = {
+				transfer_state = PREV
+			}
+		}
+		
+		UNG = {
+			set_autonomy = {
+				target = LIR
+				autonomy_state = autonomy_IR_freiprinztum
+			}
+		}
+	}
+}
+
+country_event = { #Conquest of Istaroth
+	id = annex.34
+	title = annex.34.t
+	desc = annex.34.d
+	mean_time_to_happen = {
+		days = 15
+	}
+
+	trigger = {
+		NOT = {
+			original_tag = IST
+			original_tag = ORD
+		}
+		85 = {
+			is_core_of = IST
+		}
+		OR = {
+			AND = {
+				IST = {
+					has_capitulated = yes
+				}
+				controls_state = 85
+			}
+			AND = {
+				NOT = {
+					country_exists = IST
+				}
+				controls_state = 85
+			}
+			owns_state = 85
+		}
+		NOT = {
+			ROOT = {
+				has_country_flag = conquest_of_istaroth
+			}
+		}
+	}
+
+	option = {# Liberate
+		name = annex.34.a
+		trigger = {
+			NOT = {
+				OR = {
+					tag = UNG
+					is_subject_of = UNG
+				}
+			}
+		}
+
+		ai_chance = {
+			modifier = {
+				factor = 0
+				OR = {
+					has_government = puritan
+					has_government = theocrat
+				}
+			}
+			factor = 100
+		}
+
+		every_state = {
+			limit = {
+				is_core_of = IST
+				is_controlled_by = ROOT
+				NOT = {
+					is_core_of = ROOT
+					is_claimed_by = ROOT
+				}
+			}
+			IST = {
+				transfer_state = PREV
+			}
+		}
+			puppet = IST
+			set_country_flag = conquest_of_istaroth
+	}
+	
+	option = { # Annex
+		name = annex.34.b
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						has_government = puritan
+						has_government = theocrat
+					}
+				}
+			}
+		}
+
+		set_country_flag = conquest_of_istaroth
+
+		custom_effect_tooltip = annex_tt
+
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = {
+						OR = {
+							has_government = puritan
+							has_government = theocrat
+						}
+					}
+				}
+				add_political_power = -50
+				add_stability = -0.05
+				add_war_support = -0.05
+			}
+		}
+	}
+
+	option = { # Freiprinztum
+		name = annex.34.c
+		trigger = {
+			OR = {
+				tag = UNG
+				ROOT = {
+					is_subject_of = UNG
+				}
+				UNG = {
+					is_subject_of = ROOT
+				}
+			}
+		}
+		
+		ai_chance = {
+			factor = 100
+		}
+		
+		every_state = {
+			limit = {
+				is_core_of = IST
+				is_controlled_by = ROOT
+				NOT = {
+					is_core_of = ROOT
+					is_claimed_by = ROOT
+				}
+			}
+			IST = {
+				transfer_state = PREV
+			}
+		}
+		
+		UNG = {
+			set_autonomy = {
+				target = IST
+				autonomy_state = autonomy_IR_freiprinztum
+			}
+		}
+	}
+}
+
+country_event = { #Conquest of Varinthia
+	id = annex.35
+	title = annex.35.t
+	desc = annex.35.d
+	mean_time_to_happen = {
+		days = 15
+	}
+
+	trigger = {
+		NOT = {
+			original_tag = VAR
+			original_tag = ORD
+		}
+		111 = {
+			is_core_of = VAR
+		}
+		OR = {
+			AND = {
+				VAR = {
+					has_capitulated = yes
+				}
+				controls_state = 111
+			}
+			AND = {
+				NOT = {
+					country_exists = VAR
+				}
+				controls_state = 111
+			}
+			owns_state = 111
+		}
+		NOT = {
+			ROOT = {
+				has_country_flag = conquest_of_varinthia
+			}
+		}
+	}
+
+	option = {# Liberate
+		name = annex.35.a
+		trigger = {
+			NOT = {
+				OR = {
+					tag = UNG
+					is_subject_of = UNG
+				}
+			}
+		}
+
+		ai_chance = {
+			modifier = {
+				factor = 0
+				OR = {
+					has_government = puritan
+					has_government = theocrat
+				}
+			}
+			factor = 100
+		}
+
+		every_state = {
+			limit = {
+				is_core_of = VAR
+				is_controlled_by = ROOT
+				NOT = {
+					is_core_of = ROOT
+					is_claimed_by = ROOT
+				}
+			}
+			VAR = {
+				transfer_state = PREV
+			}
+		}
+			puppet = VAR
+			set_country_flag = conquest_of_varinthia
+	}
+	
+	option = { # Annex
+		name = annex.35.b
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						has_government = puritan
+						has_government = theocrat
+					}
+				}
+			}
+		}
+
+		set_country_flag = conquest_of_varinthia
+
+		custom_effect_tooltip = annex_tt
+
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = {
+						OR = {
+							has_government = puritan
+							has_government = theocrat
+						}
+					}
+				}
+				add_political_power = -50
+				add_stability = -0.05
+				add_war_support = -0.05
+			}
+		}
+	}
+
+	option = { # Freiprinztum
+		name = annex.35.c
+		trigger = {
+			OR = {
+				tag = UNG
+				ROOT = {
+					is_subject_of = UNG
+				}
+				UNG = {
+					is_subject_of = ROOT
+				}
+			}
+		}
+		
+		ai_chance = {
+			factor = 100
+		}
+		
+		every_state = {
+			limit = {
+				is_core_of = VAR
+				is_controlled_by = ROOT
+				NOT = {
+					is_core_of = ROOT
+					is_claimed_by = ROOT
+				}
+			}
+			VAR = {
+				transfer_state = PREV
+			}
+		}
+		
+		UNG = {
+			set_autonomy = {
+				target = VAR
+				autonomy_state = autonomy_IR_freiprinztum
+			}
+		}
+	}
+}
+
+country_event = { #Conquest of Ythelmare
+	id = annex.36
+	title = annex.36.t
+	desc = annex.36.d
+	mean_time_to_happen = {
+		days = 15
+	}
+
+	trigger = {
+		NOT = {
+			original_tag = YTH
+			original_tag = ORD
+		}
+		112 = {
+			is_core_of = YTH
+		}
+		OR = {
+			AND = {
+				YTH = {
+					has_capitulated = yes
+				}
+				controls_state = 112
+			}
+			AND = {
+				NOT = {
+					country_exists = YTH
+				}
+				controls_state = 112
+			}
+			owns_state = 112
+		}
+		NOT = {
+			ROOT = {
+				has_country_flag = conquest_of_ythelmare
+			}
+		}
+	}
+
+	option = {# Liberate
+		name = annex.36.a
+		trigger = {
+			NOT = {
+				OR = {
+					tag = UNG
+					is_subject_of = UNG
+				}
+			}
+		}
+
+		ai_chance = {
+			modifier = {
+				factor = 0
+				OR = {
+					has_government = puritan
+					has_government = theocrat
+				}
+			}
+			factor = 100
+		}
+
+		every_state = {
+			limit = {
+				is_core_of = YTH
+				is_controlled_by = ROOT
+				NOT = {
+					is_core_of = ROOT
+					is_claimed_by = ROOT
+				}
+			}
+			YTH = {
+				transfer_state = PREV
+			}
+		}
+			puppet = YTH
+			set_country_flag = conquest_of_ythelmare
+	}
+	
+	option = { # Annex
+		name = annex.36.b
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						has_government = puritan
+						has_government = theocrat
+					}
+				}
+			}
+		}
+
+		set_country_flag = conquest_of_ythelmare
+
+		custom_effect_tooltip = annex_tt
+
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = {
+						OR = {
+							has_government = puritan
+							has_government = theocrat
+						}
+					}
+				}
+				add_political_power = -50
+				add_stability = -0.05
+				add_war_support = -0.05
+			}
+		}
+	}
+
+	option = { # Freiprinztum
+		name = annex.36.c
+		trigger = {
+			OR = {
+				tag = UNG
+				ROOT = {
+					is_subject_of = UNG
+				}
+				UNG = {
+					is_subject_of = ROOT
+				}
+			}
+		}
+		
+		ai_chance = {
+			factor = 100
+		}
+		
+		every_state = {
+			limit = {
+				is_core_of = YTH
+				is_controlled_by = ROOT
+				NOT = {
+					is_core_of = ROOT
+					is_claimed_by = ROOT
+				}
+			}
+			YTH = {
+				transfer_state = PREV
+			}
+		}
+		
+		UNG = {
+			set_autonomy = {
+				target = YTH
+				autonomy_state = autonomy_IR_freiprinztum
+			}
+		}
+	}
+}
+
+country_event = { #Conquest of Vuid
+	id = annex.37
+	title = annex.37.t
+	desc = annex.37.d
+	mean_time_to_happen = {
+		days = 15
+	}
+
+	trigger = {
+		NOT = {
+			original_tag = VUD
+			original_tag = ORD
+		}
+		84 = {
+			is_core_of = VUD
+		}
+		OR = {
+			AND = {
+				VUD = {
+					has_capitulated = yes
+				}
+				controls_state = 84
+			}
+			AND = {
+				NOT = {
+					country_exists = VUD
+				}
+				controls_state = 84
+			}
+			owns_state = 84
+		}
+		NOT = {
+			ROOT = {
+				has_country_flag = conquest_of_vuid
+			}
+		}
+	}
+
+	option = {# Liberate
+		name = annex.37.a
+		trigger = {
+			NOT = {
+				OR = {
+					tag = UNG
+					is_subject_of = UNG
+				}
+			}
+		}
+
+		ai_chance = {
+			modifier = {
+				factor = 0
+				OR = {
+					has_government = puritan
+					has_government = theocrat
+				}
+			}
+			factor = 100
+		}
+
+		every_state = {
+			limit = {
+				is_core_of = VUD
+				is_controlled_by = ROOT
+				NOT = {
+					is_core_of = ROOT
+					is_claimed_by = ROOT
+				}
+			}
+			VUD = {
+				transfer_state = PREV
+			}
+		}
+			puppet = VUD
+			set_country_flag = conquest_of_vuid
+	}
+	
+	option = { # Annex
+		name = annex.37.b
+
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						has_government = puritan
+						has_government = theocrat
+					}
+				}
+			}
+		}
+
+		set_country_flag = conquest_of_vuid
+
+		custom_effect_tooltip = annex_tt
+
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = {
+						OR = {
+							has_government = puritan
+							has_government = theocrat
+						}
+					}
+				}
+				add_political_power = -50
+				add_stability = -0.05
+				add_war_support = -0.05
+			}
+		}
+	}
+
+	option = { # Freiprinztum
+		name = annex.37.c
+		trigger = {
+			OR = {
+				tag = UNG
+				ROOT = {
+					is_subject_of = UNG
+				}
+				UNG = {
+					is_subject_of = ROOT
+				}
+			}
+		}
+		
+		ai_chance = {
+			factor = 100
+		}
+		
+		every_state = {
+			limit = {
+				is_core_of = VUD
+				is_controlled_by = ROOT
+				NOT = {
+					is_core_of = ROOT
+					is_claimed_by = ROOT
+				}
+			}
+			VUD = {
+				transfer_state = PREV
+			}
+		}
+		
+		UNG = {
+			set_autonomy = {
+				target = VUD
 				autonomy_state = autonomy_IR_freiprinztum
 			}
 		}

@@ -36,7 +36,7 @@ units = {
 
 	division = {
 		name = "Istaroth Guards"
-		location = 2039
+		location = 3654
 		division_template = "Grove Guards"
 		start_experience_factor = 0.3
 
@@ -44,7 +44,7 @@ units = {
 
 	division = {
 		name = "Varinthia Guards"
-		location = 577
+		location = 7152
 		division_template = "Grove Guards"
 		start_experience_factor = 0.3
 
@@ -52,7 +52,7 @@ units = {
 
 	division = {
 		name = "Ythelmare Guards"
-		location = 363
+		location = 4463
 		division_template = "Grove Guards"
 		start_experience_factor = 0.3
 
@@ -60,7 +60,7 @@ units = {
 
 	division = {
 		name = "Vuid Guards"
-		location = 6202
+		location = 4598
 		division_template = "Grove Guards"
 		start_experience_factor = 0.3
 
@@ -68,7 +68,7 @@ units = {
 
 	division = {
 		name = "Serthis Guards"
-		location = 5468
+		location = 7930
 		division_template = "Grove Guards"
 		start_experience_factor = 0.3
 
@@ -76,28 +76,28 @@ units = {
 
 	division = {
 		name = "Banner-Bearers"
-		location = 357
+		location = 7637
 		division_template = "Bladesingers"
 		start_experience_factor = 1.2
 	}
 
 	division = {
 		name = "1st Bladesingers"
-		location = 2043
+		location = 7489
 		division_template = "Bladesingers"
 		start_experience_factor = 0.5
 	}
 
 	division = {
 		name = "2nd Bladesingers"
-		location = 1353
+		location = 443
 		division_template = "Bladesingers"
 		start_experience_factor = 0.5
 	}
 
 	division = {
 		name = "3rd Bladesingers"
-		location = 8560
+		location = 7067
 		division_template = "Bladesingers"
 		start_experience_factor = 0.5
 
@@ -105,63 +105,63 @@ units = {
 
 	division = {
 		name = "4th Bladesingers"
-		location = 1790
+		location = 4672
 		division_template = "Bladesingers"
 		start_experience_factor = 0.5
 	}
 
 	division = {
 		name = "5th Bladesingers"
-		location = 3292
+		location = 7886
 		division_template = "Bladesingers"
 		start_experience_factor = 0.5
 	}
 
 	division = {
 		name = "6th Bladesingers"
-		location = 237
+		location = 4703
 		division_template = "Bladesingers"
 		start_experience_factor = 0.5
 	}
 
 	division = {
 		name = "7th Bladesingers"
-		location = 8863
+		location = 6965
 		division_template = "Bladesingers"
 		start_experience_factor = 0.5
 	}
 
 	division = {
 		name = "8th Bladesingers"
-		location = 2393
+		location = 6893
 		division_template = "Bladesingers"
 		start_experience_factor = 0.5
 	}
 
 	division = {
 		name = "9th Bladesingers"
-		location = 806
+		location = 540
 		division_template = "Bladesingers"
 		start_experience_factor = 0.5
 	}
 
 	division = {
 		name = "1st Rangers"
-		location = 1649
+		location = 1925
 		division_template = "Rangers"
 		start_experience_factor = 0.4
 	}
 
 	division = {
 		name = "2nd Rangers"
-		location = 5590
+		location = 6802
 		division_template = "Rangers"
 		start_experience_factor = 0.4
 	}
 
 	division = {
 		name = "3rd Rangers"
-		location = 7586
+		location = 616
 		division_template = "Rangers"
 		start_experience_factor = 0.4
 	}	

@@ -1,0 +1,62 @@
+[​IMG]
+(Unofficial title: What If D&D Won World War II?)
+
+An age of uneasy peace is drawing to a close.
+
+In the far North, the disparate kingdoms of the Northern Plains have been unified under the banner of Trabaster Arthenon, a warlock and conqueror from the West. Yet his rule is not absolute; separatist sentiments are still alive and well, and a young half-Elf from the fields of Nastrogdar claims the Gods have called upon him to lead a rebellion and cast off the Tyranny of the Grand Master.
+
+In the sweltering jungles of Ordoria, the fanatical Elven Kingdom prepares to stamp out the lesser races, while the Rthaur rebels and their allies, the Dwarves of Skaelinger, stand ready to cast back the tides of madness that Ordoria seeks to unleash upon the world. Yet for all their courage, they are few in number, and if they should fail, the world may yet be cast into an age darkness from which it may never recover.
+
+Even the Union of free Ungerdaler Princes, the heart of civilization in southern Latherin, is not safe; the unrest in Holzbrenn, suffering under the yoke of the Mad Prince, is reaching a boiling point, while the Freiprinz of Stahlhof prepares to stake his claim on the Freithron and cast the Union into open civil war. Meanwhile, the hardy men of Schneefilde report that the marauding barbarians of Perkavland launch raids with ever increasing numbers...
+
+Further beyond, in distant realms and uncharted lands, the warhorns are blowing, and they are coming ever closer...
+
+Introduction​
+
+Welcome to the public alpha of Irenthar: City of Hate, a total conversion mod for Hearts of Iron IV featuring a completely original setting!
+
+This part mod, part world-building project allows you to play in Tharassian, a world on the brink of many major changes. Tyrants draw up battleplans, intent on carving out ever more territory from their neighbours. Extremist Puritans clamour for the removal of all other races from their nations' borders, some seeking to cut the foreign rot out at its source. The merchants and the peasantry alike grow ever more weary of the yoke of the lords, the battle-hymns of Republicanism and its Radical cousin being heard ever louder.
+
+But not all changes are political; inventors arcane and technological alike refuse to sit idly by as time marches on. From the Gate of the Gods on Kel, magic continues to flow back into the world, the Ages of Void and Autokratia, so devoid of sorcery, a distant memory. Every day, more and more ancient magical knowledge is rediscovered, greatly aided by the return of the Wizards of the Arkanisturm from their self-imposed aeons-long dimensional exile. Across the seas on the continent of Maslodan, the ever-inventive Sulfurisle Gnomes pioneer the use of blackpowder, with devastating new weaponry being almost ready for field-testing.
+
+Features​
+-A completely original setting dreamt up by yours truly, and ever expanded upon by a wonderful Lore Team.
+-Seven unique ideologies, including monarchies, republics and theocracies.
+-A completely new generic Focus Tree with 67 foci to choose from.
+-Two unique focus trees, with plenty more planned.
+-Five unique units, with many more on the way.
+-A religion system - choose a Patron Deity for your people!
+-(Hopefully) a Hearts of Iron experience completely unlike anything you've seen before!
+
+
+Map​
+[​IMG]
+Note: as part of the next update, we have fully reworked the map. The current Steam Workshop version differs from what is shown here.
+
+Playing the Mod​
+The mod is currently in open alpha, and it is functional for 1.6.x 'Ironclad'. We are close to releasing an update for the current version of the game that includes a swath of new content, but for now I'm afraid you're stuck on Ironclad if you wish to play the mod.
+In terms of lore, we're working hard behind the scenes to make the mod more accessible by explaining lore in event pop-ups, but as it stands, we understand the vast amounts of lore are not very easy to find. While we're planning to remedy this in the future, for now we recommend players start with Ordoria. It's the only major with fully fleshed-out content at the moment, and acts as the 'Germany' of the game - i.e. you get to start all the wars. Holzbrenn is also an option, but their focus tree is focussed mostly on domestic events. If you have any questions about the lore, feel free to ask here or in our Discord!
+
+Information​
+Steam Workshop:
+https://steamcommunity.com/sharedfiles/filedetails/?id=1640248991
+Discord (you can join our team here, we're looking for coders!):
+https://discord.gg/PXCHeHc
+Reddit:
+https://www.reddit.com/r/cohmod
+Wiki:
+https://city-of-hate.fandom.com/wiki/City_of_Hate_Wiki
+
+Dev Diaries​
+Dev Diary 0: The Basics
+https://www.reddit.com/r/CoHmod/comments/alkvvm/aaaand_were_live/
+Dev Diary 1: Of Elves and Roses
+https://www.reddit.com/r/CoHmod/comments/alrbwi/dev_diary_1_of_elves_and_roses/
+Dev Diary 1.5: The Mad Freiprinz
+https://www.reddit.com/r/CoHmod/comments/amgwkd/dev_diary_15_the_mad_freiprinz/
+Dev Diary 2: The Sack of Schneefilde
+https://www.reddit.com/r/CoHmod/comments/bdxs85/dev_diary_2_the_sack_of_schneefilde/
+Dev Diary 2.5: Holzbrenn Reloaded
+https://www.reddit.com/r/CoHmod/comments/cf0lqb/dev_diary_25_holzbrenn_reloaded/
+Dev Diary 3: The History of the Ungerdaler Union
+https://www.reddit.com/r/CoHmod/comments/d4skiv/dev_diary_3_the_history_of_the_ungerdaler_union/

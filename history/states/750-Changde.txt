@@ -2,8 +2,19 @@ state={
 	id=750
 	name="STATE_750"
 	provinces={
-		3249 3252 3253 3254 3843 3844 7398 
+		6501 6466 3347
 	}
-	manpower=0
+	state_category = large_town
+	manpower=42293
 	buildings_max_level_factor=1.000
+	history={
+		victory_points = { 6466 17 }
+		owner = IRI
+		buildings = {
+			infrastructure = 8
+			industrial_complex = 2
+			arms_factory = 1
+		}
+		add_core_of = IRI
+	}
 }

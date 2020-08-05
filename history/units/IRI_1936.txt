@@ -1,0 +1,423 @@
+﻿division_template = {
+	name = "Frourá Pólis"	
+	regiments = {
+		garrison = { x = 0 y = 0 }
+		garrison = { x = 0 y = 1 }
+		garrison = { x = 0 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Aftokratorikoí Polemistés"
+	regiments = {
+		men_at_arms = { x = 0 y = 0 }
+		men_at_arms = { x = 0 y = 1 }
+		men_at_arms = { x = 0 y = 2 }
+        men_at_arms = { x = 1 y = 0 }
+		men_at_arms = { x = 1 y = 1 }
+		men_at_arms = { x = 1 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Selíni Ippótes"
+	regiments = {
+		heavy_cavalry = { x = 0 y = 0 }
+        heavy_cavalry = { x = 0 y = 1 }
+        heavy_cavalry = { x = 0 y = 2 }
+		heavy_cavalry = { x = 1 y = 0 }
+		heavy_cavalry = { x = 1 y = 1 }
+		heavy_cavalry = { x = 1 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Emprosthofylakí"
+	regiments = {
+		light_cavalry = { x = 0 y = 0 }
+        light_cavalry = { x = 0 y = 1 }
+        light_cavalry = { x = 1 y = 0 }
+		light_cavalry = { x = 1 y = 1 }
+	}
+	support = {
+	    recon = { x = 0 y = 0 }
+	}
+}
+
+units = {
+
+	division = {
+		name = "Frourá Kái"
+		location = 6470
+		division_template = "Frourá Pólis"
+		start_experience_factor = 0.5
+
+	}
+	
+	division = {
+		name = "Frourá Dýsi Tion"
+		location = 6505
+		division_template = "Frourá Pólis"
+		start_experience_factor = 0.5
+
+	}
+	
+	division = {
+		name = "Frourá Anatolí Tion"
+		location = 2077
+		division_template = "Frourá Pólis"
+		start_experience_factor = 0.5
+
+	}
+	
+	division = {
+		name = "Frourá Kaipnos"
+		location = 1501
+		division_template = "Frourá Pólis"
+		start_experience_factor = 0.5
+
+	}
+	
+	division = {
+		name = "Frourá Iorínos"
+		location = 6560
+		division_template = "Frourá Pólis"
+		start_experience_factor = 0.5
+
+	}
+	
+	division = {
+		name = "Frourá Lyghase"
+		location = 6616
+		division_template = "Frourá Pólis"
+		start_experience_factor = 0.5
+
+	}
+	
+	division = {
+		name = "Frourá Tikínthos"
+		location = 6487
+		division_template = "Frourá Pólis"
+		start_experience_factor = 0.5
+
+	}
+	
+	division = {
+		name = "Frourá Ryspyrus"
+		location = 6466
+		division_template = "Frourá Pólis"
+		start_experience_factor = 0.5
+
+	}
+	
+	division = {
+		name = "Frourá Sasnai"
+		location = 6597
+		division_template = "Frourá Pólis"
+		start_experience_factor = 0.5
+
+	}
+	
+	division = {
+		name = "Frourá Tófnos"
+		location = 6518
+		division_template = "Frourá Pólis"
+		start_experience_factor = 0.5
+
+	}
+	
+	division = {
+		name = "Frourá Cyttra"
+		location = 6496
+		division_template = "Frourá Pólis"
+		start_experience_factor = 0.5
+
+	}
+	
+	division = {
+		name = "Frourá Thraktósa"
+		location = 1972
+		division_template = "Frourá Pólis"
+		start_experience_factor = 0.5
+
+	}
+	
+	division = {
+		name = "Frourá Bakthaía"
+		location = 6624
+		division_template = "Frourá Pólis"
+		start_experience_factor = 0.5
+
+	}
+	
+	division = {
+		name = "Frourá Marakái"
+		location = 4717
+		division_template = "Frourá Pólis"
+		start_experience_factor = 0.5
+
+	}
+	
+	division = {
+		name = "Frourá Tíkynthaios"
+		location = 6733
+		division_template = "Frourá Pólis"
+		start_experience_factor = 0.5
+
+	}
+	
+		division = {
+		name = "1. Polemistés"
+		location = 6596
+		division_template = "Aftokratorikoí Polemistés"
+		start_experience_factor = 0.6
+
+	}
+	
+	division = {
+		name = "2. Polemistés"
+		location = 6590
+		division_template = "Aftokratorikoí Polemistés"
+		start_experience_factor = 0.6
+
+	}
+	
+	division = {
+		name = "3. Polemistés"
+		location = 6621
+		division_template = "Aftokratorikoí Polemistés"
+		start_experience_factor = 0.6
+
+	}
+	
+	division = {
+		name = "4. Polemistés"
+		location = 6603
+		division_template = "Aftokratorikoí Polemistés"
+		start_experience_factor = 0.6
+
+	}
+	
+	division = {
+		name = "5. Polemistés"
+		location = 6551
+		division_template = "Aftokratorikoí Polemistés"
+		start_experience_factor = 0.6
+
+	}
+	
+	division = {
+		name = "6. Polemistés"
+		location = 2928
+		division_template = "Aftokratorikoí Polemistés"
+		start_experience_factor = 0.6
+
+	}
+	
+	division = {
+		name = "7. Polemistés"
+		location = 3421
+		division_template = "Aftokratorikoí Polemistés"
+		start_experience_factor = 0.6
+
+	}
+	
+	division = {
+		name = "8. Polemistés"
+		location = 1825
+		division_template = "Aftokratorikoí Polemistés"
+		start_experience_factor = 0.6
+
+	}
+	
+	division = {
+		name = "9. Polemistés"
+		location = 6542
+		division_template = "Aftokratorikoí Polemistés"
+		start_experience_factor = 0.6
+
+	}
+	
+	division = {
+		name = "10. Polemistés"
+		location = 562
+		division_template = "Aftokratorikoí Polemistés"
+		start_experience_factor = 0.6
+
+	}
+	
+	division = {
+		name = "11. Polemistés"
+		location = 6436
+		division_template = "Aftokratorikoí Polemistés"
+		start_experience_factor = 0.6
+
+	}
+	
+	division = {
+		name = "12. Polemistés"
+		location = 2224
+		division_template = "Aftokratorikoí Polemistés"
+		start_experience_factor = 0.6
+
+	}
+	
+	division = {
+		name = "13. Polemistés"
+		location = 6528
+		division_template = "Aftokratorikoí Polemistés"
+		start_experience_factor = 0.6
+
+	}
+	
+	division = {
+		name = "14. Polemistés"
+		location = 1747
+		division_template = "Aftokratorikoí Polemistés"
+		start_experience_factor = 0.6
+
+	}
+	
+	division = {
+		name = "15. Polemistés"
+		location = 5364
+		division_template = "Aftokratorikoí Polemistés"
+		start_experience_factor = 0.6
+
+	}
+	
+	division = {
+		name = "16. Polemistés"
+		location = 4164
+		division_template = "Aftokratorikoí Polemistés"
+		start_experience_factor = 0.6
+
+	}
+	
+	division = {
+		name = "17. Polemistés"
+		location = 6562
+		division_template = "Aftokratorikoí Polemistés"
+		start_experience_factor = 0.6
+
+	}
+	
+	division = {
+		name = "18. Polemistés"
+		location = 5284
+		division_template = "Aftokratorikoí Polemistés"
+		start_experience_factor = 0.6
+
+	}
+	
+	division = {
+		name = "19. Polemistés"
+		location = 5175
+		division_template = "Aftokratorikoí Polemistés"
+		start_experience_factor = 0.6
+
+	}
+	
+	division = {
+		name = "20. Polemistés"
+		location = 5304
+		division_template = "Aftokratorikoí Polemistés"
+		start_experience_factor = 0.6
+
+	}
+	
+	division = {
+		name = "21. Polemistés"
+		location = 6595
+		division_template = "Aftokratorikoí Polemistés"
+		start_experience_factor = 0.6
+
+	}
+	
+	division = {
+		name = "22. Polemistés"
+		location = 3823
+		division_template = "Aftokratorikoí Polemistés"
+		start_experience_factor = 0.6
+
+	}
+	
+	division = {
+		name = "23. Polemistés"
+		location = 1775
+		division_template = "Aftokratorikoí Polemistés"
+		start_experience_factor = 0.6
+
+	}
+	
+	division = {
+		name = "24. Polemistés"
+		location = 4204
+		division_template = "Aftokratorikoí Polemistés"
+		start_experience_factor = 0.6
+
+	}
+	
+	division = {
+		name = "Oikogéneia Anisódorou"
+		location = 930
+		division_template = "Selíni Ippótes"
+		start_experience_factor = 0.6
+
+	}
+	
+	division = {
+		name = "Oikogéneia Aristofáni"
+		location = 6457
+		division_template = "Selíni Ippótes"
+		start_experience_factor = 0.6
+
+	}
+	
+	division = {
+		name = "Oikogéneia Kalliárou"
+		location = 2341
+		division_template = "Selíni Ippótes"
+		start_experience_factor = 0.6
+
+	}
+	
+	division = {
+		name = "1. Emprosthofylakí"
+		location = 1703
+		division_template = "Emprosthofylakí"
+		start_experience_factor = 0.6
+
+	}
+	
+	division = {
+		name = "2. Emprosthofylakí"
+		location = 2423
+		division_template = "Emprosthofylakí"
+		start_experience_factor = 0.6
+
+	}
+}
+
+### STARTING PRODUCTION ###
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "IRI"
+		}
+		requested_factories = 18
+		progress = 0.48
+		efficiency = 8
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+			creator = "IRI" 
+		}
+		requested_factories = 6
+		progress = 0.3
+		efficiency = 4
+	}
+}

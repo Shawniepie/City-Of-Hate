@@ -2,7 +2,7 @@
 
 	division = {
 		name = "Wasrythaur Partisans"
-		location = 2263
+		location = 758
 		division_template = "Rose Wardens"
 		start_experience_factor = 0.6
 
@@ -10,15 +10,15 @@
 	
 	division = {
 		name = "Carriers of the Red Banner"
-		location = 6393
+		location = 1353
 		division_template = "Rose Wardens"
 		start_experience_factor = 1.0
 
 	}
 	
 	division = {
-		name = "Mentherisur Partisans"
-		location = 6305
+		name = "Resderin Partisans"
+		location = 6988
 		division_template = "Rose Wardens"
 		start_experience_factor = 0.3
 
@@ -26,15 +26,15 @@
 	
 	division = {
 		name = "Laurathine Partisans"
-		location = 2945
+		location = 3953
 		division_template = "Rose Wardens"
 		start_experience_factor = 0.6
 
 	}
 	
 	division = {
-		name = "Ferthinnis Militia"
-		location = 1942
+		name = "Zarenthys Militia"
+		location = 1155
 		division_template = "Rose Wardens"
 		start_experience_factor = 0.3
 
@@ -42,15 +42,15 @@
 	
 	division = {
 		name = "Cernis Wardens"
-		location = 7336
+		location = 199
 		division_template = "Rose Wardens"
 		start_experience_factor = 0.3
 
 	}
 	
 	division = {
-		name = "Thyrris Militia"
-		location = 8075
+		name = "Jithu Militia"
+		location = 617
 		division_template = "Rose Wardens"
 		start_experience_factor = 0.3
 
@@ -58,15 +58,15 @@
 	
 	division = {
 		name = "Asderne Militia"
-		location = 361
+		location = 7174
 		division_template = "Rose Wardens"
 		start_experience_factor = 0.3
 
 	}
 	
 	division = {
-		name = "Urinne Wardens"
-		location = 7905
+		name = "Nethurin Wardens"
+		location = 2410
 		division_template = "Rose Wardens"
 		start_experience_factor = 0.3
 
@@ -74,14 +74,14 @@
 	
 	division = {
 		name = "Gerin Partisans"
-		location = 2889
+		location = 5124
 		division_template = "Peasant's Guard"
 		start_experience_factor = 0.5
 	}
 	
 	division = {
-		name = "Fratine Wardens"
-		location = 111
+		name = "Wetheraus Wardens"
+		location = 2894
 		division_template = "Rose Wardens"
 		start_experience_factor = 0.3
 
@@ -89,7 +89,7 @@
 	
 	division = {
 		name = "Bethuriur Rose-Bearers"
-		location = 3992
+		location = 7039
 		division_template = "Rose Wardens"
 		start_experience_factor = 0.3
 
@@ -97,15 +97,15 @@
 	
 	division = {
 		name = "Quethlir Wardens"
-		location = 3736
+		location = 5144
 		division_template = "Rose Wardens"
 		start_experience_factor = 0.3
 
 	}
 	
 	division = {
-		name = "Lorthoris Militia"
-		location = 3498
+		name = "Ytholine Militia"
+		location = 7313
 		division_template = "Rose Wardens"
 		start_experience_factor = 0.3
 
@@ -113,7 +113,7 @@
 	
 	division = {
 		name = "Khorinor Partisans"
-		location = 2712
+		location = 7128
 		division_template = "Peasant's Guard"
 		start_experience_factor = 0.8
 
@@ -121,7 +121,7 @@
 	
 	division = {
 		name = "Porthaur Militia"
-		location = 4663
+		location = 111
 		division_template = "Rose Wardens"
 		start_experience_factor = 0.3
 
@@ -129,15 +129,15 @@
 	
 	division = {
 		name = "Bintharys Militia"
-		location = 8113
+		location = 1261
 		division_template = "Rose Wardens"
 		start_experience_factor = 0.3
 
 	}
 	
 	division = {
-		name = "Serthis Militia"
-		location = 5468
+		name = "Unspykaur Militia"
+		location = 7769
 		division_template = "Rose Wardens"
 		start_experience_factor = 0.3
 
@@ -145,7 +145,7 @@
 	
 	division = {
 		name = "Venaur Militia"
-		location = 7226
+		location = 7886
 		division_template = "Rose Wardens"
 		start_experience_factor = 0.3
 
@@ -153,7 +153,7 @@
 	
 	division = {
 		name = "Vrinnis Militia"
-		location = 3934
+		location = 4605
 		division_template = "Rose Wardens"
 		start_experience_factor = 0.3
 
@@ -161,7 +161,7 @@
 	
 	division = {
 		name = "Risthlarin Wardens"
-		location = 7118
+		location = 3875
 		division_template = "Rose Wardens"
 		start_experience_factor = 0.3
 
@@ -169,21 +169,21 @@
 	
 	division = {
 		name = "Academy Radicals"
-		location = 6202
+		location = 3784
 		division_template = "Peasant's Guard"
 		start_experience_factor = 0.2
 	}
 	
 	division = {
 		name = "Vuid Militia"
-		location = 8554
+		location = 4598
 		division_template = "Peasant's Guard"
 		start_experience_factor = 0.5
 	}
 
 	division = {
 		name = "1st Outriders"
-		location = 5387
+		location = 77
 		division_template = "Outrider Watchers"
 		start_experience_factor = 0.4
 	}

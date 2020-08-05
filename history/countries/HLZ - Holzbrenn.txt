@@ -75,6 +75,19 @@ add_ideas = {
 	tergewelft_patron
 }
 
+give_military_access = UNG
+give_military_access = NOC
+give_military_access = SPW
+give_military_access = SVT
+give_military_access = STA
+give_military_access = NRK
+give_military_access = TEI
+give_military_access = ARK
+give_military_access = SNF
+give_military_access = FTH
+give_military_access = WIS
+give_military_access = WSZ
+
 reverse_add_opinion_modifier = {
 	target = UNG
 	modifier = HLZ_mad_freiprinz_opinion

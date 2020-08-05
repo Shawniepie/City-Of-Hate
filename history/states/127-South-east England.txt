@@ -2,17 +2,16 @@ state={
 	id=127
 	name="STATE_127"
 	provinces={
-		2158 2159 2990 2991 8155 
+		4199 6883 6894 6879
 	}
 	state_category = pastoral
 	manpower=3201
 	buildings_max_level_factor=1.000
 		history={	
-		owner = RTH
-		buildings = {	
-		infrastructure = 3
+			owner = RTH
+			buildings = {	
+			infrastructure = 3
 		}	
 		add_core_of = RTH
-
-		}
+	}
 }

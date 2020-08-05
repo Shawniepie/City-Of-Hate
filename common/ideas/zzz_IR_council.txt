@@ -1,0 +1,415 @@
+ideas = {
+	
+	country = {
+
+		unioncouncil_support = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = GFX_idea_unioncouncil_support
+			
+			removal_cost = -1
+			
+			modifier = {
+			}
+		}
+	}
+	country = {
+
+		unioncouncil_antiimperialism = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = GFX_idea_unioncouncil_antiimperialism
+			
+			removal_cost = -1
+			
+			modifier = {
+				republic_merchant_drift = 0.1 
+				republic_peasant_drift = 0.1
+				republic_merchant_acceptance = 50
+				republic_peasant_acceptance = 50
+			}
+		}
+	}
+	
+	### Ideas for the law tiers passed. All pretty powerful due to fact how hard it is to get these. Should be balanced for now.
+	country = {
+
+		unioncouncil_autarky = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {# We surely don't want civil war to copy imperial buffs
+				always = no
+			}
+			
+			picture = GFX_idea_unioncouncil_autarky
+			
+			removal_cost = -1
+			
+			modifier = {
+			local_resources_factor = 0.10
+			production_speed_buildings_factor = 0.05
+			industrial_capacity_factory = 0.05
+			consumer_goods_factor = -0.05
+			}
+		}
+	}
+	
+	country = {
+
+		unioncouncil_constitution = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = no
+			}
+			
+			picture = GFX_idea_unioncouncil_constitution
+			
+			removal_cost = -1
+			
+			modifier = {
+			drift_defence_factor = 0.25
+			foreign_subversive_activites = -0.5
+			stability_factor = 0.1
+			}
+		}
+	}
+	
+	country = {
+
+		unioncouncil_eldercouncil = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = no
+			}
+			
+			picture = GFX_idea_unioncouncil_eldercouncil
+			
+			removal_cost = -1
+			
+			modifier = {
+			political_power_factor = 0.25
+			}
+		}
+	}
+	
+	
+	country = {
+
+		unioncouncil_imperialguard = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = no
+			}
+			
+			picture = GFX_idea_unioncouncil_imperialguard
+			
+			removal_cost = -1
+			
+			modifier = {
+			conscription = 0.05
+			special_forces_cap = 0.1
+			special_forces_training_time_factor = -0.2
+			}
+		}
+	}
+	
+	country = {
+
+		unioncouncil_jointcommand = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = no
+			}
+			
+			picture = GFX_idea_unioncouncil_jointcommand
+			
+			removal_cost = -1
+			
+			modifier = {
+			military_leader_cost_factor = 0.50
+			max_planning = 0.1
+			defence = 0.15
+			}
+		}
+	}
+	
+	country = {
+
+		unioncouncil_armyfavour_1 = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = no
+			}
+			
+			picture = GFX_idea_unioncouncil_armyfavour_1
+			
+			removal_cost = -1
+			
+			modifier = {
+			conscription = -0.01
+			add_war_support = -0.05
+			army_org_Factor = -0.05
+			}
+		}
+	}
+	country = {
+
+		unioncouncil_armyfavour_2 = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = no
+			}
+			
+			picture = GFX_idea_unioncouncil_armyfavour_2
+			
+			removal_cost = -1
+			
+			modifier = {
+			conscription = -0.02
+			add_war_support = -0.1
+			army_org_Factor = -0.1
+			}
+		}
+	}
+	country = {
+
+		unioncouncil_armyfavour_3 = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = no
+			}
+			
+			picture = GFX_idea_unioncouncil_armyfavour_3
+			
+			removal_cost = -1
+			
+			modifier = {
+			conscription = -0.03
+			add_war_support = -0.15
+			army_org_Factor = -0.15
+			planning_speed = -0.1
+			}
+		}
+
+	}
+	country = {
+
+		unioncouncil_armyfavour_4 = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = no
+			}
+			
+			picture = GFX_idea_unioncouncil_armyfavour_4
+			
+			removal_cost = -1
+			
+			modifier = {
+			conscription = -0.04
+			add_war_support = -0.2
+			army_org_Factor = -0.2
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = 0.1 instant = yes
+				}
+			}
+		}
+
+	}
+	country = {
+
+		unioncouncil_armyfavour_5 = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = no
+			}
+			
+			picture = GFX_idea_unioncouncil_armyfavour_5
+			
+			removal_cost = -1
+			
+			modifier = {
+			conscription = -0.05
+			add_war_support = -0.25
+			army_org_Factor = -0.25
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = 0.25 instant = yes
+				}
+			}
+		}
+
+	}
+	country = {
+
+		unioncouncil_industrialfavour_1 = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = no
+			}
+			
+			picture = GFX_idea_unioncouncil_industrialfavour_1
+			
+			removal_cost = -1
+			
+			modifier = {
+			consumer_goods_factor = 0.05
+			production_factory_efficiency_gain_factor = -0.05
+			}
+		}
+	}
+	country = {
+
+		unioncouncil_industrialfavour_2 = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = no
+			}
+			
+			picture = GFX_idea_unioncouncil_industrialfavour_2
+			
+			removal_cost = -1
+			
+			modifier = {
+			consumer_goods_factor = 0.1
+			production_factory_efficiency_gain_factor = -0.1
+			production_speed_buildings_factor = -0.05
+			}
+		}
+	}
+	country = {
+
+		unioncouncil_industrialfavour_3 = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = no
+			}
+			
+			picture = GFX_idea_unioncouncil_industrialfavour_3
+			
+			removal_cost = -1
+			
+			modifier = {
+			consumer_goods_factor = 0.15
+			production_factory_efficiency_gain_factor = -0.15
+			production_speed_buildings_factor = -0.1
+			industrial_capacity_factory = -0.05
+			}
+		}
+	}
+	country = {
+
+		unioncouncil_industrialfavour_4 = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = no
+			}
+			
+			picture = GFX_idea_unioncouncil_industrialfavour_4
+			
+			removal_cost = -1
+			
+			modifier = {
+			consumer_goods_factor = 0.2
+			production_factory_efficiency_gain_factor = -0.2
+			production_speed_buildings_factor = -0.15
+			industrial_capacity_factory = -0.1
+			}
+		}
+	}
+	country = {
+		unioncouncil_industrialfavour_5 = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = no
+			}
+			
+			picture = GFX_idea_unioncouncil_industrialfavour_5
+			
+			removal_cost = -1
+			
+			modifier = {
+			consumer_goods_factor = 0.2
+			production_factory_efficiency_gain_factor = -0.2
+			production_speed_buildings_factor = -0.15
+			industrial_capacity_factory = -0.1
+			}
+		}
+	}
+
+}

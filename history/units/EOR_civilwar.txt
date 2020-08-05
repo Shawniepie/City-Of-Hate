@@ -38,89 +38,73 @@ division_template = {
 units = {
 
 	division = {
-		name = "Quellion Peasant's Self-Defense Guild"
-		location = 6393
-		division_template = "Rose Wardens"
+		name = "1st Loyal Militia"
+		location = 1600
+		division_template = "Loyalists"
 		start_experience_factor = 0.3
 
 	}
 
 	division = {
-		name = "Thurgithon Peasant's Militia"
-		location = 3420
-		division_template = "Rose Wardens"
-		start_experience_factor = 0.3
-
-	}
-	
-	division = {
-		name = "Vrinnis People's Watch"
-		location = 6379
-		division_template = "Rose Wardens"
-		start_experience_factor = 0.3
-
-	}
-
-	division = {
-		name = "Ytholine City Watch"
-		location = 2541
-		division_template = "Rose Wardens"
+		name = "2nd Loyal Militia"
+		location = 7153
+		division_template = "Loyalists"
 		start_experience_factor = 0.3
 
 	}
 	
 	division = {
-		name = "Astrenar Hunter's Union"
-		location = 8044
-		division_template = "Rose Wardens"
+		name = "3rd Loyal Militia"
+		location = 7095
+		division_template = "Loyalists"
 		start_experience_factor = 0.3
 
 	}
 
 	division = {
-		name = "Yctharon Forester's Lodge"
-		location = 2158
-		division_template = "Rose Wardens"
+		name = "4th Loyal Militia"
+		location = 3058
+		division_template = "Loyalists"
 		start_experience_factor = 0.3
 
 	}
 	
 	division = {
-		name = "Peakwatcher Sentries"
-		location = 6769
-		division_template = "Rose Wardens"
+		name = "5th Loyal Militia"
+		location = 111
+		division_template = "Loyalists"
 		start_experience_factor = 0.3
 
 	}
 
 	division = {
-		name = "Gythus Southguard"
-		location = 3829
-		division_template = "Rose Wardens"
+		name = "6th Loyal Militia"
+		location = 2924
+		division_template = "Loyalists"
+		start_experience_factor = 0.3
+
+	}
+	
+	division = {
+		name = "7th Loyal Militia"
+		location = 2094
+		division_template = "Loyalists"
 		start_experience_factor = 0.3
 
 	}
 
 	division = {
-		name = "Zerinthaur Miner's Self-Defense League"
-		location = 1717
-		division_template = "Rose Wardens"
-		start_experience_factor = 0.3
-
-	}
-
-	division = {
-		name = "Ytholine Basin Garrison"
-		location = 7247
-		division_template = "Peasant's Guard"
+		name = "1st Patriot Guard"
+		location = 473
+		division_template = "Patriots"
 		start_experience_factor = 0.5
 
 	}
 
 	division = {
-		name = "Postal Woker's Self-Defense Guild"
-		location = 5506
-		division_template = "Outrider Watchers"
+		name = "The Bluebloods"
+		location = 6815
+		division_template = "Exiled Nobles"
 		start_experience_factor = 0.4
 	}
 }
@@ -133,7 +117,7 @@ instant_effect = {
 	add_equipment_production = {
 		equipment = {
 			type = infantry_equipment_0
-			creator = "RTH"
+			creator = "EOR"
 		}
 		requested_factories = 4
 		progress = 0.48
@@ -143,7 +127,7 @@ instant_effect = {
 	add_equipment_production = {
 		equipment = {
 			type = support_equipment_1
-			creator = "RTH" 
+			creator = "EOR" 
 		}
 		requested_factories = 2
 		progress = 0.3

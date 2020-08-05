@@ -2,15 +2,15 @@
 
 	division = {
 		name = "Felwerin Enforcers"
-		location = 3966
+		location = 3638
 		division_template = "Enforcers"
 		start_experience_factor = 0.3
 
 	}
 	
 	division = {
-		name = "Visleth Enforcers"
-		location = 5991
+		name = "Dernth Enforcers"
+		location = 6217
 		division_template = "Enforcers"
 		start_experience_factor = 0.3
 
@@ -18,21 +18,21 @@
 	
 	division = {
 		name = "Countryside Enforcers"
-		location = 6452
+		location = 2395
 		division_template = "Enforcers"
 		start_experience_factor = 0.3
 
 	}
 
 	division = {
-		name = "1st Felwerin Black Gargoyles"
-		location = 7643
+		name = "1st Black Gargoyles"
+		location = 6178
 		division_template = "Black Gargoyles"
 		start_experience_factor = 0.4
 	}	
 
 	division = {
-		name = "2nd Felwerin Black Gargoyles"
+		name = "2nd Black Gargoyles"
 		location = 1971
 		division_template = "Black Gargoyles"
 		start_experience_factor = 0.4

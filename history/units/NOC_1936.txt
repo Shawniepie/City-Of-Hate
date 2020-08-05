@@ -47,8 +47,8 @@ division_template = {
 units = {
 
 	division = {
-		name = "1st Regiment 'Echimanns Hellebarde'"
-		location = 4314
+		name = "1st Regiment 'Eichmanns Hellebarde'"
+		location = 8511
 		division_template = "Prinztruppen"
 		start_experience_factor = 0.5
 
@@ -56,7 +56,7 @@ units = {
 	
 	division = {
 		name = "2nd Regiment 'Die Speere von Nistringer'"
-		location = 4823
+		location = 3374
 		division_template = "Prinztruppen"
 		start_experience_factor = 0.5
 
@@ -64,7 +64,7 @@ units = {
 	
 	division = {
 		name = "1st Cavalry 'Waldritter'"
-		location = 1097
+		location = 2181
 		division_template = "Prinzritter"
 		start_experience_factor = 0.7
 
@@ -72,7 +72,7 @@ units = {
 	
 	division = {
 		name = "Nochwald City Watch"
-		location = 1101
+		location = 8473
 		division_template = "Stadtwache"
 		start_experience_factor = 0.05
 

@@ -48,7 +48,7 @@ units = {
 
 	division = {
 		name = "1st Regiment 'Piratenjäger'"
-		location = 5510
+		location = 8895
 		division_template = "Prinztruppen"
 		start_experience_factor = 0.5
 
@@ -56,7 +56,7 @@ units = {
 	
 	division = {
 		name = "2nd Regiment 'Förster'"
-		location = 2379
+		location = 951
 		division_template = "Prinztruppen"
 		start_experience_factor = 0.5
 
@@ -64,7 +64,7 @@ units = {
 	
 	division = {
 		name = "3rd Regiment 'Altachsen'"
-		location = 90
+		location = 9064
 		division_template = "Prinztruppen"
 		start_experience_factor = 0.5
 
@@ -72,7 +72,7 @@ units = {
 	
 	division = {
 		name = "4th Regiment 'Hochspeere'"
-		location = 5650
+		location = 9057
 		division_template = "Prinztruppen"
 		start_experience_factor = 0.5
 
@@ -80,7 +80,7 @@ units = {
 	
 	division = {
 		name = "5th Regiment 'Schwarzwacht'"
-		location = 4610
+		location = 931
 		division_template = "Prinztruppen"
 		start_experience_factor = 0.5
 
@@ -88,7 +88,7 @@ units = {
 	
 	division = {
 		name = "1st Cavalry 'Adalinas Schwerter'"
-		location = 431
+		location = 4322
 		division_template = "Prinzritter"
 		start_experience_factor = 0.9
 
@@ -96,7 +96,7 @@ units = {
 	
 	division = {
 		name = "1st Scouts 'Jungblut'"
-		location = 3604
+		location = 5503
 		division_template = "Späher"
 		start_experience_factor = 0.7
 
@@ -104,7 +104,7 @@ units = {
 	
 	division = {
 		name = "Faustburg City Watch"
-		location = 842
+		location = 807
 		division_template = "Stadtwache"
 		start_experience_factor = 0.05
 

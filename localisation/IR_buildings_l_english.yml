@@ -1,0 +1,8 @@
+﻿l_english:
+ farmlands: "Farmlands"
+ farmlands_desc: "This building produces food for your people, varying from orchards to ranches to traditional fields of wheat."
+ farmlands_plural: "Farmlands"
+ modifier_production_speed_farmlands: ""
+ modifier_production_speed_farmlands_desc: ""
+ modifier_production_speed_farmlands_factor: "§YFarmlands§! construction speed"
+ modifier_production_speed_farmlands_factor_desc: "Modifies the speed of Farmlands construction."

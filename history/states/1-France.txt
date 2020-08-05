@@ -5,7 +5,7 @@ state={
 	manpower = 1303729
 
 	provinces={
-		1016 3108 3109 7165 7166 8093 8526 8735 
+		3069 4105 4797 6295 6272 5523
 	}
 	
 	
@@ -16,13 +16,13 @@ state={
 		
 	history={
 		owner = GMR
-		victory_points = { 3109 53 }
+		victory_points = { 3069 53 }
 			buildings = {
 				infrastructure = 7
 				arms_factory = 4
 				industrial_complex = 5
 				dockyard = 2
-				3109  = {
+				3069  = {
 					naval_base = 5
 				}
 			}

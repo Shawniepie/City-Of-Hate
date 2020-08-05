@@ -25,35 +25,35 @@ units = {
 
 	division = {
 		name = "Vernass Militia"
-		location = 7235
+		location = 3439
 		division_template = "Ship's Crew"
 		start_experience_factor = 0.3
 	}
 	
 	division = {
-		name = "Splythwass Militia"
-		location = 5037
+		name = "Portwatch"
+		location = 4323
 		division_template = "Ship's Crew"
 		start_experience_factor = 0.3
 	}
 	
 	division = {
 		name = "Navandonne Admiralty"
-		location = 1334
+		location = 3119
 		division_template = "Admiralty"
 		start_experience_factor = 0.5
 	}
 
 	division = {
 		name = "Frecter Admiralty"
-		location = 1104
+		location = 2082
 		division_template = "Admiralty"
 		start_experience_factor = 0.5
 	}
 
 	division = {
-		name = "Raelon Admiralty"
-		location = 2862
+		name = "Tinnis Admiralty"
+		location = 5916
 		division_template = "Admiralty"
 		start_experience_factor = 0.5
 	}

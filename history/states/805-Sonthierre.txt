@@ -1,0 +1,21 @@
+state={
+	id=805
+	name="STATE_805"
+	provinces={
+		937 5089 2955 1359 3283 4994 1193 5796
+	}
+	state_category = pastoral
+	manpower=2039
+	buildings_max_level_factor=1.000
+	history={
+		owner = LIR
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			937 = {
+				bunker = 2
+			}
+		}
+		add_core_of = LIR
+	}
+}

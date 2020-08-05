@@ -45,84 +45,84 @@ units = {
 
 	division = {
 		name = "Krell's Raiders"
-		location = 7533
+		location = 4527
 		division_template = "Fosztogató"
 		start_experience_factor = 1
 	}
 	
 	division = {
 		name = "Warband of Nevetko"
-		location = 8812
+		location = 819
 		division_template = "Fosztogató"
 		start_experience_factor = 0.5
 	}
 	
 	division = {
 		name = "Warband of Karczyk"
-		location = 3878
+		location = 4944
 		division_template = "Fosztogató"
 		start_experience_factor = 0.5
 	}
 	
 	division = {
 		name = "Warband of Lyenikova"
-		location = 6894
+		location = 9478
 		division_template = "Fosztogató"
 		start_experience_factor = 0.5
 	}
 	
 	division = {
 		name = "Warband of Vlencin"
-		location = 6140
+		location = 3287
 		division_template = "Fosztogató"
 		start_experience_factor = 0.5
 	}
 	
 	division = {
 		name = "Warband of Weltrova"
-		location = 7367
+		location = 2171
 		division_template = "Fosztogató"
 		start_experience_factor = 0.5
 	}
 	
 	division = {
 		name = "Warband of Rlavya"
-		location = 7413
+		location = 3786
 		division_template = "Fosztogató"
 		start_experience_factor = 0.5
 	}
 	
 	division = {
 		name = "Warband of Vitrczin"
-		location = 1325
+		location = 9594
 		division_template = "Fosztogató"
 		start_experience_factor = 0.5
 	}
 	
 	division = {
 		name = "Warband of Stotvic"
-		location = 5950
+		location = 4805
 		division_template = "Fosztogató"
 		start_experience_factor = 0.5
 	}
 	
 	division = {
 		name = "Warriors of Larzimcze"
-		location = 5769
+		location = 4488
 		division_template = "Wojownicy"
 		start_experience_factor = 0.25
 	}
 	
 	division = {
 		name = "Warriors of Manicze"
-		location = 2415
+		location = 575
 		division_template = "Wojownicy"
 		start_experience_factor = 0.25
 	}
 	
 	division = {
 		name = "Warriors of Obtinsk"
-		location = 87
+		location = 1712
 		division_template = "Wojownicy"
 		start_experience_factor = 0.25
 	}

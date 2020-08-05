@@ -2,7 +2,7 @@ state={
 	id=111
 	name="STATE_111"
 	provinces={
-		577 578 2457 2464 2981 2982 6684 7060 7440 
+		199 7168 3506 7151
 	}
 	state_category = metropolis
 	manpower=992728
@@ -11,12 +11,13 @@ state={
 		steel = 17
 	}
 		history={
-		victory_points = {577 46}
-		owner = ORD	
-		buildings = {	
-		arms_factory = 2
-		industrial_complex = 4
-		infrastructure = 6	}	
+			victory_points = {7168 46}
+			owner = ORD	
+			buildings = {	
+			arms_factory = 2
+			industrial_complex = 4
+			infrastructure = 6
+		}
 		add_core_of = ORD
 		}
 }

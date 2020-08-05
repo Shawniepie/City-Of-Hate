@@ -1,0 +1,40 @@
+﻿### RIMATAN EVENTS
+
+add_namespace = rmt
+
+###UNION APPROACHES
+
+country_event = {#Union Offers Alliance
+	id = rmt.1
+	title = rmt.1.t
+	desc = rmt.1.d
+	picture = GFX_report_event_carol_meeting
+
+	is_triggered_only = yes
+	
+	option = {#Yes
+		name = rmt.1.a
+		ai_chance = {
+			factor = 5
+		}
+		UNG = {
+			country_event = {
+				id = ung.32
+				days = 3
+			}
+		}
+	}
+	
+	option = {#No
+		name = rmt.1.b
+		ai_chance = {
+			factor = 1
+		}
+		UNG = {
+			country_event = {
+				id = ung.33
+				days = 3
+			}
+		}
+	}
+}

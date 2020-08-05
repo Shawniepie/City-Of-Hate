@@ -2,8 +2,16 @@ state={
 	id=714
 	name="STATE_714"
 	provinces={
-		98 2266 3067 3068 3069 6464 6825 7045 
+		6329 6323 5613
 	}
-	manpower=0
+	state_category = pastoral
+	manpower=920
 	buildings_max_level_factor=1.000
+	history={
+		owner = RMT
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = RMT
+	}
 }

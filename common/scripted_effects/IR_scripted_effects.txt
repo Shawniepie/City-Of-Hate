@@ -1,0 +1,1199 @@
+#Assigns random magic item to country leader
+
+grant_magic_item_to_country_leader = {
+	random_list = {
+		33 = {
+			add_country_leader_trait = has_magic_sword
+		}
+		34 = {
+			add_country_leader_trait = has_magic_ring
+		}
+		33 = {
+			add_country_leader_trait = has_magic_armour
+		}
+	}
+}
+
+#Assigns random magic item to commander
+
+grant_magic_item_to_commander = {
+	random_list = {
+		33 = {
+			add_unit_leader_trait = has_magic_sword_commander
+		}
+		34 = {
+			add_unit_leader_trait = has_magic_ring_commander
+		}
+		33 = {
+			add_unit_leader_trait = has_magic_armour_commander
+		}
+	}
+}
+
+#Sets a country's states as valid targets for Perkav raids
+
+set_perkav_raid_target = {
+	every_owned_state = {
+		limit = {
+			is_coastal = yes
+		}
+		set_state_flag = PRK_coastal_state_in_raid_range_flag
+	}
+}
+
+
+# Increase or decrease UNG relations with TLA or IRI
+
+UNG_worsen_IRI_relations = {
+	if = {
+		limit = {
+			IRI = {
+				has_relation_modifier = {
+					target = UNG
+					modifier = trusted_opinion
+				}
+			}
+		}
+		IRI = {
+			remove_opinion_modifier = {
+				target = UNG
+				modifier = trusted_opinion
+			}
+		}
+		IRI = {
+			add_opinion_modifier = {
+				target = UNG
+				modifier = liked_opinion
+			}
+		}
+		IRI = {
+			reverse_add_opinion_modifier = {
+				target = UNG
+				modifier = liked_opinion
+			}
+		}
+		UNG = {
+			remove_opinion_modifier = {
+				target = IRI
+				modifier = trusted_opinion
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			IRI = {
+				has_relation_modifier = {
+					target = UNG
+					modifier = liked_opinion
+				}
+			}
+		}
+		IRI = {
+			remove_opinion_modifier = {
+				target = UNG
+				modifier = liked_opinion
+			}
+		}
+		IRI = {
+			add_opinion_modifier = {
+				target = UNG
+				modifier = supportive_opinion
+			}
+		}
+		IRI = {
+			reverse_add_opinion_modifier = {
+				target = UNG
+				modifier = supportive_opinion
+			}
+		}
+		UNG = {
+			remove_opinion_modifier = {
+				target = IRI
+				modifier = liked_opinion
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			IRI = {
+				has_relation_modifier = {
+					target = UNG
+					modifier = supportive_opinion
+				}
+			}
+		}
+		IRI = {
+			remove_opinion_modifier = {
+				target = UNG
+				modifier = supportive_opinion
+			}
+		}
+		UNG = {
+			remove_opinion_modifier = {
+				target = IRI
+				modifier = supportive_opinion
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			IRI = {
+				NOT = {
+					has_relation_modifier = {
+						target = UNG
+						modifier = trusted_opinion
+					}
+					has_relation_modifier = {
+						target = UNG
+						modifier = supportive_opinion
+					}
+					has_relation_modifier = {
+						target = UNG
+						modifier = liked_opinion
+					}
+					has_relation_modifier = {
+						target = UNG
+						modifier = annoyed_opinion
+					}
+					has_relation_modifier = {
+						target = UNG
+						modifier = dislike_opinion
+					}
+					has_relation_modifier = {
+						target = UNG
+						modifier = threatened_opinion
+					}
+				}
+			}
+		}
+		IRI = {
+			add_opinion_modifier = {
+				target = UNG
+				modifier = annoyed_opinion
+			}
+		}
+		IRI = {
+			reverse_add_opinion_modifier = {
+				target = UNG
+				modifier = annoyed_opinion
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			IRI = {
+				has_relation_modifier = {
+					target = UNG
+					modifier = annoyed_opinion
+				}
+			}
+		}
+		IRI = {
+			remove_opinion_modifier = {
+				target = UNG
+				modifier = annoyed_opinion
+			}
+		}
+		UNG = {
+			remove_opinion_modifier = {
+				target = IRI
+				modifier = annoyed_opinion
+			}
+		}
+		IRI = {
+			add_opinion_modifier = {
+				target = UNG
+				modifier = dislike_opinion
+			}
+		}
+		IRI = {
+			reverse_add_opinion_modifier = {
+				target = UNG
+				modifier = dislike_opinion
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			IRI = {
+				has_relation_modifier = {
+					target = UNG
+					modifier = dislike_opinion
+				}
+			}
+		}
+		IRI = {
+			remove_opinion_modifier = {
+				target = UNG
+				modifier = dislike_opinion
+			}
+		}
+		UNG = {
+			remove_opinion_modifier = {
+				target = IRI
+				modifier = dislike_opinion
+			}
+		}
+		
+		IRI = {
+			add_opinion_modifier = {
+				target = UNG
+				modifier = threatened_opinion
+			}
+		}
+		IRI = {
+			reverse_add_opinion_modifier = {
+				target = UNG
+				modifier = threatened_opinion
+			}
+		}
+	}
+}
+
+UNG_improve_IRI_relations = {
+	if = {
+		limit = {
+			IRI = {
+				has_relation_modifier = {
+					target = UNG
+					modifier = threatened_opinion
+				}
+			}
+		}
+		IRI = {
+			remove_opinion_modifier = {
+				target = UNG
+				modifier = threatened_opinion
+			}
+		}
+		IRI = {
+			add_opinion_modifier = {
+				target = UNG
+				modifier = dislike_opinion
+			}
+		}
+		IRI = {
+			reverse_add_opinion_modifier = {
+				target = UNG
+				modifier = dislike_opinion
+			}
+		}
+		UNG = {
+			remove_opinion_modifier = {
+				target = IRI
+				modifier = threatened_opinion
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			IRI = {
+				has_relation_modifier = {
+					target = UNG
+					modifier = dislike_opinion
+				}
+			}
+		}
+		IRI = {
+			remove_opinion_modifier = {
+				target = UNG
+				modifier = dislike_opinion
+			}
+		}
+		IRI = {
+			add_opinion_modifier = {
+				target = UNG
+				modifier = annoyed_opinion
+			}
+		}
+		IRI = {
+			reverse_add_opinion_modifier = {
+				target = UNG
+				modifier = annoyed_opinion
+			}
+		}
+		UNG = {
+			remove_opinion_modifier = {
+				target = IRI
+				modifier = dislike_opinion
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			IRI = {
+				has_relation_modifier = {
+					target = UNG
+					modifier = annoyed_opinion
+				}
+			}
+		}
+		IRI = {
+			remove_opinion_modifier = {
+				target = UNG
+				modifier = annoyed_opinion
+			}
+		}
+		UNG = {
+			remove_opinion_modifier = {
+				target = IRI
+				modifier = annoyed_opinion
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			IRI = {
+				NOT = {
+					has_relation_modifier = {
+						target = UNG
+						modifier = trusted_opinion
+					}
+					has_relation_modifier = {
+						target = UNG
+						modifier = supportive_opinion
+					}
+					has_relation_modifier = {
+						target = UNG
+						modifier = liked_opinion
+					}
+					has_relation_modifier = {
+						target = UNG
+						modifier = annoyed_opinion
+					}
+					has_relation_modifier = {
+						target = UNG
+						modifier = dislike_opinion
+					}
+					has_relation_modifier = {
+						target = UNG
+						modifier = threatened_opinion
+					}
+				}
+			}
+		}
+		IRI = {
+			add_opinion_modifier = {
+				target = UNG
+				modifier = supportive_opinion
+			}
+		}
+		IRI = {
+			reverse_add_opinion_modifier = {
+				target = UNG
+				modifier = supportive_opinion
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			IRI = {
+				has_relation_modifier = {
+					target = UNG
+					modifier = supportive_opinion
+				}
+			}
+		}
+		IRI = {
+			remove_opinion_modifier = {
+				target = UNG
+				modifier = supportive_opinion
+			}
+		}
+		UNG = {
+			remove_opinion_modifier = {
+				target = IRI
+				modifier = supportive_opinion
+			}
+		}
+		IRI = {
+			add_opinion_modifier = {
+				target = UNG
+				modifier = liked_opinion
+			}
+		}
+		IRI = {
+			reverse_add_opinion_modifier = {
+				target = UNG
+				modifier = liked_opinion
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			IRI = {
+				has_relation_modifier = {
+					target = UNG
+					modifier = liked_opinion
+				}
+			}
+		}
+		IRI = {
+			remove_opinion_modifier = {
+				target = UNG
+				modifier = liked_opinion
+			}
+		}
+		UNG = {
+			remove_opinion_modifier = {
+				target = IRI
+				modifier = liked_opinion
+			}
+		}
+		
+		IRI = {
+			add_opinion_modifier = {
+				target = UNG
+				modifier = trusted_opinion
+			}
+		}
+		IRI = {
+			reverse_add_opinion_modifier = {
+				target = UNG
+				modifier = trusted_opinion
+			}
+		}
+	}
+}
+
+UNG_worsen_TLA_relations = {
+	if = {
+		limit = {
+			TLA = {
+				has_relation_modifier = {
+					target = UNG
+					modifier = trusted_opinion
+				}
+			}
+		}
+		TLA = {
+			remove_opinion_modifier = {
+				target = UNG
+				modifier = trusted_opinion
+			}
+		}
+		TLA = {
+			add_opinion_modifier = {
+				target = UNG
+				modifier = liked_opinion
+			}
+		}
+		TLA = {
+			reverse_add_opinion_modifier = {
+				target = UNG
+				modifier = liked_opinion
+			}
+		}
+		UNG = {
+			remove_opinion_modifier = {
+				target = TLA
+				modifier = trusted_opinion
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			TLA = {
+				has_relation_modifier = {
+					target = UNG
+					modifier = liked_opinion
+				}
+			}
+		}
+		TLA = {
+			remove_opinion_modifier = {
+				target = UNG
+				modifier = liked_opinion
+			}
+		}
+		TLA = {
+			add_opinion_modifier = {
+				target = UNG
+				modifier = supportive_opinion
+			}
+		}
+		TLA = {
+			reverse_add_opinion_modifier = {
+				target = UNG
+				modifier = supportive_opinion
+			}
+		}
+		UNG = {
+			remove_opinion_modifier = {
+				target = TLA
+				modifier = liked_opinion
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			TLA = {
+				has_relation_modifier = {
+					target = UNG
+					modifier = supportive_opinion
+				}
+			}
+		}
+		TLA = {
+			remove_opinion_modifier = {
+				target = UNG
+				modifier = supportive_opinion
+			}
+		}
+		UNG = {
+			remove_opinion_modifier = {
+				target = TLA
+				modifier = supportive_opinion
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			TLA = {
+				NOT = {
+					has_relation_modifier = {
+						target = UNG
+						modifier = trusted_opinion
+					}
+					has_relation_modifier = {
+						target = UNG
+						modifier = supportive_opinion
+					}
+					has_relation_modifier = {
+						target = UNG
+						modifier = liked_opinion
+					}
+					has_relation_modifier = {
+						target = UNG
+						modifier = annoyed_opinion
+					}
+					has_relation_modifier = {
+						target = UNG
+						modifier = dislike_opinion
+					}
+					has_relation_modifier = {
+						target = UNG
+						modifier = threatened_opinion
+					}
+				}
+			}
+		}
+		TLA = {
+			add_opinion_modifier = {
+				target = UNG
+				modifier = annoyed_opinion
+			}
+		}
+		TLA = {
+			reverse_add_opinion_modifier = {
+				target = UNG
+				modifier = annoyed_opinion
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			TLA = {
+				has_relation_modifier = {
+					target = UNG
+					modifier = annoyed_opinion
+				}
+			}
+		}
+		TLA = {
+			remove_opinion_modifier = {
+				target = UNG
+				modifier = annoyed_opinion
+			}
+		}
+		UNG = {
+			remove_opinion_modifier = {
+				target = TLA
+				modifier = annoyed_opinion
+			}
+		}
+		TLA = {
+			add_opinion_modifier = {
+				target = UNG
+				modifier = dislike_opinion
+			}
+		}
+		TLA = {
+			reverse_add_opinion_modifier = {
+				target = UNG
+				modifier = dislike_opinion
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			TLA = {
+				has_relation_modifier = {
+					target = UNG
+					modifier = dislike_opinion
+				}
+			}
+		}
+		TLA = {
+			remove_opinion_modifier = {
+				target = UNG
+				modifier = dislike_opinion
+			}
+		}
+		UNG = {
+			remove_opinion_modifier = {
+				target = TLA
+				modifier = dislike_opinion
+			}
+		}
+		
+		TLA = {
+			add_opinion_modifier = {
+				target = UNG
+				modifier = threatened_opinion
+			}
+		}
+		TLA = {
+			reverse_add_opinion_modifier = {
+				target = UNG
+				modifier = threatened_opinion
+			}
+		}
+	}
+}
+
+UNG_improve_TLA_relations = {
+	if = {
+		limit = {
+			TLA = {
+				has_relation_modifier = {
+					target = UNG
+					modifier = threatened_opinion
+				}
+			}
+		}
+		TLA = {
+			remove_opinion_modifier = {
+				target = UNG
+				modifier = threatened_opinion
+			}
+		}
+		TLA = {
+			add_opinion_modifier = {
+				target = UNG
+				modifier = dislike_opinion
+			}
+		}
+		TLA = {
+			reverse_add_opinion_modifier = {
+				target = UNG
+				modifier = dislike_opinion
+			}
+		}
+		UNG = {
+			remove_opinion_modifier = {
+				target = TLA
+				modifier = threatened_opinion
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			TLA = {
+				has_relation_modifier = {
+					target = UNG
+					modifier = dislike_opinion
+				}
+			}
+		}
+		TLA = {
+			remove_opinion_modifier = {
+				target = UNG
+				modifier = dislike_opinion
+			}
+		}
+		TLA = {
+			add_opinion_modifier = {
+				target = UNG
+				modifier = annoyed_opinion
+			}
+		}
+		TLA = {
+			reverse_add_opinion_modifier = {
+				target = UNG
+				modifier = annoyed_opinion
+			}
+		}
+		UNG = {
+			remove_opinion_modifier = {
+				target = TLA
+				modifier = dislike_opinion
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			TLA = {
+				has_relation_modifier = {
+					target = UNG
+					modifier = annoyed_opinion
+				}
+			}
+		}
+		TLA = {
+			remove_opinion_modifier = {
+				target = UNG
+				modifier = annoyed_opinion
+			}
+		}
+		UNG = {
+			remove_opinion_modifier = {
+				target = TLA
+				modifier = annoyed_opinion
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			TLA = {
+				NOT = {
+					has_relation_modifier = {
+						target = UNG
+						modifier = trusted_opinion
+					}
+					has_relation_modifier = {
+						target = UNG
+						modifier = supportive_opinion
+					}
+					has_relation_modifier = {
+						target = UNG
+						modifier = liked_opinion
+					}
+					has_relation_modifier = {
+						target = UNG
+						modifier = annoyed_opinion
+					}
+					has_relation_modifier = {
+						target = UNG
+						modifier = dislike_opinion
+					}
+					has_relation_modifier = {
+						target = UNG
+						modifier = threatened_opinion
+					}
+				}
+			}
+		}
+		TLA = {
+			add_opinion_modifier = {
+				target = UNG
+				modifier = supportive_opinion
+			}
+		}
+		TLA = {
+			reverse_add_opinion_modifier = {
+				target = UNG
+				modifier = supportive_opinion
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			TLA = {
+				has_relation_modifier = {
+					target = UNG
+					modifier = supportive_opinion
+				}
+			}
+		}
+		TLA = {
+			remove_opinion_modifier = {
+				target = UNG
+				modifier = supportive_opinion
+			}
+		}
+		UNG = {
+			remove_opinion_modifier = {
+				target = TLA
+				modifier = supportive_opinion
+			}
+		}
+		TLA = {
+			add_opinion_modifier = {
+				target = UNG
+				modifier = liked_opinion
+			}
+		}
+		TLA = {
+			reverse_add_opinion_modifier = {
+				target = UNG
+				modifier = liked_opinion
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			TLA = {
+				has_relation_modifier = {
+					target = UNG
+					modifier = liked_opinion
+				}
+			}
+		}
+		TLA = {
+			remove_opinion_modifier = {
+				target = UNG
+				modifier = liked_opinion
+			}
+		}
+		UNG = {
+			remove_opinion_modifier = {
+				target = TLA
+				modifier = liked_opinion
+			}
+		}
+		
+		TLA = {
+			add_opinion_modifier = {
+				target = UNG
+				modifier = trusted_opinion
+			}
+		}
+		TLA = {
+			reverse_add_opinion_modifier = {
+				target = UNG
+				modifier = trusted_opinion
+			}
+		}
+	}
+}
+
+
+#Set the Steel Road States
+
+set_steel_road = {
+
+	347 = {
+		set_state_flag = steel_road_state
+	}
+	585 = {
+		set_state_flag = steel_road_state
+	}
+	583 = {
+		set_state_flag = steel_road_state
+	}
+	545 = {
+		set_state_flag = steel_road_state
+	}
+	551 = {
+		set_state_flag = steel_road_state
+	}
+	614 = {
+		set_state_flag = steel_road_state
+	}
+	580 = {
+		set_state_flag = steel_road_state
+	}
+	368 = {
+		set_state_flag = steel_road_state
+	}
+	368 = {
+		set_state_flag = steel_road_state
+	}
+	611 = {
+		set_state_flag = steel_road_state
+	}
+	604 = {
+		set_state_flag = steel_road_state
+	}
+	613 = {
+		set_state_flag = steel_road_state
+	}
+	582 = {
+		set_state_flag = steel_road_state
+	}
+	370 = {
+		set_state_flag = steel_road_state
+	}
+	532 = {
+		set_state_flag = steel_road_state
+	}
+	542 = {
+		set_state_flag = steel_road_state
+	}
+	572 = {
+		set_state_flag = steel_road_state
+	}
+	605 = {
+		set_state_flag = steel_road_state
+	}
+	599 = {
+		set_state_flag = steel_road_state
+	}
+	371 = {
+		set_state_flag = steel_road_state
+	}
+	795 = {
+		set_state_flag = steel_road_state
+	}
+	787 = {
+		set_state_flag = steel_road_state
+	}
+	372 = {
+		set_state_flag = steel_road_state
+	}
+	789 = {
+		set_state_flag = steel_road_state
+	}
+	777 = {
+		set_state_flag = steel_road_state
+	}
+	776 = {
+		set_state_flag = steel_road_state
+	}
+	775 = {
+		set_state_flag = steel_road_state
+	}
+	774 = {
+		set_state_flag = steel_road_state
+	}
+	374 = {
+		set_state_flag = steel_road_state
+	}
+	765 = {
+		set_state_flag = steel_road_state
+	}
+	377 = {
+		set_state_flag = steel_road_state
+	}
+	398 = {
+		set_state_flag = steel_road_state
+	}
+	399 = {
+		set_state_flag = steel_road_state
+	}
+	740 = {
+		set_state_flag = steel_road_state
+	}
+	397 = {
+		set_state_flag = steel_road_state
+	}
+	737 = {
+		set_state_flag = steel_road_state
+	}
+	797 = {
+		set_state_flag = steel_road_state
+	}
+	396 = {
+		set_state_flag = steel_road_state
+	}
+	750 = {
+		set_state_flag = steel_road_state
+	}
+	755 = {
+		set_state_flag = steel_road_state
+	}
+	757 = {
+		set_state_flag = steel_road_state
+	}
+	753 = {
+		set_state_flag = steel_road_state
+	}
+	386 = {
+		set_state_flag = steel_road_state_new
+	}
+	385 = {
+		set_state_flag = steel_road_state_new
+	}
+	711 = {
+		set_state_flag = steel_road_state_new
+	}
+	710 = {
+		set_state_flag = steel_road_state_new
+	}
+	382 = {
+		set_state_flag = steel_road_state_new
+	}
+	721 = {
+		set_state_flag = steel_road_state_new
+	}
+	722 = {
+		set_state_flag = steel_road_state_new
+	}
+	733 = {
+		set_state_flag = steel_road_state_new
+	}
+	720 = {
+		set_state_flag = steel_road_state_new
+	}
+	383 = {
+		set_state_flag = steel_road_state_new
+	}
+	716 = {
+		set_state_flag = steel_road_state_new
+	}
+	718 = {
+		set_state_flag = steel_road_state_new
+	}
+	730 = {
+		set_state_flag = steel_road_state_new
+	}
+	731 = {
+		set_state_flag = steel_road_state_new
+	}
+	384 = {
+		set_state_flag = steel_road_state_new
+	}
+	406 = {
+		set_state_flag = steel_road_state_new
+	}
+	540 = {
+		set_state_flag = steel_road_state_new
+	}
+	529 = {
+		set_state_flag = steel_road_state_new
+	}
+	537 = {
+		set_state_flag = steel_road_state_new
+	}
+	576 = {
+		set_state_flag = steel_road_state_new
+	}
+	369 = {
+		set_state_flag = steel_road_state_new
+	}
+	400 = {
+		set_state_flag = steel_road_state_new
+	}
+	742 = {
+		set_state_flag = steel_road_state_new
+	}
+	401 = {
+		set_state_flag = steel_road_state_new
+	}
+	233 = {
+		set_state_flag = steel_road_state_new
+	}
+	249 = {
+		set_state_flag = steel_road_state_new
+	}
+	328 = {
+		set_state_flag = steel_road_state_new
+	}
+	342 = {
+		set_state_flag = steel_road_state_new
+	}
+	357 = {
+		set_state_flag = steel_road_state_new
+	}
+	361 = {
+		set_state_flag = steel_road_state_new
+	}
+	356 = {
+		set_state_flag = steel_road_state_new
+	}
+	339 = {
+		set_state_flag = steel_road_state_new
+	}
+	345 = {
+		set_state_flag = steel_road_state_new
+	}
+	236 = {
+		set_state_flag = steel_road_state_new
+	}
+	
+	every_state = {
+		limit = {
+			OR = {
+				has_state_flag = steel_road_state
+				has_state_flag = steel_road_state_new
+			}
+		}
+		add_to_array = {
+			array = steelroadarray
+			value = THIS
+		}
+	}
+}
+
+#Unification of the Union
+
+unite_the_union = {
+	every_state = {
+		limit = {
+			is_owned_by = ROOT
+		}
+		UNG = {
+			transfer_state = PREV
+		}
+	}
+	every_state = {
+		limit = {
+			OR = {
+				is_core_of = HLZ
+				is_core_of = NOC
+				is_core_of = SVT
+				is_core_of = STA
+				is_core_of = SPW
+				is_core_of = TEI
+				is_core_of = FAU
+				is_core_of = NRK
+				is_core_of = SNF
+				is_core_of = ARK
+				is_core_of = WIS
+				is_core_of = WSZ
+				is_core_of = FTH
+				is_core_of = UNG
+			}
+		}
+		remove_core_of = HLZ
+		remove_core_of = NOC
+		remove_core_of = SVT
+		remove_core_of = STA
+		remove_core_of = SPW
+		remove_core_of = TEI
+		remove_core_of = FAU
+		remove_core_of = NRK
+		remove_core_of = SNF
+		remove_core_of = ARK
+		remove_core_of = WIS
+		remove_core_of = WSZ
+		remove_core_of = FTH
+		add_core_of = UNG
+	}
+}
+
+#Reunification of Ordoria
+#reunify_ordoria = {
+#	every_state = {
+#		limit = {
+#			is_owned_by = ROOT
+#		}
+#		ORD = {
+#			transfer_state = PREV
+#		}
+#	}
+#	every_state = {
+#		limit = {
+#			OR = {
+#	

@@ -53,15 +53,15 @@ set_politics = {
 }
 
 set_popularities = {
-	monarchy_absolute = 6
+	monarchy_absolute = 63
 
 	monarchy_constitutional = 11
 
-	republic_peasant = 2
+	republic_peasant = 4
 
 	republic_aristocrat = 2
 
-	republic_merchant = 1
+	republic_merchant = 4
 
 	theocrat = 1
 

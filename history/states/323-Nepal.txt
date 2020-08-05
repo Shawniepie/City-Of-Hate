@@ -2,11 +2,14 @@ state={
 	id=323
 	name="STATE_323"
 	provinces={
-		793 2748 4811 7865 8055 
+		483 9308 297 9292 4553 9258 1052 1300
 	}
 	state_category = rural
 	manpower=8201
 	buildings_max_level_factor=1.000
+	resources = {
+			steel = 14
+	}
 	history={
 		owner = UNG
 		buildings = {

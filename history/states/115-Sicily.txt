@@ -2,15 +2,19 @@ state={
 	id=115
 	name="STATE_115"
 	provinces={
-		271 2406 3170 6995 7336 
+		1952 7289 995 443 7152 5188 5119
 	}
-	state_category = pastoral
+	state_category = metropolis
 	manpower=4023
 	buildings_max_level_factor=1.000
-		history={	
+		history={
 		owner = ORD
 		buildings = {	
-		infrastructure = 2	}	
+		infrastructure = 2
+			7152 = {
+				bunker = 3
+			}
+		}
 		add_core_of = ORD
 		}
 }

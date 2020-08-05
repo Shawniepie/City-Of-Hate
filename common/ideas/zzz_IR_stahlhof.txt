@@ -1,0 +1,881 @@
+ideas = {
+	
+	country = {
+		
+		STA_adelina_troop_loyalty_idea = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = ung_ordorian_refugees
+			
+			removal_cost = -1
+			
+			modifier = {
+				army_org_factor = -0.08
+				war_support_factor = -0.10
+				stability_factor = 0.10
+			}
+		}
+		STA_adelina_troop_loyalty_idea_dealt = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = ung_ordorian_refugees
+			
+			removal_cost = -1
+			
+			modifier = {
+				war_support_factor = 0.1	
+			}
+			targeted_modifier = { tag = UNG attack_bonus_against = 0.1 }
+			targeted_modifier = { tag = UNG defense_bonus_against = 0.05 }
+		}
+		STA_adelina_troop_loyalty_idea2 = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = ung_ordorian_refugees
+			
+			removal_cost = -1
+			
+			modifier = {
+				war_support_factor = -0.05
+				stability_factor = 0.10
+				army_org_factor = -0.04
+			}
+		}
+		STA_adelina_troop_loyalty_idea3 = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = ung_ordorian_refugees
+			
+			removal_cost = -1
+			
+			modifier = {
+				war_support_factor = 0.05
+				stability_factor = 0.10
+			}
+		}
+		
+		STA_the_bear_of_stahlhof_idea = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = ung_ordorian_refugees
+			
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = 0.10
+			}
+		}
+		
+		STA_mass_recruiting_idea = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = ung_ordorian_refugees
+			
+			removal_cost = -1
+			
+			modifier = {
+					conscription = 0.04
+			}
+		}
+		
+		STA_every_village_a_soldier_idea = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = ung_ordorian_refugees
+			
+			removal_cost = -1
+			
+			modifier = {
+					non_core_manpower = 0.02
+					army_core_defence_factor = 0.05
+			}
+		}
+		STA_every_village_a_weaponsmith_idea = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = ung_ordorian_refugees
+			
+			removal_cost = -1
+			
+			modifier = {
+					industrial_capacity_factory = 0.08
+					equipment_conversion_speed = 0.05
+					industry_repair_factor = 0.10
+			}
+		}
+		STA_iron_discipline_idea = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = ung_ordorian_refugees
+			
+			removal_cost = -1
+			
+			modifier = {
+				army_speed_factor = 0.04
+				army_morale_factor = 0.04
+				army_org_factor = 0.04
+			}
+		}
+		STA_replenish_the_ranks_idea = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = ung_ordorian_refugees
+			
+			removal_cost = -1
+			
+			modifier = {
+				experience_loss_factor = -0.05
+				military_leader_cost_factor = -0.25
+				max_command_power = 10
+				command_power_gain = 0.5
+			}
+		}
+		STA_replenish_the_ranks_idea2 = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = ung_ordorian_refugees
+			
+			removal_cost = -1
+			
+			modifier = {
+				military_leader_cost_factor = -0.5
+				max_command_power = 15
+				command_power_gain = 0.75
+			}
+		}
+		STA_replenish_the_ranks_idea3 = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = ung_ordorian_refugees
+			
+			removal_cost = -1
+			
+			modifier = {
+				experience_loss_factor = -0.1
+				max_command_power = 10
+				training_time_factor = -0.1
+			}
+		}
+		STA_limited_engagement_idea = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = ung_ordorian_refugees
+			
+			removal_cost = -1
+			
+			targeted_modifier = { tag = ORD attack_bonus_against = -0.15 }
+			targeted_modifier = { tag = ORD defense_bonus_against = 0.10 }
+			
+			modifier = {
+				
+			}
+		}
+		STA_limited_engagement_idea2 = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = ung_ordorian_refugees
+			
+			removal_cost = -1
+			
+			targeted_modifier = { tag = ORD attack_bonus_against = -0.15 }
+			targeted_modifier = { tag = ORD defense_bonus_against = 0.10 }
+			
+			modifier = {
+				recon_factor = 0.04
+				experience_loss_factor = -0.04
+			}
+		}
+		STA_much_ado_about_nothing_idea = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = ung_ordorian_refugees
+			
+			removal_cost = -1
+
+			equipment_bonus = {
+				light_melee_equipment = {
+					build_cost_ic = -0.1 instant = yes
+				}
+				heavy_melee_equipment = {
+					build_cost_ic = -0.1 instant = yes
+				}
+			}
+		}
+		STA_neuzeit_krieg_idea = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = ung_ordorian_refugees
+			
+			removal_cost = -1
+
+			modifier = {
+				mobilization_laws_cost_factor = -0.1
+				economy_cost_factor = -0.1
+			}
+		}
+		STA_meritocratic_autocracy_idea = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = ung_ordorian_refugees
+			
+			removal_cost = -1
+
+			modifier = {
+				experience_gain_army_factor = 0.15
+				planning_speed = 0.10
+				max_planning = 0.05
+			}
+		}
+		STA_soldier_support_idea = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = ung_ordorian_refugees
+			
+			removal_cost = -1
+
+			modifier = {
+				conscription = 0.01
+				consumer_goods_factor = 0.02
+			}
+		}
+		STA_soldier_support_idea2 = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = ung_ordorian_refugees
+			
+			removal_cost = -1
+
+			modifier = {
+				conscription = 0.02
+				consumer_goods_factor = 0.04
+			}
+		}
+		STA_soldier_support_idea3 = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = ung_ordorian_refugees
+			
+			removal_cost = -1
+
+			modifier = {
+				conscription = 0.03
+				consumer_goods_factor = 0.06
+			}
+		}
+		STA_soldier_support_idea4 = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = ung_ordorian_refugees
+			
+			removal_cost = -1
+
+			modifier = {
+				conscription = 0.035
+				consumer_goods_factor = 0.06
+				experience_loss_factor = -0.1
+			}
+		}
+		STA_meritocratic_autocracy_idea2 = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = ung_ordorian_refugees
+			
+			removal_cost = -1
+
+			modifier = {
+				experience_gain_army_factor = 0.15
+				planning_speed = 0.10
+				max_planning = 0.05
+				army_leader_start_level = 1
+				political_power_factor = 0.05
+			}
+		}
+		STA_meritocratic_autocracy_idea3 = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = ung_ordorian_refugees
+			
+			removal_cost = -1
+
+			modifier = {
+				experience_gain_army_factor = 0.15
+				planning_speed = 0.15
+				max_planning = 0.05
+				army_leader_start_level = 1
+				political_power_factor = 0.10
+			}
+		}
+		STA_meritocratic_autocracy_idea4 = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = ung_ordorian_refugees
+			
+			removal_cost = -1
+
+			modifier = {
+				experience_gain_army_factor = 0.15
+				planning_speed = 0.15
+				max_planning = 0.10
+				army_leader_start_level = 1
+				political_power_factor = 0.15
+			}
+		}
+		STA_meritocratic_autocracy_idea5 = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = ung_ordorian_refugees
+			
+			removal_cost = -1
+
+			modifier = {
+				experience_gain_army_factor = 0.15
+				planning_speed = 0.15
+				max_planning = 0.10
+				army_leader_start_level = 2
+				political_power_factor = 0.20
+				army_chief_cost_factor = -0.20
+				training_time_army_factor = -0.1
+			}
+		}
+		STA_integrated_military_command_idea = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = ung_ordorian_refugees
+			
+			removal_cost = -1
+
+			modifier = {
+				war_support_factor = 0.10
+				max_command_power = 10
+				mobilization_speed = 0.15
+			}
+		}
+		STA_force_an_iron_fist_idea = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = ung_ordorian_refugees
+			
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = 0.25
+				conversion_cost_civ_to_mil_factor = -0.3
+				industrial_capacity_factory = 0.1
+				master_ideology_drift = 0.25
+			}
+		}
+		STA_stahlreik_market_idea = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = ung_ordorian_refugees
+			
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+		STA_loyalty_through_fear_idea = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = ung_ordorian_refugees
+			
+			removal_cost = -1
+
+			modifier = {
+				drift_defence_factor = 0.25
+				trade_opinion_factor = -0.25
+				conscription = 0.01
+			}
+		}
+		STA_loyalty_through_love_idea = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = ung_ordorian_refugees
+			
+			removal_cost = -1
+
+			modifier = {
+				army_morale_factor = 0.1
+				partisan_effect = 0.2
+				army_core_defence_factor = 0.1
+			}
+		}
+		STA_nebeltoeter_squads_idea = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = ung_ordorian_refugees
+			
+			removal_cost = -1
+			
+			targeted_modifier = { tag = ARK attack_bonus_against = 0.20 }
+			targeted_modifier = { tag = ARK defense_bonus_against = 0.15 }
+		}
+		STA_intervene_covertly_idea = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = ung_ordorian_refugees
+			
+			removal_cost = -1
+
+			modifier = {
+				send_volunteers_tension = -0.50
+				send_volunteer_divisions_required = -0.75
+				send_volunteer_size = 2
+			}
+		}
+		STA_embargo_union_idea = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = ung_ordorian_refugees
+			
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.05
+			}
+		}
+		STA_nordhandel_idea = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = ung_ordorian_refugees
+			
+			removal_cost = -1
+
+			modifier = {
+				trade_laws_cost_factor = -0.50
+				trade_opinion_factor = 0.10
+			}
+		}
+		STA_binding_blood_idea = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = ung_ordorian_refugees
+			
+			removal_cost = -1
+
+			modifier = {
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.05
+			}
+		}
+		STA_crown_infallible_idea = {
+			
+			allowed = {
+				has_country_leader = {
+					name = "Ferdinand Schwarzenbach"
+					ruling_only = yes
+				}
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = ung_ordorian_refugees
+			
+			removal_cost = -1
+
+			modifier = {
+				stability_weekly = 0.008
+			}
+		}
+		STA_divided_monarchists_idea = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = ung_ordorian_refugees
+			
+			removal_cost = -1
+
+			modifier = {
+				political_power_factor = -0.5
+			}
+		}
+		STA_joint_planning_commission_idea = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = ung_ordorian_refugees
+			
+			removal_cost = -1
+
+			modifier = {
+				planning_speed = 0.25
+			}
+		}
+		puritan_drift_idea = {
+		
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = ung_ordorian_refugees
+			
+			removal_cost = -1
+
+			modifier = {
+				puritan_drift = 0.15
+			}
+		
+		}
+		theocrat_drift_idea = {
+		
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = ung_ordorian_refugees
+			
+			removal_cost = -1
+
+			modifier = {
+				theocrat_drift = 0.15
+			}
+		
+		}
+		republic_merchant_drift_idea = {
+		
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = ung_ordorian_refugees
+			
+			removal_cost = -1
+
+			modifier = {
+				republic_merchant_drift = 0.15
+			}
+		
+		}
+		monarchy_absolute_drift_idea = {
+		
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = ung_ordorian_refugees
+			
+			removal_cost = -1
+
+			modifier = {
+				monarchy_absolute_drift = 0.15
+			}
+		
+		}
+		republic_aristocrat_drift_idea = {
+		
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = ung_ordorian_refugees
+			
+			removal_cost = -1
+
+			modifier = {
+				republic_aristocrat_drift = 0.15
+			}
+		
+		}
+		STA_freiwillige_heimatverteidiger_idea = {
+		
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = ung_ordorian_refugees
+			
+			removal_cost = -1
+
+			modifier = {
+				army_core_defence_factor = 0.1
+				conscription = 0.005
+			}
+		
+		}
+		
+	}
+}

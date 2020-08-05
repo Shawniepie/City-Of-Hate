@@ -2,13 +2,13 @@ state={
 	id=225
 	name="STATE_225"
 	provinces={
-		2472 2473 2477 5470 6990 6991 7659 8546 
+		9224 654 9217 3282 9210
 	}
 	state_category = city
 	manpower=699203
 	buildings_max_level_factor=1.000
 	history={
-		victory_points = { 2473 50 }
+		victory_points = { 9217 50 }
 		owner = TEI
 		buildings = {
 			infrastructure = 5	

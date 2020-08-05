@@ -1,0 +1,710 @@
+#Clear the opinion modifiers for ideological differences
+
+clear_opinion_modifier = {
+	every_country = {
+		remove_opinion_modifier = {
+			target = ROOT
+			modifier = IR_same_ideology
+		}
+		ROOT = {
+			remove_opinion_modifier = {
+				target = PREV
+				modifier = IR_same_ideology
+			}
+		}
+		remove_opinion_modifier = {
+			target = ROOT
+			modifier = IR_similar_ideology
+		}
+		ROOT = {
+			remove_opinion_modifier = {
+				target = PREV
+				modifier = IR_similar_ideology
+			}
+		}
+		remove_opinion_modifier = {
+			target = ROOT
+			modifier = IR_different_ideology
+		}
+		ROOT = {
+			remove_opinion_modifier = {
+				target = PREV
+				modifier = IR_different_ideology
+			}
+		}
+		remove_opinion_modifier = {
+			target = ROOT
+			modifier = IR_vile_aristocrats
+		}
+		ROOT = {
+			remove_opinion_modifier = {
+				target = PREV
+				modifier = IR_vile_aristocrats
+			}
+		}
+		remove_opinion_modifier = {
+			target = ROOT
+			modifier = IR_vile_peasants
+		}
+		ROOT = {
+			remove_opinion_modifier = {
+				target = PREV
+				modifier = IR_vile_peasants
+			}
+		}
+		remove_opinion_modifier = {
+			target = ROOT
+			modifier = IR_puritan_pure_brothers
+		}
+		ROOT = {
+			remove_opinion_modifier = {
+				target = PREV
+				modifier = IR_puritan_pure_brothers
+			}
+		}
+		remove_opinion_modifier = {
+			target = ROOT
+			modifier = IR_puritan_good_race
+		}
+		ROOT = {
+			remove_opinion_modifier = {
+				target = PREV
+				modifier = IR_puritan_good_race
+			}
+		}
+		remove_opinion_modifier = {
+			target = ROOT
+			modifier = IR_puritan_vermin
+		}
+		ROOT = {
+			remove_opinion_modifier = {
+				target = PREV
+				modifier = IR_puritan_vermin
+			}
+		}
+		remove_opinion_modifier = {
+			target = ROOT
+			modifier = IR_puritan_extremists
+		}
+		ROOT = {
+			remove_opinion_modifier = {
+				target = PREV
+				modifier = IR_puritan_extremists
+			}
+		}
+		ROOT = {
+			remove_opinion_modifier = {
+				target = PREV
+				modifier = IR_puritan_butchers
+			}
+		}
+		remove_opinion_modifier = {
+			target = ROOT
+			modifier = IR_puritan_butchers
+		}
+		remove_opinion_modifier = {
+			target = ROOT
+			modifier = IR_wrong_puritans
+		}
+		ROOT = {
+			remove_opinion_modifier = {
+				target = PREV
+				modifier = IR_wrong_puritans
+			}
+		}
+		remove_opinion_modifier = {
+			target = ROOT
+			modifier = IR_same_faith_theocrat
+		}
+		ROOT = {
+			remove_opinion_modifier = {
+				target = PREV
+				modifier = IR_same_faith_theocrat
+			}
+		}
+		remove_opinion_modifier = {
+			target = ROOT
+			modifier = IR_heathens_theocrat
+		}
+		ROOT = {
+			remove_opinion_modifier = {
+				target = PREV
+				modifier = IR_heathens_theocrat
+			}
+		}
+		remove_opinion_modifier = {
+			target = ROOT
+			modifier = IR_heretics_theocrat
+		}
+		ROOT = {
+			remove_opinion_modifier = {
+				target = PREV
+				modifier = IR_heretics_theocrat
+			}
+		}
+		remove_opinion_modifier = {
+			target = ROOT
+			modifier = IR_same_faith
+		}
+		ROOT = {
+			remove_opinion_modifier = {
+				target = PREV
+				modifier = IR_same_faith
+			}
+		}
+		remove_opinion_modifier = {
+			target = ROOT
+			modifier = IR_heathens
+		}
+		ROOT = {
+			remove_opinion_modifier = {
+				target = PREV
+				modifier = IR_heathens
+			}
+		}
+		remove_opinion_modifier = {
+			target = ROOT
+			modifier = IR_heretics
+		}
+		ROOT = {
+			remove_opinion_modifier = {
+				target = PREV
+				modifier = IR_heretics
+			}
+		}
+	}
+}
+
+#Set the opinion modifiers for ideological differences
+set_opinion_modifiers = {
+	if = {
+		limit = {
+			is_monarchy = yes
+		}
+		every_country = {
+			limit = {
+				is_monarchy = yes
+				NOT = {
+					has_same_government_as_ROOT = yes
+					has_relation_modifier = {
+						target = ROOT
+						modifier = IR_similar_ideology
+					}
+				}
+			}
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = IR_similar_ideology
+			}
+			reverse_add_opinion_modifier = {
+				target = ROOT
+				modifier = IR_similar_ideology
+			}
+		}
+		every_country = {
+			limit = {
+				is_monarchy = no
+				NOT = {
+					has_relation_modifier = {
+						target = ROOT
+						modifier = IR_different_ideology
+					}
+				}
+			}
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = IR_different_ideology
+			}
+			reverse_add_opinion_modifier = {
+				target = ROOT
+				modifier = IR_different_ideology
+			}
+		}
+	}
+	
+	if = {
+		limit = {
+			is_republic = yes
+		}
+		every_country = {
+			limit = {
+				is_republic = yes
+				NOT = {
+					has_same_government_as_ROOT = yes
+					has_relation_modifier = {
+						target = ROOT
+						modifier = IR_similar_ideology
+					}
+				}
+			}
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = IR_similar_ideology
+			}
+			reverse_add_opinion_modifier = {
+				target = ROOT
+				modifier = IR_similar_ideology
+			}
+		}
+		every_country = {
+			limit = {
+				is_republic = no
+				NOT = {
+					has_relation_modifier = {
+						target = ROOT
+						modifier = IR_different_ideology
+					}
+				}
+			}
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = IR_different_ideology
+			}
+			reverse_add_opinion_modifier = {
+				target = ROOT
+				modifier = IR_different_ideology
+			}
+		}
+	}
+	
+	if = {
+		limit = {
+			has_government = republic_peasant
+		}
+		every_country = {
+			limit = {
+				has_aristocracy	 = yes
+				NOT = {
+					has_relation_modifier = {
+						target = ROOT
+						modifier = IR_vile_peasants
+					}
+				}
+			}
+			add_opinion_modifier = {
+					target = ROOT
+					modifier = IR_vile_peasants
+				}
+			reverse_add_opinion_modifier = {
+				target = ROOT
+				modifier = IR_vile_aristocrats
+			}
+		}
+	}
+	
+	if = {
+		limit = {
+			NOT = {
+				OR = {
+					has_government = puritan
+					has_government = theocrat
+				}
+			}
+		}
+		every_country = {
+			limit = {
+				has_same_government_as_ROOT = yes
+				NOT = {
+					has_relation_modifier = {
+						target = ROOT
+						modifier = IR_same_ideology
+					}
+				}
+			}
+			add_opinion_modifier = {
+					target = ROOT
+					modifier = IR_same_ideology
+				}
+			reverse_add_opinion_modifier = {
+				target = ROOT
+				modifier = IR_same_ideology
+			}
+		}
+	}
+	
+	if = {
+		limit = {
+			has_government = puritan
+		}
+		every_country = {
+			limit = {
+				has_same_race_as_ROOT = yes
+				has_government = puritan
+				NOT = {
+					has_relation_modifier = {
+						target = ROOT
+						modifier = IR_puritan_pure_brothers
+					}
+				}
+			}
+			add_opinion_modifier = {
+					target = ROOT
+					modifier = IR_puritan_pure_brothers
+				}
+			reverse_add_opinion_modifier = {
+				target = ROOT
+				modifier = IR_puritan_pure_brothers
+			}
+		}
+		every_country = {
+			limit = {
+				has_same_race_as_ROOT = yes
+				NOT = {
+					has_government = puritan
+				}
+			}
+			add_opinion_modifier = {
+					target = ROOT
+					modifier = IR_puritan_extremists
+				}
+			reverse_add_opinion_modifier = {
+				target = ROOT
+				modifier = IR_puritan_good_race
+			}
+		}
+		every_country = {
+			limit = {
+				has_same_race_as_ROOT = no
+				has_government = puritan
+				NOT = {
+					has_relation_modifier = {
+						target = ROOT
+						modifier = IR_wrong_puritans
+					}
+				}
+			}
+			add_opinion_modifier = {
+					target = ROOT
+					modifier = IR_wrong_puritans
+				}
+			reverse_add_opinion_modifier = {
+				target = ROOT
+				modifier = IR_wrong_puritans
+			}
+		}
+		every_country = {
+			limit = {
+				has_same_race_as_ROOT = no
+				NOT = {
+					has_government = puritan
+				}
+			}
+			add_opinion_modifier = {
+					target = ROOT
+					modifier = IR_puritan_butchers
+				}
+			reverse_add_opinion_modifier = {
+				target = ROOT
+				modifier = IR_puritan_vermin
+			}
+		}
+	}
+}
+
+#Set religion heresies, heathens and true faith
+
+set_religions = {
+	every_country = {
+		limit = {
+			has_same_faith_as_ROOT = yes
+			NOT = {
+				has_government = theocrat
+			}
+			ROOT = {
+				NOT = {
+					has_government = theocrat
+				}
+			}
+		}
+		add_opinion_modifier = {
+				target = ROOT
+				modifier = IR_same_faith
+			}
+		reverse_add_opinion_modifier = {
+			target = ROOT
+			modifier = IR_same_faith
+		}
+	}
+	every_country = {
+		limit = {
+			has_same_faith_as_ROOT = no
+			is_heretical = no
+			NOT = {
+				has_government = theocrat
+			}
+			ROOT = {
+				NOT = {
+					has_government = theocrat
+				}
+			}
+		}
+		add_opinion_modifier = {
+				target = ROOT
+				modifier = IR_heathens
+			}
+		reverse_add_opinion_modifier = {
+			target = ROOT
+			modifier = IR_heathens
+		}
+	}
+	every_country = {
+		limit = {
+			has_same_faith_as_ROOT = no
+			is_heretical = yes
+			NOT = {
+				has_government = theocrat
+			}
+			ROOT = {
+				NOT = {
+					has_government = theocrat
+				}
+			}
+		}
+		add_opinion_modifier = {
+				target = ROOT
+				modifier = IR_heretics
+			}
+		reverse_add_opinion_modifier = {
+			target = ROOT
+			modifier = IR_heretics
+		}
+	}
+	every_country = {
+		limit = {
+			has_same_faith_as_ROOT = yes
+			has_government = theocrat
+			ROOT = {
+				NOT = {
+					has_government = theocrat
+				}
+			}
+		}
+		add_opinion_modifier = {
+				target = ROOT
+				modifier = IR_same_faith_theocrat
+			}
+		reverse_add_opinion_modifier = {
+			target = ROOT
+			modifier = IR_same_faith
+		}
+	}
+	every_country = {
+		limit = {
+			has_same_faith_as_ROOT = no
+			is_heretical = no
+			has_government = theocrat
+			ROOT = {
+				NOT = {
+					has_government = theocrat
+				}
+			}
+		}
+		add_opinion_modifier = {
+				target = ROOT
+				modifier = IR_heathens_theocrat
+			}
+		reverse_add_opinion_modifier = {
+			target = ROOT
+			modifier = IR_heathens
+		}
+	}
+	every_country = {
+		limit = {
+			has_same_faith_as_ROOT = no
+			is_heretical = yes
+			has_government = theocrat
+			ROOT = {
+				NOT = {
+					has_government = theocrat
+				}
+			}
+		}
+		add_opinion_modifier = {
+				target = ROOT
+				modifier = IR_heretics_theocrat
+			}
+		reverse_add_opinion_modifier = {
+			target = ROOT
+			modifier = IR_heretics
+		}
+	}
+	every_country = {
+		limit = {
+			has_same_faith_as_ROOT = yes
+			NOT = {
+				has_government = theocrat
+			}
+			ROOT = {
+				has_government = theocrat
+			}
+		}
+		add_opinion_modifier = {
+				target = ROOT
+				modifier = IR_same_faith
+			}
+		reverse_add_opinion_modifier = {
+			target = ROOT
+			modifier = IR_same_faith_theocrat
+		}
+	}
+	every_country = {
+		limit = {
+			has_same_faith_as_ROOT = no
+			is_heretical = no
+			NOT = {
+				has_government = theocrat
+			}
+			ROOT = {
+				has_government = theocrat
+			}
+		}
+		add_opinion_modifier = {
+				target = ROOT
+				modifier = IR_heathens
+			}
+		reverse_add_opinion_modifier = {
+			target = ROOT
+			modifier = IR_heathens_theocrat
+		}
+	}
+	every_country = {
+		limit = {
+			has_same_faith_as_ROOT = no
+			is_heretical = yes
+			NOT = {
+				has_government = theocrat
+			}
+			ROOT = {
+				has_government = theocrat
+			}
+		}
+		add_opinion_modifier = {
+				target = ROOT
+				modifier = IR_heretics
+			}
+		reverse_add_opinion_modifier = {
+			target = ROOT
+			modifier = IR_heretics
+		}
+	}
+	every_country = {
+		limit = {
+			has_same_faith_as_ROOT = yes
+			has_government = theocrat
+			ROOT = {
+				has_government = theocrat
+			}
+		}
+		add_opinion_modifier = {
+				target = ROOT
+				modifier = IR_same_faith_theocrat
+			}
+		reverse_add_opinion_modifier = {
+			target = ROOT
+			modifier = IR_same_faith_theocrat
+		}
+	}
+	every_country = {
+		limit = {
+			has_same_faith_as_ROOT = no
+			is_heretical = no
+			has_government = theocrat
+			ROOT = {
+				has_government = theocrat
+			}
+		}
+		add_opinion_modifier = {
+				target = ROOT
+				modifier = IR_heathens_theocrat
+			}
+		reverse_add_opinion_modifier = {
+			target = ROOT
+			modifier = IR_heathens_theocrat
+		}
+	}
+	every_country = {
+		limit = {
+			has_same_faith_as_ROOT = no
+			is_heretical = yes
+			has_government = theocrat
+			ROOT = {
+				has_government = theocrat
+			}
+		}
+		add_opinion_modifier = {
+				target = ROOT
+				modifier = IR_heretics_theocrat
+			}
+		reverse_add_opinion_modifier = {
+			target = ROOT
+			modifier = IR_heretics_theocrat
+		}
+	}
+}
+
+#Clear the opinion modifiers for religious differences
+
+clear_religious_opinion_modifier = {
+	every_country = {
+		remove_opinion_modifier = {
+			target = ROOT
+			modifier = IR_same_faith
+		}
+		ROOT = {
+			remove_opinion_modifier = {
+				target = PREV
+				modifier = IR_same_faith
+			}
+		}
+		remove_opinion_modifier = {
+			target = ROOT
+			modifier = IR_heathens
+		}
+		ROOT = {
+			remove_opinion_modifier = {
+				target = PREV
+				modifier = IR_heathens
+			}
+		}
+		remove_opinion_modifier = {
+			target = ROOT
+			modifier = IR_heretics
+		}
+		ROOT = {
+			remove_opinion_modifier = {
+				target = PREV
+				modifier = IR_heretics
+			}
+		}
+		remove_opinion_modifier = {
+			target = ROOT
+			modifier = IR_same_faith_theocrat
+		}
+		ROOT = {
+			remove_opinion_modifier = {
+				target = PREV
+				modifier = IR_same_faith_theocrat
+			}
+		}
+		remove_opinion_modifier = {
+			target = ROOT
+			modifier = IR_heathens_theocrat
+		}
+		ROOT = {
+			remove_opinion_modifier = {
+				target = PREV
+				modifier = IR_heathens_theocrat
+			}
+		}
+		remove_opinion_modifier = {
+			target = ROOT
+			modifier = IR_heretics_theocrat
+		}
+		ROOT = {
+			remove_opinion_modifier = {
+				target = PREV
+				modifier = IR_heretics_theocrat
+			}
+		}
+	}
+}

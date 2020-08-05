@@ -1,0 +1,65 @@
+strategic_region={
+	id=35
+	name="STRATEGICREGION_35"
+	provinces={
+		12 226 310 810 1036 1385 1677 1738 1812 1992 2674 2794 3011 3124 3785 4102 4355 4954 5272 5296 5533 9563 9569 9576 9580 9581 9583 
+	}
+	weather={#Southern Hemisphere Cold Weather - Arid
+		period={ #Summer
+			between={ 1.12 28.2 }
+			temperature={ 12.0 20.0 }
+			temperature_day_night={ -8.0 -3.0 }
+			no_phenomenon=0.500
+			rain_light=0.070
+			rain_heavy=0.005
+			snow=0.000
+			blizzard=0.000
+			arctic_water=0.000
+			mud=0.310
+			sandstorm=0.000
+			min_snow_level=0.000
+		}
+		period={ #Spring
+			between={ 1.9 30.11 }
+			temperature={ 8.0 14.0 }
+			temperature_day_night={ -7.0 -2.0 }
+			no_phenomenon=0.500
+			rain_light=0.130
+			rain_heavy=0.010
+			snow=0.010
+			blizzard=0.000
+			arctic_water=1.000
+			mud=0.400
+			sandstorm=0.000
+			min_snow_level=0.000
+		}
+		period={#Fall
+			between={ 1.3 31.5 }
+			temperature={ -18.0 4.0 }
+			temperature_day_night={ -9.0 -3.0 }
+			no_phenomenon=0.500
+			rain_light=0.140
+			rain_heavy=0.015
+			snow=0.160
+			blizzard=0.015
+			arctic_water=1.000
+			mud=0.360
+			sandstorm=0.000
+			min_snow_level=0.000
+		}
+		period={#Winter
+			between={ 1.6 31.8 }
+			temperature={ -37.0 -6.0 }
+			temperature_day_night={ -15.0 -5.0 }
+			no_phenomenon=0.500
+			rain_light=0.010
+			rain_heavy=0.000
+			snow=0.350
+			blizzard=0.075
+			arctic_water=1.000
+			mud=0.120
+			sandstorm=0.000
+			min_snow_level=0.120
+		}
+	}
+}

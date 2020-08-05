@@ -2,19 +2,17 @@ state={
 	id=322
 	name="STATE_322"
 	provinces={
-		2715 2717 3684 4609 4610 7004 8146 
+		9273 9237 4522 9211 9193 2931 9207
 	}
 	state_category = pastoral
 	manpower=2099
 	buildings_max_level_factor=1.000
-	resources = {
-			steel = 14
-	}
+	
 	history = {
-		owner = UNG
+		owner = SPW
 		buildings = {
 			infrastructure = 2
 		}
-		add_core_of = UNG
+		add_core_of = SPW
 		}
 }

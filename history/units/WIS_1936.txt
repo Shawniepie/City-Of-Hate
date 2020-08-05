@@ -48,7 +48,7 @@ units = {
 
 	division = {
 		name = "1st Regiment 'Schauser's Männer'"
-		location = 117
+		location = 1690
 		division_template = "Prinztruppen"
 		start_experience_factor = 0.5
 
@@ -56,7 +56,7 @@ units = {
 	
 	division = {
 		name = "2nd Regiment 'Südwacht'"
-		location = 7014
+		location = 9185
 		division_template = "Prinztruppen"
 		start_experience_factor = 0.5
 
@@ -64,7 +64,7 @@ units = {
 	
 	division = {
 		name = "1st Cavalry 'Haus Treitschke'"
-		location = 5032
+		location = 4093
 		division_template = "Prinzritter"
 		start_experience_factor = 0.7
 
@@ -72,7 +72,7 @@ units = {
 	
 	division = {
 		name = "Wistingen City Watch"
-		location = 4641
+		location = 4748
 		division_template = "Stadtwache"
 		start_experience_factor = 0.05
 

@@ -2,7 +2,7 @@ state={
 	id=681
 	name="STATE_681"
 	provinces={
-		40 41 2347 3979 3980 5790 8109 
+		7251 867
 	}
 	state_category = pastoral
 	manpower=9992

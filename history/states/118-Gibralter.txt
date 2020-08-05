@@ -2,13 +2,13 @@ state={
 	id=118
 	name="STATE_118"
 	provinces={
-		5815 6247 6392 6393 6394 6395 8841 
+		1941 1353 7404 5592
 	}
 	state_category = large_city
 	manpower=1024390
 	buildings_max_level_factor=1.000
 		history={
-		victory_points = { 6393 50 }
+		victory_points = { 1353 50 }
 		owner = RTH
 		buildings = {	
 		infrastructure = 6

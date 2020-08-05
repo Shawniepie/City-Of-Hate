@@ -199,7 +199,7 @@ HLZ_invade_ordoria = {
 			has_country_flag = HLZ_kriegsplan_nord
 			divisions_in_border_state = {
 				size > 2
-				state = 305
+				state = 297
 				border_state = 96
 			}
 			NOT = {
@@ -218,15 +218,15 @@ HLZ_invade_ordoria = {
 			start_border_war = {
 				change_state_after_war = no
 				attacker = {
-					state = 305
-					num_provinces = 4
+					state = 297
+					num_provinces = 1
 					on_win = holzbrenn_invade.1
 					on_lose = holzbrenn_invade.2
 					on_cancel = holzbrenn_invade.3
 				}
 				defender = {
 					state = 96
-					num_provinces = 3
+					num_provinces = 1
 					on_win = holzbrenn_invade.4
 					on_lose = holzbrenn_invade.5
 					on_cancel = holzbrenn_invade.6
@@ -279,7 +279,7 @@ HLZ_invade_ordoria = {
 				}
 				defender = {
 					state = 98
-					num_provinces = 1
+					num_provinces = 2
 					on_win = holzbrenn_invade.10
 					on_lose = holzbrenn_invade.11
 					on_cancel = holzbrenn_invade.12
@@ -332,7 +332,7 @@ HLZ_invade_ordoria = {
 				}
 				defender = {
 					state = 97
-					num_provinces = 2
+					num_provinces = 3
 					on_win = holzbrenn_invade.16
 					on_lose = holzbrenn_invade.17
 					on_cancel = holzbrenn_invade.18

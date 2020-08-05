@@ -1,3 +1,9 @@
+Join our Discord! discord.gg/QhZAGMN
+Check out our subreddit! reddit.com/r/CoHmod
+Lost in the lore? Take a look at our wiki! city-of-hate.fandom.com/wiki/City_of_Hate_Wiki
+
+---
+
 An age of uneasy peace is drawing to a close.
 
 In the far North, the disparate kingdoms of the Northern Plains have been unified under the banner of Trabaster Arthenon, a warlock and conqueror from the West. Yet his rule is not absolute; separatist sentiments are still alive and well, and a young half-Elf from the fields of Nastrogdar claims the Gods have called upon him to lead a rebellion and cast off the Tyranny of the Grand Master.
@@ -17,14 +23,10 @@ This mod aims to bring a fantasy world to life, and let you take command - lead 
 Please note that as it is currently a public alpha mod, it is still VERY much in development. Most of the countries aren't even on the map yet, but I've done my best to insure that what is there is fun to play.
 
 Features:
-	-A completely original setting dreamt up by yours truly.
-	-Seven unique ideologies, including monarchies, republics and theocracies.
-	-A completely new generic Focus Tree with 67 foci to choose from.
-	-Two unique focus trees, with plenty more planned.
-	-Five unique units, with many more on the way.
-	-A religion system - choose a Patron Deity for your people!
-	-(Hopefully) a Hearts of Iron experience completely unlike anything you've seen before!
-
-Join our Discord! https://discord.gg/QhZAGMN
-
-If you have any questions or bugs, please post them on the mod's official subreddit, r/CoHmod. You'll also find dev diaries and teasers here.
+-A completely original setting dreamt up by yours truly.
+-Seven unique ideologies, including monarchies, republics and theocracies.
+-A completely new generic Focus Tree with 67 foci to choose from.
+-Two unique focus trees, with plenty more planned.
+-Five unique units, with many more on the way.
+-A religion system - choose a Patron Deity for your people!
+-(Hopefully) a Hearts of Iron experience completely unlike anything you've seen before!

@@ -2,8 +2,34 @@ state={
 	id=378
 	name="STATE_378"
 	provinces={
-		5593 
+		6861 3856
 	}
-	manpower=0
+	state_category = metropolis
+	manpower=450192
 	buildings_max_level_factor=1.000
+	
+	resources = {
+			food = 500
+			aluminium = 500
+			rubber = 500
+			tungsten = 500
+			steel = 500
+			chromium = 500
+	}
+	
+	history={
+		owner = MER
+		buildings = {
+			infrastructure = 8
+			industrial_complex = 3
+			arms_factory = 1
+			dockyard = 4
+			6861 = {
+				naval_base = 10
+			}
+		}
+		add_core_of = MER
+	}
 }
+
+

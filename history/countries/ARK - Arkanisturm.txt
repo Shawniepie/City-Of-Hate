@@ -37,7 +37,25 @@ set_popularities = {
 
 add_ideas = {
 	human_country
-	hieyrenous_patron
+	arkanimism_religion
+}
+
+give_military_access = UNG
+give_military_access = HLZ
+give_military_access = NOC
+give_military_access = SPW
+give_military_access = SVT
+give_military_access = STA
+give_military_access = NRK
+give_military_access = TEI
+give_military_access = SNF
+give_military_access = FTH
+give_military_access = WIS
+give_military_access = WSZ
+
+add_opinion_modifier = {
+	target = SVT
+	modifier = bitter_rivals
 }
 
 create_country_leader = {
