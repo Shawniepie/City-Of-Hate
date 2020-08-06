@@ -1,0 +1,110 @@
+DORF_seventh_campaign = {
+	
+	DORF_restore_zarathum = {
+		
+		icon = GFX_decision_ordorian_settler_governments
+		
+		allowed = {
+			OR = {
+				original_tag = SKA
+				original_tag = RMT
+				original_tag = BER
+			}
+			num_of_civilian_factories > 9
+		}
+		
+		highlight_state_targets = {
+			state = 174
+		}
+		
+		available = {
+			owns_state = 174
+		}
+		
+		cost = 0
+		
+		ai_will_do = {
+			factor = 200
+		}
+		
+		visible = {
+			OR = {
+				original_tag = SKA
+				original_tag = RMT
+				original_tag = BER
+			}
+			NOT = {
+				has_global_flag = DORF_zarathum_restored
+			}
+		}
+		
+		fire_only_once = yes
+		
+		cost = 125
+		
+		days_remove = 365
+		
+		modifier = {
+			civilian_factory_use = 10
+		}
+		
+		remove_effect = {
+			custom_effect_tooltip = DORF_restore_zarathum_tt
+			set_global_flag = DORF_zarathum_restored
+			hidden_effect = {
+				174 = {
+					set_state_category = megalopolis
+					set_state_name = "Zarathum"
+					
+				}
+				set_province_name = {
+					id = 1989
+					name = "Zarathum"
+				}
+			}
+		}
+	}
+	
+	DORF_reform_vergallheim = {
+		
+		icon = GFX_decision_ordorian_settler_governments
+		
+		allowed = {
+			OR = {
+				original_tag = SKA
+				original_tag = RMT
+				original_tag = BER
+			}
+		}
+		
+		available = {
+			AND = {
+				#ow
+			}
+		}
+		
+		cost = 0
+		
+		ai_will_do = {
+			factor = 200
+		}
+		
+		visible = {
+			OR = {
+				has_government = puritan
+				has_government = theocrat
+			}
+			NOT = {
+				has_country_flag = ORD_settler_governments_enabled
+			}
+			NOT = {
+				has_country_flag = ORD_domestic_moderate
+			}
+		}
+		
+		complete_effect = {
+			custom_effect_tooltip = enable_commissiaries_tt
+			set_country_flag = ORD_settler_governments_enabled
+		}
+	}
+}

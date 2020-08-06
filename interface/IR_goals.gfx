@@ -3,6 +3,16 @@ spriteTypes = {
 	#### Mod-specific goal icons
 	
 	SpriteType = {
+		name = "GFX_focus_generic_bergial_agreement"
+		texturefile = "gfx/interface/goals/focus_generic_bergial_agreement.dds"			
+	}
+	
+	SpriteType = {
+		name = "GFX_focus_ung_ally_bergial"
+		texturefile = "gfx/interface/goals/focus_ung_ally_bergial.dds"			
+	}
+	
+	SpriteType = {
 		name = "GFX_focus_ung_ally_irinthios"
 		texturefile = "gfx/interface/goals/focus_ung_ally_irinthios.dds"			
 	}

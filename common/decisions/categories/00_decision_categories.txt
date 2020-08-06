@@ -1,6 +1,11 @@
-#DORF_seventh_campaign = {
+DORF_seventh_campaign = {
 	
-	#icon = GFX_decision_category_
+	icon = GFX_decision_category_seventh_campaign
+	
+	allowed = {
+		always = yes
+	}
+}
 
 commissiaries = {
 

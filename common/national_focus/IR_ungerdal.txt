@@ -2638,7 +2638,7 @@ focus_tree = {
         }
 
         mutually_exclusive = {
-            focus = UNG_Trade_deals_with_Bergialer
+            focus = UNG_trade_deals_with_bergialer
         }
 
         ai_will_do = {

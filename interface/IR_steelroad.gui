@@ -17,7 +17,6 @@ guiTypes = {
 			pdx_tooltip_delayed = GUI_steel_road_button_tt_delayed
 			Orientation = UPPER_RIGHT
 			clicksound = ui_menu_over
-			clipping = no
 		}
 	}
 	
@@ -31,17 +30,16 @@ guiTypes = {
 		moveable = yes
 		click_to_front = yes
 		orientation= center	
-		clipping = no
 		
 		size = {
-			width = 527
+			width = 550
 			height = 1000
 		}
 		
 		buttonType = {
 				name = "close_button"
 				position = {
-					x = -46
+					x = -69 #nice
 					y = 13
 				}
 				quadTextureSprite ="GFX_closebutton"
@@ -57,6 +55,126 @@ guiTypes = {
 			spriteType = "GFX_steel_road_bg"
 		}
 		
+		containerWindowType = {
+			name = "steel_road_info"
+			position = {
+				x = 0
+				y = 0
+			}
+			size = {
+				width = 1000
+				height = 1000
+			}
+		}
+		
+		containerWindowType = {
+			name = "steel_road_entry"
+			position = { x=10 y=81 }
+			size = { width = 402 height = 54 }
+			clipping = no
+
+			iconType = {
+				name = "picture"
+				position = { x = 65 y = 20 }
+				spriteType = "GFX_steel_road_icon"
+			}
+
+			background = {
+				name = "Background"
+				quadTextureSprite ="GFX_bordered_window"
+			}
+
+			iconType ={
+				name ="country_flag_frame"
+				spriteType = "GFX_flag_small_golden_frame"
+				position = { x = 60 y = 110 }
+				alwaystransparent = yes
+			}
+			
+			buttonType = {
+				name = "relative_flag"
+				quadTextureSprite ="GFX_flag_smallest_overlay"
+				position = { x = 60 y = 107 }
+			}
+
+			instantTextboxType = {
+				name = "location"
+				position = { x = 94 y = 105 }
+				textureFile = ""
+				font = "hoi_30header"
+				borderSize = {x = 0 y = 0}
+				text = "Maus"
+				maxWidth = 150
+				maxHeight = 40
+				format = left
+				multiline = yes
+				vertical_alignment = center
+				alwaystransparent = yes
+			}
+			name = "steel_road_entry"
+			position = { x=10 y=81 }
+			size = { width = 402 height = 54 }
+			clipping = no
+
+			iconType = {
+				name = "picture"
+				position = { x = 65 y = 20 }
+				spriteType = "GFX_steel_road_icon"
+			}
+
+			background = {
+				name = "Background"
+				quadTextureSprite ="GFX_bordered_window"
+			}
+
+			iconType ={
+				name ="country_flag_frame"
+				spriteType = "GFX_flag_small_golden_frame"
+				position = { x = 60 y = 110 }
+				alwaystransparent = yes
+			}
+			
+			buttonType = {
+				name = "relative_flag"
+				quadTextureSprite ="GFX_flag_smallest_overlay"
+				position = { x = 60 y = 107 }
+			}
+
+			instantTextboxType = {
+				name = "location"
+				position = { x = 94 y = 105 }
+				textureFile = ""
+				font = "hoi_30header"
+				borderSize = {x = 0 y = 0}
+				text = "Maus"
+				maxWidth = 150
+				maxHeight = 40
+				format = left
+				multiline = yes
+				vertical_alignment = center
+				alwaystransparent = yes
+			}
+		}
+
+        listboxType  = {
+            name = "steelroad_scrollbar"
+            position = {
+                x = -150
+                y = 0
+            }
+            orientation = "CENTER"
+            size = {
+                x = 100
+                y = 100
+            }
+            spacing = 0
+            scrollbartype = "standardlistbox_slider"
+            borderSize = {
+                x = 0
+                y = 0
+            }
+        }
+		
 		instantTextBoxType = {
 			name = "title_text"
 			position = {
@@ -68,58 +186,6 @@ guiTypes = {
 			font = "hoi_36header"
 		}
 		
-		gridboxtype = {
-              name = "steelroad_grid"
-              position = { x = 0 y = 0}
-              size = { width = 50 length = 50 }
-              slotsize = { width = 5 length = 5}
-        }
-		
-		containerWindowType = {
-		name = "steel_road_entry"
-		position = { x=10 y=81 }
-		size = { width = 402 height = 54 }
-		clipping = no
-
-		iconType = {
-			name = "picture"
-			position = { x = 65 y = 20 }
-			spriteType = "GFX_steel_road_icon"
-		}
-
-		background = {
-			name = "Background"
-			quadTextureSprite ="GFX_bordered_window"
-		}
-
-		iconType ={
-			name ="country_flag_frame"
-			spriteType = "GFX_flag_small_golden_frame"
-			position = { x = 60 y = 110 }
-			alwaystransparent = yes
-		}
-		
-		buttonType = {
-			name = "relative_flag"
-			quadTextureSprite ="GFX_flag_smallest_overlay"
-			position = { x = 60 y = 107 }
-		}
-
-		instantTextboxType = {
-			name = "location"
-			position = { x = 94 y = 105 }
-			textureFile = ""
-			font = "hoi_30header"
-			borderSize = {x = 0 y = 0}
-			text = "Maus"
-			maxWidth = 150
-			maxHeight = 40
-			format = left
-			multiline = yes
-			vertical_alignment = center
-			alwaystransparent = yes
-		}
-
 		listboxType  = {
 			name = "steelroad_scrollbar"
 			position = {
@@ -139,4 +205,4 @@ guiTypes = {
 			}
 		}
 	}
-}																				
+}																			
