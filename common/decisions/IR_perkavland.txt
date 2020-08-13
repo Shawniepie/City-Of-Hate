@@ -68,6 +68,7 @@ plunder_schneefilde = {
 					on_cancel = schneefilde_schneefilder_sack.3
 				}
 			}
+			set_country_flag = PRK_schneefilde_raided
 		}
 	}
 }

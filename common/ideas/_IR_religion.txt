@@ -1211,5 +1211,32 @@ ideas = {
 			
 			removal_cost = -1
 		}
+		
+		unknownism_religion = { #No, not an unknown religion, the religion of the Unknown
+			
+			visible = {
+				original_tag = BLD
+			}
+			
+			allowed = {
+				original_tag = BLD
+			}
+			
+			available = {
+				original_tag = BLD
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = religion_unknownism
+			
+			traits = {
+				unknownism_bonuses
+			}
+			
+			removal_cost = -1
+		}
 	}
 }

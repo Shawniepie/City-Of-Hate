@@ -1,0 +1,93 @@
+﻿division_template = {
+	name = "Ogre Bashers"	
+	regiments = {
+		ogre_warriors = { x = 0 y = 0 }
+		ogre_warriors = { x = 0 y = 1 }
+		ogre_warriors = { x = 0 y = 2 }
+		ogre_warriors = { x = 1 y = 0 }
+		ogre_warriors = { x = 1 y = 1 }
+	}
+}
+
+units = {
+
+	division = {
+		name = "Kurbah's Bashers"
+		location = 6469
+		division_template = "Ogre Bashers"
+		start_experience_factor = 0.6
+
+	}
+	
+	division = {
+		name = "Thaurun's Royal Guard"
+		location = 6435
+		division_template = "Ogre Bashers"
+		start_experience_factor = 0.4
+
+	}
+	
+	division = {
+		name = "Reimvan's Bashers"
+		location = 1990
+		division_template = "Ogre Bashers"
+		start_experience_factor = 0.4
+
+	}
+
+	division = {
+		name = "Vurkun's Bashers"
+		location = 4583
+		division_template = "Ogre Bashers"
+		start_experience_factor = 0.3
+
+	}
+	
+	division = {
+		name = "Nadeja's Unknown Bashers"
+		location = 1978
+		division_template = "Ogre Bashers"
+		start_experience_factor = 0.3
+
+	}
+
+	division = {
+		name = "Humie Tribute Getters"
+		location = 6860
+		division_template = "Ogre Bashers"
+		start_experience_factor = 0.3
+
+	}
+	
+	division = {
+		name = "Stuntie Tribute Getters"
+		location = 6420
+		division_template = "Ogre Bashers"
+		start_experience_factor = 0.3
+
+	}
+
+	division = {
+		name = "Elfie Tribute Getters"
+		location = 4360
+		division_template = "Ogre Bashers"
+		start_experience_factor = 0.3
+
+	}
+}
+
+
+
+
+### STARTING PRODUCTION ###
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_0
+			creator = "BLD"
+		}
+		requested_factories = 6
+		progress = 0.48
+		efficiency = 22
+	}
+}

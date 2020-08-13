@@ -20,6 +20,26 @@ default = {
 }
 
 ###############################################################
+# Bilodyan Ogres
+###############################################################
+
+BLD = {
+	male = {
+		names = {
+			Stoyan Grudi Nedelcho Anghel Enyo Galin Atanas Tzako
+		}
+	}
+	female = {
+		names = {
+			Hristina Lyubina Penka Snezha Valya Rositsa Boyka Gizda
+		}
+	}
+	surnames = {
+		Atanasov Vranchev Petrova Rysinova Cristova
+	}
+}
+
+###############################################################
 # Tlarthingian Lizards
 ###############################################################
 

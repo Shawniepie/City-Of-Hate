@@ -10,6 +10,25 @@
 # protect
 # influence
 
+prepare_schneefilder_raid = {
+	enable = {
+		original_tag = PRK
+	}
+	abort = {
+		has_country_flag = PRK_schneefilde_raided
+	}
+	
+	ai_strategy = {
+		type = put_unit_buffers
+		
+		ratio = 0.4
+		
+		states = {
+			621
+		}
+	}
+}
+
 default_unit_production = {
 	enable = {
 		original_tag = PRK

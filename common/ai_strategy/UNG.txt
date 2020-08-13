@@ -134,9 +134,7 @@ cant_reach_rthaur = {
 					tag = RTH
 				}
 				any_country = {
-					limit = {
-						is_subject_of = UNG
-					}
+					is_subject_of = UNG
 					any_neighbor_country = {
 						tag = RTH
 					}
@@ -151,9 +149,7 @@ cant_reach_rthaur = {
 				tag = RTH
 			}
 			any_country = {
-				limit = {
-					is_subject_of = UNG
-				}
+				is_subject_of = UNG
 				any_neighbor_country = {
 					tag = RTH
 				}

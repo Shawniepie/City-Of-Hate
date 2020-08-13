@@ -59,14 +59,14 @@ add_ideas = {
 		target = RMT
 		modifier = bitter_rivals
 	}
-	
+
 	add_opinion_modifier = {
-		target = BER
+		target = KUR
 		modifier = bitter_rivals
 	}
 	
 	add_opinion_modifier = {
-		target = KUR
+		target = BLD
 		modifier = bitter_rivals
 	}
 	

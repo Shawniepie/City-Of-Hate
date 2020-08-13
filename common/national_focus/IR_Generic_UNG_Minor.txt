@@ -1,0 +1,1266 @@
+	shared_focus = {
+		id = genUNG_political_landscape
+		icon = GFX_goal_generic_demand_territory
+		cost = 10
+		x = 23
+		y = 0
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+			
+		}
+		
+		completion_reward = {
+			
+		}
+
+	}
+	shared_focus = {
+		id = genUNG_industrial_expansion
+		icon = GFX_focus_generic_industry_1
+		cost = 10
+		x = 9
+		y = 0
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+			
+		}
+		
+		completion_reward = {
+			
+		}
+
+	}
+	shared_focus = {
+		id = genUNG_equipping_the_soldiers
+		icon = GFX_goal_rhineland
+		cost = 10
+		prerequisite = {
+			focus = genUNG_industrial_expansion
+		}
+		mutually_exclusive = {
+			focus = genUNG_feeding_the_population
+		}
+		x = 8
+		y = 1
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+			
+		}
+		
+		completion_reward = {
+			
+		}
+
+	}
+	shared_focus = {
+		id = genUNG_feeding_the_population
+		icon = GFX_goal_generic_consumer_goods
+		cost = 10
+		prerequisite = {
+			focus = genUNG_industrial_expansion
+		}
+		mutually_exclusive = {
+			focus = genUNG_equipping_the_soldiers
+		}
+		x = 10
+		y = 1
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+			
+		}
+		
+		completion_reward = {
+			
+		}
+
+	}
+	shared_focus = {
+		id = genUNG_economic_reforms
+		icon = GFX_focus_hol_the_foundations_of_defense
+		cost = 10
+		prerequisite = {
+			focus = genUNG_equipping_the_soldiers
+			focus = genUNG_feeding_the_population
+		}
+		x = 9
+		y = 2
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+			
+		}
+		
+		completion_reward = {
+			
+		}
+
+	}
+	shared_focus = {
+		id = genUNG_recovery_from_the_fourth_inquisition
+		icon = GFX_focus_mex_restore_the_army_of_christ
+		cost = 10
+		prerequisite = {
+			focus = genUNG_economic_reforms
+		}
+		x = 4
+		y = 3
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+			
+		}
+		
+		completion_reward = {
+			
+		}
+
+	}
+	shared_focus = {
+		id = genUNG_denounce_septa_kirchoff
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10
+		prerequisite = {
+			focus = genUNG_recovery_from_the_fourth_inquisition
+		}
+		mutually_exclusive = {
+			focus = genUNG_reapproach_vichtlas
+		}
+		x = 2
+		y = 4
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+			
+		}
+		
+		completion_reward = {
+			
+		}
+
+	}
+	shared_focus = {
+		id = genUNG_demand_forgiveness
+		icon = GFX_goal_generic_propaganda
+		cost = 10
+		prerequisite = {
+			focus = genUNG_denounce_septa_kirchoff
+		}
+		x = 1
+		y = 5
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+			
+		}
+		
+		completion_reward = {
+			
+		}
+
+	}
+	shared_focus = {
+		id = genUNG_corruption_of_church
+		icon = GFX_goal_generic_demand_territory
+		cost = 10
+		prerequisite = {
+			focus = genUNG_denounce_septa_kirchoff
+		}
+		x = 3
+		y = 5
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+			
+		}
+		
+		completion_reward = {
+			
+		}
+
+	}
+	shared_focus = {
+		id = genUNG_reapproach_vichtlas
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		cost = 10
+		prerequisite = {
+			focus = genUNG_recovery_from_the_fourth_inquisition
+		}
+		mutually_exclusive = {
+			focus = genUNG_denounce_septa_kirchoff
+		}
+		x = 6
+		y = 4
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+			
+		}
+		
+		completion_reward = {
+			
+		}
+
+	}
+	shared_focus = {
+		id = genUNG_new_septa_new_chance
+		icon = GFX_focus_generic_self_management
+		cost = 10
+		prerequisite = {
+			focus = genUNG_reapproach_vichtlas
+		}
+		x = 5
+		y = 5
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+			
+		}
+		
+		completion_reward = {
+			
+		}
+
+	}
+	shared_focus = {
+		id = genUNG_sins_of_the_father
+		icon = GFX_goal_generic_improve_relations
+		cost = 10
+		prerequisite = {
+			focus = genUNG_reapproach_vichtlas
+		}
+		x = 7
+		y = 5
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+			
+		}
+		
+		completion_reward = {
+			
+		}
+
+	}
+	shared_focus = {
+		id = genUNG_advanced_military
+		icon = GFX_focus_chi_army_reform
+		cost = 10
+		prerequisite = {
+			focus = genUNG_economic_reforms
+		}
+		x = 12
+		y = 3
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+			
+		}
+		
+		completion_reward = {
+			
+		}
+
+	}
+	shared_focus = {
+		id = genUNG_equipment_effort
+		icon = GFX_focus_generic_commonwealth_build_infantry
+		cost = 10
+		prerequisite = {
+			focus = genUNG_advanced_military
+		}
+		x = 10
+		y = 4
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+			
+		}
+		
+		completion_reward = {
+			
+		}
+
+	}
+	shared_focus = {
+		id = genUNG_aggression
+		icon = GFX_focus_generic_strike_at_democracy1
+		cost = 10
+		prerequisite = {
+			focus = genUNG_advanced_military
+		}
+		prerequisite = {
+			focus = genUNG_advanced_military
+		}
+		mutually_exclusive = {
+			focus = genUNG_protection
+		}
+		x = 12
+		y = 4
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+			
+		}
+		
+		completion_reward = {
+			
+		}
+
+	}
+	shared_focus = {
+		id = genUNG_doctrine_effort
+		icon = GFX_goal_generic_army_doctrines
+		cost = 10
+		prerequisite = {
+			focus = genUNG_aggression
+		}
+		prerequisite = {
+			focus = genUNG_equipment_effort
+		}
+		x = 11
+		y = 5
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+			
+		}
+		
+		completion_reward = {
+			
+		}
+
+	}
+	shared_focus = {
+		id = genUNG_siege_development
+		icon = GFX_goal_generic_army_artillery
+		cost = 10
+		prerequisite = {
+			focus = genUNG_equipment_effort
+		}
+		prerequisite = {
+			focus = genUNG_aggression
+		}
+		x = 9
+		y = 5
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+			
+		}
+		
+		completion_reward = {
+			
+		}
+
+	}
+	shared_focus = {
+		id = genUNG_advanced_industry
+		icon = GFX_focus_generic_industry_2
+		cost = 10
+		prerequisite = {
+			focus = genUNG_economic_reforms
+		}
+		x = 14
+		y = 3
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+			
+		}
+		
+		completion_reward = {
+			
+		}
+
+	}
+	shared_focus = {
+		id = genUNG_protection
+		icon = GFX_goal_generic_fortify_city
+		cost = 10
+		prerequisite = {
+			focus = genUNG_advanced_industry
+		}
+		mutually_exclusive = {
+			focus = genUNG_aggression
+		}
+		x = 14
+		y = 4
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+			
+		}
+		
+		completion_reward = {
+			
+		}
+
+	}
+	shared_focus = {
+		id = genUNG_infrastructure_construction
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10
+		prerequisite = {
+			focus = genUNG_advanced_industry
+		}
+		x = 16
+		y = 4
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+			
+		}
+		
+		completion_reward = {
+			
+		}
+
+	}
+	shared_focus = {
+		id = genUNG_border_guards
+		icon = GFX_goal_generic_construct_military
+		cost = 10
+		prerequisite = {
+			focus = genUNG_protection
+		}
+		prerequisite = {
+			focus = genUNG_infrastructure_construction
+		}
+		x = 15
+		y = 5
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+			
+		}
+		
+		completion_reward = {
+			
+		}
+
+	}
+	shared_focus = {
+		id = genUNG_voluntary_assistance
+		icon = GFX_focus_generic_little_entente
+		cost = 10
+		prerequisite = {
+			focus = genUNG_protection
+		}
+		prerequisite = {
+			focus = genUNG_infrastructure_construction
+		}
+		x = 17
+		y = 5
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+			
+		}
+		
+		completion_reward = {
+			
+		}
+
+	}
+	shared_focus = {
+		id = genUNG_a_senate_for_the_people
+		icon = GFX_goal_generic_alliance
+		cost = 10
+		prerequisite = {
+			focus = genUNG_political_landscape
+		}
+		mutually_exclusive = {
+			focus = genUNG_follow_proven_guidelines
+		}
+		x = 21
+		y = 1
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+			
+		}
+		
+		completion_reward = {
+			
+		}
+
+	}
+	shared_focus = {
+		id = genUNG_empower_the_merchants
+		icon = GFX_goal_tripartite_pact
+		cost = 10
+		prerequisite = {
+			focus = genUNG_a_senate_for_the_people
+		}
+		mutually_exclusive = {
+			focus = genUNG_only_the_best_for_our_country
+		}
+		x = 20
+		y = 2
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+			
+		}
+		
+		completion_reward = {
+			
+		}
+
+	}
+	shared_focus = {
+		id = genUNG_only_the_best_for_our_country
+		icon = GFX_focus_generic_military_academy
+		cost = 10
+		prerequisite = {
+			focus = genUNG_a_senate_for_the_people
+		}
+		mutually_exclusive = {
+			focus = genUNG_empower_the_merchants
+		}
+		x = 22
+		y = 2
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+			
+		}
+		
+		completion_reward = {
+			
+		}
+
+	}
+	shared_focus = {
+		id = genUNG_follow_proven_guidelines
+		icon = GFX_goal_generic_national_unity
+		cost = 10
+		prerequisite = {
+			focus = genUNG_political_landscape
+		}
+		mutually_exclusive = {
+			focus = genUNG_a_senate_for_the_people
+		}
+		x = 25
+		y = 1
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+			
+		}
+		
+		completion_reward = {
+			
+		}
+
+	}
+	shared_focus = {
+		id = genUNG_the_constitution
+		icon = GFX_focus_generic_treaty
+		cost = 10
+		prerequisite = {
+			focus = genUNG_follow_proven_guidelines
+		}
+		mutually_exclusive = {
+			focus = genUNG_one_true_ruler
+		}
+		x = 24
+		y = 2
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+			
+		}
+		
+		completion_reward = {
+			
+		}
+
+	}
+	shared_focus = {
+		id = genUNG_one_true_ruler
+		icon = GFX_focus_generic_monarchy_1
+		cost = 10
+		prerequisite = {
+			focus = genUNG_follow_proven_guidelines
+		}
+		mutually_exclusive = {
+			focus = genUNG_the_constitution
+		}
+		x = 26
+		y = 2
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+			
+		}
+		
+		completion_reward = {
+			
+		}
+
+	}
+	shared_focus = {
+		id = genUNG_power_to_the_rightful_rulers
+		icon = GFX_focus_generic_self_management
+		cost = 10
+		prerequisite = {
+			focus = genUNG_empower_the_merchants
+			focus = genUNG_only_the_best_for_our_country
+			focus = genUNG_the_constitution
+			focus = genUNG_one_true_ruler
+		}
+		x = 23
+		y = 3
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+			
+		}
+		
+		completion_reward = {
+			
+		}
+
+	}
+	shared_focus = {
+		id = genUNG_foreign_trade_policies
+		icon = GFX_goal_generic_trade
+		cost = 10
+		prerequisite = {
+			focus = genUNG_power_to_the_rightful_rulers
+		}
+		prerequisite = {
+			focus = genUNG_empower_the_merchants
+		}
+		x = 20
+		y = 4
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+			
+		}
+		
+		completion_reward = {
+			
+		}
+
+	}
+	shared_focus = {
+		id = genUNG_flexible_market
+		icon = GFX_goal_generic_positive_trade_relations
+		cost = 10
+		prerequisite = {
+			focus = genUNG_foreign_trade_policies
+		}
+		x = 20
+		y = 5
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+			
+		}
+		
+		completion_reward = {
+			
+		}
+
+	}
+	shared_focus = {
+		id = genUNG_government_efficiency
+		icon = GFX_focus_generic_concessions
+		cost = 10
+		prerequisite = {
+			focus = genUNG_power_to_the_rightful_rulers
+		}
+		prerequisite = {
+			focus = genUNG_only_the_best_for_our_country
+		}
+		x = 22
+		y = 4
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+			
+		}
+		
+		completion_reward = {
+			
+		}
+
+	}
+	shared_focus = {
+		id = genUNG_a_stable_political_environment
+		icon = GFX_goal_generic_major_alliance
+		cost = 10
+		prerequisite = {
+			focus = genUNG_government_efficiency
+		}
+		x = 22
+		y = 5
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+			
+		}
+		
+		completion_reward = {
+			
+		}
+
+	}
+	shared_focus = {
+		id = genUNG_defining_the_powers_of_the_monarchy
+		icon = GFX_focus_hol_the_foundations_of_defense
+		cost = 10
+		prerequisite = {
+			focus = genUNG_power_to_the_rightful_rulers
+		}
+		prerequisite = {
+			focus = genUNG_the_constitution
+		}
+		x = 24
+		y = 4
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+			
+		}
+		
+		completion_reward = {
+			
+		}
+
+	}
+	shared_focus = {
+		id = genUNG_progression_and_popularity
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		cost = 10
+		prerequisite = {
+			focus = genUNG_defining_the_powers_of_the_monarchy
+		}
+		x = 24
+		y = 5
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+			
+		}
+		
+		completion_reward = {
+			
+		}
+
+	}
+	shared_focus = {
+		id = genUNG_swift_and_decisive
+		icon = GFX_goal_generic_position_armies
+		cost = 10
+		prerequisite = {
+			focus = genUNG_power_to_the_rightful_rulers
+		}
+		prerequisite = {
+			focus = genUNG_one_true_ruler
+		}
+		x = 26
+		y = 4
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+			
+		}
+		
+		completion_reward = {
+			
+		}
+
+	}
+	shared_focus = {
+		id = genUNG_the_pride_of_monarchism
+		icon = GFX_focus_ger_return_of_the_kaiser
+		cost = 10
+		prerequisite = {
+			focus = genUNG_swift_and_decisive
+		}
+		x = 26
+		y = 5
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+			
+		}
+		
+		completion_reward = {
+			
+		}
+
+	}
+	shared_focus = {
+		id = genUNG_technological_improvement_program
+		icon = GFX_focus_research
+		cost = 10
+		prerequisite = {
+			focus = genUNG_aggression
+			focus = genUNG_protection
+		}
+		x = 13
+		y = 6
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+			
+		}
+		
+		completion_reward = {
+			
+		}
+
+	}
+	shared_focus = {
+		id = genUNG_border_conflicts
+		icon = GFX_goal_generic_territory_or_war
+		cost = 10
+		prerequisite = {
+			focus = genUNG_siege_development
+		}
+		prerequisite = {
+			focus = genUNG_doctrine_effort
+		}
+		x = 10
+		y = 6
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+			
+		}
+		
+		completion_reward = {
+			
+		}
+
+	}
+	shared_focus = {
+		id = genUNG_defensive_innovations
+		icon = GFX_goal_generic_production2
+		cost = 10
+		prerequisite = {
+			focus = genUNG_border_guards
+		}
+		prerequisite = {
+			focus = genUNG_voluntary_assistance
+		}
+		x = 16
+		y = 6
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+			
+		}
+		
+		completion_reward = {
+			
+		}
+
+	}
+	shared_focus = {
+		id = genUNG_church_divided
+		icon = GFX_goal_generic_political_pressure
+		cost = 10
+		prerequisite = {
+			focus = genUNG_corruption_of_church
+		}
+		prerequisite = {
+			focus = genUNG_demand_forgiveness
+		}
+		x = 2
+		y = 6
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+			
+		}
+		
+		completion_reward = {
+			
+		}
+
+	}
+	shared_focus = {
+		id = genUNG_church_united
+		icon = GFX_goal_generic_national_unity
+		cost = 10
+		prerequisite = {
+			focus = genUNG_sins_of_the_father
+		}
+		prerequisite = {
+			focus = genUNG_new_septa_new_chance
+		}
+		x = 6
+		y = 6
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+			
+		}
+		
+		completion_reward = {
+			
+		}
+
+	}
+	shared_focus = {
+		id = genUNG_government_founded_university
+		icon = GFX_focus_research
+		cost = 10
+		prerequisite = {
+			focus = genUNG_flexible_market
+			focus = genUNG_a_stable_political_environment
+			focus = genUNG_progression_and_popularity
+			focus = genUNG_the_pride_of_monarchism
+		}
+		x = 23
+		y = 6
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		available = {
+			
+		}
+		
+		bypass = {
+			
+		}
+		
+		completion_reward = {
+			
+		}
+
+	}
+
+focus_tree = {
+	id = Generic_UNG_Minor
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			OR = {
+				tag = ARK
+				tag = FTH
+				tag = WIS
+				tag = WSZ
+				tag = SNF
+				tag = TEI
+				tag = SPW
+				tag = SVT
+				tag = NOC
+				tag = NRK
+			}
+		}
+	}
+	default = no
+	
+	shared_focus = genUNG_political_landscape	
+	shared_focus = genUNG_industrial_expansion
+
+
+}

@@ -1,8 +1,10 @@
 -Redid map
 -Added Stahlhof and Ungerdal focus trees
 -Updated for La Resistance
+-Added custom music made by Dregorin
 -Added some focus icons for Holzbrenn I forgot last time
--Added Annex events for Rimatü and Lirothlind
+-Added Bilodya and the Merchant's Hand - the first supercontinent is now filled up!
+-Added Annex events for Rimatü and Lirothlind, as well as the Hand and Bilodya
 -Added Perkav Commissiary decision for Ordoria
 -Puppeting the Realm's city-states should now not produce bordergore
 -Added more localization for Commissiaries
@@ -18,7 +20,6 @@
 -Gave the Freiprinzen military access to each others' lands, so they could actually help each other during wars.
 -Told the Freiprinzen to actually help the Union out in wars
 -Added balkanization option for Ordoria. More to come once I can be bothered or find someone to help, adding countries is a slogfest.
--Added Merchant's Hand since Sulfurisle was too far away for trade
 -Made it impossible for anyone to join AI civil wars or be called into civil wars by the AI. Players can still join player civil wars.
 -Added additional operatives
 -Added female leaders

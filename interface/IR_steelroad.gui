@@ -111,49 +111,6 @@ guiTypes = {
 				vertical_alignment = center
 				alwaystransparent = yes
 			}
-			name = "steel_road_entry"
-			position = { x=10 y=81 }
-			size = { width = 402 height = 54 }
-			clipping = no
-
-			iconType = {
-				name = "picture"
-				position = { x = 65 y = 20 }
-				spriteType = "GFX_steel_road_icon"
-			}
-
-			background = {
-				name = "Background"
-				quadTextureSprite ="GFX_bordered_window"
-			}
-
-			iconType ={
-				name ="country_flag_frame"
-				spriteType = "GFX_flag_small_golden_frame"
-				position = { x = 60 y = 110 }
-				alwaystransparent = yes
-			}
-			
-			buttonType = {
-				name = "relative_flag"
-				quadTextureSprite ="GFX_flag_smallest_overlay"
-				position = { x = 60 y = 107 }
-			}
-
-			instantTextboxType = {
-				name = "location"
-				position = { x = 94 y = 105 }
-				textureFile = ""
-				font = "hoi_30header"
-				borderSize = {x = 0 y = 0}
-				text = "Maus"
-				maxWidth = 150
-				maxHeight = 40
-				format = left
-				multiline = yes
-				vertical_alignment = center
-				alwaystransparent = yes
-			}
 		}
 
         listboxType  = {
@@ -184,25 +141,6 @@ guiTypes = {
 			maxwidth = 500
 			text = "The Steel Road"
 			font = "hoi_36header"
-		}
-		
-		listboxType  = {
-			name = "steelroad_scrollbar"
-			position = {
-				x = -150
-				y = 0
-			}
-			orientation = "CENTER"
-			size = {
-				x = 100
-				y = 100
-			}
-			spacing = 0
-			scrollbartype = "standardlistbox_slider"
-			borderSize = {
-				x = 0
-				y = 0
-			}
 		}
 	}
 }																			

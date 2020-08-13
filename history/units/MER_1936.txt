@@ -73,7 +73,7 @@ units = {
 	division = {
 		name = "1os Foniás 'Anavátes tou Thanátou'"
 		location = 3856
-		division_template = "Drákontas Foniás""
+		division_template = "Drákontas Foniás"
 		start_experience_factor = 1
 
 	}

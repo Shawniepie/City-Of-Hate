@@ -1,0 +1,18 @@
+
+state={
+	id=764
+	name="STATE_764"
+	provinces={
+		3263 2013 2302 6661 1990 2947
+	}
+	state_category = pastoral
+	manpower=429
+	buildings_max_level_factor=1.000
+	history={
+		owner = BLD
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = BLD
+	}
+}

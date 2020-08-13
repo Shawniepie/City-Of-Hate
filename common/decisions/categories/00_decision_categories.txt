@@ -2,6 +2,8 @@ DORF_seventh_campaign = {
 	
 	icon = GFX_decision_category_seventh_campaign
 	
+	picture = GFX_decision_cat_vergallheim
+	
 	allowed = {
 		always = yes
 	}

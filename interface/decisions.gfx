@@ -3,6 +3,16 @@ spriteTypes = {
 	### mod decisions
 
 	spriteType = {
+		name = "GFX_decision_cat_vergallheim"
+		texturefile = "gfx/interface/decisions/decision_cat_vergallheim.dds"
+	}
+
+	spriteType = {
+		name = "GFX_decision_category_seventh_campaign"
+		texturefile = "gfx/interface/decisions/decision_category_seventh_campaign.dds"
+	}
+	
+	spriteType = {
 		name = "GFX_decision_category_piracy"
 		texturefile = "gfx/interface/decisions/decision_category_piracy.dds"
 	}

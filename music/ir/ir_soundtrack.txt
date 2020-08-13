@@ -1,0 +1,41 @@
+music_station = "ir"
+###PEACETIME
+
+# Note: UNG Theme Song
+music = {
+	song = "The Union Forever"
+	
+	chance = {
+		modifier = {
+			factor = 1.5
+
+			has_war = no
+			tag = UNG
+		}		
+	}	
+}
+
+###WARTIME
+
+# Note: Stahlhof Civil War Theme
+music = {
+	song = "March on Faustburg"
+	
+	chance = {
+		modifier = {
+			factor = 2
+			
+			or = {
+				AND = {
+					tag = STA
+					has_offensive_war_with = UNG
+				}
+				AND = {
+					has_offensive_war_with = UNG
+					is_in_faction_with = STA
+				}
+			}
+		}		
+	}	
+}
+

@@ -146,6 +146,11 @@ spriteTypes = {
 	}
 	
 	spriteType = {
+		name = "GFX_idea_generic_ogre"
+		texturefile = "gfx/interface/ideas/generic_ogre.dds"
+	}
+	
+	spriteType = {
 		name = "GFX_idea_generic_rosites"
 		texturefile = "gfx/interface/ideas/generic_rosites.dds"
 	}
@@ -308,6 +313,11 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_religion_damokegol"
 		texturefile = "gfx/interface/ideas/religion_damokegol.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_religion_unknownism"
+		texturefile = "gfx/interface/ideas/religion_unknownism.dds"
 	}
 	
 	spriteType = {

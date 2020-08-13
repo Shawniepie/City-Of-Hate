@@ -1,0 +1,118 @@
+﻿capital = 385
+
+set_oob = "BLD_1936"
+
+
+set_technology = {
+	infantry_weapons_alternative = 1
+	ogre_warriors = 1
+}
+
+1939.1.1 = {
+}
+
+set_politics = {
+	ruling_party = republic_peasant
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	monarchy_absolute = 0
+
+	monarchy_constitutional = 0
+
+	republic_peasant = 48
+
+	republic_aristocrat =  0
+
+	republic_merchant = 42
+
+	theocrat = 6
+
+	puritan = 4
+}
+
+add_ideas = {
+	ogre_country
+	unknownism_religion
+}
+
+add_opinion_modifier = {
+	target = SKA
+	modifier = bitter_rivals
+}
+
+add_opinion_modifier = {
+	target = BLD
+	modifier = bitter_rivals
+}
+
+add_opinion_modifier = {
+	target = BER
+	modifier = bitter_rivals
+}
+
+create_country_leader = {
+	name = "Thaurun Zheko"
+	desc = "politics_BLD_zheko_desc"
+	picture = "gfx/leaders/BLD/Portrait_BLD_Zheko.dds"
+	ideology = monarchy_constitutional_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Kurbah Bozhur"
+	desc = "politics_BLD_bozhur_desc"
+	picture = "gfx/leaders/BLD/Portrait_BLD_Bozhur.dds"
+	ideology = republic_peasant_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Reimvan Tonchev"
+	desc = "politics_BLD_tonchev_desc"
+	picture = "gfx/leaders/BLD/Portrait_BLD_Tonchev.dds"
+	ideology = puritan_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Thaurun Zheko"
+	desc = "politics_BLD_zheko_desc"
+	picture = "gfx/leaders/BLD/Portrait_BLD_Zheko.dds"
+	ideology = monarchy_absolute_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Nadeja Stoeva"
+	desc = "politics_BLD_stoeva_desc"
+	picture = "gfx/leaders/BLD/Portrait_BLD_Stoeva.dds"
+	ideology = theocrat_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Vurkun Kliment "
+	desc = "politics_BLD_kliment_desc"
+	picture = "gfx/leaders/BLD/Portrait_BLD_Kliment.dds"
+	ideology = republic_aristocrat_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Vurkun Kliment"
+	desc = "politics_BLD_kliment_desc"
+	picture = "gfx/leaders/BLD/Portrait_BLD_Kliment.dds"
+	ideology = republic_merchant_ideology
+	traits = {
+	}
+}

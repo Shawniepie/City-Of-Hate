@@ -8958,3 +8958,389 @@ country_event = { #Conquest of Vuid
 		}
 	}
 }
+
+country_event = { #Conquest of Bilodya
+	id = annex.38
+	title = annex.38.t
+	desc = annex.38.d
+	mean_time_to_happen = {
+		days = 15
+	}
+
+	trigger = {
+		NOT = {
+			original_tag = BLD
+		}
+		OR = {
+			AND = {
+				BLD = {
+					has_capitulated = yes
+				}
+				controls_state = 385
+			}
+			AND = {
+				NOT = {
+					country_exists = BLD
+				}
+				controls_state = 385
+			}
+			owns_state = 385
+		}
+		NOT = {
+			ROOT = {
+				has_country_flag = conquest_of_bilodya
+			}
+		}
+	}
+
+	option = {# Liberate
+		name = annex.38.a
+		trigger = {
+			NOT = {
+				OR = {
+					tag = UNG
+					is_subject_of = UNG
+					tag = IRI
+				}
+			}
+		}
+
+		ai_chance = {
+			modifier = {
+				factor = 0
+				OR = {
+					has_government = puritan
+					has_government = theocrat
+				}
+			}
+			factor = 100
+		}
+
+		every_state = {
+			limit = {
+				is_core_of = BLD
+				is_controlled_by = ROOT
+				NOT = {
+					is_core_of = ROOT
+					is_claimed_by = ROOT
+				}
+			}
+			BLD = {
+				transfer_state = PREV
+			}
+		}
+			puppet = BLD
+			set_country_flag = conquest_of_bilodya
+	}
+	
+	option = { # Annex
+		name = annex.38.b
+		
+		trigger = {
+			NOT = {
+				tag = BLD
+				tag = IRI
+			}
+		}
+		
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						has_government = puritan
+						has_government = theocrat
+					}
+				}
+			}
+		}
+
+		set_country_flag = conquest_of_bilodya
+
+		custom_effect_tooltip = annex_tt
+
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = {
+						OR = {
+							has_government = puritan
+							has_government = theocrat
+						}
+					}
+				}
+				add_political_power = -50
+				add_stability = -0.05
+				add_war_support = -0.05
+			}
+		}
+	}
+
+	option = { # Freiprinztum
+		name = annex.38.c
+		trigger = {
+			OR = {
+				tag = UNG
+				ROOT = {
+					is_subject_of = UNG
+				}
+				UNG = {
+					is_subject_of = ROOT
+				}
+			}
+		}
+		
+		ai_chance = {
+			factor = 100
+		}
+		
+		every_state = {
+			limit = {
+				is_core_of = BLD
+				is_controlled_by = ROOT
+				NOT = {
+					is_core_of = ROOT
+					is_claimed_by = ROOT
+				}
+			}
+			BLD = {
+				transfer_state = PREV
+			}
+		}
+		
+		UNG = {
+			set_autonomy = {
+				target = BLD
+				autonomy_state = autonomy_IR_freiprinztum
+			}
+		}
+	}
+	
+	option = { # Re-Integrate into Irinthios
+		name = annex.38.e
+		trigger = {
+			OR = {
+				tag = IRI
+				ROOT = {
+					is_subject_of = IRI
+				}
+				IRI = {
+					is_subject_of = ROOT
+				}
+			}
+		}
+		
+		ai_chance = {
+			factor = 100
+		}
+		
+		every_state = {
+			limit = {
+				is_core_of = BLD
+				is_controlled_by = ROOT
+				NOT = {
+					is_core_of = ROOT
+					is_claimed_by = ROOT
+				}
+			}
+			IRI = {
+				transfer_state = PREV
+				add_state_core = PREV
+			}
+		}
+	}
+}
+
+country_event = { #Conquest of Merchant's Hand
+	id = annex.39
+	title = annex.39.t
+	desc = annex.39.d
+	mean_time_to_happen = {
+		days = 15
+	}
+
+	trigger = {
+		NOT = {
+			original_tag = MER
+		}
+		OR = {
+			AND = {
+				MER = {
+					has_capitulated = yes
+				}
+				controls_state = 378
+			}
+			AND = {
+				NOT = {
+					country_exists = MER
+				}
+				controls_state = 378
+			}
+			owns_state = 378
+		}
+		NOT = {
+			ROOT = {
+				has_country_flag = conquest_of_merchants_hand
+			}
+		}
+	}
+
+	option = {# Liberate
+		name = annex.39.a
+		trigger = {
+			NOT = {
+				OR = {
+					tag = UNG
+					is_subject_of = UNG
+					tag = IRI
+				}
+			}
+		}
+
+		ai_chance = {
+			modifier = {
+				factor = 0
+				OR = {
+					has_government = puritan
+					has_government = theocrat
+				}
+			}
+			factor = 100
+		}
+
+		every_state = {
+			limit = {
+				is_core_of = MER
+				is_controlled_by = ROOT
+				NOT = {
+					is_core_of = ROOT
+					is_claimed_by = ROOT
+				}
+			}
+			MER = {
+				transfer_state = PREV
+			}
+		}
+			puppet = MER
+			set_country_flag = conquest_of_merchants_hand
+	}
+	
+	option = { # Annex
+		name = annex.39.b
+		
+		trigger = {
+			NOT = {
+				tag = MER
+				tag = IRI
+			}
+		}
+		
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						has_government = puritan
+						has_government = theocrat
+					}
+				}
+			}
+		}
+
+		set_country_flag = conquest_of_merchants_hand
+
+		custom_effect_tooltip = annex_tt
+
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = {
+						OR = {
+							has_government = puritan
+							has_government = theocrat
+						}
+					}
+				}
+				add_political_power = -50
+				add_stability = -0.05
+				add_war_support = -0.05
+			}
+		}
+	}
+
+	option = { # Freiprinztum
+		name = annex.39.c
+		trigger = {
+			OR = {
+				tag = UNG
+				ROOT = {
+					is_subject_of = UNG
+				}
+				UNG = {
+					is_subject_of = ROOT
+				}
+			}
+		}
+		
+		ai_chance = {
+			factor = 100
+		}
+		
+		every_state = {
+			limit = {
+				is_core_of = MER
+				is_controlled_by = ROOT
+				NOT = {
+					is_core_of = ROOT
+					is_claimed_by = ROOT
+				}
+			}
+			MER = {
+				transfer_state = PREV
+			}
+		}
+		
+		UNG = {
+			set_autonomy = {
+				target = MER
+				autonomy_state = autonomy_IR_freiprinztum
+			}
+		}
+	}
+	
+	option = { # Re-Integrate into Irinthios
+		name = annex.39.e
+		trigger = {
+			OR = {
+				tag = IRI
+				ROOT = {
+					is_subject_of = IRI
+				}
+				IRI = {
+					is_subject_of = ROOT
+				}
+			}
+		}
+		
+		ai_chance = {
+			factor = 100
+		}
+		
+		every_state = {
+			limit = {
+				is_core_of = MER
+				is_controlled_by = ROOT
+				NOT = {
+					is_core_of = ROOT
+					is_claimed_by = ROOT
+				}
+			}
+			IRI = {
+				transfer_state = PREV
+				add_state_core = PREV
+			}
+		}
+	}
+}

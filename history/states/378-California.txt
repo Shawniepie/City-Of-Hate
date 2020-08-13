@@ -18,6 +18,7 @@ state={
 	}
 	
 	history={
+		victory_points = { 6861 27 }
 		owner = MER
 		buildings = {
 			infrastructure = 8

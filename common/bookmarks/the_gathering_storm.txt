@@ -22,12 +22,15 @@ bookmarks = {
 			ideas = {
 			}
 			focuses = {
+				UNG_both_sides
+				UNG_ally_irinthios
+				UNG_punish_perkavland
 			}
 		}
 
 		"ORD"={
 			history = "ORD_CITY_OF_HATE_DESC"
-			ideology = 	puritan
+			ideology = puritan
 			ideas = {
 				ORD_rthaur_rebellion
 				ORD_disrupted_industry
@@ -44,7 +47,7 @@ bookmarks = {
 		#Minors
 		"STA"={
 			history = "STA_CITY_OF_HATE_DESC"
-			ideology = absolute_monarchist
+			ideology = monarchy_absolute
 			minor = yes
 			ideas = {
 				
@@ -53,6 +56,21 @@ bookmarks = {
 				STA_fate_of_the_adalinatruppen
 				STA_a_convincing_act
 				STA_the_carrot_and_the_stick
+			}
+		}
+		
+		"HLZ"={
+			history = "HLZ_CITY_OF_HATE_DESC"
+			ideology = puritan
+			minor = yes
+			ideas = {
+				rosenbluts_evil
+				widespread_famine
+			}
+			focuses = {
+				HLZ_edlerrat
+				HLZ_communal_tax
+				HLZ_pressler_triumphant
 			}
 		}
 		
@@ -73,21 +91,6 @@ bookmarks = {
 			ideas = {
 			}
 			focuses = {
-			}
-		}
-		
-		"HLZ"={
-			history = "HLZ_CITY_OF_HATE_DESC"
-			ideology = puritan
-			minor = yes
-			ideas = {
-				rosenbluts_evil
-				widespread_famine
-			}
-			focuses = {
-				HLZ_edlerrat
-				HLZ_communal_tax
-				HLZ_pressler_triumphant
 			}
 		}
 		

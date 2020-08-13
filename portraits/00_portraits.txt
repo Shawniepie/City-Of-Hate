@@ -21,6 +21,114 @@ default = {
 	}
 }
 
+BLD = {
+	army = {
+		male = {
+			"gfx/leaders/BLD/Portrait_Bilodya_Generic_land_1.dds"
+			"gfx/leaders/BLD/Portrait_Bilodya_Generic_land_2.dds"
+		}
+		female = {
+			"gfx/leaders/BLD/Portrait_Bilodya_Generic_land_3.dds"
+			"gfx/leaders/BLD/Portrait_Bilodya_Generic_land_4.dds"
+		}
+	}
+	
+	navy = {
+		male = {
+			"gfx/leaders/BLD/Portrait_Bilodya_Generic_navy_1.dds"
+		}
+		female = {
+			"gfx/leaders/BLD/Portrait_Bilodya_Generic_navy_2.dds"
+		}
+	}
+	political = {
+		puritan = {
+			male = {
+				"gfx/leaders/BLD/Portrait_Bilodya_Generic_land_1.dds"
+				"gfx/leaders/BLD/Portrait_Bilodya_Generic_land_2.dds"
+				"gfx/leaders/BLD/Portrait_Bilodya_Generic_navy_1.dds"
+			}
+			female = {
+				"gfx/leaders/BLD/Portrait_Bilodya_Generic_land_3.dds"
+				"gfx/leaders/BLD/Portrait_Bilodya_Generic_land_4.dds"
+				"gfx/leaders/BLD/Portrait_Bilodya_Generic_navy_2.dds"
+			}
+		}
+		monarchy_absolute = {
+			male = {
+				"gfx/leaders/BLD/Portrait_Bilodya_Generic_land_1.dds"
+				"gfx/leaders/BLD/Portrait_Bilodya_Generic_land_2.dds"
+				"gfx/leaders/BLD/Portrait_Bilodya_Generic_navy_1.dds"
+			}
+			female = {
+				"gfx/leaders/BLD/Portrait_Bilodya_Generic_land_3.dds"
+				"gfx/leaders/BLD/Portrait_Bilodya_Generic_land_4.dds"
+				"gfx/leaders/BLD/Portrait_Bilodya_Generic_navy_2.dds"
+			}
+		}
+		monarchy_constitutional = {
+			male = {
+				"gfx/leaders/BLD/Portrait_Bilodya_Generic_land_1.dds"
+				"gfx/leaders/BLD/Portrait_Bilodya_Generic_land_2.dds"
+				"gfx/leaders/BLD/Portrait_Bilodya_Generic_navy_1.dds"
+			}
+			female = {
+				"gfx/leaders/BLD/Portrait_Bilodya_Generic_land_3.dds"
+				"gfx/leaders/BLD/Portrait_Bilodya_Generic_land_4.dds"
+				"gfx/leaders/BLD/Portrait_Bilodya_Generic_navy_2.dds"
+			}
+		}
+		republic_aristocrat = {
+			male = {
+				"gfx/leaders/BLD/Portrait_Bilodya_Generic_land_1.dds"
+				"gfx/leaders/BLD/Portrait_Bilodya_Generic_land_2.dds"
+				"gfx/leaders/BLD/Portrait_Bilodya_Generic_navy_1.dds"
+			}
+			female = {
+				"gfx/leaders/BLD/Portrait_Bilodya_Generic_land_3.dds"
+				"gfx/leaders/BLD/Portrait_Bilodya_Generic_land_4.dds"
+				"gfx/leaders/BLD/Portrait_Bilodya_Generic_navy_2.dds"
+			}
+		}
+		republic_peasant = {
+			male = {
+				"gfx/leaders/BLD/Portrait_Bilodya_Generic_land_1.dds"
+				"gfx/leaders/BLD/Portrait_Bilodya_Generic_land_2.dds"
+				"gfx/leaders/BLD/Portrait_Bilodya_Generic_navy_1.dds"
+			}
+			female = {
+				"gfx/leaders/BLD/Portrait_Bilodya_Generic_land_3.dds"
+				"gfx/leaders/BLD/Portrait_Bilodya_Generic_land_4.dds"
+				"gfx/leaders/BLD/Portrait_Bilodya_Generic_navy_2.dds"
+			}
+		}
+		republic_merchant = {
+			male = {
+				"gfx/leaders/BLD/Portrait_Bilodya_Generic_land_1.dds"
+				"gfx/leaders/BLD/Portrait_Bilodya_Generic_land_2.dds"
+				"gfx/leaders/BLD/Portrait_Bilodya_Generic_navy_1.dds"
+			}
+			female = {
+				"gfx/leaders/BLD/Portrait_Bilodya_Generic_land_3.dds"
+				"gfx/leaders/BLD/Portrait_Bilodya_Generic_land_4.dds"
+				"gfx/leaders/BLD/Portrait_Bilodya_Generic_navy_2.dds"
+			}
+		}
+		theocrat = {
+			male = {
+				"gfx/leaders/BLD/Portrait_Bilodya_Generic_land_1.dds"
+				"gfx/leaders/BLD/Portrait_Bilodya_Generic_land_2.dds"
+				"gfx/leaders/BLD/Portrait_Bilodya_Generic_navy_1.dds"
+			}
+			female = {
+				"gfx/leaders/BLD/Portrait_Bilodya_Generic_land_3.dds"
+				"gfx/leaders/BLD/Portrait_Bilodya_Generic_land_4.dds"
+				"gfx/leaders/BLD/Portrait_Bilodya_Generic_navy_2.dds"
+			}
+		}
+	}
+}
+
 YTH = {
 	army = {
 		male = {
@@ -926,128 +1034,128 @@ IRI = {
 	political = {
 		puritan = {
 			male = {
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_land_1.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_land_2.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_land_3.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_land_4.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_navy_1.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_navy_2.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_land_1.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_land_2.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_land_3.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_land_4.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_navy_1.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_navy_2.dds"
 			}
 			female = {
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_land_5.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_land_6.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_land_7.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_land_8.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_navy_3.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_navy_4.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_land_5.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_land_6.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_land_7.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_land_8.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_navy_3.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_navy_4.dds"
 			}
 		}
 		monarchy_absolute = {
 			male = {
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_land_1.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_land_2.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_land_3.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_land_4.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_navy_1.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_navy_2.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_land_1.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_land_2.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_land_3.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_land_4.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_navy_1.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_navy_2.dds"
 			}
 			female = {
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_land_5.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_land_6.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_land_7.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_land_8.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_navy_3.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_navy_4.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_land_5.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_land_6.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_land_7.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_land_8.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_navy_3.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_navy_4.dds"
 			}
 		}
 		monarchy_constitutional = {
 			male = {
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_land_1.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_land_2.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_land_3.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_land_4.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_navy_1.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_navy_2.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_land_1.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_land_2.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_land_3.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_land_4.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_navy_1.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_navy_2.dds"
 			}
 			female = {
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_land_5.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_land_6.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_land_7.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_land_8.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_navy_3.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_navy_4.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_land_5.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_land_6.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_land_7.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_land_8.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_navy_3.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_navy_4.dds"
 			}
 		}
 		republic_aristocrat = {
 			male = {
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_land_1.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_land_2.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_land_3.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_land_4.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_navy_1.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_navy_2.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_land_1.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_land_2.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_land_3.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_land_4.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_navy_1.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_navy_2.dds"
 			}
 			female = {
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_land_5.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_land_6.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_land_7.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_land_8.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_navy_3.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_navy_4.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_land_5.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_land_6.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_land_7.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_land_8.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_navy_3.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_navy_4.dds"
 			}
 		}
 		republic_peasant = {
 			male = {
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_land_1.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_land_2.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_land_3.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_land_4.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_navy_1.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_navy_2.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_land_1.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_land_2.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_land_3.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_land_4.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_navy_1.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_navy_2.dds"
 			}
 			female = {
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_land_5.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_land_6.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_land_7.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_land_8.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_navy_3.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_navy_4.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_land_5.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_land_6.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_land_7.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_land_8.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_navy_3.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_navy_4.dds"
 			}
 		}
 		republic_merchant = {
 			male = {
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_land_1.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_land_2.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_land_3.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_land_4.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_navy_1.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_navy_2.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_land_1.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_land_2.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_land_3.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_land_4.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_navy_1.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_navy_2.dds"
 			}
 			female = {
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_land_5.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_land_6.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_land_7.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_land_8.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_navy_3.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_navy_4.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_land_5.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_land_6.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_land_7.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_land_8.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_navy_3.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_navy_4.dds"
 			}
 		}
 		theocrat = {
 			male = {
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_land_1.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_land_2.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_land_3.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_land_4.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_navy_1.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_navy_2.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_land_1.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_land_2.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_land_3.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_land_4.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_navy_1.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_navy_2.dds"
 			}
 			female = {
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_land_5.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_land_6.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_land_7.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_land_8.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_navy_3.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_navy_4.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_land_5.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_land_6.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_land_7.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_land_8.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_navy_3.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_navy_4.dds"
 			}
 		}
 	}
@@ -1082,128 +1190,128 @@ MER = {
 	political = {
 		puritan = {
 			male = {
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_land_1.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_land_2.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_land_3.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_land_4.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_navy_1.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_navy_2.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_land_1.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_land_2.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_land_3.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_land_4.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_navy_1.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_navy_2.dds"
 			}
 			female = {
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_land_5.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_land_6.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_land_7.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_land_8.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_navy_3.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_navy_4.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_land_5.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_land_6.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_land_7.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_land_8.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_navy_3.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_navy_4.dds"
 			}
 		}
 		monarchy_absolute = {
 			male = {
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_land_1.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_land_2.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_land_3.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_land_4.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_navy_1.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_navy_2.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_land_1.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_land_2.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_land_3.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_land_4.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_navy_1.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_navy_2.dds"
 			}
 			female = {
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_land_5.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_land_6.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_land_7.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_land_8.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_navy_3.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_navy_4.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_land_5.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_land_6.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_land_7.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_land_8.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_navy_3.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_navy_4.dds"
 			}
 		}
 		monarchy_constitutional = {
 			male = {
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_land_1.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_land_2.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_land_3.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_land_4.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_navy_1.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_navy_2.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_land_1.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_land_2.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_land_3.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_land_4.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_navy_1.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_navy_2.dds"
 			}
 			female = {
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_land_5.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_land_6.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_land_7.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_land_8.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_navy_3.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_navy_4.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_land_5.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_land_6.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_land_7.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_land_8.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_navy_3.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_navy_4.dds"
 			}
 		}
 		republic_aristocrat = {
 			male = {
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_land_1.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_land_2.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_land_3.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_land_4.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_navy_1.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_navy_2.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_land_1.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_land_2.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_land_3.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_land_4.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_navy_1.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_navy_2.dds"
 			}
 			female = {
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_land_5.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_land_6.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_land_7.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_land_8.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_navy_3.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_navy_4.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_land_5.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_land_6.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_land_7.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_land_8.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_navy_3.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_navy_4.dds"
 			}
 		}
 		republic_peasant = {
 			male = {
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_land_1.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_land_2.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_land_3.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_land_4.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_navy_1.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_navy_2.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_land_1.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_land_2.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_land_3.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_land_4.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_navy_1.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_navy_2.dds"
 			}
 			female = {
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_land_5.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_land_6.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_land_7.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_land_8.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_navy_3.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_navy_4.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_land_5.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_land_6.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_land_7.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_land_8.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_navy_3.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_navy_4.dds"
 			}
 		}
 		republic_merchant = {
 			male = {
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_land_1.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_land_2.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_land_3.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_land_4.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_navy_1.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_navy_2.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_land_1.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_land_2.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_land_3.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_land_4.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_navy_1.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_navy_2.dds"
 			}
 			female = {
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_land_5.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_land_6.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_land_7.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_land_8.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_navy_3.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_navy_4.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_land_5.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_land_6.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_land_7.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_land_8.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_navy_3.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_navy_4.dds"
 			}
 		}
 		theocrat = {
 			male = {
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_land_1.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_land_2.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_land_3.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_land_4.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_navy_1.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_navy_2.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_land_1.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_land_2.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_land_3.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_land_4.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_navy_1.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_navy_2.dds"
 			}
 			female = {
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_land_5.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_land_6.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_land_7.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_land_8.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_navy_3.dds"
-				"gfx/leaders/IRI/Portrait_Irinthios_Generic_navy_4.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_land_5.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_land_6.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_land_7.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_land_8.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_navy_3.dds"
+				"gfx/leaders/UnionNorth/Portrait_Union_North_Generic_navy_4.dds"
 			}
 		}
 	}

@@ -38,9 +38,9 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				army_org_factor = -0.1
+				army_org_factor = -0.05
 				planning_speed  = -0.05
-				max_planning = -0.15
+				max_planning = -0.1
 			}
 		}
 		
@@ -59,9 +59,8 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				army_org_factor = -0.05
-				planning_speed  = -0.05
-				max_planning = -0.05
+				army_org_factor = -0.0025
+				planning_speed  = -0.0025
 			}
 		}
 		

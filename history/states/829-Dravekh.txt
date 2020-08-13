@@ -1,0 +1,17 @@
+state={
+	id=829
+	name="STATE_829"
+	provinces={
+		912 2360 3603 3892 4166 5478 6410 6486 6525 
+	}
+	state_category = rural
+	manpower= 521
+	buildings_max_level_factor=1.000
+	history={
+		owner = BLD
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = BLD
+	}
+}

@@ -1,5 +1,18 @@
 on_actions = {
 
+	#Checks population change
+	on_startup = {
+		effect = {
+			check_population_change = yes
+		}
+	}
+	
+	on_daily = {
+		effect = {
+			check_population_change = yes
+		}
+	}
+
 	#Sets the Steel Road
 	on_startup = {
 		effect = {
@@ -35,6 +48,7 @@ on_actions = {
 			}
 			PRK = {
 				set_country_flag = PRK_can_raid
+			}
 		}
 	}
 	
@@ -146,13 +160,6 @@ on_actions = {
 					days = 3
 				}
 			}
-		}
-	}
-	
-	#Checks population change
-	on_daily = {
-		effect = {
-			check_population_change = yes
 		}
 	}
 	

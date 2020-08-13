@@ -1,0 +1,10 @@
+music = {
+	name = "The Union Forever"
+	file = "the_union_forever.ogg"
+	volume = 1
+}
+music = {
+	name = "March on Faustburg"
+	file = "march_on_faustburg.ogg"
+	volume = 1.4
+}

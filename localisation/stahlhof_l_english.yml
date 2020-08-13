@@ -308,8 +308,6 @@
  republic_merchant_drift:0 "daily merchant republic support"
  monarchy_absolute_drift:0 "daily absolute monarchy support"
  
- STA_CITY_OF_HATE_DESC:0 ""
- 
  sta.7.t:0 "The Fate of the Adelina troops"
  sta.7.d:0 ""
  sta.7.a:0 "They will become loyal soldiers eventually."

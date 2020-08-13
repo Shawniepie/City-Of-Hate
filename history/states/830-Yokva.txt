@@ -1,0 +1,17 @@
+state={
+	id=830
+	name="STATE_830"
+	provinces={
+		799 2216 2748 3961 4436 6385 6409 6420 6430 6444 6473 
+	}
+	state_category = pastoral
+	manpower=872
+	buildings_max_level_factor=1.000
+	history={
+		owner = BLD
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = BLD
+	}
+}

@@ -44,7 +44,7 @@ technologies = {
 		
 		research_cost = 2
 		
-		start_year = 1936
+		start_year = 887
 
 		folder = {
 			name = naval_folder
@@ -74,7 +74,7 @@ technologies = {
 		
 		research_cost = 2
 
-		start_year = 1940
+		start_year = 891
 		
 		folder = {
 			name = naval_folder
@@ -99,7 +99,7 @@ technologies = {
 		
 		research_cost = 2
 
-		start_year = 1944
+		start_year = 895
 		
 		folder = {
 			name = naval_folder
@@ -169,7 +169,7 @@ technologies = {
 		
 		research_cost = 2
 		
-		start_year = 1936
+		start_year = 887
 		
 		folder = {
 			name = naval_folder
@@ -203,7 +203,7 @@ technologies = {
 		
 		research_cost = 2
 
-		start_year = 1940
+		start_year = 891
 		
 		folder = {
 			name = naval_folder
@@ -233,7 +233,7 @@ technologies = {
 		
 		research_cost = 2
 
-		start_year = 1944
+		start_year = 895
 		
 		folder = {
 			name = naval_folder
@@ -304,7 +304,7 @@ technologies = {
 		
 		research_cost = 2
 		
-		start_year = 1936
+		start_year = 887
 		
 		folder = {
 			name = naval_folder
@@ -338,7 +338,7 @@ technologies = {
 		
 		research_cost = 2
 
-		start_year = 1940
+		start_year = 891
 		
 		folder = {
 			name = naval_folder
@@ -368,7 +368,7 @@ technologies = {
 		
 		research_cost = 2
 
-		start_year = 1944
+		start_year = 895
 		
 		folder = {
 			name = naval_folder
@@ -430,7 +430,7 @@ technologies = {
 		
 		research_cost = 2
 
-		start_year = 1940
+		start_year = 891
 		
 		folder = {
 			name = naval_folder
@@ -494,7 +494,7 @@ technologies = {
 		}
 		
 		research_cost = 2
-		start_year = 1936
+		start_year = 887
 		
 		folder = {
 			name = naval_folder
@@ -527,7 +527,7 @@ technologies = {
 		}
 		
 		research_cost = 2
-		start_year = 1940
+		start_year = 891
 		
 		folder = {
 			name = naval_folder
@@ -556,7 +556,7 @@ technologies = {
 		}
 		
 		research_cost = 2
-		start_year = 1944
+		start_year = 895
 		
 		folder = {
 			name = naval_folder
@@ -586,7 +586,7 @@ technologies = {
 		}
 		
 		research_cost = 2
-		start_year = 1936
+		start_year = 887
 		
 		folder = {
 			name = naval_folder
@@ -611,7 +611,7 @@ technologies = {
 		
 		research_cost = 2
 
-		start_year = 1944
+		start_year = 895
 		
 		folder = {
 			name = naval_folder
@@ -673,7 +673,7 @@ technologies = {
 		}
 		
 		research_cost = 2
-		start_year = 1940
+		start_year = 891
 		
 		folder = {
 			name = naval_folder
@@ -702,7 +702,7 @@ technologies = {
 		naval_invasion_capacity = 100
 
 		research_cost = 2
-		start_year = 1944
+		start_year = 895
 		folder = {
 			name = naval_folder
 			position = { x = 0 y = 19 }
@@ -765,7 +765,7 @@ technologies = {
 		}
 		
 		research_cost = 2
-		start_year = 1936
+		start_year = 887
 		
 		folder = {
 			name = naval_folder
@@ -795,7 +795,7 @@ technologies = {
 		
 		research_cost = 2
 
-		start_year = 1940
+		start_year = 891
 		
 		folder = {
 			name = naval_folder
@@ -821,7 +821,7 @@ technologies = {
 		
 		research_cost = 2
 
-		start_year = 1944
+		start_year = 895
 		
 		folder = {
 			name = naval_folder
@@ -880,7 +880,7 @@ technologies = {
 		}
 		
 		research_cost = 2
-		start_year = 1936
+		start_year = 887
 
 		folder = {
 			name = naval_folder
@@ -910,7 +910,7 @@ technologies = {
 		
 		research_cost = 2
 
-		start_year = 1940
+		start_year = 891
 		
 		folder = {
 			name = naval_folder
@@ -935,7 +935,7 @@ technologies = {
 		
 		research_cost = 2
 
-		start_year = 1944
+		start_year = 895
 		
 		folder = {
 			name = naval_folder
@@ -962,7 +962,7 @@ technologies = {
 		}
 
 		research_cost = 1
-		start_year = 1936
+		start_year = 887
 
 		# only from focus!!! #####
 		allow = {

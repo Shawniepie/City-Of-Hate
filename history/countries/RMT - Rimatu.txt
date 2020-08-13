@@ -47,7 +47,7 @@ add_opinion_modifier = {
 }
 
 add_opinion_modifier = {
-	target = SKA
+	target = BLD
 	modifier = bitter_rivals
 }
 

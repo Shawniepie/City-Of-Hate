@@ -13,11 +13,12 @@ DiocletianFanBoy
 Magic Bad
 The Swoviet Wunion
 TheDestroyer
+Silvestrich
 
 #Mechanics Team
 Dregorin
-Diadok
 Shortpower
+Silvestrich
 
 #GFX Team
 Caelvanir
@@ -25,6 +26,10 @@ Caelvanir
 #Admins
 Scoop
 Shawniepie
+
+#Dev Diarists
+Actual Spook
+Imperial_Warlord
 
 #Character Portraits
 
@@ -85,8 +90,6 @@ Portraits made by Yann Blomquist:
 	Lizardman Country Idea GFX
 	Lizardman Generals and Admirals
 
-Orc Country Idea - Made by GrimZombie
-
 #Flag Icons
 
 Ordorian Tree - Icon available at www.thenounproject.com (made by Jhonatan)
@@ -141,3 +144,4 @@ Ythelmare Anchor - Icon available at www.thenounproject.com (made by Nick Novell
 Varinthian Sun - Icon available at www.thenounproject.com (made by Alice Design)
 Merchant's Hand Praying Hands - Icon available at www.thenounproject.com (made by Luis Durazo)
 Merchant's Hand Skull - Icon available at www.thenounproject.com (made by Jacopo Mencacci)
+Bilodyan Catttail - Icon available at www.thenounproject.com (made by Alex C.)

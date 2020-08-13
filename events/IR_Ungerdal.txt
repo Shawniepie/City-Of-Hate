@@ -18,6 +18,7 @@ country_event = {# Ordorian Overtures
 			factor = 5
 			modifier = {
 				has_completed_focus = UNG_expansionism
+				factor = 0
 			}
 		}
 		hidden_effect = {
@@ -870,7 +871,7 @@ country_event = {#Looking Outwards
 	option = {#Expansionism
 		name = ung.25.a
 		ai_chance = {
-			factor = 1
+			factor = 5
 		}
 		add_war_support = 0.03
 		set_country_flag = UNG_expansionist_flag
@@ -1062,11 +1063,31 @@ country_event = {# Lirothlind Accepts
 		name = ung.30.a
 		if = {
 			limit = {
+				GMR = {
+					is_in_faction_with = UNG
+				}
 				UNG = {
-					is_in_faction_with = GMR
+					is_faction_leader = yes
 				}
 			}
+			GMR = {
+				leave_faction = yes
+			}
+		}
+		if = {
+			limit = {
+				is_faction_leader = yes
+			}
+			add_to_faction = LIR
+		}
+		if = {
+			limit = {
+				is_in_faction = yes
+				is_faction_leader = no
+			}
 			leave_faction = yes
+			create_faction = anti_arthenon_alliance
+			add_to_faction = LIR
 		}
 		if = {
 			limit = {
@@ -1077,9 +1098,11 @@ country_event = {# Lirothlind Accepts
 		}
 		if = {
 			limit = {
-				is_in_faction = yes
+				UNG = {
+					is_in_faction_with = GMR
+				}
 			}
-			add_to_faction = LIR
+			leave_faction = yes
 		}
 		reverse_add_opinion_modifier = {
 			target = GMR
@@ -1457,8 +1480,28 @@ country_event = {#Arthenon Accepts
 
 	option = {#Good
 		name = ung.42.a
-		create_faction = two_thrones_alliance
-		add_to_faction = GMR
+		if = {
+			limit = {
+				is_faction_leader = yes
+			}
+			add_to_faction = GMR
+		}
+		if = {
+			limit = {
+				is_in_faction = yes
+				is_faction_leader = no
+			}
+			leave_faction = yes
+			create_faction = two_thrones_alliance
+			add_to_faction = GMR
+		}
+		if = {
+			limit = {
+				is_in_faction = no
+			}
+			create_faction = two_thrones_alliance
+			add_to_faction = GMR
+		}
 		set_country_flag = twothrone_concord_member
 		GMR = {
 			set_country_flag = twothrone_concord_member
@@ -1826,6 +1869,9 @@ country_event = {#Irinthios Accepts!
 			}
 			create_faction = steel_league_alliance
 			add_to_faction = IRI
+		}
+		IRI = {
+			set_country_flag = UNG_allied_to_country
 		}
 	}
 }

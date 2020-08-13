@@ -1,0 +1,18 @@
+state={
+	id=769
+	name="STATE_769"
+	provinces={
+		6852 622 2531 1978
+	}
+	state_category = rural
+	manpower=1721
+	buildings_max_level_factor=1.000
+	history={
+		owner = BLD
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+		}
+		add_core_of = BLD
+	}
+}

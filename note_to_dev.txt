@@ -27,7 +27,7 @@ This Release - Empire of Purity:
 @National spirits
 @Finish Ordorian Focus tree
 $RTH OOB when released by SKA?
-$ORD Civil War OOBs
+@ORD Civil War OOBs
 
 Next Release - Actually Playable Edition:
 	#Probably Bug Fixes
@@ -40,8 +40,8 @@ Next Release - Actually Playable Edition:
 Unplanned Future Release Packs:
 
 Ancestral Mountains:
-	#Implement Bergialer
-	#Implement Kurgur
+	#@Implement Bergialer
+	#@Implement Kurgur
 	#Bergialer Focus Tree
 	#Kurgur Focus Tree
 	#Skaelinger Focus Tree
@@ -50,8 +50,8 @@ Ancestral Mountains:
 
 War in the North:
 	#GMR Focus Tree
-	#Implement Rimatü
-	#Implement Lirothlind
+	#@Implement Rimatü
+	#@Implement Lirothlind
 	#Rimatü Focus Tree
 	Lirothlind Focus Tree
 	~Steel Road Mechanics - Might need to postpone to IR
@@ -60,20 +60,20 @@ The Union Forever:
 	#Inter-Freiprinztum Border Wars
 	#Ungerdaler Union CCW Mechanics
 	Ungerdaler Focus Trees
-	~Implement Perkavland
+	@Implement Perkavland
 	~Perkavland-Freiprinzer Border Wars
 	~Centralization mechanic?
 	~(Partially) Shared Freiprinztum Focus Tree	
 
 Imperium Resurgent:
-	#Implement Irinthios
+	#@Implement Irinthios
 	#Irinthios Focus Tree
-	Implement Bilodya
+	@Implement Bilodya
 	~Bilodya Focus Tree
-	Implement Tlarthingia
+	@Implement Tlarthingia
 	~Tlarthingia Focus Tree
 	Irinthian Resurgence Events/Decisions
-	~Implement Merchant's Hand
+	@Implement Merchant's Hand
 	~Merchant's Hand Focus Tree
 	~?Merchant's Hand Resources Trade?
 

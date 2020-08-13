@@ -1,5 +1,10 @@
 #reload countrycolors
 
+BLD = {
+	color = rgb { 142  111  15 }
+	color_ui = rgb { 147 118 20 }
+}
+
 GMR = {
 	color = rgb { 190 177 68 }
 	color_ui = rgb { 213 194 96 }

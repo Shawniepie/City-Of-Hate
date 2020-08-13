@@ -9,14 +9,15 @@ state={
 	buildings_max_level_factor=1.000
 	
 	history={
+		victory_points = { 3211 20 }
 		owner = MER
 		buildings = {
 			infrastructure = 7
 			industrial_complex = 2
-			arms_factory = 4
+			arms_factory = 1
 			dockyard = 2
-			6861 = {
-				naval_base = 6
+			3211 = {
+				naval_base = 5
 			}
 		}
 		add_core_of = MER

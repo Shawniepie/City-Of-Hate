@@ -1,10 +1,18 @@
-
 state={
 	id=763
 	name="STATE_763"
 	provinces={
-		4279 6938 
+		4279 6938 3201 5611
 	}
-	manpower=0
+	state_category = rural
+	manpower=3281
 	buildings_max_level_factor=1.000
+	history={
+		owner = BLD
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 2
+		}
+		add_core_of = BLD
+	}
 }

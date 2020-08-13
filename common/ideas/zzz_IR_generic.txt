@@ -103,6 +103,23 @@ ideas = {
 			
 			removal_cost = -1
 		}
+		
+		ogre_country = {
+			allowed = {
+				always = no #assigned in country files
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = generic_ogre
+			
+			traits = {
+				ogre_racial_bonuses
+			}
+			
+			removal_cost = -1
+		}
 	}
 	
 	country = {

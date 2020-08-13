@@ -1,0 +1,19 @@
+
+state={
+	id=770
+	name="STATE_770"
+	provinces={
+		6687 1271 490 224 6716
+	}
+	state_category = rural
+	manpower=2621
+	buildings_max_level_factor=1.000
+	history={
+		owner = BLD
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+		}
+		add_core_of = BLD
+	}
+}

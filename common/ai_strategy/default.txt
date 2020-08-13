@@ -14,19 +14,19 @@
 # contain
 # area_priority
 
-faction_friends = {
-	enable = {
-		has_country_flag = faction_friends
-	}
-	abort = {
-		NOT = {
-			has_country_flag = faction_friends
-		}
-	}
-	
-	effect = {
-		
-}
+#faction_friends = {
+#	enable = {
+#		has_country_flag = faction_friends
+#	}
+#	abort = {
+#		NOT = {
+#			has_country_flag = faction_friends
+#		}
+#	}
+#	
+#	effect = {
+#	}
+#}
 
 invade_ordoria_priorities = {
 	enable = {
@@ -282,10 +282,9 @@ build_army = {
 	}
 
 	ai_strategy = {
-		type = build_army
-		id = infantry
-		value = 5000
-	}
+        type = force_build_armies
+        value = 100
+    }
 	
 	abort = {
 		has_manpower < 1
@@ -303,10 +302,9 @@ build_army = {
 	}
 
 	ai_strategy = {
-		type = build_army
-		id = infantry
-		value = 5000
-	}
+        type = force_build_armies
+        value = 100
+    }
 	
 	abort = {
 		has_manpower < 1
@@ -645,7 +643,15 @@ do_not_waste_pp_if_saving_for_manpower_laws = {
 
 default_unit_production = {
 	enable = {
-		always = yes
+		NOT = {
+			OR ={
+				original_tag = PRK
+				original_tag = BLD
+				original_tag = BER
+				original_tag = RMT
+				original_tag = SKA
+			}
+		}
 	}
 	
 	ai_strategy = {
@@ -837,7 +843,7 @@ build_intelligence_agency_as_major = {
 		is_major = yes
 		OR = {
 			has_war = yes
-			date > 1936.1.1
+			date > 888.1.1
 		}
 	}
 
@@ -850,13 +856,11 @@ build_intelligence_agency_as_major = {
 
 build_intelligence_agency = {
 	enable = {
-		date > 1937.1.1
+		date > 890.1.1
 		num_of_civilian_factories > 25
 	}
 	abort = {
-		OR = {
-			num_of_civilian_factories < 25
-		}
+		num_of_civilian_factories < 25
 	}
 
 	ai_strategy = {
@@ -868,13 +872,11 @@ build_intelligence_agency = {
 
 upgrade_intelligence_agency = {
 	enable = {
-		date > 1940.1.1
+		date > 19892.1.1
 		num_of_civilian_factories > 50
 	}
 	abort = {
-		OR = {
-			num_of_civilian_factories < 40
-		}
+		num_of_civilian_factories < 40
 	}
 
 	ai_strategy = {

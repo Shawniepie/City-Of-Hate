@@ -1,0 +1,35 @@
+﻿### ALLIANCE EVENTS
+
+add_namespace = console_command
+
+
+	country_event = {#Free-for-All
+		id = console_command.1
+		title = console_command.1.t
+		desc = console_command.1.d
+		picture = GFX_report_event_ast_troops_landing
+		
+		is_triggered_only = yes
+		
+		option = {#Die
+			name = console_command.1.a
+			
+			every_country = {
+				limit = {
+					is_subject = yes
+				}
+				set_autonomy = {
+					target = THIS
+					autonomy_state = autonomy_free
+				}
+			}
+			every_other_country = {
+				every_country = {
+					declare_war_on = {
+						target = PREV
+						type = annex_everything
+					}
+				}
+			}
+		}
+	}

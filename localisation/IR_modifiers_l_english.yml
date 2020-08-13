@@ -1,5 +1,5 @@
 ﻿l_english:
- monarchy_constitutional_drift:0 "Daily Constitutional Monarchist Support"
- republic_peasant_drift:0 "Daily Radical Republicanism Support"
- puritan_drift:0 "Daily Puritanism Support"
+ monarchy_constitutional_drift:0 "Daily Support for Constitutionalism"
+ republic_peasant_drift:0 "Daily Support Radical Republicanism"
+ puritan_drift:0 "Daily Support for Puritanism"
  republic_aristocrat_drift:0 "Daily Support for the Aristocracy"

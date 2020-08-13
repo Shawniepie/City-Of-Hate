@@ -123,7 +123,7 @@ sub_units = {
 		training_time = 135
 		suppression = 1
 		weight = 0.5
-		
+				
 		supply_consumption = 0.07
 		breakthrough = 0.05
 		defense = 0.05
@@ -192,6 +192,55 @@ sub_units = {
 		}
 		amphibious = {
 			attack = 0.35
+		}
+	}
+	
+	ogre_warriors = {
+		sprite = infantry
+		map_icon_category = infantry
+		
+		priority = 600
+		ai_priority = 200
+		active = no
+
+		type = {
+			infantry
+		}
+		
+		group = infantry
+		
+		categories = {
+			category_front_line
+			category_all_infantry
+			category_army
+		}
+		
+		combat_width = 4
+		
+		#Size Definitions
+		max_strength = 60
+		max_organisation = 70
+		default_morale = 0.5
+		manpower = 20
+
+		#Misc Abilities
+		training_time = 75
+		suppression = 0.25
+		weight = 0.5
+		
+		supply_consumption = 0.5
+		
+		#Modifiers
+		weight = 2
+		soft_attack = 0.5 #Strong
+		hard_attack = 0.3 #Strong
+		breakthrough = 0.75 #Headstrong
+		defense = 0.65 #Tough
+		max_strength = 35 #Tough
+		movement = 0.1 #Long Legs
+
+		need = {
+			infantry_equipment = 70
 		}
 	}
 }
