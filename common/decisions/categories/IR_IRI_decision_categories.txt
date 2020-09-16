@@ -1,0 +1,66 @@
+IRI_category_military_faction_demands = {
+
+	picture = GFX_decision_category_milfaction
+
+	icon = border_conflicts
+
+	priority = 95
+
+	allowed = {
+		original_tag = IRI
+	}
+}
+
+IRI_category_territorial_integration = {
+
+	icon = border_war
+
+	priority = 90
+
+	allowed = {
+		original_tag = IRI
+	}
+}
+
+IRI_irinthios_influence_sphere = {
+
+	icon = power_struggle
+
+	priority = 80
+
+	allowed = {
+		original_tag = IRI
+	}
+}
+	
+IRI_operations_in_gmr = {
+
+	icon = power_struggle
+
+	priority = 70
+
+	allowed = {
+		original_tag = IRI
+	}
+}
+IRI_operations_in_union = {
+
+	icon = power_struggle
+
+	priority = 80
+
+	allowed = {
+		original_tag = IRI
+	}
+}
+
+IRI_fight_against_ordoria = {
+
+	icon = border_war
+
+	priority = 70
+
+	allowed = {
+		original_tag = IRI
+	}
+}

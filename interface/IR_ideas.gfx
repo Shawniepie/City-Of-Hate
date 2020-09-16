@@ -434,4 +434,53 @@ spriteTypes = {
 		name = "GFX_idea_rth_lavynthis"
 		texturefile = "gfx/interface/ideas/rth_lavynthis.dds"
 	}
+	
+	spriteType = {
+		name = "GFX_idea_Agrarianism"
+		texturefile = "gfx/interface/ideas/Agrarianism.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_Primitive_Economy"
+		texturefile = "gfx/interface/ideas/Primitive_Economy.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_Manoralism"
+		texturefile = "gfx/interface/ideas/Manoralism.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_Fiscalism"
+		texturefile = "gfx/interface/ideas/Fiscalism.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_Mercantilism"
+		texturefile = "gfx/interface/ideas/Mercantilism.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_Corporatism"
+		texturefile = "gfx/interface/ideas/Corporatism.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_Communalism"
+		texturefile = "gfx/interface/ideas/Communalism.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_Steam_And_Steel"
+		texturefile = "gfx/interface/ideas/Steam_And_Steel.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_Tribal"
+		texturefile = "gfx/interface/ideas/Tribal.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_Feudal"
+		texturefile = "gfx/interface/ideas/Feudal.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_Late_Feudal"
+		texturefile = "gfx/interface/ideas/Late_Feudal.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_Industrial"
+		texturefile = "gfx/interface/ideas/Industrial.tga"
+	}
 }

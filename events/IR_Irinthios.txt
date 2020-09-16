@@ -124,3 +124,199 @@ country_event = {#Union Alliance?
 		}
 	}
 }
+
+## SPECIAL AGRESSIVE OCCUPATION EVENTS
+
+country_event = {#Ogres Massacre in Burdvin in which Irinthians are going hella nazi
+	id = iri.5
+	title = iri.5.t
+	desc = iri.5.d
+	picture = GFX_report_event_irinthios_warcrimes
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	trigger = {
+
+	}
+	
+	mean_time_to_happen = {
+
+	}
+	
+	option = {#Such sacrifice we are ready to make
+		name = iri.5.a
+		add_manpower = -40000
+		add_stability = -0.3
+		add_war_support = -0.3
+		if = {
+			limit = {
+					NOT = { has_idea = IRI_Glory_Built_On_Blood }
+			}
+			add_ideas = IRI_Glory_Built_On_Blood
+		}
+	}
+}
+
+country_event = {#Surely the outside world won't like lizardmen ulitisation camps
+	id = iri.6
+	title = iri.6.t
+	desc = iri.6.d
+	picture = GFX_report_event_irinthios_warcrimes
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	trigger = {
+
+	}
+	
+	mean_time_to_happen = {
+
+	}
+	
+	option = {#Oh well that doesn't need a comment
+		name = iri.6.a
+		add_stability = -0.3
+		add_war_support = -0.3
+		add_popularity = {
+			ideology = puritan
+			popularity = 0.25
+		}
+		if = {
+			limit = {
+					NOT = { has_idea = IRI_Glory_Built_On_Blood }
+			}
+			add_ideas = IRI_Glory_Built_On_Blood
+		}
+	}
+}
+
+country_event = {#Uh oh militarists are mad because Chairopon failed his promises
+	id = iri.7
+	title = iri.7.t
+	desc = iri.7.d
+	picture = GFX_report_event_irinthios_coup
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	trigger = {
+
+	}
+	
+	mean_time_to_happen = {
+
+	}
+	
+	option = {#Disaster but truly deserved for nazis - puritan side
+		name = iri.7.a
+		kill_country_leader = yes
+		hidden_effect = { 
+		add_popularity = {
+			ideology = puritan
+			popularity = 0.9
+		}
+		kill_ideology_leader = monarchy_absolute
+		}
+		IRI = {
+		remove_ideas = IRI_The_Bloodlust
+		start_civil_war = {
+				ruling_party = puritan
+				ideology = monarchy_absolute
+				size = 0.4
+				only_own_territory = yes
+				capital = 397
+				states = { 
+				397 744 398 740 399 739 400 741 742
+				}
+				keep_unit_leaders = {
+				503 505 506 509 510
+				}
+			}
+		}
+	}
+	option = {#Disaster but truly deserved for nazis - Chairopon heir side
+		name = iri.7.b
+		kill_country_leader = yes
+		hidden_effect = { 
+		kill_ideology_leader = monarchy_absolute
+		add_popularity = {
+			ideology = monarchy_absolute
+			popularity = 0.9
+		}
+		}
+		IRI = {
+		remove_ideas = IRI_The_Bloodlust
+		start_civil_war = {
+				ruling_party = monarchy_absolute
+				ideology = puritan
+				size = 0.4
+				only_own_territory = yes
+				capital = 751
+				states = { 
+				751 750 755 386 753 757 755 752 758 756 797 759 402
+				}
+				keep_unit_leaders = {
+				501 502 504 507 508
+				}
+			}
+		}
+	}
+}
+country_event = {#Nobody expected Merchant Hand exile
+	id = iri.8
+	title = iri.8.t
+	desc = iri.8.d
+	picture = GFX_report_event_irinthios_sanctions
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	trigger = {
+
+	}
+	
+	mean_time_to_happen = {
+
+	}
+	
+	option = {#Oh well what will we do now
+		name = iri.8.a
+		MER = { 
+		add_opinion_modifier = {
+			target = IRI
+			modifier = merchants_exiled}
+		add_opinion_modifier = {
+			target = IRI
+			modifier = embargo_trade}
+		}
+		IRI = { add_opinion_modifier = {
+			target = MER
+			modifier = merchants_exiled}
+		add_opinion_modifier = {
+			target = MER
+			modifier = embargo_trade}
+		}
+		IRI = { country_event = { id = iri.9 hours = 6 random_hours = 18 } }
+	}
+}
+country_event = {#Irinthios gets response
+	id = iri.9
+	title = iri.9.t
+	desc = iri.9.d
+	picture = GFX_report_event_irinthios_sanctions
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	trigger = {
+	}
+	
+	mean_time_to_happen = {
+	}
+	
+	option = {#Oh crap
+		name = iri.9.a
+	}
+}

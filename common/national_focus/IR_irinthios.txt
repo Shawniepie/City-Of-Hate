@@ -1,0 +1,3020 @@
+﻿focus_tree = {
+	id = irinthios_focus
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = IRI
+		}
+	}
+	
+
+	default = no
+
+	continuous_focus_position = { x = 20 y = 1600 }
+##############################
+### MAIN KEEP EMPEROR PATH ###
+##############################
+	focus = {
+		id = IRI_Debase_Currency
+		icon = GFX_IRI_Debase_Currency
+		x = 6
+		y = 0
+		mutually_exclusive = { focus = IRI_Spoils_Of_War focus = IRI_Chairopons_Promises }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = IRI_Depression_Evaded
+		}
+	}
+
+	focus = {
+		id = IRI_Ensure_Loyalty_Of_Generals
+		icon = GFX_IRI_Ensure_Loyalty_Of_Generals
+		prerequisite = { focus = IRI_Debase_Currency }
+		x = -2
+		y = 1
+		relative_position_id = IRI_Debase_Currency
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			add_ideas = IRI_Generals_1
+		}
+	}
+
+	focus = {
+		id = IRI_Open_Officer_Schools
+		icon = GFX_IRI_Open_Officer_Schools
+		prerequisite = { focus = IRI_Ensure_Loyalty_Of_Generals }
+		x = 0
+		y = 1
+		relative_position_id = IRI_Ensure_Loyalty_Of_Generals
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}	
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		complete_tooltip = {
+
+		}
+		
+		completion_reward = {
+		swap_ideas = {
+			remove_idea = IRI_Generals_1
+			add_idea = IRI_Generals_2
+			}	
+		}
+	}
+
+	focus = {
+		id = IRI_Exile_Merchants_Hand_Traders
+		icon = GFX_IRI_Exile_Merchants_Hand_Traders
+		prerequisite = { focus = IRI_Debase_Currency }
+		x = 0
+		y = 1
+		relative_position_id = IRI_Debase_Currency
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_idea = IRI_Depression_Evaded
+		}
+
+		bypass = {
+			NOT = { has_idea = IRI_Depression_Evaded }
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		complete_tooltip = {
+		}
+
+		completion_reward = {
+		MER = { country_event = { id = iri.8 hours = 6 random_hours = 18 } }
+		}
+	}
+
+	focus = {
+		id = IRI_International_Academy_Of_Philosophy
+		icon = GFX_IRI_International_Academy_Of_Philosophy
+		prerequisite = { focus = IRI_Exile_Merchants_Hand_Traders }
+		x = 0
+		y = 1
+		relative_position_id = IRI_Exile_Merchants_Hand_Traders
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+	focus = {
+		id = IRI_Emperors_Party
+		icon = GFX_IRI_Emperors_Party
+		prerequisite = { focus = IRI_International_Academy_Of_Philosophy focus = IRI_New_Cohorts_Training_Program }
+		x = 1
+		y = 1
+		relative_position_id = IRI_International_Academy_Of_Philosophy
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		complete_tooltip = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			set_party_name = { ideology = monarchy_constitutional long_name = IRI_emperor_party_long name = IRI_emperor_party }
+			add_political_power = 120
+			add_popularity = {
+				ideology = monarchy_constitutional
+				popularity = 0.2
+			}
+		}
+	}
+
+	focus = {
+		id = IRI_Restore_Old_Currency_Value
+		icon = GFX_IRI_Restore_Old_Currency_Value
+		prerequisite = { focus = IRI_International_Academy_Of_Philosophy focus = IRI_Open_Officer_Schools }
+		x = -1
+		y = 1
+		relative_position_id = IRI_International_Academy_Of_Philosophy
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		complete_tooltip = {
+
+		}
+		
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			remove_ideas = IRI_Depression_Evaded		
+		}
+	}
+
+	focus = {
+		id = IRI_Honorous_Citizen_Regiments
+		icon = GFX_IRI_Honorous_Citizen_Regiments
+		prerequisite = { focus = IRI_Debase_Currency }
+		x = 2
+		y = 1
+		relative_position_id = IRI_Debase_Currency
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		complete_tooltip = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_ideas = IRI_Citizens_1
+		}
+	}
+
+	focus = {
+		id = IRI_New_Cohorts_Training_Program
+		icon = GFX_IRI_New_Cohorts_Training_Program
+		prerequisite = { focus = IRI_Honorous_Citizen_Regiments }
+		x = 0
+		y = 1
+		relative_position_id = IRI_Honorous_Citizen_Regiments
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		complete_tooltip = {
+		}
+
+		completion_reward = {
+		swap_ideas = {
+			remove_idea = IRI_Citizens_1
+			add_idea = IRI_Citizens_2
+			}		
+		}
+	}
+##################################
+### ALEXANDER THE GREAT RIPOFF ###
+##################################
+	focus = {
+		id = IRI_Spoils_Of_War
+		icon = GFX_IRI_Spoils_Of_War
+		x = 14
+		y = 0
+		mutually_exclusive = { focus = IRI_Debase_Currency focus = IRI_Chairopons_Promises }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = IRI_Spoils_Of_War_effect_tooltip
+			swap_ideas = {
+			remove_idea = IRI_Irinthios_Will_Rise_Again
+			add_idea = IRI_The_Bloodlust
+			}
+		}
+	}
+
+	focus = {
+		id = IRI_Invade_Bilodya
+		icon = GFX_IRI_Invade_Bilodya
+		prerequisite = { focus = IRI_Spoils_Of_War }
+		will_lead_to_war_with = BLD
+		x = -2
+		y = 1
+		relative_position_id = IRI_Spoils_Of_War
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			is_subject = no
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = BLD
+			}
+		}	
+	}
+
+	focus = {
+		id = IRI_Suppress_Ogres
+		icon = GFX_IRI_Suppress_Ogres
+		prerequisite = { focus = IRI_Invade_Bilodya }
+		x = 0
+		y = 1
+		relative_position_id = IRI_Invade_Bilodya
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		has_idea = IRI_Ogre_Riots
+		}	
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		complete_tooltip = {
+
+		}
+		
+		completion_reward = {
+			remove_ideas = IRI_Ogre_Riots
+			hidden_effect { #Heheheheehe
+			ROOT = { country_event = { id = iri.5 hours = 12 random_hours = 36 } }
+			}
+		}
+	}
+
+	focus = {
+		id = IRI_Replace_Discontent_Generals
+		icon = GFX_IRI_Replace_Discontent_Generals
+		prerequisite = { focus = IRI_Spoils_Of_War }
+		x = 0
+		y = 1
+		relative_position_id = IRI_Spoils_Of_War
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		complete_tooltip = {
+		}
+
+		completion_reward = {
+			add_ideas = IRI_Generals_Militaristic_1
+		}
+	}
+
+	focus = {
+		id = IRI_Appoint_Sosibios
+		icon = GFX_IRI_Appoint_Sosibios
+		prerequisite = { focus = IRI_Replace_Discontent_Generals }
+		x = 0
+		y = 1
+		relative_position_id = IRI_Replace_Discontent_Generals
+		mutually_exclusive = { focus = IRI_Enpower_The_Old_Guard }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+		remove_ideas = IRI_The_Bloodlust
+		set_politics = {
+			ruling_party = puritan
+			elections_allowed = no
+		}
+		}
+	}
+
+	focus = {
+		id = IRI_Reign_Of_Strategos
+		icon = GFX_IRI_Reign_Of_Strategos
+		prerequisite = { focus = IRI_Appoint_Sosibios }
+		x = 0
+		y = 1
+		relative_position_id = IRI_Appoint_Sosibios
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		complete_tooltip = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		swap_ideas = {
+			remove_idea = IRI_Generals_Militaristic_1
+			add_idea = IRI_Generals_Militaristic_2
+			}	
+		}
+	}
+
+	focus = {
+		id = IRI_Quantity_Over_Quality
+		icon = GFX_IRI_Quantity_Over_Quality
+		prerequisite = { focus = IRI_Spoils_Of_War }
+		x = 2
+		y = 1
+		relative_position_id = IRI_Spoils_Of_War
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		complete_tooltip = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		add_ideas =	IRI_Citizens_Militaristic_1
+		}
+	}
+
+	focus = {
+		id = IRI_Enpower_The_Old_Guard
+		icon = GFX_IRI_Enpower_The_Old_Guard
+		prerequisite = { focus = IRI_Quantity_Over_Quality }
+		x = 0
+		y = 1
+		relative_position_id = IRI_Quantity_Over_Quality
+		mutually_exclusive = { focus = IRI_Appoint_Sosibios }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+		remove_ideas = IRI_The_Bloodlust
+		custom_effect_tooltip = IRI_Absolutes_Cosmetic_tooltip
+		hidden_effect { 
+		set_politics = {
+			ruling_party = monarchy_absolute
+			elections_allowed = no
+		}
+			}
+		}
+	}
+
+	focus = {
+		id = IRI_Invade_Kurgur_Lands
+		icon = GFX_IRI_Invade_Kurgur_Lands
+		prerequisite = { focus = IRI_Suppress_Ogres }
+		x = 0
+		y = 1
+		relative_position_id = IRI_Suppress_Ogres
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}	
+
+		bypass = {
+		OR = {
+			KUR = { is_subject_of = ROOT }
+			NOT = { country_exists = KUR }
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		complete_tooltip = {
+
+		}
+		
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = KUR
+			}
+		}
+	}
+	
+	focus = {
+		id = IRI_Humiliate_Bergialers
+		icon = GFX_IRI_Humiliate_Bergialers
+		prerequisite = { focus = IRI_Invade_Kurgur_Lands }
+		will_lead_to_war_with = BER
+		x = 0
+		y = 1
+		relative_position_id = IRI_Invade_Kurgur_Lands
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}	
+
+		bypass = {
+		OR = {
+			BER = { is_subject_of = ROOT }
+			NOT = { country_exists = BER }
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		complete_tooltip = {
+
+		}
+		
+		completion_reward = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = BER
+			}
+		}
+	}
+
+	focus = {
+		id = IRI_Megali_Irinthios
+		icon = GFX_IRI_unknown
+		prerequisite = { focus = IRI_Reign_Of_Strategos }
+		x = 0
+		y = 2
+		relative_position_id = IRI_Reign_Of_Strategos
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			OR = {
+				num_of_factories > 50
+				all_state = {
+					OR = {
+						NOT = { is_core_of = CHI }
+						NOT = { is_core_of = PRC }
+						OR = {
+							is_controlled_by = ROOT
+							CONTROLLER = { is_in_faction_with = ROOT }
+							CONTROLLER = { is_subject_of = ROOT }
+						}
+					}
+				}
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		complete_tooltip = {
+
+		}
+		
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_research_slot = 1			
+		}
+	}
+	focus = {
+		id = IRI_Supreme_Arsenal
+		icon = GFX_IRI_unknown
+		prerequisite = { focus = IRI_Megali_Irinthios }
+		x = -2
+		y = 1
+		relative_position_id = IRI_Megali_Irinthios
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		complete_tooltip = {
+
+		}
+		
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_research_slot = 1			
+		}
+	}
+	focus = {
+		id = IRI_Program_Of_Purity
+		icon = GFX_IRI_unknown
+		prerequisite = { focus = IRI_Megali_Irinthios }
+		x = 0
+		y = 1
+		relative_position_id = IRI_Megali_Irinthios
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		complete_tooltip = {
+
+		}
+		
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		add_ideas = IRI_Spirit_Of_Purity
+		}
+	}
+	focus = {
+		id = IRI_Slave_Labour_Force
+		icon = GFX_IRI_unknown
+		prerequisite = { focus = IRI_Megali_Irinthios }
+		x = 2
+		y = 1
+		relative_position_id = IRI_Megali_Irinthios
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		complete_tooltip = {
+
+		}
+		
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {	
+		add_ideas = IRI_Slavery_Allowed	
+		}
+	}
+	focus = {
+		id = IRI_Raise_Military_Expenditures
+		icon = GFX_IRI_Raise_Military_Expenditures
+		prerequisite = { focus = IRI_Enpower_The_Old_Guard }
+		x = 0
+		y = 1
+		relative_position_id = IRI_Enpower_The_Old_Guard
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		complete_tooltip = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		swap_ideas = {
+			remove_idea = IRI_Citizens_Militaristic_1
+			add_idea = IRI_Citizens_Militaristic_2
+			}	
+		}
+	}
+
+	focus = {
+		id = IRI_Theoria_Kataktisis
+		icon = GFX_IRI_Theoria_Kataktisis
+		prerequisite = { focus = IRI_Raise_Military_Expenditures }
+		x = 0
+		y = 1
+		relative_position_id = IRI_Raise_Military_Expenditures
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		complete_tooltip = {
+
+		}
+		
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+		
+		}
+	}
+
+########################
+###OPPOSE IMPERIALISM###
+########################
+	focus = {
+		id = IRI_Chairopons_Promises
+		icon = GFX_IRI_Chairopons_Promises
+		x = 23
+		y = 0
+		mutually_exclusive = { focus = IRI_Spoils_Of_War focus = IRI_Debase_Currency }	
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+		custom_effect_tooltip = IRI_Chairopons_Promises_effect_tooltip
+		hidden_effect { 
+			swap_ideas = {
+			remove_idea = IRI_Irinthios_Will_Rise_Again
+			add_idea = IRI_Revolution_In_Air_1
+			}
+		}
+		}
+	}
+
+	focus = {
+		id = IRI_Ban_Guilds
+		icon = GFX_IRI_unknown
+		prerequisite = { focus = IRI_Chairopons_Promises }
+		x = -5
+		y = 1
+		relative_position_id = IRI_Chairopons_Promises
+		mutually_exclusive = { focus = IRI_Fair_Rights_For_Guildmasters }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+		IRI_Revolution_In_Air_level_up = yes
+		}
+	}
+
+	focus = {
+		id = IRI_Immunity_For_All_Nobles
+		icon = GFX_IRI_unknown
+		prerequisite = { focus = IRI_Ban_Guilds focus = IRI_Fair_Rights_For_Guildmasters }
+		x = 0
+		y = 1
+		relative_position_id = IRI_Ban_Guilds
+		mutually_exclusive = { focus = IRI_Allow_Peasantry_Courts }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}	
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		complete_tooltip = {
+
+		}
+		
+		completion_reward = {
+		IRI_Revolution_In_Air_level_up = yes
+		}
+	}
+
+	focus = {
+		id = IRI_Fair_Rights_For_Guildmasters
+		icon = GFX_IRI_Fair_Rights_For_Guildmasters
+		prerequisite = { focus = IRI_Chairopons_Promises }
+		x = -3
+		y = 1
+		relative_position_id = IRI_Chairopons_Promises
+		mutually_exclusive = { focus = IRI_Ban_Guilds }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		complete_tooltip = {
+		}
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = IRI_Allow_Peasantry_Courts
+		icon = GFX_IRI_unknown
+		prerequisite = { focus = IRI_Fair_Rights_For_Guildmasters focus = IRI_Ban_Guilds }
+		x = 0
+		y = 1
+		relative_position_id = IRI_Fair_Rights_For_Guildmasters
+		mutually_exclusive = { focus = IRI_Immunity_For_All_Nobles }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = IRI_Create_House_Of_Commons
+		icon = GFX_IRI_Create_House_Of_Commons
+		prerequisite = { focus = IRI_Immunity_For_All_Nobles focus = IRI_Allow_Peasantry_Courts }
+		x = 0
+		y = 1
+		relative_position_id = IRI_Allow_Peasantry_Courts
+		mutually_exclusive = { focus = IRI_Mandatory_Army_Service }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = IRI_Mandatory_Army_Service
+		icon = GFX_IRI_unknown
+		prerequisite = { focus = IRI_Immunity_For_All_Nobles focus = IRI_Allow_Peasantry_Courts }
+		x = 0
+		y = 1
+		relative_position_id = IRI_Immunity_For_All_Nobles
+		mutually_exclusive = { focus = IRI_Create_House_Of_Commons }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+		IRI_Revolution_In_Air_level_up = yes
+		}
+	}
+
+	focus = {
+		id = IRI_Republican_Traditions
+		icon = GFX_IRI_unknown
+		prerequisite = { focus = IRI_Mandatory_Army_Service focus = IRI_Create_House_Of_Commons }
+		x = 1
+		y = 1
+		relative_position_id = IRI_Mandatory_Army_Service
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = IRI_Strategy_Of_The_Great_Planning
+		icon = GFX_IRI_unknown
+		prerequisite = { focus = IRI_Theoria_Kataktisis }
+		x = 0
+		y = 1
+		relative_position_id = IRI_Theoria_Kataktisis
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = IRI_Improved_Ranged_Weapons
+		icon = GFX_IRI_unknown
+		prerequisite = { focus = IRI_Theoria_Kataktisis focus = IRI_Republican_Traditions }
+		x = 2
+		y = 1
+		relative_position_id = IRI_Theoria_Kataktisis
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = IRI_Meritocratic_Promotions
+		icon = GFX_IRI_unknown
+		prerequisite = { focus = IRI_Republican_Traditions }
+		x = 1
+		y = 1
+		relative_position_id = IRI_Republican_Traditions
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = IRI_Sunday_Provocation
+		icon = GFX_IRI_Sunday_Provocation
+		prerequisite = { focus = IRI_Chairopons_Promises }
+		x = 3
+		y = 1
+		relative_position_id = IRI_Chairopons_Promises
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		complete_tooltip = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+
+		}
+	}
+
+################################
+### CINYRAS ALT ROYAL REIGNS ###
+################################
+	
+	
+	focus = {
+		id = IRI_Cinyras_Restoration
+		icon = GFX_IRI_Cinyras_Restoration
+		prerequisite = { focus = IRI_Sunday_Provocation }
+		x = -1
+		y = 1
+		relative_position_id = IRI_Sunday_Provocation
+		mutually_exclusive = { focus = IRI_Glory_To_Republic }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		complete_tooltip = {
+		}
+
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = IRI_Return_Cities_Back_To_Their_Lords
+		icon = GFX_IRI_Return_Cities_Back_To_Their_Lords
+		prerequisite = { focus = IRI_Cinyras_Restoration }
+		x = -3
+		y = 1
+		relative_position_id = IRI_Cinyras_Restoration
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = IRI_Deal_For_Northern_Tlarthingia
+		icon = GFX_IRI_Deal_for_Northern_Tlarthingia
+		prerequisite = { focus = IRI_Cinyras_Restoration }
+		x = -1
+		y = 1
+		relative_position_id = IRI_Cinyras_Restoration
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = IRI_No_More_Dishonour
+		icon = GFX_IRI_No_More_Dishonour
+		prerequisite = { focus = IRI_Return_Cities_Back_To_Their_Lords }
+		prerequisite = { focus = IRI_Deal_For_Northern_Tlarthingia }
+		x = 1
+		y = 1
+		relative_position_id = IRI_Return_Cities_Back_To_Their_Lords
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = IRI_Challenge_The_Freiprintzums_Union
+		icon = GFX_IRI_Challenge_The_Freiprintzums_Union
+		prerequisite = { focus = IRI_No_More_Dishonour }
+		x = -1
+		y = 1
+		relative_position_id = IRI_No_More_Dishonour
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = IRI_Put_An_End_To_Ungerdalers
+		icon = GFX_IRI_Put_An_End_To_Ungerdalers
+		prerequisite = { focus = IRI_Challenge_The_Freiprintzums_Union focus = IRI_Found_Coallition_Of_Irinth }
+		x = 0
+		y = 1
+		relative_position_id = IRI_Challenge_The_Freiprintzums_Union
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = IRI_Safeguard_Stahlhof
+		icon = GFX_IRI_Safeguard_Stahlhof
+		prerequisite = { focus = IRI_Challenge_The_Freiprintzums_Union focus = IRI_Found_Coallition_Of_Irinth }
+		x = 0
+		y = 1
+		relative_position_id = IRI_Found_Coallition_Of_Irinth
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = IRI_Found_Coallition_Of_Irinth
+		icon = GFX_IRI_Found_Coallition_Of_Irinth
+		prerequisite = { focus = IRI_No_More_Dishonour }
+		x = 1
+		y = 1
+		relative_position_id = IRI_No_More_Dishonour
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+		}
+	}
+
+	
+#############################################
+### GLORY TO ETERNAL COMRADES OF HELLADA! ###
+#############################################
+
+	focus = {
+		id = IRI_Glory_To_Republic
+		icon = GFX_IRI_Glory_To_Republic
+		prerequisite = { focus = IRI_Sunday_Provocation }
+		x = 1
+		y = 1
+		relative_position_id = IRI_Sunday_Provocation
+		mutually_exclusive = { focus = IRI_Cinyras_Restoration }
+		cost = 10
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		complete_tooltip = {
+		}
+
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = IRI_Nationalize_Guilds
+		icon = GFX_IRI_Nationalize_Guilds
+		prerequisite = { focus = IRI_Glory_To_Republic }
+		x = 1
+		y = 1
+		relative_position_id = IRI_Glory_To_Republic
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = IRI_Peasants_Liberation_Army
+		icon = GFX_IRI_Peasants_Liberation_Army
+		prerequisite = { focus = IRI_Glory_To_Republic }
+		x = 3
+		y = 1
+		relative_position_id = IRI_Glory_To_Republic
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = IRI_Liberate_The_South
+		icon = GFX_IRI_Liberate_The_South
+		prerequisite = { focus = IRI_Peasants_Liberation_Army }
+		prerequisite = { focus = IRI_Nationalize_Guilds }
+		x = 1
+		y = 1
+		relative_position_id = IRI_Nationalize_Guilds
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = IRI_Coalition_Against_Ordoria
+		icon = GFX_IRI_Coalition_Against_Ordoria
+		prerequisite = { focus = IRI_Liberate_The_South }
+		x = -1
+		y = 1
+		relative_position_id = IRI_Liberate_The_South
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = IRI_Irinthians_Never_Surrender
+		icon = GFX_IRI_Irintians_Never_Surrender
+		prerequisite = { focus = IRI_Coalition_Against_Ordoria }
+		x = 0
+		y = 1
+		relative_position_id = IRI_Coalition_Against_Ordoria
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = IRI_Bill_Of_Civil_Rights
+		icon = IRI_Bill_Of_Civil_Rights
+		prerequisite = { focus = IRI_Liberate_The_South }
+		x = 1
+		y = 1
+		relative_position_id = IRI_Liberate_The_South
+		mutually_exclusive = { focus = IRI_Absolute_Power_For_The_Commisar }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = IRI_Absolute_Power_For_The_Commisar
+		icon = GFX_IRI_Absolute_Power_For_The_Commisar
+		prerequisite = { focus = IRI_Liberate_The_South }
+		x = 3
+		y = 1
+		relative_position_id = IRI_Liberate_The_South
+		mutually_exclusive = { focus = IRI_Bill_Of_Civil_Rights }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = IRI_Invite_Lirothlind_To_Alliance
+		icon = GFX_IRI_Invite_Lirothlind_To_Alliance
+		prerequisite = { focus = IRI_Bill_Of_Civil_Rights }
+		prerequisite = { focus = IRI_Coalition_Against_Ordoria }
+		x = 0
+		y = 1
+		relative_position_id = IRI_Bill_Of_Civil_Rights
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = IRI_Ignite_Revolution_In_Grand_Masters_Realm
+		icon = GFX_IRI_Ignite_Revolution_In_Grand_Masters_Realm
+		prerequisite = { focus = IRI_Bill_Of_Civil_Rights focus = IRI_Absolute_Power_For_The_Commisar }
+		x = 0
+		y = 1
+		relative_position_id = IRI_Absolute_Power_For_The_Commisar
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+		}
+	}
+	
+#########################
+### REPUBLICAN SHARED ###
+#########################
+	
+	focus = {
+		id = IRI_Get_Bilodyan_Support_In_Civil_War
+		icon = GFX_IRI_Get_Bilodyan_Support_In_Civil_War
+		prerequisite = { focus = IRI_Cinyras_Restoration focus = IRI_Glory_To_Republic }
+		x = 1
+		y = 1
+		relative_position_id = IRI_Cinyras_Restoration
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		complete_tooltip = {
+		}
+
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = IRI_Fate_Of_The_Tyrant
+		icon = GFX_IRI_Fate_Of_The_Tyrant
+		prerequisite = { focus = IRI_Get_Bilodyan_Support_In_Civil_War }
+		x = 0
+		y = 1
+		relative_position_id = IRI_Get_Bilodyan_Support_In_Civil_War
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		complete_tooltip = {
+		}
+
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = IRI_Rebuilding
+		icon = GFX_IRI_Rebuilding
+		prerequisite = { focus = IRI_Fate_Of_The_Tyrant }
+		x = 0
+		y = 1
+		relative_position_id = IRI_Fate_Of_The_Tyrant
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		complete_tooltip = {
+		}
+
+		completion_reward = {
+		}
+	}
+
+#######################
+###CONQUEST FOCUSES ###
+#######################
+	
+	
+	focus = {
+		id = IRI_Retake_Burdvin
+		icon = GFX_IRI_Retake_Burdvin
+		prerequisite = { focus = IRI_Ensure_Loyalty_Of_Generals }
+		mutually_exclusive = { focus = IRI_Invade_Tlarthingia }
+		will_lead_to_war_with = BLD
+		x = -2
+		y = 4
+		relative_position_id = IRI_Ensure_Loyalty_Of_Generals
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 6
+		}
+
+		available = {
+			NOT = { has_state_flag = IRI_Accepted_Bilodya }
+		}
+
+		bypass = { 
+		OR = {
+			BLD = { is_subject_of = ROOT }
+			NOT = { country_exists = BLD }
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+			create_wargoal = {
+				type = take_state_focus
+				target = BLD
+				generator = { 385 828 761 771 }
+			}
+		}
+	}
+
+	focus = {
+		id = IRI_Integrate_Ogre_Citizens
+		icon = GFX_IRI_Integrate_Ogre_Citizens
+		prerequisite = { focus = IRI_Retake_Burdvin }
+		x = -1
+		y = 1
+		relative_position_id = IRI_Retake_Burdvin
+		mutually_exclusive = { focus = IRI_Bilodya_Occupation }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			OR = {
+				BLD = { is_subject_of = ROOT }
+				385 = { is_fully_controlled_by = ROOT }
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_ideas = IRI_Ogre_Assimilation
+		}
+	}
+	focus = {
+		id = IRI_Bilodya_Occupation
+		icon = GFX_IRI_Bilodya_Occupation
+		prerequisite = { focus = IRI_Retake_Burdvin }
+		x = 1
+		y = 1
+		relative_position_id = IRI_Retake_Burdvin
+		mutually_exclusive = { focus = IRI_Integrate_Ogre_Citizens }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			OR = {
+				BLD = { is_subject_of = ROOT }
+				385 = { is_controlled_by = ROOT }
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_ideas = IRI_Ogre_Occupation
+		}
+	}
+
+	focus = {
+		id = IRI_Education_System_For_Bilodyans
+		icon = GFX_IRI_Education_System_For_Bilodyans
+		prerequisite = { focus = IRI_Integrate_Ogre_Citizens }
+		x = -1
+		y = 1
+		relative_position_id = IRI_Integrate_Ogre_Citizens
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+			NOT = { has_war_with = BLD }
+			OR = {
+				BLD = { is_subject_of = ROOT }
+				385 = { is_fully_controlled_by = ROOT }
+				
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		complete_tooltip = {
+			
+		}
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+	focus = {
+		id = IRI_Resettle_Ogres_to_Cities
+		icon = GFX_IRI_Resettle_Ogres_To_Cities
+		prerequisite = { focus = IRI_Education_System_For_Bilodyans }
+		x = 0
+		y = 1
+		relative_position_id = IRI_Education_System_For_Bilodyans
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+		NOT = { has_war_with = BLD }
+			OR = {
+				BLD = { is_subject_of = ROOT }
+				385 = { is_fully_controlled_by = ROOT }
+				
+		}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_manpower = 30000
+				random_owned_controlled_state = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				set_state_flag = IRI_Keep_The_King_Of_Tlarthingians_AF
+			}
+		}
+	}
+
+	focus = {
+		id = IRI_Rebuild_Burdvin
+		icon = GFX_IRI_Rebuild_Burdvin
+		prerequisite = { focus = IRI_Integrate_Ogre_Citizens focus = IRI_Bilodya_Occupation }
+		x = 1
+		y = 1
+		relative_position_id = IRI_Integrate_Ogre_Citizens
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			385 = { is_fully_controlled_by = ROOT }
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			385 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			385 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = IRI_Appoint_Bilodyan_Region_Governor
+		icon = GFX_IRI_Appoint_Bilodyan_Region_Governor
+		prerequisite = { focus = IRI_Rebuild_Burdvin }
+		prerequisite = { focus = IRI_Force_Bilodyans_To_Gunsmithing focus = IRI_Education_System_For_Bilodyans }
+		x = 0
+		y = 1
+		relative_position_id = IRI_Rebuild_Burdvin
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		NOT = { has_war_with = BLD }
+			OR = {
+				BLD = { is_subject_of = ROOT }
+				385 = { is_fully_controlled_by = ROOT }
+				
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+		add_stability = 0.1
+		remove_ideas = IRI_Ogre_Riots
+		}
+	}
+
+	focus = {
+		id = IRI_Force_Bilodyans_To_Gunsmithing
+		icon = GFX_IRI_Force_Bilodyans_To_Gunsmithing
+		prerequisite = { focus = IRI_Bilodya_Occupation }
+		x = 3
+		y = 1
+		relative_position_id = IRI_Integrate_Ogre_Citizens
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			OR ={
+		771 = {
+				is_controlled_by = ROOT
+			}
+			BLD = { is_subject_of = ROOT }
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		complete_tooltip = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_extra_state_shared_building_slots = 2
+				771 = {
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}
+				}
+		}
+	}
+
+	focus = {
+		id = IRI_Army_Collaborators
+		icon = GFX_IRI_Army_Collaborators
+		prerequisite = { focus = IRI_Force_Bilodyans_To_Gunsmithing }
+		x = 0
+		y = 1
+		relative_position_id = IRI_Force_Bilodyans_To_Gunsmithing
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			OR = {
+				BLD = { is_subject_of = ROOT }
+				385 = { is_controlled_by = ROOT }
+				
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		complete_tooltip = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			create_corps_commander = {
+				name = "Pav Karbun"
+				gfx = "GFX_portrait_SPR_eduardo_medrano_rivas"
+				traits = { infantry_leader }
+				skill = 1
+			    attack_skill = 1
+			    defense_skill = 2
+			    planning_skill = 1
+			    logistics_skill = 2
+			}
+			create_corps_commander = {
+				name = "Ren Dirgal"
+				gfx = "GFX_portrait_SPR_lina_odena"
+				traits = { adaptable }
+				female = yes
+				skill = 1
+			    attack_skill = 1
+			    defense_skill = 2
+			    planning_skill = 1
+			    logistics_skill = 1
+			}
+			add_manpower = 25000
+		}
+	}
+
+	focus = {
+		id = IRI_Invade_Tlarthingia
+		icon = GFX_IRI_Invade_Tlarthingia
+		prerequisite = { focus = IRI_Honorous_Citizen_Regiments focus = IRI_Invade_Bilodya }
+		mutually_exclusive = { focus = IRI_Retake_Burdvin }
+		will_lead_to_war_with = TLA
+		x = 2
+		y = 4
+		relative_position_id = IRI_Honorous_Citizen_Regiments
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+			is_subject = no
+		}
+
+		bypass = {
+		OR = {
+			TLA = { is_subject_of = ROOT }
+			NOT = { country_exists = TLA }
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = TLA
+			}
+		}			
+	}
+
+	focus = {
+		id = IRI_Loot_Tlarthingian_Cities
+		icon = GFX_IRI_Loot_Tlarthingian_Cities
+		prerequisite = { focus = IRI_Invade_Tlarthingia }
+		x = 0
+		y = 1
+		relative_position_id = IRI_Invade_Tlarthingia
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			766 = { is_controlled_by = ROOT }
+			377 = { is_controlled_by = ROOT }
+		}
+
+		bypass = {
+			OR = {
+				TLA = { is_subject_of = ROOT }
+				NOT = { country_exists = TLA }
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+		add_timed_idea = { idea = IRI_Sacked_North  days = 100 }
+			TLA = { add_timed_idea = { idea = TLA_Sacked_North  days = 100 } }
+		}
+	}
+
+	focus = {
+		id = IRI_Welcome_Tlarthingians_In_The_Empire
+		icon = GFX_IRI_Welcome_Tlarthingians_In_Empire
+		mutually_exclusive = { focus = IRI_Remove_Rodents }
+		prerequisite = { focus = IRI_Loot_Tlarthingian_Cities }
+		x = -1
+		y = 1
+		relative_position_id = IRI_Loot_Tlarthingian_Cities
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_STABILITY }
+		completion_reward = {
+			add_stability = -0.1
+		}
+	}
+
+	focus = {
+		id = IRI_Lizardmen_Assimilation_Program
+		icon = GFX_IRI_Lizardmen_Assimilation_Program
+		prerequisite = { focus = IRI_Welcome_Tlarthingians_In_The_Empire }
+		x = -1
+		y = 1
+		relative_position_id = IRI_Welcome_Tlarthingians_In_The_Empire
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 3
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = IRI_Keep_The_King_Of_Tlarthingians
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = IRI_Lizardmen_Assimilation_Program }
+		x = 0
+		y = 1
+		relative_position_id = IRI_Lizardmen_Assimilation_Program
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 6
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = IRI_Develop_Fallow_Lands
+		icon = GFX_IRI_Develop_Fallow_Lands
+		prerequisite = { focus = IRI_Welcome_Tlarthingians_In_The_Empire focus = IRI_Remove_Rodents }
+		x = 1
+		y = 1
+		relative_position_id = IRI_Welcome_Tlarthingians_In_The_Empire
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_MANPOWER }
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = IRI_Remove_Rodents
+		icon = GFX_IRI_Remove_Rodents
+		mutually_exclusive = { focus = IRI_Welcome_Tlarthingians_In_The_Empire }
+		prerequisite = { focus = IRI_Loot_Tlarthingian_Cities }
+		x = 1
+		y = 1
+		relative_position_id = IRI_Loot_Tlarthingian_Cities
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+		completion_reward = {
+			add_war_support = 0.1
+			hidden_effect { #Xexexexe
+			ROOT = { country_event = { id = iri.6 hours = 12 random_hours = 36 } }
+			}
+		}
+	}
+
+	focus = {
+		id = IRI_Scorch_The_Earth
+		icon = GFX_IRI_Scorch_The_Earth
+		prerequisite = { focus = IRI_Remove_Rodents }
+		x = 1
+		y = 1
+		relative_position_id = IRI_Remove_Rodents
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = IRI_Irinthios_Settlers_Mission
+		icon = GFX_IRI_Irinthios_Settlers_Mission
+		prerequisite = { focus = IRI_Scorch_The_Earth }
+		x = 0
+		y = 1
+		relative_position_id = IRI_Scorch_The_Earth
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_MANPOWER }
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = IRI_Reach_Southern_Mineral_Deposits
+		icon = GFX_goal_generic_major_war
+		prerequisite = { focus = IRI_Develop_Fallow_Lands  }
+		x = 0
+		y = 1
+		relative_position_id = IRI_Develop_Fallow_Lands 
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+			is_subject = no
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			790 = {
+					add_resource = {
+					type = steel
+					amount = 6
+					}
+				}
+			793 = {
+					add_resource = {
+					type = steel
+					amount = 8
+					}
+				}
+			}
+		
+	}
+
+	focus = {
+		id = IRI_Build_University_Of_Natural_Sciences
+		icon = GFX_goal_generic_intelligence_exchange
+		prerequisite = { focus = IRI_Reach_Southern_Mineral_Deposits }
+		x = -2
+		y = 1
+		relative_position_id = IRI_Reach_Southern_Mineral_Deposits
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+	focus = {
+		id = IRI_Influence_Sphere_Ambitions
+		icon = GFX_goal_generic_territory_or_war
+		prerequisite = { focus = IRI_Reach_Southern_Mineral_Deposits }
+		x = 0
+		y = 1
+		relative_position_id = IRI_Reach_Southern_Mineral_Deposits
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				strength_ratio = { tag = JAP ratio < 0.3 }
+				factor = 0
+			}
+			
+		}
+
+		available = {
+		
+		}
+
+		bypass = {
+			is_subject = no
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		will_lead_to_war_with = JAP
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = IRI_New_Warfare_Experiences
+		icon = GFX_goal_generic_intelligence_exchange
+		prerequisite = { focus = IRI_Reach_Southern_Mineral_Deposits }
+		x = 2
+		y = 1
+		relative_position_id = IRI_Reach_Southern_Mineral_Deposits
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_STABILITY }
+		completion_reward = {
+			
+		}
+	}
+}

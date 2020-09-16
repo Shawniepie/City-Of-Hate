@@ -68,15 +68,28 @@ set_popularities = {
 
 	puritan = 0
 }
-
+add_timed_idea = { idea = IRI_Flourishing_Lands  days = 300 }
 add_ideas = {
+	IRI_Irinthios_Will_Rise_Again
 	human_country
 	selenism_religion
 }
+give_guarantee = MER
+
 
 add_opinion_modifier = {
 	target = TLA
 	modifier = bitter_rivals
+}
+
+create_country_leader = {
+	name = "Ignatius Chairophon"
+	desc = "politics_IRI_ignatius_desc"
+	picture = "gfx/leaders/IRI/Portrait_IRI_Ignatius_Chairopon.dds"
+	ideology = monarchy_absolute_ideology
+	traits = {
+	drunkard
+	}
 }
 
 create_country_leader = {
@@ -98,7 +111,7 @@ create_country_leader = {
 }
 
 create_country_leader = {
-	name = "Aclepiades Thersilochus"
+	name = "Chloe Thersilochus"
 	desc = "politics_IRI_thersilochus_desc"
 	picture = "gfx/leaders/IRI/Portrait_IRI_Thersilochus.dds"
 	ideology = theocrat_ideology
@@ -116,22 +129,152 @@ create_country_leader = {
 }
 
 create_country_leader = {
-	name = "Amarhyllis Agrótis"
-	desc = "politics_IRI_agrotis_desc"
-	picture = "gfx/leaders/IRI/Portrait_IRI_Agrotis.dds"
+	name = "Darius Agrótis"
+	desc = "politics_IRI_darius_desc"
+	picture = "gfx/leaders/IRI/Portrait_IRI_Darius.dds"
 	ideology = republic_peasant_ideology
+	traits = {
+	champion_of_the_people
+	}
 }
 
 create_country_leader = {
 	name = "Tryphena Vettias"
-	desc = "politics_IRI_loth_desc"
-	picture = "gfx/leaders/IRI/Portrait_IRI_Loth.dds"
+	desc = "politics_IRI_tryphena_desc"
+	picture = "gfx/leaders/IRI/Portrait_IRI_Tryphena.dds"
 	ideology = republic_merchant_ideology
 }
 
 create_country_leader = {
 	name = "Kephalos Sosibios"
-	desc = "politics_IRI_ecthis_desc"
-	picture = "gfx/leaders/IRI/Portrait_IRI_Ecthis.dds"
+	desc = "politics_IRI_sosibios_desc"
+	picture = "gfx/leaders/IRI/Portrait_IRI_Sosibios.dds"
 	ideology = puritan_ideology
+}
+
+create_field_marshal = {
+	name = "Hector Lupus"
+	id = 501
+		picture = "Portrait_IRI_Hector_Lupus.dds"
+	traits = { defensive_doctrine brilliant_strategist old_guard }
+	skill = 4
+
+	
+	attack_skill = 3
+	defense_skill = 4
+	planning_skill = 4
+	logistics_skill = 2
+}
+create_field_marshal = {
+	name = "Elias Kouris"
+	id = 502
+		picture = "Portrait_IRI_Elias_Kouris.dds"
+	traits = { trait_reckless }
+	skill = 2
+
+	
+	attack_skill = 3
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 2
+}
+create_field_marshal = {
+	name = "Kephalos Sosibios"
+	id = 503
+		picture = "Portrait_IRI_Sosibios.dds"
+	traits = { career_officer }
+	skill = 1
+
+	
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "Stavros Xenakis"
+	id = 504
+		picture = "Portrait_IRI_Stavros_Xenakis.dds"
+	traits = { infantry_officer }
+	skill = 2
+
+	
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Theron Kollidas"
+	id = 505
+		picture = "Portrait_IRI_Theron_Kollidas.dds"
+	traits = { cavalry_officer }
+	skill = 2
+
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 1
+}
+create_corps_commander = {
+	name = "Hygginus Ladas"
+	id = 506
+		picture = "Portrait_IRI_Hygginus_Ladas.dds"
+	traits = {  }
+	skill = 1
+
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 2
+}
+create_corps_commander = {
+	name = "Evadne Manikas"
+	id = 507
+		picture = "Portrait_IRI_Evadne_Manikas.dds"
+	traits = { cavalry_officer }
+	skill = 1
+
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 1
+}
+create_corps_commander = {
+	name = "Diomedes Stathis"
+	id = 508
+		picture = "Portrait_IRI_Diomedes_Stathis.dds"
+	traits = {  }
+	skill = 1
+
+	attack_skill = 1
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 1
+}
+create_corps_commander = {
+	name = "Doria Zervas"
+	id = 509
+		picture = "Portrait_IRI_Doria_Zervas.dds"
+	traits = { old_guard }
+	skill = 1
+
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 2
+}
+create_corps_commander = {
+	name = "Galen Vlahos"
+	id = 510
+		picture = "Portrait_IRI_Galen_Vlahos.dds"
+	traits = { old_guard }
+	skill = 1
+
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 1
 }

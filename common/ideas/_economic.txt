@@ -2,38 +2,9 @@ ideas = {
 
 	economy = {
 		law = yes
-		undisturbed_isolation = {
-			
-			
-			allowed = {
-				always = no
-			}
-			removal_cost = -1
+
 		
-			modifier = {
-				consumer_goods_factor = 0.50
-				production_speed_industrial_complex_factor = -0.5
-				production_speed_arms_factory_factor = -0.5
-				conversion_cost_civ_to_mil_factor = 0.5
-				conversion_cost_mil_to_civ_factor = 0.5
-				generate_wargoal_tension = 1.00
-				join_faction_tension = 0.20
-				lend_lease_tension = 0.50
-				send_volunteers_tension = 0.20
-				guarantee_tension = 0.75
-			}
-			
-			allowed_to_remove = {
-				OR = {
-					has_war_support > 0.5
-					has_war = yes
-				}
-			}
-			
-			cancel_if_invalid = no
-		}
-		
-		isolation = {
+		Primitive_Economy = {
 			
 			
 			
@@ -63,7 +34,7 @@ ideas = {
 			cancel_if_invalid = no
 		}
 		
-		civilian_economy = {
+		Agrarianism = {
 			
 		
 			cost = 150
@@ -82,7 +53,7 @@ ideas = {
 			cancel_if_invalid = no
 		}
 		
-		low_economic_mobilisation = {
+		Manoralism = {
 			
 			available = {
 					has_war_support > 0.15	
@@ -110,7 +81,7 @@ ideas = {
    			}
 		}
 		
-		partial_economic_mobilisation = {
+		Fiscalism = {
 			
 			available = {
 				has_war_support > 0.25
@@ -139,25 +110,11 @@ ideas = {
    			}
 		}
 		
-		war_economy = {
+		Mercantilism = {
 			
 			
 			available = {
-				has_war_support > 0.5
-				OR = {
-					has_government = monarchy_absolute
-					has_government = theocrat
-					has_government = puritan
-					AND = {
-						has_war = yes
-						any_enemy_country = {
-							ic_ratio = { 
-								tag = ROOT 
-								ratio > 0.4
-							}
-						}
-					}
-				}	
+	
 			}
 		
 			cost = 150
@@ -183,18 +140,11 @@ ideas = {
    			}
 		}
 		
-		tot_economic_mobilisation = {
+		Corporatism = {
 			
 			
 			available = {
-				has_war = yes
-				has_war_support > 0.8
-				any_enemy_country = {
-					ic_ratio = { 
-						tag = ROOT 
-						ratio > 0.5
-					}
-				}
+
 			}
 
 			ai_will_do = {
@@ -236,29 +186,81 @@ ideas = {
 			
 			cancel_if_invalid = no
 		}
+		
+		Communalism = {
+			
+			available = {
+					always = no
+			}
+			
+			cost = 150
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.3
+				production_speed_industrial_complex_factor = -0.1
+				production_speed_arms_factory_factor = -0.1
+			}
+			
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 2
+
+   				modifier = {
+					factor = 20
+					
+					is_major = yes
+				}
+   			}
+		}
+
+		Steam_And_Steel = {
+			
+			available = {
+				always = no
+			}
+			
+			cost = 300
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_industrial_complex_factor = 0.2
+				production_speed_arms_factory_factor = 0.2
+				conversion_cost_civ_to_mil_factor= -0.5
+				conversion_cost_mil_to_civ_factor = -0.5
+				conscription = -0.02
+			}
+			
+			cancel_if_invalid = no
+			
+			on_add = {
+				custom_effect_tooltip = Steam_And_Steel_tt
+			}
+			
+
+			ai_will_do = {
+   				factor = 2
+
+   				modifier = {
+					factor = 20
+					
+					is_major = yes
+				}
+   			}
+		}
 	}
 	
 	trade_laws = {
 		law = yes
 
-		free_trade = {
+		Tribal = {
 			
 			available = {
-				NOT = {
-					has_government = puritan
-				}
-				if = {
-					limit = {
-						tag = ORD
-					}
-					NOT = {
-						has_government = theocrat
-						has_government = monarchy_absolute
-					}
-				}
+				always = no
 			}
 			
-			cost = 150
+			cost = 300
 			removal_cost = -1
 			
 			modifier = {
@@ -278,25 +280,14 @@ ideas = {
 			cancel_if_invalid = no
 		}
 		
-		export_focus = {
+		Feudal = {
 			
 			available = {
-				NOT = {
-					has_government = puritan
-				}
-				if = {
-					limit = {
-						tag = ORD
-					}
-					NOT = {
-						has_government = theocrat
-						has_government = monarchy_absolute
-					}
-				}
+
 			}
 			
 			
-			cost = 150
+			cost = 300
 			removal_cost = -1
 			
 			modifier = {
@@ -322,48 +313,13 @@ ideas = {
    			}
 		}
 		
-		limited_exports = {
+		Late_Feudal = {
 			
 			available = {
-				NOT = {
-					has_government = puritan
-				}
-				if = {
-					limit = {
-						tag = ORD
-					}
-					OR = {
-						has_country_flag = ORD_allow_trade
-						NOT = {
-							has_government = puritan
-							has_government = theocrat
-							has_government = monarchy_absolute
-						}
-					}
-				}
-				OR = {
-					AND = {
-						has_government = republic_merchant
-						has_war = yes
-						any_enemy_country = {
-							ic_ratio = { 
-								tag = ROOT 
-								ratio > 0.2
-							}
-						}
-					}
-					AND = {
-						NOT = { has_government = republic_merchant }
-						OR = {
-							has_idea = partial_economic_mobilisation
-							has_idea = war_economy
-							has_idea = tot_economic_mobilisation
-						}
-					}
-				}
+				always = no
 			}
 		
-			cost = 150
+			cost = 300
 			removal_cost = -1
 			
 			modifier = {
@@ -403,20 +359,11 @@ ideas = {
    			}
 		}
 		
-		closed_economy = {
+		Industrial = {
 			
 			
 			available = {
-				has_war = yes
-				OR = {
-					has_government = monarchy_absolute
-					has_government = theocrat
-					has_government = puritan
-				}
-				OR = {
-					has_idea = war_economy
-					has_idea = tot_economic_mobilisation
-				}
+				always = no
 			}
 			
 			cost = 150
@@ -429,12 +376,7 @@ ideas = {
 			}
 				
 			on_add = {
-				every_country = {
-					add_opinion_modifier = {
-						target = ROOT
-						modifier = closed_economy_trade_modifier
-					}
-				}
+
 			}
 			
 			on_add = {

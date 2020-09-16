@@ -1,0 +1,45 @@
+IRI_Revolution_In_Air_clear_all = {
+	remove_ideas = {
+		IRI_Revolution_In_Air_1
+		IRI_Revolution_In_Air_2
+		IRI_Revolution_In_Air_3
+		IRI_Revolution_In_Air_4
+		IRI_Revolution_In_Air_5
+	}
+}
+
+IRI_Revolution_In_Air_level_up = {
+	custom_effect_tooltip = IRI_Revolution_In_Air_Plus_tt
+	if = {
+		limit = { has_idea = IRI_Revolution_In_Air_4 }
+		swap_ideas = {
+			remove_idea = IRI_Revolution_In_Air_4
+			add_idea = IRI_Revolution_In_Air_5
+		}
+	}
+	else_if = {
+		limit = { has_idea = IRI_Revolution_In_Air_3 }
+		swap_ideas = {
+			remove_idea = IRI_Revolution_In_Air_3
+			add_idea = IRI_Revolution_In_Air_4
+		}
+	}
+	else_if = {
+		limit = { has_idea = IRI_Revolution_In_Air_2 }
+		swap_ideas = {
+			remove_idea = IRI_Revolution_In_Air_2
+			add_idea = IRI_Revolution_In_Air_3
+		}
+	}
+	else_if = {
+		limit = { has_idea = IRI_Revolution_In_Air_1 }
+		swap_ideas = {
+			remove_idea = IRI_Revolution_In_Air_1
+			add_idea = IRI_Revolution_In_Air_2
+		}		
+	}
+	else_if = {
+		limit = { NOT = { has_idea = IRI_Revolution_In_Air_1 } }
+		add_ideas = IRI_Revolution_In_Air_1
+	}
+}

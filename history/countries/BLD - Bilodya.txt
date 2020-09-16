@@ -55,17 +55,17 @@ add_opinion_modifier = {
 }
 
 create_country_leader = {
-	name = "Thaurun Zheko"
-	desc = "politics_BLD_zheko_desc"
-	picture = "gfx/leaders/BLD/Portrait_BLD_Zheko.dds"
+	name = "Kar Thaurun"
+	desc = "politics_BLD_thaurun_desc"
+	picture = "gfx/leaders/BLD/Portrait_BLD_Thaurun.dds"
 	ideology = monarchy_constitutional_ideology
 	traits = {
 	}
 }
 
 create_country_leader = {
-	name = "Kurbah Bozhur"
-	desc = "politics_BLD_bozhur_desc"
+	name = "Kar Kurbah"
+	desc = "politics_BLD_kurbah_desc"
 	picture = "gfx/leaders/BLD/Portrait_BLD_Bozhur.dds"
 	ideology = republic_peasant_ideology
 	traits = {
@@ -100,9 +100,9 @@ create_country_leader = {
 }
 
 create_country_leader = {
-	name = "Vurkun Kliment "
-	desc = "politics_BLD_kliment_desc"
-	picture = "gfx/leaders/BLD/Portrait_BLD_Kliment.dds"
+	name = "Kar Vurkun"
+	desc = "politics_BLD_vurkun_desc"
+	picture = "gfx/leaders/BLD/Portrait_BLD_Vurkun.dds"
 	ideology = republic_aristocrat_ideology
 	traits = {
 	}

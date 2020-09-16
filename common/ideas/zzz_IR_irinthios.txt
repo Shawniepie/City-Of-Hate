@@ -2,6 +2,573 @@ ideas = {
 	
 	country = {
 	
+		IRI_Flourishing_Lands = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = GFX_idea_IRI_Flourishing_Lands
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_weekly = 0.002
+				production_speed_buildings_factor = 0.05
+				consumer_goods_factor = -0.02
+			}
+		}
+
+		IRI_Irinthios_Will_Rise_Again = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = GFX_idea_IRI_Depression_Evaded
+			
+			removal_cost = -1
+			
+			modifier = {
+				war_support_factor = 0.2
+				mobilization_laws_cost_factor = -0.5
+				production_speed_arms_factory_factor = 0.1
+			}
+		}
+		
+		IRI_The_Bloodlust = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = IRI_The_Bloodlust
+			
+			removal_cost = -1
+			
+			modifier = {
+				war_support_factor = 0.4
+				mobilization_laws_cost_factor = -0.5
+				production_speed_arms_factory_factor = 0.2
+				army_attack_factor = 0.05
+			}
+		}
+		
+		IRI_Depression_Evaded = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = GFX_idea_IRI_Depression_Evaded
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.2
+				stability_weekly = -0.002
+				economy_cost_factor = 0.5
+				trade_laws_cost_factor = 0.5
+			}
+		}
+		
+		IRI_Citizens_1 = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = GFX_idea_IRI_Depression_Evaded
+			
+			removal_cost = -1
+			
+			modifier = {
+				conscription_factor = 0.20
+				army_org_factor = -0.1
+			}
+		}
+		
+		IRI_Citizens_2 = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = GFX_idea_IRI_Depression_Evaded
+			
+			removal_cost = -1
+			
+			modifier = {
+				conscription_factor = 0.20
+			}
+		}
+		
+		IRI_Generals_1 = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = GFX_idea_IRI_Depression_Evaded
+			
+			removal_cost = -1
+			
+			modifier = {
+				max_command_power = 25
+				command_power_gain_mult = -0.1
+				planning_speed = -0.15
+			}
+		}
+		
+		IRI_Generals_2 = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = GFX_idea_IRI_Depression_Evaded
+			
+			removal_cost = -1
+			
+			modifier = {
+				max_command_power = 25
+				command_power_gain_mult = 0.1
+				planning_speed = 0.15
+			}
+		}
+		
+		IRI_Ogre_Riots = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = GFX_idea_IRI_Ogre_Riots
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_weekly = -0.005
+				army_morale_factor = -0.1
+				resistance_damage_to_garrison = 0.25
+			}
+		}
+		IRI_Ogre_Occupation = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = GFX_idea_IRI_Depression_Evaded
+			
+			removal_cost = -1
+			
+			modifier = {
+				war_support_factor = 0.1
+				conscription_factor = -0.5
+			}
+		}
+		IRI_Ogre_Assimilation = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = GFX_idea_IRI_Depression_Evaded
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.1
+				consumer_goods_factor = 0.1
+			}
+		}
+		
+		TLA_Sacked_North = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = GFX_idea_IRI_Sacked_North
+			
+			removal_cost = -1
+			
+			modifier = {
+				forced_surrender_limit = -0.5
+			}
+		}
+		
+		IRI_Sacked_North = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = GFX_idea_IRI_Sacked_North
+			
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.1
+				army_morale_factor = -0.1
+			}
+		}
+		
+		IRI_Glory_Built_On_Blood = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = GFX_idea_IRI_Depression_Evaded
+			
+			removal_cost = -1
+			
+			modifier = {
+				trade_opinion_factor = -0.5
+				army_morale_factor = -0.15
+			}
+		}
+		IRI_Generals_Militaristic_1 = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = GFX_idea_IRI_Generals_Militaristic_1
+			
+			removal_cost = -1
+			
+			modifier = {
+				military_leader_cost_factor = 1.0
+				army_morale_factor = 0.1
+			}
+		}
+		IRI_Generals_Militaristic_2 = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = GFX_idea_IRI_Generals_Militaristic_2
+			
+			removal_cost = -1
+			
+			modifier = {
+				army_morale_factor = 0.15
+				planning_speed = 0.2
+				mobilization_speed = 0.2
+				puritan_drift = 0.1
+			}
+		}
+		IRI_Citizens_Militaristic_1 = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = GFX_idea_IRI_Citizens_Militaristic_1
+			
+			removal_cost = -1
+			
+			modifier = {
+				conscription = 0.05
+				mobilization_speed = 0.1
+				army_attack_factor = -0.04
+				army_defence_factor = -0.04
+			}
+		}
+		IRI_Citizens_Militaristic_2 = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = GFX_idea_IRI_Citizens_Militaristic_2
+			
+			removal_cost = -1
+			
+			modifier = {
+				conscription = 0.08
+				army_morale_factor = 0.1
+				mobilization_speed = 0.1
+				monarchy_absolute_drift = 0.1
+			}
+		}
+		IRI_Slavery_Allowed = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = GFX_idea_IRI_Slavery_Allowed
+			
+			removal_cost = -1
+			
+			modifier = {
+				non_core_manpower = -0.8
+				conscription = -0.02
+				consumer_goods_factor = -0.1
+				production_speed_industrial_complex_factor = 0.2
+				production_speed_infrastructure_factor = 0.2
+			}
+		}
+		IRI_Spirit_Of_Purity = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = GFX_idea_IRI_Spirit_Of_Purity
+			
+			removal_cost = -1
+			
+			modifier = {
+				justify_war_goal_time = -0.6
+				resistance_damage_to_garrison = -0.5
+				army_attack_factor = 0.1
+			}
+		}
+		IRI_Glorious_Speech = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = no
+			}
+			
+			picture = IRI_Glorious_Speech
+			
+			removal_cost = -1
+			
+			modifier = {
+				army_morale_factor = 0.2
+			}
+		}
+		IRI_Forges_Mobilisation = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = no
+			}
+			
+			picture = IRI_Forges_Mobilisation
+			
+			removal_cost = -1
+			
+			modifier = {
+				army_org_factor = 0.1
+			}
+		}
+		IRI_Military_Parades = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = no
+			}
+			
+			picture = IRI_Military_Parades
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_weekly = 0.005
+			}
+		}
+		IRI_Suppress_Resistance = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = no
+			}
+			
+			picture = IRI_Suppress_Resistance
+			
+			removal_cost = -1
+			
+			modifier = {
+				resistance_damage_to_garrison = -0.5
+			}
+		}
+		IRI_Revolution_In_Air_1 = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = no
+			}
+			
+			picture = IRI_Revolution
+			
+			removal_cost = -1
+			
+			modifier = {
+			}
+		}
+		IRI_Revolution_In_Air_2 = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = no
+			}
+			
+			picture = IRI_Revolution
+			
+			removal_cost = -1
+			
+			modifier = {
+			}
+		}
+		IRI_Revolution_In_Air_3 = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = no
+			}
+			
+			picture = IRI_Revolution
+			
+			removal_cost = -1
+			
+			modifier = {
+			}
+		}
+		IRI_Revolution_In_Air_4 = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = no
+			}
+			
+			picture = IRI_Revolution
+			
+			removal_cost = -1
+			
+			modifier = {
+			}
+		}
+		IRI_Revolution_In_Air_5 = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = no
+			}
+			
+			picture = IRI_Revolution
+			
+			removal_cost = -1
+			
+			modifier = {
+			}
+		}
+
+
 		IRI_dissenters = {
 			
 			allowed = {
@@ -58,6 +625,158 @@ ideas = {
 			
 			modifier = {
 				custom_effect_tt = royal_marriage_warning_tt
+			}
+		}
+	}
+	#ADVISORS
+		
+	political_advisor = {
+		
+		Vasilis_Diamantis = {
+			
+			picture = IRI_Diamantis
+			
+			allowed = {
+				original_tag = IRI
+			}
+		
+			available = {
+				OR = {
+					has_government = republic_peasant
+					has_completed_focus = IRI_Sunday_Provocation
+				}
+			}
+			
+			traits = {
+				rosite_activist
+			}
+		}
+		
+		Ioanna_Cinyras = {
+			
+			picture = IRI_Ioanna
+			
+			allowed = {
+				original_tag = IRI
+			}
+		
+			available = {
+				OR = {
+					has_government = republic_aristocrat
+					has_completed_focus = IRI_Sunday_Provocation
+				}
+			}
+			
+			traits = {
+				first_lady_of_tykhintos
+			}
+		}
+		
+		Alexander_Kyriazis = {
+			
+			picture = IRI_Kyriazis
+			
+			allowed = {
+				original_tag = IRI
+			}
+		
+			available = {
+				OR = {
+					has_government = monarchy_constitutional
+					has_government = monarchy_absolute
+				}
+			}
+			
+			traits = {
+				retired_strategos
+			}
+		}
+		
+		Spiros_Petrakis = {
+			
+			picture = IRI_Petrakis
+			
+			allowed = {
+				original_tag = IRI
+			}
+		
+			available = {
+				NOT = { has_idea = IRI_Depression_Evaded }
+				NOT = { has_idea = IRI_Glory_Built_On_Blood }
+			}
+			
+			traits = {
+				eye_for_economics
+			}
+		}
+		
+		Anna_Chalkia = {
+			
+			picture = IRI_Chalkia
+			
+			allowed = {
+				original_tag = IRI
+			}
+		
+			available = {
+				NOT = { has_idea = IRI_Glory_Built_On_Blood }
+			}
+			
+			traits = {
+				brilliant_administrator
+			}
+		}
+		
+		Chrisos_Florou = {
+			
+			picture = IRI_Florou
+			
+			allowed = {
+				original_tag = IRI
+			}
+		
+			available = {
+				has_government = puritan
+			}
+			
+			traits = {
+				visionary_architect
+			}
+		}
+		
+		Pearl_Heartstrong = {
+			
+			picture = IRI_Heartstrong
+			
+			allowed = {
+				original_tag = IRI
+			}
+			
+			available = {
+				has_country_flag = Pearl_Supports_Us
+				NOT = { has_global_flag = Pearl_Left_Irinthios }
+			}
+			
+			traits = {
+				smallholder_advocate
+			}
+		}
+		
+		Tosteratos = {
+			
+			picture = IRI_Tosteratos
+			
+			allowed = {
+				original_tag = IRI
+			}
+			
+			available = {
+			has_country_flag = Tosteratos_Invited_To_Court
+			NOT = { has_country_flag = Tosteratos_Dead }
+			}
+			
+			traits = {
+				natural_philosopher
 			}
 		}
 	}
