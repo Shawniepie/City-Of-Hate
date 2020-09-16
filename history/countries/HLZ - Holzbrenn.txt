@@ -69,6 +69,7 @@ set_popularities = {
 }
 
 add_ideas = {
+	limited_conscription
 	rosenbluts_evil
 	widespread_famine
 	human_country

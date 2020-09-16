@@ -36,6 +36,8 @@ set_popularities = {
 }
 
 add_ideas = {
+	service_by_requirement
+	Manoralism
 	human_country
 	arkanimism_religion
 }

@@ -39,6 +39,7 @@ set_popularities = {
 }
 
 add_ideas = {
+	Corporatism
 	dwarf_country
 	dwarven_ancestor_worship_religion
 }

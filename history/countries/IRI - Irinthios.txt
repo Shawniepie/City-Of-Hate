@@ -70,6 +70,9 @@ set_popularities = {
 }
 add_timed_idea = { idea = IRI_Flourishing_Lands  days = 300 }
 add_ideas = {
+	Late_Feudal
+	Corporatism
+	limited_conscription
 	IRI_Irinthios_Will_Rise_Again
 	human_country
 	selenism_religion

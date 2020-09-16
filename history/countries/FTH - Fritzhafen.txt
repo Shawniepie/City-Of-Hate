@@ -75,6 +75,7 @@ set_popularities = {
 }
 
 add_ideas = {
+	Mercantilism
 	human_country
 	hieyrenous_patron
 }

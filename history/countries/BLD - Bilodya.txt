@@ -35,6 +35,9 @@ set_popularities = {
 }
 
 add_ideas = {
+	limited_conscription
+	Tribal
+	Primitive_Economy
 	ogre_country
 	unknownism_religion
 }

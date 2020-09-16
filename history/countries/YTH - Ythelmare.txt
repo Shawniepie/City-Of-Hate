@@ -69,6 +69,7 @@ set_popularities = {
 }
 
 add_ideas = {
+	Manoralism
 	elf_country
 	itherynism_religion
 }

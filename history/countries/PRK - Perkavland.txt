@@ -86,6 +86,9 @@ set_popularities = {
 }
 
 add_ideas = {
+	extensive_conscription
+	Tribal
+	Primitive_Economy
 	human_country
 	krostov_religion
 	PRK_tribal_nation

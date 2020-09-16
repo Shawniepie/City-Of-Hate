@@ -70,6 +70,7 @@ set_popularities = {
 }
 
 add_ideas = {
+	limited_conscription
 	GMR_trade_union #haha. a trade union. i'm funny.
 	human_country
 	sothrism_religion

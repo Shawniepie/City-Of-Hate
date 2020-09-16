@@ -14,15 +14,11 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				consumer_goods_factor = 0.4
-				production_speed_industrial_complex_factor = -0.4
-				production_speed_arms_factory_factor = -0.4
-				conversion_cost_civ_to_mil_factor= 0.4
-				conversion_cost_mil_to_civ_factor = 0.4
-				generate_wargoal_tension = 1.00
-				join_faction_tension = 0.20
-				send_volunteers_tension = 0.20
-				guarantee_tension = 0.5
+			consumer_goods_factor = 0.6
+			production_factory_max_efficiency_factor = -0.2
+			supply_consumption_factor = -0.2
+			out_of_supply_factor = -0.5
+			min_export = 0
 			}
 			allowed_to_remove = {
 				OR = {
@@ -41,11 +37,10 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				consumer_goods_factor = 0.35
-				production_speed_industrial_complex_factor = -0.3
-				production_speed_arms_factory_factor = -0.3
-				conversion_cost_civ_to_mil_factor= 0.3
-				conversion_cost_mil_to_civ_factor = 0.3
+				consumer_goods_factor = 0.15
+				supply_consumption_factor = -0.1
+				MONTHLY_POPULATION = 0.25
+				min_export = 0.25
 			}
 			
 			default = yes
@@ -63,9 +58,10 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				consumer_goods_factor = 0.3
-				production_speed_industrial_complex_factor = -0.1
-				production_speed_arms_factory_factor = -0.1
+				consumer_goods_factor = 0.2
+				global_building_slots_factor = 0.25
+				political_power_gain = 0.05
+				min_export = 0.1
 			}
 			
 			cancel_if_invalid = no
@@ -92,9 +88,8 @@ ideas = {
 			
 			modifier = {
 				consumer_goods_factor = 0.25
-				production_speed_arms_factory_factor = 0.1
-				conversion_cost_civ_to_mil_factor= -0.1
-				conversion_cost_mil_to_civ_factor = -0.1
+				political_power_gain = 0.15
+				min_export = 0
 			}
 			
 			cancel_if_invalid = no
@@ -121,22 +116,16 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				consumer_goods_factor = 0.2
-				production_speed_arms_factory_factor = 0.2
-				conversion_cost_civ_to_mil_factor= -0.2
-				conversion_cost_mil_to_civ_factor = -0.2
+				consumer_goods_factor = 0.1
+				production_speed_buildings_factor = 0.2
+				industrial_capacity_factory = 0.15
+				min_export = 0.8
 			}
 			
 			cancel_if_invalid = no
 			
 			ai_will_do = {
    				factor = 5
-
-				modifier = {
-					#High prio on production
-					factor = 20
-					manpower_per_military_factory >  1000
-				}
    			}
 		}
 		
@@ -148,40 +137,17 @@ ideas = {
 			}
 
 			ai_will_do = {
-   				factor = 1
-
-				modifier = {
-					factor = 25
-					#Prio this if nation has a lot of manpower compared to MIC
-					manpower_per_military_factory >  10000
-				}
-
-				modifier = {
-					#Block  unless nation has a lot of manpower
-					factor = 0
-					manpower_per_military_factory <  3000
-				}
-
-				
-				modifier = {
-					# never take this if we are on low conscription laws for safety
-					factor = 0
-					OR = {
-						has_idea = volunteer_only
-						has_idea = limited_conscription
-					}
-				}				
+   				factor = 1				
    			}
 			
 			cost = 150
 			removal_cost = -1
 			
 			modifier = {
-				consumer_goods_factor = 0.10
-				conscription = -0.03
-				production_speed_arms_factory_factor = 0.3
-				conversion_cost_civ_to_mil_factor= -0.3
-				conversion_cost_mil_to_civ_factor = -0.3
+				consumer_goods_factor = 0.15
+				production_factory_efficiency_gain_factor = 0.1
+				industrial_capacity_factory = 0.15
+				min_export = 0.4
 			}
 			
 			cancel_if_invalid = no
@@ -197,21 +163,16 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				consumer_goods_factor = 0.3
-				production_speed_industrial_complex_factor = -0.1
-				production_speed_arms_factory_factor = -0.1
+				consumer_goods_factor = 0.2
+				supply_consumption_factor = -0.2
+				out_of_supply_factor = -0.5
+				min_export = 0
 			}
 			
 			cancel_if_invalid = no
 
 			ai_will_do = {
    				factor = 2
-
-   				modifier = {
-					factor = 20
-					
-					is_major = yes
-				}
    			}
 		}
 
@@ -225,11 +186,11 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				production_speed_industrial_complex_factor = 0.2
-				production_speed_arms_factory_factor = 0.2
-				conversion_cost_civ_to_mil_factor= -0.5
-				conversion_cost_mil_to_civ_factor = -0.5
+				consumer_goods_factor = 0.1
+				production_speed_buildings_factor = 0.3
+				industrial_capacity_factory = 0.2
 				conscription = -0.02
+				min_export = 0.6
 			}
 			
 			cancel_if_invalid = no
@@ -264,17 +225,13 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				min_export = 0.75
-				trade_opinion_factor = 0.05
+			MONTHLY_POPULATION = 0.3
+			attrition = -0.2
+			research_speed_factor = -0.1
 			}
 			
 			on_add = {
-				every_country = {
-					add_opinion_modifier = {
-						target = ROOT
-						modifier = free_trade_trade_modifier
-					}
-				}
+				custom_effect_tooltip = Tribal_tt
 			}
 			
 			cancel_if_invalid = no
@@ -291,17 +248,11 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				min_export = 0.5
-				trade_opinion_factor = -0.15
+			MONTHLY_POPULATION = 0.1
 			}
 			
 			on_add = {
-				every_country = {
-					add_opinion_modifier = {
-						target = ROOT
-						modifier = export_focus_trade_modifier
-					}
-				}
+				custom_effect_tooltip = Feudal_tt
 			}
 			
 			default = yes
@@ -323,17 +274,11 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				min_export = 0.25
-				trade_opinion_factor = -0.35
+			research_speed_factor = 0.05
 			}
 			
 			on_add = {
-				every_country = {
-					add_opinion_modifier = {
-						target = ROOT
-						modifier = limited_exports_trade_modifier
-					}
-				}
+				custom_effect_tooltip = Late_Feudal_tt
 			}
 			
 			cancel_if_invalid = no
@@ -341,21 +286,6 @@ ideas = {
 			ai_will_do = {
    				factor = 1
 
-   				modifier = {
-					factor = 0
-					
-					is_major = no
-					is_in_faction = yes
-					has_war = yes
-				}
-
-				# minors not at war should want to get the bonuses from free trade
-				modifier = {
-					factor = 0
-					
-					is_major = no
-					has_war = no
-				}
    			}
 		}
 		
@@ -371,16 +301,12 @@ ideas = {
 			
 			
 			modifier = {
-				min_export = 0
-				trade_opinion_factor = -1
+			MONTHLY_POPULATION = -0.15
+			research_speed_factor = 0.15
 			}
 				
 			on_add = {
-
-			}
-			
-			on_add = {
-				custom_effect_tooltip = closed_economy_TT
+				custom_effect_tooltip = Industrial_tt
 			}
 			
 			cancel_if_invalid = no

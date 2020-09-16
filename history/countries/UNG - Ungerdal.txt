@@ -70,6 +70,7 @@ set_popularities = {
 }
 
 add_ideas = {
+	Manoralism
 	UNG_trade_realm
 	human_country
 	septism_religion

@@ -37,6 +37,8 @@ set_popularities = {
 }
 
 add_ideas = {
+	Late_Feudal
+	Fiscalism
 	dwarf_country
 	dwarven_ancestor_worship_religion
 }
