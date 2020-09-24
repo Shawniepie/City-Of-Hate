@@ -512,7 +512,10 @@
 		}
 
 		available = {
-
+			OR ={ 
+			puritan > 0.4
+			has_government = puritan
+			}
 		}
 
 		bypass = {
@@ -628,7 +631,10 @@
 		}
 
 		available = {
-
+			OR ={ 
+			monarchy_absolute > 0.4
+			has_government = monarchy_absolute
+			}
 		}
 
 		bypass = {
@@ -755,7 +761,7 @@
 
 		available = {
 			OR = {
-				num_of_factories > 50
+				num_of_factories > 40
 				all_state = {
 					OR = {
 						NOT = { is_core_of = CHI }
@@ -784,10 +790,12 @@
 		
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			add_research_slot = 1			
+			add_political_power = 120
+			add_research_slot = 1
 		}
 	}
 	focus = {
+	### SHOULD BE CORRECTED WHEN TECH TREE IS DONE
 		id = IRI_Supreme_Arsenal
 		icon = GFX_IRI_unknown
 		prerequisite = { focus = IRI_Megali_Irinthios }
@@ -818,6 +826,7 @@
 		
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
+			custom_effect_tooltip = Will_Be_Soon_Teaser_Tech
 			add_research_slot = 1			
 		}
 	}
@@ -960,7 +969,7 @@
 		
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-		
+		add_ideas = IRI_Theoria_KataktisisSpirit
 		}
 	}
 
@@ -1038,7 +1047,14 @@
 		}
 
 		completion_reward = {
+		if = {
+		limit = { NOT = { has_country_flag = IRI_Revolution_Ongoing } }
+		custom_effect_tooltip = IRI_Revolution_In_Air_Plus_tt
+		hidden_effect { 
 		IRI_Revolution_In_Air_level_up = yes
+		}
+		}
+		add_ideas = Manoralism
 		}
 	}
 
@@ -1074,7 +1090,14 @@
 		}
 		
 		completion_reward = {
+		if = {
+		limit = { NOT = { has_country_flag = IRI_Revolution_Ongoing } }
+		custom_effect_tooltip = IRI_Revolution_In_Air_Plus_tt
+		hidden_effect { 
 		IRI_Revolution_In_Air_level_up = yes
+		}
+		}
+		add_political_power = 50
 		}
 	}
 
@@ -1110,6 +1133,7 @@
 		}
 
 		completion_reward = {
+		add_ideas = IRI_Rights_Of_Craftsmen
 		}
 	}
 
@@ -1145,7 +1169,7 @@
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			
+		add_ideas = IRI_Peasant_Courts
 		}
 	}
 	
@@ -1182,6 +1206,7 @@
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
+		add_ideas = IRI_House_Of_Commons
 		}
 	}
 	focus = {
@@ -1200,7 +1225,6 @@
 		}
 
 		available = {
-
 		}
 
 		bypass = {
@@ -1217,7 +1241,14 @@
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
+		if = {
+		limit = { NOT = { has_country_flag = IRI_Revolution_Ongoing } }
+		custom_effect_tooltip = IRI_Revolution_In_Air_Plus_tt
+		hidden_effect { 
 		IRI_Revolution_In_Air_level_up = yes
+		}
+		}
+		add_ideas = service_by_requirement
 		}
 	}
 
@@ -1236,7 +1267,10 @@
 		}
 
 		available = {
-
+			OR ={ 
+			has_government = republic_peasant
+			has_government = republic_aristocrat
+			}
 		}
 
 		bypass = {
@@ -1253,6 +1287,7 @@
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
+		add_ideas = IRI_Republican_Values
 		}
 	}
 	focus = {
@@ -1282,12 +1317,14 @@
 		available_if_capitulated = no
 
 		complete_tooltip = {
-
+		custom_effect_tooltip = Will_Be_Soon_Teaser_Tech
+		add_research_slot = 1
 		}
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-
+		custom_effect_tooltip = Will_Be_Soon_Teaser_Tech
+		add_research_slot = 1
 		}
 	}
 	focus = {
@@ -1323,7 +1360,8 @@
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-
+		custom_effect_tooltip = Will_Be_Soon_Teaser_Tech
+		add_research_slot = 1
 		}
 	}
 	focus = {
@@ -1358,7 +1396,7 @@
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-
+		add_research_slot = 1
 		}
 	}
 	focus = {
@@ -1393,7 +1431,7 @@
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-
+			ROOT = { country_event = { id = iri.10 hours = 12 random_hours = 36 } }
 		}
 	}
 
@@ -1411,14 +1449,15 @@
 		relative_position_id = IRI_Sunday_Provocation
 		mutually_exclusive = { focus = IRI_Glory_To_Republic }
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 4
 		}
 
 		available = {
-
+		has_civil_war = no
+		has_country_flag = IRI_Cinyras_Chosen
 		}
 
 		bypass = {
@@ -1468,6 +1507,7 @@
 		}
 
 		completion_reward = {
+		add_ideas = IRI_Autonomous_Cities
 		}
 	}
 	focus = {
@@ -1502,6 +1542,7 @@
 		}
 
 		completion_reward = {
+		TLA = { country_event = { id = iri.15 hours = 12 random_hours = 36 } }
 		}
 	}
 	focus = {
@@ -1689,14 +1730,15 @@
 		y = 1
 		relative_position_id = IRI_Sunday_Provocation
 		mutually_exclusive = { focus = IRI_Cinyras_Restoration }
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 4
 		}
 
 		available = {
-
+		has_civil_war = no
+		has_country_flag = IRI_Peasant_Chosen
 		}
 
 		bypass = {
@@ -1747,6 +1789,7 @@
 		}
 
 		completion_reward = {
+		add_ideas = IRI_Guilds_Nationalized
 		}
 	}
 	focus = {
@@ -1816,6 +1859,10 @@
 		}
 
 		completion_reward = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = TLA
+			}
 		}
 	}
 	focus = {
@@ -2033,27 +2080,27 @@
 	focus = {
 		id = IRI_Get_Bilodyan_Support_In_Civil_War
 		icon = GFX_IRI_Get_Bilodyan_Support_In_Civil_War
-		prerequisite = { focus = IRI_Cinyras_Restoration focus = IRI_Glory_To_Republic }
+		prerequisite = { focus = IRI_Sunday_Provocation focus = IRI_Cinyras_Restoration focus = IRI_Glory_To_Republic }
 		x = 1
 		y = 1
 		relative_position_id = IRI_Cinyras_Restoration
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 4
 		}
 
 		available = {
-
+		has_country_flag = IRI_Revolution_Ongoing
+		has_civil_war = yes
 		}
 
 		bypass = {
-
 		}
 
 		cancel_if_invalid = yes
-		continue_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -2127,6 +2174,7 @@
 		}
 
 		completion_reward = {
+		add_timed_idea = { idea = IRI_The_Rebuilding  days = 150 }
 		}
 	}
 
@@ -2529,24 +2577,24 @@
 		completion_reward = {
 			create_corps_commander = {
 				name = "Pav Karbun"
-				gfx = "GFX_portrait_SPR_eduardo_medrano_rivas"
+				gfx = "GFX_BLD_Portrait_BLD_Pav_Karbun"
 				traits = { infantry_leader }
-				skill = 1
+				skill = 2
 			    attack_skill = 1
 			    defense_skill = 2
 			    planning_skill = 1
 			    logistics_skill = 2
 			}
+
 			create_corps_commander = {
 				name = "Ren Dirgal"
-				gfx = "GFX_portrait_SPR_lina_odena"
-				traits = { adaptable }
-				female = yes
-				skill = 1
-			    attack_skill = 1
-			    defense_skill = 2
-			    planning_skill = 1
-			    logistics_skill = 1
+				gfx = "GFX_BLD_Portrait_BLD_Ren_Dirgal"
+				traits = { commando }
+				skill = 2
+				attack_skill = 2
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 3
 			}
 			add_manpower = 25000
 		}
@@ -2600,7 +2648,7 @@
 		y = 1
 		relative_position_id = IRI_Invade_Tlarthingia
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -2625,7 +2673,7 @@
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 		add_timed_idea = { idea = IRI_Sacked_North  days = 100 }
-			TLA = { add_timed_idea = { idea = TLA_Sacked_North  days = 100 } }
+		TLA = { add_timed_idea = { idea = TLA_Sacked_North  days = 150 } }
 		}
 	}
 
@@ -2645,7 +2693,23 @@
 		}
 
 		available = {
-
+		AND = {
+			OR = {
+				AND = {
+					TLA = {
+						has_capitulated = yes
+					}
+					controls_state = 372
+				}
+				AND = {
+					NOT = {
+						country_exists = TLA
+					}
+					controls_state = 372
+				}
+				owns_state = 372
+			}
+		}
 		}
 
 		bypass = {
@@ -2677,7 +2741,23 @@
 		}
 
 		available = {
-
+		AND = {
+			OR = {
+				AND = {
+					TLA = {
+						has_capitulated = yes
+					}
+					controls_state = 372
+				}
+				AND = {
+					NOT = {
+						country_exists = TLA
+					}
+					controls_state = 372
+				}
+				owns_state = 372
+			}
+		}
 		}
 
 		bypass = {
@@ -2689,6 +2769,10 @@
 		available_if_capitulated = no
 
 		completion_reward = {
+		swap_ideas = {
+			remove_idea = IRI_TlaProblems1
+			add_idea = IRI_TlaProblems2
+		}
 		}
 	}
 
@@ -2707,7 +2791,23 @@
 		}
 
 		available = {
-
+		AND = {
+			OR = {
+				AND = {
+					TLA = {
+						has_capitulated = yes
+					}
+					controls_state = 372
+				}
+				AND = {
+					NOT = {
+						country_exists = TLA
+					}
+					controls_state = 372
+				}
+				owns_state = 372
+			}
+		}
 		}
 
 		bypass = {
@@ -2723,7 +2823,10 @@
 		}
 
 		completion_reward = {
-
+		swap_ideas = {
+		remove_idea = IRI_TlaProblems2
+		add_idea = IRI_TlaProblems3
+		}
 		}
 	}
 
@@ -2742,7 +2845,14 @@
 		}
 
 		available = {
-
+			OR = {
+				TLA = { is_subject_of = ROOT }
+				AND = {
+				786 = { is_fully_controlled_by = ROOT }
+				784 = { is_fully_controlled_by = ROOT }
+				776 = { is_fully_controlled_by = ROOT }
+				}
+			}
 		}
 
 		bypass = {
@@ -2755,7 +2865,30 @@
 
 		search_filters = { FOCUS_FILTER_MANPOWER }
 		completion_reward = {
-
+			786 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			784 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			776 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 
@@ -2775,7 +2908,23 @@
 		}
 
 		available = {
-
+		AND = {
+			OR = {
+				AND = {
+					TLA = {
+						has_capitulated = yes
+					}
+					controls_state = 372
+				}
+				AND = {
+					NOT = {
+						country_exists = TLA
+					}
+					controls_state = 372
+				}
+				owns_state = 372
+			}
+		}
 		}
 
 		bypass = {
@@ -2814,11 +2963,27 @@
 		}
 
 		available = {
-
+		AND = {
+			OR = {
+				AND = {
+					TLA = {
+						has_capitulated = yes
+					}
+					controls_state = 372
+				}
+				AND = {
+					NOT = {
+						country_exists = TLA
+					}
+					controls_state = 372
+				}
+				owns_state = 372
+			}
+		}
 		}
 
 		bypass = {
-
+		NOT = { has_idea = IRI_TlaProblems1 }
 		}
 
 		cancel_if_invalid = yes
@@ -2830,7 +2995,7 @@
 		}
 
 		completion_reward = {
-
+		remove_ideas = IRI_TlaProblems1
 		}
 	}
 	focus = {
@@ -3014,7 +3179,8 @@
 
 		search_filters = { FOCUS_FILTER_STABILITY }
 		completion_reward = {
-			
+		custom_effect_tooltip = Will_Be_Soon_Teaser_Tech
+		add_research_slot = 1
 		}
 	}
 }

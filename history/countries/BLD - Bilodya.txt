@@ -70,13 +70,13 @@ create_country_leader = {
 	name = "Kar Kurbah"
 	desc = "politics_BLD_kurbah_desc"
 	picture = "gfx/leaders/BLD/Portrait_BLD_Bozhur.dds"
-	ideology = republic_peasant_ideology
+	ideology = tribal_democracy_ideology
 	traits = {
 	}
 }
 
 create_country_leader = {
-	name = "Reimvan Tonchev"
+	name = "Kar Reimvan"
 	desc = "politics_BLD_tonchev_desc"
 	picture = "gfx/leaders/BLD/Portrait_BLD_Tonchev.dds"
 	ideology = puritan_ideology
@@ -85,7 +85,7 @@ create_country_leader = {
 }
 
 create_country_leader = {
-	name = "Thaurun Zheko"
+	name = "Kar Thaurun"
 	desc = "politics_BLD_zheko_desc"
 	picture = "gfx/leaders/BLD/Portrait_BLD_Zheko.dds"
 	ideology = monarchy_absolute_ideology
@@ -94,7 +94,7 @@ create_country_leader = {
 }
 
 create_country_leader = {
-	name = "Nadeja Stoeva"
+	name = "Kar Stoya"
 	desc = "politics_BLD_stoeva_desc"
 	picture = "gfx/leaders/BLD/Portrait_BLD_Stoeva.dds"
 	ideology = theocrat_ideology
@@ -112,10 +112,66 @@ create_country_leader = {
 }
 
 create_country_leader = {
-	name = "Vurkun Kliment"
-	desc = "politics_BLD_kliment_desc"
-	picture = "gfx/leaders/BLD/Portrait_BLD_Kliment.dds"
+	name = "Kar Vurkun"
+	desc = "politics_BLD_vurkun_desc"
+	picture = "gfx/leaders/BLD/Portrait_BLD_Vurkun.dds"
 	ideology = republic_merchant_ideology
 	traits = {
 	}
+}
+
+create_corps_commander = {
+	name = "Tar Murklav"
+	id = 520
+		picture = "Portrait_BLD_Wun_Orvar.dds"
+	traits = { trickster harsh_leader infantry_officer }
+	skill = 4
+
+	
+	attack_skill = 4
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 4
+}
+
+create_corps_commander = {
+	name = "Gur Tarvak"
+	id = 521
+		picture = "Portrait_BLD_Gur_Tarvak.dds"
+	traits = { trait_cautious defensive_doctrine }
+	skill = 3
+
+	
+	attack_skill = 3
+	defense_skill = 4
+	planning_skill = 1
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Pav Karbun"
+	id = 522
+		picture = "Portrait_BLD_Pav_Karbun.dds"
+	traits = { infantry_officer }
+	skill = 2
+
+	
+	attack_skill = 1
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Ren Dirgal"
+	id = 523
+		picture = "Portrait_BLD_Ren_Dirgal.dds"
+	traits = { commando }
+	skill = 2
+
+	
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 3
 }

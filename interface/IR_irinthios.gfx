@@ -2879,6 +2879,10 @@ spriteTypes = {
 	texturefile = "gfx/interface/ideas/IRI_Sacked_North.tga"		
 	}
 	SpriteType = {
+	name = "GFX_idea_TLA_Sacked_North"
+	texturefile = "gfx/interface/ideas/IRI_Sacked_North.tga"		
+	}
+	SpriteType = {
 	name = "GFX_idea_IRI_Glory_Built_On_Blood"
 	texturefile = "gfx/interface/ideas/IRI_Glory_Built_On_Blood.tga"
 	}
@@ -2965,5 +2969,61 @@ spriteTypes = {
 	SpriteType = {
 	name = "GFX_decision_category_milfaction"
 	texturefile = "gfx/interface/decisions/decision_cat_milfaction.dds"
+	}
+	SpriteType = {
+	name = "GFX_idea_IRI_Theoria_KataktisisSpirit"
+	texturefile = "gfx/interface/ideas/IRI_Theoria_KataktisisSpirit.tga"
+	}
+	SpriteType = {
+	name = "GFX_idea_IRI_House_Of_Commons"
+	texturefile = "gfx/interface/ideas/IRI_House_Of_Commons.tga"
+	}
+	SpriteType = {
+	name = "GFX_idea_IRI_Peasant_Courts"
+	texturefile = "gfx/interface/ideas/IRI_Peasant_Courts.tga"
+	}
+	SpriteType = {
+	name = "GFX_idea_IRI_Rights_Of_Craftsmen"
+	texturefile = "gfx/interface/ideas/IRI_Rights_Of_Craftsmen.tga"
+	}
+	SpriteType = {
+	name = "GFX_idea_IRI_Republican_Values"
+	texturefile = "gfx/interface/ideas/IRI_Republican_Values.tga"
+	}
+	SpriteType = {
+	name = "GFX_idea_IRI_TlaProblems1"
+	texturefile = "gfx/interface/ideas/IRI_TlaProblems1.tga"
+	}
+	SpriteType = {
+	name = "GFX_idea_IRI_TlaProblems2"
+	texturefile = "gfx/interface/ideas/IRI_TlaProblems2.tga"
+	}
+	SpriteType = {
+	name = "GFX_idea_IRI_TlaProblems3"
+	texturefile = "gfx/interface/ideas/IRI_TlaProblems3.tga"
+	}
+	SpriteType = {
+	name = "GFX_idea_IRI_Autonomous_Cities"
+	texturefile = "gfx/interface/ideas/IRI_Autonomous_Cities.tga"
+	}
+	SpriteType = {
+	name = "GFX_idea_IRI_Guilds_Nationalized"
+	texturefile = "gfx/interface/ideas/IRI_Guilds_Nationalized.tga"
+	}
+	SpriteType = {
+	name = "GFX_idea_IRI_The_Rebuilding"
+	texturefile = "gfx/interface/ideas/IRI_The_Rebuilding.tga"
+	}
+	SpriteType = {
+	name = "GFX_report_event_sunday_provocation"
+	texturefile = "gfx/event_pictures/report_event_sunday_provocation.dds"
+	}
+	SpriteType = {
+	name = "GFX_report_revolution_in_air"
+	texturefile = "gfx/event_pictures/report_revolution_in_air.dds"
+	}
+	SpriteType = {
+	name = "GFX_news_event_iri_peasant_war"
+	texturefile = "gfx/event_pictures/news_event_iri_peasant_war.dds"
 	}
 }

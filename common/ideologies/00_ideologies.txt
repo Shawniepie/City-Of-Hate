@@ -85,6 +85,14 @@ ideologies = {
 					
 			republic_peasant_ideology = {
 			}
+			
+			tribal_democracy_ideology = {
+			can_be_randomly_selected = no
+			}
+			
+			democratic_ideology = {
+			can_be_randomly_selected = no # No democracy for peasants xaxa
+			}
 		}
 		
 		dynamic_faction_names = {

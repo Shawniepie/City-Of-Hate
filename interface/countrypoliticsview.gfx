@@ -46,6 +46,10 @@ spriteTypes = {
 		name = "GFX_ideology_republic_merchant_group"
 		texturefile = "gfx/interface/ideologies/republic_merchant_group.dds"
 	}
+	spriteType = {
+		name = "GFX_ideology_democratic_group"
+		texturefile = "gfx/interface/ideologies/democratic_group.tga"
+	}
 	
 	#Government in Exile
 

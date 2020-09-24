@@ -1574,4 +1574,12 @@ spriteTypes = {
 		}
 		legacy_lazy_load = no
 	}
+	SpriteType = {
+	name = "GFX_BLD_Portrait_BLD_Pav_Karbun"
+	texturefile = "gfx/leaders/BLD/Portrait_BLD_Pav_Karbun.dds"			
+	}
+	SpriteType = {
+	name = "GFX_BLD_Portrait_BLD_Ren_Dirgal"
+	texturefile = "gfx/leaders/BLD/Portrait_BLD_Ren_Dirgal.dds"			
+	}
 }

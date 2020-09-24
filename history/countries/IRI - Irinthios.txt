@@ -128,6 +128,7 @@ create_country_leader = {
 	picture = "gfx/leaders/IRI/Portrait_IRI_Aggelos.dds"
 	ideology = republic_aristocrat_ideology
 	traits = {
+	dishonoured_dynasty
 	}
 }
 

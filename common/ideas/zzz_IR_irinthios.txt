@@ -238,12 +238,12 @@ ideas = {
 				always = yes
 			}
 			
-			picture = GFX_idea_IRI_Sacked_North
+			picture = GFX_idea_TLA_Sacked_North
 			
 			removal_cost = -1
 			
 			modifier = {
-				forced_surrender_limit = -0.5
+				forced_surrender_limit = -0.6
 			}
 		}
 		
@@ -264,6 +264,217 @@ ideas = {
 			modifier = {
 				consumer_goods_factor = -0.1
 				army_morale_factor = -0.1
+			}
+		}
+		 IRI_Theoria_KataktisisSpirit = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = GFX_idea_IRI_Theoria_KataktisisSpirit
+			
+			removal_cost = -1
+			
+			modifier = {
+				generate_wargoal_tension = -0.25
+				justify_war_goal_time = -0.2
+				army_morale_factor = 0.1
+			}
+		}
+		
+		 IRI_TlaProblems1 = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = GFX_idea_IRI_TlaProblems1
+			
+			removal_cost = -1
+			
+			modifier = {
+			war_support_weekly = -0.005
+			resistance_target = 0.6
+			}
+		}
+		 IRI_TlaProblems2 = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = GFX_idea_IRI_TlaProblems2
+			
+			removal_cost = -1
+			
+			modifier = {
+			resistance_target = 0.3
+			}
+		}
+		 IRI_TlaProblems3 = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = GFX_idea_IRI_TlaProblems3
+			
+			removal_cost = -1
+			
+			modifier = {
+			consumer_goods_factor = 0.05
+			}
+		}
+		 IRI_Autonomous_Cities = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = GFX_idea_IRI_Autonomous_Cities
+			
+			removal_cost = -1
+			
+			modifier = {
+			stability_factor = 0.1
+			production_speed_buildings_factor = 0.05
+			industrial_capacity_factory = 0.1
+			}
+		}
+		 IRI_Guilds_Nationalized = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = GFX_idea_IRI_Guilds_Nationalized
+			
+			removal_cost = -1
+			
+			modifier = {
+			global_building_slots_factor = 0.1
+			industry_free_repair_factor = 0.5
+			}
+		}
+		 IRI_The_Rebuilding = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = GFX_idea_IRI_The_Rebuilding
+			
+			removal_cost = -1
+			
+			modifier = {
+			consumer_goods_factor = -0.05
+			production_speed_industrial_complex_factor = 0.2
+			production_speed_infrastructure_factor = 0.2
+			industry_free_repair_factor = 0.8
+			}
+		}
+		 IRI_House_Of_Commons = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = GFX_idea_IRI_House_Of_Commons
+			
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = 0.1
+			}
+		}
+		 IRI_Peasant_Courts = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = GFX_idea_IRI_Peasant_Courts
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.1
+			}
+		}
+		 IRI_Rights_Of_Craftsmen = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = GFX_idea_IRI_Rights_Of_Craftsmen
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.15
+				industrial_capacity_factory = -0.05
+			}
+		}
+		 IRI_Republican_Values = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = GFX_idea_IRI_Republican_Values
+			
+			removal_cost = -1
+			
+			modifier = {
+			stability_factor = 0.1
+			army_morale_factor = 0.1
+			forced_surrender_limit = 0.2
 			}
 		}
 		

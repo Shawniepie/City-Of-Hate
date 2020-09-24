@@ -45,22 +45,6 @@ division_template = {
 }
 
 units = {
-
-	division = {
-		name = "Arngus Mirewatch"
-		location = 3901
-		division_template = "Mirewatch"
-		start_experience_factor = 0.6
-
-	}
-	
-	division = {
-		name = "Thurruth Mirewatch"
-		location = 7165
-		division_template = "Mirewatch"
-		start_experience_factor = 0.6
-
-	}
 	
 	division = {
 		name = "Gurluth Mirewatch"
@@ -115,54 +99,6 @@ units = {
 		location = 7633
 		division_template = "Drake Cavalry"
 		start_experience_factor = 0.7
-
-	}
-	
-	division = {
-		name = "Issthvin Unblooded"
-		location = 5317
-		division_template = "Unblooded Militia"
-		start_experience_factor = 0.05
-
-	}
-	
-	division = {
-		name = "Norl Unblooded"
-		location = 6699
-		division_template = "Unblooded Militia"
-		start_experience_factor = 0.05
-
-	}
-	
-	division = {
-		name = "Quure Unblooded"
-		location = 6968
-		division_template = "Unblooded Militia"
-		start_experience_factor = 0.05
-
-	}
-	
-	division = {
-		name = "Sorth Unblooded"
-		location = 3125
-		division_template = "Unblooded Militia"
-		start_experience_factor = 0.05
-
-	}
-	
-	division = {
-		name = "Garythie Unblooded"
-		location = 2097
-		division_template = "Unblooded Militia"
-		start_experience_factor = 0.05
-
-	}
-	
-	division = {
-		name = "Lurve Unblooded"
-		location = 2204
-		division_template = "Unblooded Militia"
-		start_experience_factor = 0.05
 
 	}
 }

@@ -9135,13 +9135,13 @@ country_event = { #Conquest of Bilodya
 		ai_chance = {
 			factor = 100
 		}
-		
 		IRI = {
 		add_state_core = 385
 		add_state_core = 771
 		add_state_core = 761
 		add_state_core = 828
-		add_ideas = IRI_Ogre_Riots
+		}
+		ROOT = { add_ideas = IRI_Ogre_Riots }
 		}
 	}
 }
@@ -9338,3 +9338,60 @@ country_event = { #Conquest of Merchant's Hand
 		}
 	}
 }
+country_event = { #Conquest of Tlarthingia
+	id = annex.40
+	title = annex.40.t
+	desc = annex.40.d
+	picture = GFX_report_event_spain_civil_war_volunteers_02
+	mean_time_to_happen = {
+		days = 15
+	}
+	fire_only_once = yes
+	trigger = {
+		AND = {
+			original_tag = IRI
+			OR = {
+				AND = {
+					TLA = {
+						has_capitulated = yes
+					}
+					controls_state = 372
+				}
+				AND = {
+					NOT = {
+						country_exists = TLA
+					}
+					controls_state = 372
+				}
+				owns_state = 372
+			}
+			NOT = {
+				ROOT = {
+					has_country_flag = conquest_of_tlarthingia
+				}
+			}
+		}
+	}
+
+	option = { # Priceless revenge
+		name = annex.40.a
+		trigger = {
+			OR = {
+				tag = IRI
+				ROOT = {
+					is_subject_of = IRI
+				}
+				IRI = {
+					is_subject_of = ROOT
+				}
+			}
+		}
+		
+		ai_chance = {
+			factor = 100
+		}
+		
+		ROOT = { add_ideas = IRI_TlaProblems1 }
+	}
+}
+

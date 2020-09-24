@@ -35,38 +35,6 @@ country_event = {#To Arms!
 	}
 }
 
-country_event = {#Victory against Tlarthingia
-	id = iri.2
-	title = iri.2.t
-	desc = iri.2.d
-	picture = GFX_report_event_spain_civil_war_volunteers_02
-	
-	fire_only_once = yes
-	
-	trigger = {
-		any_owned_state = {
-			is_owned_by = IRI
-			is_core_of = TLA
-		}
-	}
-	
-	mean_time_to_happen = {
-		days = 15
-	}
-	
-	option = {#Glory!
-		name = iri.2.a
-		every_state = {
-			limit = {
-				AND = {
-					is_core_of = TLA
-					is_owned_by = IRI
-				}
-			}
-			add_core_of = IRI
-		}
-	}
-}
 
 country_event = {#Dissenting Nobles!
 	id = iri.3
@@ -319,4 +287,382 @@ country_event = {#Irinthios gets response
 	option = {#Oh crap
 		name = iri.9.a
 	}
+}
+
+country_event = {# Sunday provocation begins, it is the end of Chairophons tyrrany
+	id = iri.10
+	title = iri.10.t
+	desc = iri.10.d
+	picture = GFX_report_event_sunday_provocation
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	trigger = {
+
+	}
+	
+	mean_time_to_happen = {
+
+	}
+	
+	option = {#Cinyras
+		name = iri.10.a
+		hidden_effect = {
+		set_country_flag = IRI_Revolution_Ongoing
+		set_country_flag = IRI_Cinyras_Chosen
+		news_event = {
+			id = iri.11
+			days = 3
+		}
+		}
+		IRI = {
+			if = {
+			limit = {
+			has_idea = IRI_Revolution_In_Air_1
+			}
+			start_civil_war = {
+				ruling_party = republic_aristocrat
+				ideology = monarchy_absolute
+				size = 0.7
+				only_own_territory = yes
+				capital = 797
+				states = { 
+				797 759 737 738 744 398 399 740 739 400 751 750 756 758 755 752 402 746 401 754 745
+				}
+			keep_unit_leaders = {
+				501 502 506 508 509 510
+					}
+				}
+			}
+			else_if = {
+			limit = {
+			has_idea = IRI_Revolution_In_Air_2
+			}
+			start_civil_war = {
+				ruling_party = republic_aristocrat
+				ideology = monarchy_absolute
+				size = 0.4
+				only_own_territory = yes
+				capital = 397
+				states = { 
+				797 398 399 740 402 752 758 759 750 756
+				}
+			keep_unit_leaders = {
+				501 502 506 508 509 510
+					}
+				}
+			}
+			else_if = {
+			limit = {
+			has_idea = IRI_Revolution_In_Air_3
+			}
+			start_civil_war = {
+				ruling_party = republic_aristocrat
+				ideology = monarchy_absolute
+				size = 0.2
+				only_own_territory = yes
+				capital = 397
+				states = { 
+				797 398 399 740 402
+				}
+			keep_unit_leaders = {
+				501 502 506 508 509 510 759
+					}
+				}
+			}
+			else_if = {
+			limit = {
+			has_idea = IRI_Revolution_In_Air_4
+			}
+			start_civil_war = {
+				ruling_party = republic_aristocrat
+				ideology = monarchy_absolute
+				size = 0.1
+				only_own_territory = yes
+				capital = 797
+				states = { 
+				797 398 399
+				}
+			keep_unit_leaders = {
+				501 502 506 508 509 510
+					}
+				}
+			}
+		}
+	}
+	option = {#The people
+		name = iri.10.b
+		hidden_effect = { 
+		set_country_flag = IRI_Revolution_Ongoing
+		set_country_flag = IRI_Peasant_Chosen
+		news_event = {
+			id = iri.12
+			days = 3
+		}
+		}
+		}
+
+	}
+}
+
+news_event = {
+	id = iri.11
+	title = iri.11.t
+	desc = iri.11.d
+	picture = GFX_news_event_iri_peasant_war
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	trigger = {
+
+	}
+	
+	mean_time_to_happen = {
+
+	}
+	
+	option = {
+		name = iri.11.a
+	}
+
+}
+
+news_event = {
+	id = iri.12
+	title = iri.12.t
+	desc = iri.12.d
+	picture = GFX_news_event_iri_peasant_war
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	trigger = {
+
+	}
+	
+	mean_time_to_happen = {
+
+	}
+	
+	option = {
+		name = iri.12.a
+	}
+
+}
+country_event = {# Cinyras won civil war
+	id = iri.13
+	title = iri.13.t
+	desc = iri.13.d
+	picture = GFX_report_event_sunday_provocation
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	trigger = {
+
+	}
+	
+	mean_time_to_happen = {
+
+	}
+	
+	option = {#Hooray
+		name = iri.13.a
+	}
+}
+country_event = {# Peasants won civil war
+	id = iri.14
+	title = iri.14.t
+	desc = iri.14.d
+	picture = GFX_report_event_sunday_provocation
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	trigger = {
+
+	}
+	
+	mean_time_to_happen = {
+
+	}
+	
+	option = {#Hooray
+		name = iri.14.a
+	}
+}
+country_event = {# Tlarthingians getting the land exchange offer
+	id = iri.15
+	title = iri.15.t
+	desc = iri.15.d
+	picture = GFX_report_event_sunday_provocation
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	trigger = {
+
+	}
+	
+	mean_time_to_happen = {
+
+	}
+	
+	option = {#Yes
+	name = iri.15.a
+	IRI = {
+	puppet = TLA
+	transfer_state = 773
+	transfer_state = 377
+	transfer_state = 374
+	transfer_state = 766
+	transfer_state = 788
+	transfer_state = 765
+	add_state_core = 773
+	add_state_core = 377
+	add_state_core = 374
+	add_state_core = 766
+	add_state_core = 788
+	add_state_core = 765
+	remove_opinion_modifier = {
+		target = TLA
+		modifier = bitter_rivals
+	}
+	country_event = {
+		id = iri.16
+		days = 1
+	}
+	} 
+	remove_state_core = 773
+	remove_state_core = 377
+	remove_state_core = 374
+	remove_state_core = 766
+	remove_state_core = 788
+	remove_state_core = 765
+	remove_opinion_modifier = {
+		target = IRI
+		modifier = bitter_rivals
+	}
+	}
+	
+	option = {#Halfyes
+	name = iri.15.b
+	IRI = {
+	give_guarantee = TLA
+	transfer_state = 773
+	transfer_state = 377
+	transfer_state = 374
+	transfer_state = 766
+	transfer_state = 788
+	transfer_state = 765
+	add_state_core = 773
+	add_state_core = 377
+	add_state_core = 374
+	add_state_core = 766
+	add_state_core = 788
+	add_state_core = 765
+	country_event = {
+		id = iri.17
+		days = 1
+	}
+	remove_opinion_modifier = {
+		target = TLA
+		modifier = bitter_rivals
+	}
+	} 
+	remove_state_core = 773
+	remove_state_core = 377
+	remove_state_core = 374
+	remove_state_core = 766
+	remove_state_core = 788
+	remove_state_core = 765
+	remove_opinion_modifier = {
+		target = IRI
+		modifier = bitter_rivals
+	}
+	}
+	
+	option = {#Nooo
+	name = iri.15.c
+	IRI = {
+	add_state_claim = 773
+	add_state_claim = 377
+	add_state_claim = 374
+	add_state_claim = 766
+	add_state_claim = 788
+	add_state_claim = 765
+	country_event = {
+		id = iri.18
+		days = 1
+	}
+	}
+	}
+}
+country_event = {# They say Yes
+	id = iri.16
+	title = iri.16.t
+	desc = iri.16.d
+	picture = GFX_report_event_sunday_provocation
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	trigger = {
+
+	}
+	
+	mean_time_to_happen = {
+
+	}
+	
+	option = {
+	name = iri.16.a
+	}
+
+}
+country_event = {# They say Halfyes
+	id = iri.17
+	title = iri.17.t
+	desc = iri.17.d
+	picture = GFX_report_event_sunday_provocation
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	trigger = {
+
+	}
+	
+	mean_time_to_happen = {
+
+	}
+	
+	option = {
+	name = iri.17.a
+	}
+
+}
+country_event = {# They say Halfyes
+	id = iri.18
+	title = iri.18.t
+	desc = iri.18.d
+	picture = GFX_report_event_sunday_provocation
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	trigger = {
+
+	}
+	
+	mean_time_to_happen = {
+
+	}
+	
+	option = {
+	name = iri.18.a
+	}
+
 }
