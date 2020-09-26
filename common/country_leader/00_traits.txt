@@ -361,31 +361,25 @@ leader_traits = {
 		planning_speed = 0.1
 		experience_gain_army_factor = 0.15
 	}
-	brilliant_administrator
+	brilliant_administrator = {
 		random = no
 		stability_factor = 0.05
 		consumer_goods_factor = -0.05
 		MONTHLY_POPULATION = 0.05
 	}
-	
-	brilliant_administrator
-		random = yes
-		stability_factor = 0.05
-		consumer_goods_factor = -0.05
-		MONTHLY_POPULATION = 0.05
-	}
-	visionary_architect
+
+	visionary_architect = {
 		random = yes
 		consumer_goods_factor = 0.02
 		production_speed_buildings_factor = 0.1
 		research_speed_factor = 0.05
 	}
-	dishonoured_dynasty
+	dishonoured_dynasty = {
 		random = no
 		stability_factor = -0.1
 		political_power_factor = -0.1
 	}
-	forgiven_dynasty
+	forgiven_dynasty = {
 		random = no
 		stability_factor = 0.1
 		army_core_attack_factor = 0.1

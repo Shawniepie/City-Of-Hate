@@ -1,9 +1,12 @@
 on_actions = {
 
 	#Checks population change
+	#Note from Silv: it will need a proper scope before the startup check
 	on_startup = {
 		effect = {
+			every_country = {
 			check_population_change = yes
+			}
 		}
 	}
 	

@@ -26,7 +26,7 @@ set_popularities = {
 
 	republic_peasant = 1
 
-	republic_aristocrat = 21
+	republic_aristocrat = 31
 
 	republic_merchant = 4
 

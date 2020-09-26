@@ -73,7 +73,6 @@ add_ideas = {
 	Steam_And_Steel
 	gnome_country
 	molten_god_religion
-	free_trade
 }
 
 create_country_leader = {

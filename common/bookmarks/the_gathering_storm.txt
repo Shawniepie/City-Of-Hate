@@ -42,6 +42,20 @@ bookmarks = {
 			}
 		}
 		
+		"IRI"={
+			history = "IRI_CITY_OF_HATE_DESC"
+			ideology = monarchy_constitutional
+			ideas = {
+				IRI_Flourishing_Lands
+				IRI_Irinthios_Will_Rise_Again
+			}
+			focuses = {
+				IRI_Emperors_Party
+				IRI_Invade_Bilodya
+				IRI_Sunday_Provocation
+			}
+		}
+		
 		
 		
 		#Minors
@@ -71,6 +85,20 @@ bookmarks = {
 				HLZ_edlerrat
 				HLZ_communal_tax
 				HLZ_pressler_triumphant
+			}
+		}
+		
+		"BLD"={
+			history = "BLD_CITY_OF_HATE_DESC"
+			ideology = republic_peasant
+			minor = yes
+			ideas = {
+			BLD_Swamp_Is_Our_Home
+			}
+			focuses = {
+				BLD_Reconcilate_With_Kugurs
+				BLD_Textile_Manufacturing
+				BLD_Adapt_the_Noble_Class_Model
 			}
 		}
 		

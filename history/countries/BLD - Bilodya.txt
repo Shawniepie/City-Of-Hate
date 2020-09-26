@@ -35,6 +35,7 @@ set_popularities = {
 }
 
 add_ideas = {
+	BLD_Swamp_Is_Our_Home
 	limited_conscription
 	Tribal
 	Primitive_Economy

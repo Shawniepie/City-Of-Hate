@@ -1582,4 +1582,8 @@ spriteTypes = {
 	name = "GFX_BLD_Portrait_BLD_Ren_Dirgal"
 	texturefile = "gfx/leaders/BLD/Portrait_BLD_Ren_Dirgal.dds"			
 	}
+	SpriteType = {
+	name = "GFX_idea_BLD_Swamp_Is_Our_Home"
+	texturefile = "gfx/interface/ideas/BLD_Swamp_Is_Our_Home.tga"			
+	}
 }

@@ -13,6 +13,8 @@ IRI_category_military_faction_demands = {
 
 IRI_category_territorial_integration = {
 
+	picture = GFX_decision_cat_integration
+	
 	icon = border_war
 
 	priority = 90
@@ -24,6 +26,8 @@ IRI_category_territorial_integration = {
 
 IRI_irinthios_influence_sphere = {
 
+	picture = GFX_decision_cat_irisphere
+	
 	icon = power_struggle
 
 	priority = 80

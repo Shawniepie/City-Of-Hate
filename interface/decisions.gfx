@@ -740,5 +740,12 @@ spriteTypes = {
 		name = "GFX_decision_hol_war_on_pacifism"
 		texturefile = "gfx/interface/decisions/decision_hol_war_on_pacifism.dds"
 	}
-
+	spriteType = {
+		name = "GFX_decision_cat_irisphere"
+		texturefile = "gfx/interface/decisions/decision_cat_irisphere.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_cat_integration"
+		texturefile = "gfx/interface/decisions/decision_cat_integration.dds"
+	}
 }
