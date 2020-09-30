@@ -3,6 +3,21 @@
 set_oob = "UNG_1936"
 set_research_slots = 3
 
+set_variable = { var = unioncouncil_support value = 1 }
+set_variable = { var = unioncouncil_total value = 13 }
+
+set_variable = { var = unioncouncil_tier1_req value = 4 }
+set_variable = { var = unioncouncil_tier2_req value = 5 }
+set_variable = { var = unioncouncil_tier3_req value = 5 }
+set_variable = { var = unioncouncil_tier4_req value = 7 }
+set_variable = { var = unioncouncil_tier5_req value = 9 }
+set_variable = { var = unioncouncil_tier6_req value = 12 }
+
+set_variable = { var = quorum_low value = 1 }
+set_variable = { var = quorum_medium value = 2 }
+set_variable = { var = quorum_high value = 5 }
+UNG_recalc_council_icon_frames = yes
+
 set_technology = {
 	infantry_weapons = 1
 	infantry_weapons1 = 1

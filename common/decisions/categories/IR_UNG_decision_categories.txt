@@ -1,7 +1,7 @@
 UNG_council = {
 	icon = ung_council
 	allowed = {
-		always = no #TEMPORARY DISABLE UNTIL I CAN FIX IT
+		always = yes
 		original_tag = UNG
 	}
 
@@ -14,7 +14,7 @@ UNG_union_influence_sphere_category = {
 	icon = generic_formable_nations
 	
 	allowed = {
-		always = no #TEMPORARY DISABLE UNTIL I CAN FIX IT
+		always = yes
 		original_tag = UNG
 	}
 
