@@ -1940,16 +1940,8 @@ country_event = {#SKA and RMT attend
 	}
 	
 	trigger = {
-		AND = {
-			OR = {
-				has_country_flag = UNG_nordtorf_summit_SKA_attends
-				has_country_flag = UNG_nordtorf_summit_SKA_refuses_to_attend
-			}
-			OR = {
-				has_country_flag = UNG_nordtorf_summit_RMT_attends
-				has_country_flag = UNG_nordtorf_summit_RMT_refuses_to_attend
-			}
-		}
+		has_country_flag = UNG_nordtorf_summit_SKA_attends
+		has_country_flag = UNG_nordtorf_summit_RMT_attends
 	}
 
 	option = {#Back SKA
@@ -2144,6 +2136,40 @@ country_event = {#SKA Declines
 		name = ung.70.a
 		
 		add_political_power = -75
+		
+		set_country_flag = UNG_nordtorf_summit_fails_RMT_favoured
+	}
+}
+
+country_event = {#SKA attends, RMT doesn't
+	id = ung.71
+	title = ung.71.t
+	desc = ung.71.d
+	picture = GFX_report_event_indonesia_handover
+	
+	is_triggered_only = yes
+	
+	option = {#War it is
+		name = ung.71.a
+		
+		add_political_power = -5
+		
+		trigger = {
+			OR = {
+				AND = {
+					has_country_flag = UNG_nordtorf_summit_SKA_refuses_to_attend
+					has_country_flag = UNG_nordtorf_summit_RMT_attends
+				}
+				AND = {
+					has_country_flag = UNG_nordtorf_summit_SKA_attends
+					has_country_flag = UNG_nordtorf_summit_RMT_refuses_to_attend
+				}
+			}
+		}
+		
+		if = {
+			limit = {
+				has_country_flag = 
 		
 		set_country_flag = UNG_nordtorf_summit_fails_RMT_favoured
 	}
