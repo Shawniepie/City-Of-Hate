@@ -1,6 +1,16 @@
 spriteTypes = {	
 	
 	#### Mod-specific goal icons
+
+	SpriteType = {
+	name = "GFX_focus_ung_seventh_campaign"
+	texturefile = "gfx/interface/goals/focus_ung_seventh_campaign.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_focus_ung_ally_skaelinger"
+	texturefile = "gfx/interface/goals/focus_ung_ally_skaelinger.dds"			
+	}
 	
 	SpriteType = {
 	name = "GFX_focus_generic_economic_war"

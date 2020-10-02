@@ -279,7 +279,7 @@ country_event = { #Re-enables being called into a RM defensive war
 	}
 	
 	mean_time_to_happen = {
-		days = 1
+		days = 365
 	}
 	
 	immediate = {

@@ -165,3 +165,6 @@
  STA_ordorian_domination:0 "§R We will submit to Ordoria if we accept.§!"
  STA_wizard_intervention:0 "The §YArkanisturm Intervention§! foci have been unlocked."
  ARK_resmayer_supported:0 "§RSchwarzenbach has backed Resmayer's faction, electing his opponent will destabilize our realm and open us up to Stahlhoffer intervention!"
+ BER_allowed_to_initiate_terugkeer:0 "We have received foreign support for the Terugkeer."
+ SKA_allowed_to_initiate_seventh_campaign:0 "We have found external support for a Seventh Campaign."
+ DORF_we_got_zarathum:0 "We have restored the city of Zarathum to its ancient glory."

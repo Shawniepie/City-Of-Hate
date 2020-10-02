@@ -1,8 +1,20 @@
 ﻿l_english:
- farmlands: "Farmlands"
- farmlands_desc: "This building produces food for your people, varying from orchards to ranches to traditional fields of wheat."
- farmlands_plural: "Farmlands"
- modifier_production_speed_farmlands: ""
- modifier_production_speed_farmlands_desc: ""
- modifier_production_speed_farmlands_factor: "§YFarmlands§! construction speed"
- modifier_production_speed_farmlands_factor_desc: "Modifies the speed of Farmlands construction."
+ 
+ 
+ ## Buildings
+ 
+ forge:0 "Local Forge"
+ forge_plura:0 "Local Forges"
+ forge_desc:0 "Forges are our primary source of war supplies. Weapons, armor and war machinery are forged, distributed and built here."
+ workshop:0 "Local Workshop"
+ workshop_plural:0 "Local Workshops"
+ workshop_desc:0 "Workshops help us to move materials, furniture and prefabricated buildings to the correct construction sites via transport routes, thereby drastically simplifying our construction efforts."
+ farm:0 "Local Farm"
+ farm_plural:0 "Local Farms"
+ farm_desc:0 "Farms are the easiest and most effective way to feed a large number of ordinary people and soldiers. The effectiveness of farms can easily be increased over time."
+ castle:0 "Castle"
+ castle_plural:0 "Castles"
+ castle_desc:0 "Castles are extremely well fortified buildings that are difficult to construct. They make up for their long construction period with their excellent strategic defense capabilities."
+ cathedral:0 "Cathedral"
+ cathedral_plural:0 "Cathedrals"
+ cathedral_desc: "It is our religion that unites our people. Monumental structures, like a cathedral for our saints, should adorn our cities and show everyone how great and mighty our faith is."

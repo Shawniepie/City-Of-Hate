@@ -1,8 +1,58 @@
 DORF_seventh_campaign = {
 	
+	SKA_seventh_campaign = {
+		
+		icon = GFX_decision_generic_operation
+		
+		allowed = {
+			original_tag = SKA
+		}
+
+		
+		available = {
+			has_country_flag = SKA_allowed_to_initiate_seventh_campaign
+		}
+		
+		cost = 0
+		
+		ai_will_do = {
+			factor = 200
+			modifier = { #Let's sort out our current war first
+				has_war = yes
+				factor = 0
+			}
+			modifier = { #Let's not start a war without Dwarves to fill out the ranks
+				has_manpower < 5000
+				factor = 0
+			}
+		}
+		
+		visible = {
+			original_tag = SKA
+		}
+		
+		fire_only_once = yes
+		
+		cost = 75
+		
+		complete_effect = {
+			declare_war_on = {
+				target = KUR
+				type = annex_everything
+			}
+			set_country_flag = SKA_seventh_campaign_with_UNG
+			UNG = {
+				country_event = {
+					id = ung.61
+					days = 1
+				}
+			}
+		}
+	}
+	
 	DORF_restore_zarathum = {
 		
-		icon = GFX_decision_ordorian_settler_governments
+		icon = GFX_decision_generic_operation
 		
 		allowed = {
 			OR = {
@@ -10,7 +60,7 @@ DORF_seventh_campaign = {
 				original_tag = RMT
 				original_tag = BER
 			}
-			num_of_civilian_factories > 9
+			num_of_civilian_factories > 14
 		}
 		
 		highlight_state_targets = {
@@ -40,34 +90,126 @@ DORF_seventh_campaign = {
 		
 		fire_only_once = yes
 		
-		cost = 125
+		cost = 250
 		
 		days_remove = 365
 		
 		modifier = {
-			civilian_factory_use = 10
+			civilian_factory_use = 15
+			production_speed_buildings_factor = -0.4
+			industrial_capacity_factory = -0.35
+			mobilization_speed = -0.15
+			political_power_gain = -0.75
+			MONTHLY_POPULATION = -1.2
 		}
 		
 		remove_effect = {
 			custom_effect_tooltip = DORF_restore_zarathum_tt
 			set_global_flag = DORF_zarathum_restored
+			set_country_flag = DORF_we_got_zarathum
+			set_country_flag = DORF_migrants_coming
 			hidden_effect = {
 				174 = {
 					set_state_category = megalopolis
-					set_state_name = "Zarathum"
-					
+					add_core_of = ROOT
+					add_building_construction = {
+						type = industrial_complex
+						level = 6
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = arms_factory
+						level = 5
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 10
+						instant_build = yes
+						province = 7798
+					}
+					add_building_construction = {
+						type = bunker
+						level = 6
+						instant_build = yes
+						province = 1898
+					}
+					add_building_construction = {
+						type = bunker
+						level = 6
+						instant_build = yes
+						province = 7760
+					}
 				}
-				set_province_name = {
-					id = 1989
-					name = "Zarathum"
+				country_event = {
+					id = vrg.1
+				}
+				country_event = {
+					id = vrg.4
+					days = 23
+					random = 17
+				}
+				SKA = {
+					if = {
+						limit = {
+							country_exists = yes
+							NOT = {
+								has_country_flag = DORF_we_got_zarathum
+							}
+						}
+						country_event = {
+							id = vrg.2
+							days = 7
+							random = 5
+						}
+					}
+				}
+				RMT = {
+					if = {
+						limit = {
+							country_exists = yes
+							NOT = {
+								has_country_flag = DORF_we_got_zarathum
+							}
+						}
+						country_event = {
+							id = vrg.2
+							days = 7
+							random = 5
+						}
+					}
+				}
+				BER = {
+					if = {
+						limit = {
+							country_exists = yes
+							NOT = {
+								has_country_flag = DORF_we_got_zarathum
+							}
+						}
+						country_event = {
+							id = vrg.2
+							days = 7
+							random = 5
+						}
+					}
 				}
 			}
 		}
+		
+		ai_will_do = {
+			factor = 250
+			modifier = {
+				num_of_available_civilian_factories < 20
+				factor = 0
+			}
+		}
 	}
-	
+
+
 	DORF_reform_vergallheim = {
 		
-		icon = GFX_decision_ordorian_settler_governments
+		icon = GFX_decision_generic_form_nation
 		
 		allowed = {
 			OR = {
@@ -75,11 +217,25 @@ DORF_seventh_campaign = {
 				original_tag = RMT
 				original_tag = BER
 			}
+			OR = {
+				has_government = monarchy_absolute
+				has_government = monarchy_constitutional
+				has_government = puritan
+			}
 		}
 		
 		available = {
-			AND = {
-				#ow
+			has_country_flag = DORF_we_got_zarathum
+			owns_state = 174
+			owns_state = 146
+			owns_state = 381
+			owns_state = 382
+			owns_state = 383
+			owns_state = 384
+			OR = {
+				owns_state = 365
+				owns_state = 723
+				owns_state = 815
 			}
 		}
 		
@@ -91,20 +247,2082 @@ DORF_seventh_campaign = {
 		
 		visible = {
 			OR = {
+				original_tag = SKA
+				original_tag = RMT
+				original_tag = BER
+			}
+			OR = {
+				has_government = monarchy_absolute
+				has_government = monarchy_constitutional
 				has_government = puritan
-				has_government = theocrat
-			}
-			NOT = {
-				has_country_flag = ORD_settler_governments_enabled
-			}
-			NOT = {
-				has_country_flag = ORD_domestic_moderate
 			}
 		}
 		
 		complete_effect = {
-			custom_effect_tooltip = enable_commissiaries_tt
-			set_country_flag = ORD_settler_governments_enabled
+			hidden_effect = {
+				reform_vergallheim = yes
+			}
+			add_political_power = 250
+			add_stability = 0.15
+			custom_effect_tooltip = DORF_reform_vergallheim_tt
+		}
+	}
+}
+
+DORF_border_skirmishes = {
+	
+	DORF_invade_asolfsskali = {#Pithuzorog
+		
+		icon = generic_prepare_civil_war
+		
+		visible = {
+			OR = {
+				tag = SKA
+				tag = RMT
+				AND = {
+					original_tag = BER
+					OR = {
+						has_government = monarchy_absolute
+						has_government = puritan
+					}
+				}
+			}
+			NOT = {
+				owns_state = 179
+			}
+			
+		}
+		
+		available = {
+		
+			179 = {
+				custom_trigger_tooltip = {
+					tooltip = DORF_not_border_war_tt
+					hidden_trigger = {
+						has_border_war = no
+					}
+				}
+			}
+			
+			custom_trigger_tooltip = {
+				tooltip = DORF_controls_border_state_tt
+				179 = {
+					any_neighbor_state = {
+						is_controlled_by = ROOT
+						ROOT = {
+							divisions_in_border_state = {
+								size > 2
+								state = PREV
+								border_state = 179
+							}
+						}
+					}
+				}
+            }
+			
+			custom_trigger_tooltip = {
+				tooltip = DORF_not_allied_to_target_tt
+				hidden_trigger = {
+					any_other_country = {
+						has_full_control_of_state = 179
+						NOT = {
+							OR = {
+								is_in_faction_with = ROOT
+								is_subject_of = ROOT
+								has_subject = ROOT
+								has_non_aggression_pact_with = ROOT
+								has_guaranteed = ROOT
+								is_guaranteed_by = ROOT
+							}
+						}
+					}
+				}
+			}
+		}
+		
+		visible = {
+			any_other_country = {
+				owns_state = 179
+				NOT = {
+					OR = {
+						has_war_with = ROOT
+						is_in_faction_with = ROOT
+						is_subject_of = ROOT
+						has_subject = ROOT
+						has_non_aggression_pact_with = ROOT
+						has_guaranteed = ROOT
+						is_guaranteed_by = ROOT
+					}
+				}
+			}
+		}
+
+		highlight_state_targets = {
+			state = 179
+		}
+		
+		cost = 50
+		
+		ai_will_do = {
+			factor = 20
+		}
+		
+		complete_effect = {
+			
+			every_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					any_neighbor_state = {
+						state = 179
+					}
+					ROOT = {
+						divisions_in_border_state = {
+							size > 2
+							state = PREV
+							border_state = 179
+						}
+					}
+				}
+				set_temp_variable = {
+					border_conflict_state = THIS
+				}
+			}
+			
+			start_border_war = {
+				change_state_after_war = no
+				attacker = {
+					state = var:border_conflict_state
+					num_provinces = 1
+					on_win = dorf_invade.1
+					on_lose = dorf_invade.2
+					on_cancel = dorf_invade.3
+				}
+				defender = {
+					state = 179
+					num_provinces = 1
+					on_win = dorf_invade.4
+					on_lose = dorf_invade.5
+					on_cancel = dorf_invade.6
+				}
+			}
+		}
+	}
+	
+	DORF_invade_skaptaholt = {#Iskorgal
+		
+		icon = generic_prepare_civil_war
+		
+		visible = {
+			OR = {
+				tag = SKA
+				tag = RMT
+				AND = {
+					original_tag = BER
+					OR = {
+						has_government = monarchy_absolute
+						has_government = puritan
+					}
+				}
+			}
+			NOT = {
+				owns_state = 659
+			}
+			
+		}
+		
+		available = {
+		
+			659 = {
+				custom_trigger_tooltip = {
+					tooltip = DORF_not_border_war_tt
+					hidden_trigger = {
+						has_border_war = no
+					}
+				}
+			}
+			
+			custom_trigger_tooltip = {
+				tooltip = DORF_controls_border_state_tt
+				659 = {
+					any_neighbor_state = {
+						is_controlled_by = ROOT
+						ROOT = {
+							divisions_in_border_state = {
+								size > 2
+								state = PREV
+								border_state = 659
+							}
+						}
+					}
+				}
+            }
+			
+			custom_trigger_tooltip = {
+				tooltip = DORF_not_allied_to_target_tt
+				hidden_trigger = {
+					any_other_country = {
+						has_full_control_of_state = 659
+						NOT = {
+							OR = {
+								is_in_faction_with = ROOT
+								is_subject_of = ROOT
+								has_subject = ROOT
+								has_non_aggression_pact_with = ROOT
+								has_guaranteed = ROOT
+								is_guaranteed_by = ROOT
+							}
+						}
+					}
+				}
+			}
+		}
+		
+		visible = {
+			any_other_country = {
+				owns_state = 659
+				NOT = {
+					OR = {
+						has_war_with = ROOT
+						is_in_faction_with = ROOT
+						is_subject_of = ROOT
+						has_subject = ROOT
+						has_non_aggression_pact_with = ROOT
+						has_guaranteed = ROOT
+						is_guaranteed_by = ROOT
+					}
+				}
+			}
+		}
+
+		highlight_state_targets = {
+			state = 659
+		}
+		
+		cost = 50
+		
+		ai_will_do = {
+			factor = 20
+		}
+		
+		complete_effect = {
+			
+			every_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					any_neighbor_state = {
+						state = 659
+					}
+					ROOT = {
+						divisions_in_border_state = {
+							size > 2
+							state = PREV
+							border_state = 659
+						}
+					}
+				}
+				set_temp_variable = {
+					border_conflict_state = THIS
+				}
+			}
+			
+			start_border_war = {
+				change_state_after_war = no
+				attacker = {
+					state = var:border_conflict_state
+					num_provinces = 1
+					on_win = dorf_invade.7
+					on_lose = dorf_invade.8
+					on_cancel = dorf_invade.9
+				}
+				defender = {
+					state = 659
+					num_provinces = 1
+					on_win = dorf_invade.10
+					on_lose = dorf_invade.11
+					on_cancel = dorf_invade.12
+				}
+			}
+		}
+	}
+	
+	DORF_invade_hvanneyrr = {#Ruzkorgen
+		
+		icon = generic_prepare_civil_war
+		
+		visible = {
+			OR = {
+				tag = SKA
+				tag = RMT
+				AND = {
+					original_tag = BER
+					OR = {
+						has_government = monarchy_absolute
+						has_government = puritan
+					}
+				}
+			}
+			NOT = {
+				owns_state = 176
+			}
+			
+		}
+		
+		available = {
+		
+			176 = {
+				custom_trigger_tooltip = {
+					tooltip = DORF_not_border_war_tt
+					hidden_trigger = {
+						has_border_war = no
+					}
+				}
+			}
+			
+			custom_trigger_tooltip = {
+				tooltip = DORF_controls_border_state_tt
+				176 = {
+					any_neighbor_state = {
+						is_controlled_by = ROOT
+						ROOT = {
+							divisions_in_border_state = {
+								size > 2
+								state = PREV
+								border_state = 176
+							}
+						}
+					}
+				}
+            }
+			
+			custom_trigger_tooltip = {
+				tooltip = DORF_not_allied_to_target_tt
+				hidden_trigger = {
+					any_other_country = {
+						has_full_control_of_state = 176
+						NOT = {
+							OR = {
+								is_in_faction_with = ROOT
+								is_subject_of = ROOT
+								has_subject = ROOT
+								has_non_aggression_pact_with = ROOT
+								has_guaranteed = ROOT
+								is_guaranteed_by = ROOT
+							}
+						}
+					}
+				}
+			}
+		}
+		
+		visible = {
+			any_other_country = {
+				owns_state = 176
+				NOT = {
+					OR = {
+						has_war_with = ROOT
+						is_in_faction_with = ROOT
+						is_subject_of = ROOT
+						has_subject = ROOT
+						has_non_aggression_pact_with = ROOT
+						has_guaranteed = ROOT
+						is_guaranteed_by = ROOT
+					}
+				}
+			}
+		}
+
+		highlight_state_targets = {
+			state = 176
+		}
+		
+		cost = 50
+		
+		ai_will_do = {
+			factor = 20
+		}
+		
+		complete_effect = {
+			
+			every_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					any_neighbor_state = {
+						state = 176
+					}
+					ROOT = {
+						divisions_in_border_state = {
+							size > 2
+							state = PREV
+							border_state = 176
+						}
+					}
+				}
+				set_temp_variable = {
+					border_conflict_state = THIS
+				}
+			}
+			
+			start_border_war = {
+				change_state_after_war = no
+				attacker = {
+					state = var:border_conflict_state
+					num_provinces = 1
+					on_win = dorf_invade.13
+					on_lose = dorf_invade.14
+					on_cancel = dorf_invade.15
+				}
+				defender = {
+					state = 176
+					num_provinces = 1
+					on_win = dorf_invade.16
+					on_lose = dorf_invade.17
+					on_cancel = dorf_invade.18
+				}
+			}
+		}
+	}
+
+	DORF_invade_puruzkaduz = {#Zarathum
+		
+		icon = generic_prepare_civil_war
+		
+		visible = {
+			OR = {
+				tag = SKA
+				tag = RMT
+				AND = {
+					original_tag = BER
+					OR = {
+						has_government = monarchy_absolute
+						has_government = puritan
+					}
+				}
+			}
+			NOT = {
+				owns_state = 174
+			}
+			
+		}
+		
+		available = {
+		
+			174 = {
+				custom_trigger_tooltip = {
+					tooltip = DORF_not_border_war_tt
+					hidden_trigger = {
+						has_border_war = no
+					}
+				}
+			}
+			
+			custom_trigger_tooltip = {
+				tooltip = DORF_controls_border_state_tt
+				174 = {
+					any_neighbor_state = {
+						is_controlled_by = ROOT
+						ROOT = {
+							divisions_in_border_state = {
+								size > 2
+								state = PREV
+								border_state = 174
+							}
+						}
+					}
+				}
+            }
+			
+			custom_trigger_tooltip = {
+				tooltip = DORF_not_allied_to_target_tt
+				hidden_trigger = {
+					any_other_country = {
+						has_full_control_of_state = 174
+						NOT = {
+							OR = {
+								is_in_faction_with = ROOT
+								is_subject_of = ROOT
+								has_subject = ROOT
+								has_non_aggression_pact_with = ROOT
+								has_guaranteed = ROOT
+								is_guaranteed_by = ROOT
+							}
+						}
+					}
+				}
+			}
+		}
+		
+		visible = {
+			any_other_country = {
+				owns_state = 174
+				NOT = {
+					OR = {
+						has_war_with = ROOT
+						is_in_faction_with = ROOT
+						is_subject_of = ROOT
+						has_subject = ROOT
+						has_non_aggression_pact_with = ROOT
+						has_guaranteed = ROOT
+						is_guaranteed_by = ROOT
+					}
+				}
+			}
+		}
+
+		highlight_state_targets = {
+			state = 174
+		}
+		
+		cost = 50
+		
+		ai_will_do = {
+			factor = 20
+		}
+		
+		complete_effect = {
+			
+			every_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					any_neighbor_state = {
+						state = 174
+					}
+					ROOT = {
+						divisions_in_border_state = {
+							size > 2
+							state = PREV
+							border_state = 174
+						}
+					}
+				}
+				set_temp_variable = {
+					border_conflict_state = THIS
+				}
+			}
+			
+			start_border_war = {
+				change_state_after_war = no
+				attacker = {
+					state = var:border_conflict_state
+					num_provinces = 1
+					on_win = dorf_invade.19
+					on_lose = dorf_invade.20
+					on_cancel = dorf_invade.21
+				}
+				defender = {
+					state = 174
+					num_provinces = 1
+					on_win = dorf_invade.22
+					on_lose = dorf_invade.23
+					on_cancel = dorf_invade.24
+				}
+			}
+		}
+	}
+	
+	DORF_invade_ugrivonuz = {#Lagraskr
+		
+		icon = generic_prepare_civil_war
+		
+		visible = {
+			OR = {
+				tag = SKA
+				tag = RMT
+				AND = {
+					original_tag = BER
+					OR = {
+						has_government = monarchy_absolute
+						has_government = puritan
+					}
+				}
+			}
+			NOT = {
+				owns_state = 173
+			}
+			
+		}
+		
+		available = {
+		
+			173 = {
+				custom_trigger_tooltip = {
+					tooltip = DORF_not_border_war_tt
+					hidden_trigger = {
+						has_border_war = no
+					}
+				}
+			}
+			
+			custom_trigger_tooltip = {
+				tooltip = DORF_controls_border_state_tt
+				173 = {
+					any_neighbor_state = {
+						is_controlled_by = ROOT
+						ROOT = {
+							divisions_in_border_state = {
+								size > 2
+								state = PREV
+								border_state = 173
+							}
+						}
+					}
+				}
+            }
+			
+			custom_trigger_tooltip = {
+				tooltip = DORF_not_allied_to_target_tt
+				hidden_trigger = {
+					any_other_country = {
+						has_full_control_of_state = 173
+						NOT = {
+							OR = {
+								is_in_faction_with = ROOT
+								is_subject_of = ROOT
+								has_subject = ROOT
+								has_non_aggression_pact_with = ROOT
+								has_guaranteed = ROOT
+								is_guaranteed_by = ROOT
+							}
+						}
+					}
+				}
+			}
+		}
+		
+		visible = {
+			any_other_country = {
+				owns_state = 173
+				NOT = {
+					OR = {
+						has_war_with = ROOT
+						is_in_faction_with = ROOT
+						is_subject_of = ROOT
+						has_subject = ROOT
+						has_non_aggression_pact_with = ROOT
+						has_guaranteed = ROOT
+						is_guaranteed_by = ROOT
+					}
+				}
+			}
+		}
+
+		highlight_state_targets = {
+			state = 173
+		}
+		
+		cost = 50
+		
+		ai_will_do = {
+			factor = 20
+		}
+		
+		complete_effect = {
+			
+			every_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					any_neighbor_state = {
+						state = 173
+					}
+					ROOT = {
+						divisions_in_border_state = {
+							size > 2
+							state = PREV
+							border_state = 173
+						}
+					}
+				}
+				set_temp_variable = {
+					border_conflict_state = THIS
+				}
+			}
+			
+			start_border_war = {
+				change_state_after_war = no
+				attacker = {
+					state = var:border_conflict_state
+					num_provinces = 1
+					on_win = dorf_invade.25
+					on_lose = dorf_invade.26
+					on_cancel = dorf_invade.27
+				}
+				defender = {
+					state = 173
+					num_provinces = 1
+					on_win = dorf_invade.28
+					on_lose = dorf_invade.29
+					on_cancel = dorf_invade.30
+				}
+			}
+		}
+	}
+	
+	DORF_invade_venaur = {#Álfrskaut
+		
+		icon = generic_prepare_civil_war
+		
+		visible = {
+			OR = {
+				tag = SKA
+				tag = RMT
+				AND = {
+					original_tag = BER
+					OR = {
+						has_government = monarchy_absolute
+						has_government = puritan
+					}
+				}
+			}
+			NOT = {
+				owns_state = 106
+			}
+			
+		}
+		
+		available = {
+		
+			106 = {
+				custom_trigger_tooltip = {
+					tooltip = DORF_not_border_war_tt
+					hidden_trigger = {
+						has_border_war = no
+					}
+				}
+			}
+			
+			custom_trigger_tooltip = {
+				tooltip = DORF_controls_border_state_tt
+				106 = {
+					any_neighbor_state = {
+						is_controlled_by = ROOT
+						ROOT = {
+							divisions_in_border_state = {
+								size > 2
+								state = PREV
+								border_state = 106
+							}
+						}
+					}
+				}
+            }
+			
+			custom_trigger_tooltip = {
+				tooltip = DORF_not_allied_to_target_tt
+				hidden_trigger = {
+					any_other_country = {
+						has_full_control_of_state = 106
+						NOT = {
+							OR = {
+								is_in_faction_with = ROOT
+								is_subject_of = ROOT
+								has_subject = ROOT
+								has_non_aggression_pact_with = ROOT
+								has_guaranteed = ROOT
+								is_guaranteed_by = ROOT
+							}
+						}
+					}
+				}
+			}
+		}
+		
+		visible = {
+			any_other_country = {
+				owns_state = 106
+				NOT = {
+					OR = {
+						has_war_with = ROOT
+						is_in_faction_with = ROOT
+						is_subject_of = ROOT
+						has_subject = ROOT
+						has_non_aggression_pact_with = ROOT
+						has_guaranteed = ROOT
+						is_guaranteed_by = ROOT
+					}
+				}
+			}
+		}
+
+		highlight_state_targets = {
+			state = 106
+		}
+		
+		cost = 50
+		
+		ai_will_do = {
+			factor = 20
+		}
+		
+		complete_effect = {
+			
+			every_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					any_neighbor_state = {
+						state = 106
+					}
+					ROOT = {
+						divisions_in_border_state = {
+							size > 2
+							state = PREV
+							border_state = 106
+						}
+					}
+				}
+				set_temp_variable = {
+					border_conflict_state = THIS
+				}
+			}
+			
+			start_border_war = {
+				change_state_after_war = no
+				attacker = {
+					state = var:border_conflict_state
+					num_provinces = 1
+					on_win = dorf_invade.31
+					on_lose = dorf_invade.32
+					on_cancel = dorf_invade.33
+				}
+				defender = {
+					state = 106
+					num_provinces = 1
+					on_win = dorf_invade.34
+					on_lose = dorf_invade.35
+					on_cancel = dorf_invade.36
+				}
+			}
+		}
+	}
+	
+	DORF_invade_unspykaur = {#Mersingbjarg
+		
+		icon = generic_prepare_civil_war
+		
+		visible = {
+			OR = {
+				tag = SKA
+				tag = RMT
+				AND = {
+					original_tag = BER
+					OR = {
+						has_government = monarchy_absolute
+						has_government = puritan
+					}
+				}
+			}
+			NOT = {
+				owns_state = 139
+			}
+			
+		}
+		
+		available = {
+		
+			139 = {
+				custom_trigger_tooltip = {
+					tooltip = DORF_not_border_war_tt
+					hidden_trigger = {
+						has_border_war = no
+					}
+				}
+			}
+			
+			custom_trigger_tooltip = {
+				tooltip = DORF_controls_border_state_tt
+				139 = {
+					any_neighbor_state = {
+						is_controlled_by = ROOT
+						ROOT = {
+							divisions_in_border_state = {
+								size > 2
+								state = PREV
+								border_state = 139
+							}
+						}
+					}
+				}
+            }
+			
+			custom_trigger_tooltip = {
+				tooltip = DORF_not_allied_to_target_tt
+				hidden_trigger = {
+					any_other_country = {
+						has_full_control_of_state = 139
+						NOT = {
+							OR = {
+								is_in_faction_with = ROOT
+								is_subject_of = ROOT
+								has_subject = ROOT
+								has_non_aggression_pact_with = ROOT
+								has_guaranteed = ROOT
+								is_guaranteed_by = ROOT
+							}
+						}
+					}
+				}
+			}
+		}
+		
+		visible = {
+			any_other_country = {
+				owns_state = 139
+				NOT = {
+					OR = {
+						has_war_with = ROOT
+						is_in_faction_with = ROOT
+						is_subject_of = ROOT
+						has_subject = ROOT
+						has_non_aggression_pact_with = ROOT
+						has_guaranteed = ROOT
+						is_guaranteed_by = ROOT
+					}
+				}
+			}
+		}
+
+		highlight_state_targets = {
+			state = 139
+		}
+		
+		cost = 50
+		
+		ai_will_do = {
+			factor = 20
+		}
+		
+		complete_effect = {
+			
+			every_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					any_neighbor_state = {
+						state = 139
+					}
+					ROOT = {
+						divisions_in_border_state = {
+							size > 2
+							state = PREV
+							border_state = 139
+						}
+					}
+				}
+				set_temp_variable = {
+					border_conflict_state = THIS
+				}				
+			}
+			
+			start_border_war = {
+				change_state_after_war = no
+				attacker = {
+					state = var:border_conflict_state
+					num_provinces = 1
+					on_win = dorf_invade.37
+					on_lose = dorf_invade.38
+					on_cancel = dorf_invade.39
+				}
+				defender = {
+					state = 139
+					num_provinces = 1
+					on_win = dorf_invade.40
+					on_lose = dorf_invade.41
+					on_cancel = dorf_invade.42
+				}
+			}
+		}
+	}
+	
+	DORF_invade_vogstuz = {#Hár Perkafell
+		
+		icon = generic_prepare_civil_war
+		
+		visible = {
+			OR = {
+				tag = SKA
+				tag = RMT
+				AND = {
+					original_tag = BER
+					OR = {
+						has_government = monarchy_absolute
+						has_government = puritan
+					}
+				}
+			}
+			NOT = {
+				owns_state = 172
+			}
+			
+		}
+		
+		available = {
+		
+			172 = {
+				custom_trigger_tooltip = {
+					tooltip = DORF_not_border_war_tt
+					hidden_trigger = {
+						has_border_war = no
+					}
+				}
+			}
+			
+			custom_trigger_tooltip = {
+				tooltip = DORF_controls_border_state_tt
+				172 = {
+					any_neighbor_state = {
+						is_controlled_by = ROOT
+						ROOT = {
+							divisions_in_border_state = {
+								size > 2
+								state = PREV
+								border_state = 172
+							}
+						}
+					}
+				}
+            }
+			
+			custom_trigger_tooltip = {
+				tooltip = DORF_not_allied_to_target_tt
+				hidden_trigger = {
+					any_other_country = {
+						has_full_control_of_state = 172
+						NOT = {
+							OR = {
+								is_in_faction_with = ROOT
+								is_subject_of = ROOT
+								has_subject = ROOT
+								has_non_aggression_pact_with = ROOT
+								has_guaranteed = ROOT
+								is_guaranteed_by = ROOT
+							}
+						}
+					}
+				}
+			}
+		}
+		
+		visible = {
+			any_other_country = {
+				owns_state = 172
+				NOT = {
+					OR = {
+						has_war_with = ROOT
+						is_in_faction_with = ROOT
+						is_subject_of = ROOT
+						has_subject = ROOT
+						has_non_aggression_pact_with = ROOT
+						has_guaranteed = ROOT
+						is_guaranteed_by = ROOT
+					}
+				}
+			}
+		}
+
+		highlight_state_targets = {
+			state = 172
+		}
+		
+		cost = 50
+		
+		ai_will_do = {
+			factor = 20
+		}
+		
+		complete_effect = {
+			
+			every_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					any_neighbor_state = {
+						state = 172
+					}
+					ROOT = {
+						divisions_in_border_state = {
+							size > 2
+							state = PREV
+							border_state = 172
+						}
+					}
+				}
+				set_temp_variable = {
+					border_conflict_state = THIS
+				}
+			}
+			
+			start_border_war = {
+				change_state_after_war = no
+				attacker = {
+					state = var:border_conflict_state
+					num_provinces = 1
+					on_win = dorf_invade.43
+					on_lose = dorf_invade.44
+					on_cancel = dorf_invade.45
+				}
+				defender = {
+					state = 172
+					num_provinces = 1
+					on_win = dorf_invade.46
+					on_lose = dorf_invade.47
+					on_cancel = dorf_invade.48
+				}
+			}
+		}
+	}
+	
+	DORF_invade_stahlpass = {#Neðar Perkafell
+		
+		icon = generic_prepare_civil_war
+		
+		visible = {
+			OR = {
+				tag = SKA
+				tag = RMT
+				AND = {
+					original_tag = BER
+					OR = {
+						has_government = monarchy_absolute
+						has_government = puritan
+					}
+				}
+			}
+			NOT = {
+				owns_state = 203
+			}
+			
+		}
+		
+		available = {
+		
+			203 = {
+				custom_trigger_tooltip = {
+					tooltip = DORF_not_border_war_tt
+					hidden_trigger = {
+						has_border_war = no
+					}
+				}
+			}
+			
+			custom_trigger_tooltip = {
+				tooltip = DORF_controls_border_state_tt
+				203 = {
+					any_neighbor_state = {
+						is_controlled_by = ROOT
+						ROOT = {
+							divisions_in_border_state = {
+								size > 2
+								state = PREV
+								border_state = 203
+							}
+						}
+					}
+				}
+            }
+			
+			custom_trigger_tooltip = {
+				tooltip = DORF_not_allied_to_target_tt
+				hidden_trigger = {
+					any_other_country = {
+						has_full_control_of_state = 203
+						NOT = {
+							OR = {
+								is_in_faction_with = ROOT
+								is_subject_of = ROOT
+								has_subject = ROOT
+								has_non_aggression_pact_with = ROOT
+								has_guaranteed = ROOT
+								is_guaranteed_by = ROOT
+							}
+						}
+					}
+				}
+			}
+		}
+		
+		visible = {
+			any_other_country = {
+				owns_state = 203
+				NOT = {
+					OR = {
+						has_war_with = ROOT
+						is_in_faction_with = ROOT
+						is_subject_of = ROOT
+						has_subject = ROOT
+						has_non_aggression_pact_with = ROOT
+						has_guaranteed = ROOT
+						is_guaranteed_by = ROOT
+					}
+				}
+			}
+		}
+
+		highlight_state_targets = {
+			state = 203
+		}
+		
+		cost = 50
+		
+		ai_will_do = {
+			factor = 20
+		}
+		
+		complete_effect = {
+			
+			every_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					any_neighbor_state = {
+						state = 203
+					}
+					ROOT = {
+						divisions_in_border_state = {
+							size > 2
+							state = PREV
+							border_state = 203
+						}
+					}
+				}
+				set_temp_variable = {
+					border_conflict_state = THIS
+				}
+			}
+			
+			start_border_war = {
+				change_state_after_war = no
+				attacker = {
+					state = var:border_conflict_state
+					num_provinces = 1
+					on_win = dorf_invade.49
+					on_lose = dorf_invade.50
+					on_cancel = dorf_invade.51
+				}
+				defender = {
+					state = 203
+					num_provinces = 1
+					on_win = dorf_invade.52
+					on_lose = dorf_invade.53
+					on_cancel = dorf_invade.54
+				}
+			}
+		}
+	}
+	
+	DORF_invade_eerherstel = {#Hamginjafé
+		
+		icon = generic_prepare_civil_war
+		
+		visible = {
+			OR = {
+				tag = SKA
+				tag = RMT
+				AND = {
+					original_tag = BER
+					OR = {
+						has_government = monarchy_absolute
+						has_government = puritan
+					}
+				}
+			}
+			NOT = {
+				owns_state = 365
+			}
+			
+		}
+		
+		available = {
+		
+			365 = {
+				custom_trigger_tooltip = {
+					tooltip = DORF_not_border_war_tt
+					hidden_trigger = {
+						has_border_war = no
+					}
+				}
+			}
+			
+			custom_trigger_tooltip = {
+				tooltip = DORF_controls_border_state_tt
+				365 = {
+					any_neighbor_state = {
+						is_controlled_by = ROOT
+						ROOT = {
+							divisions_in_border_state = {
+								size > 2
+								state = PREV
+								border_state = 365
+							}
+						}
+					}
+				}
+            }
+			
+			custom_trigger_tooltip = {
+				tooltip = DORF_not_allied_to_target_tt
+				hidden_trigger = {
+					any_other_country = {
+						has_full_control_of_state = 365
+						NOT = {
+							OR = {
+								is_in_faction_with = ROOT
+								is_subject_of = ROOT
+								has_subject = ROOT
+								has_non_aggression_pact_with = ROOT
+								has_guaranteed = ROOT
+								is_guaranteed_by = ROOT
+							}
+						}
+					}
+				}
+			}
+		}
+		
+		visible = {
+			any_other_country = {
+				owns_state = 365
+				NOT = {
+					OR = {
+						has_war_with = ROOT
+						is_in_faction_with = ROOT
+						is_subject_of = ROOT
+						has_subject = ROOT
+						has_non_aggression_pact_with = ROOT
+						has_guaranteed = ROOT
+						is_guaranteed_by = ROOT
+					}
+				}
+			}
+		}
+
+		highlight_state_targets = {
+			state = 365
+		}
+		
+		cost = 50
+		
+		ai_will_do = {
+			factor = 20
+		}
+		
+		complete_effect = {
+			
+			every_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					any_neighbor_state = {
+						state = 365
+					}
+					ROOT = {
+						divisions_in_border_state = {
+							size > 2
+							state = PREV
+							border_state = 365
+						}
+					}
+				}
+				set_temp_variable = {
+					border_conflict_state = THIS
+				}
+			}
+			
+			start_border_war = {
+				change_state_after_war = no
+				attacker = {
+					state = var:border_conflict_state
+					num_provinces = 1
+					on_win = dorf_invade.55
+					on_lose = dorf_invade.56
+					on_cancel = dorf_invade.57
+				}
+				defender = {
+					state = 365
+					num_provinces = 1
+					on_win = dorf_invade.58
+					on_lose = dorf_invade.59
+					on_cancel = dorf_invade.60
+				}
+			}
+		}
+	}
+	
+	DORF_invade_zaubersteinbruch = {#Teitrvín
+		
+		icon = generic_prepare_civil_war
+		
+		visible = {
+			OR = {
+				tag = SKA
+				tag = RMT
+				AND = {
+					original_tag = BER
+					OR = {
+						has_government = monarchy_absolute
+						has_government = puritan
+					}
+				}
+			}
+			NOT = {
+				owns_state = 207
+			}
+			
+		}
+		
+		available = {
+		
+			207 = {
+				custom_trigger_tooltip = {
+					tooltip = DORF_not_border_war_tt
+					hidden_trigger = {
+						has_border_war = no
+					}
+				}
+			}
+			
+			custom_trigger_tooltip = {
+				tooltip = DORF_controls_border_state_tt
+				207 = {
+					any_neighbor_state = {
+						is_controlled_by = ROOT
+						ROOT = {
+							divisions_in_border_state = {
+								size > 2
+								state = PREV
+								border_state = 207
+							}
+						}
+					}
+				}
+            }
+			
+			custom_trigger_tooltip = {
+				tooltip = DORF_not_allied_to_target_tt
+				hidden_trigger = {
+					any_other_country = {
+						has_full_control_of_state = 207
+						NOT = {
+							OR = {
+								is_in_faction_with = ROOT
+								is_subject_of = ROOT
+								has_subject = ROOT
+								has_non_aggression_pact_with = ROOT
+								has_guaranteed = ROOT
+								is_guaranteed_by = ROOT
+							}
+						}
+					}
+				}
+			}
+		}
+		
+		visible = {
+			any_other_country = {
+				owns_state = 207
+				NOT = {
+					OR = {
+						has_war_with = ROOT
+						is_in_faction_with = ROOT
+						is_subject_of = ROOT
+						has_subject = ROOT
+						has_non_aggression_pact_with = ROOT
+						has_guaranteed = ROOT
+						is_guaranteed_by = ROOT
+					}
+				}
+			}
+		}
+
+		highlight_state_targets = {
+			state = 207
+		}
+		
+		cost = 50
+		
+		ai_will_do = {
+			factor = 20
+		}
+		
+		complete_effect = {
+			
+			every_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					any_neighbor_state = {
+						state = 207
+					}
+					ROOT = {
+						divisions_in_border_state = {
+							size > 2
+							state = PREV
+							border_state = 207
+						}
+					}
+				}
+				set_temp_variable = {
+					border_conflict_state = THIS
+				}
+			}
+			
+			start_border_war = {
+				change_state_after_war = no
+				attacker = {
+					state = var:border_conflict_state
+					num_provinces = 1
+					on_win = dorf_invade.61
+					on_lose = dorf_invade.62
+					on_cancel = dorf_invade.63
+				}
+				defender = {
+					state = 207
+					num_provinces = 1
+					on_win = dorf_invade.64
+					on_lose = dorf_invade.65
+					on_cancel = dorf_invade.66
+				}
+			}
+		}
+	}
+	
+	DORF_invade_porthaur = {#Svinnersút
+		
+		icon = generic_prepare_civil_war
+		
+		visible = {
+			OR = {
+				tag = SKA
+				tag = RMT
+				AND = {
+					original_tag = BER
+					OR = {
+						has_government = monarchy_absolute
+						has_government = puritan
+					}
+				}
+			}
+			NOT = {
+				owns_state = 135
+			}
+			
+		}
+		
+		available = {
+		
+			135 = {
+				custom_trigger_tooltip = {
+					tooltip = DORF_not_border_war_tt
+					hidden_trigger = {
+						has_border_war = no
+					}
+				}
+			}
+			
+			custom_trigger_tooltip = {
+				tooltip = DORF_controls_border_state_tt
+				135 = {
+					any_neighbor_state = {
+						is_controlled_by = ROOT
+						ROOT = {
+							divisions_in_border_state = {
+								size > 2
+								state = PREV
+								border_state = 135
+							}
+						}
+					}
+				}
+            }
+			
+			custom_trigger_tooltip = {
+				tooltip = DORF_not_allied_to_target_tt
+				hidden_trigger = {
+					any_other_country = {
+						has_full_control_of_state = 135
+						NOT = {
+							OR = {
+								is_in_faction_with = ROOT
+								is_subject_of = ROOT
+								has_subject = ROOT
+								has_non_aggression_pact_with = ROOT
+								has_guaranteed = ROOT
+								is_guaranteed_by = ROOT
+							}
+						}
+					}
+				}
+			}
+		}
+		
+		visible = {
+			any_other_country = {
+				owns_state = 135
+				NOT = {
+					OR = {
+						has_war_with = ROOT
+						is_in_faction_with = ROOT
+						is_subject_of = ROOT
+						has_subject = ROOT
+						has_non_aggression_pact_with = ROOT
+						has_guaranteed = ROOT
+						is_guaranteed_by = ROOT
+					}
+				}
+			}
+		}
+
+		highlight_state_targets = {
+			state = 135
+		}
+		
+		cost = 50
+		
+		ai_will_do = {
+			factor = 20
+		}
+		
+		complete_effect = {
+			
+			every_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					any_neighbor_state = {
+						state = 135
+					}
+					ROOT = {
+						divisions_in_border_state = {
+							size > 2
+							state = PREV
+							border_state = 135
+						}
+					}
+				}
+				set_temp_variable = {
+					border_conflict_state = THIS
+				}
+			}
+			
+			start_border_war = {
+				change_state_after_war = no
+				attacker = {
+					state = var:border_conflict_state
+					num_provinces = 1
+					on_win = dorf_invade.67
+					on_lose = dorf_invade.68
+					on_cancel = dorf_invade.69
+				}
+				defender = {
+					state = 135
+					num_provinces = 1
+					on_win = dorf_invade.70
+					on_lose = dorf_invade.71
+					on_cancel = dorf_invade.72
+				}
+			}
+		}
+	}
+	
+	DORF_invade_khorinor = {#Khoringr
+		
+		icon = generic_prepare_civil_war
+		
+		visible = {
+			OR = {
+				tag = SKA
+				tag = RMT
+				AND = {
+					original_tag = BER
+					OR = {
+						has_government = monarchy_absolute
+						has_government = puritan
+					}
+				}
+			}
+			NOT = {
+				owns_state = 133
+			}
+			
+		}
+		
+		available = {
+		
+			133 = {
+				custom_trigger_tooltip = {
+					tooltip = DORF_not_border_war_tt
+					hidden_trigger = {
+						has_border_war = no
+					}
+				}
+			}
+			
+			custom_trigger_tooltip = {
+				tooltip = DORF_controls_border_state_tt
+				133 = {
+					any_neighbor_state = {
+						is_controlled_by = ROOT
+						ROOT = {
+							divisions_in_border_state = {
+								size > 2
+								state = PREV
+								border_state = 133
+							}
+						}
+					}
+				}
+            }
+			
+			custom_trigger_tooltip = {
+				tooltip = DORF_not_allied_to_target_tt
+				hidden_trigger = {
+					any_other_country = {
+						has_full_control_of_state = 133
+						NOT = {
+							OR = {
+								is_in_faction_with = ROOT
+								is_subject_of = ROOT
+								has_subject = ROOT
+								has_non_aggression_pact_with = ROOT
+								has_guaranteed = ROOT
+								is_guaranteed_by = ROOT
+							}
+						}
+					}
+				}
+			}
+		}
+		
+		visible = {
+			any_other_country = {
+				owns_state = 133
+				NOT = {
+					OR = {
+						has_war_with = ROOT
+						is_in_faction_with = ROOT
+						is_subject_of = ROOT
+						has_subject = ROOT
+						has_non_aggression_pact_with = ROOT
+						has_guaranteed = ROOT
+						is_guaranteed_by = ROOT
+					}
+				}
+			}
+		}
+
+		highlight_state_targets = {
+			state = 133
+		}
+		
+		cost = 50
+		
+		ai_will_do = {
+			factor = 20
+		}
+		
+		complete_effect = {
+			
+			every_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					any_neighbor_state = {
+						state = 133
+					}
+					ROOT = {
+						divisions_in_border_state = {
+							size > 2
+							state = PREV
+							border_state = 133
+						}
+					}
+				}
+				set_temp_variable = {
+					border_conflict_state = THIS
+				}
+			}
+			
+			start_border_war = {
+				change_state_after_war = no
+				attacker = {
+					state = var:border_conflict_state
+					num_provinces = 1
+					on_win = dorf_invade.73
+					on_lose = dorf_invade.74
+					on_cancel = dorf_invade.75
+				}
+				defender = {
+					state = 133
+					num_provinces = 1
+					on_win = dorf_invade.76
+					on_lose = dorf_invade.77
+					on_cancel = dorf_invade.78
+				}
+			}
+		}
+	}
+	
+	DORF_invade_thorinthelin = {#Thorinthelin
+		
+		icon = generic_prepare_civil_war
+		
+		visible = {
+			OR = {
+				tag = SKA
+				tag = RMT
+				AND = {
+					original_tag = BER
+					OR = {
+						has_government = monarchy_absolute
+						has_government = puritan
+					}
+				}
+			}
+			NOT = {
+				owns_state = 723
+			}
+			
+		}
+		
+		available = {
+		
+			723 = {
+				custom_trigger_tooltip = {
+					tooltip = DORF_not_border_war_tt
+					hidden_trigger = {
+						has_border_war = no
+					}
+				}
+			}
+			
+			custom_trigger_tooltip = {
+				tooltip = DORF_controls_border_state_tt
+				723 = {
+					any_neighbor_state = {
+						is_controlled_by = ROOT
+						ROOT = {
+							divisions_in_border_state = {
+								size > 2
+								state = PREV
+								border_state = 723
+							}
+						}
+					}
+				}
+            }
+			
+			custom_trigger_tooltip = {
+				tooltip = DORF_not_allied_to_target_tt
+				hidden_trigger = {
+					any_other_country = {
+						has_full_control_of_state = 723
+						NOT = {
+							OR = {
+								is_in_faction_with = ROOT
+								is_subject_of = ROOT
+								has_subject = ROOT
+								has_non_aggression_pact_with = ROOT
+								has_guaranteed = ROOT
+								is_guaranteed_by = ROOT
+							}
+						}
+					}
+				}
+			}
+		}
+		
+		visible = {
+			any_other_country = {
+				owns_state = 723
+				NOT = {
+					OR = {
+						has_war_with = ROOT
+						is_in_faction_with = ROOT
+						is_subject_of = ROOT
+						has_subject = ROOT
+						has_non_aggression_pact_with = ROOT
+						has_guaranteed = ROOT
+						is_guaranteed_by = ROOT
+					}
+				}
+			}
+		}
+
+		highlight_state_targets = {
+			state = 723
+		}
+		
+		cost = 50
+		
+		ai_will_do = {
+			factor = 20
+		}
+		
+		complete_effect = {
+			
+			every_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					any_neighbor_state = {
+						state = 723
+					}
+					ROOT = {
+						divisions_in_border_state = {
+							size > 2
+							state = PREV
+							border_state = 723
+						}
+					}
+				}
+				set_temp_variable = {
+					border_conflict_state = THIS
+				}
+			}
+			
+			start_border_war = {
+				change_state_after_war = no
+				attacker = {
+					state = var:border_conflict_state
+					num_provinces = 1
+					on_win = dorf_invade.79
+					on_lose = dorf_invade.80
+					on_cancel = dorf_invade.1
+				}
+				defender = {
+					state = 723
+					num_provinces = 1
+					on_win = dorf_invade.82
+					on_lose = dorf_invade.83
+					on_cancel = dorf_invade.84
+				}
+			}
+		}
+	}
+	
+	DORF_invade_cuivremont = {#Kufremor
+		
+		icon = generic_prepare_civil_war
+		
+		visible = {
+			OR = {
+				tag = SKA
+				tag = RMT
+				AND = {
+					original_tag = BER
+					OR = {
+						has_government = monarchy_absolute
+						has_government = puritan
+					}
+				}
+			}
+			NOT = {
+				owns_state = 815
+			}
+			
+		}
+		
+		available = {
+		
+			815 = {
+				custom_trigger_tooltip = {
+					tooltip = DORF_not_border_war_tt
+					hidden_trigger = {
+						has_border_war = no
+					}
+				}
+			}
+			
+			custom_trigger_tooltip = {
+				tooltip = DORF_controls_border_state_tt
+				815 = {
+					any_neighbor_state = {
+						is_controlled_by = ROOT
+						ROOT = {
+							divisions_in_border_state = {
+								size > 2
+								state = PREV
+								border_state = 815
+							}
+						}
+					}
+				}
+            }
+			
+			custom_trigger_tooltip = {
+				tooltip = DORF_not_allied_to_target_tt
+				hidden_trigger = {
+					any_other_country = {
+						has_full_control_of_state = 815
+						NOT = {
+							OR = {
+								is_in_faction_with = ROOT
+								is_subject_of = ROOT
+								has_subject = ROOT
+								has_non_aggression_pact_with = ROOT
+								has_guaranteed = ROOT
+								is_guaranteed_by = ROOT
+							}
+						}
+					}
+				}
+			}
+		}
+		
+		visible = {
+			any_other_country = {
+				owns_state = 815
+				NOT = {
+					OR = {
+						has_war_with = ROOT
+						is_in_faction_with = ROOT
+						is_subject_of = ROOT
+						has_subject = ROOT
+						has_non_aggression_pact_with = ROOT
+						has_guaranteed = ROOT
+						is_guaranteed_by = ROOT
+					}
+				}
+			}
+		}
+
+		highlight_state_targets = {
+			state = 815
+		}
+		
+		cost = 50
+		
+		ai_will_do = {
+			factor = 20
+		}
+		
+		complete_effect = {
+			
+			every_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					any_neighbor_state = {
+						state = 815
+					}
+					ROOT = {
+						divisions_in_border_state = {
+							size > 2
+							state = PREV
+							border_state = 815
+						}
+					}
+				}
+				set_temp_variable = {
+					border_conflict_state = THIS
+				}
+			}
+			
+			start_border_war = {
+				change_state_after_war = no
+				attacker = {
+					state = var:border_conflict_state
+					num_provinces = 1
+					on_win = dorf_invade.79
+					on_lose = dorf_invade.80
+					on_cancel = dorf_invade.81
+				}
+				defender = {
+					state = 815
+					num_provinces = 1
+					on_win = dorf_invade.82
+					on_lose = dorf_invade.83
+					on_cancel = dorf_invade.84
+				}
+			}
 		}
 	}
 }

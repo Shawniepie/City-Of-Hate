@@ -4,17 +4,8 @@ bookmarks = {
 		desc = "CITY_OF_HATE_DESC"
 		date = 887.1.1.12
 		picture = "GFX_select_date_1936"
-		default_country = "ORD"
+		default_country = "UNG"
 		default = yes
-		
-		"GMR"={
-			history = "GMR_CITY_OF_HATE_DESC"
-			ideology = monarchy_absolute	 
-			ideas = {
-			}
-			focuses = {
-			}
-		}
 		
 		"UNG"={
 			history = "UNG_CITY_OF_HATE_DESC"

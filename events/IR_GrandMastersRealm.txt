@@ -2927,3 +2927,68 @@ country_event = {#Union Denouces Us
 		name = gmr.47.a
 	}
 }
+
+country_event = {#Arthenist Juridity
+	id = gmr.48
+	title = gmr.48.t
+	desc = gmr.48.d
+	picture = GFX_report_event_generic_sign_treaty3
+	
+	is_triggered_only = yes
+	
+	option = {#Curses!
+		name = gmr.48.a
+	}
+}
+
+country_event = {#Religious Path
+	id = gmr.49
+	title = gmr.49.t
+	desc = gmr.49.d
+	picture = GFX_report_event_generic_sign_treaty3
+	
+	is_triggered_only = yes
+	
+	option = {#Curses!
+		name = gmr.49.a
+	}
+}
+
+country_event = {#Royal Marriage with the Union?
+	id = gmr.50
+	title = gmr.50.t
+	desc = gmr.50.d
+	picture = GFX_report_event_finnish_letter
+	
+	is_triggered_only = yes
+	
+	option = {#Yes
+		name = gmr.50.a
+					
+		add_ideas = marriage_GMR_UNG
+		
+		add_political_power = 50
+		
+		custom_effect_tooltip = royal_marriage_warning_tt
+		
+		UNG = {
+			country_event = {
+				id = ung.59
+				days = 3
+			}
+		}
+	}
+	
+	option = {#No
+		name = gmr.50.b
+		
+		add_political_power = -35
+		
+		UNG = {
+			country_event = {
+				id = ung.60
+				days = 3
+			}
+		}
+	}
+}

@@ -1,0 +1,52 @@
+BER_terugkeer = {
+	
+	BER_initiate_terugkeer = {
+		
+		icon = GFX_decision_generic_operation
+		
+		allowed = {
+			original_tag = BER
+		}
+
+		
+		available = {
+			has_country_flag = BER_allowed_to_initiate_terugkeer
+		}
+		
+		cost = 0
+		
+		ai_will_do = {
+			factor = 200
+			modifier = { #Let's sort out our current war first
+				has_war = yes
+				factor = 0
+			}
+			modifier = { #Let's not start a war without Dwarves to fill out the ranks
+				has_manpower < 10000
+				factor = 0
+			}
+		}
+		
+		visible = {
+			original_tag = BER
+		}
+		
+		fire_only_once = yes
+		
+		cost = 75
+		
+		complete_effect = {
+			declare_war_on = {
+				target = KUR
+				type = annex_everything
+			}
+			set_country_flag = BER_terugkeer_with_UNG
+			UNG = {
+				country_event = {
+					id = ung.56
+					days = 1
+				}
+			}
+		}
+	}
+}

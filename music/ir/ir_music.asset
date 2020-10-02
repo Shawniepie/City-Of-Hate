@@ -8,3 +8,33 @@ music = {
 	file = "march_on_faustburg.ogg"
 	volume = 1.4
 }
+music = {
+	name = "Ungerdaler Diplomacy"
+	file = "ungerdaler_diplomacy.ogg"
+	volume = 1
+}
+music = {
+	name = "Iron Judgement"
+	file = "iron_judgement.ogg"
+	volume = 1
+}
+music = {
+	name = "Lathweynian Forests"
+	file = "lathweynian_forests.ogg"
+	volume = 1
+}
+music = {
+	name = "Age of Progression"
+	file = "age_of_progression.ogg"
+	volume = 1
+}
+music = {
+	name = "Soothing Nights"
+	file = "soothing_nights.ogg"
+	volume = 1
+}
+music = {
+	name = "Authors of History"
+	file = "authors_of_history.ogg"
+	volume = 1
+}

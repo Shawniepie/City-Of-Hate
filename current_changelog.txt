@@ -1,8 +1,12 @@
 -Redid map
--Added Stahlhof and Ungerdal focus trees
 -Updated for La Resistance
+-Added Stahlhof and Ungerdal focus trees. Still WIP.
+-Added Bilodya and Irinthios focus trees. Still VERY WIP.
+-Added beginnings of a reworked tech tree. Still VERY VERY VERY WIP.
+-Added medieval models to the units, thanks to Xangelo7's unit packs! They're still shooting with swords though.
 -Added custom music made by Dregorin
 -Added some focus icons for Holzbrenn I forgot last time
+-Removed Ordoria's "I win" button against the Union
 -Added Bilodya and the Merchant's Hand - the first supercontinent is now filled up!
 -Added Annex events for Rimatü and Lirothlind, as well as the Hand and Bilodya
 -Added Perkav Commissiary decision for Ordoria
@@ -23,4 +27,13 @@
 -Made it impossible for anyone to join AI civil wars or be called into civil wars by the AI. Players can still join player civil wars.
 -Added additional operatives
 -Added female leaders
+-Added Dwarven Mountainhome skirmishes, as well as the possibility of restoring the ancient Empire of Vergallheim
 -Made it impossible to take over faction leadership
+-Added empty OoB's for partitioned countries so they have units and not just take over their overlord's templates.
+-Removed the consumer goods modifier penalty from Priestly Ordoria's Militarized Economy Idea to make it actually worth taking
+-Added Border Skirmish events for the Dwarven nations to reclaim their land. The Bergialer can only take it if they have Puritan or Absolutist rule.
+-The Bergialer Kingdom is now the Bergialer Confederation.
+-Changed Dwarven party names to reflect new lore.
+-Added a Balkanization option for Ordoria.
+-Added the option to reform the Empire of Vergallheim and rebuild the city of Zarathum.
+-God knows how many other things I forgot. This is a big one and took a long time.

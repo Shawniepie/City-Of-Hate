@@ -26,7 +26,7 @@ plunder_schneefilde = {
 				controls_state = 224
 			}
 			divisions_in_border_state = {
-				size > 4
+				size > 2
 				state = 621
 				border_state = 224
 			}

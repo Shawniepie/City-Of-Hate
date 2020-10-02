@@ -1,0 +1,379 @@
+#Claim Vergallheim
+claim_vergallheim_territory = {
+	every_state = {
+		limit = {
+			NOT = {
+				is_core_of = ROOT
+			}
+			OR = {
+				is_core_of = SKA
+				is_core_of = RMT
+				state = 133
+				state = 659
+				state = 179
+				state = 176
+				state = 139
+				state = 174
+				state = 173
+				state = 172
+				state = 106
+				state = 203
+				state = 207
+				state = 365
+				state = 815
+				state = 723
+			}
+		}
+		add_claim_by = ROOT
+	}
+}
+
+#Recreate Vergallheim
+reform_vergallheim = {
+	VRG = {
+		transfer_state = 174
+	}
+	puppet = VRG
+	every_country = {
+		limit = {
+			is_subject_of = ROOT
+		}
+		VRG = {
+			puppet = PREV
+		}
+	}
+	add_state_core = 174
+	every_state = {
+		limit = {
+			OR = {
+				is_core_of = SKA
+				is_core_of = RMT
+				state = 133
+				state = 659
+				state = 179
+				state = 176
+				state = 139
+				state = 174
+				state = 173
+				state = 172
+				state = 106
+				state = 203
+				state = 207
+				state = 365
+				state = 815
+				state = 723
+			}
+		}
+		add_core_of = VRG
+		limit = {
+			is_owned_by = ROOT
+		}
+		VRG = {
+			transfer_state = PREV
+		}
+	}
+	if = {
+		limit = {
+			tag = SKA
+		}
+		VRG = {
+			create_country_leader = {
+				name = "Ystvigg Hellirfast"
+				desc = "politics_SKA_hellirfast_desc"
+				picture = "gfx/leaders/SKA/Portrait_SKA_Hellirfast.dds"
+				ideology = monarchy_constitutional_ideology
+				traits = {
+				}
+			}
+
+			create_country_leader = {
+				name = "Yngvild Rettrdaga"
+				desc = "politics_SKA_rettrdaga_desc"
+				picture = "gfx/leaders/SKA/Portrait_SKA_Rettrdaga.dds"
+				ideology = republic_peasant_ideology
+				traits = {
+				}
+			}
+
+			create_country_leader = {
+				name = "Halstigg Urkbani"
+				desc = "politics_SKA_urkbani_desc"
+				picture = "gfx/leaders/SKA/Portrait_SKA_Urkbani.dds"
+				ideology = puritan_ideology
+				traits = {
+				}
+			}
+
+			create_country_leader = {
+				name = "Ystvigg Hellirfast"
+				desc = "politics_SKA_hellirfast_desc"
+				picture = "gfx/leaders/SKA/Portrait_SKA_Hellirfast.dds"
+				ideology = monarchy_absolute_ideology
+				traits = {
+				}
+			}
+
+			create_country_leader = {
+				name = "Banskr Salmogr"
+				desc = "politics_SKA_salmogr_desc"
+				picture = "gfx/leaders/SKA/Portrait_SKA_Salmogr.dds"
+				ideology = theocrat_ideology
+				traits = {
+				}
+			}
+
+			create_country_leader = {
+				name = "Brynhild Lasengra"
+				desc = "politics_SKA_lasengra_desc"
+				picture = "gfx/leaders/SKA/Portrait_SKA_Lasengra.dds"
+				ideology = republic_aristocrat_ideology
+				traits = {
+				}
+			}
+
+			create_country_leader = {
+				name = "Freydis Vantangr"
+				desc = "politics_SKA_vantangr_desc"
+				picture = "gfx/leaders/SKA/Portrait_SKA_Vantangr.dds"
+				ideology = republic_merchant_ideology
+				traits = {
+				}
+			}
+			set_party_name = { 
+				ideology = monarchy_absolute
+				long_name = SKA_monarchy_absolute_party_long
+				name = SKA_monarchy_absolute_party
+			}
+			set_party_name = { 
+				ideology = monarchy_constitutional
+				name = SKA_monarchy_constitutional_party
+			}
+			set_party_name = { 
+				ideology = republic_aristocrat
+				name = SKA_republic_aristocrat_party
+			}
+			set_party_name = { 
+				ideology = republic_merchant
+				long_name = SKA_republic_merchant_party_long
+				name = SKA_republic_merchant_party
+			}
+			set_party_name = { 
+				ideology = republic_peasant
+				name = SKA_republic_peasant_party
+			}
+			set_party_name = { 
+				ideology = puritan
+				long_name = SKA_puritan_party_long
+				name = SKA_puritan_party
+			}
+			set_party_name = { 
+				ideology = theocrat
+				name = SKA_theocrat_party
+			}
+		}
+	}
+	if = {
+		limit = {
+			tag = BER
+		}
+		VRG = {
+			create_country_leader = {
+				name = "Joris Zilversteen"
+				desc = "politics_BER_zilversteen_desc"
+				picture = "gfx/leaders/BER/Portrait_BER_Zilversteen.dds"
+				ideology = monarchy_constitutional_ideology
+				traits = {
+				}
+			}
+
+			create_country_leader = {
+				name = "Willemijn Doeringa"
+				desc = "politics_BER_doeringa_desc"
+				picture = "gfx/leaders/BER/Portrait_BER_Doeringa.dds"
+				ideology = republic_peasant_ideology
+				traits = {
+				}
+			}
+
+			create_country_leader = {
+				name = "Alexander Goudhand"
+				desc = "politics_BER_goudhand_desc"
+				picture = "gfx/leaders/BER/Portrait_BER_Goudhand.dds"
+				ideology = puritan_ideology
+				traits = {
+				}
+			}
+
+			create_country_leader = {
+				name = "Joris Zilversteen"
+				desc = "politics_BER_zilversteen_desc"
+				picture = "gfx/leaders/BER/Portrait_BER_Zilversteen.dds"
+				ideology = monarchy_absolute_ideology
+				traits = {
+				}
+			}
+
+			create_country_leader = {
+				name = "Tessa Hoevering"
+				desc = "politics_BER_hoevering_desc"
+				picture = "gfx/leaders/BER/Portrait_BER_Hoevering.dds"
+				ideology = theocrat_ideology
+				traits = {
+				}
+			}
+
+			create_country_leader = {
+				name = "Joris Zilversteen"
+				desc = "politics_BER_zilversteen_desc"
+				picture = "gfx/leaders/BER/Portrait_BER_Zilversteen.dds"
+				ideology = republic_aristocrat_ideology
+				traits = {
+				}
+			}
+
+			create_country_leader = {
+				name = "Jasper Ijzerbaard"
+				desc = "politics_BER_ijzerbaard_desc"
+				picture = "gfx/leaders/BER/Portrait_BER_Ijzerbaard.dds"
+				ideology = republic_merchant_ideology
+				traits = {
+				}
+			}
+			set_party_name = { 
+				ideology = monarchy_absolute
+				long_name = BER_monarchy_absolute_party_long
+				name = BER_monarchy_absolute_party
+			}
+			set_party_name = { 
+				ideology = monarchy_constitutional
+				long_name = BER_monarchy_constitutional_party_long
+				name = BER_monarchy_constitutional_party
+			}
+			set_party_name = { 
+				ideology = republic_aristocrat
+				name = BER_republic_aristocrat_party
+			}
+			set_party_name = { 
+				ideology = republic_merchant
+				long_name = BER_republic_merchant_party_long
+				name = BER_republic_merchant_party
+			}
+			set_party_name = { 
+				ideology = republic_peasant
+				name = BER_republic_peasant_party
+			}
+			set_party_name = { 
+				ideology = puritan
+				name = BER_puritan_party
+			}
+			set_party_name = { 
+				ideology = theocrat
+				name = BER_theocrat_party
+			}
+		}
+	}
+	if = {
+		limit = {
+			tag = RMT
+		}
+		VRG = {
+			create_country_leader = {
+				name = "Valkrün Skyldske"
+				desc = "politics_RMT_skyldske_desc"
+				picture = "gfx/leaders/RMT/Portrait_RMT_Skyldske.dds"
+				ideology = monarchy_constitutional_ideology
+				traits = {
+				}
+			}
+
+			create_country_leader = {
+				name = "Bjarne Röndskun"
+				desc = "politics_RMT_rondskun_desc"
+				picture = "gfx/leaders/RMT/Portrait_RMT_Rondskun.dds"
+				ideology = republic_peasant_ideology
+				traits = {
+				}
+			}
+
+			create_country_leader = {
+				name = "Søren Räsk"
+				desc = "politics_RMT_rask_desc"
+				picture = "gfx/leaders/RMT/Portrait_RMT_Rask.dds"
+				ideology = puritan_ideology
+				traits = {
+				}
+			}
+
+			create_country_leader = {
+				name = "Joris Skyldske"
+				desc = "politics_RMT_skyldske_desc"
+				picture = "gfx/leaders/RMT/Portrait_RMT_Skyldske.dds"
+				ideology = monarchy_absolute_ideology
+				traits = {
+				}
+			}
+
+			create_country_leader = {
+				name = "Elena Thurgensen"
+				desc = "politics_RMT_thurgensen_desc"
+				picture = "gfx/leaders/RMT/Portrait_RMT_Thurgensen.dds"
+				ideology = theocrat_ideology
+				traits = {
+				}
+			}
+
+			create_country_leader = {
+				name = "Valkrün Skyldske"
+				desc = "politics_RMT_skyldske_desc"
+				picture = "gfx/leaders/RMT/Portrait_RMT_Skyldske.dds"
+				ideology = republic_aristocrat_ideology
+				traits = {
+				}
+			}
+
+			create_country_leader = {
+				name = "Maibritt Narkünd"
+				desc = "politics_RMT_narkund_desc"
+				picture = "gfx/leaders/RMT/Portrait_RMT_Narkund.dds"
+				ideology = republic_merchant_ideology
+				traits = {
+				}
+			}
+			set_party_name = { 
+				ideology = monarchy_absolute
+				name = RMT_monarchy_absolute_party
+			}
+			set_party_name = { 
+				ideology = monarchy_constitutional
+				name = RMT_monarchy_constitutional_party
+			}
+			set_party_name = { 
+				ideology = republic_aristocrat
+				name = RMT_republic_aristocrat_party
+			}
+			set_party_name = { 
+				ideology = republic_merchant
+				name = RMT_republic_merchant_party
+			}
+			set_party_name = { 
+				ideology = republic_peasant
+				name = RMT_republic_peasant_party
+			}
+			set_party_name = { 
+				ideology = puritan
+				name = RMT_puritan_party
+			}
+			set_party_name = { 
+				ideology = theocrat
+				name = RMT_theocrat_party
+			}
+		}
+	}
+	VRG = {
+		annex_country = {
+			target = ROOT
+			transfer_troops = yes
+		}
+		change_tag_from = ROOT
+	}
+}

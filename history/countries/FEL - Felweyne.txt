@@ -69,8 +69,6 @@ set_popularities = {
 }
 
 add_ideas = {
-	Late_Feudal
-	Manoralism
 	human_country
 	lorthorism_religion
 }

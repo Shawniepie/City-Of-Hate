@@ -1,0 +1,2375 @@
+technologies = {
+	
+	### Y 0
+	
+	tech_tribal_pride = {
+		
+		research_cost = 1
+		
+		on_research_complete = {
+			
+		}
+		
+		path = {
+			leads_to_tech = tech_faith
+		}
+		path = {
+			leads_to_tech = tech_mathematics
+		}
+		path = {
+			leads_to_tech = tech_writing
+		}
+		path = {
+			leads_to_tech = tech_agriculture
+		}
+		path = {
+			leads_to_tech = tech_mining
+		}
+		path = {
+			leads_to_tech = tech_wheel
+		}
+		path = {
+			leads_to_tech = tech_loom
+		}
+		
+		folder = {
+			name = culture_folder
+			position = { x = 0 y = 0 }
+		}
+		folder = {
+			name = landcombat_folder
+			position = { x = 0 y = 0 }
+		}
+		
+		categories = {
+            era_tech
+        }
+		
+		ai_will_do = {
+			factor = 5
+		}
+	
+	}
+	
+	### Y 3
+	
+	tech_faith = {
+		
+		research_cost = 1
+		
+		on_research_complete = {
+			
+		}
+		
+		path = {
+			leads_to_tech = tech_heresy
+		}
+		
+		folder = {
+			name = culture_folder
+			position = { x = -10 y = 3 }
+		}
+		
+		categories = {
+            tribal_tech
+        }
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	tech_mathematics = {
+		
+		research_speed_factor = 0.02
+		
+		research_cost = 1
+		
+		on_research_complete = {
+			
+		}
+		
+		path = {
+			leads_to_tech = tech_currency
+		}
+		
+		folder = {
+			name = culture_folder
+			position = { x = -6 y = 3 }
+		}
+		
+		categories = {
+            tribal_tech
+        }
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	tech_writing = {
+		
+		research_speed_factor = 0.02
+		stability_factor = 0.02
+		
+		research_cost = 1
+		
+		on_research_complete = {
+			
+		}
+		
+		path = {
+			leads_to_tech = tech_calender
+		}
+		
+		folder = {
+			name = culture_folder
+			position = { x = -3 y = 3 }
+		}
+		
+		categories = {
+            tribal_tech
+        }
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	tech_agriculture = {
+		
+		research_cost = 1
+		
+		on_research_complete = {
+			
+		}
+		
+		enable_building = {
+            building = farm
+            level = 1
+        }
+		
+		path = {
+			leads_to_tech = tech_horse_collars
+		}
+		
+		folder = {
+			name = culture_folder
+			position = { x = 0 y = 3 }
+		}
+		
+		categories = {
+            tribal_tech
+        }
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	tech_mining = {
+		
+		local_resources_factor = 0.10
+		
+		research_cost = 1
+		
+		on_research_complete = {
+			
+		}
+		
+		path = {
+			leads_to_tech = tech_masonry
+		}
+		
+		folder = {
+			name = culture_folder
+			position = { x = 3 y = 3 }
+		}
+		
+		categories = {
+            _tech
+        }
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	### Y 6
+	
+	tech_currency = {
+		
+		stability_factor = 0.02
+		trade_opinion_factor = 0.25
+		
+		research_cost = 1
+		
+		on_research_complete = {
+			
+		}
+		
+		path = {
+			leads_to_tech = tech_accounting
+		}
+		
+		folder = {
+			name = culture_folder
+			position = { x = -6 y = 6 }
+		}
+		
+		categories = {
+            tribal_tech
+        }
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	tech_calender = {
+		
+		stability_factor = 0.02
+		max_planning = 0.05
+		planning_speed = 0.05
+		
+		research_cost = 1
+		
+		on_research_complete = {
+			
+		}
+		
+		path = {
+			leads_to_tech = tech_city_planning
+		}
+		
+		folder = {
+			name = culture_folder
+			position = { x = -3 y = 6 }
+		}
+		
+		categories = {
+            tribal_tech
+        }
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	tech_horse_collars = {
+		
+		research_cost = 1
+		
+		on_research_complete = {
+			modify_building_resources = {
+				building = farm
+				resource = food
+				amount = 1
+			}
+		}
+		
+		path = {
+			leads_to_tech = tech_heavy_plow
+		}
+		
+		folder = {
+			name = culture_folder
+			position = { x = 0 y = 6 }
+		}
+		
+		categories = {
+            tribal_tech
+        }
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	tech_masonry = {
+		
+		research_cost = 1
+		
+		on_research_complete = {
+			
+		}
+		
+		enable_building = {
+            building = workshop
+            level = 1
+        }
+		
+		path = {
+			leads_to_tech = tech_iron_working
+		}
+		
+		folder = {
+			name = culture_folder
+			position = { x = 3 y = 6 }
+		}
+		
+		categories = {
+            tribal_tech
+        }
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	tech_wheel = {
+		
+		production_factory_max_efficiency_factor = 0.05
+		production_speed_buildings_factor = 0.05
+		
+		research_cost = 2
+		
+		on_research_complete = {
+			
+		}
+		
+		path = {
+			leads_to_tech = tech_wheelbarrow
+		}
+		
+		folder = {
+			name = culture_folder
+			position = { x = 6 y = 6 }
+		}
+		
+		categories = {
+            tribal_tech
+        }
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	### Y 9
+	
+	tech_heresy = {
+		
+		research_cost = 1
+		
+		on_research_complete = {
+			
+		}
+		
+		path = {
+			leads_to_tech = tech_divine_right_to_rule
+		}
+		
+		folder = {
+			name = culture_folder
+			position = { x = -10 y = 9 }
+		}
+		
+		categories = {
+            tribal_tech
+        }
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	tech_accounting = {
+		
+		stability_factor = 0.02
+		
+		research_cost = 1
+		
+		on_research_complete = {
+			
+		}
+		
+		path = {
+			leads_to_tech = tech_planned_assemblies
+		}
+		
+		folder = {
+			name = culture_folder
+			position = { x = -6 y = 9 }
+		}
+		
+		categories = {
+            tribal_tech
+        }
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	tech_city_planning = {
+		
+		production_speed_buildings_factor = 0.1
+		global_building_slots_factor = 0.10
+		
+		research_cost = 1
+		
+		on_research_complete = {
+			
+		}
+		
+		path = {
+			leads_to_tech = tech_public_works
+		}
+		
+		folder = {
+			name = culture_folder
+			position = { x = -3 y = 9 }
+		}
+		
+		categories = {
+            tribal_tech
+        }
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	tech_heavy_plow = {
+		
+		on_research_complete = {
+			modify_building_resources = {
+				building = farm
+				resource = food
+				amount = 1
+			}
+		}
+		
+		research_cost = 1
+		
+		on_research_complete = {
+			
+		}
+		
+		path = {
+			leads_to_tech = tech_crop_rotation
+		}
+		
+		folder = {
+			name = culture_folder
+			position = { x = 0 y = 9 }
+		}
+		
+		categories = {
+            tribal_tech
+        }
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	tech_iron_working = {
+		
+		industrial_capacity_factory = 0.1
+		
+		research_cost = 1
+		
+		on_research_complete = {
+			
+		}
+		
+		enable_building = {
+            building = forge
+            level = 1
+        }
+		
+		path = {
+			leads_to_tech = tech_forging
+		}
+		path = {
+			leads_to_tech = tech_men_at_arms
+		}
+		path = {
+			leads_to_tech = tech_scale_mail_armor
+		}
+		
+		folder = {
+			name = culture_folder
+			position = { x = 3 y = 9 }
+		}
+		folder = {
+			name = landcombat_folder
+			position = { x = -3 y = 21 }
+		}
+		
+		categories = {
+            tribal_tech
+        }
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	tech_wheelbarrow = {
+		
+		production_factory_max_efficiency_factor = 0.05
+		production_speed_buildings_factor = 0.05
+		
+		research_cost = 2
+		
+		on_research_complete = {
+			
+		}
+		
+		path = {
+			leads_to_tech = tech_hand_cart
+		}
+		
+		folder = {
+			name = culture_folder
+			position = { x = 6 y = 9 }
+		}
+		
+		categories = {
+            tribal_tech
+        }
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	### Y 12
+	
+	tech_planned_assemblies = {
+		
+		political_power_factor = 0.05
+		
+		research_cost = 1
+		
+		on_research_complete = {
+			
+		}
+		
+		path = {
+			leads_to_tech = tech_medieval_development
+		}
+		
+		folder = {
+			name = culture_folder
+			position = { x = -6 y = 12 }
+		}
+		
+		categories = {
+            tribal_tech
+        }
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	tech_public_works = {
+		
+		political_power_factor = 0.05
+		
+		research_cost = 1
+		
+		on_research_complete = {
+			
+		}
+		
+		path = {
+			leads_to_tech = tech_medieval_development
+		}
+		
+		folder = {
+			name = culture_folder
+			position = { x = -3 y = 12 }
+		}
+		
+		categories = {
+            tribal_tech
+        }
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	tech_crop_rotation = {
+		
+		on_research_complete = {
+			modify_building_resources = {
+				building = farm
+				resource = food
+				amount = 1
+			}
+		}
+		
+		research_cost = 1
+		
+		on_research_complete = {
+			
+		}
+		
+		path = {
+			leads_to_tech = tech_medieval_development
+		}
+		
+		enable_building = {
+            building = farm
+            level = 2
+        }
+		
+		folder = {
+			name = culture_folder
+			position = { x = 0 y = 12 }
+		}
+		
+		categories = {
+            tribal_tech
+        }
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	tech_forging = {
+		
+		industrial_capacity_factory = 0.1
+		
+		research_cost = 1
+		
+		on_research_complete = {
+			
+		}
+		
+		enable_building = {
+            building = forge
+            level = 2
+        }
+		
+		path = {
+			leads_to_tech = tech_medieval_development
+		}
+		path = {
+			leads_to_tech = tech_iron_working
+		}
+		
+		folder = {
+			name = culture_folder
+			position = { x = 3 y = 12 }
+		}
+		folder = {
+			name = landcombat_folder
+			position = { x = -3 y = 18 }
+		}
+		
+		categories = {
+            tribal_tech
+        }
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	tech_hand_cart = {
+		
+		consumer_goods_factor = -0.02
+		
+		research_cost = 1
+		
+		on_research_complete = {
+			
+		}
+		
+		path = {
+			leads_to_tech = tech_medieval_development
+		}
+		
+		folder = {
+			name = culture_folder
+			position = { x = 6 y = 12 }
+		}
+		
+		categories = {
+            tribal_tech
+        }
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	### Y 15
+	
+	tech_medieval_development = {
+		
+		stability_factor = 0.05
+		war_support_factor = 0.1
+		
+		research_cost = 3
+		
+		on_research_complete = {
+			add_ideas = { idea = era_medieval_idea }
+		}
+		
+		dependencies = {
+            tech_planned_assemblies = 1
+			tech_public_works = 1
+			tech_crop_rotation = 1
+			tech_forging = 1
+			tech_hand_cart = 1
+        }
+		
+		path = {
+			leads_to_tech = tech_chronicle_writing
+		}
+		path = {
+			leads_to_tech = tech_bailiffs
+		}
+		path = {
+			leads_to_tech = tech_coinage
+		}
+		path = {
+			leads_to_tech = tech_construction
+		}
+		path = {
+			leads_to_tech = tech_metal_casting
+		}
+		path = {
+			leads_to_tech = tech_military_tactics
+		}
+		
+		folder = {
+			name = culture_folder
+			position = { x = 0 y = 15 }
+		}
+		folder = {
+			name = landcombat_folder
+			position = { x = 0 y = 30 }
+		}
+		
+		categories = {
+            era_tech
+        }
+		
+		ai_will_do = {
+			factor = 5
+		}
+	
+	}
+	
+	### Y 18
+	
+	tech_divine_right_to_rule = {
+		
+		research_cost = 1
+		
+		on_research_complete = {
+			
+		}
+		
+		path = {
+			leads_to_tech = tech_theocracy
+		}
+		
+		folder = {
+			name = culture_folder
+			position = { x = -10 y = 18 }
+		}
+		
+		categories = {
+            medieval_tech
+        }
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	tech_chronicle_writing = {
+		
+		political_power_factor = 0.05
+		
+		research_cost = 1
+		
+		on_research_complete = {
+			
+		}
+		
+		path = {
+			leads_to_tech = tech_heraldry
+		}
+		
+		folder = {
+			name = culture_folder
+			position = { x = -6 y = 18 }
+		}
+		
+		categories = {
+            medieval_tech
+        }
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	tech_bailiffs = {
+		
+		
+		mobilization_speed = 0.05
+		political_power_factor = 0.05
+		
+		research_cost = 1
+		
+		on_research_complete = {
+			
+		}
+		
+		path = {
+			leads_to_tech = tech_communal_government
+		}
+		
+		folder = {
+			name = culture_folder
+			position = { x = -3 y = 18 }
+		}
+		
+		categories = {
+            medieval_tech
+        }
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	tech_coinage = {
+		
+		stability_factor = 0.02
+		
+		research_cost = 1
+		
+		on_research_complete = {
+			
+		}
+		
+		path = {
+			leads_to_tech = tech_treasury
+		}
+		
+		folder = {
+			name = culture_folder
+			position = { x = 0 y = 18 }
+		}
+		
+		categories = {
+            medieval_tech
+        }
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	tech_construction = {
+		
+		production_speed_buildings_factor = 0.1
+		
+		research_cost = 1
+		
+		on_research_complete = {
+			
+		}
+		
+		enable_building = {
+            building = workshop
+            level = 2
+        }
+		enable_building = {
+            building = bunker
+            level = 3
+        }
+		enable_building = {
+            building = coastal_bunker
+            level = 3
+        }
+		
+		path = {
+			leads_to_tech = tech_engineering
+		}
+		
+		folder = {
+			name = culture_folder
+			position = { x = 3 y = 18 }
+		}
+		
+		categories = {
+            medieval_tech
+        }
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	tech_metal_casting = {
+		
+		industrial_capacity_factory = 0.05
+		
+		research_cost = 1
+		
+		on_research_complete = {
+			
+		}
+		
+		enable_building = {
+            building = forge
+            level = 3
+        }
+		
+		path = {
+			leads_to_tech = tech_steel
+		}
+		path = {
+			leads_to_tech = tech_chain_mail_armor
+		}
+		
+		folder = {
+			name = culture_folder
+			position = { x = 6 y = 18 }
+		}
+		folder = {
+			name = landcombat_folder
+			position = { x = -3 y = 36 }
+		}
+		
+		categories = {
+            medieval_tech
+        }
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	### Y 21
+	
+	tech_heraldry = {
+		
+		political_power_factor = 0.05
+		
+		research_cost = 1
+		
+		on_research_complete = {
+			
+		}
+		
+		path = {
+			leads_to_tech = tech_rightful_ownership
+		}
+		
+		folder = {
+			name = culture_folder
+			position = { x = -6 y = 21 }
+		}
+		
+		categories = {
+            medieval_tech
+        }
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	tech_treasury = {
+		
+		political_power_factor = 0.05
+		
+		research_cost = 1
+		
+		on_research_complete = {
+			
+		}
+		
+		path = {
+			leads_to_tech = tech_trade_guilds
+		}
+		
+		folder = {
+			name = culture_folder
+			position = { x = 0 y = 21 }
+		}
+		
+		categories = {
+            medieval_tech
+        }
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	tech_engineering = {
+		
+		production_speed_buildings_factor = 0.05
+		
+		research_cost = 1
+		
+		on_research_complete = {
+			
+		}
+		
+		enable_building = {
+            building = workshop
+            level = 3
+        }
+		
+		path = {
+			leads_to_tech = tech_manorialism
+		}
+		path = {
+			leads_to_tech = tech_war_engineering
+		}
+		
+		folder = {
+			name = culture_folder
+			position = { x = 3 y = 21 }
+		}
+		folder = {
+			name = landcombat_folder
+			position = { x = 3 y = 36 }
+		}
+		
+		categories = {
+            medieval_tech
+        }
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	### Y 24
+	
+	tech_theocracy = {
+		
+		research_cost = 1
+		
+		on_research_complete = {
+			
+		}
+		
+		path = {
+			leads_to_tech = tech_modern_theocracy
+		}
+		
+		folder = {
+			name = culture_folder
+			position = { x = -10 y = 24 }
+		}
+		
+		categories = {
+            medieval_tech
+        }
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	tech_rightful_ownership = {
+		
+		justify_war_goal_time = -0.2
+		army_core_attack_factor = 0.05
+		army_core_defence_factor = 0.05
+		
+		research_cost = 1
+		
+		on_research_complete = {
+			
+		}
+		
+		path = {
+			leads_to_tech = tech_education
+		}
+		
+		folder = {
+			name = culture_folder
+			position = { x = -6 y = 24 }
+		}
+		
+		categories = {
+            medieval_tech
+        }
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	tech_communal_government = {
+		
+		political_advisor_cost_factor = -0.10
+		
+		research_cost = 1
+		
+		on_research_complete = {
+			
+		}
+		
+		path = {
+			leads_to_tech = tech_court_officials
+		}
+		
+		folder = {
+			name = culture_folder
+			position = { x = -3 y = 24 }
+		}
+		
+		categories = {
+            medieval_tech
+        }
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	tech_trade_guilds = {
+		
+		consumer_goods_factor = -0.02
+		trade_opinion_factor = 0.25
+		
+		research_cost = 1
+		
+		on_research_complete = {
+			
+		}
+		
+		path = {
+			leads_to_tech = tech_scuttage
+		}
+		
+		folder = {
+			name = culture_folder
+			position = { x = 0 y = 24 }
+		}
+		
+		categories = {
+            medieval_tech
+        }
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	tech_manorialism = {
+		
+		stability_factor = 0.02
+		
+		research_cost = 1
+		
+		on_research_complete = {
+			
+		}
+		
+		path = {
+			leads_to_tech = tech_urbanization
+		}
+		
+		folder = {
+			name = culture_folder
+			position = { x = 3 y = 24 }
+		}
+		
+		categories = {
+            medieval_tech
+        }
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	tech_steel = {
+		
+		industrial_capacity_factory = 0.05
+		
+		research_cost = 1
+		
+		on_research_complete = {
+			
+		}
+		
+		path = {
+			leads_to_tech = tech_blast_furnace
+		}
+		path = {
+			leads_to_tech = tech_armored_footmen
+		}
+		
+		folder = {
+			name = culture_folder
+			position = { x = 6 y = 24 }
+		}
+		folder = {
+			name = landcombat_folder
+			position = { x = -3 y = 39 }
+		}
+		
+		categories = {
+            medieval_tech
+        }
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	### Y 27
+	
+	tech_education = {
+		
+		research_speed_factor = 0.05
+		
+		research_cost = 1
+		
+		on_research_complete = {
+			add_research_slot = 1
+		}
+		
+		path = {
+			leads_to_tech = tech_block_print
+		}
+		
+		folder = {
+			name = culture_folder
+			position = { x = -6 y = 27 }
+		}
+		
+		categories = {
+            medieval_tech
+        }
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	tech_court_officials = {
+		
+		political_power_factor = 0.05
+		
+		research_cost = 1
+		
+		on_research_complete = {
+			
+		}
+		
+		path = {
+			leads_to_tech = tech_renaissance_thought
+		}
+		
+		folder = {
+			name = culture_folder
+			position = { x = -3 y = 30 }
+		}
+		
+		categories = {
+            medieval_tech
+        }
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	tech_scuttage = {
+		
+		stability_factor = 0.05
+		
+		research_cost = 1
+		
+		on_research_complete = {
+			
+		}
+		
+		path = {
+			leads_to_tech = tech_promissory_notes
+		}
+		
+		folder = {
+			name = culture_folder
+			position = { x = 0 y = 27 }
+		}
+		
+		categories = {
+            medieval_tech
+        }
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	tech_urbanization = {
+		
+		MONTHLY_POPULATION = 0.15
+		global_building_slots_factor = 0.10
+		
+		research_cost = 1
+		
+		on_research_complete = {
+			
+		}
+		
+		enable_building = {
+            building = bunker
+            level = 4
+        }
+		enable_building = {
+            building = coastal_bunker
+            level = 4
+        }
+		
+		path = {
+			leads_to_tech = tech_cranes
+		}
+		
+		folder = {
+			name = culture_folder
+			position = { x = 3 y = 27 }
+		}
+		
+		categories = {
+            medieval_tech
+        }
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	### Y 30
+	
+	tech_block_print = {
+		
+		stability_factor = 0.05
+		
+		research_cost = 1
+		
+		on_research_complete = {
+			
+		}
+		
+		path = {
+			leads_to_tech = tech_renaissance_thought
+		}
+		
+		folder = {
+			name = culture_folder
+			position = { x = -6 y = 30 }
+		}
+		
+		categories = {
+            medieval_tech
+        }
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	tech_promissory_notes = {
+		
+		trade_opinion_factor = 0.10
+		stability_factor = 0.02
+		
+		research_cost = 1
+		
+		on_research_complete = {
+			
+		}
+		
+		path = {
+			leads_to_tech = tech_renaissance_thought
+		}
+		
+		folder = {
+			name = culture_folder
+			position = { x = 0 y = 30 }
+		}
+		
+		categories = {
+            medieval_tech
+        }
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	tech_cranes = {
+		
+		production_speed_buildings_factor = 0.1
+		
+		research_cost = 1
+		
+		on_research_complete = {
+			
+		}
+		
+		enable_building = {
+            building = forge
+            level = 4
+        }
+		enable_building = {
+            building = bunker
+            level = 5
+        }
+		enable_building = {
+            building = coastal_bunker
+            level = 5
+        }
+		
+		path = {
+			leads_to_tech = tech_renaissance_thought
+		}
+		
+		folder = {
+			name = culture_folder
+			position = { x = 3 y = 30 }
+		}
+		
+		categories = {
+            medieval_tech
+        }
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	tech_blast_furnace = {
+		
+		production_factory_max_efficiency_factor = 0.15
+		production_factory_efficiency_gain_factor = 0.10
+		
+		research_cost = 1
+		
+		on_research_complete = {
+			
+		}
+		
+		enable_building = {
+            building = forge
+            level = 4
+        }
+		
+		path = {
+			leads_to_tech = tech_renaissance_thought
+		}
+		
+		folder = {
+			name = culture_folder
+			position = { x = 6 y = 30 }
+		}
+		
+		categories = {
+            medieval_tech
+        }
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	### Y 33
+	
+	tech_renaissance_thought = {
+		
+		research_speed_factor = 0.1
+		stability_factor = 0.1
+		
+		research_cost = 5
+		
+		on_research_complete = {
+			
+		}
+		
+		dependencies = {
+            tech_block_print = 1
+			tech_court_officials = 1
+			tech_promissory_notes = 1
+			tech_cranes = 1
+			tech_blast_furnace = 1
+
+        }
+		
+		path = {
+			leads_to_tech = tech_metallurgy
+		}
+		path = {
+			leads_to_tech = tech_printing_press
+		}
+		path = {
+			leads_to_tech = tech_scientific_experimentation
+		}
+		path = {
+			leads_to_tech = tech_scythes
+		}
+		path = {
+			leads_to_tech = tech_banking
+		}
+		
+		folder = {
+			name = culture_folder
+			position = { x = 0 y = 33 }
+		}
+		
+		categories = {
+            era_tech
+        }
+		
+		ai_will_do = {
+			factor = 5
+		}
+	
+	}
+	
+	### Y 36
+	
+	tech_metallurgy = {
+		
+		local_resources_factor = 0.20
+		
+		research_cost = 2
+		
+		on_research_complete = {
+			
+		}
+		
+		path = {
+			leads_to_tech = tech_architecture
+		}
+		
+		folder = {
+			name = culture_folder
+			position = { x = -6 y = 36 }
+		}
+		
+		categories = {
+            renaissance_tech
+        }
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	tech_modern_theocracy = {
+		
+		research_cost = 2
+		
+		on_research_complete = {
+			
+		}
+		
+		path = {
+			leads_to_tech = tech_cathedrals
+		}
+		
+		folder = {
+			name = culture_folder
+			position = { x = -10 y = 36 }
+		}
+		
+		categories = {
+            renaissance_tech
+        }
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	tech_printing_press = {
+		
+		political_power_factor = 0.1
+		drift_defence_factor = 0.10
+		
+		research_cost = 2
+		
+		on_research_complete = {
+			
+		}
+		
+		path = {
+			leads_to_tech = tech_courthouse
+		}
+		
+		folder = {
+			name = culture_folder
+			position = { x = -3 y = 36 }
+		}
+		
+		categories = {
+            renaissance_tech
+        }
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	tech_scientific_experimentation = {
+		
+		research_speed_factor = 0.05
+		
+		research_cost = 2
+		
+		on_research_complete = {
+			
+		}
+		
+		path = {
+			leads_to_tech = tech_universities
+		}
+		
+		folder = {
+			name = culture_folder
+			position = { x = 0 y = 36 }
+		}
+		
+		categories = {
+            renaissance_tech
+        }
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	tech_scythes = {
+		
+		
+		research_cost = 2
+		
+		on_research_complete = {
+			modify_building_resources = {
+				building = farm
+				resource = food
+				amount = 2
+			}
+		}
+		
+		path = {
+			leads_to_tech = tech_improved_drainage
+		}
+		
+		folder = {
+			name = culture_folder
+			position = { x = 3 y = 36 }
+		}
+		
+		categories = {
+            renaissance_tech
+        }
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	tech_banking = {
+		
+		stability_factor = 0.1
+		
+		research_cost = 2
+		
+		on_research_complete = {
+			
+		}
+		
+		path = {
+			leads_to_tech = tech_economics
+		}
+		
+		folder = {
+			name = culture_folder
+			position = { x = 6 y = 36 }
+		}
+		
+		categories = {
+            renaissance_tech
+        }
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	### Y 39
+	
+	tech_architecture = {
+		
+		production_speed_buildings_factor = 0.1
+		
+		research_cost = 2
+		
+		on_research_complete = {
+			
+		}
+		
+		path = {
+			leads_to_tech = tech_early_industrialization
+		}
+		
+		folder = {
+			name = culture_folder
+			position = { x = -6 y = 45 }
+		}
+		
+		categories = {
+            renaissance_tech
+        }
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	tech_courthouse = {
+		
+		political_power_factor = 0.2
+		
+		research_cost = 2
+		
+		on_research_complete = {
+			
+		}
+		
+		path = {
+			leads_to_tech = tech_early_modern_administration
+		}
+		
+		folder = {
+			name = culture_folder
+			position = { x = -3 y = 39 }
+		}
+		
+		categories = {
+            renaissance_tech
+        }
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	tech_universities = {
+		
+		research_speed_factor = 0.05
+		
+		research_cost = 2
+		
+		on_research_complete = {
+			add_research_slot = 1
+		}
+		
+		path = {
+			leads_to_tech = tech_chemistry
+		}
+		
+		folder = {
+			name = culture_folder
+			position = { x = 0 y = 39 }
+		}
+		
+		categories = {
+            renaissance_tech
+        }
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	tech_economics = {
+		
+		stability_factor = 0.1
+		political_power_factor = 0.05
+		
+		research_cost = 2
+		
+		on_research_complete = {
+			
+		}
+		
+		path = {
+			leads_to_tech = tech_textile_manufactory
+		}
+		
+		folder = {
+			name = culture_folder
+			position = { x = 6 y = 39 }
+		}
+		
+		categories = {
+            renaissance_tech
+        }
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	### Y 42
+	
+	tech_cathedrals = {
+		
+		research_cost = 2
+		
+		on_research_complete = {
+			
+		}
+		
+		enable_building = {
+            building = cathedral
+        }
+		
+		folder = {
+			name = culture_folder
+			position = { x = -10 y = 42 }
+		}
+		
+		categories = {
+            renaissance_tech
+        }
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	tech_early_modern_administration = {
+		
+		stability_factor = 0.1
+		production_speed_infrastructure_factor = 0.2
+		political_advisor_cost_factor = -0.20
+		
+		research_cost = 2
+		
+		on_research_complete = {
+			
+		}
+		
+		path = {
+			leads_to_tech = tech_national_sovereignty
+		}
+		
+		folder = {
+			name = culture_folder
+			position = { x = -3 y = 42 }
+		}
+		
+		categories = {
+            renaissance_tech
+        }
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	tech_chemistry = {
+		
+		war_support_factor = 0.05
+		
+		research_cost = 2
+		
+		on_research_complete = {
+			
+		}
+		
+		path = {
+			leads_to_tech = tech_gunpowder
+		}
+		
+		folder = {
+			name = culture_folder
+			position = { x = 0 y = 42 }
+		}
+		
+		categories = {
+            renaissance_tech
+        }
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	tech_improved_drainage = {
+		
+		research_cost = 2
+		
+		on_research_complete = {
+			
+		}
+		
+		enable_building = {
+            building = farm
+            level = 3
+        }
+		
+		path = {
+			leads_to_tech = tech_land_clearance
+		}
+		
+		folder = {
+			name = culture_folder
+			position = { x = 3 y = 42 }
+		}
+		
+		categories = {
+            renaissance_tech
+        }
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	### Y 45
+	
+	tech_national_sovereignty = {
+		
+		enemy_justify_war_goal_time = 0.35
+		add_state_core = { all_owned_state }
+		
+		
+		research_cost = 2
+		
+		on_research_complete = {
+			
+		}
+		
+		path = {
+			leads_to_tech = tech_early_industrialization
+		}
+		
+		folder = {
+			name = culture_folder
+			position = { x = -3 y = 45 }
+		}
+		
+		categories = {
+            renaissance_tech
+        }
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	tech_gunpowder = {
+		
+		research_cost = 2
+		
+		on_research_complete = {
+			
+		}
+		
+		path = {
+			leads_to_tech = tech_early_industrialization
+		}
+		
+		folder = {
+			name = culture_folder
+			position = { x = 0 y = 45 }
+		}
+		
+		categories = {
+            renaissance_tech
+        }
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	tech_land_clearance = {
+		
+		research_cost = 2
+		
+		on_research_complete = {
+			
+		}
+		
+		enable_building = {
+            building = farm
+            level = 4
+        }
+		
+		path = {
+			leads_to_tech = tech_early_industrialization
+		}
+		
+		folder = {
+			name = culture_folder
+			position = { x = 3 y = 45 }
+		}
+		
+		categories = {
+            renaissance_tech
+        }
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	tech_textile_manufactory = {
+		
+		research_cost = 2
+		
+		on_research_complete = {
+			
+		}
+		
+		enable_building = {
+            building = industrial_complex
+            level = 2
+        }
+		
+		path = {
+			leads_to_tech = tech_early_industrialization
+		}
+		
+		folder = {
+			name = culture_folder
+			position = { x = 6 y = 45 }
+		}
+		
+		categories = {
+            renaissance_tech
+        }
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	### Y 48
+	
+	tech_early_industrialization = {
+		
+		research_cost = 7
+		
+		on_research_complete = {
+			
+		}
+		
+		enable_building = {
+            building = industrial_complex
+            level = 4
+        }
+		enable_building = {
+            building = arms_factory
+            level = 2
+        }
+		
+		dependencies = {
+            tech_architecture = 1
+			tech_national_sovereignty = 1
+			tech_gunpowder = 1
+			tech_land_clearance = 1
+			tech_textile_manufactory = 1
+        }
+		
+		path = {
+			leads_to_tech = tech_bonds_and_tontines
+		}
+		path = {
+			leads_to_tech = tech_resource_acquisition
+		}
+		path = {
+			leads_to_tech = tech_scientific_theory
+		}
+		path = {
+			leads_to_tech = tech_fertilizer
+		}
+		
+		folder = {
+			name = culture_folder
+			position = { x = 0 y = 48 }
+		}
+		
+		categories = {
+            era_tech
+        }
+		
+		ai_will_do = {
+			factor = 5
+		}
+	
+	}
+	
+	### Y 51
+	
+	tech_bonds_and_tontines = {
+		
+		stability_factor = 0.05
+		
+		research_cost = 3
+		
+		on_research_complete = {
+			
+		}
+		
+		path = {
+			leads_to_tech = tech_improved_production
+		}
+		
+		folder = {
+			name = culture_folder
+			position = { x = -3 y = 51 }
+		}
+		
+		categories = {
+            early_industrial_tech
+        }
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	tech_resource_acquisition = {
+		
+		local_resources_factor = 0.20
+		
+		research_cost = 3
+		
+		on_research_complete = {
+			
+		}
+		
+		path = {
+			leads_to_tech = tech_archaeology
+		}
+		
+		folder = {
+			name = culture_folder
+			position = { x = 0 y = 51 }
+		}
+		
+		categories = {
+            early_industrial_tech
+        }
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	tech_scientific_theory = {
+		
+		research_speed_factor = 0.1
+		
+		research_cost = 3
+		
+		on_research_complete = {
+			
+		}
+		
+		path = {
+			leads_to_tech = tech_biology
+		}
+		
+		folder = {
+			name = culture_folder
+			position = { x = 3 y = 51 }
+		}
+		
+		categories = {
+            early_industrial_tech
+        }
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	tech_fertilizer = {
+		
+		research_cost = 3
+		
+		on_research_complete = {
+			modify_building_resources = {
+				building = farm
+				resource = food
+				amount = 1
+			}
+		}
+		
+		path = {
+			leads_to_tech = tech_advanced_plough
+		}
+		
+		folder = {
+			name = culture_folder
+			position = { x = 6 y = 51 }
+		}
+		
+		categories = {
+            early_industrial_tech
+        }
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	### Y 53
+	
+	tech_improved_production = {
+		
+		research_cost = 3
+		
+		on_research_complete = {
+			
+		}
+		
+		enable_building = {
+            building = industrial_complex
+            level = 6
+        }
+		enable_building = {
+            building = arms_factory
+            level = 4
+        }
+		
+		path = {
+			leads_to_tech = tech_steam_power
+		}
+		
+		folder = {
+			name = culture_folder
+			position = { x = -3 y = 54 }
+		}
+		
+		categories = {
+            early_industrial_tech
+        }
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	tech_archaeology = {
+		
+		local_resources_factor = 0.1
+		
+		research_cost = 3
+		
+		on_research_complete = {
+			
+		}
+		
+		folder = {
+			name = culture_folder
+			position = { x = 0 y = 54 }
+		}
+		
+		categories = {
+            early_industrial_tech
+        }
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	tech_biology = {
+		
+		research_cost = 3
+		
+		on_research_complete = {
+			
+		}
+		
+		folder = {
+			name = culture_folder
+			position = { x = 3 y = 54 }
+		}
+		
+		categories = {
+            early_industrial_tech
+        }
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	tech_advanced_plough = {
+		
+		production_speed_farm_factor = 0.3
+		
+		research_cost = 3
+		
+		on_research_complete = {
+			
+		}
+		
+		folder = {
+			name = culture_folder
+			position = { x = 6 y = 54 }
+		}
+		
+		categories = {
+            early_industrial_tech
+        }
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	### Y 56
+	
+	tech_steam_power = {
+		
+		production_speed_buildings_factor = 0.1
+		production_factory_efficiency_gain_factor = 0.1
+		production_factory_max_efficiency_factor = 0.1
+		
+		research_cost = 4
+		
+		on_research_complete = {
+			
+		}
+		
+		folder = {
+			name = culture_folder
+			position = { x = -3 y = 57 }
+		}
+		
+		categories = {
+            early_industrial_tech
+        }
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

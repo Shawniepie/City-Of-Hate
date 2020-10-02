@@ -666,3 +666,453 @@ country_event = {# They say Halfyes
 	}
 
 }
+country_event = { #Kurgurs Influencing
+	id = iri.19
+	title = iri.19.t
+	desc = iri.19.d
+	picture = GFX_report_event_sunday_provocation
+	
+	fire_only_once = no
+	is_triggered_only = yes
+	
+	trigger = {
+
+	}
+	
+	mean_time_to_happen = {
+
+	}
+	
+	option = {
+	name = iri.19.a
+	hidden_effect = {
+	set_global_flag = IRI_kur_influenced
+	IRI = { country_event = { id = iri.29 } } 
+	}
+	add_political_power = 50
+	}
+	option = {
+	name = iri.19.b
+	IRI = { country_event = { id = iri.20 } } 
+	add_political_power = -100
+	add_stability = -0.05
+	}
+
+}
+country_event = { #Answer to influence - negative
+	id = iri.20
+	title = iri.20.t
+	desc = iri.20.d
+	picture = GFX_report_event_sunday_provocation
+	
+	fire_only_once = no
+	is_triggered_only = yes
+	
+	trigger = {
+
+	}
+	
+	mean_time_to_happen = {
+
+	}
+	
+	option = {
+	name = iri.20.a
+	}
+
+}
+country_event = { # Puppetting
+	id = iri.21
+	title = iri.21.t
+	desc = iri.21.d
+	picture = GFX_report_event_sunday_provocation
+	
+	fire_only_once = no
+	is_triggered_only = yes
+	
+	trigger = {
+
+	}
+	
+	mean_time_to_happen = {
+
+	}
+	
+	option = {
+	name = iri.21.a
+	FROM = { puppet = ROOT }
+	IRI = { country_event = { id = iri.22 } } 
+	}
+	
+	option = {
+	name = iri.21.b
+	declare_war_on = { target = IRI   type = puppet_wargoal_focus }
+	IRI = { country_event = { id = iri.23 } } 
+	}
+
+}
+country_event = { #Answer to puppetting - positive
+	id = iri.22
+	title = iri.22.t
+	desc = iri.22.d
+	picture = GFX_report_event_sunday_provocation
+	
+	fire_only_once = no
+	is_triggered_only = yes
+	
+	trigger = {
+
+	}
+	
+	mean_time_to_happen = {
+
+	}
+	
+	option = {
+	name = iri.22.a
+	}
+
+}
+country_event = { #Answer to puppetting - negative
+	id = iri.23
+	title = iri.23.t
+	desc = iri.23.d
+	picture = GFX_report_event_sunday_provocation
+	
+	fire_only_once = no
+	is_triggered_only = yes
+	
+	trigger = {
+
+	}
+	
+	mean_time_to_happen = {
+
+	}
+	
+	option = {
+	name = iri.23.a
+	}
+
+}
+country_event = { #Bilodya Influencing
+	id = iri.24
+	title = iri.24.t
+	desc = iri.24.d
+	picture = GFX_report_event_sunday_provocation
+	
+	fire_only_once = no
+	is_triggered_only = yes
+	
+	trigger = {
+
+	}
+	
+	mean_time_to_happen = {
+
+	}
+	
+	option = {
+	name = iri.24.a
+	hidden_effect = {
+	set_global_flag = IRI_BLD_influenced
+	IRI = { country_event = { id = iri.29 } } 
+	}
+	add_political_power = 50
+	}
+	option = {
+	name = iri.24.b
+	IRI = { country_event = { id = iri.20 } } 
+	add_political_power = -100
+	add_stability = -0.05
+	}
+
+}
+country_event = { #MerHand Influencing
+	id = iri.25
+	title = iri.25.t
+	desc = iri.25.d
+	picture = GFX_report_event_sunday_provocation
+	
+	fire_only_once = no
+	is_triggered_only = yes
+	
+	trigger = {
+
+	}
+	
+	mean_time_to_happen = {
+
+	}
+	
+	option = {
+	name = iri.25.a
+	hidden_effect = {
+	set_global_flag = IRI_MER_influenced
+	IRI = { country_event = { id = iri.29 } } 
+	}
+	add_political_power = 50
+	}
+	option = {
+	name = iri.25.b
+	IRI = { country_event = { id = iri.20 } } 
+	add_political_power = -100
+	add_stability = -0.05
+	}
+
+}
+country_event = { #Rimatu Influencing
+	id = iri.26
+	title = iri.26.t
+	desc = iri.26.d
+	picture = GFX_report_event_sunday_provocation
+	
+	fire_only_once = no
+	is_triggered_only = yes
+	
+	trigger = {
+
+	}
+	
+	mean_time_to_happen = {
+
+	}
+	
+	option = {
+	name = iri.26.a
+	hidden_effect = {
+	set_global_flag = IRI_RMT_influenced
+	IRI = { country_event = { id = iri.29 } } 
+	}
+	add_political_power = 50
+	}
+	option = {
+	name = iri.26.b
+	IRI = { country_event = { id = iri.20 } } 
+	add_political_power = -100
+	add_stability = -0.05
+	}
+
+}
+country_event = { #Lirothlind Influencing
+	id = iri.27
+	title = iri.27.t
+	desc = iri.27.d
+	picture = GFX_report_event_sunday_provocation
+	
+	fire_only_once = no
+	is_triggered_only = yes
+	
+	trigger = {
+
+	}
+	
+	mean_time_to_happen = {
+
+	}
+	
+	option = {
+	name = iri.27.a
+	hidden_effect = {
+	set_global_flag = IRI_LIR_influenced
+	IRI = { country_event = { id = iri.29 } } 
+	}
+	add_political_power = 50
+	}
+	option = {
+	name = iri.27.b
+	IRI = { country_event = { id = iri.20 } } 
+	add_political_power = -100
+	add_stability = -0.05
+	}
+
+}
+country_event = { #Bergialer Influencing
+	id = iri.28
+	title = iri.28.t
+	desc = iri.28.d
+	picture = GFX_report_event_sunday_provocation
+	
+	fire_only_once = no
+	is_triggered_only = yes
+	
+	trigger = {
+
+	}
+	
+	mean_time_to_happen = {
+
+	}
+	
+	option = {
+	name = iri.28.a
+	hidden_effect = {
+	set_global_flag = IRI_BER_influenced
+	IRI = { country_event = { id = iri.29 } } 
+	}
+	add_political_power = 50
+	}
+	option = {
+	name = iri.28.b
+	IRI = { country_event = { id = iri.20 } } 
+	add_political_power = -100
+	add_stability = -0.05
+	}
+
+}
+country_event = { #Answer to influence - positive
+	id = iri.29
+	title = iri.29.t
+	desc = iri.29.d
+	picture = GFX_report_event_sunday_provocation
+	
+	fire_only_once = no
+	is_triggered_only = yes
+	
+	trigger = {
+
+	}
+	
+	mean_time_to_happen = {
+
+	}
+	
+	option = {
+	name = iri.29.a
+	}
+
+}
+
+country_event = { #Bilodya gets invite to Irinthian war
+	id = iri.30
+	title = iri.30.t
+	desc = iri.30.d
+	picture = GFX_report_event_sunday_provocation
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	trigger = {
+
+	}
+	
+	mean_time_to_happen = {
+
+	}
+	
+	option = {
+	name = iri.30.a
+		ai_chance = {
+			factor = 100 # Always
+		}
+	IRI = { puppet = BLD }
+	IRI = { country_event = { id = iri.31 } } 
+	}
+	option = {
+	name = iri.30.b
+	ai_chance = {
+		factor = 0
+	}
+	IRI = { country_event = { id = iri.32 } } 
+	}
+
+}
+country_event = { #Bilodya accepts
+	id = iri.31
+	title = iri.31.t
+	desc = iri.31.d
+	picture = GFX_report_event_sunday_provocation
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	trigger = {
+
+	}
+	
+	mean_time_to_happen = {
+
+	}
+	
+	option = {
+	name = iri.31.a
+	}
+
+}
+country_event = { #Bilodya refuses
+	id = iri.32
+	title = iri.32.t
+	desc = iri.32.d
+	picture = GFX_report_event_sunday_provocation
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	trigger = {
+
+	}
+	
+	mean_time_to_happen = {
+
+	}
+	
+	option = {
+	name = iri.32.a
+	}
+
+}
+country_event = { #After war they are free to go
+	id = iri.33
+	title = iri.33.t
+	desc = iri.33.d
+	picture = GFX_report_event_sunday_provocation
+	
+	fire_only_once = yes
+	
+	trigger = {
+
+	}
+	
+	mean_time_to_happen = {
+
+	}
+	
+	option = { # Suicide squad
+	name = iri.33.a
+	ai_chance = {
+		factor = 100 # Always
+	}
+	IRI = { annex_country = BLD }
+	IRI = { country_event = { id = iri.34 } } 
+	}
+	option = {
+	name = iri.33.a
+	ai_chance = {
+		factor = 0
+	}
+	IRI = { end_puppet = BLD }
+	}
+
+}
+country_event = { #What a nice news
+	id = iri.34
+	title = iri.34.t
+	desc = iri.34.d
+	picture = GFX_report_event_sunday_provocation
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	trigger = {
+
+	}
+	
+	mean_time_to_happen = {
+
+	}
+	
+	option = {
+	name = iri.34.a
+	}
+
+}

@@ -1,5 +1,12 @@
 areas = {
-
+	
+	perkav_raid_area = {
+		strategic_regions = {
+			8
+			34
+		}
+	}
+	
 	tholder_bay_border = {
 		strategic_regions = {
 			41

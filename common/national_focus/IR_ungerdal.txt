@@ -1774,27 +1774,13 @@ focus_tree = {
 		x = 0
 		y = 1
 		completion_reward = {
-			create_corps_commander = {
-				name = "Oldorin Arthenon"
-				picture = "Portrait_UNG_Oldorin_Arthenon.dds"
-				traits = { trickster brilliant_strategist noctheurge }
-				skill = 5
-				attack_skill = 4
-				defense_skill = 4
-				planning_skill = 4
-				logistics_skill = 3
-			}
-			add_political_power = 75
 			GMR = {
-				add_political_power = 75
-				hidden_effect = {
-					add_ideas = marriage_GMR_UNG
+				country_event = {
+					id = gmr.50
+					days = 3
 				}
 			}
 			custom_effect_tooltip = royal_marriage_warning_tt
-			hidden_effect = {
-				add_ideas = marriage_UNG_GMR
-			}
 		}
 	}
 	
@@ -1807,6 +1793,9 @@ focus_tree = {
 		}
 		ai_will_do = {
 			factor = 29
+		}
+		available = {
+			has_country_flag = marriage_UNG_GMR
 		}
 		relative_position_id = UNG_marry_an_arthenon
 		x = 0
@@ -2260,17 +2249,13 @@ focus_tree = {
 		x = 0
 		y = 1
 		completion_reward = {
-			
-			UNG_improve_IRI_relations = yes
-			
-			UNG_worsen_TLA_relations = yes
-			
+		
 			custom_effect_tooltip = royal_marriage_warning_tt
 
-			hidden_effect = {
-				add_ideas = marriage_UNG_IRI				
-				IRI = {
-					add_ideas = marriage_IRI_UNG
+			IRI = {
+				country_event = {
+					id = iri.19
+					days = 3
 				}
 			}
 		}
@@ -2290,6 +2275,7 @@ focus_tree = {
 			NOT = {
 				has_country_flag = UNG_allied_lizards_flag
 			}
+			has_idea = marriage_UNG_IRI
 		}
 		ai_will_do = {
 			factor = 15
@@ -2412,11 +2398,11 @@ focus_tree = {
         completion_reward = {
             add_opinion_modifier = {
 				target = BER
-				modifier = staunch_allies
+				modifier = liked_opinion
 			}
 			reverse_add_opinion_modifier = {
 				target = BER
-				modifier = staunch_allies
+				modifier = liked_opinion
 			}
 		}
 	}
@@ -2448,11 +2434,23 @@ focus_tree = {
         y = 1 
         completion_reward = {
 			add_ideas = UNG_trade_bergial
+			remove_opinion_modifier = {
+				target = BER
+				modifier = liked_opinion
+			}
 			BER = {
 				add_ideas = BER_trade_union
-				add_opinion_modifier = {
+				remove_opinion_modifier = {
 					target = UNG
 					modifier = liked_opinion
+				}
+				add_opinion_modifier = {
+					target = UNG
+					modifier = trusted_opinion
+				}
+				reverse_add_opinion_modifier = {
+					target = UNG
+					modifier = trusted_opinion
 				}
 			}
         }
@@ -2478,14 +2476,22 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			give_guarantee = BER
+			remove_opinion_modifier = {
+				target = BER
+				modifier = trusted_opinion
+			}
 			BER = {
 				remove_opinion_modifier = {
 					target = UNG
-					modifier = liked_opinion
+					modifier = trusted_opinion
 				}
 				add_opinion_modifier = {
 					target = UNG
-					modifier = trusted_opinion
+					modifier = staunch_allies
+				}
+				reverse_add_opinion_modifier = {
+					target = UNG
+					modifier = staunch_allies
 				}
 			}
 		}
@@ -2540,6 +2546,9 @@ focus_tree = {
 		}
 		ai_will_do = {
 			factor = 30
+		}
+		bypass = {
+			has_completed_focus = UNG_end_raids
 		}
 		relative_position_id = UNG_strengthen_bergialer_connections
 		x = -1
@@ -2604,8 +2613,15 @@ focus_tree = {
 			focus = UNG_guarantee_bergial
 		}
 		available = {
+			NOT = {
+				has_completed_focus = UNG_aid_skaelinger_against_kurgur
+			}
 			BER = {
 				is_independent = yes
+				OR = {
+					has_government = monarchy_absolute
+					has_government = puritan
+				}
 				NOT = {
 					owns_state = 172
 					owns_state = 173
@@ -2617,6 +2633,8 @@ focus_tree = {
 		}
 		mutually_exclusive = {
 			focus = UNG_strengthen_bergialer_connections
+			focus = UNG_recognize_high_king
+			focus = UNG_recognize_rimatu
 		}
 		ai_will_do = {
 			factor = 14
@@ -2625,7 +2643,10 @@ focus_tree = {
 		x = 0
 		y = 1
 		completion_reward = {
-			
+			BER = {
+				country_event = ber.1
+				days = 1
+			}
 		}
 	}
 
@@ -2648,8 +2669,17 @@ focus_tree = {
         x = 1
         y = 1
         completion_reward = {
+			
+			remove_opinion_modifier = {
+				target = BER
+				modifier = liked_opinion
+			}
             BER = {
 				add_ideas = BER_embargoed
+				remove_opinion_modifier = {
+					target = UNG
+					modifier = liked_opinion
+				}
 				add_opinion_modifier = {
 					target = UNG
 					modifier = threatened_opinion
@@ -2684,9 +2714,9 @@ focus_tree = {
 	}
 	
 	focus = { #The Royals
-		id = UNG_Ska_The_Royals
-		icon = GFX_
-		cost = 7
+		id = UNG_the_royals
+		icon = GFX_focus_rom_royal_dictatorship
+		cost = 3
 		prerequisite = {
 			focus = UNG_dwarven_contacts
 		}
@@ -2707,12 +2737,10 @@ focus_tree = {
 		completion_reward = {
 			add_opinion_modifier = {
 				target = SKA
-				modifier = supportive_opinion 
+				modifier = liked_opinion 
 			}
-		}
-		reverse_add_opinion_modifier = {
-			add_opinion_modifier = {
-				target = UNG 
+			reverse_add_opinion_modifier = {
+				target = SKA
 				modifier = liked_opinion
 			}
 		}
@@ -2720,11 +2748,11 @@ focus_tree = {
 	
 		
 	focus = { #Send Weapons
-		id = UND_Support_SKA
-		icon = GFX_
+		id = UNG_support_skaelinger
+		icon = GFX_focus_generic_manpower
 		cost = 7
 		prerequisite = {
-			focus = UNG_Ska_The_Royals
+			focus = UNG_the_royals
 		}
 		available = {
 			SKA = {
@@ -2738,734 +2766,147 @@ focus_tree = {
 		ai_will_do = {
 			factor = 21
 		}
-		relative_position_id = UNG_Ska_The_Royals
+		relative_position_id = UNG_the_royals
 		x = 0
 		y = 1
 		completion_reward = {	
-			send_equipment = {
-				equipment = infantry_equipment
-				amount = 1500
-				target = SKA
+			SKA = {
+				country_event = {
+					id = ska.10
+					days = 7
+				}
 			}
 		}
 	}
 	
 	focus = { #Aid against the Kurgur
-		id = UND_Aid_SKA_against_KUR
-		icon = GFX_
+		id = UNG_aid_skaelinger_against_kurgur
+		icon = GFX_focus_ung_ally_skaelinger
 		cost = 7
 		prerequisite = {
-			focus = UND_Support_SKA
+			focus = UNG_support_skaelinger
 		}
 		available = {
+			NOT = {
+				has_completed_focus = UNG_assist_terugkeer
+			}
 			SKA = {
 				is_independent = yes 
 			}
 			KUR = {
-				is_independent = yes
-			}
-		}
-		bypass = {
-			SKA = {
-				is_not_independent = yes }
-			OR= { 
-				KUR = {
-					is_independent = no }
-				KUR = { 
-					owns_state = no
-					state_id = #placeholder for the state of Vogstuz
-				}
+				owns_state = 172
+				owns_state = 173
+				owns_state = 174
+				owns_state = 176
+				owns_state = 179
 			}
 		}
 		
 		ai_will_do = {
 			factor = 24
 		}
-		relative_position_id = UND_Support_SKA
+		relative_position_id = UNG_support_skaelinger
 		x = 0
 		y = 1
 		completion_reward = {
-			add_stability = 9
+			SKA = {
+				country_event = {
+					id = ska.11
+					days = 7
+				}
+			}
 		}
 	}
 	
 	focus = { # Recognize the High King 
-		id = UNG_recognize_High_King
-		icon = GFX_
+		id = UNG_recognize_high_king
+		icon = GFX_focus_ung_seventh_campaign
 		cost = 10
 		prerequisite = {
-			focus = UND_Aid_SKA_against_KUR
+			focus = UNG_aid_skaelinger_against_kurgur
 		}
 		available = {
 			SKA = {
-				exists = yes
+				is_independent = yes
 			}
 		}
-		# mutually_exclusive = {
-		#	 focus = UNG_mediate_between_dwarves
-		#}
-		bypass = {
-			SKA = {
-				is_not_independent = yes
-			}
+		mutually_exclusive = {
+			 focus = UNG_assist_terugkeer
+			 focus = UNG_recognize_rimatu
 		}
+
 		ai_will_do = {
 			factor = 27
 		}
-		relative_position_id = UND_Aid_SKA_against_KUR
+		relative_position_id = UNG_aid_skaelinger_against_kurgur
 		x = 0
 		y = 1
 		completion_reward = {
 			SKA = {
-				add_stability = 0.1
-				add_opinion_modifier = {
-					target = UNG
-					modifier = staunch_allies
-				}
-				reverse_add_opinion_modifier = {
-					target = UNG
-					modifier = staunch_allies
-				}
+				add_stability = 0.05
+				add_political_power = 125
 			}
-			hidden_effect = {
-				SKA = {
-					remove_opinion_modifier = {
-						target = UNG 
-						modifier = liked_opinion
-					}
-				}
-				remove_opinion_modifier = {
-					target = SKA
-					modifier = supportive_opinion
-				}
-			}
+			custom_effect_tooltip = UNG_recognize_skaelinger_tt
+			set_country_flag = UNG_backed_skaelinger_flag
 		}
 	}
 	
-	focus = { # Ally Skaelinger
-		id = UNG_ally_skaelinger
-		icon = GFX_
-		cost = 10
+	focus = { # Mediate between Skaelinger and Rimatü
+		id = UNG_mediate_skaelinger_rimatu
+		icon = GFX_IRI_Found_Coallition_Of_Irinth
+		cost = 30
 		prerequisite = {
-			focus = UNG_recognize_High_King
+			focus = UNG_recognize_high_king
 		}
 		available = {
 			SKA = {
-				exists = yes
+				is_independent = yes
+			}
+			RMT = {
+				is_independent = yes
 			}
 		}
 		bypass = {
-			or = {
+			OR = {
 				SKA = {
-					is_not_independent = yes
+					has_war_with = RMT
 				}
 				SKA = {
-					is_in_faction_with = UNG
+					is_subject_of = RMT
+				}
+				RMT = {
+					is_subject_of = SKA
+				}
+				SKA = {
+					owns_state = 383
+				}
+				RMT = {
+					owns_state = 146
 				}
 			}
 		}
 		ai_will_do = {
 			factor = 30
 		}
-		relative_position_id = UNG_recognize_High_King
+		relative_position_id = UNG_recognize_high_king
 		x = 0
 		y = 1
 		completion_reward = {
-            if = {
-                limit = {
-                    is_faction_leader = yes
-                }
-                UNG = { add_to_faction = SKA }
-            }
-            else_if = {
-              limit = {
-                is_in_faction = yes
-                is_faction_leader = no
-              }
-              leave_faction = yes
-              create_faction = old_alliance
-              add_to_faction = SKA
-            }
-            else = { 
-                create_faction = old_alliance
-                add_to_faction = SKA
-            }
+			SKA = {
+				country_event = {
+					id = ska.12
+					days = 6
+				}
+			}
+			RMT = {
+				country_event = {
+					id = rmt.2
+					days = 6
+				}
+			}
         }
     }
 
-	### NOBLE'S PLOT ###
-	
-	focus = { #Young Hochprinzessin
-		id = UNG_young_hochprinzessin
-		icon = GFX_focus_ung_young_hochprinzessin
-		cost = 
-		prerequisite = {
-			focus = 
-		}
-		available = {
-			always = no
-		}
-		ai_will_do = {
-			factor = 0
-		}
-		relative_position_id = UNG_looking_outwards
-		x = 20
-		y = 0
-		completion_reward = {
-			custom_effect_tooltip = generic_auto_bypass_tt
-		}
-	}
-	
-	focus = { #Arrest Traitors
-		id = UNG_arrest_nobility
-		icon = GFX_focus_generic_strike_at_democracy1
-		cost = 10
-		prerequisite = {
-			focus = UNG_young_hochprinzessin
-		}
-		available = {
-			has_country_flag = UNG_arrest_traitors
-		}
-		mutually_exclusive = {
-			focus = UNG_adress_nobles
-		}
-		ai_will_do = {
-			factor = 5
-		}
-		relative_position_id = UNG_young_hochprinzessin
-		x = -2
-		y = 1
-		completion_reward = {
-			add_stability = -0.1
-			add_popularity = {
-				ideology = monarchy_absolute
-				popularity = 0.05
-			}
-			random_list = {
-				60 = {
-					country_event = {
-						id = ung.47
-					}
-				}
-				40 = {
-					country_event = {
-						id = ung.48
-					}
-				}
-			}
-		}
-	}
-	
-	focus = { #Sicherheitsdiktat
-		id = UNG_sicherheitsdiktat
-		icon = GFX_focus_eng_move_to_secure_the_dominions
-		cost = 10
-		prerequisite = {
-			focus = UNG_arrest_nobility
-		}
-		available = {
-			has_country_flag = UNG_sicherheitsdiktat_flag
-		}
-		ai_will_do = {
-			factor = 7
-		}
-		relative_position_id = UNG_arrest_nobility
-		x = -1
-		y = 1
-		completion_reward = {
-			set_politics = {
-				ruling_party = monarchy_absolute
-			}
-			add_stability = 0.15
-		}
-	}
-	
-	focus = { #Force the Oath of Loyalty
-		id = UNG_oath_of_loyalty
-		icon = GFX_
-		cost = 10
-		prerequisite = {
-			focus = UNG_sicherheitsdiktat
-		}
-		available = {
-			AND = {
-				ruling_party = monarchy_absolute
-				Stability > 0.60
-			}
-		}
-		ai_will_do = {
-			factor = 10
-		}
-		relative_position_id = UNG_sicherheitsdiktat
-		x = -2
-		y = 1
-		completion_reward = {
-			add_war_support = 0.10
-			manpower = 6400
-			#should either increase manpower or make a foci giving you additional manpower or an event that spawns troops or smt
-		}
-	}
-	
-	focus = { #Hochprinzessinsauge meaning secret service 
-		id = UNG_secret_service
-		icon = GFX_
-		cost = 7
-		prerequisite = {
-			focus = UNG_sicherheitsdiktat
-		}
-		available = {	
-			has_government = monarchy_absolute
-			has_country_leader = {
-				name = "Adelina Vlussinger"
-				ruling_only = yes
-			}
-		}
-		bypass = {
-			NOT = {
-				has_country_leader = {
-				name = "Adelina Vlussinger"
-				ruling_only = yes
-				}
-			}
-		}
-		ai_will_do = {
-			factor = 13
-		}
-		relative_position_id = UNG_sicherheitsdiktat
-		x = 0
-		y = 1
-		completion_reward = {
-			add_ideas = Das_Auge_der_Hochprinzessin #needs an actual idea
-			add_stability = 0.09
-		}
-	}
-	
-	focus = { #Control Nobility
-		id = UNG_control_Nobility
-		icon = GFX_
-		cost = 10
-		prerequisite = {
-			focus = UNG_secret_service
-			focus = UNG_oath_of_loyalty
-		}
-		available = {
-			has_government = monarchy_absolute
-		}
-		ai_will_do = {
-			factor = 16
-		}
-		relative_position_id = UNG_secret_service
-		x = -1
-		y = 1
-		completion_reward = {
-			custom_effect_tooltip = UNG_tooltip_cnt_Nbt_1_tt
-			hidden_effect = {
-				set_country_flag = control_Nobility
-			}
-		}
-	}
-	
-	focus = { #The Gentle Hand of Constitutionalism
-		id = UNG_gentle_hand
-		icon = GFX_
-		cost = 0
-		prerequisite = {
-			focus = UNG_young_hochprinzessin
-		}
-		available = {
-			always = no
-		}
-		mutually_exclusive = {
-			focus = UNG_arrest_nobility
-		}
-		ai_will_do = {
-			factor = 0
-		}
-		relative_position_id = UNG_young_hochprinzessin
-		x = 0
-		y = 1
-		completion_reward = {
-			custom_effect_tooltip = UNG_gentle_hand_1_tt
-		}
-	}
-	
-	focus = { # Guide the Nobility
-		id = UNG_guide_nobility
-		icon = GFX_
-		cost = 7
-		prerequisite = {
-			focus = UNG_gentle_hand
-		}
-		available = {
-			monarchy_constitutional > 0.4
-		}
-		bypass = {
-			monarchy_constitutional > 0.9
-		}
-		ai_will_do = {
-			factor = 10
-			modifier = {
-				factor = 0.5
-				has_completed_focus = UNG_educate_da_people
-			}
-		}
-		relative_position_id = UNG_gentle_hand
-		x = -1
-		y = 1
-		completion_reward = {
-			if = {
-				limit = {
-					ruling_party = monarchy_constitutional
-				}
-			add_popularity = {
-				ideology = monarchy_constitutional
-				amount = 0.05
-			}
-		}
-			hidden_effect = {
-				else_if = {
-					limit = {
-						ruling_party = monarchy_absolute
-					}
-					add_popularity = {
-						ideology = monarchy_constitutional
-						amount = 0.1 
-						#to show that an absolute monarch would likely suppress opinions of other ruling types,
-						#as he wouldn´t want people to think there could be a better way to rule.
-					}
-				}
-			}
-			else = {
-				add_popularity = {
-					ideology = monarchy_constitutional
-					amount = 0.2
-				}
-			}
-		}
-	}
-	
-	focus = { #Public education to get support from parts of the country
-		id = UNG_educate_da_people
-		icon = GFX_
-		cost = 10
-		prerequisite = {
-			focus = UNG_gentle_hand 
-		}
-		available = {
-			monarchy_constitutional > 0.4
-		}
-		bypass = {
-			monarchy_constitutional > 0.9
-		}
-		ai_will_do = {
-			factor = 13
-			modifier = {
-				factor = 0.5
-				if = {
-					limit = {
-						has_completed_focus = UNG_guide_nobility
-					}
-				}
-			}
-		}		
-		relative_position_id = UNG_gentle_hand
-		x = 1
-		y = 1
-		completion_reward = { # i do not want to make a second reward function so i will just copy the one from before
-			if = {
-				limit = {
-					ruling_party = monarchy_constitutional
-				}	
-				add_popularity = {
-					ideology = monarchy_constitutional
-					amount = 0.05
-				}
-			}
-			else = {
-				add_popularity = {
-					ideology = monarchy_constitutional
-					amount = 0.2
-				}
-			}
-		}
-	}
-	
-	focus = { # the light of democracy in a constitutional Monarchy, choos if you want to have a soft power monarch or hard power monarch
-		id = UNG_light_democracy
-		icon = GFX_
-		cost = 10
-		prerequisite = {
-			focus = UNG_educate_da_people
-		}
-		prerequisite = {
-			focus = UNG_guide_nobility
-		}
-		available = {
-			monarchy_constitutional > 0.49
-		}
-		
-		ai_will_do = {
-			factor = 20 
-		}
-		relative_position_id = UNG_guide_nobility
-		
-		x = 1
-		y = 1
-		completion_reward = {
-			add_political_power = 100
-			add_stability = 0.3
-			hidden_effect = {
-				if = {
-					NOT = {
-						has_goverment = monarchy_constitutional
-					}
-				}
-				set_politics = {
-					ruling_party = monarchy_constitutional
-					elections_allowed = no
-				}
-			}
-			#country_event = {
-			#	id = ung.WHATNUMBER
-			#}
-		}
-	}
-	
-	focus = { #Soft Power for the monarch like in the commonwealth countrys or other more offhand monarchys
-		id = UNG_soft_power
-		icon = GFX_
-		cost = 10
-		prerequisite = {
-			focus = UNG_light_democracy
-		}
-		available = {
-			has_country_flag = UNG_soft_power_constitution
-		}
-		mutually_exclusive = {
-			focus = UNG_hard_power
-		}
-		ai_will_do = {
-			factor = 25
-		}
-		relative_position_id = UNG_light_democracy
-		x = 1
-		y = 1
-		completion_reward = {
-			add_idea = UNG_soft_power_parliment
-		}
-	}
-	
-	focus = { #Hard Power for the monarch like in the Victorian times where the monarch is a important and active figure in the politics
-		id = UNG_hard_power
-		icon = GFX_
-		cost = 10
-		prerequisite = {
-			focus = UNG_light_democracy
-		}
-		available = {
-			has_country_flag = UNG_hard_power_constitution
-		}
-		mutually_exclusive = {
-			focus = UNG_soft_power
-		}
-		ai_will_do = {
-			factor = 25 
-		}
-		relative_position_id = UNG_light_democracy
-		x = -1
-		y = 1
-		completion_reward = {
-			add_idea = UNG_hard_power_constitution
-		}
-	}
-	
-	focus = { #Transfer Power to the nobility
-		id = UNG_transfer_power
-		icon = GFX_
-		cost = 10
-		prerequisite = {
-			focus = UNG_young_hochprinzessin
-		}
-		available = {
-			hidden_effect = {
-				always = no
-			}
-			has_country_flag = UNG_transfers_power
-		}
-		mutually_exclusive = {
-			focus = UNG_gentle_hand
-			focus = UNG_arrest_traitors
-		}
-		ai_will_do = {
-			factor = 10
-		}
-		relative_position_id = UNG_young_hochprinzessin
-		x = 4
-		y = 1
-		completion_reward = {
-			set_politics = {
-				ruling_party = republic_aristocrat 
-				add_country_leader_trait = transferring_power_1
-			}
-			add_popularity = {
-				ideology = republic_aristocrat
-				popularity = 0.20
-			}
-		}
-	}
-
-	focus = { #limit royal powers
-		id = UNG_limit_powers
-		icon = 
-		cost = 10
-		prerequisite = {
-			focus = UNG_transfer_power
-		}
-		available = {
-			goverment = republic_aristocrat
-		}
-		ai_will_do =  {
-			factor = 15
-		}
-		relative_position_id = UNG_transfer_power
-		x = 0
-		y = 1
-		completion_reward = {
-			hidden_effect = {
-				remove_country_leader_trait =  transferring_power_1
-			}
-			add_country_leader_trait = transferring_power_2
-			add_popularity = {
-				ideology = republic_aristocrat
-				popularity = 0.20
-			}
-		}
-	}
-	focus = { #remove adelina
-		id = UNG_the_council_nobles
-		icon = GFX_
-		cost = 7.2
-		prerequisite = {
-			focus = UNG_limit_powers
-		}
-		available = {
-			goverment = republic_aristocrat
-		}
-		ai_will_do = {
-			factor = 20
-		}
-		relative_position_id = UNG_limit_powers
-		x = 0
-		y = 1
-		completion_reward = {
-			retire_country_leader = yes
-			set_party_name = {
-				ideology = republic_aristocrat
-				long_name = UNG_republican_aristocratic_council_of_commerce_and_stately_affairs
-				name = UNG_republic_aristocratic_council
-			}
-			add_popularity = {
-				ideology = republic_aristocrat
-				popularity = 0.20
-			}
-			add_ideas = The_defunk_Council
-		}
-	}
-	
-	#Fixing the Council after it has taken over
-	
-	focus = { #The Council expands
-		id = UNG_expand_council
-		icon = GFX_
-		cost = 6.5
-		prerequisite = {
-			focus = UNG_the_council_nobles
-		}
-		available = {
-			has_country_leader = {
-				name = "Council of stately affairs"
-				ruling_only = yes
-			} 
-		}
-		ai_will_do = {
-			factor = 25
-			modifier = {
-				has_completed_focus = UNG_reform_Council
-				modifier = 1.25
-			}	
-		}
-		relative_position_id = UNG_the_council_nobles
-		x = -1
-		y = 1
-		completion_reward = {
-			add_popularity = {
-				ideology = republic_aristocrat
-				popularity = 0.10
-			}
-			if = {
-				limit = {	
-					has_idea = The_defunk_Council
-				}
-				swap_ideas = {
-					remove_idea = The_defunk_Council
-					add_idea = The_expanded_Council
-				}
-				else = {
-					swap_ideas = {
-						remove_idea = The_reformed_Council
-						add_idea = The_Council
-					}
-				}
-			}
-		}
-	}
-	
-	focus = {
-		id = UNG_reform_Council
-		icon =
-		cost = 6.5
-		prerequisite = {
-			focus = UNG_the_council_nobles
-		}
-		available = {
-			has_country_leader = {
-				name = "Council of stately affairs"
-				ruling_only = yes
-			} 
-		}
-		ai_will_do = {
-			factor = 25
-			modifier = {
-				has_completed_focus = UNG_reform_Council
-				modifier = 1.25
-			}	
-		}
-		relative_position_id = UNG_the_council_nobles
-		x = 1
-		y = 1
-		completion_reward = {
-			add_popularity = {
-				ideology = republic_aristocrat
-				popularity = 0.10
-			}
-			if = {
-				limit = {	
-					has_idea = The_defunk_Council
-				}
-				swap_ideas = {
-					remove_idea = The_defunk_Council
-					add_idea = The_reformed_Council
-				}
-				else = {
-					swap_ideas = {
-						remove_idea = The_expanded_Council
-						add_idea = The_Council
-					}
-				}
-			}
-		}
-	}
-	
 	###	SACK OF SCHNEEFILDE ###
 	
 	focus = { #Sack of Scheefilde
@@ -3481,11 +2922,11 @@ focus_tree = {
 		ai_will_do = {
 			factor = 50
 		}
-		relative_position_id = UNG_young_hochprinzessin
-		x = 15
+		relative_position_id = UNG_looking_outwards
+		x = 23
 		y = 0
 		completion_reward = {
-			country_event = {`
+			country_event = {
 				id = ung.14
 				days = 1
 			}
@@ -4569,6 +4010,10 @@ focus_tree = {
 			add_stability = 0.2
 			add_war_support = 0.15
 			add_political_power = 125
+			custom_effect_tooltip = UNG_raids_ended_tt
+			PRK = {
+				clr_country_flag = PRK_can_raid
+			}
 		}
 	}		
 }

@@ -1104,70 +1104,69 @@ ungerdaler_reunion = {
 			factor = 200
 		}
 		complete_effect = {
-		custom_effect_tooltip = restore_the_union_effects_tt
-		hidden_effect = {
-			UNG = {
+			custom_effect_tooltip = restore_the_union_effects_tt
+			hidden_effect = {
+				UNG = {
 					transfer_state = 293
 				}
 				UNG = {
 					change_tag_from = FTH
+					unite_the_union = yes
 				}
-				unite_the_union = yes
-			}
-			UNG = {
-				set_capital = 236
-			}
-			UNG = {
-				create_country_leader = {
-					name = "Alois Ehrenbaum"
-					desc = "politics_FTH_ehrenbaum_desc"
-					picture = "gfx/leaders/FTH/Portrait_FTH_Ehrenbaum.dds"
-					ideology = monarchy_constitutional_ideology
-					traits = {
+				UNG = {
+					set_capital = 236
+				}
+				UNG = {
+					create_country_leader = {
+						name = "Alois Ehrenbaum"
+						desc = "politics_FTH_ehrenbaum_desc"
+						picture = "gfx/leaders/FTH/Portrait_FTH_Ehrenbaum.dds"
+						ideology = monarchy_constitutional_ideology
+						traits = {
+						}
 					}
 				}
-			}
-			UNG = {
-				create_country_leader = {
-					name = "Alois Ehrenbaum"
-					desc = "politics_FTH_ehrenbaum_desc"
-					picture = "gfx/leaders/FTH/Portrait_FTH_Ehrenbaum.dds"
-					ideology = monarchy_absolute_ideology
-					traits = {
+				UNG = {
+					create_country_leader = {
+						name = "Alois Ehrenbaum"
+						desc = "politics_FTH_ehrenbaum_desc"
+						picture = "gfx/leaders/FTH/Portrait_FTH_Ehrenbaum.dds"
+						ideology = monarchy_absolute_ideology
+						traits = {
+						}
 					}
 				}
-			}
-			UNG = {
-				create_country_leader = {
-					name = "Alois Ehrenbaum"
-					desc = "politics_FTH_ehrenbaum_desc"
-					picture = "gfx/leaders/FTH/Portrait_FTH_Ehrenbaum.dds"
-					ideology = republic_aristocrat_ideology
-					traits = {
+				UNG = {
+					create_country_leader = {
+						name = "Alois Ehrenbaum"
+						desc = "politics_FTH_ehrenbaum_desc"
+						picture = "gfx/leaders/FTH/Portrait_FTH_Ehrenbaum.dds"
+						ideology = republic_aristocrat_ideology
+						traits = {
+						}
 					}
 				}
-			}
-			UNG = {
-				set_party_name = {
-					ideology = monarchy_absolute
-					name = FTH_monarchy_absolute_party
+				UNG = {
+					set_party_name = {
+						ideology = monarchy_absolute
+						name = FTH_monarchy_absolute_party
+					}
 				}
-			}
-			UNG = {
-				set_party_name = {
-					ideology = monarchy_constitutional
-					name = FTH_monarchy_constitutional_party
+				UNG = {
+					set_party_name = {
+						ideology = monarchy_constitutional
+						name = FTH_monarchy_constitutional_party
+					}
 				}
-			}
-			UNG = {
-				set_party_name = {
-					ideology = republic_aristocrat
-					name = FTH_monarchy_constitutional_party 
+				UNG = {
+					set_party_name = {
+						ideology = republic_aristocrat
+						name = FTH_monarchy_constitutional_party 
+					}
 				}
 			}
 		}
 	}
-}
 
 	WSZ_restore_the_union = {
 		

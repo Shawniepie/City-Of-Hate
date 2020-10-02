@@ -1,0 +1,57 @@
+STA_request_war_resources_category = {
+     icon = generic_prospect_for_resources
+     visible = {
+		original_tag = STA
+		has_completed_focus = STA_lessons_of_the_restoration_war
+		AND = {
+			UNG = {exists = yes}
+			NOT = { has_war_with = UNG }
+			is_puppet_of = UNG
+		}
+	 }
+	 available = { 
+			original_tag = STA
+			has_completed_focus = STA_lessons_of_the_restoration_war
+			AND = {
+				UNG = {exists = yes}
+				NOT = { has_war_with = UNG }
+				is_puppet_of = UNG
+			}
+     }
+}
+STA_a_convincing_act_category = {
+     icon = generic_prospect_for_resources
+     visible = {
+		original_tag = STA
+		has_completed_focus = STA_a_convincing_act
+		OR = {
+			Not = { STA = { owns_state = 104 } }
+			Not = { STA = { owns_state = 105 } }
+			Not = { STA = { owns_state = 106 } }
+			Not = { STA = { owns_state = 107 } }
+			Not = { STA = { owns_state = 96 } }
+			}
+	 }
+	 available = { 
+		hidden_trigger = {
+			original_tag = STA
+			has_completed_focus = STA_a_convincing_act
+		}
+     }
+}
+
+STA_trial_by_fire_category = {
+     icon = generic_prospect_for_resources
+     visible = {
+		original_tag = STA
+		has_completed_focus = STA_trial_by_fire
+		Not = { STA = { owns_state = 218 } }
+
+	 }
+	 available = { 
+		hidden_trigger = {
+			original_tag = STA
+			has_completed_focus = STA_trial_by_fire
+		}
+     }
+}

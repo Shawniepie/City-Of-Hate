@@ -38,3 +38,288 @@ country_event = {#Union Offers Alliance
 		}
 	}
 }
+
+
+country_event = {#Attend Nordtorf Summit?
+	id = rmt.2
+	title = rmt.2.t
+	desc = rmt.2.d
+	picture = GFX_report_event_carol_meeting
+
+	is_triggered_only = yes
+	
+	option = {#Yes
+		name = rmt.2.a
+		ai_chance = {
+			factor = 15
+		}
+		UNG = {
+			country_event = {
+				id = ung.64
+				days = 3
+			}
+		}
+		if = {
+			limit = {
+				UNG = {
+					has_country_flag = UNG_backed_rimatu_flag
+				}
+			}
+			add_political_power = 125
+			add_stability = 0.15
+		}
+	}
+	
+	option = {#No
+		name = rmt.2.b
+		ai_chance = {
+			factor = 1
+			modifier = {
+				UNG = {
+					has_country_flag = UNG_backed_skaelinger_flag
+				}
+				factor = 3
+			}
+		}
+		UNG = {
+			country_event = {
+				id = ung.65
+				days = 3
+			}
+		}
+		if = {
+			limit = {
+				UNG = {
+					has_country_flag = UNG_backed_skaelinger_flag
+				}
+			}
+			add_political_power = 125
+			add_war_support = 0.15
+		}
+	}
+}
+
+country_event = { #Union Backs Hellirfast
+	id = rmt.3
+	title = rmt.3.t
+	desc = rmt.3.d
+	picture = GFX_report_event_german_politician_speech
+	
+	is_triggered_only = yes
+	
+	option = {#I suppose
+		name = rmt.3.a
+		
+		ai_chance = {
+			factor = 3
+		}
+		
+		add_political_power = -35
+		add_stability = -0.05
+		
+		UNG = {
+			country_event = {
+				id = ung.67
+				days = 2
+			}
+		}
+		
+		SKA = {
+			country_event = {
+				id = ska.15
+				days = 2
+			}
+		}
+	}
+		
+	option = {#Fuck that noise
+		name = rmt.3.b
+		
+		ai_chance = {
+			factor = 10
+			modifier = {
+				has_relation_modifier = {
+					target = UNG
+					modifier = staunch_allies
+				}
+				factor = 0.1
+			}
+			modifier = {
+				has_relation_modifier = {
+					target = UNG
+					modifier = trusted_opinion
+				}
+				factor = 0.5
+			}
+			modifier = {
+				has_relation_modifier = {
+					target = UNG
+					modifier = liked_opinion
+				}
+				factor = 0.8
+			}
+		}
+		
+		add_political_power = -75
+		add_stability = -0.15
+		add_war_support = 0.15
+		
+		if = {
+			limit = {
+				has_relation_modifier = {
+					target = UNG
+					modifier = staunch_allies
+				}
+			}
+		
+			remove_opinion_modifier = {
+				target = UNG
+				modifier = staunch_allies
+			}
+			
+			UNG = {
+				remove_opinion_modifier = {
+					target = RMT
+					modifier = staunch_allies
+				}
+			}
+		}
+		
+		if = {
+			limit = {
+				has_relation_modifier = {
+					target = UNG
+					modifier = trusted_opinion
+				}
+			}
+		
+			remove_opinion_modifier = {
+				target = UNG
+				modifier = trusted_opinion
+			}
+			
+			UNG = {
+				remove_opinion_modifier = {
+					target = RMT
+					modifier = trusted_opinion
+				}
+			}
+		}
+		
+		if = {
+			limit = {
+				has_relation_modifier = {
+					target = UNG
+					modifier = liked_opinion
+				}
+			}
+		
+			remove_opinion_modifier = {
+				target = UNG
+				modifier = liked_opinion
+			}
+			
+			UNG = {
+				remove_opinion_modifier = {
+					target = RMT
+					modifier = liked_opinion
+				}
+			}
+		}
+			
+		add_opinion_modifier = {
+			target = UNG
+			modifier = incredible_betrayal
+		}
+		
+		reverse_add_opinion_modifier = {
+			target = UNG
+			modifier = dislike_opinion
+		}
+		
+		UNG = {
+			country_event = {
+				id = ung.68
+				days = 2
+			}
+		}
+		SKA = {
+			country_event = {
+				id = ska.16
+				days = 2
+			}
+		}
+	}
+}
+
+country_event = { #Union Backs Us
+	id = rmt.4
+	title = rmt.4.t
+	desc = rmt.4.d
+	picture = GFX_report_event_communists_cheer
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = rmt.4.a
+		
+		add_political_power = 150
+		add_stability = 0.1
+	}
+}
+
+country_event = {#Skaelinger Accepts
+	id = rmt.5
+	title = ung.69.t #No sense in wasting good loc
+	desc = ung.69.d
+	picture = GFX_report_event_carol_meeting
+
+	is_triggered_only = yes
+	
+	option = {#Huzzah
+		name = ung.69.a
+		add_stability = 0.05
+		
+		remove_opinion_modifier = {
+			target = SKA
+			modifier = bitter_rivals
+		}
+
+		add_opinion_modifier = {
+			target = SKA
+			modifier = dislike_opinion
+		}
+		
+		reverse_add_opinion_modifier = {
+			target = SKA
+			modifier = dislike_opinion
+		}
+		
+		diplomatic_relation = {
+			country = SKA
+			relation = non_aggression_pact
+			active = yes
+		}
+		
+		SKA = {		
+			remove_opinion_modifier = {
+				target = RMT
+				modifier = bitter_rivals
+			}
+		}
+	}
+}
+
+country_event = {#Skaelinger Declines
+	id = rmt.6
+	title = ung.70.t #No sense in wasting good loc
+	desc = ung.70.d
+	picture = GFX_report_event_carol_meeting
+
+	is_triggered_only = yes
+	
+	option = {#Oh shit
+		name = ung.70.a
+		add_war_support = 0.05
+	}
+}

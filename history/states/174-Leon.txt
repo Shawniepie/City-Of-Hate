@@ -9,6 +9,7 @@ state={
 	buildings_max_level_factor=1.000
 	history={
 		owner = KUR
+		victory_points = { 7798 72 }
 		buildings = {
 			infrastructure = 3
 			industrial_complex = 1

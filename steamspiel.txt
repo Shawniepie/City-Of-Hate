@@ -1,6 +1,5 @@
 Join our Discord! discord.gg/QhZAGMN
 Check out our subreddit! reddit.com/r/CoHmod
-Lost in the lore? Take a look at our wiki! city-of-hate.fandom.com/wiki/City_of_Hate_Wiki
 
 ---
 
@@ -23,10 +22,14 @@ This mod aims to bring a fantasy world to life, and let you take command - lead 
 Please note that as it is currently a public alpha mod, it is still VERY much in development. Most of the countries aren't even on the map yet, but I've done my best to insure that what is there is fun to play.
 
 Features:
--A completely original setting dreamt up by yours truly.
--Seven unique ideologies, including monarchies, republics and theocracies.
--A completely new generic Focus Tree with 67 foci to choose from.
--Two unique focus trees, with plenty more planned.
--Five unique units, with many more on the way.
--A religion system - choose a Patron Deity for your people!
--(Hopefully) a Hearts of Iron experience completely unlike anything you've seen before!
+	-A completely original setting dreamt up by yours truly.
+	-Seven unique ideologies, including monarchies, republics and theocracies.
+	-A completely new generic Focus Tree with 67 foci to choose from.
+	-Six unique focus trees, with plenty more planned.
+	-Six unique units, with many more on the way.
+	-A religion system - choose a Patron Deity for your people!
+	-(Hopefully) a Hearts of Iron experience completely unlike anything you've seen before!
+
+If you have any questions or bugs, please post them on the mod's official subreddit, r/CoHmod. You'll also find dev diaries and teasers here.
+
+A massive thank you to Xangelo7 for letting us use his awesome 3d models! Find them here: https://steamcommunity.com/workshop/filedetails/?id=952311178

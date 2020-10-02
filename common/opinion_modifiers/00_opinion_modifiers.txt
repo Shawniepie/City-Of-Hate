@@ -48,6 +48,10 @@ opinion_modifiers = {
 		value = 25
 	}
 	
+	incredible_betrayal = {
+		value = -125
+	}
+	
 	puppet_opinion = {
 		value = 15
 	}
@@ -297,9 +301,5 @@ opinion_modifiers = {
 	
 	long_term_trade_partner = {
 		value = 1
-	}
-	
-	merchants_exiled = {
-		value = -300
 	}
 }

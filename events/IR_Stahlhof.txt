@@ -1457,3 +1457,175 @@ id = sta.69
 		add_political_power = 50
 	}
 }
+
+country_event = { #Stahlhof Ignites CW
+id = sta.70
+	title = sta.70.t
+	desc = sta.70.d
+	picture = GFX_report_event_german_inspect_troops
+	
+	trigger = {
+		tag = STA
+		OR = {
+			AND = {
+				has_country_flag = STA_stv_ally
+				has_country_flag = STA_nrk_ally
+			}
+			has_country_flag = STA_forced_to_start_civil_war
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 7
+	}
+	
+	fire_only_once = yes
+	
+	option = { # Very Nice
+		name = sta.70.a
+		
+		hidden_effect = {
+			UNG = {
+				release = NRK
+				release = SVT
+				country_event = { id = sta.71 hours = 6 }
+			}
+			
+			UNG = {
+				set_autonomy = {
+					target = STA
+					autonomy_state = autonomy_free
+				}
+			}
+			
+			if = {
+				limit = {
+					has_country_flag = STA_hlz_ally
+				}
+				UNG = {
+					release = HLZ
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = STA_fth_ally
+				}
+				UNG = {
+					release = FTH
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = STA_wer_ally
+				}
+				UNG = {
+					release = WER
+				}
+			}
+		}
+		UNG = {
+			create_faction = ung_cv_faction
+		}
+		STA = {
+			create_faction = sta_cv_faction
+			hidden_effect = {
+				add_to_faction = SVT
+				add_to_faction = NRK
+				if = {
+					limit = {
+						has_country_flag = STA_hlz_ally
+					}
+					add_to_faction = HLZ
+				}
+				if = {
+					limit = {
+						has_country_flag = STA_fth_ally
+					}
+					add_to_faction = FTH
+				}
+				if = {
+					limit = {
+						has_country_flag = STA_wer_ally
+					}
+					add_to_faction = WSZ
+				}
+			}
+			declare_war_on = { target = UNG type = annex_everything }
+		}
+		NRK = {
+			add_to_war = { 
+				targeted_alliance = STA 
+				enemy = UNG
+			}
+		}
+		SVT = {
+			add_to_war = { 
+				targeted_alliance = STA 
+				enemy = UNG
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = STA_hlz_ally
+			}
+			HLZ = {
+				add_to_war = { 
+					targeted_alliance = STA 
+					enemy = UNG
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = STA_fth_ally
+			}
+			FTH = {
+				add_to_war = { 
+					targeted_alliance = STA 
+					enemy = UNG
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = STA_wer_ally
+			}
+			WSZ		= {
+				add_to_war = { 
+					targeted_alliance = STA 
+					enemy = UNG
+				}
+			}
+		}
+	}
+}
+
+country_event = { #Stahlhof Ignites CW, but you are union member
+	id = sta.71
+	title = sta.71.t
+	desc = sta.71.d
+	picture = GFX_report_event_german_inspect_troops
+	
+	is_triggered_only = yes
+	
+	option = { # Fuck
+		name = sta.71.a
+	}
+}
+
+country_event = {#Forced to start CW in a week
+	id = sta.72
+	title = sta.72.t
+	desc = sta.72.d
+	picture = GFX_report_event_german_inspect_troops
+	
+	is_triggered_only = yes
+	
+	option = { # Fuck
+		name = sta.72.a
+		
+		set_country_flag = STA_forced_to_start_civil_war
+		
+		custom_effect_tooltip = UNG_union_fraying_tt
+	}
+}

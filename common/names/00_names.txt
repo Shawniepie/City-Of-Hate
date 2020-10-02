@@ -178,6 +178,134 @@ RTH = {
 		Dythene Incythre Derathur Ythynne Wycynnis Hynthythe Lyliryn
 	}
 }
+
+SKA_OSG = {
+	male = {
+		names = {
+			Thorys Lancthyr Usyne Wycthir Istvenys Wyngeryn Lorthyrys Orthyryn Asdyrgys Lycthyrys Pythylyn Uthyrs
+		}
+	}
+	female = {
+		names = {
+			Ancyta Lythrica Thorya Lycthynith Pythrys Wythene Ycthyna Systhyn
+		}
+	}
+	surnames = {
+		Dythene Incythre Lothinnys Ythynne Wycynnis Hynthythe Lyliryn
+	}
+}
+
+STA_OSG = {
+	male = {
+		names = {
+			Thorys Lancthyr Usyne Wycthir Istvenys Wyngeryn Lorthyrys Orthyryn Asdyrgys Lycthyrys Pythylyn Uthyrs
+		}
+	}
+	female = {
+		names = {
+			Ancyta Lythrica Thorya Lycthynith Pythrys Wythene Ycthyna Systhyn
+		}
+	}
+	surnames = {
+		Dythene Incythre Lothinnys Ythynne Wycynnis Hynthythe Lyliryn
+	}
+}
+
+NOC_OSG = {
+	male = {
+		names = {
+			Thorys Lancthyr Usyne Wycthir Istvenys Wyngeryn Lorthyrys Orthyryn Asdyrgys Lycthyrys Pythylyn Uthyrs
+		}
+	}
+	female = {
+		names = {
+			Ancyta Lythrica Thorya Lycthynith Pythrys Wythene Ycthyna Systhyn
+		}
+	}
+	surnames = {
+		Dythene Incythre Lothinnys Ythynne Wycynnis Hynthythe Lyliryn
+	}
+}
+
+WIS_OSG = {
+	male = {
+		names = {
+			Thorys Lancthyr Usyne Wycthir Istvenys Wyngeryn Lorthyrys Orthyryn Asdyrgys Lycthyrys Pythylyn Uthyrs
+		}
+	}
+	female = {
+		names = {
+			Ancyta Lythrica Thorya Lycthynith Pythrys Wythene Ycthyna Systhyn
+		}
+	}
+	surnames = {
+		Dythene Incythre Lothinnys Ythynne Wycynnis Hynthythe Lyliryn
+	}
+}
+
+NAS_OSG = {
+	male = {
+		names = {
+			Thorys Lancthyr Usyne Wycthir Istvenys Wyngeryn Lorthyrys Orthyryn Asdyrgys Lycthyrys Pythylyn Uthyrs
+		}
+	}
+	female = {
+		names = {
+			Ancyta Lythrica Thorya Lycthynith Pythrys Wythene Ycthyna Systhyn
+		}
+	}
+	surnames = {
+		Dythene Incythre Lothinnys Ythynne Wycynnis Hynthythe Lyliryn
+	}
+}
+
+TRI_OSG = {
+	male = {
+		names = {
+			Thorys Lancthyr Usyne Wycthir Istvenys Wyngeryn Lorthyrys Orthyryn Asdyrgys Lycthyrys Pythylyn Uthyrs
+		}
+	}
+	female = {
+		names = {
+			Ancyta Lythrica Thorya Lycthynith Pythrys Wythene Ycthyna Systhyn
+		}
+	}
+	surnames = {
+		Dythene Incythre Lothinnys Ythynne Wycynnis Hynthythe Lyliryn
+	}
+}
+
+IRT_OSG = {
+	male = {
+		names = {
+			Thorys Lancthyr Usyne Wycthir Istvenys Wyngeryn Lorthyrys Orthyryn Asdyrgys Lycthyrys Pythylyn Uthyrs
+		}
+	}
+	female = {
+		names = {
+			Ancyta Lythrica Thorya Lycthynith Pythrys Wythene Ycthyna Systhyn
+		}
+	}
+	surnames = {
+		Dythene Incythre Lothinnys Ythynne Wycynnis Hynthythe Lyliryn
+	}
+}
+
+PRK_OSG = {
+	male = {
+		names = {
+			Thorys Lancthyr Usyne Wycthir Istvenys Wyngeryn Lorthyrys Orthyryn Asdyrgys Lycthyrys Pythylyn Uthyrs
+		}
+	}
+	female = {
+		names = {
+			Ancyta Lythrica Thorya Lycthynith Pythrys Wythene Ycthyna Systhyn
+		}
+	}
+	surnames = {
+		Dythene Incythre Lothinnys Ythynne Wycynnis Hynthythe Lyliryn
+	}
+}
  
 ###############################################################
 # Perkavland

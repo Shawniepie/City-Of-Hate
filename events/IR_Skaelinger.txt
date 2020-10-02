@@ -69,7 +69,7 @@ country_event = { #Ordoria Offers Peace
 	option = {#Very Well
 		name = ska.2.a
 		ai_chance = {
-			factor = 3
+			factor = 7
 		}
 		add_stability = -0.1
 		add_war_support = -0.15
@@ -80,7 +80,7 @@ country_event = { #Ordoria Offers Peace
 	option = {#Piss Off
 		name = ska.2.b
 		ai_chance = {
-			factor = 5
+			factor = 1
 		}
 		add_stability = 0.05
 		add_war_support = 0.1
@@ -114,7 +114,7 @@ country_event = { #Offer Peace to Ordoria?
 	option = {#Very Well
 		name = ska.3.a
 		ai_chance = {
-			factor = 4
+			factor = 7
 		}
 		add_stability = -0.1
 		add_war_support = -0.15
@@ -132,7 +132,7 @@ country_event = { #Offer Peace to Ordoria?
 	option = {#Piss Off
 		name = ska.3.b
 		ai_chance = {
-			factor = 6
+			factor = 1
 		}
 		add_stability = 0.05
 		add_war_support = 0.1
@@ -166,7 +166,7 @@ country_event = { #Ordoria Demands Concessions
 	option = { # Yes
 		name = ska.5.a
 		ai_chance = {
-			factor = 6
+			factor = 7
 		}
 		white_peace = ORD
 		ORD = {
@@ -201,7 +201,7 @@ country_event = { #Ordoria Demands Concessions
 	option = { # No
 		name = ska.5.b
 		ai_chance = {
-			factor = 4
+			factor = 1
 		}
 		hidden_effect = {
 			ORD = {
@@ -566,5 +566,372 @@ country_event = {#Troops Retreat from Rthauiaur
 				}
 			}
 		}
+	}
+}
+
+### UNION EVENTS
+country_event = { #Union Sends Aid
+	id = ska.10
+	title = ska.10.t
+	desc = ska.10.d
+	picture = GFX_report_event_french_liberation
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ska.10.a
+		UNG = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -2400
+			}
+			add_manpower = -2400
+		}
+		add_manpower = 2400
+		
+		remove_opinion_modifier = {
+			target = UNG
+			modifier = liked_opinion
+		}
+		
+		UNG = {
+			remove_opinion_modifier = {
+				target = SKA
+				modifier = liked_opinion
+			}
+			add_opinion_modifier = {
+				target = SKA
+				modifier = trusted_opinion
+			}
+			reverse_add_opinion_modifier = {
+				target = SKA
+				modifier = trusted_opinion
+			}
+		}
+		
+		hidden_effect = {
+			load_oob = "SKA_union_volunteers"
+			
+			set_division_template_lock = {
+				division_template = "Ungerdaler Expeditionary Force"
+				is_locked = yes
+			}
+		}
+	}
+}
+
+country_event = { #Union Assists Seventh Campaign
+	id = ska.11
+	title = ska.11.t
+	desc = ska.11.d
+	picture = GFX_report_event_french_liberation
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ska.11.a
+		
+		custom_effect_tooltip = BER_assisted_terugkeer_tt
+		
+		set_country_flag = SKA_allowed_to_initiate_seventh_campaign
+		
+		remove_opinion_modifier = {
+			target = UNG
+			modifier = trusted_opinion
+		}
+		UNG = {
+			remove_opinion_modifier = {
+				target = SKA
+				modifier = trusted_opinion
+			}
+			add_opinion_modifier = {
+				target = SKA
+				modifier = staunch_allies
+			}
+			reverse_add_opinion_modifier = {
+				target = SKA
+				modifier = staunch_allies
+			}
+		}
+	}
+}
+
+country_event = {#Attend Nordtorf Summit?
+	id = ska.12
+	title = ska.12.t
+	desc = ska.12.d
+	picture = GFX_report_event_carol_meeting
+
+	is_triggered_only = yes
+	
+	option = {#Yes
+		name = ska.12.a
+		ai_chance = {
+			factor = 15
+		}
+		UNG = {
+			country_event = {
+				id = ung.62
+				days = 3
+			}
+		}
+		if = {
+			limit = {
+				UNG = {
+					has_country_flag = UNG_backed_skaelinger_flag
+				}
+			}
+			add_political_power = 125
+			add_stability = 0.15
+		}
+	}
+	
+	option = {#No
+		name = ska.12.b
+		ai_chance = {
+			factor = 1
+			modifier = {
+				UNG = {
+					has_country_flag = UNG_backed_rimatu_flag
+				}
+				factor = 3
+			}
+		}
+		UNG = {
+			country_event = {
+				id = ung.63
+				days = 3
+			}
+		}
+		if = {
+			limit = {
+				UNG = {
+					has_country_flag = UNG_backed_rimatu_flag
+				}
+			}
+			add_political_power = 125
+			add_war_support = 0.15
+		}
+	}
+}
+
+country_event = { #Union Backs Us
+	id = ska.13
+	title = ska.13.t
+	desc = ska.13.d
+	picture = GFX_report_event_communists_cheer
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ska.13.a
+		
+		add_political_power = 150
+		add_stability = 0.1
+	}
+}
+
+country_event = { #Union Backs Skyldske
+	id = ska.14
+	title = ska.14.t
+	desc = ska.14.d
+	picture = GFX_report_event_german_politician_speech
+	
+	is_triggered_only = yes
+	
+	option = {#I suppose
+		name = ska.14.a
+		
+		ai_chance = {
+			factor = 3
+		}
+		
+		add_political_power = -35
+		add_stability = -0.05
+		
+		UNG = {
+			country_event = {
+				id = ung.69
+				days = 2
+			}
+		}
+		
+		RMT = {
+			country_event = {
+				id = rmt.5
+				days = 2
+			}
+		}
+	}
+		
+	option = {#Fuck that noise
+		name = ska.14.b
+		
+		ai_chance = {
+			factor = 10
+			modifier = {
+				has_relation_modifier = {
+					target = UNG
+					modifier = staunch_allies
+				}
+				factor = 0.1
+			}
+			modifier = {
+				has_relation_modifier = {
+					target = UNG
+					modifier = trusted_opinion
+				}
+				factor = 0.5
+			}
+			modifier = {
+				has_relation_modifier = {
+					target = UNG
+					modifier = liked_opinion
+				}
+				factor = 0.8
+			}
+		}
+		
+		add_political_power = -75
+		add_stability = -0.15
+		add_war_support = 0.15
+		
+		if = {
+			limit = {
+				has_relation_modifier = {
+					target = UNG
+					modifier = staunch_allies
+				}
+			}
+		
+			remove_opinion_modifier = {
+				target = UNG
+				modifier = staunch_allies
+			}
+			
+			UNG = {
+				remove_opinion_modifier = {
+					target = SKA
+					modifier = staunch_allies
+				}
+			}
+		}
+		
+		if = {
+			limit = {
+				has_relation_modifier = {
+					target = UNG
+					modifier = trusted_opinion
+				}
+			}
+		
+			remove_opinion_modifier = {
+				target = UNG
+				modifier = trusted_opinion
+			}
+			
+			UNG = {
+				remove_opinion_modifier = {
+					target = SKA
+					modifier = trusted_opinion
+				}
+			}
+		}
+		
+		if = {
+			limit = {
+				has_relation_modifier = {
+					target = UNG
+					modifier = liked_opinion
+				}
+			}
+		
+			remove_opinion_modifier = {
+				target = UNG
+				modifier = liked_opinion
+			}
+			
+			UNG = {
+				remove_opinion_modifier = {
+					target = SKA
+					modifier = liked_opinion
+				}
+			}
+		}
+			
+		add_opinion_modifier = {
+			target = UNG
+			modifier = incredible_betrayal
+		}
+		
+		reverse_add_opinion_modifier = {
+			target = UNG
+			modifier = dislike_opinion
+		}
+		
+		UNG = {
+			country_event = {
+				id = ung.70
+				days = 2
+			}
+		}
+		RMT = {
+			country_event = {
+				id = rmt.6
+				days = 2
+			}
+		}
+	}
+}
+
+country_event = {#Rimatu Accepts
+	id = ska.15
+	title = ung.67.t #No sense in wasting good loc
+	desc = ung.67.d
+	picture = GFX_report_event_carol_meeting
+
+	is_triggered_only = yes
+	
+	option = {#Huzzah
+		name = ung.67.a
+		add_stability = 0.05
+		
+		puppet = RMT
+		
+		remove_opinion_modifier = {
+			target = RMT
+			modifier = bitter_rivals
+		}
+
+		add_opinion_modifier = {
+			target = RMT
+			modifier = dislike_opinion
+		}
+		
+		reverse_add_opinion_modifier = {
+			target = RMT
+			modifier = dislike_opinion
+		}
+		
+		RMT = {
+			remove_opinion_modifier = {
+				target = SKA
+				modifier = bitter_rivals
+			}
+		}
+	}
+}
+
+country_event = {#Rimatu Declines
+	id = ska.16
+	title = ung.68.t #No sense in wasting good loc
+	desc = ung.68.d
+	picture = GFX_report_event_carol_meeting
+
+	is_triggered_only = yes
+	
+	option = {#Oh shit
+		name = ung.68.a
+		add_war_support = 0.05
 	}
 }

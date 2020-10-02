@@ -2,8 +2,9 @@
 
 #THE MOD TEAM
 
-#Lead Dev
+#Lead Devs
 Omnicide101
+Silvestrich
 
 #Lore Team
 Old Man Duchense
@@ -30,6 +31,8 @@ Shawniepie
 #Dev Diarists
 Actual Spook
 Imperial_Warlord
+
+#Unit Models by Xangelo7
 
 #Character Portraits
 

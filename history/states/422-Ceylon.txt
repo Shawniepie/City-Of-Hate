@@ -4,5 +4,5 @@ state={
 	provinces={
 		407 5117 1975 9333 9395 9377 1182 3653 1881 3524 163 5235 5489
 	}
-	manpower=0
+	state_category = rural manpower = 1
 }

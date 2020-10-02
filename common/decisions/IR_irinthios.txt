@@ -261,6 +261,7 @@ IRI_category_territorial_integration = {
 		}
 		
 		available = {
+			NOT = { has_country_flag = IRI_Integration_Progress }
 			has_completed_focus = IRI_Appoint_Bilodyan_Region_Governor
 		}
 
@@ -270,9 +271,16 @@ IRI_category_territorial_integration = {
 
 		cancel_if_not_visible = yes
 		
+		complete_effect = {
+		hidden_effect = {
+		set_country_flag = IRI_Integration_Progress
+		}
+		}
+		
 		remove_effect = {
 		
 		hidden_effect = {
+		clr_country_flag = IRI_Integration_Progress
 		set_country_flag = IRI_Bil_Integrated
 		remove_ideas = IRI_Ogre_Assimilation
 		remove_ideas = IRI_Ogre_Occupation
@@ -288,7 +296,698 @@ IRI_category_territorial_integration = {
 			add_state_core = 767
 			}
 		}
-	}		
+	}	
+	IRI_decision_integrate_north_tla = {
+	
+		icon = generic_nationalism
+		
+		allowed = {
+			original_tag = IRI
+		}
+
+		visible = {
+			NOT = { country_exists = TLA }
+			NOT = { has_country_flag = IRI_Tla_Integrated_1 }
+		}
+		
+		available = {
+		NOT = { has_country_flag = IRI_Integration_Progress }
+		OR = {
+			has_completed_focus = IRI_Keep_The_King_Of_Tlarthingians
+			has_completed_focus = IRI_Irinthios_Settlers_Mission
+			}
+		}
+
+		cost = 200
+
+		days_remove = 100
+
+		cancel_if_not_visible = yes
+		
+		complete_effect = {
+		hidden_effect = {
+		set_country_flag = IRI_Integration_Progress
+		}
+		}
+		
+		remove_effect = {
+		
+		hidden_effect = {
+		clr_country_flag = IRI_Integration_Progress
+		set_country_flag = IRI_Tla_Integrated_1
+		remove_ideas = IRI_TlaProblems1
+		remove_ideas = IRI_TlaProblems2
+		remove_ideas = IRI_TlaProblems3
+		}
+		IRI = {
+			add_state_core = 377
+			add_state_core = 773
+			add_state_core = 766
+			add_state_core = 788
+			add_state_core = 765
+			add_state_core = 374
+			}
+		}
+	}
+	IRI_decision_integrate_south_tla = {
+	
+		icon = generic_nationalism
+		
+		allowed = {
+			original_tag = IRI
+		}
+
+		visible = {
+			NOT = { country_exists = TLA }
+			NOT = { has_country_flag = IRI_Tla_Integrated_2 }
+		}
+		
+		available = {
+		NOT = { has_country_flag = IRI_Integration_Progress }
+		OR = {
+			has_completed_focus = IRI_Keep_The_King_Of_Tlarthingians
+			has_completed_focus = IRI_Irinthios_Settlers_Mission
+			}
+		}
+
+		cost = 200
+
+		days_remove = 100
+
+		cancel_if_not_visible = yes
+		
+		complete_effect = {
+		hidden_effect = {
+		set_country_flag = IRI_Integration_Progress
+		}
+		}
+		
+		remove_effect = {
+		
+		hidden_effect = {
+		clr_country_flag = IRI_Integration_Progress
+		set_country_flag = IRI_Integration_Progress
+		set_country_flag = IRI_Tla_Integrated_2
+		remove_ideas = IRI_TlaProblems1
+		remove_ideas = IRI_TlaProblems2
+		remove_ideas = IRI_TlaProblems3
+		}
+		IRI = {
+			add_state_core = 774
+			add_state_core = 775
+			add_state_core = 776
+			add_state_core = 777
+			add_state_core = 376
+			add_state_core = 372
+			add_state_core = 793
+			add_state_core = 796
+			add_state_core = 371
+			add_state_core = 795
+			add_state_core = 787
+			add_state_core = 789
+			add_state_core = 778
+			}
+		}
+	}
+	IRI_decision_integrate_east_tla = {
+	
+		icon = generic_nationalism
+		
+		allowed = {
+			original_tag = IRI
+		}
+
+		visible = {
+			NOT = { country_exists = TLA }
+			NOT = { has_country_flag = IRI_Tla_Integrated_3 }
+		}
+		
+		available = {
+		NOT = { has_country_flag = IRI_Integration_Progress }
+		OR = {
+			has_completed_focus = IRI_Keep_The_King_Of_Tlarthingians
+			has_completed_focus = IRI_Irinthios_Settlers_Mission
+			}
+		}
+
+		cost = 200
+
+		days_remove = 100
+
+		cancel_if_not_visible = yes
+		
+		complete_effect = {
+		hidden_effect = {
+		set_country_flag = IRI_Integration_Progress
+		}
+		}
+		
+		remove_effect = {
+		
+		hidden_effect = {
+		clr_country_flag = IRI_Integration_Progress
+		set_country_flag = IRI_Tla_Integrated_3
+		remove_ideas = IRI_TlaProblems1
+		remove_ideas = IRI_TlaProblems2
+		remove_ideas = IRI_TlaProblems3
+		}
+		IRI = {
+			add_state_core = 785
+			add_state_core = 790
+			add_state_core = 794
+			add_state_core = 791
+			add_state_core = 784
+			add_state_core = 783
+			add_state_core = 373
+			add_state_core = 782
+			add_state_core = 781
+			add_state_core = 375
+			add_state_core = 780
+			add_state_core = 779
+			add_state_core = 786
+			}
+		}
+	}
+}
+IRI_irinthios_influence_sphere = {
+
+	IRI_decision_approach_kurgur = {
+	
+		icon = generic_civil_support
+		
+		allowed = {
+			original_tag = IRI
+		}
+
+
+		visible = {
+		hidden_trigger = {
+			has_completed_focus = IRI_Influence_Sphere_Ambitions }
+			NOT = { has_global_flag = IRI_kur_influenced }
+			KUR = { is_subject = no }
+		}
+		
+		available = {
+			NOT = { has_war_with = KUR }
+			is_subject = no
+			hidden_trigger = {
+			KUR = { is_subject = no }
+			has_completed_focus = IRI_Influence_Sphere_Ambitions			
+			}
+			NOT = { has_global_flag = IRI_kur_influenced }
+		}
+		
+		modifier = {
+		consumer_goods_factor = 0.05
+		}
+
+		cost = 150
+
+		days_remove = 80
+
+		cancel_if_not_visible = yes
+		
+		remove_effect = {
+		custom_effect_tooltip = IRI_influence_question_tt
+		hidden_effect = {
+		KUR = { country_event = { id = iri.19 } }
+		}
+		}
+	}
+	
+	IRI_decision_puppet_kurgur = {
+	
+		icon = generic_civil_support
+		
+		allowed = {
+			original_tag = IRI
+		}
+
+		visible = {
+		hidden_trigger = {
+			has_completed_focus = IRI_Influence_Sphere_Ambitions }
+			has_global_flag = IRI_kur_influenced
+			KUR = { is_subject = no }
+		}
+		
+		available = {
+			NOT = { has_war_with = KUR }
+			is_subject = no
+			hidden_trigger = {
+			KUR = { is_subject = no }
+			has_completed_focus = IRI_Influence_Sphere_Ambitions			
+			}
+			has_global_flag = IRI_kur_influenced
+		}
+		
+		modifier = {
+		consumer_goods_factor = 0.1
+		}
+
+		cost = 100
+
+		days_remove = 80
+
+		cancel_if_not_visible = yes
+		
+		remove_effect = {
+		custom_effect_tooltip = IRI_puppet_question_tt
+		hidden_effect = {
+		KUR = { country_event = { id = iri.21 } }
+		}
+		}
+	}
+	IRI_decision_approach_bergialer = {
+	
+		icon = generic_civil_support
+		
+		allowed = {
+			original_tag = IRI
+		}
+
+
+		visible = {
+		hidden_trigger = {
+			has_completed_focus = IRI_Influence_Sphere_Ambitions }
+			NOT = { has_global_flag = IRI_BER_influenced }
+			BER = { is_subject = no }
+		}
+		
+		available = {
+			NOT = { has_war_with = BER }
+			is_subject = no
+			hidden_trigger = {
+			BER = { is_subject = no }
+			has_completed_focus = IRI_Influence_Sphere_Ambitions			
+			}
+			NOT = { has_global_flag = IRI_BER_influenced }
+		}
+		
+		modifier = {
+		consumer_goods_factor = 0.05
+		}
+
+		cost = 150
+
+		days_remove = 80
+
+		cancel_if_not_visible = yes
+		
+		remove_effect = {
+		custom_effect_tooltip = IRI_influence_question_tt
+		hidden_effect = {
+		BER = { country_event = { id = iri.28 } }
+		}
+		}
+	}
+	
+	IRI_decision_puppet_bergialer = {
+	
+		icon = generic_civil_support
+		
+		allowed = {
+			original_tag = IRI
+		}
+
+		visible = {
+		hidden_trigger = {
+			has_completed_focus = IRI_Influence_Sphere_Ambitions }
+			has_global_flag = IRI_BER_influenced
+			BER = { is_subject = no }
+		}
+		
+		available = {
+			NOT = { has_war_with = BER }
+			is_subject = no
+			hidden_trigger = {
+			BER = { is_subject = no }
+			has_completed_focus = IRI_Influence_Sphere_Ambitions			
+			}
+			has_global_flag = IRI_BER_influenced
+		}
+		
+		modifier = {
+		consumer_goods_factor = 0.1
+		}
+
+		cost = 100
+
+		days_remove = 80
+
+		cancel_if_not_visible = yes
+		
+		remove_effect = {
+		custom_effect_tooltip = IRI_puppet_question_tt
+		hidden_effect = {
+		BER = { country_event = { id = iri.21 } }
+		}
+		}
+	}
+	IRI_decision_approach_lirothlind = {
+	
+		icon = generic_civil_support
+		
+		allowed = {
+			original_tag = IRI
+		}
+
+
+		visible = {
+		hidden_trigger = {
+			has_completed_focus = IRI_Influence_Sphere_Ambitions }
+			NOT = { has_global_flag = IRI_LIR_influenced }
+			LIR = { is_subject = no }
+		}
+		
+		available = {
+			NOT = { has_war_with = LIR }
+			is_subject = no
+			hidden_trigger = {
+			LIR = { is_subject = no }
+			has_completed_focus = IRI_Influence_Sphere_Ambitions			
+			}
+			NOT = { has_global_flag = IRI_LIR_influenced }
+		}
+		
+		modifier = {
+		consumer_goods_factor = 0.05
+		}
+
+		cost = 150
+
+		days_remove = 80
+
+		cancel_if_not_visible = yes
+		
+		remove_effect = {
+		custom_effect_tooltip = IRI_influence_question_tt
+		hidden_effect = {
+		LIR = { country_event = { id = iri.27 } }
+		}
+		}
+	}
+	
+	IRI_decision_puppet_lirothlind = {
+	
+		icon = generic_civil_support
+		
+		allowed = {
+			original_tag = IRI
+		}
+
+		visible = {
+		hidden_trigger = {
+			has_completed_focus = IRI_Influence_Sphere_Ambitions }
+			has_global_flag = IRI_LIR_influenced
+			LIR = { is_subject = no }
+		}
+		
+		available = {
+			NOT = { has_war_with = LIR }
+			is_subject = no
+			hidden_trigger = {
+			LIR = { is_subject = no }
+			has_completed_focus = IRI_Influence_Sphere_Ambitions			
+			}
+			has_global_flag = IRI_LIR_influenced
+		}
+		
+		modifier = {
+		consumer_goods_factor = 0.1
+		}
+
+		cost = 100
+
+		days_remove = 80
+
+		cancel_if_not_visible = yes
+		
+		remove_effect = {
+		custom_effect_tooltip = IRI_puppet_question_tt
+		hidden_effect = {
+		LIR = { country_event = { id = iri.21 } }
+		}
+		}
+	}
+	IRI_decision_approach_rimatu = {
+	
+		icon = generic_civil_support
+		
+		allowed = {
+			original_tag = IRI
+		}
+
+
+		visible = {
+		hidden_trigger = {
+			has_completed_focus = IRI_Influence_Sphere_Ambitions }
+			NOT = { has_global_flag = IRI_RMT_influenced }
+			RMT = { is_subject = no }
+		}
+		
+		available = {
+			NOT = { has_war_with = RMT }
+			is_subject = no
+			hidden_trigger = {
+			RMT = { is_subject = no }
+			has_completed_focus = IRI_Influence_Sphere_Ambitions			
+			}
+			NOT = { has_global_flag = IRI_RMT_influenced }
+		}
+		
+		modifier = {
+		consumer_goods_factor = 0.05
+		}
+
+		cost = 150
+
+		days_remove = 80
+
+		cancel_if_not_visible = yes
+		
+		remove_effect = {
+		custom_effect_tooltip = IRI_influence_question_tt
+		hidden_effect = {
+		RMT = { country_event = { id = iri.26 } }
+		}
+		}
+	}
+	
+	IRI_decision_puppet_rimatu = {
+	
+		icon = generic_civil_support
+		
+		allowed = {
+			original_tag = IRI
+		}
+
+		visible = {
+		hidden_trigger = {
+			has_completed_focus = IRI_Influence_Sphere_Ambitions }
+			has_global_flag = IRI_RMT_influenced
+			RMT = { is_subject = no }
+		}
+		
+		available = {
+			NOT = { has_war_with = RMT }
+			is_subject = no
+			hidden_trigger = {
+			RMT = { is_subject = no }
+			has_completed_focus = IRI_Influence_Sphere_Ambitions			
+			}
+			has_global_flag = IRI_RMT_influenced
+		}
+		
+		modifier = {
+		consumer_goods_factor = 0.1
+		}
+
+		cost = 100
+
+		days_remove = 80
+
+		cancel_if_not_visible = yes
+		
+		remove_effect = {
+		custom_effect_tooltip = IRI_puppet_question_tt
+		hidden_effect = {
+		RMT = { country_event = { id = iri.21 } }
+		}
+		}
+	}
+	IRI_decision_approach_mhand = {
+	
+		icon = generic_civil_support
+		
+		allowed = {
+			original_tag = IRI
+		}
+
+
+		visible = {
+		hidden_trigger = {
+			has_completed_focus = IRI_Influence_Sphere_Ambitions }
+			NOT = { has_global_flag = IRI_MER_influenced }
+			MER = { is_subject = no }
+		}
+		
+		available = {
+			NOT = { has_war_with = MER }
+			is_subject = no
+			hidden_trigger = {
+			MER = { is_subject = no }
+			has_completed_focus = IRI_Influence_Sphere_Ambitions			
+			}
+			NOT = { has_global_flag = IRI_MER_influenced }
+		}
+		
+		modifier = {
+		consumer_goods_factor = 0.05
+		}
+
+		cost = 150
+
+		days_remove = 80
+
+		cancel_if_not_visible = yes
+		
+		remove_effect = {
+		custom_effect_tooltip = IRI_influence_question_tt
+		hidden_effect = {
+		MER = { country_event = { id = iri.25 } }
+		}
+		}
+	}
+	
+	IRI_decision_puppet_mhand = {
+	
+		icon = generic_civil_support
+		
+		allowed = {
+			original_tag = IRI
+		}
+
+		visible = {
+		hidden_trigger = {
+			has_completed_focus = IRI_Influence_Sphere_Ambitions }
+			has_global_flag = IRI_MER_influenced
+			MER = { is_subject = no }
+		}
+		
+		available = {
+			NOT = { has_war_with = MER }
+			is_subject = no
+			hidden_trigger = {
+			MER = { is_subject = no }
+			has_completed_focus = IRI_Influence_Sphere_Ambitions			
+			}
+			has_global_flag = IRI_MER_influenced
+		}
+		
+		modifier = {
+		consumer_goods_factor = 0.1
+		}
+
+		cost = 100
+
+		days_remove = 80
+
+		cancel_if_not_visible = yes
+		
+		remove_effect = {
+		custom_effect_tooltip = IRI_puppet_question_tt
+		hidden_effect = {
+		MER = { country_event = { id = iri.21 } }
+		}
+		}
+	}
+	IRI_decision_approach_bilodya = {
+	
+		icon = generic_civil_support
+		
+		allowed = {
+			original_tag = IRI
+		}
+
+
+		visible = {
+		hidden_trigger = {
+			has_completed_focus = IRI_Influence_Sphere_Ambitions }
+			NOT = { has_global_flag = IRI_BLD_influenced }
+			BLD = { is_subject = no }
+		}
+		
+		available = {
+			NOT = { has_war_with = BLD }
+			is_subject = no
+			hidden_trigger = {
+			BLD = { is_subject = no }
+			has_completed_focus = IRI_Influence_Sphere_Ambitions			
+			}
+			NOT = { has_global_flag = IRI_BLD_influenced }
+		}
+		
+		modifier = {
+		consuBLD_goods_factor = 0.05
+		}
+
+		cost = 150
+
+		days_remove = 80
+
+		cancel_if_not_visible = yes
+		
+		remove_effect = {
+		custom_effect_tooltip = IRI_influence_question_tt
+		hidden_effect = {
+		BLD = { country_event = { id = iri.24 } }
+		}
+		}
+	}
+	
+	IRI_decision_puppet_bilodya = {
+	
+		icon = generic_civil_support
+		
+		allowed = {
+			original_tag = IRI
+		}
+
+		visible = {
+		hidden_trigger = {
+			has_completed_focus = IRI_Influence_Sphere_Ambitions }
+			has_global_flag = IRI_BLD_influenced
+			BLD = { is_subject = no }
+		}
+		
+		available = {
+			NOT = { has_war_with = BLD }
+			is_subject = no
+			hidden_trigger = {
+			BLD = { is_subject = no }
+			has_completed_focus = IRI_Influence_Sphere_Ambitions			
+			}
+			has_global_flag = IRI_BLD_influenced
+		}
+		
+		modifier = {
+		consuBLD_goods_factor = 0.1
+		}
+
+		cost = 100
+
+		days_remove = 80
+
+		cancel_if_not_visible = yes
+		
+		remove_effect = {
+		custom_effect_tooltip = IRI_puppet_question_tt
+		hidden_effect = {
+		BLD = { country_event = { id = iri.21 } }
+		}
+		}
+	}
+
 }
 
 

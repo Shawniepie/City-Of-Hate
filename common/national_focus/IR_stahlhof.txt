@@ -1003,6 +1003,8 @@ focus_tree = {
 			add_stability = 0.08
 			give_guarantee = NRK
 			NRK = { add_stability = 0.08 give_guarantee = STA }
+			set_country_flag = STA_nrk_ally
+			custom_effect_tooltip = STA_ally_this_freiprinz
 			
 		}
 
@@ -1035,6 +1037,8 @@ focus_tree = {
 					autonomy_state = autonomy_IR_freiprinztum
 				}
 			}
+			set_country_flag = STA_nrk_ally
+			custom_effect_tooltip = STA_ally_this_freiprinz
 		}
 
 	}
@@ -1129,27 +1133,27 @@ focus_tree = {
 		}
 
 	}
-	focus = {
-		id = STA_the_holzbrenn_opportunity
-		icon = GFX_goal_generic_position_armies
-		cost = 10
-		prerequisite = {
-			focus = STA_trial_by_fire
-		}
-		x = 38
-		y = 3
-		
-		available = {
-		
-		}
-		bypass = {
-		
-		}
-		completion_reward = {
-		
-		}
-
-	}
+	#focus = {
+	#	id = STA_the_holzbrenn_opportunity
+	#	icon = GFX_goal_generic_position_armies
+	#	cost = 10
+	#	prerequisite = {
+	#		focus = STA_trial_by_fire
+	#	}
+	#	x = 38
+	#	y = 3
+	#	
+	#	available = {
+	#	
+	#	}
+	#	bypass = {
+	#	
+	#	}
+	#	completion_reward = {
+	#	
+	#	}
+#
+#	}
 	focus = {
 		id = STA_experience_bought_with_blood
 		icon = GFX_goal_generic_build_tank
@@ -1186,6 +1190,10 @@ focus_tree = {
 		}
 		x = 42
 		y = 3
+		
+		allow_branch = {
+			always = no
+		}
 		
 		available = {
 			owns_state = 218
@@ -1484,6 +1492,8 @@ focus_tree = {
 		
 		}
 		completion_reward = {
+			set_country_flag = STA_hlz_ally
+			custom_effect_tooltip = STA_ally_this_freiprinz
 		}
 
 	}
@@ -1593,7 +1603,8 @@ focus_tree = {
 		
 		}
 		completion_reward = {
-		
+			set_country_flag = STA_frt_ally
+			custom_effect_tooltip = STA_ally_this_freiprinz
 		}
 
 	}
@@ -1818,34 +1829,35 @@ focus_tree = {
 		
 		}
 		completion_reward = {
-		
+			set_country_flag = STA_stv_ally
+			custom_effect_tooltip = STA_ally_this_freiprinz
 		}
 
 	}
-	focus = {
-		id = STA_break_with_the_orthodoxy
-		icon = GFX_focus_generic_military_mission
-		cost = 10
-		prerequisite = {
-			focus = STA_divine_right_to_rule
-		}
-		mutually_exclusive = {
-			focus = STA_the_priests_of_st_vichtlas
-		}
-		x = 59
-		y = 4
-		
-		available = {
-			theocrat > 0.35
-		}
-		bypass = {
-		
-		}
-		completion_reward = {
-		
-		}
-
-	}
+	#focus = {
+	#	id = STA_break_with_the_orthodoxy
+	#	icon = GFX_focus_generic_military_mission
+	#	cost = 10
+	#	prerequisite = {
+	#		focus = STA_divine_right_to_rule
+	#	}
+	#	mutually_exclusive = {
+	#		focus = STA_the_priests_of_st_vichtlas
+	#	}
+	#	x = 59
+	#	y = 4
+	#	
+	#	available = {
+	#		theocrat > 0.35
+	#	}
+	#	bypass = {
+	#	
+	#	}
+	#	completion_reward = {
+	#	
+	#	}
+#
+#	}
 	focus = {
 		id = STA_reach_out_to_the_hornbergers
 		icon = GFX_goal_generic_improve_relations
@@ -1968,7 +1980,7 @@ focus_tree = {
 	}
 	focus = {
 		id = STA_every_village_a_soldier
-		icon = GFX_focus_focus_fra_revolution_upmost
+		icon = GFX_BLD_Raider_Traditions
 		cost = 10
 		prerequisite = {
 			focus = STA_meat_for_the_grinder
@@ -1992,7 +2004,7 @@ focus_tree = {
 	}
 	focus = {
 		id = STA_scare_the_faustburg_soldiers_into_submission
-		icon = GFX_focus_cze_german_puppet
+		icon = GFX_IRI_Scorch_The_Earth
 		cost = 10
 		prerequisite = {
 			focus = STA_propaganda_bombardments
@@ -2330,27 +2342,27 @@ focus_tree = {
 		}
 
 	}
-	focus = {
-		id = STA_der_pressler_pakt
-		icon = GFX_goal_generic_dangerous_deal
-		cost = 10
-		prerequisite = {
-			focus = STA_the_holzbrenn_opportunity
-		}
-		x = 38
-		y = 4
-		
-		available = {
-		
-		}
-		bypass = {
-		
-		}
-		completion_reward = {
-		
-		}
-
-	}
+	#focus = {
+	#	id = STA_der_pressler_pakt
+	#	icon = GFX_goal_generic_dangerous_deal
+	#	cost = 10
+	#	prerequisite = {
+	#		focus = STA_the_holzbrenn_opportunity
+	#	}
+	#	x = 38
+	#	y = 4
+	#	
+	#	available = {
+	#	
+	#	}
+	#	bypass = {
+	#	
+	#	}
+	#	completion_reward = {
+	#	
+	#	}
+#
+#	}
 	#focus = {
 	#	id = STA_posthoc_justification
 	#	icon = GFX_goal_generic_propaganda
@@ -2392,7 +2404,8 @@ focus_tree = {
 		
 		}
 		completion_reward = {
-		
+			custom_effect_tooltip = STA_ally_this_freiprinz
+			set_country_flag = STA_wer_ally
 		}
 
 	}

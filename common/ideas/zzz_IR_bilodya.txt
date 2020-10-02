@@ -1,0 +1,23 @@
+ideas = {
+	
+	country = {
+
+		 BLD_Swamp_Is_Our_Home = {
+			
+			allowed = {
+				original_tag = BLD
+			}
+			
+			allowed_civil_war = {
+			}
+			
+			picture =  GFX_idea_BLD_Swamp_Is_Our_Home
+			
+			removal_cost = -1
+			
+			modifier = {
+			army_core_defence_factor = 0.25
+			}
+		}
+	}
+}

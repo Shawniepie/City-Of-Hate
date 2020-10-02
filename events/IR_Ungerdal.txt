@@ -380,152 +380,17 @@ country_event = { #The Union Shattered
 	
 	option = {#Broken Dreams so Grand
 		name = ung.11.a
-		hidden_effect = {
-			end_puppet = HLZ
-			end_puppet = NOC
-			end_puppet = SVT
-			end_puppet = STA
-			end_puppet = SPW
-			end_puppet = TEI
-			end_puppet = NRK
-			end_puppet = ARK
-			end_puppet = SNF
-			end_puppet = WIS
-			end_puppet = WSZ
-			end_puppet = FTH
-			remove_state_core = 264
-			remove_state_core = 323
-			remove_state_core = 276
-			remove_state_core = 322
-			remove_state_core = 312
-			remove_state_core = 274
-			remove_state_core = 233
-			remove_state_core = 313
-			remove_state_core = 312
-			remove_state_core = 315
-			remove_state_core = 317
-			remove_state_core = 275
-			remove_state_core = 314
-			remove_state_core = 314
-			remove_state_core = 251
-			remove_state_core = 250
-			remove_state_core = 233
-			remove_state_core = 221
-			remove_state_core = 249
-			remove_state_core = 326
-			remove_state_core = 245
-			remove_state_core = 327
-			remove_state_core = 328
-			remove_state_core = 246
-			remove_state_core = 247
-			remove_state_core = 330
-			remove_state_core = 243
-			remove_state_core = 244
-			remove_state_core = 343
-			remove_state_core = 342
-			remove_state_core = 341
-			remove_state_core = 331
-		}
-		hidden_effect = {
-			FAU = {
-				add_state_core = 264
-				set_state_owner = 264
-				set_state_controller = 264
-			}
-			FAU = {
-				change_tag_from = UNG
-			}
-			FAU = {
-				annex_country = {
-					target = UNG
-					transfer_troops = yes
-				}
-			}
-		}
-		hidden_effect = {
-			FAU = {
-				add_state_core = 323
-				add_state_core = 276
-				add_state_core = 322
-				add_state_core = 312
-				add_state_core = 274
-				add_state_core = 233
-				add_state_core = 313
-				add_state_core = 312
-				add_state_core = 315
-				add_state_core = 317
-				add_state_core = 275
-				add_state_core = 314
-				add_state_core = 314
-				add_state_core = 251
-				add_state_core = 250
-				add_state_core = 233
-				add_state_core = 221
-				add_state_core = 249
-				add_state_core = 326
-				add_state_core = 245
-				add_state_core = 327
-				add_state_core = 328
-				add_state_core = 246
-				add_state_core = 247
-				add_state_core = 330
-				add_state_core = 243
-				add_state_core = 244
-				add_state_core = 343
-				add_state_core = 342
-				add_state_core = 341
-				add_state_core = 331
-				
-			}
-		}
-		hidden_effect = {
-			if = {
-				limit = {
-					STA = {
-						has_country_flag = STA_defect
-					}
-				}
-				ORD = {
-					puppet = STA
-				}
-				STA = {					
-					set_popularities = {
-						monarchy_absolute = 57 
-
-						monarchy_constitutional = 0
-						
-						republic_peasant = 9
-
-						republic_aristocrat = 0
-
-						republic_merchant = 6
-
-						theocrat = 12
-
-						puritan = 16
-
-					}
-					set_politics = {
-						ruling_party = monarchy_absolute
-					}
-				}
-			}
-		}
 		
-		hidden_effect = {
-			if = {
-				limit = {
-					UNG = {
-						is_in_faction = yes
-					}
-				}
-				UNG = {
-					dismantle_faction = yes
-				}
+		custom_effect_tooltip = UNG_union_fraying_tt
+		
+		STA = {
+			country_event = {
+				id = sta.72
+				hours = 1
 			}
 		}
 	}
-}
+}	
 
 country_event = {#Ordorian Raid
 	id = ung.12
@@ -1887,5 +1752,399 @@ country_event = {#Irinthios Rejects!
 	option = {#Dang
 		name = ung.55.a
 		add_political_power = -15
+	}
+}
+
+country_event = {#Bergialer Call to Arms!
+	id = ung.56
+	title = ung.56.t
+	desc = ung.56.d
+	picture = GFX_report_event_military_planning
+	
+	is_triggered_only = yes
+
+	option = {#Attack!
+		name = ung.56.a
+		declare_war_on = {
+			target = KUR
+			type = annex_everything
+		}
+		set_country_flag = UNG_helping_terugkeer
+	}
+}
+
+country_event = {#Irinthios Marriage!
+	id = ung.57
+	title = ung.57.t
+	desc = ung.57.d
+	picture = GFX_report_event_finnish_letter
+	
+	is_triggered_only = yes
+	
+	option = {#Yay
+		name = ung.57.a
+		add_ideas = marriage_UNG_IRI
+		add_political_power = 50
+		
+		UNG_improve_IRI_relations = yes
+		
+		UNG_worsen_TLA_relations = yes
+	}
+}
+
+country_event = {#Irinthios Marriage Declined
+	id = ung.58
+	title = ung.58.t
+	desc = ung.58.d
+	picture = GFX_report_event_finnish_letter
+	
+	is_triggered_only = yes
+	
+	option = {#Awh
+		name = ung.58.a
+		add_political_power = -35
+	}
+}
+
+country_event = {#Realm Marriage!
+	id = ung.59
+	title = ung.59.t
+	desc = ung.59.d
+	picture = GFX_report_event_finnish_letter
+	
+	is_triggered_only = yes
+	
+	option = {#Yay
+		name = ung.59.a
+		add_ideas = marriage_UNG_GMR
+		add_political_power = 50
+		
+		create_corps_commander = {
+			name = "Oldorin Arthenon"
+			picture = "Portrait_UNG_Oldorin_Arthenon.dds"
+			traits = { trickster brilliant_strategist noctheurge }
+			skill = 5
+			attack_skill = 4
+			defense_skill = 4
+			planning_skill = 4
+			logistics_skill = 3
+		}
+	}
+}
+
+country_event = {#Realm Marriage Declined
+	id = ung.60
+	title = ung.60.t
+	desc = ung.60.d
+	picture = GFX_report_event_finnish_letter
+	
+	is_triggered_only = yes
+	
+	option = {#Awh
+		name = ung.60.a
+		add_political_power = -35
+	}
+}
+
+country_event = {#Skaelinger Call to Arms!
+	id = ung.61
+	title = ung.61.t
+	desc = ung.61.d
+	picture = GFX_report_event_military_planning
+	
+	is_triggered_only = yes
+
+	option = {#Attack!
+		name = ung.61.a
+		declare_war_on = {
+			target = KUR
+			type = annex_everything
+		}
+		set_country_flag = UNG_helping_seventh_campaign
+	}
+}
+
+### NORDTORF SUMMIT
+
+country_event = {#Skaelinger Attends
+	id = ung.62
+	title = ung.62.t
+	desc = ung.62.d
+	picture = GFX_report_report_event_generic_rally_3
+	
+	is_triggered_only = yes
+
+	option = {#Huzzah
+		name = ung.62.a
+		add_political_power = 35
+		set_country_flag = UNG_nordtorf_summit_SKA_attends
+	}
+}
+
+country_event = {#Skaelinger Declines to Attend
+	id = ung.63
+	title = ung.63.t
+	desc = ung.63.d
+	picture = GFX_report_event_generic_sign_treaty3
+	
+	is_triggered_only = yes
+
+	option = {#Ahw
+		name = ung.63.a
+		add_political_power = -35
+		set_country_flag = UNG_nordtorf_summit_SKA_refuses_to_attend
+	}
+}
+
+country_event = {#Rimatü Attends
+	id = ung.64
+	title = ung.64.t
+	desc = ung.64.d
+	picture = GFX_report_report_event_generic_rally_3
+	
+	is_triggered_only = yes
+
+	option = {#Huzzah
+		name = ung.64.a
+		add_political_power = 35
+		set_country_flag = UNG_nordtorf_summit_RMT_attends
+	}
+}
+
+country_event = {#Rimatü Declines to Attend
+	id = ung.65
+	title = ung.65.t
+	desc = ung.65.d
+	picture = GFX_report_event_generic_sign_treaty3
+	
+	is_triggered_only = yes
+
+	option = {#Ahw
+		name = ung.65.a
+		add_political_power = -35
+		set_country_flag = UNG_nordtorf_summit_RMT_refuses_to_attend
+	}
+}
+
+
+country_event = {#SKA and RMT attend
+	id = ung.66
+	title = ung.66.t
+	desc = ung.66.d
+	picture = GFX_report_event_hol_cabinet_gerbrandy
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		days = 15
+	}
+	
+	trigger = {
+		AND = {
+			OR = {
+				has_country_flag = UNG_nordtorf_summit_SKA_attends
+				has_country_flag = UNG_nordtorf_summit_SKA_refuses_to_attend
+			}
+			OR = {
+				has_country_flag = UNG_nordtorf_summit_RMT_attends
+				has_country_flag = UNG_nordtorf_summit_RMT_refuses_to_attend
+			}
+		}
+	}
+
+	option = {#Back SKA
+		name = ung.66.a
+		
+		ai_chance = {
+			factor = 10
+			modifier = {
+				has_completed_focus = UNG_recognize_rimatu
+				factor = 0
+			}
+		}
+		
+		if = {
+			limit = {
+				has_completed_focus = UNG_recognize_rimatu
+			}
+			custom_effect_tooltip = UNG_betraying_ally_tt
+			add_political_power = -150
+			add_stability = -0.15
+		}
+		
+		SKA = {
+			country_event = {
+				id = ska.13
+				day = 3
+			}
+		}
+		RMT = {
+			country_event = {
+				id = rmt.3
+				day = 3
+			}
+		}
+	}
+	
+	option = {#Back RMT
+		name = ung.66.b
+		
+		ai_chance = {
+			factor = 10
+			modifier = {
+				has_completed_focus = UNG_recognize_high_king
+				factor = 0
+			}
+		}
+		
+		if = {
+			limit = {
+				has_completed_focus = UNG_recognize_high_king
+			}
+			custom_effect_tooltip = UNG_betraying_ally_tt
+			add_political_power = -150
+			add_stability = -0.15
+		}
+		
+		SKA = {
+			country_event = {
+				id = ska.14
+				day = 3
+			}
+		}
+		RMT = {
+			country_event = {
+				id = rmt.4
+				day = 3
+			}
+		}
+	}
+}
+
+country_event = {#RMT Accepts
+	id = ung.67
+	title = ung.67.t
+	desc = ung.67.d
+	picture = GFX_report_event_communists_cheer
+	
+	is_triggered_only = yes
+	
+	option = {#Yay
+		name = ung.67.a
+		
+		add_political_power = 150
+		
+		effect_tooltip = {
+			
+			SKA = {
+			
+				puppet = RMT
+				
+				remove_opinion_modifier = {
+					target = RMT
+					modifier = bitter_rivals
+				}
+
+				add_opinion_modifier = {
+					target = RMT
+					modifier = dislike_opinion
+				}
+				
+				reverse_add_opinion_modifier = {
+					target = RMT
+					modifier = dislike_opinion
+				}
+			}
+			
+			RMT = {
+				remove_opinion_modifier = {
+					target = SKA
+					modifier = bitter_rivals
+				}
+			}
+		}
+		
+		set_country_flag = UNG_nordtorf_summit_success_SKA_favoured
+	}
+}
+
+country_event = {#RMT Declines
+	id = ung.68
+	title = ung.68.t
+	desc = ung.68.d
+	picture = GFX_report_event_indonesia_handover
+	
+	is_triggered_only = yes
+	
+	option = {#War it is
+		name = ung.68.a
+		
+		add_political_power = -75
+		
+		set_country_flag = UNG_nordtorf_summit_fails_SKA_favoured
+	}
+}
+
+country_event = {#SKA accepts
+	id = ung.69
+	title = ung.69.t
+	desc = ung.69.d
+	picture = GFX_report_event_communists_cheer
+	
+	is_triggered_only = yes
+	
+	option = {#Yay
+		name = ung.69.a
+		
+		add_political_power = 150
+		
+		effect_tooltip = {
+			RMT = {
+				remove_opinion_modifier = {
+					target = SKA
+					modifier = bitter_rivals
+				}
+			}
+			SKA = {
+				remove_opinion_modifier = {
+					target = RMT
+					modifier = bitter_rivals
+				}
+				add_opinion_modifier = {
+					target = RMT
+					modifier = dislike_opinion
+				}
+				
+				reverse_add_opinion_modifier = {
+					target = RMT
+					modifier = dislike_opinion
+				}
+				
+				diplomatic_relation = {
+					country = RMT
+					relation = non_aggression_pact
+					active = yes
+				}
+			}
+		}
+		
+		set_country_flag = UNG_nordtorf_summit_success_RMT_favoured
+	}
+}
+
+country_event = {#SKA Declines
+	id = ung.70
+	title = ung.70.t
+	desc = ung.70.d
+	picture = GFX_report_event_indonesia_handover
+	
+	is_triggered_only = yes
+	
+	option = {#War it is
+		name = ung.70.a
+		
+		add_political_power = -75
+		
+		set_country_flag = UNG_nordtorf_summit_fails_RMT_favoured
 	}
 }

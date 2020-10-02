@@ -62,6 +62,16 @@ country_event = { #Conquest of Stahlhof
 				}
 				kill_country_leader = yes
 				remove_ideas = OSG_settler_government
+				delete_unit_template_and_units = {
+					division_template = "Grove Guards"
+				}
+				delete_unit_template_and_units = {
+					division_template = "Bladesingers"
+				}
+				delete_unit_template_and_units = {
+					division_template = "Rangers"
+				}
+				load_oob = "STA_empty"
 			}
 			
 			every_state = {
@@ -258,7 +268,6 @@ country_event = { #Conquest of Rthauiaur
 				original_tag = RTH
 				original_tag = ORD # Special events for everyone's favourite maniacs
 				original_tag = EOR
-				tag = SKA
 			}
 		}
 		OR = {
@@ -432,11 +441,26 @@ country_event = { #Conquest of Rthauiaur
 				NOT = {
 					is_core_of = ROOT
 					is_claimed_by = ROOT
+					state = 135
+					state = 133
+					state = 139
 				}
 			}
 			RTH = {
 				transfer_state = PREV
 			}
+		}
+		
+		139 = {
+			set_state_name = "Mersingbjarg"
+		}
+		
+		135 = {
+			set_state_name = "Svinnersút"
+		}
+		
+		133 = {
+			set_state_name = "Khoringr"
 		}
 		
 		create_faction = "brotherhood_alliance"
@@ -456,13 +480,14 @@ country_event = { #Conquest of Rthauiaur
 		}
 		
 		hidden_effect = {
+			set_country_flag = conquest_of_rthauiaur
 			set_autonomy = {
 				target = RTH
 				autonomy_state = autonomy_free
 			}
 			RTH = {
 				set_politics = {
-					ruling_party = monarchy_constitutional
+					ruling_party = republic_peasant
 				}
 			}
 			RTH = {
@@ -1275,6 +1300,16 @@ country_event = { #Conquest of Nochwald
 				}
 				kill_country_leader = yes
 				remove_ideas = OSG_settler_government
+				delete_unit_template_and_units = {
+					division_template = "Grove Guards"
+				}
+				delete_unit_template_and_units = {
+					division_template = "Bladesingers"
+				}
+				delete_unit_template_and_units = {
+					division_template = "Rangers"
+				}
+				load_oob = "NOC_empty"
 			}
 			
 			every_state = {
@@ -2469,6 +2504,16 @@ country_event = { #Conquest of Wistingen
 				}
 				kill_country_leader = yes
 				remove_ideas = OSG_settler_government
+				delete_unit_template_and_units = {
+					division_template = "Grove Guards"
+				}
+				delete_unit_template_and_units = {
+					division_template = "Bladesingers"
+				}
+				delete_unit_template_and_units = {
+					division_template = "Rangers"
+				}
+				load_oob = "WIS_empty"
 			}
 			228 = {
 				set_state_name = "Wistingen"
@@ -2744,6 +2789,19 @@ country_event = { #Conquest of Skaelinger
 				}
 				kill_country_leader = yes
 				remove_ideas = OSG_settler_government
+				delete_unit_template_and_units = {
+					division_template = "Grove Guards"
+				}
+				delete_unit_template_and_units = {
+					division_template = "Bladesingers"
+				}
+				delete_unit_template_and_units = {
+					division_template = "Rangers"
+				}
+				load_oob = "SKA_empty"
+				set_technology = {
+					dwarven_warriors = 1
+				}
 			}
 			every_state = {
 				limit = {
@@ -2758,6 +2816,7 @@ country_event = { #Conquest of Skaelinger
 	trigger = {
 		NOT = {
 			original_tag = SKA
+			tag = VRG
 		}
 		OR = {
 			AND = {
@@ -3622,6 +3681,15 @@ country_event = { #Conquest of Ordoria
 			ROOT = {
 				has_country_flag = conquest_of_ordoria
 			}
+		}
+	}
+	
+	immediate = {
+		UNG = {
+			clr_country_flag = UNG_trade_harassment
+		}
+		GMR = {
+			clr_country_flag = GMR_trade_harassment
 		}
 	}
 
@@ -4597,6 +4665,16 @@ country_event = { #Conquest of Ierethayne
 				}
 				kill_country_leader = yes
 				remove_ideas = OSG_settler_government
+				delete_unit_template_and_units = {
+					division_template = "Grove Guards"
+				}
+				delete_unit_template_and_units = {
+					division_template = "Bladesingers"
+				}
+				delete_unit_template_and_units = {
+					division_template = "Rangers"
+				}
+				load_oob = "IRT_empty"
 			}
 		}
 	}
@@ -4935,6 +5013,16 @@ country_event = { #Conquest of Trifell
 				}
 				kill_country_leader = yes
 				remove_ideas = OSG_settler_government
+				delete_unit_template_and_units = {
+					division_template = "Grove Guards"
+				}
+				delete_unit_template_and_units = {
+					division_template = "Bladesingers"
+				}
+				delete_unit_template_and_units = {
+					division_template = "Rangers"
+				}
+				load_oob = "TRI_empty"
 			}
 			29 = {
 				set_state_name = "Trifell"
@@ -5281,6 +5369,16 @@ country_event = { #Conquest of Nastrogdar
 				}
 				kill_country_leader = yes
 				remove_ideas = OSG_settler_government
+				delete_unit_template_and_units = {
+					division_template = "Grove Guards"
+				}
+				delete_unit_template_and_units = {
+					division_template = "Bladesingers"
+				}
+				delete_unit_template_and_units = {
+					division_template = "Rangers"
+				}
+				load_oob = "NAS_empty"
 			}
 			every_state = {
 				limit = {
@@ -7721,6 +7819,9 @@ country_event = { #Conquest of Kurgur
 				OR = {
 					tag = UNG
 					is_subject_of = UNG
+					tag = BER
+					tag = SKA
+					tag = RMT
 				}
 			}
 		}
@@ -7756,6 +7857,17 @@ country_event = { #Conquest of Kurgur
 	option = { # Annex
 		name = annex.30.b
 
+		trigger = {
+			NOT = {
+				OR = {
+					has_country_flag = UNG_helping_terugkeer
+					has_country_flag = UNG_helping_seventh_campaign
+					has_country_flag = BER_terugkeer_with_UNG
+					has_country_flag = SKA_seventh_campaign_with_UNG
+				}
+			}
+		}
+
 		ai_chance = {
 			factor = 50
 			modifier = {
@@ -7788,6 +7900,37 @@ country_event = { #Conquest of Kurgur
 				add_war_support = -0.05
 			}
 		}
+		
+		if = {
+			limit = {
+				OR = {
+					tag = BER
+					tag = RMT
+					tag = SKA
+				}
+			}
+			659 = {
+				set_state_name = "Skaptaholt"
+			}
+			179 = {
+				set_state_name = "Asolfsskali"
+			}
+			176 = {
+				set_state_name = "Hvanneyrr"
+			}
+			174 = {
+				set_state_name = "Ruins of Zarathum"
+			}
+			173 = {
+				set_state_name = "Lagraskr"
+			}
+			172 = {
+				set_state_name = "Valgring"
+			}
+			365 = {
+				set_state_name = "Tholorg"
+			}
+		}
 	}
 
 	option = { # Freiprinztum
@@ -7800,6 +7943,12 @@ country_event = { #Conquest of Kurgur
 				}
 				UNG = {
 					is_subject_of = ROOT
+				}
+			}
+			NOT = {
+				OR = {
+					has_country_flag = UNG_helping_terugkeer
+					has_country_flag = UNG_helping_seventh_campaign
 				}
 			}
 		}
@@ -7828,6 +7977,226 @@ country_event = { #Conquest of Kurgur
 				autonomy_state = autonomy_IR_freiprinztum
 			}
 		}
+	}
+	
+	option = { #Take Vergall Lands
+		name = annex.30.e
+		trigger = {
+			OR = {
+				AND = {
+					tag = UNG
+					UNG = {
+						has_country_flag = UNG_helping_terugkeer
+					}
+				}
+				AND = {
+					ROOT = {
+						is_subject_of = UNG
+					}
+					UNG = {
+						has_country_flag = UNG_helping_terugkeer
+					}
+				}
+				AND = {
+					UNG = {
+						is_subject_of = ROOT
+					}
+					UNG = {
+						has_country_flag = UNG_helping_terugkeer
+					}
+				}
+				AND = {
+					tag = UNG
+					UNG = {
+						has_country_flag = UNG_helping_seventh_campaign
+					}
+				}
+				AND = {
+					ROOT = {
+						is_subject_of = UNG
+					}
+					UNG = {
+						has_country_flag = UNG_helping_seventh_campaign
+					}
+				}
+				AND = {
+					UNG = {
+						is_subject_of = ROOT
+					}
+					UNG = {
+						has_country_flag = UNG_helping_seventh_campaign
+					}
+				}
+				
+				tag = BER
+				
+				tag = SKA
+				
+				tag = RMT
+			}
+		}
+		
+		ai_chance = {
+			factor = 5000
+		}
+		
+		every_state = {
+			limit = {
+				is_core_of = KUR
+				is_controlled_by = ROOT
+				NOT = {
+					is_core_of = ROOT
+					is_claimed_by = ROOT
+					state = 659
+					state = 179
+					state = 176
+					state = 174
+					state = 173
+					state = 172
+					state = 365
+				}
+			}
+			KUR = {
+				transfer_state = PREV
+			}
+		}
+		
+		if = {
+			limit = {
+				OR = {
+					AND = {
+						OR = {
+							tag = UNG
+							UNG = {
+								is_subject_of = ROOT
+							}
+							ROOT = {
+								is_subject_of = UNG
+							}
+						}
+						UNG = {
+							has_country_flag = UNG_helping_terugkeer
+						}
+					}
+					tag = BER
+				}
+			}
+			every_state = {
+				limit = {
+					OR = {
+						state = 659
+						state = 179
+						state = 176
+						state = 174
+						state = 173
+						state = 172
+						state = 365
+					}
+				}
+				BER = {
+					transfer_state = PREV
+				}
+			}
+		}
+		
+		if = {
+			limit = {
+				OR = {
+					AND = {
+						OR = {
+							tag = UNG
+							UNG = {
+								is_subject_of = ROOT
+							}
+							ROOT = {
+								is_subject_of = UNG
+							}
+						}
+						UNG = {
+							has_country_flag = UNG_helping_seventh_campaign
+						}
+					}
+					tag = SKA
+				}
+			}
+			every_state = {
+				limit = {
+					OR = {
+						state = 659
+						state = 179
+						state = 176
+						state = 174
+						state = 173
+						state = 172
+						state = 365
+					}
+				}
+				SKA = {
+					transfer_state = PREV
+				}
+			}
+		}
+		
+		659 = {
+			set_state_name = "Skaptaholt"
+		}
+		179 = {
+			set_state_name = "Asolfsskali"
+		}
+		176 = {
+			set_state_name = "Hvanneyrr"
+		}
+		174 = {
+			set_state_name = "Ruins of Zarathum"
+		}
+		173 = {
+			set_state_name = "Lagraskr"
+		}
+		172 = {
+			set_state_name = "Valgring"
+		}
+		365 = {
+			set_state_name = "Tholorg"
+		}
+		
+		if = {
+			limit = {
+				OR = {
+					tag = UNG
+					UNG = {
+						is_subject_of = ROOT
+					}
+					ROOT = {
+						is_subject_of = UNG
+					}
+				}
+			}
+			UNG = {
+				set_autonomy = {
+					target = KUR
+					autonomy_state = autonomy_IR_freiprinztum
+				}
+			}
+		}
+		
+		if = {
+			limit = {
+				NOT = {
+					OR = {
+						tag = UNG
+						UNG = {
+							is_subject_of = ROOT
+						}
+						ROOT = {
+							is_subject_of = UNG
+						}
+					}
+				}
+			}
+			puppet = KUR
+		}
+		
+		set_country_flag = conquest_of_kurgur
 	}
 }
 
@@ -7993,6 +8362,9 @@ country_event = { #Conquest of Rimatü
 	trigger = {
 		NOT = {
 			original_tag = RMT
+			tag = SKA
+			tag = BER
+			tag = VRG
 		}
 		OR = {
 			AND = {
@@ -8966,8 +9338,7 @@ country_event = { #Conquest of Bilodya
 	mean_time_to_happen = {
 		days = 15
 	}
-	
-	fire_only_once = yes
+
 	trigger = {
 		NOT = {
 			original_tag = BLD
@@ -9135,13 +9506,21 @@ country_event = { #Conquest of Bilodya
 		ai_chance = {
 			factor = 100
 		}
-		IRI = {
-		add_state_core = 385
-		add_state_core = 771
-		add_state_core = 761
-		add_state_core = 828
-		}
-		ROOT = { add_ideas = IRI_Ogre_Riots }
+		
+		every_state = {
+			limit = {
+				is_core_of = BLD
+				is_controlled_by = ROOT
+				NOT = {
+					is_core_of = ROOT
+					is_claimed_by = ROOT
+				}
+			}
+			IRI = {
+				transfer_state = PREV
+				add_state_core = PREV
+				set_country_flag = conquest_of_bilodya
+			}
 		}
 	}
 }
@@ -9338,60 +9717,3 @@ country_event = { #Conquest of Merchant's Hand
 		}
 	}
 }
-country_event = { #Conquest of Tlarthingia
-	id = annex.40
-	title = annex.40.t
-	desc = annex.40.d
-	picture = GFX_report_event_spain_civil_war_volunteers_02
-	mean_time_to_happen = {
-		days = 15
-	}
-	fire_only_once = yes
-	trigger = {
-		AND = {
-			original_tag = IRI
-			OR = {
-				AND = {
-					TLA = {
-						has_capitulated = yes
-					}
-					controls_state = 372
-				}
-				AND = {
-					NOT = {
-						country_exists = TLA
-					}
-					controls_state = 372
-				}
-				owns_state = 372
-			}
-			NOT = {
-				ROOT = {
-					has_country_flag = conquest_of_tlarthingia
-				}
-			}
-		}
-	}
-
-	option = { # Priceless revenge
-		name = annex.40.a
-		trigger = {
-			OR = {
-				tag = IRI
-				ROOT = {
-					is_subject_of = IRI
-				}
-				IRI = {
-					is_subject_of = ROOT
-				}
-			}
-		}
-		
-		ai_chance = {
-			factor = 100
-		}
-		
-		ROOT = { add_ideas = IRI_TlaProblems1 }
-	}
-}
-

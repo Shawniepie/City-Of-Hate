@@ -183,7 +183,7 @@ news_event = {
 	}
 
 	option = {
-		name = news.6.C
+		name = news.6.c
 		trigger = { TAG = RTH }
 	}
 }
@@ -214,7 +214,52 @@ news_event = {
 	}
 
 	option = {
-		name = news.7.C
+		name = news.7.c
 		trigger = { TAG = RTH }
+	}
+}
+
+# Zarathum Restored
+news_event = {
+	id = news.8
+	title = news.8.t
+	desc = news.8.d
+	picture = GFX_news_event_018
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.8.a
+		trigger = {
+			has_country_flag = DORF_we_got_zarathum
+		}
+	}
+	option = {
+		name = news.8.b
+		trigger = {
+			NOT = {
+				OR = {
+					TAG = SKA
+					TAG = RMT
+					TAG = BER
+				}
+			}
+		}
+	}
+
+	option = {
+		name = news.8.c
+		trigger = {
+			OR = {
+				TAG = SKA
+				TAG = RMT
+				TAG = BER
+			}
+			NOT = {
+				has_country_flag = DORF_we_got_zarathum
+			}
+		}
 	}
 }

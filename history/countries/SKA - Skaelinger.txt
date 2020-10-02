@@ -39,7 +39,6 @@ set_popularities = {
 }
 
 add_ideas = {
-	Corporatism
 	dwarf_country
 	dwarven_ancestor_worship_religion
 }
@@ -53,6 +52,12 @@ add_ideas = {
 	diplomatic_relation = {
 		country = RTH
 		relation = military_access
+		active = yes
+	}
+	
+	diplomatic_relation = {
+		country = RTH
+		relation = non_aggression_pact
 		active = yes
 	}
 	

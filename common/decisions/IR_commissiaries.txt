@@ -183,6 +183,19 @@ commissiaries = {
 			
 			SKA = {
 				add_ideas = OSG_settler_government
+				delete_unit_template_and_units = {
+					division_template = "Hearthguards"
+				}
+				delete_unit_template_and_units = {
+					division_template = "Tunnel Fighters"
+				}
+				delete_unit_template_and_units = {
+					division_template = "Mountainbreakers"
+				}
+				load_oob = "OSG_empty"
+				set_technology = {
+					dwarven_warriors = 0
+				}
 			}
 			
 			hidden_effect = {
@@ -190,7 +203,7 @@ commissiaries = {
 					create_country_leader = {
 						name = "Solsthyr Isventhe"
 						desc = "politics_OSG_isventhe_desc"
-						picture = "gfx/leaders/OSG/Portrait_OSG_Isventhe.dds"
+						picture = "gfx/leaders/ORD/Portrait_Ordoria_Generic_land_1"
 						expire = "1965.1.1"
 						ideology = puritan_ideology
 						traits = {
@@ -199,7 +212,7 @@ commissiaries = {
 					create_country_leader = {
 						name = "Solsthyr Isventhe"
 						desc = "politics_OSG_isventhe_desc"
-						picture = "gfx/leaders/OSG/Portrait_OSG_Isventhe.dds"
+						picture = "gfx/leaders/ORD/Portrait_Ordoria_Generic_land_1"
 						expire = "1965.1.1"
 						ideology = theocrat_ideology
 						traits = {		
@@ -208,7 +221,7 @@ commissiaries = {
 					create_country_leader = {
 						name = "Solsthyr Isventhe"
 						desc = "politics_OSG_isventhe_desc"
-						picture = "gfx/leaders/OSG/Portrait_OSG_Isventhe.dds"
+						picture = "gfx/leaders/ORD/Portrait_Ordoria_Generic_land_1.dds"
 						expire = "1965.1.1"
 						ideology = monarchy_absolute_ideology
 						traits = {		
@@ -486,6 +499,19 @@ commissiaries = {
 			
 			STA = {
 				add_ideas = OSG_settler_government
+				delete_unit_template_and_units = {
+					division_template = "Stadtwache"
+				}
+				delete_unit_template_and_units = {
+					division_template = "Prinztruppen"
+				}
+				delete_unit_template_and_units = {
+					division_template = "Stahlritter"
+				}
+				delete_unit_template_and_units = {
+					division_template = "Späher"
+				}
+				load_oob = "OSG_empty"
 			}
 			
 			hidden_effect = {
@@ -782,6 +808,19 @@ commissiaries = {
 			
 			NOC = {
 				add_ideas = OSG_settler_government
+				delete_unit_template_and_units = {
+					division_template = "Stadtwache"
+				}
+				delete_unit_template_and_units = {
+					division_template = "Prinztruppen"
+				}
+				delete_unit_template_and_units = {
+					division_template = "Prinzritter"
+				}
+				delete_unit_template_and_units = {
+					division_template = "Späher"
+				}
+				load_oob = "OSG_empty"
 			}
 			
 			hidden_effect = {
@@ -1094,6 +1133,19 @@ commissiaries = {
 			
 			WIS = {
 				add_ideas = OSG_settler_government
+				delete_unit_template_and_units = {
+					division_template = "Stadtwache"
+				}
+				delete_unit_template_and_units = {
+					division_template = "Prinztruppen"
+				}
+				delete_unit_template_and_units = {
+					division_template = "Prinzritter"
+				}
+				delete_unit_template_and_units = {
+					division_template = "Späher"
+				}
+				load_oob = "OSG_empty"
 			}
 			
 			hidden_effect = {
@@ -1363,6 +1415,13 @@ commissiaries = {
 			
 			NAS = {
 				add_ideas = OSG_settler_government
+				delete_unit_template_and_units = {
+					division_template = "Farmer's Guard"
+				}
+				delete_unit_template_and_units = {
+					division_template = "Fieldwatch"
+				}
+				load_oob = "OSG_empty"
 			}
 			
 			hidden_effect = {
@@ -1649,6 +1708,13 @@ commissiaries = {
 			
 			TRI = {
 				add_ideas = OSG_settler_government
+				delete_unit_template_and_units = {
+					division_template = "City Guard"
+				}
+				delete_unit_template_and_units = {
+					division_template = "King's Men"
+				}
+				load_oob = "OSG_empty"
 			}
 			
 			hidden_effect = {
@@ -1911,6 +1977,14 @@ commissiaries = {
 			
 			IRT = {
 				add_ideas = OSG_settler_government
+				
+				delete_unit_template_and_units = {
+					division_template = "Freewatch"
+				}
+				delete_unit_template_and_units = {
+					division_template = "Silver Gargoyles"
+				}
+				load_oob = "OSG_empty"
 			}
 			
 			hidden_effect = {
@@ -2071,6 +2145,19 @@ commissiaries = {
 			
 			PRK = {
 				add_ideas = OSG_settler_government
+				delete_unit_template_and_units = {
+					division_template = "Stráže"
+				}
+				delete_unit_template_and_units = {
+					division_template = "Wojownicy"
+				}
+				delete_unit_template_and_units = {
+					division_template = "Fosztogató"
+				}
+				delete_unit_template_and_units = {
+					division_template = "Vozhdi"
+				}
+				load_oob = "OSG_empty"
 			}
 			
 			if = {

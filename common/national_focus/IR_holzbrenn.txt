@@ -1575,7 +1575,7 @@ focus = {#Dealing with the Exiles
 	x = 27
 	y = 3
 	ai_will_do = {
-		factor = 12
+		factor = 20 #Important
 	}
 	completion_reward = {
 		country_event = {
@@ -1604,7 +1604,7 @@ focus = {#Soft Power
 	x = 26
 	y = 4
 	ai_will_do = {
-		factor = 12
+		factor = 23
 	}
 	completion_reward = {
 		add_stability = 0.05
@@ -1621,7 +1621,7 @@ focus = {#Excommunicate Traitoris
 	x = 24
 	y = 5
 	ai_will_do = {
-		factor = 12
+		factor = 25
 	}
 	available = {
 		has_political_power > 49
@@ -1716,7 +1716,7 @@ focus = {#Push for Banishment
 	x = 26
 	y = 5
 	ai_will_do = {
-		factor = 12
+		factor = 25
 	}
 	cancel_if_invalid = no
 	completion_reward = {
@@ -1803,7 +1803,7 @@ focus = {#No Rest for the Wicked
 	x = 26
 	y = 6
 	ai_will_do = {
-		factor = 12
+		factor = 30
 	}
 	completion_reward = {
 		if = {
@@ -1882,7 +1882,7 @@ focus = {#Hard Power
 	x = 28
 	y = 4
 	ai_will_do = {
-		factor = 12
+		factor = 20
 	}
 	completion_reward = {
 		add_war_support = 0.05
@@ -1904,7 +1904,7 @@ focus = {#Bounty Hunters
 	x = 28
 	y = 5
 	ai_will_do = {
-		factor = 12
+		factor = 25
 	}
 	completion_reward = {
 		random_owned_controlled_state = {
@@ -2010,7 +2010,7 @@ focus = {#Punitive Expedition
 	x = 30
 	y = 5
 	ai_will_do = {
-		factor = 12
+		factor = 25
 	}
 	completion_reward = {
 		add_manpower = -2500
@@ -2104,7 +2104,7 @@ focus = {#Relentless Hunt
 	x = 28
 	y = 6
 	ai_will_do = {
-		factor = 12
+		factor = 30
 	}
 
 	completion_reward = {

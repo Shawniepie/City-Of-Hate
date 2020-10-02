@@ -1,0 +1,46 @@
+﻿division_template = {
+	name = "Ungerdaler Expeditionary Force"	
+	regiments = {
+		men_at_arms = { x = 0 y = 0 }
+		men_at_arms = { x = 0 y = 1 }
+		men_at_arms = { x = 0 y = 2 }
+        men_at_arms = { x = 1 y = 0 }
+		men_at_arms = { x = 1 y = 1 }
+		men_at_arms = { x = 1 y = 2 }
+	}
+}
+
+units = {
+
+	division = {
+		name = "Faustburg Expeditionary Force"
+		location = 7137
+		division_template = "Ungerdaler Expeditionary Force"
+		start_experience_factor = 1
+
+	}
+
+	division = {
+		name = "Schlosserhelmer Expeditionary Force"
+		location = 3707
+		division_template = "Ungerdaler Expeditionary Force"
+		start_experience_factor = 1
+
+	}
+
+	division = {
+		name = "Handlershafen Expeditionary Force"
+		location = 7047
+		division_template = "Ungerdaler Expeditionary Force"
+		start_experience_factor = 1
+
+	}
+	
+	division = {
+		name = "Prinzerhaus Expeditionary Force"
+		location = 7044
+		division_template = "Ungerdaler Expeditionary Force"
+		start_experience_factor = 1
+
+	}
+}

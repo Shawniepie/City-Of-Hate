@@ -1,0 +1,511 @@
+﻿l_english:
+ 
+ ##Focuses
+ 
+ #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#
+ #x#x#x#x#x#x#x#x#x#x#x#x#x#x#x#x#x#x#x#x#x#x#x#x#x#x#x#x#x#x#x#x#x#x#x#x#x#x#
+ ##==========================================================================#
+ #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#
+ #x#x#x#x#x#x#x#x#x#x#x#x#x#x#x#x#x#x#x#x#x#x#x#x#x#x#x#x#x#x#x#x#x#x#x#x#x#x#
+ 
+ #+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#
+                                #STAHLHOF EDITS
+ #+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#
+ 
+ STA_das_stahlheer_desc:0 "We need to Reinvent the Stahlhofer Way of Thinking. We must make broad revisions to our military to assure our continuation in the remainder of the Decade."
+ STA_the_bear_of_stahlhof_desc:0 "We must Consolidate our Political Spectrum under our Monarch, Ferdinand Schwarzenbach to ensure a united Stahlhof. We must also look outward to guarantee that we don´t confine ourselves."
+ STA_Veterans_of_the_elbenkrieg_desc:0 "We need to rethink the tactics used in the elbenkrieg and our military doctrine."
+ STA_lessons_of_neureik_desc:0 "The Disaster in Neureik should not happen in our country as well. To ensure that we  do not do these mistakes, we need to start to learn the lessons Neureik learned the hard way."
+ STA_fate_of_the_adelinatruppen_desc:0 "We need to decide what to do with the Imperial troops of the Hochprinzessin Adelina. We need to decide how to deal with it."
+ STA_lessons_of_the_restoration_war_desc:0 "Our men were instrumental in restoring Freiprinz Hassler to the Prinzthron of Neureik, and they have seen first-hand the dangers of Republican mob rule. Let us learn from the military developments of that time and simultaneously use it in our anti-Faustburg propaganda efforts."
+ STA_meat_for_the_grinder_desc:0 "We must prepare our soldier to die for the grinder of war."
+ STA_swords_axes_and_maces_desc:0 "We need to ensure that there is a standartification of Equipment"
+ STA_every_soldier_a_weaponsmith_desc:0 "Our soldiers are the best in the Union and can uphold their Equipment even in the worst situation"
+ STA_the_last_march_of_the_faustburgsoldaten_desc:0 "As we have given up on recruiting the troops Adalina has sent, we will have to get rid of them instead. An incursion into Ordorian lands, with the Elves ‘accidentally’ being tipped off beforehand, should rid us of these Faustburg battalions quite nicely"
+ STA_replenish_the_ranks_desc:0 "To increase our ranks we will hire all kinds of mercenaries around the Union and help us win the wars to come"
+ STA_perkav_plunderers_desc:0 "We hire These Plunderers to help us plunder Faustburg"
+ STA_skaelinger_stalwarts_desc:0 "We hire these Stalwarts to increase loyalty in our troops"
+ STA_kurgur_killers_desc:0 "We hire Orcs to kill our enemies"
+ STA_snowelven_stalkers_desc:0 " We hire the Lirothlind elves to stalk our enemies and gain more information"
+ STA_bilodyan_brutes_desc:0 "We get the Bilodyan Brutes to slaughter the enemy"
+ STA_foreign_officers_desc:0 "We increase the number of Foreign Officers so that our mercenaries don´t do anything dumb"
+ STA_path_clearer_batallions_desc:0 "The Creation of the Path clearer Battalions started so that we could pinpoint attacks the enemies and clear a path through their ranks"
+ STA_a_convincing_act_desc:0 "The Convincement Act was enacted by Ferdinand Schwarzenbach to create a Goal, that can achieve Convincement of the Other Union states, so that these will either not Hinder our military expansions and/or help us in achieving this goal."
+ STA_stahlplan_zhertis_desc:0 "To fully annex and reculture souther ordoria we will need to fill the regions with humans and industrialize them."
+ STA_stahlplan_venoehr_desc:0 "To fully annex and reculture souther ordoria we will need to fill the regions with humans and industrialize them."
+ STA_stahlplan_anzitt_desc:0 "To fully annex and reculture souther ordoria we will need to fill the regions with humans and industrialize them."
+ STA_stahlplan_fratin_desc:0 "To fully annex and reculture souther ordoria we will need to fill the regions with humans and industrialize them."
+ STA_limited_engagement_desc:0 "We need to limit our encroachment of Ordorian and limit our outside policies"
+ STA_rapid_retreats_desc:0 "We need to retreat"
+ STA_much_ado_about_nothing_desc:0 "when there is about to do, then there is nothing to do about."
+ STA_neuzeit_krieg_desc:0 "We need to Usher in a new era of warfare and change the scape of war"
+ STA_uproot_the_old_guard_desc:0 "To change the old guard is a difficult thing and we need to start with it now or never and to achieve that..."
+ STA_meritocratic_autocracy_desc:0 "this does not make any sense if you didn´t know as meritocracy and autocracy are opposed to one another"
+ STA_introduce_meritocracy_in_the_army_desc:0 "we start promoting soldiers based on skills and not on merit or birth"
+ STA_heed_the_rank_and_file_desc:0 "Lately, we've all seen plenty of research and heard even more talk about the demise of network TV, the lack of consumer attention for traditional media, the switch to new media and other disaster stories. But most commentators and pundits continue to ignore the best medium: your workers. This medium doesn't change your budget, reaches customers and prospects every day, and people pay attention to it. "
+ STA_soldiers_pensions_desc:0 "Introduce Pensions to our soldiers to ensure them not becoming enemy mercenaries."
+ STA_witwengeld_desc:0 "Give money to the wives of our dead soldiers"
+ STA_first_aid_field_training_desc:0 "Share First aid skills on our online learning website and start learning right now for free."
+ STA_hasslers_prinzthron_desc:0 "After Helping out the Prinzenthum of Neureik, now again there is a time of political turmoil. And we see how we can get advantages out of the Situation. Hassler is an aspiring Freiprinz and we can take the aspiring out of his title."
+ STA_the_favours_we_are_owed_desc:0 "With the Favour Neureik owes us we can ensure that Freiprinz Hassler stays at his position but now we need to decide how we deal with the nation as a whole."
+ STA_alliance_of_equals_desc:0 "We should acknowledge them as equal Freiprizen and see that they do so as well. With that, we would get a partner in the Union and we would that they would help us if needed."
+ STA_push_our_advantage_desc:0 "With the Turmoil in Neureik still not cleared we still can and should push our advantage and take the crown of Neureik for ourselves, but the backlash from the other Prinzen could be great."
+ STA_integrated_military_command_desc:0 "With the Crown of Neureik in our belt, we should integrate the Military command structure and expand our own so that we are capable of ensuring a combined force of Neureik and Stahlhof"
+ STA_force_an_iron_fist_desc:0 "Through our conquest of Neureik, we still need to clear the Turmoil of the Prinzentum and the only reasonable way to do that is with the Iron Fist of our Ruler Schwarzenbach."
+ STA_war_games_desc:0 "In 878 Stahlhof was chosen to be the Host of The War Games a Union-wide Cooperation of the Military of the princes and Knights as champions of these. All who even have a slick of Honour will go to the War Games and attend them to prove their honor and battle-prowess. It would be a shame of course, if something were to happen to the Freiprinzen and their subordinates."
+ STA_trial_by_fire_desc:0 "As the War Game end, we can see the last results of our work to improve our military coming in and see how good we are in comparison to the other princes."
+ STA_the_holzbrenn_opportunity_desc:0 "As the games go on we see an opportunity and if we are fast enough we could seize it..."
+ STA_experience_bought_with_blood_desc:0 "Even though we are supposedly having only mock battles and the like, accidents still happen but we see how we can prevent future mistakes and ensure our dominance on the actual battlefield"
+ STA_the_question_of_mages_desc:0 "Still as the games go on we have to clear a question the Mage Question and what w should do about it. We need to chose if we approve or not."
+ STA_approach_resmayer_desc:0 "When the Games went, we saw one of the Mages from Arkanisturm, Resmayer, use a rather uncanny and special way of using magic. Now that the Games are done and we made some Kontakt with arkanisturm on the frontiers, we should expand our sway over Arkanisturm and connect with Resmayer."
+ STA_discredit_the_lafdarites_desc:0 "The Lafdarites are the group apposing Resmayer and his fellows. We should attack them for their inactivity and no-response to our border-attacks. We need to help our friends in arkanisturm."
+ STA_nebeltoeter_squads_desc:0 "The Nebeltöter squads were founded to suppress magicians."
+ STA_assassinate_the_archmage_desc:0 "Still in progress"
+ STA_intervene_openly_desc:0 "We need to Intervene openly in the Civil War in Arkanisturm to ensure Resmayers victory"
+ STA_intervene_covertly_desc:0 "Resmayer may not need our full military support but only Volunteers and Equipment."
+ STA_the_anti_ordorian_front_desc:0 "To Unite the Union against Ordoria is a noble goal and we strive to be the first for the Union to Unite it against this common Enemy"
+ STA_freiwillige_heimatverteidiger_desc:0 "The City of Stahlhof is one of the capitals of the Union and the people there are some of the Sturdiest you will find and now they will be called for war to serve for Their Nation"
+ STA_spears_against_elves_desc:0 "We need to ready our Country against the Elven Menace and mobilize our Industry. To ensure that for every Elf there will be  Soldier with a spear."
+ STA_the_stahlheer_desc:0 "The Stahlheer marches into the war the Ordorian menace can not be ignored anymore and so we march."
+ STA_the_pragmatik_allianz_desc:0 "Though we wish for nothing more than the end of the Ungerdaler Union, we must also guard against the genuine threat to Ordoria. Reaching out to Holzbrenn for mutual defence would be wise."
+ STA_turn_to_the_caravaneers_desc:0 "Most of the traders in Stahlhof are in the Caravaniers Guild, one of the Few remaining Trade organizations in the Union. And we need them now for Financial support and maybe we could even ensure an alliance through them."
+ STA_contribute_to_the_war_effort_desc:0 "But First they need to contribute to our War effort as the times of war draw nearer and nearer."
+ STA_demand_an_embargo_desc:0 "Through this we can ensure that the only trade in Stahlhof will be from the Caravaniers guild and ensure Stahlhofer trade Dominance."
+ STA_the_merchants_of_fritzhafen_desc:0 "The Merchants of Fritzhafen are the strongest Trading force in the Union and one of the biggest in the known world. With this, we could bring them to our Side and ensure our trade Dominance on the Union."
+ STA_der_nordhandel_wuergegriff_desc:0 "Through this we would control all of the Trade in the Northern Union and unite it in the Caravaniers Guild."
+ STA_the_iron_fist_of_schwarzenbach_desc:0 "Ferdinand Schwarzenbach is the Monarch of Stahlhof since 866 and with that one of the longest-serving Monarchs in the current Union. He is one of the few ''great'' Rulers remaining and he will ensure our victories to come."
+ STA_the_steel_that_guards_us_desc:0 "Stahlhof is one of the few Prinzentumer, which border Ordoria and so it relied on Stell to guard its border and so it became the 'Protector of the North''."
+ STA_the_blood_that_binds_us_desc:0 "But the Protection isn´t perfect and every year men die while protecting the border so not only does the steal protect but the blood of our Fallen as well."
+ STA_the_crown_infallible_desc:0 "And with that the Crown of Stahlhof shall forever stand and fight. It will never Fall before the Union does."
+ STA_the_league_of_temples_desc:0 "Septism is the religion of the Union and it was founded in Stahlhof and it is still to this day the most believed Religion in Stahlhof."
+ STA_the_favour_of_the_seven_desc:0 "As Stahlhof is also one of the most pious of the Union lands it is guaranteed to be granted the favor of the Seven."
+ STA_divine_right_to_rule_desc:0 "And with the Favour of the Seven the Rule of the Monarchy is secured and through that the Schwarzenbachs rule it Through the Divine Will of the Gods."
+ STA_the_priests_of_st_vichtlas_desc:0 "And Through our Piety St. Vichtlas is sure to be one of the Freiprizentumer that will be on our side as the Gods are with us."
+ STA_break_with_the_orthodoxy_desc:0 "But we must Break with Tradition and see new Horizons. Even if that means abandoning the Seven and returning to the Six."
+ STA_reach_out_to_the_hornbergers_desc:0 "The Hornbergers are one of the Noble Families still left in Stahlhof and came from Wertzvörde. They traveled great distances and then after some time ended up in Stahlhof were 670 the Freiprinz of Stahlhof Albert the 4 of Schwarzenbach. Since then the Family of the Hornbergers were some of the most loyal nobles in the Freiprinzentum, but then in the last few Years they strove from the sides of the Prinz."
+ STA_meetings_on_neutral_ground_desc:0 "Now Ferdinand wants to once again reestablish their good Relationships and wants to support an alliance between the Houses"
+ STA_the_unthinkable_deal_desc:0 "The Hornbergers came to the Meeting, but something unbelievable happened they requested to either be granted their Old title from Wertzevörde of Archduke or be able to return to it."
+ STA_the_aristocrats_of_stahlhof_desc:0 "We can only oblige and support their claim of Archduke but still, we can´t allow them to return to their homes and so they will stay in Stahlhof as Archdukes."
+ STA_propaganda_bombardments_desc:0 "To ensure the Loyalty of our soldiers and our countryman and made sure that they will stay loyal till the End"
+ STA_every_village_a_soldier_desc:0 "The ''Land Reform Akt'' of Stahlhof want to renew our War enthusiasm and establish the Wehrpflicht. Now in every Village with more than 50 men living there, 1 needs to be a soldier with 70 another and every 20 thereafter."
+ STA_scare_the_faustburg_soldiers_into_submission_desc:0 "If Propanda fails its use, than subjugation and scaring them will have to do. "
+ STA_steelcourt_iron_discipline_desc:0 "We spoke around 20 minutes to discuss the pun in this title, so appreciate it. (Falls du nicht Englisch Kannst es ist stahl hof in Englisch.)"
+ STA_der_stahlschritt_desc:0 "To Discipline the military every man needs to be able to march an hour and needs to hold pace with one another."
+ STA_authority_earned_is_unquestioned_desc:0 "With these Reforms our Authority over the military will be unquestioned"
+ STA_the_heldenmauer_desc:0 "The Norther Border is the Place where Heroes come to die and where Stahlhof defends the Union against the Elven threat"
+ STA_the_carrot_and_the_stick_desc:0 "The Carrot and stick an approach is an approach, where you ensure the following of your subordinates through both positive and negative reinforcement as you do with a carrot and stick by a donkey"
+ STA_loyalty_through_fear_desc:0 "There is only 1 Way to achieve Loyalty. Through Fear"
+ STA_loyalty_through_love_desc:0 "There is only 1 Way to achieve Loyalty. Through Love"
+ STA_authoritarian_benefactor_desc:0 "Our Monarch may be an Absolute Monarch and he may also be the Head of Military, but he is also a benevolent Ruler and the Meritocratic Autacracy supporter but he still is our Benefactor."
+ STA_sidestep_hatred_desc:0 "If we Ensure Loyalty through Fear we need to be able to ensure that the ensuing hatred is against the enemy and not our commanders"
+ STA_improve_road_networks_desc:0 "Roads are good for everyone. And so we decided to build some."
+ STA_the_stahlreik_market_desc:0 "Stahlhof will be a great country and so will be it´s markets"
+ STA_der_pressler_pakt_desc:0 "Pressler is the upcoming Freiprinz of Holzbrenn and he also aligns with our current Outview and so we decided to ask him if he will support us."
+ STA_posthoc_justification_desc:0 "We need to Justify our actions. Even if we already did them."
+ STA_blood_ties_to_wertszvoerde_desc:0 "The Hornbergers shouldn´t stay in Stahlhof but should return as the new Archdukes of their old land and to ensure that we will support them."
+ STA_stahlhof_kommando_desc:0 "Kommandos are special forces and we know how to make them and we will ensure that they will be used properly."
+ 
+ STA_adelina_troop_loyalty_idea:0 "Faustburg Soldiers Support"
+ STA_adelina_troop_loyalty_idea2:0 "Influenced Faustburg Soldiers"
+ STA_adelina_troop_loyalty_idea3:0 "Loyal Faustburg Soldiers"
+ STA_adelina_troop_loyalty_idea_dealt:0 "Ungerdaler Military Insight"
+ STA_the_bear_of_stahlhof_idea:0 "Political Change of Course"
+ STA_mass_recruiting_idea:0 "Mass Recruitment"
+ STA_every_village_a_solider_idea:0 "Every Village a Solider"
+ STA_every_village_a_weaponsmith_idea:0 "Every Village a Weaponsmith"
+ STA_iron_discipline_idea:0 "Iron Discipline"
+ STA_replenish_the_ranks_idea:0 "Officer Recruitment Program"
+ STA_replenish_the_ranks_idea2:0 "Stahlhof Kommando"
+ STA_replenish_the_ranks_idea3:0 "Foreign Officers Recruitment Program"
+ STA_limited_engagement_idea:0 "Prepared Defense"
+ STA_limited_engagement_idea2:0 "Improved Prepared Defense"
+ STA_much_ado_about_nothing_idea:0 "Increased Arms Production"
+ STA_meritocratic_autocracy_idea:0 "Meritocratic Army"
+ STA_meritocratic_autocracy_idea2:0 "Meritocratic Authocracy"
+ STA_meritocratic_autocracy_idea3:0 "Improved Meritocratic Authocracy"
+ STA_meritocratic_autocracy_idea4:0 "Advanced Meritocratic Authocracy"
+ STA_meritocratic_autocracy_idea5:0 "Militaristic Duality Governance"
+ STA_neuzeit_krieg_idea:0 "Wartime Adjustment Policy"
+ STA_soldier_support_idea:0 "Soldier Support"
+ STA_soldier_support_idea2:0 "Improved Soldier Support"
+ STA_soldier_support_idea3:0 "Advanced Soldier Support"
+ STA_soldier_support_idea4:0 "Soldier Wellbeing Program"
+ STA_integrated_military_command_idea:0 "Stahlhof-Neureik Military Command"
+ STA_force_an_iron_fist_idea:0 "Iron Fist of Stahlhof"
+ STA_stahlreik_market_idea:0 "Stahlreik Market"
+ STA_loyalty_through_love_idea:0 "Loyalty through Love"
+ STA_loyalty_through_fear_idea:0 "Loyalty through Fear"
+ monarchy_absolute_drift_idea:0 "Absolute Monarchist influence"
+ republic_merchant_drift_idea:0 "Republican Merchant influence"
+ theocrat_drift_idea:0 "Theocrat influence"
+ republic_aristocrat_drift_idea:0 "Republican Aristocrat influence"
+ puritan_drift_idea:0 "Puritan influence"
+ STA_nebeltoeter_squads_idea:0 "Nebeltöter Squads"
+ STA_intervene_covertly_idea:0 "Covert Intervention"
+ STA_freiwillige_heimatverteidiger_idea:0 "Freiwillige Heimatverteidiger"
+ STA_embargo_union_idea:0 "Stahlhofs Union Embargo"
+ STA_nordhandel_idea:0 "Nordhandel Würgegriff"
+ STA_binding_blood_idea:0 "The Blood which Binds us"
+ STA_crown_infallible_idea:0 "Infallible Crown of Schwarzenbach"
+ STA_divided_monarchists_idea:0 "Political Unrest"
+ STA_joint_planning_commission_idea:0 "Joint Planning Commission"
+ 
+ STA_request_war_resources_category:0 "Request War Resources"
+ STA_union_coup_category:0 "Stahlplan Faustburg"
+ STA_union_coup_category_desc:0 "The union of Free Ungerdaler Princes is endangered by incompetent leadership and lacks stability. With careful preperations we will arrange a military allegiance that will make sure that Ferdinand Schwarzenbach will be placed in power of the Union."
+ STA_request_equipment_decision:0 "Request Union Equipment"
+ 
+ STA_fate_of_the_adalinatruppen_ctt:0 "Decides upon the fate of troops that are still loyal to Adelina."
+ STA_the_last_march_of_the_faustburgsoldaten_ctt:0 "Sends the Faustburgsoldaten of the Union on a mission to the ordorian border, while we tip the ordorians with information on their arrival. §RThere is a chance that this incident will go public. §"
+ STA_path_clearer_batallions_ctt:0 "§YUnlocks Path Clearer Battalions to be deployed.§  §OPath Clearer Battalions have significant movement advantages in forest and jungle terrain.§"
+ STA_a_convincing_act_ctt:0 "Unlocks §Ydecisions for invasions of the southern ordorian states.§"
+ STA_stahlplan_zhertis_ctt:0 "Unlocks §YStahlplan Zhertis § decision."
+ STA_stahlplan_fratin_ctt:0 "Unlocks §YStahlplan Fratin § decision."
+ STA_stahlplan_venoehr_ctt:0 "Unlocks §YStahlplan Venöhr § decision."
+ STA_stahlplan_anzitt_ctt:0 "Unlocks §YStahlplan Anzitt § decision."
+ STA_trial_by_fire_ctt:0 "Unlocks §Ydecisions for attacks on the Arkanisturm border.§"
+ STA_the_stahlheer_ctt:0 "§YCreates a mixed cavalry template and units within Stahlhof territory."
+ 
+ STA_expedition_flag:0 "Faustburg March preperations have been made."
+ STA_submission_flag:0 "Additional recruitment ambitions planned."
+ sta_alliance_of_equals_flag:0 "Subtle approach in Rentinger Treaty."
+ sta_push_our_advantage_flag:0 "Demanding approach in Rentinger Treaty."
+ sta_treaty_agreed_flag:0 "Treaty of Rentinger signed by Neureik."
+ sta_treaty_declined_flag:0 "Treaty of Rentinger signed by Neureik."
+ ARK_archmage_assigned_flag:0 "Arkanisturm has an archmage."
+ ARK_archmage_resmeyer_flag:0 "Resmeyer has become archmage of Arkanisturm."
+ ARK_civilwar_flag:0 "Arkanisturm civilwar started."
+ 
+ STA_hlz_ally:0 "Allied to Holzbrenn in case of armed conflicts."
+ STA_frt_ally:0 "Allied to Fritzhafen in case of armed conflicts."
+ STA_stv_ally:0 "Allied to St. Vichtlas in case of armed conflicts."
+ STA_wer_ally:0 "Allied to Wertszvörde in case of armed conflicts."
+ STA_nrk_ally:0 "Allied to Neureik in case of armed conflicts."
+ 
+ ung_cv_faction:0 "Adalina's Loyalists"
+ sta_cv_faction:0 "Stahlpakt"
+ 
+ STA_union_attacked:0 "Southern border attacked"
+ STA_union_attacked_planned:0 "Southern border attacked"
+ STA_sta_murdered_troops:0 "Murdered Troops"
+ STA_stahlreik_market_opinion:0 "Stahlreik Market"
+ STA_conducted_inner_hostilities_opinion:0 "Conducted inner hostilities"
+ STA_emgargo_union_modifier:0 "Stahlhofs Union Embargo"
+ 
+ ARR:0 "Resmeyers Faction"
+ ARR_monarchy_absolute:0 "Resmeyers Faction"
+ ARR_DEF:0 "Resmeyers Faction"
+ ARL:0 "Lafdarens Faction"
+ ARL_monarchy_constitutional:0 "Lafdarens Faction"
+ ARL_DEF:0 "Lafdarens Faction"
+ ARB_monarchy_absolute:0 "Resmayer's Faction"
+ ARB_monarchy_absolute_DEF:0 "Resmayer's Faction"
+ ARB_monarchy_absolute_ADJ:0 "Resmayer's"
+ ARB_monarchy_constitutional:0 "Der Arkanisturm"
+ ARB_monarchy_constitutional_DEF:0 "the Arkanisturm"
+ ARB_monarchy_constitutional_ADJ:0 "Arcanist"
+ ARB_republic_peasant:0 "Rosite Arkanisturm"
+ ARB_republic_peasant_DEF:0 "the Arkanisturm"
+ ARB_republic_peasant_ADJ:0 "Rosite Arcanist"
+ ARB_republic_aristocrat:0 "Der Arkanisturm"
+ ARB_republic_aristocrat_DEF:0 "the Arkanisturm"
+ ARB_republic_aristocrat_ADJ:0 "Arcanist"
+ ARB_republic_merchant:0 "Der Arkanisturm"
+ ARB_republic_merchant_DEF:0 "the Arkanisturm"
+ ARB_republic_merchant_ADJ:0 "Arcanist"
+ ARB_theocrat:0 "Guided Arkanisturm"
+ ARB_theocrat_DEF:0 "the Arkanisturm"
+ ARB_theocrat_ADJ:0 "Clerical Arcanist"
+ ARB_puritan:0 "Greater Arkanisturm"
+ ARB_puritan_DEF:0 "the Arkanisturm"
+ ARB_puritan_ADJ:0 "Greater Arcanist"
+ 
+ republic_aristocrat_drift:0 "daily aristocratic republic support"
+ theocrat_drift:0 "daily theocracy support"
+ republic_merchant_drift:0 "daily merchant republic support"
+ monarchy_absolute_drift:0 "daily absolute monarchy support"
+ 
+ sta.7.t:0 "The Fate of the Adelina troops"
+ sta.7.d:0 ""
+ sta.7.a:0 "They will become loyal soldiers eventually."
+ sta.7.b:0 "It's time to prepare their most... important mission."
+ 
+ sta.8.t:0 "Stahlhof requests our equipment"
+ sta.8.d:0 "[Root.GetLeader] of [Root.GetName] made a formal request of assistance. They would like us to provide them with equipment for their soldiers as a form of protection against the ordorian threat."
+ sta.8.a:0 "They will get weapons to defend themselves."
+ sta.8.b:0 "We won't support their cause."
+ sta.8.c:0 "We can't spare anything at this moment."
+ 
+ sta.9.t:0 "[UNG.GetLeader] sends us equipment."
+ sta.9.d:0 "[UNG.GetLeader] announced that we will get our requested equipment. It will be delivered shortly."
+ sta.9.a:0 "We are draining them effectively."
+ 
+ sta.10.t:0 "[UNG.GetLeader] refuses to send us equipment."
+ sta.10.d:0 "[UNG.GetLeader] announced that the [UNG.GetName] is very well informed about our current situation and will not support us any further."
+ sta.10.a:0 "Their public support won't last long if they keep it up."
+ 
+ sta.11.t:0 "[UNG.GetLeader] can not contribute."
+ sta.11.d:0 "[UNG.GetLeader] announced that the [UNG.GetName] is currently not able to support us with additional equipment."
+ sta.11.a:0 "If that isn't a lie, power seems to have shifted more quickly than expected."
+ 
+ sta.12.t:0 "The Last March of the Faustburg Soldiers"
+ sta.12.d:0 "" #They got killed
+ sta.12.a:0 ""
+ 
+ sta.13.t:0 "Southern Borders under attack" #ORD gets this
+ sta.13.d:0 "" #Ordoria got tipped and knew the attack was coming
+ sta.13.a:0 ""
+ 
+ sta.14.t:0 "The Last March of the Faustburg Soldiers"
+ sta.14.d:0 "" #They got killed, ordoria thinks UNG attacked
+ sta.14.a:0 ""
+ 
+ sta.15.t:0 "Surprise Attack by the Union" #ORD gets this
+ sta.15.d:0 "" #Ord thinks it was a poor surprise attack
+ sta.15.a:0 ""
+ 
+ sta.16.t:0 "The Last March of the Faustburg Soldiers"
+ sta.16.d:0 "" #A few survived and escaped to UNG
+ sta.16.a:0 ""
+ 
+ sta.17.t:0 "A Planned Attack by the Union" #ORD gets this
+ sta.17.d:0 "" #Didnt find tip and thinks UNG and STA attacked
+ sta.17.a:0 ""
+ 
+ sta.18.t:0 "[STA] sent Faustburg Soldiers on a Suicide Mission" #UNG gets this
+ sta.18.d:0 "" #Faustburg Soldier Survivors arrive in UNG and tell the story
+ sta.18.a:0 ""
+ 
+ ### BORDER WAR NR 1 ###
+ # ATTACKER WON
+ sta.19.t:0 "We won the skirmish!"
+ sta.19.d:0 "Our troops succesfuly fought off the defending forces and occupied their territory. This is now our land."
+ sta.19.a:0 "Most impressive."
+ # ATTACKER LOST
+ sta.20.t:0 "We lost the skirmish!"
+ sta.20.d:0 "Our troops fought well and furiously, but we did not stand a chance against the opposing forces."
+ sta.20.a:0 "Disastrous."
+ # ATTACKER CANCEL
+ sta.21.t:0 "Conflict Cancelled!"
+ sta.21.d:0 "As our troops have been facing the opposing threat, both parties got distracted by surrounding events and cancelled the attacks."
+ sta.21.a:0 "We will settle this later."
+ #---------------------------------------------------
+ # DEFENDER WON
+ sta.22.t:0 "We won the skirmish!"
+ sta.22.d:0 "We succesfuly drove back the invading Union forces with ease."
+ sta.22.a:0 "That will teach them a lesson."
+ # DEFENDER LOST
+ sta.23.t:0 "We lost the skirmish!"
+ sta.23.d:0 "Our troops suffered a humiliating defeat in the recent conflict on the southern border. Their troops are now occupying our territory!"
+ sta.23.a:0 "They will pay for this. Sooner or later."
+ # DEFENDER CANCEL
+ sta.24.t:0 "Conflict Cancelled!"
+ sta.24.d:0 "As our troops have been facing the opposing threat, both parties got distracted by surrounding events and cancelled the attacks."
+ sta.24.a:0 "We will settle this later."
+ 
+ ### BORDER WAR NR 2 ###
+ # ATTACKER WON
+ sta.25.t:0 "We won the skirmish!"
+ sta.25.d:0 "Our troops succesfuly fought off the defending forces and occupied their territory. This is now our land."
+ sta.25.a:0 "Most impressive."
+ # ATTACKER LOST
+ sta.26.t:0 "We lost the skirmish!"
+ sta.26.d:0 "Our troops fought well and furiously, but we did not stand a chance against the opposing forces."
+ sta.26.a:0 "Disastrous."
+ # ATTACKER CANCEL
+ sta.27.t:0 "Conflict Cancelled!"
+ sta.27.d:0 "As our troops have been facing the opposing threat, both parties got distracted by surrounding events and cancelled the attacks."
+ sta.27.a:0 "We will settle this later."
+ #---------------------------------------------------
+ # DEFENDER WON
+ sta.28.t:0 "We won the skirmish!"
+ sta.28.d:0 "We succesfuly drove back the invading Union forces with ease."
+ sta.28.a:0 "That will teach them a lesson."
+ # DEFENDER LOST
+ sta.29.t:0 "We lost the skirmish!"
+ sta.29.d:0 "Our troops suffered a humiliating defeat in the recent conflict on the southern border. Their troops are now occupying our territory!"
+ sta.29.a:0 "They will pay for this. Sooner or later."
+ # DEFENDER CANCEL
+ sta.30.t:0 "Conflict Cancelled!"
+ sta.30.d:0 "As our troops have been facing the opposing threat, both parties got distracted by surrounding events and cancelled the attacks."
+ sta.30.a:0 "We will settle this later."
+ 
+ ### BORDER WAR NR 3 ###
+ # ATTACKER WON
+ sta.31.t:0 "We won the skirmish!"
+ sta.31.d:0 "Our troops succesfuly fought off the defending forces and occupied their territory. This is now our land."
+ sta.31.a:0 "Most impressive."
+ # ATTACKER LOST
+ sta.32.t:0 "We lost the skirmish!"
+ sta.32.d:0 "Our troops fought well and furiously, but we did not stand a chance against the opposing forces."
+ sta.32.a:0 "Disastrous."
+ # ATTACKER CANCEL
+ sta.33.t:0 "Conflict Cancelled!"
+ sta.33.d:0 "As our troops have been facing the opposing threat, both parties got distracted by surrounding events and cancelled the attacks."
+ sta.33.a:0 "We will settle this later."
+ #---------------------------------------------------
+ # DEFENDER WON
+ sta.34.t:0 "We won the skirmish!"
+ sta.34.d:0 "We succesfuly drove back the invading Union forces with ease."
+ sta.34.a:0 "That will teach them a lesson."
+ # DEFENDER LOST
+ sta.35.t:0 "We lost the skirmish!"
+ sta.35.d:0 "Our troops suffered a humiliating defeat in the recent conflict on the southern border. Their troops are now occupying our territory!"
+ sta.35.a:0 "They will pay for this. Sooner or later."
+ # DEFENDER CANCEL
+ sta.36.t:0 "Conflict Cancelled!"
+ sta.36.d:0 "As our troops have been facing the opposing threat, both parties got distracted by surrounding events and cancelled the attacks."
+ sta.36.a:0 "We will settle this later."
+ 
+ ### BORDER WAR NR 4 ###
+ # ATTACKER WON
+ sta.37.t:0 "We won the skirmish!"
+ sta.37.d:0 "Our troops succesfuly fought off the defending forces and occupied their territory. This is now our land."
+ sta.37.a:0 "Most impressive."
+ # ATTACKER LOST
+ sta.38.t:0 "We lost the skirmish!"
+ sta.38.d:0 "Our troops fought well and furiously, but we did not stand a chance against the opposing forces."
+ sta.38.a:0 "Disastrous."
+ # ATTACKER CANCEL
+ sta.39.t:0 "Conflict Cancelled!"
+ sta.39.d:0 "As our troops have been facing the opposing threat, both parties got distracted by surrounding events and cancelled the attacks."
+ sta.39.a:0 "We will settle this later."
+ #---------------------------------------------------
+ # DEFENDER WON
+ sta.40.t:0 "We won the skirmish!"
+ sta.40.d:0 "We succesfuly drove back the invading Union forces with ease."
+ sta.40.a:0 "That will teach them a lesson."
+ # DEFENDER LOST
+ sta.41.t:0 "We lost the skirmish!"
+ sta.41.d:0 "Our troops suffered a humiliating defeat in the recent conflict on the southern border. Their troops are now occupying our territory!"
+ sta.41.a:0 "They will pay for this. Sooner or later."
+ # DEFENDER CANCEL
+ sta.42.t:0 "Conflict Cancelled!"
+ sta.42.d:0 "As our troops have been facing the opposing threat, both parties got distracted by surrounding events and cancelled the attacks."
+ sta.42.a:0 "We will settle this later."
+ 
+ ### BORDER WAR NR 5 ###
+ # ATTACKER WON
+ sta.43.t:0 "We won the skirmish!"
+ sta.43.d:0 "Our troops succesfuly fought off the defending forces and occupied their territory. This is now our land."
+ sta.43.a:0 "Most impressive."
+ # ATTACKER LOST
+ sta.44.t:0 "We lost the skirmish!"
+ sta.44.d:0 "Our troops fought well and furiously, but we did not stand a chance against the opposing forces."
+ sta.44.a:0 "Disastrous."
+ # ATTACKER CANCEL
+ sta.45.t:0 "Conflict Cancelled!"
+ sta.45.d:0 "As our troops have been facing the opposing threat, both parties got distracted by surrounding events and cancelled the attacks."
+ sta.45.a:0 "We will settle this later."
+ #---------------------------------------------------
+ # DEFENDER WON
+ sta.46.t:0 "We won the skirmish!"
+ sta.46.d:0 "We succesfuly drove back the invading Union forces with ease."
+ sta.46.a:0 "That will teach them a lesson."
+ # DEFENDER LOST
+ sta.47.t:0 "We lost the skirmish!"
+ sta.47.d:0 "Our troops suffered a humiliating defeat in the recent conflict on the southern border. Their troops are now occupying our territory!"
+ sta.47.a:0 "They will pay for this. Sooner or later."
+ # DEFENDER CANCEL
+ sta.48.t:0 "Conflict Cancelled!"
+ sta.48.d:0 "As our troops have been facing the opposing threat, both parties got distracted by surrounding events and cancelled the attacks."
+ sta.48.a:0 "We will settle this later."
+ 
+ ### BORDER WAR NR 6 ###
+ # ATTACKER WON
+ sta.49.t:0 "We won the skirmish!"
+ sta.49.d:0 "Our troops succesfuly fought off the defending forces and occupied their territory. This is now our land."
+ sta.49.a:0 "Most impressive."
+ # ATTACKER LOST
+ sta.50.t:0 "We lost the skirmish!"
+ sta.50.d:0 "Our troops fought well and furiously, but we did not stand a chance against the opposing forces."
+ sta.50.a:0 "Disastrous."
+ # ATTACKER CANCEL
+ sta.51.t:0 "Conflict Cancelled!"
+ sta.51.d:0 "As our troops have been facing the opposing threat, both parties got distracted by surrounding events and cancelled the attacks."
+ sta.51.a:0 "We will settle this later."
+ #---------------------------------------------------
+ # DEFENDER WON
+ sta.52.t:0 "We won the skirmish!"
+ sta.52.d:0 "We succesfuly drove back the invading Union forces with ease."
+ sta.52.a:0 "That will teach them a lesson."
+ # DEFENDER LOST
+ sta.53.t:0 "We lost the skirmish!"
+ sta.53.d:0 "Our troops suffered a humiliating defeat in the recent conflict on the southern border. Their troops are now occupying our territory!"
+ sta.53.a:0 "They will pay for this. Sooner or later."
+ # DEFENDER CANCEL
+ sta.54.t:0 "Conflict Cancelled!"
+ sta.54.d:0 "As our troops have been facing the opposing threat, both parties got distracted by surrounding events and cancelled the attacks."
+ sta.54.a:0 "We will settle this later."
+ 
+ sta.55.t:0 "The Treaty of Rentinger"
+ sta.55.d:0 "Due to recent development of Neureik arms and our joint political influence, we made great changes possible. Republicans are being stomped everywhere. This was only possible due to our massive assistance. We will write a treaty which will ensure that Hassler is paying us with his loyality. We can go for subtle influences or straight demands. What will be the best approach? They will make sure everyone knows about the outcome of this."
+ sta.55.a:0 "Influence him in a subtle way."
+ sta.55.b:0 "Demand his loyality."
+ 
+ sta.56.t:0 "The Treaty of Rentinger"
+ sta.56.d:0 "Due to their recent support in our political ambitions, Stahlhof has requested to sign the Treaty of Rentinger. The points in the treaty are trying to establish a healthy friendship between our nations and to encourage a military alliance."
+ sta.56.a:0 "They already paid their part. It's only fair."
+ sta.56.b:0 "We will go our own way."
+ 
+ sta.57.t:0 "The Treaty of Rentinger"
+ sta.57.d:0 "Due to their recent support in our political ambitions, Stahlhof has requested to sign the Treaty of Rentinger. The points in the treaty are trying to establish a military alliance between our countries which ends up in declaring our disloyality to the Union. We will [From.GetLeader] as the Unions leader. They will make sure everyone knows about the outcome of this."
+ sta.57.a:0 "[From.GetLeader]s rule is just and we will support him."
+ sta.57.b:0 "Infuriating demands. We go our own way."
+ 
+ sta.58.t:0 "Treaty of Rentinger signed!"
+ sta.58.d:0 "We got message from [NRK.GetLeader], stating that they will support our cause. They signed the Treaty and agree to all of our points."
+ sta.58.a:0 "Their support will be of great use!"
+ 
+ sta.59.t:0 "Treaty of Rentinger declined!"
+ sta.59.d:0 "We got message from [NRK.GetLeader], stating that they will not support our cause. They sent our diplomats back to Stahlhof and declined every single point. He said our support is not of the same value as their independence and loyality."
+ sta.59.a:0 "This will have consequences."
+ 
+  ### BORDER WAR NR 6 ###
+ # ATTACKER WON
+ sta.60.t:0 "We won the skirmish!"
+ sta.60.d:0 "Our troops succesfuly fought off the defending forces and occupied their territory. This is now our land."
+ sta.60.a:0 "Most impressive."
+ # ATTACKER LOST
+ sta.61.t:0 "We lost the skirmish!"
+ sta.61.d:0 "Our troops fought well and furiously, but we did not stand a chance against the opposing forces."
+ sta.61.a:0 "Disastrous."
+ # ATTACKER CANCEL
+ sta.62.t:0 "Conflict Cancelled!"
+ sta.62.d:0 "As our troops have been facing the opposing threat, both parties got distracted by surrounding events and cancelled the attacks."
+ sta.62.a:0 "We will settle this later."
+ #---------------------------------------------------
+ # DEFENDER WON
+ sta.63.t:0 "We won the skirmish!"
+ sta.63.d:0 "We succesfuly drove back the invading Stahlhof forces with ease."
+ sta.63.a:0 "That will teach them a lesson."
+ # DEFENDER LOST
+ sta.64.t:0 "We lost the skirmish!"
+ sta.64.d:0 "Our troops suffered a humiliating defeat in the recent conflict on the western border. Their troops are now occupying our territory!"
+ sta.64.a:0 "They will pay for this. Sooner or later."
+ # DEFENDER CANCEL
+ sta.65.t:0 "Conflict Cancelled!"
+ sta.65.d:0 "As our troops have been facing the opposing threat, both parties got distracted by surrounding events and cancelled the attacks."
+ sta.65.a:0 "We will settle this later."
+ 
+ sta.66.t:0 "The civilwar is over!"
+ sta.66.d:0 "The last opposing forces have surrendered and we are finally in control of the country again. Let us celebrate this victory, but keep in mind that the country needs to recover from this conflict."
+ sta.66.a:0 "At least this conflict is settled now."
+ 
+ sta.67.t:0 "Lafdaren assassinated!"
+ sta.67.d:0 "The Arcanist's Tower is thrown into turmoil as news spreads that Lafdaren has been found dead in his bed, his throat slit as he slept! Rumours are already blaming Schwarzenbach, but we've got bigger issues - sensing weakness, Resmayer has gathered up an army of cronies and power-hungry wizards, and he has announced his intent to take the Staff of the Archmage by force!"
+ sta.67.a:0 "We shall avenge the Archmage!"
+ sta.67.b:0 "Resmayer is the legitimate ruler of the Arkanisturm!"
+ 
+ sta.68.t:0 "Lafdaren Elected Archmage!"
+ sta.68.d:0 "The Mysticarum of the Arcanist's Tower has elected, after a long period of regency, Jithe Lafdaren as the new Archmage of the Tower. As he is known for his fierce loyalty to the Hochprinzessin, this is dire news for our cause. We will have to contact our allies within the Tower and see what is to be done."
+ sta.68.a:0 "The Arkanisturm is too valuable to remain in Adalina's hands..."
+ 
+ sta.69.t:0 "Resmayer Elected Archmage"
+ sta.69.d:0 "The Mysticarum of the Arcanist's Tower has elected, after a long period of regency, Falstinnion Resmayer as the new Archmage. He is eager to loosen the restrictions placed upon magical research, and has aligned himself with us in exchange for the freedom to pursue his research as he sees fit."
+ sta.69.a:0 "We have gained a powerful weapon in the allegiance of the Arkanisturm."
+ 
+ ark.1.t:0 "Election of the Archmage"
+ ark.1.d:0 "The position of Archmage, normally filled after a brief regency, has been open for several years following the death fo Archmage Ional Hengfeld. During the ongoing negotations for the election of Archmage, two factions have emerged - those following Jithe Lafdaren, Lecturer in Arcane History, and the adherents of Falstinnion Resmayer, High Transmuter of the Tower. Lafdaren is a strong proponent of strengthening the safeguards around magical research and clamping down on rogue magical activity, while Resmayer seeks to allow unfettered magical power and research free of constraints. Who should lead the Arcanist's Tower?"
+ ark.1.a:0 "Lafdaren, for safe and steady progress!"
+ ark.1.b:0 "Resmayer, for unshackled power!"

@@ -13,7 +13,7 @@ add_namespace = console_command
 		
 		option = {#Die
 			name = console_command.1.a
-			
+						
 			every_country = {
 				limit = {
 					is_subject = yes

@@ -20,7 +20,6 @@ set_politics = {
 }
 
 add_ideas = {
-	Manoralism
 	human_country
 	anzella_patron
 }

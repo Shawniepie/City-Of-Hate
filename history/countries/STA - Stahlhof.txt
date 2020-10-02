@@ -36,7 +36,6 @@ set_popularities = {
 }
 
 add_ideas = {
-	Manoralism
 	human_country
 	septism_religion
 }

@@ -458,24 +458,13 @@ country_event = {# Moderate Victory
 		}
 		set_politics = {
 			ruling_party = monarchy_absolute
-			}
+		}
 		add_popularity = {
 			ideology = monarchy_absolute
 			popularity = 0.15
-			}
+		}
 		hidden_effect = {
 			set_country_flag = ORD_ordorian_thaw
-			random_country = {
-				limit = { 
-					NOT = {
-						TAG = ORD
-					}
-				}
-				news_event = {
-					id = news.1
-					days = 2
-				}
-			}
 		}
 		hidden_effect = {
 			set_country_flag = {
@@ -517,17 +506,6 @@ country_event = {# Imperialist Victory
 		}
 		hidden_effect = {
 			set_country_flag = ORD_empire_purity
-			random_country = {
-				limit = { 
-					NOT = {
-						TAG = ORD
-					}
-				}
-				news_event = {
-					id = news.2
-					days = 2
-				}
-			}
 		}
 	}
 }
@@ -562,17 +540,6 @@ country_event = {# Theocrat Victory
 		}
 		hidden_effect = {
 			set_country_flag = ORD_pure_priests_flag
-			random_country = {
-				limit = { 
-					NOT = {
-						TAG = ORD
-					}
-				}
-				news_event = {
-					id = news.3
-					days = 2
-				}
-			}
 		}
 	}
 }
@@ -1656,6 +1623,10 @@ country_event = {#Skaelinger Offers Peace
 		name = ord.30.a
 		ai_chance = {
 			factor = 5
+			modifier = {
+				has_government = theocrat
+				factor = 0.5
+			}
 		}
 		hidden_effect = {
 			SKA = {
@@ -1671,6 +1642,10 @@ country_event = {#Skaelinger Offers Peace
 		name = ord.30.b
 		ai_chance = {
 			factor = 35
+			modifier = {
+				has_government = theocrat
+				factor = 0.5
+			}
 		}
 		hidden_effect = {
 			SKA = {
@@ -1685,7 +1660,11 @@ country_event = {#Skaelinger Offers Peace
 	option = {#Decline
 		name = ord.30.c
 		ai_chance = {
-			factor = 30
+			factor = 3
+			modifier = {
+				has_government = theocrat
+				modifier = 4
+			}
 		}
 		hidden_effect = {
 			SKA = {
@@ -1704,6 +1683,10 @@ country_event = {#Skaelinger Offers Peace
 		}
 		ai_chance = {
 			factor = 100
+			modifier = {
+				has_government = monarchy_absolute
+				factor = 50
+			}
 		}
 		hidden_effect = {
 			SKA = {

@@ -1,0 +1,196 @@
+﻿### VERGALL EVENTS
+
+add_namespace = vrg
+
+country_event = {#Restored Zarathum!
+	id = vrg.1
+	title = vrg.1.t
+	desc = vrg.1.d
+	picture = GFX_report_event_por_estado_novo
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {#Glory!
+		name = vrg.1.a
+		174 = {
+			set_state_name = "Zarathum"
+		}
+		set_province_name = {
+			id = 7798
+			name = "Zarathum"
+		}
+		set_capital = 174
+		news_event = {
+			id = news.8
+			days = 10
+			random = 50
+		}
+		custom_effect_tooltip = DORF_claim_vergallheim_tt
+		hidden_effect = {
+			claim_vergallheim_territory = yes
+		}
+	}
+}
+
+country_event = {#Dwarves Leave for Zarathum
+	id = vrg.2
+	title = vrg.2.t
+	desc = vrg.2.d
+	picture = GFX_report_event_crowd_in_prague
+	
+	is_triggered_only = yes
+	
+	option = {#They'll be missed
+		name = vrg.2.a
+		random_owned_controlled_state = {
+			limit = {
+				is_core_of = ROOT
+				state_population > 8999
+			}
+			add_manpower = -6570
+		}
+		random_owned_controlled_state = {
+			limit = {
+				is_core_of = ROOT
+				state_population > 8999
+			}
+			add_manpower = -5544
+		}
+		random_owned_controlled_state = {
+			limit = {
+				is_core_of = ROOT
+				state_population > 8999
+			}
+			add_manpower = -7194
+		}
+		random_owned_controlled_state = {
+			limit = {
+				is_core_of = ROOT
+				state_population > 9999
+			}
+			add_manpower = -8720
+		}
+		random_owned_controlled_state = {
+			limit = {
+				is_core_of = ROOT
+				state_population > 9999
+			}
+			add_manpower = -7981
+		}
+		every_country = {
+			limit = {
+				has_country_flag = DORF_we_got_zarathum
+			}
+			country_event = {
+				id = vrg.3
+				days = 20
+				random = 12
+			}
+		}
+	}
+}
+
+country_event = { #Migrants Arrive
+	id = vrg.3
+	title = vrg.3.t
+	desc = vrg.3.d
+	picture = GFX_report_event_crowd_in_prague
+	
+	is_triggered_only = yes
+	
+	option = {#Welcome!
+		name = vrg.3.a
+		hidden_effect = {
+			174 = {
+				add_manpower = 36009
+			}
+		}
+	}
+}
+
+country_event = { #Migrants Arrive from the Diaspora
+	id = vrg.4
+	title = vrg.4.t
+	desc = vrg.4.d
+	picture = GFX_report_event_crowd_in_prague
+	
+	is_triggered_only = yes
+	
+	option = {#Welcome!
+		name = vrg.4.a
+		hidden_effect = {
+			174 = {
+				add_manpower = 396009
+			}
+		}
+	}
+}
+
+country_event = { #Random Migrants Arrive
+	id = vrg.5
+	title = vrg.5.t
+	desc = vrg.5.d
+	picture = GFX_report_event_crowd_in_prague
+	
+	trigger = {
+		has_country_flag = DORF_migrants_coming
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {#Welcome!
+		name = vrg.4.a
+		hidden_effect = {
+			random_list = {
+				35 = {
+					174 = {
+					add_manpower = 1702
+				}
+				5 = {
+					174 = {
+					add_manpower = 15321
+				}
+				15 = {
+					174 = {
+					add_manpower = 835
+				}
+				3 = {
+					174 = {
+					add_manpower = 27431
+				}
+				7 = {
+					174 = {
+					add_manpower = 38253
+				}
+				3 = {
+					174 = {
+					add_manpower = 10924
+				}
+				2 = {
+					174 = {
+					add_manpower = 48124
+				}
+				16 = {
+					174 = {
+					add_manpower = 8934
+					clr_country_flag = DORF_migrants_coming
+				}
+				9 = {
+					174 = {
+					add_manpower = 12935
+					clr_country_flag = DORF_migrants_coming
+				}
+				5 = {
+					174 = {
+					add_manpower = 18923
+					clr_country_flag = DORF_migrants_coming
+				}
+				fixed_random_seed = no
+			}
+		}
+	}
+}

@@ -1,0 +1,43 @@
+﻿capital = 174
+
+set_research_slots = 3
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	dwarven_warriors = 1
+	tech_support = 1
+	tech_recon = 1
+	tech_engineers = 1
+}
+
+1939.1.1 = {
+}
+
+set_politics = {
+	ruling_party = monarchy_constitutional
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	monarchy_absolute = 8
+
+	monarchy_constitutional = 70
+
+	republic_peasant = 3
+
+	republic_aristocrat = 12
+
+	republic_merchant = 5
+
+	theocrat = 2
+
+	puritan = 0
+}
+
+add_ideas = {
+	dwarf_country
+	dwarven_ancestor_worship_religion
+}

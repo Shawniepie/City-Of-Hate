@@ -1,0 +1,1892 @@
+### MOUNTAINHOME SKIRMISHES EVENTS
+
+add_namespace = dorf_invade
+
+#ASOLFSSKALI SKIRMISH
+
+country_event = {#Attacker Wins
+	id = dorf_invade.1
+	title = dorf_invade_invader_win.t
+	desc = dorf_invade_invader_win.d
+	picture = GFX_report_event_german_reichstag_bombed
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			179 = {
+				save_event_target_as = DORF_border_conflict_state
+				set_state_name = "Asolfsskali"
+			}
+		}
+	}
+	
+	option = {#Yay
+		name = dorf_invade_invader_win.a
+		add_political_power = 25
+		transfer_state = 179
+	}
+}
+
+country_event = {#Attacker Loss
+	id = dorf_invade.2
+	title = dorf_invade_invader_loss.t
+	desc = dorf_invade_invader_loss.d
+	picture = GFX_report_event_german_reichstag_bombed
+	is_triggered_only = yes
+	
+	immediate = {
+		179 = {
+			save_event_target_as = DORF_border_conflict_state
+		}
+	}
+	
+	option = {#Eh
+		name = dorf_invade_invader_loss.a
+		add_political_power = -25
+	}
+}
+
+country_event = {#Attacker Draw
+	id = dorf_invade.3
+	title = dorf_invade_invader_draw.t
+	desc = dorf_invade_invader_draw.d
+	picture = GFX_report_event_german_reichstag_bombed
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		179 = {
+			save_event_target_as = DORF_border_conflict_state
+		}
+	}
+	
+	option = {#Oh no
+		name = dorf_invade_invader_draw.a
+		add_political_power = -5
+	}
+}
+
+country_event = {#Defender Wins
+	id = dorf_invade.4
+	title = dorf_invade_defender_win.t
+	desc = dorf_invade_defender_win.d
+	picture = GFX_report_event_german_reichstag_bombed
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		179 = {
+			save_event_target_as = DORF_border_conflict_state
+		}
+	}
+	
+	option = {#Yay
+		name = dorf_invade_defender_win.a
+		add_political_power = 25
+		add_war_support = 0.05
+	}
+}
+
+country_event = {#Defender Loss
+	id = dorf_invade.5
+	title = dorf_invade_defender_loss.t
+	desc = dorf_invade_defender_loss.d
+	picture = GFX_report_event_german_reichstag_bombed
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		179 = {
+			save_event_target_as = DORF_border_conflict_state
+		}
+	}
+	
+	option = {#Eh
+		name = dorf_invade_defender_loss.a
+		add_political_power = -25
+	}
+}
+
+country_event = {#Defender Draw
+	id = dorf_invade.6
+	title = dorf_invade_defender_draw.t
+	desc = dorf_invade_defender_draw.d
+	picture = GFX_report_event_german_reichstag_bombed
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		179 = {
+			save_event_target_as = DORF_border_conflict_state
+		}
+	}
+	
+	option = {#Oh no
+		name = dorf_invade_defender_draw.a
+		add_political_power = -5
+	}
+}
+
+#SKAPTAHOLT SKIRMISH
+
+country_event = {#Attacker Wins
+	id = dorf_invade.7
+	title = dorf_invade_invader_win.t
+	desc = dorf_invade_invader_win.d
+	picture = GFX_report_event_german_reichstag_bombed
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			659 = {
+				save_event_target_as = DORF_border_conflict_state
+				set_state_name = "Skaptaholt"
+			}
+		}
+	}
+	
+	option = {#Yay
+		name = dorf_invade_invader_win.a
+		add_political_power = 25
+		transfer_state = 659
+	}
+}
+
+country_event = {#Attacker Draw
+	id = dorf_invade.8
+	title = dorf_invade_invader_draw.t
+	desc = dorf_invade_invader_draw.d
+	picture = GFX_report_event_german_reichstag_bombed
+	is_triggered_only = yes
+	
+	immediate = {
+		659 = {
+			save_event_target_as = DORF_border_conflict_state
+		}
+	}
+	
+	option = {#Eh
+		name = dorf_invade_invader_draw.a
+		add_political_power = -5
+	}
+}
+
+country_event = {#Attacker Loss
+	id = dorf_invade.9
+	title = dorf_invade_invader_loss.t
+	desc = dorf_invade_invader_loss.d
+	picture = GFX_report_event_german_reichstag_bombed
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		659 = {
+			save_event_target_as = DORF_border_conflict_state
+		}
+	}
+	
+	option = {#Oh no
+		name = dorf_invade_invader_loss.a
+		add_political_power = -25
+	}
+}
+
+country_event = {#Defender Wins
+	id = dorf_invade.10
+	title = dorf_invade_defender_win.t
+	desc = dorf_invade_defender_win.d
+	picture = GFX_report_event_german_reichstag_bombed
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		659 = {
+			save_event_target_as = DORF_border_conflict_state
+		}
+	}
+	
+	option = {#Yay
+		name = dorf_invade_defender_win.a
+		add_political_power = 25
+		add_war_support = 0.05
+	}
+}
+
+country_event = {#Defender Draw
+	id = dorf_invade.11
+	title = dorf_invade_defender_draw.t
+	desc = dorf_invade_defender_draw.d
+	picture = GFX_report_event_german_reichstag_bombed
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		659 = {
+			save_event_target_as = DORF_border_conflict_state
+		}
+	}
+	
+	option = {#Eh
+		name = dorf_invade_defender_draw.a
+		add_political_power = -5
+	}
+}
+
+country_event = {#Defender Loss
+	id = dorf_invade.12
+	title = dorf_invade_defender_loss.t
+	desc = dorf_invade_defender_loss.d
+	picture = GFX_report_event_german_reichstag_bombed
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		659 = {
+			save_event_target_as = DORF_border_conflict_state
+		}
+	}
+	
+	option = {#Oh no
+		name = dorf_invade_defender_loss.a
+		add_political_power = -25
+	}
+}
+
+#HVANNEYRR SKIRMISH
+
+country_event = {#Attacker Wins
+	id = dorf_invade.13
+	title = dorf_invade_invader_win.t
+	desc = dorf_invade_invader_win.d
+	picture = GFX_report_event_german_reichstag_bombed
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			176 = {
+				save_event_target_as = DORF_border_conflict_state
+				set_state_name = "Hvanneyrr"
+			}
+		}
+	}
+	
+	option = {#Yay
+		name = dorf_invade_invader_win.a
+		add_political_power = 25
+		transfer_state = 176
+	}
+}
+
+country_event = {#Attacker Loss
+	id = dorf_invade.14
+	title = dorf_invade_invader_loss.t
+	desc = dorf_invade_invader_loss.d
+	picture = GFX_report_event_german_reichstag_bombed
+	is_triggered_only = yes
+	
+	immediate = {
+		176 = {
+			save_event_target_as = DORF_border_conflict_state
+		}
+	}
+	
+	option = {#Eh
+		name = dorf_invade_invader_loss.a
+		add_political_power = -25
+	}
+}
+
+country_event = {#Attacker Draw
+	id = dorf_invade.15
+	title = dorf_invade_invader_draw.t
+	desc = dorf_invade_invader_draw.d
+	picture = GFX_report_event_german_reichstag_bombed
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		176 = {
+			save_event_target_as = DORF_border_conflict_state
+		}
+	}
+	
+	option = {#Oh no
+		name = dorf_invade_invader_draw.a
+		add_political_power = -5
+	}
+}
+
+country_event = {#Defender Wins
+	id = dorf_invade.16
+	title = dorf_invade_defender_win.t
+	desc = dorf_invade_defender_win.d
+	picture = GFX_report_event_german_reichstag_bombed
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		176 = {
+			save_event_target_as = DORF_border_conflict_state
+		}
+	}
+	
+	option = {#Yay
+		name = dorf_invade_defender_win.a
+		add_political_power = 25
+		add_war_support = 0.05
+	}
+}
+
+country_event = {#Defender Loss
+	id = dorf_invade.17
+	title = dorf_invade_defender_loss.t
+	desc = dorf_invade_defender_loss.d
+	picture = GFX_report_event_german_reichstag_bombed
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		176 = {
+			save_event_target_as = DORF_border_conflict_state
+		}
+	}
+	
+	option = {#Eh
+		name = dorf_invade_defender_loss.a
+		add_political_power = -25
+	}
+}
+
+country_event = {#Defender Draw
+	id = dorf_invade.18
+	title = dorf_invade_defender_draw.t
+	desc = dorf_invade_defender_draw.d
+	picture = GFX_report_event_german_reichstag_bombed
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		176 = {
+			save_event_target_as = DORF_border_conflict_state
+		}
+	}
+	
+	option = {#Oh no
+		name = dorf_invade_defender_draw.a
+		add_political_power = -5
+	}
+}
+
+#ZARATHUM SKIRMISH
+
+country_event = {#Attacker Wins
+	id = dorf_invade.19
+	title = dorf_invade_invader_win.t
+	desc = dorf_invade_invader_win.d
+	picture = GFX_report_event_german_reichstag_bombed
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			174 = {
+				save_event_target_as = DORF_border_conflict_state
+				set_state_name = "Ruins of Zarathum"
+			}
+		}
+	}
+	
+	option = {#Yay
+		name = dorf_invade_invader_win.a
+		add_political_power = 25
+		transfer_state = 174
+	}
+}
+
+country_event = {#Attacker Loss
+	id = dorf_invade.20
+	title = dorf_invade_invader_loss.t
+	desc = dorf_invade_invader_loss.d
+	picture = GFX_report_event_german_reichstag_bombed
+	is_triggered_only = yes
+	
+	immediate = {
+		174 = {
+			save_event_target_as = DORF_border_conflict_state
+		}
+	}
+	
+	option = {#Eh
+		name = dorf_invade_invader_loss.a
+		add_political_power = -25
+	}
+}
+
+country_event = {#Attacker Draw
+	id = dorf_invade.21
+	title = dorf_invade_invader_draw.t
+	desc = dorf_invade_invader_draw.d
+	picture = GFX_report_event_german_reichstag_bombed
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		174 = {
+			save_event_target_as = DORF_border_conflict_state
+		}
+	}
+	
+	option = {#Oh no
+		name = dorf_invade_invader_draw.a
+		add_political_power = -5
+	}
+}
+
+country_event = {#Defender Wins
+	id = dorf_invade.22
+	title = dorf_invade_defender_win.t
+	desc = dorf_invade_defender_win.d
+	picture = GFX_report_event_german_reichstag_bombed
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		174 = {
+			save_event_target_as = DORF_border_conflict_state
+		}
+	}
+	
+	option = {#Yay
+		name = dorf_invade_defender_win.a
+		add_political_power = 25
+		add_war_support = 0.05
+	}
+}
+
+country_event = {#Defender Loss
+	id = dorf_invade.23
+	title = dorf_invade_defender_loss.t
+	desc = dorf_invade_defender_loss.d
+	picture = GFX_report_event_german_reichstag_bombed
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		174 = {
+			save_event_target_as = DORF_border_conflict_state
+		}
+	}
+	
+	option = {#Eh
+		name = dorf_invade_defender_loss.a
+		add_political_power = -25
+	}
+}
+
+country_event = {#Defender Draw
+	id = dorf_invade.24
+	title = dorf_invade_defender_draw.t
+	desc = dorf_invade_defender_draw.d
+	picture = GFX_report_event_german_reichstag_bombed
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		174 = {
+			save_event_target_as = DORF_border_conflict_state
+		}
+	}
+	
+	option = {#Oh no
+		name = dorf_invade_defender_draw.a
+		add_political_power = -5
+	}
+}
+
+#LAGRASKR SKIRMISH
+
+country_event = {#Attacker Wins
+	id = dorf_invade.25
+	title = dorf_invade_invader_win.t
+	desc = dorf_invade_invader_win.d
+	picture = GFX_report_event_german_reichstag_bombed
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			173 = {
+				save_event_target_as = DORF_border_conflict_state
+				set_state_name = "Zarathum"
+			}
+		}
+	}
+	
+	option = {#Yay
+		name = dorf_invade_invader_win.a
+		add_political_power = 25
+		transfer_state = 173
+	}
+}
+
+country_event = {#Attacker Loss
+	id = dorf_invade.26
+	title = dorf_invade_invader_loss.t
+	desc = dorf_invade_invader_loss.d
+	picture = GFX_report_event_german_reichstag_bombed
+	is_triggered_only = yes
+	
+	immediate = {
+		173 = {
+			save_event_target_as = DORF_border_conflict_state
+		}
+	}
+	
+	option = {#Eh
+		name = dorf_invade_invader_loss.a
+		add_political_power = -25
+	}
+}
+
+country_event = {#Attacker Draw
+	id = dorf_invade.27
+	title = dorf_invade_invader_draw.t
+	desc = dorf_invade_invader_draw.d
+	picture = GFX_report_event_german_reichstag_bombed
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		173 = {
+			save_event_target_as = DORF_border_conflict_state
+		}
+	}
+	
+	option = {#Oh no
+		name = dorf_invade_invader_draw.a
+		add_political_power = -5
+	}
+}
+
+country_event = {#Defender Wins
+	id = dorf_invade.28
+	title = dorf_invade_defender_win.t
+	desc = dorf_invade_defender_win.d
+	picture = GFX_report_event_german_reichstag_bombed
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		173 = {
+			save_event_target_as = DORF_border_conflict_state
+		}
+	}
+	
+	option = {#Yay
+		name = dorf_invade_defender_win.a
+		add_political_power = 25
+		add_war_support = 0.05
+	}
+}
+
+country_event = {#Defender Loss
+	id = dorf_invade.29
+	title = dorf_invade_defender_loss.t
+	desc = dorf_invade_defender_loss.d
+	picture = GFX_report_event_german_reichstag_bombed
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		173 = {
+			save_event_target_as = DORF_border_conflict_state
+		}
+	}
+	
+	option = {#Eh
+		name = dorf_invade_defender_loss.a
+		add_political_power = -25
+	}
+}
+
+country_event = {#Defender Draw
+	id = dorf_invade.30
+	title = dorf_invade_defender_draw.t
+	desc = dorf_invade_defender_draw.d
+	picture = GFX_report_event_german_reichstag_bombed
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		173 = {
+			save_event_target_as = DORF_border_conflict_state
+		}
+	}
+	
+	option = {#Oh no
+		name = dorf_invade_defender_draw.a
+		add_political_power = -5
+	}
+}
+
+#ÁLFRSKAUT SKIRMISH
+
+country_event = {#Attacker Wins
+	id = dorf_invade.31
+	title = dorf_invade_invader_win.t
+	desc = dorf_invade_invader_win.d
+	picture = GFX_report_event_german_reichstag_bombed
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			106 = {
+				save_event_target_as = DORF_border_conflict_state
+				set_state_name = "Álfrskaut"
+			}
+		}
+	}
+	
+	option = {#Yay
+		name = dorf_invade_invader_win.a
+		add_political_power = 25
+		transfer_state = 106
+	}
+}
+
+country_event = {#Attacker Loss
+	id = dorf_invade.32
+	title = dorf_invade_invader_loss.t
+	desc = dorf_invade_invader_loss.d
+	picture = GFX_report_event_german_reichstag_bombed
+	is_triggered_only = yes
+	
+	immediate = {
+		106 = {
+			save_event_target_as = DORF_border_conflict_state
+		}
+	}
+	
+	option = {#Eh
+		name = dorf_invade_invader_loss.a
+		add_political_power = -25
+	}
+}
+
+country_event = {#Attacker Draw
+	id = dorf_invade.33
+	title = dorf_invade_invader_draw.t
+	desc = dorf_invade_invader_draw.d
+	picture = GFX_report_event_german_reichstag_bombed
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		106 = {
+			save_event_target_as = DORF_border_conflict_state
+		}
+	}
+	
+	option = {#Oh no
+		name = dorf_invade_invader_draw.a
+		add_political_power = -5
+	}
+}
+
+country_event = {#Defender Wins
+	id = dorf_invade.34
+	title = dorf_invade_defender_win.t
+	desc = dorf_invade_defender_win.d
+	picture = GFX_report_event_german_reichstag_bombed
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		106 = {
+			save_event_target_as = DORF_border_conflict_state
+		}
+	}
+	
+	option = {#Yay
+		name = dorf_invade_defender_win.a
+		add_political_power = 25
+		add_war_support = 0.05
+	}
+}
+
+country_event = {#Defender Loss
+	id = dorf_invade.35
+	title = dorf_invade_defender_loss.t
+	desc = dorf_invade_defender_loss.d
+	picture = GFX_report_event_german_reichstag_bombed
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		106 = {
+			save_event_target_as = DORF_border_conflict_state
+		}
+	}
+	
+	option = {#Eh
+		name = dorf_invade_defender_loss.a
+		add_political_power = -25
+	}
+}
+
+country_event = {#Defender Draw
+	id = dorf_invade.36
+	title = dorf_invade_defender_draw.t
+	desc = dorf_invade_defender_draw.d
+	picture = GFX_report_event_german_reichstag_bombed
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		106 = {
+			save_event_target_as = DORF_border_conflict_state
+		}
+	}
+	
+	option = {#Oh no
+		name = dorf_invade_defender_draw.a
+		add_political_power = -5
+	}
+}
+
+#MERSINGBJARG SKIRMISH
+
+country_event = {#Attacker Wins
+	id = dorf_invade.37
+	title = dorf_invade_invader_win.t
+	desc = dorf_invade_invader_win.d
+	picture = GFX_report_event_german_reichstag_bombed
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			139 = {
+				save_event_target_as = DORF_border_conflict_state
+				set_state_name = "Mersingbjarg"
+			}
+		}
+	}
+	
+	option = {#Yay
+		name = dorf_invade_invader_win.a
+		add_political_power = 25
+		transfer_state = 139
+	}
+}
+
+country_event = {#Attacker Loss
+	id = dorf_invade.38
+	title = dorf_invade_invader_loss.t
+	desc = dorf_invade_invader_loss.d
+	picture = GFX_report_event_german_reichstag_bombed
+	is_triggered_only = yes
+	
+	immediate = {
+		139 = {
+			save_event_target_as = DORF_border_conflict_state
+		}
+	}
+	
+	option = {#Eh
+		name = dorf_invade_invader_loss.a
+		add_political_power = -25
+	}
+}
+
+country_event = {#Attacker Draw
+	id = dorf_invade.39
+	title = dorf_invade_invader_draw.t
+	desc = dorf_invade_invader_draw.d
+	picture = GFX_report_event_german_reichstag_bombed
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		139 = {
+			save_event_target_as = DORF_border_conflict_state
+		}
+	}
+	
+	option = {#Oh no
+		name = dorf_invade_invader_draw.a
+		add_political_power = -5
+	}
+}
+
+country_event = {#Defender Wins
+	id = dorf_invade.40
+	title = dorf_invade_defender_win.t
+	desc = dorf_invade_defender_win.d
+	picture = GFX_report_event_german_reichstag_bombed
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		139 = {
+			save_event_target_as = DORF_border_conflict_state
+		}
+	}
+	
+	option = {#Yay
+		name = dorf_invade_defender_win.a
+		add_political_power = 25
+		add_war_support = 0.05
+	}
+}
+
+country_event = {#Defender Loss
+	id = dorf_invade.41
+	title = dorf_invade_defender_loss.t
+	desc = dorf_invade_defender_loss.d
+	picture = GFX_report_event_german_reichstag_bombed
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		139 = {
+			save_event_target_as = DORF_border_conflict_state
+		}
+	}
+	
+	option = {#Eh
+		name = dorf_invade_defender_loss.a
+		add_political_power = -25
+	}
+}
+
+country_event = {#Defender Draw
+	id = dorf_invade.42
+	title = dorf_invade_defender_draw.t
+	desc = dorf_invade_defender_draw.d
+	picture = GFX_report_event_german_reichstag_bombed
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		139 = {
+			save_event_target_as = DORF_border_conflict_state
+		}
+	}
+	
+	option = {#Oh no
+		name = dorf_invade_defender_draw.a
+		add_political_power = -5
+	}
+}
+
+#HÁR PERKAFELL SKIRMISH
+
+country_event = {#Attacker Wins
+	id = dorf_invade.43
+	title = dorf_invade_invader_win.t
+	desc = dorf_invade_invader_win.d
+	picture = GFX_report_event_german_reichstag_bombed
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			172 = {
+				save_event_target_as = DORF_border_conflict_state
+				set_state_name = "Hár Perkafell"
+			}
+		}
+	}
+	
+	option = {#Yay
+		name = dorf_invade_invader_win.a
+		add_political_power = 25
+		transfer_state = 172
+	}
+}
+
+country_event = {#Attacker Loss
+	id = dorf_invade.44
+	title = dorf_invade_invader_loss.t
+	desc = dorf_invade_invader_loss.d
+	picture = GFX_report_event_german_reichstag_bombed
+	is_triggered_only = yes
+	
+	immediate = {
+		172 = {
+			save_event_target_as = DORF_border_conflict_state
+		}
+	}
+	
+	option = {#Eh
+		name = dorf_invade_invader_loss.a
+		add_political_power = -25
+	}
+}
+
+country_event = {#Attacker Draw
+	id = dorf_invade.45
+	title = dorf_invade_invader_draw.t
+	desc = dorf_invade_invader_draw.d
+	picture = GFX_report_event_german_reichstag_bombed
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		172 = {
+			save_event_target_as = DORF_border_conflict_state
+		}
+	}
+	
+	option = {#Oh no
+		name = dorf_invade_invader_draw.a
+		add_political_power = -5
+	}
+}
+
+country_event = {#Defender Wins
+	id = dorf_invade.46
+	title = dorf_invade_defender_win.t
+	desc = dorf_invade_defender_win.d
+	picture = GFX_report_event_german_reichstag_bombed
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		172 = {
+			save_event_target_as = DORF_border_conflict_state
+		}
+	}
+	
+	option = {#Yay
+		name = dorf_invade_defender_win.a
+		add_political_power = 25
+		add_war_support = 0.05
+	}
+}
+
+country_event = {#Defender Loss
+	id = dorf_invade.47
+	title = dorf_invade_defender_loss.t
+	desc = dorf_invade_defender_loss.d
+	picture = GFX_report_event_german_reichstag_bombed
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		172 = {
+			save_event_target_as = DORF_border_conflict_state
+		}
+	}
+	
+	option = {#Eh
+		name = dorf_invade_defender_loss.a
+		add_political_power = -25
+	}
+}
+
+country_event = {#Defender Draw
+	id = dorf_invade.48
+	title = dorf_invade_defender_draw.t
+	desc = dorf_invade_defender_draw.d
+	picture = GFX_report_event_german_reichstag_bombed
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		172 = {
+			save_event_target_as = DORF_border_conflict_state
+		}
+	}
+	
+	option = {#Oh no
+		name = dorf_invade_defender_draw.a
+		add_political_power = -5
+	}
+}
+
+#NEðAR PERKAFELL SKIRMISH
+
+country_event = {#Attacker Wins
+	id = dorf_invade.49
+	title = dorf_invade_invader_win.t
+	desc = dorf_invade_invader_win.d
+	picture = GFX_report_event_german_reichstag_bombed
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			203 = {
+				save_event_target_as = DORF_border_conflict_state
+				set_state_name = "Neðar Perkafell"
+			}
+		}
+	}
+	
+	option = {#Yay
+		name = dorf_invade_invader_win.a
+		add_political_power = 25
+		transfer_state = 203
+	}
+}
+
+country_event = {#Attacker Loss
+	id = dorf_invade.50
+	title = dorf_invade_invader_loss.t
+	desc = dorf_invade_invader_loss.d
+	picture = GFX_report_event_german_reichstag_bombed
+	is_triggered_only = yes
+	
+	immediate = {
+		203 = {
+			save_event_target_as = DORF_border_conflict_state
+		}
+	}
+	
+	option = {#Eh
+		name = dorf_invade_invader_loss.a
+		add_political_power = -25
+	}
+}
+
+country_event = {#Attacker Draw
+	id = dorf_invade.51
+	title = dorf_invade_invader_draw.t
+	desc = dorf_invade_invader_draw.d
+	picture = GFX_report_event_german_reichstag_bombed
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		203 = {
+			save_event_target_as = DORF_border_conflict_state
+		}
+	}
+	
+	option = {#Oh no
+		name = dorf_invade_invader_draw.a
+		add_political_power = -5
+	}
+}
+
+country_event = {#Defender Wins
+	id = dorf_invade.52
+	title = dorf_invade_defender_win.t
+	desc = dorf_invade_defender_win.d
+	picture = GFX_report_event_german_reichstag_bombed
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		203 = {
+			save_event_target_as = DORF_border_conflict_state
+		}
+	}
+	
+	option = {#Yay
+		name = dorf_invade_defender_win.a
+		add_political_power = 25
+		add_war_support = 0.05
+	}
+}
+
+country_event = {#Defender Loss
+	id = dorf_invade.53
+	title = dorf_invade_defender_loss.t
+	desc = dorf_invade_defender_loss.d
+	picture = GFX_report_event_german_reichstag_bombed
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		203 = {
+			save_event_target_as = DORF_border_conflict_state
+		}
+	}
+	
+	option = {#Eh
+		name = dorf_invade_defender_loss.a
+		add_political_power = -25
+	}
+}
+
+country_event = {#Defender Draw
+	id = dorf_invade.54
+	title = dorf_invade_defender_draw.t
+	desc = dorf_invade_defender_draw.d
+	picture = GFX_report_event_german_reichstag_bombed
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		203 = {
+			save_event_target_as = DORF_border_conflict_state
+		}
+	}
+	
+	option = {#Oh no
+		name = dorf_invade_defender_draw.a
+		add_political_power = -5
+	}
+}
+
+#HAMINGJAFÉ PERKAFELL SKIRMISH
+
+country_event = {#Attacker Wins
+	id = dorf_invade.55
+	title = dorf_invade_invader_win.t
+	desc = dorf_invade_invader_win.d
+	picture = GFX_report_event_german_reichstag_bombed
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			365 = {
+				save_event_target_as = DORF_border_conflict_state
+				set_state_name = "Hamingjafé"
+			}
+		}
+	}
+	
+	option = {#Yay
+		name = dorf_invade_invader_win.a
+		add_political_power = 25
+		transfer_state = 365
+	}
+}
+
+country_event = {#Attacker Loss
+	id = dorf_invade.56
+	title = dorf_invade_invader_loss.t
+	desc = dorf_invade_invader_loss.d
+	picture = GFX_report_event_german_reichstag_bombed
+	is_triggered_only = yes
+	
+	immediate = {
+		365 = {
+			save_event_target_as = DORF_border_conflict_state
+		}
+	}
+	
+	option = {#Eh
+		name = dorf_invade_invader_loss.a
+		add_political_power = -25
+	}
+}
+
+country_event = {#Attacker Draw
+	id = dorf_invade.57
+	title = dorf_invade_invader_draw.t
+	desc = dorf_invade_invader_draw.d
+	picture = GFX_report_event_german_reichstag_bombed
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		365 = {
+			save_event_target_as = DORF_border_conflict_state
+		}
+	}
+	
+	option = {#Oh no
+		name = dorf_invade_invader_draw.a
+		add_political_power = -5
+	}
+}
+
+country_event = {#Defender Wins
+	id = dorf_invade.58
+	title = dorf_invade_defender_win.t
+	desc = dorf_invade_defender_win.d
+	picture = GFX_report_event_german_reichstag_bombed
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		365 = {
+			save_event_target_as = DORF_border_conflict_state
+		}
+	}
+	
+	option = {#Yay
+		name = dorf_invade_defender_win.a
+		add_political_power = 25
+		add_war_support = 0.05
+	}
+}
+
+country_event = {#Defender Loss
+	id = dorf_invade.59
+	title = dorf_invade_defender_loss.t
+	desc = dorf_invade_defender_loss.d
+	picture = GFX_report_event_german_reichstag_bombed
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		365 = {
+			save_event_target_as = DORF_border_conflict_state
+		}
+	}
+	
+	option = {#Eh
+		name = dorf_invade_defender_loss.a
+		add_political_power = -25
+	}
+}
+
+country_event = {#Defender Draw
+	id = dorf_invade.60
+	title = dorf_invade_defender_draw.t
+	desc = dorf_invade_defender_draw.d
+	picture = GFX_report_event_german_reichstag_bombed
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		365 = {
+			save_event_target_as = DORF_border_conflict_state
+		}
+	}
+	
+	option = {#Oh no
+		name = dorf_invade_defender_draw.a
+		add_political_power = -5
+	}
+}
+
+#TEITRVÍN SKIRMISH
+
+country_event = {#Attacker Wins
+	id = dorf_invade.61
+	title = dorf_invade_invader_win.t
+	desc = dorf_invade_invader_win.d
+	picture = GFX_report_event_german_reichstag_bombed
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			207 = {
+				save_event_target_as = DORF_border_conflict_state
+				set_state_name = "Teitrvín"
+			}
+		}
+	}
+	
+	option = {#Yay
+		name = dorf_invade_invader_win.a
+		add_political_power = 25
+		transfer_state = 207
+	}
+}
+
+country_event = {#Attacker Loss
+	id = dorf_invade.62
+	title = dorf_invade_invader_loss.t
+	desc = dorf_invade_invader_loss.d
+	picture = GFX_report_event_german_reichstag_bombed
+	is_triggered_only = yes
+	
+	immediate = {
+		207 = {
+			save_event_target_as = DORF_border_conflict_state
+		}
+	}
+	
+	option = {#Eh
+		name = dorf_invade_invader_loss.a
+		add_political_power = -25
+	}
+}
+
+country_event = {#Attacker Draw
+	id = dorf_invade.63
+	title = dorf_invade_invader_draw.t
+	desc = dorf_invade_invader_draw.d
+	picture = GFX_report_event_german_reichstag_bombed
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		207 = {
+			save_event_target_as = DORF_border_conflict_state
+		}
+	}
+	
+	option = {#Oh no
+		name = dorf_invade_invader_draw.a
+		add_political_power = -5
+	}
+}
+
+country_event = {#Defender Wins
+	id = dorf_invade.64
+	title = dorf_invade_defender_win.t
+	desc = dorf_invade_defender_win.d
+	picture = GFX_report_event_german_reichstag_bombed
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		207 = {
+			save_event_target_as = DORF_border_conflict_state
+		}
+	}
+	
+	option = {#Yay
+		name = dorf_invade_defender_win.a
+		add_political_power = 25
+		add_war_support = 0.05
+	}
+}
+
+country_event = {#Defender Loss
+	id = dorf_invade.65
+	title = dorf_invade_defender_loss.t
+	desc = dorf_invade_defender_loss.d
+	picture = GFX_report_event_german_reichstag_bombed
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		207 = {
+			save_event_target_as = DORF_border_conflict_state
+		}
+	}
+	
+	option = {#Eh
+		name = dorf_invade_defender_loss.a
+		add_political_power = -25
+	}
+}
+
+country_event = {#Defender Draw
+	id = dorf_invade.66
+	title = dorf_invade_defender_draw.t
+	desc = dorf_invade_defender_draw.d
+	picture = GFX_report_event_german_reichstag_bombed
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		207 = {
+			save_event_target_as = DORF_border_conflict_state
+		}
+	}
+	
+	option = {#Oh no
+		name = dorf_invade_defender_draw.a
+		add_political_power = -5
+	}
+}
+
+#SVINNERSÚT SKIRMISH
+
+country_event = {#Attacker Wins
+	id = dorf_invade.67
+	title = dorf_invade_invader_win.t
+	desc = dorf_invade_invader_win.d
+	picture = GFX_report_event_german_reichstag_bombed
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			135 = {
+				save_event_target_as = DORF_border_conflict_state
+				set_state_name = "Svinnersút"
+			}
+		}
+	}
+	
+	option = {#Yay
+		name = dorf_invade_invader_win.a
+		add_political_power = 25
+		transfer_state = 135
+	}
+}
+
+country_event = {#Attacker Loss
+	id = dorf_invade.68
+	title = dorf_invade_invader_loss.t
+	desc = dorf_invade_invader_loss.d
+	picture = GFX_report_event_german_reichstag_bombed
+	is_triggered_only = yes
+	
+	immediate = {
+		135 = {
+			save_event_target_as = DORF_border_conflict_state
+		}
+	}
+	
+	option = {#Eh
+		name = dorf_invade_invader_loss.a
+		add_political_power = -25
+	}
+}
+
+country_event = {#Attacker Draw
+	id = dorf_invade.69
+	title = dorf_invade_invader_draw.t
+	desc = dorf_invade_invader_draw.d
+	picture = GFX_report_event_german_reichstag_bombed
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		135 = {
+			save_event_target_as = DORF_border_conflict_state
+		}
+	}
+	
+	option = {#Oh no
+		name = dorf_invade_invader_draw.a
+		add_political_power = -5
+	}
+}
+
+country_event = {#Defender Wins
+	id = dorf_invade.70
+	title = dorf_invade_defender_win.t
+	desc = dorf_invade_defender_win.d
+	picture = GFX_report_event_german_reichstag_bombed
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		135 = {
+			save_event_target_as = DORF_border_conflict_state
+		}
+	}
+	
+	option = {#Yay
+		name = dorf_invade_defender_win.a
+		add_political_power = 25
+		add_war_support = 0.05
+	}
+}
+
+country_event = {#Defender Loss
+	id = dorf_invade.71
+	title = dorf_invade_defender_loss.t
+	desc = dorf_invade_defender_loss.d
+	picture = GFX_report_event_german_reichstag_bombed
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		135 = {
+			save_event_target_as = DORF_border_conflict_state
+		}
+	}
+	
+	option = {#Eh
+		name = dorf_invade_defender_loss.a
+		add_political_power = -25
+	}
+}
+
+country_event = {#Defender Draw
+	id = dorf_invade.72
+	title = dorf_invade_defender_draw.t
+	desc = dorf_invade_defender_draw.d
+	picture = GFX_report_event_german_reichstag_bombed
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		135 = {
+			save_event_target_as = DORF_border_conflict_state
+		}
+	}
+	
+	option = {#Oh no
+		name = dorf_invade_defender_draw.a
+		add_political_power = -5
+	}
+}
+
+#KHORINGR SKIRMISH
+
+country_event = {#Attacker Wins
+	id = dorf_invade.73
+	title = dorf_invade_invader_win.t
+	desc = dorf_invade_invader_win.d
+	picture = GFX_report_event_german_reichstag_bombed
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			133 = {
+				save_event_target_as = DORF_border_conflict_state
+				set_state_name = "Khoringr"
+			}
+		}
+	}
+	
+	option = {#Yay
+		name = dorf_invade_invader_win.a
+		add_political_power = 25
+		transfer_state = 133
+	}
+}
+
+country_event = {#Attacker Loss
+	id = dorf_invade.74
+	title = dorf_invade_invader_loss.t
+	desc = dorf_invade_invader_loss.d
+	picture = GFX_report_event_german_reichstag_bombed
+	is_triggered_only = yes
+	
+	immediate = {
+		133 = {
+			save_event_target_as = DORF_border_conflict_state
+		}
+	}
+	
+	option = {#Eh
+		name = dorf_invade_invader_loss.a
+		add_political_power = -25
+	}
+}
+
+country_event = {#Attacker Draw
+	id = dorf_invade.75
+	title = dorf_invade_invader_draw.t
+	desc = dorf_invade_invader_draw.d
+	picture = GFX_report_event_german_reichstag_bombed
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		133 = {
+			save_event_target_as = DORF_border_conflict_state
+		}
+	}
+	
+	option = {#Oh no
+		name = dorf_invade_invader_draw.a
+		add_political_power = -5
+	}
+}
+
+country_event = {#Defender Wins
+	id = dorf_invade.76
+	title = dorf_invade_defender_win.t
+	desc = dorf_invade_defender_win.d
+	picture = GFX_report_event_german_reichstag_bombed
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		133 = {
+			save_event_target_as = DORF_border_conflict_state
+		}
+	}
+	
+	option = {#Yay
+		name = dorf_invade_defender_win.a
+		add_political_power = 25
+		add_war_support = 0.05
+	}
+}
+
+country_event = {#Defender Loss
+	id = dorf_invade.77
+	title = dorf_invade_defender_loss.t
+	desc = dorf_invade_defender_loss.d
+	picture = GFX_report_event_german_reichstag_bombed
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		133 = {
+			save_event_target_as = DORF_border_conflict_state
+		}
+	}
+	
+	option = {#Eh
+		name = dorf_invade_defender_loss.a
+		add_political_power = -25
+	}
+}
+
+country_event = {#Defender Draw
+	id = dorf_invade.78
+	title = dorf_invade_defender_draw.t
+	desc = dorf_invade_defender_draw.d
+	picture = GFX_report_event_german_reichstag_bombed
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		133 = {
+			save_event_target_as = DORF_border_conflict_state
+		}
+	}
+	
+	option = {#Oh no
+		name = dorf_invade_defender_draw.a
+		add_political_power = -5
+	}
+}
+
+#THORINTHELIN SKIRMISH
+
+country_event = {#Attacker Wins
+	id = dorf_invade.79
+	title = dorf_invade_invader_win.t
+	desc = dorf_invade_invader_win.d
+	picture = GFX_report_event_german_reichstag_bombed
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			723 = {
+				save_event_target_as = DORF_border_conflict_state
+			}
+		}
+	}
+	
+	option = {#Yay
+		name = dorf_invade_invader_win.a
+		add_political_power = 25
+		transfer_state = 723
+	}
+}
+
+country_event = {#Attacker Loss
+	id = dorf_invade.80
+	title = dorf_invade_invader_loss.t
+	desc = dorf_invade_invader_loss.d
+	picture = GFX_report_event_german_reichstag_bombed
+	is_triggered_only = yes
+	
+	immediate = {
+		723 = {
+			save_event_target_as = DORF_border_conflict_state
+		}
+	}
+	
+	option = {#Eh
+		name = dorf_invade_invader_loss.a
+		add_political_power = -25
+	}
+}
+
+country_event = {#Attacker Draw
+	id = dorf_invade.81
+	title = dorf_invade_invader_draw.t
+	desc = dorf_invade_invader_draw.d
+	picture = GFX_report_event_german_reichstag_bombed
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		723 = {
+			save_event_target_as = DORF_border_conflict_state
+		}
+	}
+	
+	option = {#Oh no
+		name = dorf_invade_invader_draw.a
+		add_political_power = -5
+	}
+}
+
+country_event = {#Defender Wins
+	id = dorf_invade.82
+	title = dorf_invade_defender_win.t
+	desc = dorf_invade_defender_win.d
+	picture = GFX_report_event_german_reichstag_bombed
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		723 = {
+			save_event_target_as = DORF_border_conflict_state
+		}
+	}
+	
+	option = {#Yay
+		name = dorf_invade_defender_win.a
+		add_political_power = 25
+		add_war_support = 0.05
+	}
+}
+
+country_event = {#Defender Loss
+	id = dorf_invade.83
+	title = dorf_invade_defender_loss.t
+	desc = dorf_invade_defender_loss.d
+	picture = GFX_report_event_german_reichstag_bombed
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		723 = {
+			save_event_target_as = DORF_border_conflict_state
+		}
+	}
+	
+	option = {#Eh
+		name = dorf_invade_defender_loss.a
+		add_political_power = -25
+	}
+}
+
+country_event = {#Defender Draw
+	id = dorf_invade.84
+	title = dorf_invade_defender_draw.t
+	desc = dorf_invade_defender_draw.d
+	picture = GFX_report_event_german_reichstag_bombed
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		723 = {
+			save_event_target_as = DORF_border_conflict_state
+		}
+	}
+	
+	option = {#Oh no
+		name = dorf_invade_defender_draw.a
+		add_political_power = -5
+	}
+}
+
+#KUFREMOR SKIRMISH
+
+country_event = {#Attacker Wins
+	id = dorf_invade.85
+	title = dorf_invade_invader_win.t
+	desc = dorf_invade_invader_win.d
+	picture = GFX_report_event_german_reichstag_bombed
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			815 = {
+				save_event_target_as = DORF_border_conflict_state
+				set_state_name = "Kufremor"
+			}
+		}
+	}
+	
+	option = {#Yay
+		name = dorf_invade_invader_win.a
+		add_political_power = 25
+		transfer_state = 815
+	}
+}
+
+country_event = {#Attacker Loss
+	id = dorf_invade.86
+	title = dorf_invade_invader_loss.t
+	desc = dorf_invade_invader_loss.d
+	picture = GFX_report_event_german_reichstag_bombed
+	is_triggered_only = yes
+	
+	immediate = {
+		815 = {
+			save_event_target_as = DORF_border_conflict_state
+		}
+	}
+	
+	option = {#Eh
+		name = dorf_invade_invader_loss.a
+		add_political_power = -25
+	}
+}
+
+country_event = {#Attacker Draw
+	id = dorf_invade.87
+	title = dorf_invade_invader_draw.t
+	desc = dorf_invade_invader_draw.d
+	picture = GFX_report_event_german_reichstag_bombed
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		815 = {
+			save_event_target_as = DORF_border_conflict_state
+		}
+	}
+	
+	option = {#Oh no
+		name = dorf_invade_invader_draw.a
+		add_political_power = -5
+	}
+}
+
+country_event = {#Defender Wins
+	id = dorf_invade.88
+	title = dorf_invade_defender_win.t
+	desc = dorf_invade_defender_win.d
+	picture = GFX_report_event_german_reichstag_bombed
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		815 = {
+			save_event_target_as = DORF_border_conflict_state
+		}
+	}
+	
+	option = {#Yay
+		name = dorf_invade_defender_win.a
+		add_political_power = 25
+		add_war_support = 0.05
+	}
+}
+
+country_event = {#Defender Loss
+	id = dorf_invade.89
+	title = dorf_invade_defender_loss.t
+	desc = dorf_invade_defender_loss.d
+	picture = GFX_report_event_german_reichstag_bombed
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		815 = {
+			save_event_target_as = DORF_border_conflict_state
+		}
+	}
+	
+	option = {#Eh
+		name = dorf_invade_defender_loss.a
+		add_political_power = -25
+	}
+}
+
+country_event = {#Defender Draw
+	id = dorf_invade.90
+	title = dorf_invade_defender_draw.t
+	desc = dorf_invade_defender_draw.d
+	picture = GFX_report_event_german_reichstag_bombed
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		815 = {
+			save_event_target_as = DORF_border_conflict_state
+		}
+	}
+	
+	option = {#Oh no
+		name = dorf_invade_defender_draw.a
+		add_political_power = -5
+	}
+}

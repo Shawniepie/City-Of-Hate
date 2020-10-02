@@ -1,0 +1,520 @@
+spriteTypes = {
+	
+	## Folder Tabs
+	
+	spriteType = {
+    name = "GFX_landcombat_folder_tab"
+    textureFile = "gfx//interface//techtree//techtree_landcombat_tab.dds"
+    noOfFrames = 2        
+	}
+	
+	spriteType = {
+    name = "GFX_warengineering_folder_tab"
+    textureFile = "gfx//interface//techtree//techtree_warengineering_tab.dds"
+    noOfFrames = 2        
+	}
+	
+	spriteType = {
+    name = "GFX_creaturetaming_folder_tab"
+    textureFile = "gfx//interface//techtree//techtree_creaturetaming_tab.dds"
+    noOfFrames = 2        
+	}
+	
+	spriteType = {
+    name = "GFX_strategicwarfare_folder_tab"
+    textureFile = "gfx//interface//techtree//techtree_strategicwarfare_tab.dds"
+    noOfFrames = 2        
+	}
+	
+	spriteType = {
+    name = "GFX_culture_folder_tab"
+    textureFile = "gfx//interface//techtree//techtree_culture_tab.dds"
+    noOfFrames = 2        
+	}
+	
+	spriteType = {
+    name = "GFX_magic_folder_tab"
+    textureFile = "gfx//interface//techtree//techtree_magic_tab.dds"
+    noOfFrames = 2 
+	}
+	
+	## Folder Backgrounds
+	
+	#spriteType = {
+	#	name = "GFX_landcombat_techtree_bg"
+	#	textureFile = "gfx//interface//techtree//landcombat_techtree_bg.dds"
+	#	transparencecheck = yes
+	#}
+	
+	#spriteType = {
+	#	name = "GFX_magic_techtree_bg"
+	#	textureFile = "gfx//interface//techtree//magic_techtree_bg.dds"
+	#	transparencecheck = yes
+	#}
+	
+	#spriteType = {
+	#	name = "GFX_warengineering_techtree_bg"
+	#	textureFile = "gfx//interface//techtree//warengineering_techtree_bg.dds"
+	#	transparencecheck = yes
+	#}
+	
+	###### landcombat ######
+	
+	## Folder Small Item Backgrounds
+	
+	spriteType = {
+		name = "GFX_technology_landcombat_folder_small_unavailable_item_bg"
+		textureFile = "gfx//interface//techtree//tech_doctrine_unavailable_item_bg.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_technology_landcombat_folder_small_available_item_bg"
+		textureFile = "gfx//interface//techtree//tech_doctrine_available_item_bg.dds"
+	}
+
+	spriteType = {
+		name = "GFX_technology_landcombat_folder_small_researched_item_bg"
+		textureFile = "gfx//interface//techtree//tech_landdoctrine_researched_item_bg.dds"
+	}	
+
+	spriteType = {
+		name = "GFX_technology_landcombat_folder_small_branch_item_bg"
+		textureFile = "gfx/interface/techtree/tech_doctrine_branch_item_bg.dds"
+	}
+	
+	frameAnimatedSpriteType = {
+		name = "GFX_technology_landcombat_folder_small_currently_researching_item_bg"
+		texturefile = "gfx//interface//techtree//tech_doctrine_researching_anim_strip.dds"
+		noOfFrames = 9
+		loadType = "INGAME"
+		transparencecheck = yes
+		animation_rate_fps = 15
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+	}
+	
+	## Technologie Icons
+	
+	
+	## Decision Categories
+	
+	spriteType = {
+    name = "GFX_decision_cat_union_coup"
+    texturefile = "gfx/interface/decisions/decision_cat_union_coup.dds"
+	}
+	
+	###### culture ######
+	
+	## Folder Small Item Backgrounds
+	
+	spriteType = {
+		name = "GFX_technology_culture_folder_small_unavailable_item_bg"
+		textureFile = "gfx//interface//techtree//tech_doctrine_unavailable_item_bg.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_technology_culture_folder_small_available_item_bg"
+		textureFile = "gfx//interface//techtree//tech_doctrine_available_item_bg.dds"
+	}
+
+	spriteType = {
+		name = "GFX_technology_culture_folder_small_researched_item_bg"
+		textureFile = "gfx//interface//techtree//tech_landdoctrine_researched_item_bg.dds"
+	}	
+
+	spriteType = {
+		name = "GFX_technology_culture_folder_small_branch_item_bg"
+		textureFile = "gfx/interface/techtree/tech_doctrine_branch_item_bg.dds"
+	}
+	
+	frameAnimatedSpriteType = {
+		name = "GFX_technology_culture_folder_small_currently_researching_item_bg"
+		texturefile = "gfx//interface//techtree//tech_doctrine_researching_anim_strip.dds"
+		noOfFrames = 9
+		loadType = "INGAME"
+		transparencecheck = yes
+		animation_rate_fps = 15
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+	}
+	
+	## Technologie Icons
+	
+	spriteType = {
+    name = "GFX_tech_tribal_pride_medium"
+    texturefile = "gfx/interface/technologies/wip.dds"
+	}
+	
+	spriteType = {
+    name = "GFX_tech_faith_medium"
+    texturefile = "gfx/interface/technologies/wip.dds"
+	}
+	
+	spriteType = {
+    name = "GFX_tech_mathematics_medium"
+    texturefile = "gfx/interface/technologies/wip.dds"
+	}
+	
+	spriteType = {
+    name = "GFX_tech_writing_medium"
+    texturefile = "gfx/interface/technologies/wip.dds"
+	}
+	
+	spriteType = {
+    name = "GFX_tech_agriculture_medium"
+    texturefile = "gfx/interface/technologies/wip.dds"
+	}
+	
+	spriteType = {
+    name = "GFX_tech_mining_medium"
+    texturefile = "gfx/interface/technologies/wip.dds"
+	}
+	
+	spriteType = {
+    name = "GFX_tech_currency_medium"
+    texturefile = "gfx/interface/technologies/wip.dds"
+	}
+	
+	spriteType = {
+    name = "GFX_tech_calender_medium"
+    texturefile = "gfx/interface/technologies/wip.dds"
+	}
+	
+	spriteType = {
+    name = "GFX_tech_horse_collars_medium"
+    texturefile = "gfx/interface/technologies/wip.dds"
+	}
+	
+	spriteType = {
+    name = "GFX_tech_masonry_medium"
+    texturefile = "gfx/interface/technologies/wip.dds"
+	}
+	
+	spriteType = {
+    name = "GFX_tech_wheel_medium"
+    texturefile = "gfx/interface/technologies/wip.dds"
+	}
+	
+	spriteType = {
+    name = "GFX_tech_heresy_medium"
+    texturefile = "gfx/interface/technologies/wip.dds"
+	}
+	
+	spriteType = {
+    name = "GFX_tech_accounting_medium"
+    texturefile = "gfx/interface/technologies/wip.dds"
+	}
+	
+	spriteType = {
+    name = "GFX_tech_city_planning_medium"
+    texturefile = "gfx/interface/technologies/wip.dds"
+	}
+	
+	spriteType = {
+    name = "GFX_tech_heavy_plow_medium"
+    texturefile = "gfx/interface/technologies/wip.dds"
+	}
+	
+	spriteType = {
+    name = "GFX_tech_iron_working_medium"
+    texturefile = "gfx/interface/technologies/wip.dds"
+	}
+	
+	spriteType = {
+    name = "GFX_tech_wheelbarrow_medium"
+    texturefile = "gfx/interface/technologies/wip.dds"
+	}
+	
+	spriteType = {
+    name = "GFX_tech_planned_assemblies_medium"
+    texturefile = "gfx/interface/technologies/wip.dds"
+	}
+	
+	spriteType = {
+    name = "GFX_tech_public_works_medium"
+    texturefile = "gfx/interface/technologies/wip.dds"
+	}
+	
+	spriteType = {
+    name = "GFX_tech_crop_rotation_medium"
+    texturefile = "gfx/interface/technologies/wip.dds"
+	}
+	
+	spriteType = {
+    name = "GFX_tech_forging_medium"
+    texturefile = "gfx/interface/technologies/wip.dds"
+	}
+	
+	spriteType = {
+    name = "GFX_tech_hand_cart_medium"
+    texturefile = "gfx/interface/technologies/wip.dds"
+	}
+	
+	spriteType = {
+    name = "GFX_tech_medieval_development_medium"
+    texturefile = "gfx/interface/technologies/wip.dds"
+	}
+	
+	spriteType = {
+    name = "GFX_tech_divine_right_to_rule_medium"
+    texturefile = "gfx/interface/technologies/wip.dds"
+	}
+	
+	spriteType = {
+    name = "GFX_tech_chronicle_writing_medium"
+    texturefile = "gfx/interface/technologies/wip.dds"
+	}
+	
+	spriteType = {
+    name = "GFX_tech_bailiffs_medium"
+    texturefile = "gfx/interface/technologies/wip.dds"
+	}
+	
+	spriteType = {
+    name = "GFX_tech_coinage_medium"
+    texturefile = "gfx/interface/technologies/wip.dds"
+	}
+	
+	spriteType = {
+    name = "GFX_tech_construction_medium"
+    texturefile = "gfx/interface/technologies/wip.dds"
+	}
+	
+	spriteType = {
+    name = "GFX_tech_metal_casting_medium"
+    texturefile = "gfx/interface/technologies/wip.dds"
+	}
+	
+	spriteType = {
+    name = "GFX_tech_heraldry_medium"
+    texturefile = "gfx/interface/technologies/wip.dds"
+	}
+	
+	spriteType = {
+    name = "GFX_tech_treasury_medium"
+    texturefile = "gfx/interface/technologies/wip.dds"
+	}
+	
+	spriteType = {
+    name = "GFX_tech_engineering_medium"
+    texturefile = "gfx/interface/technologies/wip.dds"
+	}
+	
+	spriteType = {
+    name = "GFX_tech_theocracy_medium"
+    texturefile = "gfx/interface/technologies/wip.dds"
+	}
+	
+	spriteType = {
+    name = "GFX_tech_rightful_ownership_medium"
+    texturefile = "gfx/interface/technologies/wip.dds"
+	}
+	
+	spriteType = {
+    name = "GFX_tech_communal_government_medium"
+    texturefile = "gfx/interface/technologies/wip.dds"
+	}
+	
+	spriteType = {
+    name = "GFX_tech_trade_guilds_medium"
+    texturefile = "gfx/interface/technologies/wip.dds"
+	}
+	
+	spriteType = {
+    name = "GFX_tech_manorialism_medium"
+    texturefile = "gfx/interface/technologies/wip.dds"
+	}
+	
+	spriteType = {
+    name = "GFX_tech_steel_medium"
+    texturefile = "gfx/interface/technologies/wip.dds"
+	}
+	
+	spriteType = {
+    name = "GFX_tech_education_medium"
+    texturefile = "gfx/interface/technologies/wip.dds"
+	}
+	
+	spriteType = {
+    name = "GFX_tech_court_officials_medium"
+    texturefile = "gfx/interface/technologies/wip.dds"
+	}
+	
+	spriteType = {
+    name = "GFX_tech_scuttage_medium"
+    texturefile = "gfx/interface/technologies/wip.dds"
+	}
+	
+	spriteType = {
+    name = "GFX_tech_urbanization_medium"
+    texturefile = "gfx/interface/technologies/wip.dds"
+	}
+	
+	spriteType = {
+    name = "GFX_tech_block_print_medium"
+    texturefile = "gfx/interface/technologies/wip.dds"
+	}
+	
+	spriteType = {
+    name = "GFX_tech_promissory_notes_medium"
+    texturefile = "gfx/interface/technologies/wip.dds"
+	}
+	
+	spriteType = {
+    name = "GFX_tech_cranes_medium"
+    texturefile = "gfx/interface/technologies/wip.dds"
+	}
+	
+	spriteType = {
+    name = "GFX_tech_blast_furnace_medium"
+    texturefile = "gfx/interface/technologies/wip.dds"
+	}
+	
+	spriteType = {
+    name = "GFX_tech_renaissance_thought_medium"
+    texturefile = "gfx/interface/technologies/wip.dds"
+	}
+	
+	spriteType = {
+    name = "GFX_tech_metallurgy_medium"
+    texturefile = "gfx/interface/technologies/wip.dds"
+	}
+	
+	spriteType = {
+    name = "GFX_tech_modern_theocracy_medium"
+    texturefile = "gfx/interface/technologies/wip.dds"
+	}
+	
+	spriteType = {
+    name = "GFX_tech_printing_press_medium"
+    texturefile = "gfx/interface/technologies/wip.dds"
+	}
+	
+	spriteType = {
+    name = "GFX_tech_scientific_experimentation_medium"
+    texturefile = "gfx/interface/technologies/wip.dds"
+	}
+	
+	spriteType = {
+    name = "GFX_tech_scythes_medium"
+    texturefile = "gfx/interface/technologies/wip.dds"
+	}
+	
+	spriteType = {
+    name = "GFX_tech_banking_medium"
+    texturefile = "gfx/interface/technologies/wip.dds"
+	}
+	
+	spriteType = {
+    name = "GFX_tech_architecture_medium"
+    texturefile = "gfx/interface/technologies/wip.dds"
+	}
+	
+	spriteType = {
+    name = "GFX_tech_courthouse_medium"
+    texturefile = "gfx/interface/technologies/wip.dds"
+	}
+	
+	spriteType = {
+    name = "GFX_tech_universities_medium"
+    texturefile = "gfx/interface/technologies/wip.dds"
+	}
+	
+	spriteType = {
+    name = "GFX_tech_economics_medium"
+    texturefile = "gfx/interface/technologies/wip.dds"
+	}
+	
+	spriteType = {
+    name = "GFX_tech_cathedrals_medium"
+    texturefile = "gfx/interface/technologies/wip.dds"
+	}
+	
+	spriteType = {
+    name = "GFX_tech_early_modern_administration_medium"
+    texturefile = "gfx/interface/technologies/wip.dds"
+	}
+	
+	spriteType = {
+    name = "GFX_tech_chemistry_medium"
+    texturefile = "gfx/interface/technologies/wip.dds"
+	}
+	
+	spriteType = {
+    name = "GFX_tech_improved_drainage_medium"
+    texturefile = "gfx/interface/technologies/wip.dds"
+	}
+	
+	spriteType = {
+    name = "GFX_tech_national_sovereignty_medium"
+    texturefile = "gfx/interface/technologies/wip.dds"
+	}
+	
+	spriteType = {
+    name = "GFX_tech_gunpowder_medium"
+    texturefile = "gfx/interface/technologies/wip.dds"
+	}
+	
+	spriteType = {
+    name = "GFX_tech_land_clearance_medium"
+    texturefile = "gfx/interface/technologies/wip.dds"
+	}
+	
+	spriteType = {
+    name = "GFX_tech_textile_manufactory_medium"
+    texturefile = "gfx/interface/technologies/wip.dds"
+	}
+	
+	spriteType = {
+    name = "GFX_tech_early_industrialization_medium"
+    texturefile = "gfx/interface/technologies/wip.dds"
+	}
+	
+	spriteType = {
+    name = "GFX_tech_bonds_and_tontines_medium"
+    texturefile = "gfx/interface/technologies/wip.dds"
+	}
+	
+	spriteType = {
+    name = "GFX_tech_resource_acquisition_medium"
+    texturefile = "gfx/interface/technologies/wip.dds"
+	}
+	
+	spriteType = {
+    name = "GFX_tech_scientific_theory_medium"
+    texturefile = "gfx/interface/technologies/wip.dds"
+	}
+	
+	spriteType = {
+    name = "GFX_tech_fertilizer_medium"
+    texturefile = "gfx/interface/technologies/wip.dds"
+	}
+	
+	spriteType = {
+    name = "GFX_tech_improved_production_medium"
+    texturefile = "gfx/interface/technologies/wip.dds"
+	}
+	
+	spriteType = {
+    name = "GFX_tech_archaeology_medium"
+    texturefile = "gfx/interface/technologies/wip.dds"
+	}
+	
+	spriteType = {
+    name = "GFX_tech_biology_medium"
+    texturefile = "gfx/interface/technologies/wip.dds"
+	}
+	
+	spriteType = {
+    name = "GFX_tech_advanced_plough_medium"
+    texturefile = "gfx/interface/technologies/wip.dds"
+	}
+	
+	spriteType = {
+    name = "GFX_tech_steam_power_medium"
+    texturefile = "gfx/interface/technologies/wip.dds"
+	}
+	
+}

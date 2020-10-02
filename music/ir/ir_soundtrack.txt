@@ -1,4 +1,5 @@
 music_station = "ir"
+
 ###PEACETIME
 
 # Note: UNG Theme Song
@@ -7,12 +8,70 @@ music = {
 	
 	chance = {
 		modifier = {
-			factor = 1.5
+			factor = 2.5
 
 			has_war = no
-			tag = UNG
+			OR = {
+				tag = UNG
+				is_in_faction_with = UNG
+			}
 		}		
 	}	
+}
+
+# Note: Stahlhof Ambience Theme
+music = {
+	song = "Iron Judgement"
+	
+	chance = {
+		modifier = {
+			factor = 2.5
+
+			has_war = no
+			OR = {
+				tag = STA
+				is_in_faction_with = STA
+			}
+		}		
+	}	
+}
+
+# Note: Generic Ambience Theme
+music = {
+	song = "Lathweynian Forests"
+	
+	chance = {
+		modifier = {
+			factor = 2
+
+			has_war = no
+		}	
+	}	
+}
+
+# Note: Generic Ambience Theme #2
+music = {
+	song = "Age of Progression"
+	
+	chance = {
+		modifier = {
+			factor = 2
+
+			has_war = no
+		}
+	}	
+}
+# Note: Generic Ambience Theme #3
+music = {
+	song = "Soothing Nights"
+	
+	chance = {
+		modifier = {
+			factor = 2
+
+			has_war = no
+		}
+	}
 }
 
 ###WARTIME
@@ -23,7 +82,7 @@ music = {
 	
 	chance = {
 		modifier = {
-			factor = 2
+			factor = 2.5
 			
 			or = {
 				AND = {
@@ -37,5 +96,40 @@ music = {
 			}
 		}		
 	}	
+}
+
+# Note: Ungerdaler Union War Theme
+music = {
+	song = "Ungerdaler Diplomacy"
+	
+	chance = {
+		modifier = {
+			factor = 2.5
+			
+			or = {
+				AND = {
+					tag = UNG
+					has_war = yes
+				}
+				AND = {
+					has_defensive_war = yes
+					is_in_faction_with = UNG
+				}
+			}
+		}		
+	}	
+}
+
+# Note: Generic War Theme #1
+music = {
+	song = "Authors of History"
+	
+	chance = {
+		modifier = {
+			factor = 2
+
+			has_war = yes
+		}
+	}
 }
 

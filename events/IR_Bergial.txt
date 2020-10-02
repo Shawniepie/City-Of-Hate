@@ -1,0 +1,30 @@
+﻿### BERGIALER EVENTS
+
+add_namespace = ber
+
+country_event = {#Elections
+	id = ber.1
+	title = ber.1.t
+	desc = ber.1.d
+	picture = GFX_report_event_military_planning
+	
+	is_triggered_only = yes
+	
+	option = {#Excellent!
+		name = ber.1.a
+		
+		custom_effect_tooltip = BER_assisted_terugkeer_tt
+		
+		set_country_flag = BER_allowed_to_initiate_terugkeer
+		
+		add_popularity = {
+			ideology = monarchy_absolute
+			popularity = 0.1
+		}
+		
+		add_popularity = {
+			ideology = puritan
+			popularity = 0.05
+		}
+	}
+}
