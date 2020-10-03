@@ -1,0 +1,14 @@
+spriteTypes = {	
+
+	#### Mod stuff####
+	
+	spriteType = {
+		name = "GFX_trait_lumotheurge"
+		texturefile = "gfx/interface/traits/trait_lumotheurge.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_trait_noctheurge"
+		texturefile = "gfx/interface/traits/trait_noctheurge.dds"
+	}
+}

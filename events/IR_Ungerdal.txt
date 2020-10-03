@@ -2149,28 +2149,30 @@ country_event = {#SKA attends, RMT doesn't
 	
 	is_triggered_only = yes
 	
+	trigger = {
+		OR = {
+			AND = {
+				has_country_flag = UNG_nordtorf_summit_SKA_refuses_to_attend
+				has_country_flag = UNG_nordtorf_summit_RMT_attends
+			}
+			AND = {
+				has_country_flag = UNG_nordtorf_summit_SKA_attends
+				has_country_flag = UNG_nordtorf_summit_RMT_refuses_to_attend
+			}
+		}
+	}
+	
 	option = {#War it is
 		name = ung.71.a
 		
 		add_political_power = -5
 		
-		trigger = {
-			OR = {
-				AND = {
-					has_country_flag = UNG_nordtorf_summit_SKA_refuses_to_attend
-					has_country_flag = UNG_nordtorf_summit_RMT_attends
-				}
-				AND = {
-					has_country_flag = UNG_nordtorf_summit_SKA_attends
-					has_country_flag = UNG_nordtorf_summit_RMT_refuses_to_attend
-				}
-			}
-		}
 		
-		if = {
-			limit = {
-				has_country_flag = 
 		
-		set_country_flag = UNG_nordtorf_summit_fails_RMT_favoured
+		#if = {
+		#	limit = {
+		#		has_country_flag = 
+		#
+		#set_country_flag = UNG_nordtorf_summit_fails_RMT_favoured
 	}
 }

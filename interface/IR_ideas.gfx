@@ -1,6 +1,36 @@
 spriteTypes = {
 
 	spriteType = {
+		name = "GFX_idea_STA_faustburg_loyalties_1"
+		texturefile = "gfx/interface/ideas/STA_faustburg_loyalties_1.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_STA_faustburg_loyalties_2"
+		texturefile = "gfx/interface/ideas/STA_faustburg_loyalties_2.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_STA_faustburg_loyalties_3"
+		texturefile = "gfx/interface/ideas/STA_faustburg_loyalties_3.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_STA_meritocratic_autocracy_1"
+		texturefile = "gfx/interface/ideas/STA_meritocratic_autocracy_1.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_STA_meritocratic_autocracy_2"
+		texturefile = "gfx/interface/ideas/STA_meritocratic_autocracy_2.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_STA_meritocratic_autocracy_3"
+		texturefile = "gfx/interface/ideas/STA_meritocratic_autocracy_3.dds"
+	}
+
+	spriteType = {
 		name = "GFX_idea_generic_royal_marriage"
 		texturefile = "gfx/interface/ideas/generic_royal_marriage.dds"
 	}

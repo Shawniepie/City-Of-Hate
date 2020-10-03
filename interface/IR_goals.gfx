@@ -3,6 +3,51 @@ spriteTypes = {
 	#### Mod-specific goal icons
 	
 	SpriteType = {
+	name = "GFX_focus_ung_young_hochprinzessin"
+	texturefile = "gfx/interface/goals/focus_ung_young_hochprinzessin.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_focus_ung_shadowsun"
+	texturefile = "gfx/interface/goals/focus_ung_shadowsun.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_focus_generic_magic"
+	texturefile = "gfx/interface/goals/focus_generic_magic.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_focus_ung_cold_war"
+	texturefile = "gfx/interface/goals/focus_ung_cold_war.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_focus_ung_pact_arthenon"
+	texturefile = "gfx/interface/goals/focus_ung_pact_arthenon.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_focus_generic_economic_war"
+	texturefile = "gfx/interface/goals/focus_generic_economic_war.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_focus_ung_ban_irinthians"
+	texturefile = "gfx/interface/goals/focus_ung_ban_irinthians.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_focus_ung_seventh_campaign"
+	texturefile = "gfx/interface/goals/focus_ung_seventh_campaign.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_focus_ung_ally_skaelinger"
+	texturefile = "gfx/interface/goals/focus_ung_ally_skaelinger.dds"			
+	}
+	
+	SpriteType = {
 		name = "GFX_focus_generic_bergial_agreement"
 		texturefile = "gfx/interface/goals/focus_generic_bergial_agreement.dds"			
 	}
