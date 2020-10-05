@@ -202,10 +202,10 @@ ideas = {
 		}
 	}
 	
-	trade_laws = {
-		law = yes
-
-		Tribal = {
+	trade_laws = { 
+	law = yes
+	
+	Tribal = {
 			
 			available = {
 				always = no
@@ -231,10 +231,10 @@ ideas = {
    			}
 		}
 		
-		Feudal = {
+		Medieval = {
 			
 			available = {
-
+				always = no
 			}
 			
 			
@@ -258,7 +258,7 @@ ideas = {
    			}
 		}
 		
-		Late_Feudal = {
+		Renaissance = {
 			
 			available = {
 				always = no
@@ -282,7 +282,7 @@ ideas = {
    			}
 		}
 		
-		Industrial = {
+		Early_Industrial = {
 			
 			
 			available = {

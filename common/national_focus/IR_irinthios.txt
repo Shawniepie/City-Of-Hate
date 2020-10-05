@@ -270,6 +270,41 @@
 			remove_ideas = IRI_Depression_Evaded		
 		}
 	}
+	
+	focus = {
+		id = IRI_Fate_Of_The_Merchant_Cities
+		icon = GFX_IRI_Fate_Of_The_Merchant_Cities
+		prerequisite = { focus = IRI_Restore_Old_Currency_Value focus = IRI_Emperors_Party }
+		x = 1
+		y = 1
+		relative_position_id = IRI_Restore_Old_Currency_Value
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		complete_tooltip = {
+
+		}
+		
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			MER = { country_event = { id = iri.35 hours = 12 random_hours = 36 } }	
+		}
+	}
 
 	focus = {
 		id = IRI_Honorous_Citizen_Regiments
@@ -702,15 +737,55 @@
 			}
 		}
 	}
-	
 	focus = {
-		id = IRI_Humiliate_Bergialers
-		icon = GFX_IRI_Humiliate_Bergialers
+		id = IRI_Retake_Merchant_Cities
+		icon = GFX_IRI_Retake_Merchant_Cities
 		prerequisite = { focus = IRI_Invade_Kurgur_Lands }
-		will_lead_to_war_with = BER
+		will_lead_to_war_with = MER
 		x = 0
 		y = 1
 		relative_position_id = IRI_Invade_Kurgur_Lands
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}	
+
+		bypass = {
+		OR = {
+			MER = { is_subject_of = ROOT }
+			NOT = { country_exists = MER }
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+
+		complete_tooltip = {
+
+		}
+		
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = MER
+			}
+		}
+	}
+	focus = {
+		id = IRI_Humiliate_Bergialers
+		icon = GFX_IRI_Humiliate_Bergialers
+		prerequisite = { focus = IRI_Retake_Merchant_Cities }
+		will_lead_to_war_with = BER
+		x = 0
+		y = 1
+		relative_position_id = IRI_Retake_Merchant_Cities
 
 		cost = 10
 
@@ -798,7 +873,7 @@
 	### SHOULD BE CORRECTED WHEN TECH TREE IS DONE
 		id = IRI_Supreme_Arsenal
 		icon = GFX_IRI_unknown
-		prerequisite = { focus = IRI_Megali_Irinthios }
+		prerequisite = { focus = IRI_Megali_Irinthios focus = IRI_Humiliate_Bergialers }
 		x = -2
 		y = 1
 		relative_position_id = IRI_Megali_Irinthios

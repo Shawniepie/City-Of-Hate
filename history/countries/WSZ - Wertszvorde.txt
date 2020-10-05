@@ -69,6 +69,7 @@ set_popularities = {
 }
 
 add_ideas = {
+	Manoralism
 	human_country
 	nurhelm_patron
 }

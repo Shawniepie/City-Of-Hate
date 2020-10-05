@@ -57,6 +57,9 @@ set_popularities = {
 }
 
 add_ideas = {
+	extensive_conscription
+	Tribal
+	Primitive_Economy
 	orc_country
 	damokegol_religion
 	KUR_nomad_hunters

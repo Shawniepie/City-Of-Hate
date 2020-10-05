@@ -69,6 +69,8 @@ set_popularities = {
 }
 
 add_ideas = {
+	extensive_conscription
+	Fiscalism
 	elf_country
 	itherynism_religion
 }

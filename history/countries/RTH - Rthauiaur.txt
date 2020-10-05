@@ -68,6 +68,8 @@ set_popularities = {
 }
 
 add_ideas = {
+	service_by_requirement
+	Communalism
 	RTH_disorganized_revolution
 	RTH_inexperienced_commanders
 	elf_country
@@ -79,12 +81,6 @@ add_ideas = {
 	diplomatic_relation = {
 		country = SKA
 		relation = military_access
-		active = yes
-	}
-	
-	diplomatic_relation = {
-		country = SKA
-		relation = non_aggression_pact
 		active = yes
 	}
 	

@@ -74,7 +74,8 @@ set_popularities = {
 	}
 	
 	add_ideas = {
-	closed_economy
+	extensive_conscription
+	Fiscalism
 	ORD_rthaur_rebellion
 	ORD_disrupted_industry
 	elf_country

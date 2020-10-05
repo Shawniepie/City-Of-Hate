@@ -1061,7 +1061,7 @@ country_event = { #Bilodya refuses
 	}
 
 }
-country_event = { #After war they are free to go
+country_event = {
 	id = iri.33
 	title = iri.33.t
 	desc = iri.33.d
@@ -1077,13 +1077,18 @@ country_event = { #After war they are free to go
 
 	}
 	
-	option = { # Suicide squad
+	option = {
 	name = iri.33.a
 	ai_chance = {
-		factor = 100 # Always
+		factor = 100 
 	}
-	IRI = { annex_country = BLD }
-	IRI = { country_event = { id = iri.34 } } 
+	IRI = { 
+	annex_country = { 
+	target =  BLD 
+	transfer_troops = yes
+	}
+	country_event = { id = iri.34 }
+	}
 	}
 	option = {
 	name = iri.33.a
@@ -1094,11 +1099,78 @@ country_event = { #After war they are free to go
 	}
 
 }
-country_event = { #What a nice news
+country_event = {
 	id = iri.34
 	title = iri.34.t
 	desc = iri.34.d
 	picture = GFX_report_event_sunday_provocation
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+	name = iri.34.a
+	}
+
+}
+country_event = {
+	id = iri.35
+	title = iri.35.t
+	desc = iri.35.d
+	picture = GFX_report_event_irinthios_sanctions
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	trigger = {
+
+	}
+	
+	mean_time_to_happen = {
+
+	}
+	
+	option = {#They are ridiculous
+	name = iri.35.a
+	ai_chance = {
+		factor = 1
+		modifier = {
+			has_war_with = IRI
+			factor = 0
+		}
+		modifier = {
+			is_in_faction = yes
+			factor = 0
+		}
+	}
+	IRI = {
+	country_event = {
+		id = iri.36
+		days = 1
+	}
+	add_state_claim = 378
+	add_state_claim = 379
+	add_state_claim = 380
+	}
+	}
+	
+	option = {#oh god oh F
+	name = iri.35.b
+	ai_chance = {
+		factor = 1
+	}
+	IRI = { annex_country = { target = MER transfer_troops = yes } }
+	country_event = {
+		id = iri.37
+		days = 1
+	}
+	}
+}
+country_event = {
+	id = iri.36
+	title = iri.36.t
+	desc = iri.36.d
+	picture = GFX_report_event_irinthios_sanctions
 	
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -1112,7 +1184,33 @@ country_event = { #What a nice news
 	}
 	
 	option = {
-	name = iri.34.a
+	name = iri.36.a
+	}
+
+}
+country_event = {
+	id = iri.37
+	title = iri.37.t
+	desc = iri.37.d
+	picture = GFX_report_event_irinthios_sanctions
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	trigger = {
+
+	}
+	
+	mean_time_to_happen = {
+
+	}
+	
+	option = {
+	name = iri.37.a
+	ROOT = { 	
+	add_state_core = 378
+	add_state_core = 379
+	add_state_core = 380
 	}
 
 }
