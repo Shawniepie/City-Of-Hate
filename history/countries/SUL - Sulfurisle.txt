@@ -69,7 +69,7 @@ set_popularities = {
 }
 
 add_ideas = {
-	Industrial
+	Early_Industrial
 	Steam_And_Steel
 	gnome_country
 	molten_god_religion

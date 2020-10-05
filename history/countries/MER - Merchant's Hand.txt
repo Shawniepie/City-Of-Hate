@@ -57,7 +57,7 @@ set_popularities = {
 }
 
 add_ideas = {
-	Late_Feudal
+	Renaissance
 	Mercantilism
 	human_country
 	selenism_religion

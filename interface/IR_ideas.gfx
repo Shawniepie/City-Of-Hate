@@ -502,15 +502,15 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/Tribal.tga"
 	}
 	spriteType = {
-		name = "GFX_idea_Feudal"
+		name = "GFX_idea_Medieval"
 		texturefile = "gfx/interface/ideas/Feudal.tga"
 	}
 	spriteType = {
-		name = "GFX_idea_Late_Feudal"
+		name = "GFX_idea_Renaissance"
 		texturefile = "gfx/interface/ideas/Late_Feudal.tga"
 	}
 	spriteType = {
-		name = "GFX_idea_Industrial"
+		name = "GFX_idea_Early_Industrial"
 		texturefile = "gfx/interface/ideas/Industrial.tga"
 	}
 }
