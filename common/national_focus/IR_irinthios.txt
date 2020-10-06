@@ -776,6 +776,11 @@
 				type = annex_everything
 				target = MER
 			}
+		ROOT = { 	
+			add_state_core = 378
+			add_state_core = 379
+			add_state_core = 380
+			}
 		}
 	}
 	focus = {
@@ -1064,7 +1069,6 @@
 		}
 
 		available = {
-			always = no
 		}
 
 		bypass = {
@@ -1081,7 +1085,11 @@
 
 		completion_reward = {
 		custom_effect_tooltip = IRI_Chairopons_Promises_effect_tooltip
-		hidden_effect { 
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = Vasilis_Diamantis
+			show_ideas_tooltip = Ioanna_Cinyras
+		hidden_effect {
+			ROOT = { country_event = { id = iri.38 hours = 12 random_hours = 36 } }			
 			swap_ideas = {
 			remove_idea = IRI_Irinthios_Will_Rise_Again
 			add_idea = IRI_Revolution_In_Air_1
@@ -1478,7 +1486,7 @@
 		id = IRI_Sunday_Provocation
 		icon = GFX_IRI_Sunday_Provocation
 		prerequisite = { focus = IRI_Chairopons_Promises }
-		x = 3
+		x = 4
 		y = 1
 		relative_position_id = IRI_Chairopons_Promises
 
@@ -1489,11 +1497,14 @@
 		}
 
 		available = {
-			always = no
+			monarchy_constitutional < 0.6
 		}
 
 		bypass = {
-
+			OR ={ 
+			has_government = republic_aristocrat
+			has_government = republic_peasant
+			}
 		}
 
 		cancel_if_invalid = yes
@@ -1519,7 +1530,7 @@
 		id = IRI_Cinyras_Restoration
 		icon = GFX_IRI_Cinyras_Restoration
 		prerequisite = { focus = IRI_Sunday_Provocation }
-		x = -1
+		x = -2
 		y = 1
 		relative_position_id = IRI_Sunday_Provocation
 		mutually_exclusive = { focus = IRI_Glory_To_Republic }
@@ -1548,7 +1559,15 @@
 		}
 
 		completion_reward = {
-
+			add_political_power = 140
+			add_stability = 0.1
+			add_popularity = {
+				ideology = republic_aristocrat
+				popularity = 0.25
+			}
+			hidden_effect = {
+		country_event = { id = iri.13 hours = 2 random_hours = 4 }	
+			}
 		}
 	}
 	focus = {
@@ -1604,7 +1623,10 @@
 		}
 
 		bypass = {
-
+		OR = {
+			TLA = { is_subject_of = ROOT }
+			NOT = { country_exists = TLA }
+			}
 		}
 
 		cancel_if_invalid = yes
@@ -1636,7 +1658,7 @@
 		}
 
 		available = {
-
+		owns_state = 397
 		}
 
 		bypass = {
@@ -1653,6 +1675,8 @@
 		}
 
 		completion_reward = {
+		set_capital = 397
+		country_event = { id = iri.39 hours = 6 random_hours = 18 }
 		}
 	}
 	focus = {
@@ -1721,6 +1745,7 @@
 		}
 
 		completion_reward = {
+		UNG = { country_event = { id = iri.43 hours = 6 random_hours = 18 } }
 		}
 	}
 	focus = {
@@ -1755,6 +1780,7 @@
 		}
 
 		completion_reward = {
+		STA = { country_event = { id = iri.40 hours = 6 random_hours = 18 } }
 		}
 	}
 	focus = {
@@ -1789,6 +1815,14 @@
 		}
 
 		completion_reward = {
+			create_faction = coallition_of_irinth
+			custom_effect_tooltip = IRI_Lizard_Join_If_Swayed_tt
+			IF = {
+				limit = {
+					has_global_flag = IRI_Lizardmen_Accepted_Deal
+				}
+			add_to_faction = TLA
+			}
 		}
 	}
 
@@ -1801,7 +1835,7 @@
 		id = IRI_Glory_To_Republic
 		icon = GFX_IRI_Glory_To_Republic
 		prerequisite = { focus = IRI_Sunday_Provocation }
-		x = 1
+		x = 2
 		y = 1
 		relative_position_id = IRI_Sunday_Provocation
 		mutually_exclusive = { focus = IRI_Cinyras_Restoration }
@@ -1829,7 +1863,15 @@
 		}
 
 		completion_reward = {
-
+			add_political_power = 140
+			add_war_support = 0.1
+			add_popularity = {
+				ideology = republic_peasant
+				popularity = 0.25
+			}
+		hidden_effect {
+			country_event = { id = iri.14 hours = 12 random_hours = 36 } 
+			}
 		}
 	}
 	focus = {
@@ -1972,6 +2014,7 @@
 		}
 
 		completion_reward = {
+			create_faction = anti_puritan_initiative
 		}
 	}
 	focus = {
@@ -2111,12 +2154,13 @@
 		}
 
 		completion_reward = {
+		LIR = { country_event = { id = iri.46 hours = 12 random_hours = 36 } }
 		}
 	}
 	focus = {
 		id = IRI_Ignite_Revolution_In_Grand_Masters_Realm
 		icon = GFX_IRI_Ignite_Revolution_In_Grand_Masters_Realm
-		prerequisite = { focus = IRI_Bill_Of_Civil_Rights focus = IRI_Absolute_Power_For_The_Commisar }
+		prerequisite = { focus = IRI_Absolute_Power_For_The_Commisar }
 		x = 0
 		y = 1
 		relative_position_id = IRI_Absolute_Power_For_The_Commisar
@@ -2156,7 +2200,7 @@
 		id = IRI_Get_Bilodyan_Support_In_Civil_War
 		icon = GFX_IRI_Get_Bilodyan_Support_In_Civil_War
 		prerequisite = { focus = IRI_Sunday_Provocation  }
-		x = 1
+		x = 2
 		y = 1
 		relative_position_id = IRI_Cinyras_Restoration
 

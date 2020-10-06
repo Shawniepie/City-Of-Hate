@@ -928,7 +928,7 @@ IRI_irinthios_influence_sphere = {
 		}
 		
 		modifier = {
-		consuBLD_goods_factor = 0.05
+		consumer_goods_factor = 0.05
 		}
 
 		cost = 150
@@ -988,6 +988,135 @@ IRI_irinthios_influence_sphere = {
 		}
 	}
 
+}
+IRI_operations_in_union = {
+
+	IRI_decision_sway_FTH = {
+	
+		icon = generic_civil_support
+		
+		allowed = {
+			original_tag = IRI
+		}
+
+
+		visible = {
+		hidden_trigger = {
+			has_completed_focus = IRI_Challenge_The_Freiprintzums_Union }
+			NOT = { has_global_flag = IRI_FTH_swayed }
+			FTH = { is_subject = no }
+		}
+		
+		available = {
+			NOT = { has_war_with = FTH }
+			is_subject = no
+			hidden_trigger = {
+			FTH = { is_subject = no }
+			has_completed_focus = IRI_Challenge_The_Freiprintzums_Union			
+			}
+		}
+		
+		modifier = {
+		consumer_goods_factor = 0.1
+		}
+
+		cost = 160
+
+		days_remove = 100
+
+		cancel_if_not_visible = yes
+		
+		remove_effect = {
+		custom_effect_tooltip = IRI_influence_question_tt
+		hidden_effect = {
+		FTH = { country_event = { id = iri.24 } }
+		}
+		}
+	}
+	IRI_decision_release_FTH = {
+	
+		icon = generic_civil_support
+		
+		allowed = {
+			original_tag = IRI
+		}
+
+		visible = {
+		hidden_trigger = {
+			has_completed_focus = IRI_Influence_Sphere_Ambitions }
+			has_global_flag = IRI_BLD_influenced
+			BLD = { is_subject = no }
+		}
+		
+		available = {
+			NOT = { has_war_with = BLD }
+			is_subject = no
+			hidden_trigger = {
+			BLD = { is_subject = no }
+			has_completed_focus = IRI_Influence_Sphere_Ambitions			
+			}
+			has_global_flag = IRI_BLD_influenced
+		}
+		
+		modifier = {
+		consuBLD_goods_factor = 0.1
+		}
+
+		cost = 100
+
+		days_remove = 80
+
+		cancel_if_not_visible = yes
+		
+		remove_effect = {
+		custom_effect_tooltip = IRI_puppet_question_tt
+		hidden_effect = {
+		BLD = { country_event = { id = iri.21 } }
+		}
+		}
+	}
+	IRI_decision_safeguard_FTH = {
+	
+		icon = generic_civil_support
+		
+		allowed = {
+			original_tag = IRI
+		}
+
+		visible = {
+		hidden_trigger = {
+			has_completed_focus = IRI_Influence_Sphere_Ambitions }
+			has_global_flag = IRI_BLD_influenced
+			BLD = { is_subject = no }
+		}
+		
+		available = {
+			NOT = { has_war_with = BLD }
+			is_subject = no
+			hidden_trigger = {
+			BLD = { is_subject = no }
+			has_completed_focus = IRI_Influence_Sphere_Ambitions			
+			}
+			has_global_flag = IRI_BLD_influenced
+		}
+		
+		modifier = {
+		consuBLD_goods_factor = 0.1
+		}
+
+		cost = 100
+
+		days_remove = 80
+
+		cancel_if_not_visible = yes
+		
+		remove_effect = {
+		custom_effect_tooltip = IRI_puppet_question_tt
+		hidden_effect = {
+		BLD = { country_event = { id = iri.21 } }
+		}
+		}
+	}
 }
 
 

@@ -71,7 +71,7 @@ create_country_leader = {
 	name = "Kar Kurbah"
 	desc = "politics_BLD_kurbah_desc"
 	picture = "gfx/leaders/BLD/Portrait_BLD_Bozhur.dds"
-	ideology = tribal_democracy_ideology
+	ideology = republic_peasant_ideology
 	traits = {
 	}
 }
