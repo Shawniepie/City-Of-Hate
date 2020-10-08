@@ -12,8 +12,8 @@ state={
 		owner = UNG
 		buildings = {
 			infrastructure = 8	
-			arms_factory = 3
-			industrial_complex = 4
+			forge = 3
+			workshop = 4
 		}
 		add_core_of = UNG
 	}

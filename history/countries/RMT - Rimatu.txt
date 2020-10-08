@@ -41,6 +41,7 @@ add_ideas = {
 	Fiscalism
 	dwarf_country
 	dwarven_ancestor_worship_religion
+	BLD_The_Ogregeld_RMT
 }
 
 add_opinion_modifier = {

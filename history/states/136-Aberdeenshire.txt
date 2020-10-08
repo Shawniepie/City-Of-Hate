@@ -12,7 +12,7 @@ state={
 		owner = RTH
 		buildings = {	
 		infrastructure = 5
-		industrial_complex = 1
+		workshop = 1
 		}	
 		add_core_of = RTH
 

@@ -1,0 +1,242 @@
+﻿### BILODYAN EVENTS
+
+add_namespace = bld
+
+country_event = {#Dialogue With Rimatu
+	id = bld.1
+	title = bld.1.t
+	desc = bld.1.d
+	picture = GFX_report_event_military_planning
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = bld.1.a
+		RMT = { 
+		give_guarantee = BLD
+		remove_ideas = BLD_The_Ogregeld_RMT
+		}
+		BLD = {
+			give_guarantee = RMT
+			remove_ideas = BLD_The_Ogregeld
+			country_event = {
+				id = bld.2
+				days = 4
+			}
+		}
+	}
+	option = {
+		name = bld.1.b
+		remove_ideas = BLD_The_Ogregeld_RMT
+		BLD = {
+			remove_ideas = BLD_The_Ogregeld
+			country_event = {
+				id = bld.3
+				days = 4
+			}
+		}
+	}
+}
+country_event = {#Rimatu response - good
+	id = bld.2
+	title = bld.2.t
+	desc = bld.2.d
+	picture = GFX_report_event_military_planning
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = bld.2.a
+	}
+}
+country_event = {#Rimatu response - bad
+	id = bld.3
+	title = bld.3.t
+	desc = bld.3.d
+	picture = GFX_report_event_military_planning
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = bld.3.a
+	}
+}
+country_event = {#Threatening Rimatu
+	id = bld.4
+	title = bld.4.t
+	desc = bld.4.d
+	picture = GFX_report_event_military_planning
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = bld.4.a
+		BLD = {
+			country_event = {
+				id = bld.5
+				days = 4
+			}
+		create_wargoal = {
+		type = puppet_wargoal_focus
+		target = RMT
+			}
+		}
+	}
+	option = {
+		name = bld.4.b
+		swap_ideas = { 
+		remove_idea = BLD_The_Ogregeld_RMT
+		add_idea = BLD_The_Ogregeld_RMT2
+		}
+		BLD = {
+		swap_ideas = { 
+		remove_idea = BLD_The_Ogregeld
+		add_idea = BLD_The_Ogregeld2
+		}
+			country_event = {
+				id = bld.6
+				days = 4
+			}
+			
+		}
+	}
+}
+country_event = {#Rimatu response - bad
+	id = bld.5
+	title = bld.5.t
+	desc = bld.5.d
+	picture = GFX_report_event_military_planning
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = bld.5.a
+	}
+}
+country_event = {#Rimatu response - good
+	id = bld.6
+	title = bld.6.t
+	desc = bld.6.d
+	picture = GFX_report_event_military_planning
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = bld.6.a
+	}
+}
+
+country_event = {#Deal with MER
+	id = bld.7
+	title = bld.7.t
+	desc = bld.7.d
+	picture = GFX_report_event_military_planning
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = bld.7.a
+		BLD = {
+			country_event = {
+				id = bld.8
+				days = 4
+			}
+		}
+	}
+	option = {
+		name = bld.7.b
+		BLD = {
+			country_event = {
+				id = bld.9
+				days = 4
+			}
+		}
+	}
+}
+country_event = {#Deal with MER response - good
+	id = bld.8
+	title = bld.8.t
+	desc = bld.8.d
+	picture = GFX_report_event_military_planning
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = bld.8.a
+	}
+}
+country_event = {#Deal with MER response - bad
+	id = bld.9
+	title = bld.9.t
+	desc = bld.9.d
+	picture = GFX_report_event_military_planning
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = bld.9.a
+	}
+}
+country_event = {#Threatening the MER
+	id = bld.10
+	title = bld.10.t
+	desc = bld.10.d
+	picture = GFX_report_event_military_planning
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = bld.10.a
+		BLD = {
+			country_event = {
+				id = bld.11
+				days = 4
+			}
+		}
+	}
+	option = {
+		name = bld.10.b
+		BLD = {
+			country_event = {
+				id = bld.12
+				days = 4
+			}
+		}
+	}
+}
+country_event = {#Threatening the MER - good
+	id = bld.11
+	title = bld.11.t
+	desc = bld.11.d
+	picture = GFX_report_event_military_planning
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = bld.11.a
+	}
+}
+country_event = {#Threatening the MER - bad
+	id = bld.12
+	title = bld.12.t
+	desc = bld.12.d
+	picture = GFX_report_event_military_planning
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = bld.12.a
+	}
+}

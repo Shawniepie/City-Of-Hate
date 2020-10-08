@@ -10,7 +10,7 @@ state={
 		history={	
 		owner = ORD
 		buildings = {	
-		industrial_complex = 1
+		workshop = 1
 		infrastructure = 5
 		}	
 		add_core_of = ORD

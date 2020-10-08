@@ -12,7 +12,7 @@ state={
 		owner = RMT
 		buildings = {
 			infrastructure = 7
-			arms_factory = 2
+			forge = 2
 		}
 		add_core_of = RMT
 	}

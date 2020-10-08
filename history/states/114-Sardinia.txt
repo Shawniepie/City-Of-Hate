@@ -12,7 +12,7 @@ state={
 		owner = ORD
 		buildings = {	
 		infrastructure = 5
-		industrial_complex = 1
+		workshop = 1
 		7174 = { naval_base = 3 }
 		dockyard = 1
 		}	

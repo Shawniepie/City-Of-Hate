@@ -11,7 +11,7 @@ state={
 		owner = GMR
 		buildings = {
 			infrastructure = 5
-			arms_factory = 1
+			forge = 1
 		}
 		add_core_of = GMR
 

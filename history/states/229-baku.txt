@@ -12,7 +12,7 @@ state={
 		owner = NOC
 		buildings = {
 			infrastructure = 5
-			industrial_complex = 1
+			workshop = 1
 			2914 = {
 				naval_base = 1
 			}

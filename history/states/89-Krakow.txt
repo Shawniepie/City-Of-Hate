@@ -14,7 +14,7 @@ state={
 		owner = ORD
 		buildings = {	
 		infrastructure = 4
-		industrial_complex = 2
+		workshop = 2
 		}	
 		add_core_of = ORD
 		}

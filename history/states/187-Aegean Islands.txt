@@ -12,8 +12,8 @@ state={
 		owner = SKA
 		buildings = {
 			infrastructure = 5
-			industrial_complex = 3
-			arms_factory = 1
+			workshop = 3
+			forge = 1
 		}
 		add_core_of = SKA
 

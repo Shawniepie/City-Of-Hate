@@ -15,7 +15,7 @@ state={
 				naval_base = 2
 			}
 			dockyard = 1
-			industrial_complex = 1
+			workshop = 1
 			infrastructure = 3
 		}
 		add_core_of = ORD

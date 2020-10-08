@@ -948,6 +948,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
+			add_ideas = BLD_Raider_Traditions
 		}
 	}
 
@@ -978,7 +979,12 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-
+		RMT = {
+			country_event = {
+				id = bld.1
+				days = 4
+			}
+		}
 		}
 	}
 
@@ -997,7 +1003,7 @@ focus_tree = {
 		}
 
 		available = {
-
+		
 		}
 
 		bypass = {
@@ -1009,6 +1015,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
+		add_ideas = Agrarianism
 		}
 	}
 
@@ -1040,7 +1047,12 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-
+		RMT = {
+			country_event = {
+				id = bld.4
+				days = 4
+			}
+		}
 		}
 	}
 
@@ -1070,6 +1082,14 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
+				random_owned_controlled_state = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+					type = forge
+					level = 2
+					instant_build = yes
+				}
+			}
 		}
 	}
 
@@ -1175,6 +1195,14 @@ focus_tree = {
 
 		completion_reward = {
 			army_experience = 10
+				random_owned_controlled_state = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+					type = forge
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 
@@ -1205,57 +1233,36 @@ focus_tree = {
 		available_if_capitulated = no
 		
 		complete_tooltip = {
-			add_tech_bonus = {
-				name = BLD_Urbanisation_Progress
-				bonus = 1.0
-				ahead_reduction = 2
-				uses = 2
-				category = industry
-			}
-			random_state = {
-				limit = {
-					has_state_flag = BLD_Wolf_Pits_Strategy_U
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
+
 		}
 
 		completion_reward = {
-			add_tech_bonus = {
-				name = BLD_Urbanisation_Progress
-				bonus = 1.0
-				ahead_reduction = 2
-				uses = 2
-				category = industry
-			}
-			random_owned_controlled_state = {
-				prioritize = { 829 830 828 }
-				limit = {
-					free_building_slots = {
-						building = industrial_complex
-						size > 0
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 1
+			829 = {
 				add_building_construction = {
-					type = industrial_complex
-					level = 1
+					type = workshop
+					level = 3
 					instant_build = yes
 				}
-				set_state_flag = BLD_Wolf_Pits_Strategy_U
+			}
+			830 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			828 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
 			}
 		}
 	}
 
 	focus = {
 		id = BLD_Revive_The_Tradition_Of_Firetrial
-		# Revive the Tradition of Firebirth - The tradition of children being military trained since their birth is slowly dying. The decay of warriors' values cannot progress any further.
 		icon = GFX_BLD_Revive_The_Tradition_Of_Firetrial
 		prerequisite = { focus = BLD_Help_Hunters }
 		x = 0
@@ -1281,6 +1288,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
+		add_ideas = BLD_The_Firetrial
 		}
 	}
 
@@ -1405,7 +1413,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-
+		add_ideas = BLD_Open_To_The_WorldSpirit
 		}
 	}
 
@@ -1439,6 +1447,14 @@ focus_tree = {
 		}
 
 		completion_reward = {
+				random_owned_controlled_state = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+					type = workshop
+					level = 2
+					instant_build = yes
+				}
+			}
 		}
 	}
 
@@ -1470,6 +1486,12 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
+		MER = {
+			country_event = {
+				id = bld.7
+				days = 4
+			}
+		}
 		}
 	}
 
@@ -1501,6 +1523,12 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
+		MER = {
+			country_event = {
+				id = bld.10
+				days = 4
+			}
+		}
 		}
 	}
 

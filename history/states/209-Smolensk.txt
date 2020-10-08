@@ -12,8 +12,8 @@ state={
 		owner = STA
 		buildings = {
 			infrastructure = 4
-			industrial_complex = 1
-			arms_factory = 1
+			workshop = 1
+			forge = 1
 		}
 		add_core_of = STA
 	}

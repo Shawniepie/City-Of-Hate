@@ -12,8 +12,8 @@ state={
 		owner = IRI
 		buildings = {
 			infrastructure = 8
-			industrial_complex = 3
-			arms_factory = 1
+			workshop = 3
+			forge = 1
 		}
 		add_core_of = IRI
 	}

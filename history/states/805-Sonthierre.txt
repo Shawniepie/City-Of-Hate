@@ -11,7 +11,7 @@ state={
 		owner = LIR
 		buildings = {
 			infrastructure = 3
-			industrial_complex = 1
+			workshop = 1
 			937 = {
 				bunker = 2
 			}

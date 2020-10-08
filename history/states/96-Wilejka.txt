@@ -13,9 +13,9 @@ state={
 		buildings = {
 		4339 = { naval_base = 1 }
 		infrastructure = 4
-		industrial_complex = 1
+		workshop = 1
 		dockyard = 2
-		arms_factory = 1
+		forge = 1
 		}	
 		add_core_of = ORD
 		}

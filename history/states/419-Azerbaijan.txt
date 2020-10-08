@@ -13,9 +13,9 @@ state={
 		owner = PRK
 		buildings = {
 			infrastructure = 3
-			arms_factory = 1
+			forge = 1
 			dockyard = 1
-			industrial_complex = 3
+			workshop = 3
 			2171 = {
 				naval_base = 3
 			}

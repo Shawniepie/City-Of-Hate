@@ -19,5 +19,131 @@ ideas = {
 			army_core_defence_factor = 0.25
 			}
 		}
+		
+		 BLD_Raider_Traditions = {
+			
+			allowed = {
+				original_tag = BLD
+			}
+			
+			allowed_civil_war = {
+			}
+			
+			picture =  GFX_idea_BLD_Raider_Traditions
+			
+			removal_cost = -1
+			
+			modifier = {
+			conscription = 0.04
+			army_attack_factor = 0.1
+			}
+		}
+		 BLD_Open_To_The_WorldSpirit = {
+			
+			allowed = {
+				original_tag = BLD
+			}
+			
+			allowed_civil_war = {
+			}
+			
+			picture =  GFX_idea_BLD_Open_To_The_WorldSpirit
+			
+			removal_cost = -1
+			
+			modifier = {
+			generate_wargoal_tension = 0.3
+			political_power_gain = 0.05
+			research_speed_factor = 0.04
+			}
+		}
+		 BLD_The_Ogregeld = {
+			
+			allowed = {
+				original_tag = BLD
+			}
+			
+			allowed_civil_war = {
+			}
+			
+			picture =  GFX_idea_BLD_The_Ogregeld
+			
+			removal_cost = -1
+			
+			modifier = {
+			consumer_goods_factor = -0.2
+			war_support_factor = 0.1
+			}
+		}
+		 BLD_The_Ogregeld2 = {
+			
+			allowed = {
+				original_tag = BLD
+			}
+			
+			allowed_civil_war = {
+			}
+			
+			picture =  GFX_idea_BLD_The_Ogregeld2
+			
+			removal_cost = -1
+			
+			modifier = {
+			consumer_goods_factor = -0.4
+			war_support_factor = 0.2
+			}
+		}
+		 BLD_The_Ogregeld_RMT = {
+			
+			allowed = {
+				original_tag = RMT
+			}
+			
+			allowed_civil_war = {
+			}
+			
+			picture =  GFX_idea_BLD_The_Ogregeld_RMT
+			
+			removal_cost = -1
+			
+			modifier = {
+			custom_modifier_tooltip = The_Ogregeld_RMT_tt
+			}
+		}
+		 BLD_The_Ogregeld_RMT2 = {
+			
+			allowed = {
+				original_tag = RMT
+			}
+			
+			allowed_civil_war = {
+			}
+			
+			picture =  GFX_idea_BLD_The_Ogregeld_RMT2
+			
+			removal_cost = -1
+			
+			modifier = {
+			custom_modifier_tooltip = The_Ogregeld_RMT_tt
+			}
+		}
+		 BLD_The_Firetrial = {
+			
+			allowed = {
+				original_tag = BLD
+			}
+			
+			allowed_civil_war = {
+			}
+			
+			picture =  GFX_idea_BLD_The_Firetrial
+			
+			removal_cost = -1
+			
+			modifier = {
+			conscription_factor = 0.2
+			training_time_army_factor = -0.2
+			}
+		}
 	}
 }
