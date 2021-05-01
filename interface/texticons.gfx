@@ -113,6 +113,41 @@ spriteTypes = {
 		legacy_lazy_load = no
 		noOfFrames = 2
 	}
+	
+	spriteType = {
+		name = "GFX_unit_category_cavalry_icon_small"
+		texturefile = "gfx/texticons/unit_horsemen_icon_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}
+	
+	spriteType = {
+		name = "GFX_unit_category_all_infantry_icon_small"
+		texturefile = "gfx/texticons/unit_swordsmen_icon_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}
+	
+	spriteType = {
+		name = "GFX_unit_category_heavy_infantry_icon_small"
+		texturefile = "gfx/texticons/unit_halberdier_icon_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}
+	
+	spriteType = {
+		name = "GFX_unit_category_light_infantry_icon_small"
+		texturefile = "gfx/texticons/unit_men_at_arms_icon_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}
+	
+	spriteType = {
+		name = "GFX_unit_category_front_line_icon_small"
+		texturefile = "gfx/texticons/unit_men_at_arms_icon_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}
 
 	### VANILLA TEXTICONS ###
 

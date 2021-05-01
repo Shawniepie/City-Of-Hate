@@ -282,6 +282,66 @@ spriteTypes = {
 	}
 	
 	spriteType = {
+		name = "GFX_knights_medium"
+		texturefile = "gfx/interface/technologies/knights.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_commercialized_sword_schools_medium"
+		texturefile = "gfx/interface/technologies/commercialized_sword_schools.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_warhammer_medium"
+		texturefile = "gfx/interface/technologies/warhammer.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_halberds_medium"
+		texturefile = "gfx/interface/technologies/halberds.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_pikemen_medium"
+		texturefile = "gfx/interface/technologies/pikemen.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_pike_square_medium"
+		texturefile = "gfx/interface/technologies/pike_square.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_knightly_orders_medium"
+		texturefile = "gfx/interface/technologies/knightly_orders.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_falchion_medium"
+		texturefile = "gfx/interface/technologies/falchion.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_tapered_blades_medium"
+		texturefile = "gfx/interface/technologies/tapered_blades.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_diamond_cross_section_medium"
+		texturefile = "gfx/interface/technologies/diamond_cross_section.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_estoc_medium"
+		texturefile = "gfx/interface/technologies/estoc.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_pauldrons_spaulders_medium"
+		texturefile = "gfx/interface/technologies/pauldrons_spaulders.dds"
+	}
+	
+	spriteType = {
 		name = "GFX_bodkin_arrows_medium"
 		texturefile = "gfx/interface/technologies/bodkin_arrows.dds"
 	}

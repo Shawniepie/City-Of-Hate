@@ -970,7 +970,7 @@ technologies = {
 		
 			position = {
 				x = 2
-				y = 42
+				y = 40
 			}
 		}
 		categories = {
@@ -997,7 +997,7 @@ technologies = {
 		
 			position = {
 				x = 2
-				y = 50
+				y = 44
 			}
 		}
 		categories = {
@@ -1128,7 +1128,7 @@ technologies = {
 		
 			position = {
 				x = 4
-				y = 46
+				y = 42
 			}
 		}
 		categories = {
@@ -1151,6 +1151,354 @@ technologies = {
             level = 3
         }
 		
+		path = {
+            leads_to_tech = falchion
+            research_cost_coeff = 1
+        }
+		
+		path = {
+            leads_to_tech = knights
+            research_cost_coeff = 1
+        }
+		
+		folder = {
+			name = landcombat_folder
+		
+			position = {
+				x = 4
+				y = 44
+			}
+		}
+		categories = {
+			medieval_tech
+			infantry_tech
+			heavy_melee_equipment
+        }
+	}
+	
+	falchion = {
+		research_cost = 1
+		start_year = 686
+		
+		men_at_arms = {
+			soft_attack = 0.03
+		}
+		
+		path = {
+            leads_to_tech = tapered_blades
+            research_cost_coeff = 1
+        }
+		
+		folder = {
+			name = landcombat_folder
+		
+			position = {
+				x = 5
+				y = 46
+			}
+		}
+		categories = {
+			medieval_tech
+			infantry_tech
+			light_melee_equipment
+        }
+	}
+	
+	tapered_blades = {
+		research_cost = 1
+		start_year = 693
+		
+		swordsmen = {
+			soft_attack = 0.02
+		}
+		
+		path = {
+            leads_to_tech = pauldrons_spaulders
+            research_cost_coeff = 1
+        }
+		
+		path = {
+			leads_to_tech = diamond_cross_section
+			research_cost_coeff = 1
+		}
+		
+		folder = {
+			name = landcombat_folder
+		
+			position = {
+				x = 5
+				y = 48
+			}
+		}
+		categories = {
+			medieval_tech
+			infantry_tech
+			light_melee_equipment
+        }
+	}
+	
+	pauldrons_spaulders = {
+		research_cost = 1
+		start_year = 700
+		
+		category_heavy_infantry = {
+			defense = 0.03
+			breakthrough = 0.03
+		}
+		
+		folder = {
+			name = landcombat_folder
+		
+			position = {
+				x = 6
+				y = 50
+			}
+		}
+		categories = {
+			medieval_tech
+			infantry_tech
+			light_melee_equipment
+        }
+	}
+	
+	diamond_cross_section = {
+		research_cost = 1
+		start_year = 695
+		
+		category_front_line = {
+			soft_attack = 0.02
+		}
+		
+		path = {
+            leads_to_tech = estoc
+            research_cost_coeff = 1
+        }
+		
+		folder = {
+			name = landcombat_folder
+		
+			position = {
+				x = 5
+				y = 52
+			}
+		}
+		categories = {
+			medieval_tech
+			infantry_tech
+			light_melee_equipment
+        }
+	}
+	
+	estoc = {
+		research_cost = 1
+		start_year = 700
+		
+		category_front_line = {
+			soft_attack = 0.04
+		}
+		
+		path = {
+            leads_to_tech = estoc
+            research_cost_coeff = 1
+        }
+		
+		folder = {
+			name = landcombat_folder
+		
+			position = {
+				x = 5
+				y = 54
+			}
+		}
+		categories = {
+			medieval_tech
+			infantry_tech
+			light_melee_equipment
+        }
+	}
+	
+	knights = {
+		research_cost = 1
+		start_year = 686
+		
+		swordsmen = {
+			max_organisation = 3
+		}
+		
+		path = {
+            leads_to_tech = commercialized_sword_schools
+            research_cost_coeff = 1
+        }
+		
+		folder = {
+			name = landcombat_folder
+		
+			position = {
+				x = 3
+				y = 46
+			}
+		}
+		categories = {
+			medieval_tech
+			infantry_tech
+        }
+	}
+	
+	commercialized_sword_schools = {
+		research_cost = 1
+		start_year = 686
+		
+		experience_gain_army_factor = 0.05
+		
+		path = {
+            leads_to_tech = halberds
+            research_cost_coeff = 1
+        }
+		
+		path = {
+            leads_to_tech = warhammer
+            research_cost_coeff = 1
+        }
+		
+		path = {
+            leads_to_tech = knightly_orders
+            research_cost_coeff = 1
+        }
+		
+		folder = {
+			name = landcombat_folder
+		
+			position = {
+				x = 3
+				y = 48
+			}
+		}
+		categories = {
+			medieval_tech
+			infantry_tech
+        }
+	}
+	
+	warhammer = {
+		research_cost = 1
+		start_year = 687
+		
+		category_front_line = {
+			soft_attack = 0.03
+		}
+		
+		folder = {
+			name = landcombat_folder
+		
+			position = {
+				x = 2
+				y = 50
+			}
+		}
+		categories = {
+			medieval_tech
+			infantry_tech
+        }
+	}
+	
+	halberds = {
+		research_cost = 1
+		start_year = 694
+		
+		enable_subunits = {
+			halberdier
+		}
+		
+		path = {
+            leads_to_tech = pikemen
+            research_cost_coeff = 1
+        }
+		
+		folder = {
+			name = landcombat_folder
+		
+			position = {
+				x = 3
+				y = 52
+			}
+		}
+		categories = {
+			medieval_tech
+			infantry_tech
+			heavy_melee_equipment
+        }
+	}
+	
+	pikemen = {
+		research_cost = 1
+		start_year = 697
+		
+		halberdier = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+		}
+		
+		path = {
+            leads_to_tech = pike_square
+            research_cost_coeff = 1
+        }
+		
+		folder = {
+			name = landcombat_folder
+		
+			position = {
+				x = 3
+				y = 54
+			}
+		}
+		categories = {
+			medieval_tech
+			infantry_tech
+			heavy_melee_equipment
+        }
+	}
+	
+	pike_square = {
+		research_cost = 1
+		start_year = 700
+		
+		halberdier = {
+			defense = 0.05
+			breakthrough = 0.05
+		}
+		
+		path = {
+            leads_to_tech = phalanxes
+            research_cost_coeff = 1
+        }
+		
+		folder = {
+			name = landcombat_folder
+		
+			position = {
+				x = 3
+				y = 56
+			}
+		}
+		categories = {
+			medieval_tech
+			infantry_tech
+			heavy_melee_equipment
+        }
+	}
+	
+	knightly_orders = {
+		research_cost = 1
+		start_year = 687
+		
+		swordsmen = {
+			default_morale = 0.04
+		}
+		
+		heavy_cavalry = {
+			default_morale = 0.04
+		}
+		
 		folder = {
 			name = landcombat_folder
 		
@@ -1161,8 +1509,6 @@ technologies = {
 		}
 		categories = {
 			medieval_tech
-			infantry_tech
-			heavy_melee_equipment
         }
 	}
 	
