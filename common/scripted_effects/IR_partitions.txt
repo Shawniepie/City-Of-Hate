@@ -1,5 +1,189 @@
 ###Scripted effects for partitions and such
 
+# Shatter Perkavland
+shatter_perkavland = {
+	every_state = {
+		limit = {
+			is_core_of = PRK
+		}
+		remove_core_of = PRK
+	}
+	hidden_effect = {
+		every_state = {
+			limit = {
+				is_core_of = PRK
+			}
+			remove_core_of = PRK
+		}
+		
+		if = {
+			limit = {
+				253 = {
+					is_owned_by = PRK
+				}
+			}
+			SNF = {
+				transfer_state = 253
+				add_state_core = 253
+			}
+		}
+		
+		if = {
+			limit = {
+				336 = {
+					is_owned_by = PRK
+				}
+			}
+			SNF = {
+				transfer_state = 336
+				add_state_core = 336
+			}
+		}
+		
+		KRL = {
+			add_state_core = 413
+			add_state_core = 618
+			add_state_core = 617
+			add_state_core = 625
+			add_state_core = 632
+			
+			transfer_state = 413
+			transfer_state = 618
+			transfer_state = 617
+			transfer_state = 625
+			transfer_state = 632
+			load_oob = "PRK_empty"
+		}
+		
+		SVC = {
+			add_state_core = 421
+			add_state_core = 655
+			add_state_core = 635
+			add_state_core = 634
+			add_state_core = 643
+			add_state_core = 633
+			
+			transfer_state = 421
+			transfer_state = 655
+			transfer_state = 635
+			transfer_state = 634
+			transfer_state = 643
+			transfer_state = 633
+			load_oob = "PRK_empty"
+		}
+		
+		WLT = {
+			add_state_core = 419
+			add_state_core = 636
+			add_state_core = 628
+			add_state_core = 637
+			add_state_core = 638
+			
+			transfer_state = 419
+			transfer_state = 636
+			transfer_state = 628
+			transfer_state = 637
+			transfer_state = 638
+			load_oob = "PRK_empty"
+		}
+		
+		RLV = {
+			add_state_core = 415
+			add_state_core = 626
+			add_state_core = 644
+			add_state_core = 627
+			add_state_core = 639
+			add_state_core = 646
+			
+			transfer_state = 415
+			transfer_state = 626
+			transfer_state = 644
+			transfer_state = 627
+			transfer_state = 639
+			transfer_state = 646
+			load_oob = "PRK_empty"
+		}
+		
+		VLN = {
+			add_state_core = 417
+			add_state_core = 641
+			add_state_core = 640
+			add_state_core = 651
+			add_state_core = 652
+			
+			transfer_state = 417
+			transfer_state = 641
+			transfer_state = 640
+			transfer_state = 651
+			transfer_state = 652
+			load_oob = "PRK_empty"
+		}
+		
+		LNK = {
+			add_state_core = 418
+			add_state_core = 629
+			add_state_core = 642
+			add_state_core = 622
+			add_state_core = 621
+			add_state_core = 630
+			
+			transfer_state = 418
+			transfer_state = 629
+			transfer_state = 642
+			transfer_state = 622
+			transfer_state = 621
+			transfer_state = 630
+			load_oob = "PRK_empty"
+		}
+		
+		KRZ = {
+			add_state_core = 416
+			add_state_core = 645
+			add_state_core = 650
+			add_state_core = 649
+			add_state_core = 631
+			add_state_core = 648
+			
+			transfer_state = 416
+			transfer_state = 645
+			transfer_state = 650
+			transfer_state = 649
+			transfer_state = 631
+			transfer_state = 648
+			load_oob = "PRK_empty"
+		}
+		
+		VTZ = {
+			add_state_core = 414
+			add_state_core = 653
+			add_state_core = 647
+			add_state_core = 654
+			
+			transfer_state = 414
+			transfer_state = 653
+			transfer_state = 647
+			transfer_state = 654
+			load_oob = "PRK_empty"
+		}
+		
+		NVT = {
+			add_state_core = 420
+			add_state_core = 623
+			add_state_core = 620
+			add_state_core = 619
+			add_state_core = 624
+			
+			transfer_state = 420
+			transfer_state = 623
+			transfer_state = 620
+			transfer_state = 619
+			transfer_state = 624
+			load_oob = "PRK_empty"
+		}
+	}
+}
+
+
 # Partition Ordoria
 partition_ordoria = {
 	hidden_effect = {
@@ -16,8 +200,8 @@ partition_ordoria = {
 				limit = {
 					is_core_of = EOR
 				}
-				remove_state_core = PREV
-				add_state_core = RTH
+				remove_core_of = EOR
+				add_core_of = RTH
 				RTH = {
 					transfer_state = PREV
 				}

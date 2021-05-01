@@ -7,10 +7,12 @@ state={
 	state_category = rural
 	manpower=6920
 	buildings_max_level_factor=1.000
-		history={	
+	history={	
 		owner = ORD
-		buildings = {	
-		infrastructure = 3	}	
-		add_core_of = ORD
+		buildings = {
+			farm = 2
+			infrastructure = 3
 		}
+		add_core_of = ORD
+	}
 }

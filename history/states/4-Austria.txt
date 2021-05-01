@@ -12,7 +12,8 @@ state={
 		owner = GMR
 		buildings = {
 			infrastructure = 3
-			industrial_complex = 1
+			workshop = 1
+			farm = 1
 		}
 		add_core_of = GMR
 	}

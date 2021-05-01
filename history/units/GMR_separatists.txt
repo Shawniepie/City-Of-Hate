@@ -19,9 +19,15 @@ division_template = {
 		men_at_arms = { x = 0 y = 0 }
 		men_at_arms = { x = 0 y = 1 }
 		men_at_arms = { x = 0 y = 2 }
-        men_at_arms = { x = 1 y = 0 }
+		halberdier = { x = 0 y = 3 }
+     		men_at_arms = { x = 1 y = 0 }
 		men_at_arms = { x = 1 y = 1 }
 		men_at_arms = { x = 1 y = 2 }
+		halberdier = { x = 1 y = 3 }
+		men_at_arms = { x = 2 y = 0 }
+		men_at_arms = { x = 2 y = 1 }
+		men_at_arms = { x = 2 y = 2 }
+		swordsmen = { x = 2 y = 3 }
 	}
 }
 
@@ -50,7 +56,7 @@ division_template = {
 		light_cavalry = { x = 1 y = 1 }
 	}
 	support = {
-	    recon = { x = 0 y = 0 }
+	    scouts_cavalry = { x = 0 y = 0 }
 	}
 }
 

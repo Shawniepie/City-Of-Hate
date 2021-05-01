@@ -36,7 +36,34 @@ technology_sharing_group = {
 			AND = {
 				tag = UNG
 				NOT = {
+					has_war_with = BER
+				}
+			}
+		}
+    }
+}
+
+technology_sharing_group = {
+
+	id = UNG_SVT_freisler_tech_group
+	name = UNG_SVT_freisler_tech_group_name
+	desc = UNG_SVT_freisler_tech_group_desc
+	picture = GFX_UNG_SVT_freislerfakultat
+    
+	research_sharing_per_country_bonus = 0.1
+
+    available = {
+        OR = {
+			AND = {
+				tag = SVT
+				NOT = {
 					has_war_with = UNG
+				}
+			}
+			AND = {
+				tag = UNG
+				NOT = {
+					has_war_with = SVT
 				}
 			}
 		}

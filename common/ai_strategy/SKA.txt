@@ -10,6 +10,36 @@
 # protect
 # influence
 
+ungerdaler_buddies = {
+	enable = {
+		tag = SKA
+		NOT = {
+			has_government = puritan
+		}
+		UNG = {
+			OR = {
+				has_country_flag = UNG_nordtorf_summit_success_SKA_favoured
+				has_country_flag = UNG_nordtorf_summit_fails_SKA_favoured
+			}
+		}
+	}
+	ai_strategy = {
+		type = befriend
+		id = "UNG"
+		value = 200
+	}
+	ai_strategy = {
+		type = alliance
+		id = "UNG"			
+		value = 200
+	}
+	ai_strategy = {
+		type = protect
+		id = "UNG"			
+		value = 200
+	}
+}
+
 skaelinger_buddies = {
 	enable = {
 		original_tag = SKA

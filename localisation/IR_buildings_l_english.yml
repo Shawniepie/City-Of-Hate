@@ -3,15 +3,15 @@
  
  ## Buildings
  
- forge:0 "Local Forge"
- forge_plura:0 "Local Forges"
+ forge:0 "Forge"
+ forge_plura:0 "Forges"
  forge_desc:0 "Forges are our primary source of war supplies. Weapons, armor and war machinery are forged, distributed and built here."
- workshop:0 "Local Workshop"
- workshop_plural:0 "Local Workshops"
+ workshop:0 "Workshop"
+ workshop_plural:0 "Workshops"
  workshop_desc:0 "Workshops help us to move materials, furniture and prefabricated buildings to the correct construction sites via transport routes, thereby drastically simplifying our construction efforts."
- farm:0 "Local Farm"
- farm_plural:0 "Local Farms"
- farm_desc:0 "Farms are the easiest and most effective way to feed a large number of ordinary people and soldiers. The effectiveness of farms can easily be increased over time."
+ farm:0 "Farm"
+ farm_plural:0 "Farms"
+ farm_desc:0 "Farms are the easiest and most effective way to feed a large number of ordinary people and soldiers. The effectiveness of farms can easily be increased over time.\nThis building provides the state with £resources_strip|1 §YFoodstuffs§! and £resources_strip|2 §YMounts§!. Initially, it provides §Ythree§! £resources_strip|1 §YFoodstuffs§!, but this can be improved with research."
  castle:0 "Castle"
  castle_plural:0 "Castles"
  castle_desc:0 "Castles are extremely well fortified buildings that are difficult to construct. They make up for their long construction period with their excellent strategic defense capabilities."

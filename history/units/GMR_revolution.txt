@@ -18,10 +18,20 @@ division_template = {
 	regiments = {
 		men_at_arms = { x = 0 y = 0 }
 		men_at_arms = { x = 0 y = 1 }
-		men_at_arms = { x = 0 y = 2 }
-        men_at_arms = { x = 1 y = 0 }
+        		halberdier = { x = 0 y = 2 }
+        		halberdier = { x = 0 y = 3 }
+		men_at_arms = { x = 1 y = 0 }
 		men_at_arms = { x = 1 y = 1 }
-		men_at_arms = { x = 1 y = 2 }
+		halberdier = { x = 1 y = 2 }
+		halberdier = { x = 1 y = 3 }
+		men_at_arms = { x = 1 y = 0 }
+		men_at_arms = { x = 1 y = 1 }
+		swordsmen = { x = 1 y = 2 }
+		swordsmen = { x = 1 y = 3 }
+		men_at_arms = { x = 1 y = 0 }
+		men_at_arms = { x = 1 y = 1 }
+		swordsmen = { x = 1 y = 2 }
+		swordsmen = { x = 1 y = 3 }
 	}
 }
 
@@ -50,7 +60,7 @@ division_template = {
 		light_cavalry = { x = 1 y = 1 }
 	}
 	support = {
-	    recon = { x = 0 y = 0 }
+	    scouts_cavalry = { x = 0 y = 0 }
 	}
 }
 
@@ -58,7 +68,7 @@ units = {
 
 	division = {
 		name = "Sinlis Militia"
-		location = 1725
+		location = 6225
 		division_template = "Enforcers"
 		start_experience_factor = 0.1
 
@@ -66,15 +76,15 @@ units = {
 
 	division = {
 		name = "Urinnes Militia"
-		location = 3217
+		location = 1768
 		division_template = "Enforcers"
 		start_experience_factor = 0.1
 
 	}
 	
 	division = {
-		name = "Visleth Militia"
-		location = 5991
+		name = "Kirgann Militia"
+		location = 2316
 		division_template = "Enforcers"
 		start_experience_factor = 0.1
 
@@ -82,7 +92,7 @@ units = {
 
 	division = {
 		name = "Rothanar Militia"
-		location = 6038
+		location = 6630
 		division_template = "Enforcers"
 		start_experience_factor = 0.1
 
@@ -90,7 +100,7 @@ units = {
 	
 	division = {
 		name = "Xarinthe Militia"
-		location = 7537
+		location = 2388
 		division_template = "Enforcers"
 		start_experience_factor = 0.1
 
@@ -98,15 +108,15 @@ units = {
 
 	division = {
 		name = "Vernass Militia"
-		location = 7235
+		location = 3439
 		division_template = "Enforcers"
 		start_experience_factor = 0.1
 
 	}
 	
 	division = {
-		name = "Splythwass Militia"
-		location = 5037
+		name = "Westrenne Militia"
+		location = 6262
 		division_template = "Enforcers"
 		start_experience_factor = 0.1
 
@@ -114,7 +124,7 @@ units = {
 
 	division = {
 		name = "Irenthar Black Gargoyles"
-		location = 3109
+		location = 3069
 		division_template = "Black Gargoyles"
 		start_experience_factor = 1.2
 
@@ -122,15 +132,15 @@ units = {
 	
 	division = {
 		name = "Felwerin Black Gargoyles"
-		location = 3966
+		location = 6197
 		division_template = "Black Gargoyles"
 		start_experience_factor = 1.2
 
 	}
 	
 	division = {
-		name = "Irenthar Black Gargoyles"
-		location = 1334
+		name = "Navandon Black Gargoyles"
+		location = 3119
 		division_template = "Black Gargoyles"
 		start_experience_factor = 1.2
 
@@ -138,7 +148,7 @@ units = {
 	
 	division = {
 		name = "1st Levy"
-		location = 3113
+		location = 5917
 		division_template = "Black Gargoyles"
 		start_experience_factor = 0.13
 
@@ -146,7 +156,7 @@ units = {
 	
 	division = {
 		name = "2nd Levy"
-		location = 5055
+		location = 2332
 		division_template = "Black Gargoyles"
 		start_experience_factor = 0.13
 
@@ -154,7 +164,7 @@ units = {
 	
 	division = {
 		name = "3rd Levy"
-		location = 3809
+		location = 1205
 		division_template = "Black Gargoyles"
 		start_experience_factor = 0.13
 
@@ -162,7 +172,7 @@ units = {
 	
 	division = {
 		name = "4th Levy"
-		location = 5054
+		location = 3914
 		division_template = "Black Gargoyles"
 		start_experience_factor = 0.13
 
@@ -170,7 +180,7 @@ units = {
 	
 	division = {
 		name = "5th Levy"
-		location = 3110
+		location = 6048
 		division_template = "Black Gargoyles"
 		start_experience_factor = 0.13
 
@@ -178,7 +188,7 @@ units = {
 	
 	division = {
 		name = "6th Levy"
-		location = 3111
+		location = 520
 		division_template = "Black Gargoyles"
 		start_experience_factor = 0.13
 
@@ -186,7 +196,7 @@ units = {
 	
 	division = {
 		name = "7th Levy"
-		location = 5659
+		location = 6155
 		division_template = "Black Gargoyles"
 		start_experience_factor = 0.13
 
@@ -194,7 +204,7 @@ units = {
 	
 	division = {
 		name = "8th Levy"
-		location = 465
+		location = 1652
 		division_template = "Black Gargoyles"
 		start_experience_factor = 0.13
 
@@ -202,7 +212,7 @@ units = {
 	
 	division = {
 		name = "9th Levy"
-		location = 8139
+		location = 5353
 		division_template = "Black Gargoyles"
 		start_experience_factor = 0.13
 
@@ -210,7 +220,7 @@ units = {
 	
 	division = {
 		name = "10th Levy"
-		location = 1351
+		location = 419
 		division_template = "Black Gargoyles"
 		start_experience_factor = 0.13
 
@@ -218,7 +228,7 @@ units = {
 	
 	division = {
 		name = "11th Levy"
-		location = 7127
+		location = 659
 		division_template = "Black Gargoyles"
 		start_experience_factor = 0.13
 
@@ -226,7 +236,7 @@ units = {
 	
 	division = {
 		name = "12th Levy"
-		location = 4735
+		location = 4394
 		division_template = "Black Gargoyles"
 		start_experience_factor = 0.13
 
@@ -234,14 +244,6 @@ units = {
 	
 	division = {
 		name = "13th Levy"
-		location = 4467
-		division_template = "Black Gargoyles"
-		start_experience_factor = 0.13
-
-	}
-	
-	division = {
-		name = "14th Levy"
 		location = 2638
 		division_template = "Black Gargoyles"
 		start_experience_factor = 0.13
@@ -249,8 +251,16 @@ units = {
 	}
 	
 	division = {
+		name = "14th Levy"
+		location = 6547
+		division_template = "Black Gargoyles"
+		start_experience_factor = 0.13
+
+	}
+	
+	division = {
 		name = "15th Levy"
-		location = 6267
+		location = 4483
 		division_template = "Black Gargoyles"
 		start_experience_factor = 0.13
 
@@ -258,7 +268,7 @@ units = {
 	
 	division = {
 		name = "16th Levy"
-		location = 1722
+		location = 921
 		division_template = "Black Gargoyles"
 		start_experience_factor = 0.13
 
@@ -266,7 +276,7 @@ units = {
 	
 	division = {
 		name = "17th Levy"
-		location = 8609
+		location = 6657
 		division_template = "Black Gargoyles"
 		start_experience_factor = 0.13
 
@@ -274,7 +284,7 @@ units = {
 	
 	division = {
 		name = "18th Levy"
-		location = 4468
+		location = 4704
 		division_template = "Black Gargoyles"
 		start_experience_factor = 0.13
 
@@ -282,7 +292,7 @@ units = {
 	
 	division = {
 		name = "19th Levy"
-		location = 4599
+		location = 6708
 		division_template = "Black Gargoyles"
 		start_experience_factor = 0.13
 
@@ -290,7 +300,7 @@ units = {
 	
 	division = {
 		name = "20th Levy"
-		location = 668
+		location = 4101
 		division_template = "Black Gargoyles"
 		start_experience_factor = 0.13
 
@@ -298,7 +308,7 @@ units = {
 	
 	division = {
 		name = "21st Levy"
-		location = 190
+		location = 1305
 		division_template = "Black Gargoyles"
 		start_experience_factor = 0.13
 
@@ -306,7 +316,7 @@ units = {
 	
 	division = {
 		name = "22nd Levy"
-		location = 2862
+		location = 2187
 		division_template = "Black Gargoyles"
 		start_experience_factor = 0.13
 
@@ -314,7 +324,7 @@ units = {
 	
 	division = {
 		name = "23rd Levy"
-		location = 2745
+		location = 6433
 		division_template = "Black Gargoyles"
 		start_experience_factor = 0.13
 
@@ -322,7 +332,7 @@ units = {
 	
 	division = {
 		name = "24th Levy"
-		location = 1105
+		location = 6348
 		division_template = "Black Gargoyles"
 		start_experience_factor = 0.13
 
@@ -330,7 +340,7 @@ units = {
 	
 	division = {
 		name = "25th Levy"
-		location = 2747
+		location = 4648
 		division_template = "Black Gargoyles"
 		start_experience_factor = 0.13
 
@@ -338,7 +348,7 @@ units = {
 	
 	division = {
 		name = "26th Levy"
-		location = 3510
+		location = 6250
 		division_template = "Black Gargoyles"
 		start_experience_factor = 0.13
 
@@ -346,7 +356,7 @@ units = {
 	
 	division = {
 		name = "27th Levy"
-		location = 8047
+		location = 5523
 		division_template = "Black Gargoyles"
 		start_experience_factor = 0.13
 
@@ -354,7 +364,7 @@ units = {
 	
 	division = {
 		name = "28th Levy"
-		location = 5219
+		location = 1414
 		division_template = "Black Gargoyles"
 		start_experience_factor = 0.13
 
@@ -362,7 +372,7 @@ units = {
 	
 	division = {
 		name = "29th Levy"
-		location = 3879
+		location = 2700
 		division_template = "Black Gargoyles"
 		start_experience_factor = 0.13
 
@@ -370,7 +380,7 @@ units = {
 	
 	division = {
 		name = "30th Levy"
-		location = 8117
+		location = 6508
 		division_template = "Black Gargoyles"
 		start_experience_factor = 0.13
 
@@ -378,7 +388,7 @@ units = {
 	
 	division = {
 		name = "31st Levy"
-		location = 331
+		location = 5052
 		division_template = "Black Gargoyles"
 		start_experience_factor = 0.13
 
@@ -386,7 +396,7 @@ units = {
 	
 	division = {
 		name = "32nd Levy"
-		location = 7658
+		location = 2042
 		division_template = "Black Gargoyles"
 		start_experience_factor = 0.13
 
@@ -394,7 +404,7 @@ units = {
 	
 	division = {
 		name = "33rd Levy"
-		location = 6170
+		location = 4403
 		division_template = "Black Gargoyles"
 		start_experience_factor = 0.13
 
@@ -402,7 +412,7 @@ units = {
 	
 	division = {
 		name = "34th Levy"
-		location = 4059
+		location = 6128
 		division_template = "Black Gargoyles"
 		start_experience_factor = 0.13
 
@@ -410,7 +420,7 @@ units = {
 	
 	division = {
 		name = "35th Levy"
-		location = 6222
+		location = 1486
 		division_template = "Black Gargoyles"
 		start_experience_factor = 0.13
 
@@ -418,7 +428,7 @@ units = {
 	
 	division = {
 		name = "36th Levy"
-		location = 4111
+		location = 1571
 		division_template = "Black Gargoyles"
 		start_experience_factor = 0.13
 
@@ -426,7 +436,7 @@ units = {
 	
 	division = {
 		name = "37th Levy"
-		location = 2130
+		location = 1387
 		division_template = "Black Gargoyles"
 		start_experience_factor = 0.13
 
@@ -434,7 +444,7 @@ units = {
 	
 	division = {
 		name = "38th Levy"
-		location = 6111
+		location = 8
 		division_template = "Black Gargoyles"
 		start_experience_factor = 0.13
 
@@ -442,7 +452,7 @@ units = {
 	
 	division = {
 		name = "39th Levy"
-		location = 6802
+		location = 1617
 		division_template = "Black Gargoyles"
 		start_experience_factor = 0.13
 
@@ -450,7 +460,7 @@ units = {
 	
 	division = {
 		name = "40th Levy"
-		location = 4341
+		location = 5906
 		division_template = "Black Gargoyles"
 		start_experience_factor = 0.13
 

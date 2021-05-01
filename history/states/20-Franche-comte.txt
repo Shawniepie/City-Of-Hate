@@ -9,7 +9,7 @@ state={
 	}
 
 	resources = {
-			aluminium = 14
+			mount = 14
 	}
 	
 	history={
@@ -17,8 +17,9 @@ state={
 		victory_points = { 6489 46 }
 		buildings = {
 			infrastructure = 7
-			arms_factory = 2
-			industrial_complex = 4
+			forge = 1
+			workshop = 1
+			farm = 4
 		}
 		add_core_of = GMR
 

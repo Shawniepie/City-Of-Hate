@@ -96,15 +96,14 @@ guiTypes = {
 					size = { width = 100% height = 60 }
 						
 					buttonType = {
-						name = "oil_icon"
+						name = "food_icon"
 						position = { x=0 y=2 }
 						spriteType = "GFX_resources_strip"
-						frame = 1
-						#pdx_tooltip = "PRODUCTION_MATERIALS_OIL"
+						frame = 15 # Which icon is used from the spriteType image referred to above.
 					}
 					
 					instantTextboxType = {
-						name = "oil_value"
+						name = "food_value"
 						position = { x = 31 y = 5 }
 						textureFile = ""
 						font = "hoi_18mbs"
@@ -113,19 +112,18 @@ guiTypes = {
 						maxWidth = 50
 						maxHeight = 20
 						format = left
-						#pdx_tooltip = "PRODUCTION_MATERIALS_OIL"
 					}
 					
 					buttonType = {
-						name = "rubber_icon"
+						name = "lumber_icon"
 						position = { x=70 y=2 }
 						spriteType = "GFX_resources_strip"
 						frame = 3
-						#pdx_tooltip = "PRODUCTION_MATERIALS_RUBBER"
+						#pdx_tooltip = "PRODUCTION_MATERIALS_lumber"
 					}
 					
 					instantTextboxType = {
-						name = "rubber_value"
+						name = "lumber_value"
 						position = { x = 101 y = 5 }
 						textureFile = ""
 						font = "hoi_18mbs"
@@ -134,7 +132,7 @@ guiTypes = {
 						maxWidth = 50
 						maxHeight = 20
 						format = left
-						#pdx_tooltip = "PRODUCTION_MATERIALS_RUBBER"
+						#pdx_tooltip = "PRODUCTION_MATERIALS_lumber"
 					}
 					
 					buttonType = {
@@ -159,15 +157,15 @@ guiTypes = {
 					}			
 					
 					buttonType = {
-						name = "aluminium_icon"
+						name = "mount_icon"
 						position = { x=210 y=2 }
 						spriteType = "GFX_resources_strip"
 						frame = 2
-						#pdx_tooltip = "PRODUCTION_MATERIALS_ALUMINIUM"
+						#pdx_tooltip = "PRODUCTION_MATERIALS_MOUNT"
 					}
 					
 					instantTextboxType = {
-						name = "aluminium_value"
+						name = "mount_value"
 						position = { x = 241 y = 5 }
 						textureFile = ""
 						font = "hoi_18mbs"
@@ -176,7 +174,7 @@ guiTypes = {
 						maxWidth = 50
 						maxHeight = 20
 						format = left
-						#pdx_tooltip = "PRODUCTION_MATERIALS_ALUMINIUM"
+						#pdx_tooltip = "PRODUCTION_MATERIALS_MOUNT"
 					}
 					
 					buttonType = {
@@ -219,25 +217,6 @@ guiTypes = {
 						maxHeight = 20
 						format = left
 						#pdx_tooltip = "PRODUCTION_MATERIALS_CHROMIUM"
-					}
-					
-					buttonType = {
-						name = "food_icon"
-						position = { x=369 y=2 }
-						spriteType = "GFX_resources_strip"
-						frame = 15 # Which icon is used from the spriteType image referred to above.
-					}
-					
-					instantTextboxType = {
-						name = "food_value"
-						position = { x = 400 y = 5 }
-						textureFile = ""
-						font = "hoi_18mbs"
-						borderSize = {x = 0 y = 0}
-						text = "999"
-						maxWidth = 50
-						maxHeight = 20
-						format = left
 					}
 				}				
 				#################################
@@ -1220,15 +1199,15 @@ guiTypes = {
 			}
 
 			iconType = {
-				name = "oil_icon"
+				name = "food_icon"
 				position = { x=0 y=2 }
 				spriteType = "GFX_resources_strip"
 				frame = 1
-				#pdx_tooltip = "PRODUCTION_MATERIALS_OIL"
+				#pdx_tooltip = "PRODUCTION_MATERIALS_FOOD"
 			}
 			
 			buttonType = {
-				name = "oil_checkbox"
+				name = "food_checkbox"
 				position = { x = 22 y = 1 }
 				quadTextureSprite ="GFX_generic_checkbox"
 				Orientation = "UPPER_LEFT"
@@ -1236,15 +1215,15 @@ guiTypes = {
 			}
 			
 			iconType = {
-				name = "rubber_icon"
+				name = "lumber_icon"
 				position = { x=58 y=2 }
 				spriteType = "GFX_resources_strip"
 				frame = 3
-				#pdx_tooltip = "PRODUCTION_MATERIALS_RUBBER"
+				#pdx_tooltip = "PRODUCTION_MATERIALS_LUMBER"
 			}
 			
 			buttonType = {
-				name = "rubber_checkbox"
+				name = "lumber_checkbox"
 				position = { x = 80 y = 1 }
 				quadTextureSprite ="GFX_generic_checkbox"
 				Orientation = "UPPER_LEFT"
@@ -1268,15 +1247,15 @@ guiTypes = {
 			}			
 			
 			iconType = {
-				name = "aluminium_icon"
+				name = "mount_icon"
 				position = { x=173 y=1 }
 				spriteType = "GFX_resources_strip"
 				frame = 2
-				#pdx_tooltip = "PRODUCTION_MATERIALS_ALUMINIUM"
+				#pdx_tooltip = "PRODUCTION_MATERIALS_MOUNT"
 			}
 			
 			buttonType = {
-				name = "aluminium_checkbox"
+				name = "mount_checkbox"
 				position = { x = 195 y = 1 }
 				quadTextureSprite ="GFX_generic_checkbox"
 				Orientation = "UPPER_LEFT"

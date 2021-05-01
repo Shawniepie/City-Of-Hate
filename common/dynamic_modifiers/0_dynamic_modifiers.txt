@@ -1,0 +1,82 @@
+#	Example:
+# 
+#	example_dynamic_modifier = {
+#		icon = "GFX_idea_unknown" # optional, will show up in guis if icon is specified
+#		enable = { always = yes } #optional, the modifier won't apply if not enabled
+#		remove_trigger = { always = no } #optional, will remove the modifier if true
+#
+#		# list of modifiers
+#		fuel_cost = 321
+#		max_fuel = var_max_fuel # will be taken from a variable
+#	}
+#
+#
+#	In a script file:
+#
+#	effect = {
+#		add_dynamic_modifier = {
+#			modifier = example_dynamic_modifier
+#			scope = GER # optional, if you specify this your dynamic modifier scoped to this scope (root is the effect scope)
+#			days = 14 # optional, will be removed after this many days passes
+#		}
+#	}
+#
+#	can be added to countries, states or unit leaders
+#	will only updated daily, unless forced by force_update_dynamic_modifier effect
+
+very_fertile_land = {
+    icon = GFX_modifier_state_big_fertility
+    state_resource_food = 3
+    monthly_population = 0.1
+	local_supplies_for_controller = 0.25
+}
+
+fertile_land = {
+    icon = GFX_modifier_state_fertility
+    state_resource_food = 1
+    monthly_population = 0.025
+	local_supplies_for_controller = 0.1
+}
+
+infertile_land = {
+    icon = GFX_modifier_state_infertility
+    state_resource_food = -1
+    monthly_population = -0.025
+	local_supplies_for_controller = -0.1
+}
+
+very_infertile_land = {
+    icon = GFX_modifier_state_big_infertility
+    state_resource_food = -3
+    monthly_population = -0.1
+	local_supplies_for_controller = -0.25
+}
+
+ongoing_border_conflict = {
+    icon = GFX_modifier_ongoing_conflict
+    army_org_regain = -15
+    army_speed_factor = -15
+}
+
+#civilian_food_consumption = { #Need to fix later
+#	enable = {
+#		always = yes
+#	}
+#	fuel_cost = civilian_food_consumption_var
+#}
+
+freiprinz_piety = {
+	enable = {
+		has_variable = FPT_piety
+	}
+	mobilization_speed = FPT_pious_mobilization
+	research_speed_factor = FPT_pious_science
+}
+
+steel_road_state = {
+	enable = {
+		always = yes
+	}
+
+	icon = GFX_MODIFIER_NO_SUPPLY_GRACE
+}

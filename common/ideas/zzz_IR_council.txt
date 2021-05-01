@@ -184,8 +184,8 @@ ideas = {
 			
 			modifier = {
 			conscription = -0.01
-			add_war_support = -0.05
-			army_org_Factor = -0.05
+			war_support_factor = -0.05
+			army_org_factor = -0.05
 			}
 		}
 	}
@@ -207,8 +207,8 @@ ideas = {
 			
 			modifier = {
 			conscription = -0.02
-			add_war_support = -0.1
-			army_org_Factor = -0.1
+			war_support_factor = -0.1
+			army_org_factor = -0.1
 			}
 		}
 	}
@@ -230,8 +230,8 @@ ideas = {
 			
 			modifier = {
 			conscription = -0.03
-			add_war_support = -0.15
-			army_org_Factor = -0.15
+			war_support_factor = -0.15
+			army_org_factor = -0.15
 			planning_speed = -0.1
 			}
 		}
@@ -255,8 +255,8 @@ ideas = {
 			
 			modifier = {
 			conscription = -0.04
-			add_war_support = -0.2
-			army_org_Factor = -0.2
+			war_support_factor = -0.2
+			army_org_factor = -0.2
 			}
 			equipment_bonus = {
 				infantry_equipment = {
@@ -284,8 +284,8 @@ ideas = {
 			
 			modifier = {
 			conscription = -0.05
-			add_war_support = -0.25
-			army_org_Factor = -0.25
+			war_support_factor = -0.25
+			army_org_factor = -0.25
 			}
 			equipment_bonus = {
 				infantry_equipment = {

@@ -4,13 +4,14 @@ state={
 	provinces={
 		1952 7289 995 443 7152 5188 5119
 	}
-	state_category = metropolis
+	state_category = rural
 	manpower=4023
 	buildings_max_level_factor=1.000
 		history={
-		owner = ORD
-		buildings = {	
-		infrastructure = 2
+			owner = ORD
+			buildings = {
+			infrastructure = 2
+			farm = 2
 			7152 = {
 				bunker = 3
 			}

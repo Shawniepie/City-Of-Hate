@@ -1,0 +1,472 @@
+#Sets fertility levels for states
+
+set_fertility = {
+	20 = {
+		add_dynamic_modifier = {
+			modifier = very_fertile_land
+		}
+	}
+	21 = {
+		add_dynamic_modifier = {
+			modifier = very_fertile_land
+		}
+	}
+	22 = {
+		add_dynamic_modifier = {
+			modifier = very_fertile_land
+		}
+	}
+	23 = {
+		add_dynamic_modifier = {
+			modifier = very_fertile_land
+		}
+	}
+	25 = {
+		add_dynamic_modifier = {
+			modifier = very_fertile_land
+		}
+	}
+	26 = {
+		add_dynamic_modifier = {
+			modifier = very_fertile_land
+		}
+	}
+	49 = {
+		add_dynamic_modifier = {
+			modifier = very_fertile_land
+		}
+	}
+	73 = {
+		add_dynamic_modifier = {
+			modifier = very_fertile_land
+		}
+	}
+	every_state = {
+		limit = {
+			OR = {
+				region = 63
+				region = 69
+			}
+			NOT = {
+				state = 72
+				state = 66
+			}
+		}
+		add_dynamic_modifier = {
+			modifier = infertile_land
+		}
+	}
+	every_state = {
+		limit = {
+			is_owned_by = ORD
+			NOT = {
+				state = 112
+				state = 114
+				state = 91
+				state = 90
+				state = 82
+				state = 85
+				state = 113
+				state = 110
+				state = 116
+				state = 104
+				state = 105
+				state = 106
+				state = 107
+				state = 108
+			}
+		}
+		add_dynamic_modifier = {
+			modifier = infertile_land
+		}
+	}
+	116 = {
+		add_dynamic_modifier = {
+			modifier = very_infertile_land
+		}
+	}
+	104 = {
+		add_dynamic_modifier = {
+			modifier = very_infertile_land
+		}
+	}
+	105 = {
+		add_dynamic_modifier = {
+			modifier = very_infertile_land
+		}
+	}
+	106 = {
+		add_dynamic_modifier = {
+			modifier = very_infertile_land
+		}
+	}
+	107 = {
+		add_dynamic_modifier = {
+			modifier = very_infertile_land
+		}
+	}
+	108 = {
+		add_dynamic_modifier = {
+			modifier = very_infertile_land
+		}
+	}
+	every_state = {	
+		limit = {
+			is_owned_by = RTH
+			NOT = {
+				state = 118
+				state = 129
+				state = 136
+				state = 143
+				state = 137
+				state = 140
+			}
+		}
+		add_dynamic_modifier = {
+			modifier = infertile_land
+		}
+	}
+	140 = {
+		add_dynamic_modifier = {
+			modifier = very_infertile_land
+		}
+	}
+	every_state = {
+		limit = {
+			is_owned_by = SKA
+			NOT = {
+				state = 146
+				state = 178
+				state = 191
+				state = 148
+				state = 182
+				state = 185
+				state = 162
+				state = 154
+				state = 155
+				state = 153
+			}
+		}
+		add_dynamic_modifier = {
+			modifier = infertile_land
+		}
+	}
+	162 = {
+		add_dynamic_modifier = {
+			modifier = very_infertile_land
+		}
+	}
+	154 = {
+		add_dynamic_modifier = {
+			modifier = very_infertile_land
+		}
+	}
+	155 = {
+		add_dynamic_modifier = {
+			modifier = very_infertile_land
+		}
+	}
+	153 = {
+		add_dynamic_modifier = {
+			modifier = very_infertile_land
+		}
+	}
+	361 = {
+		add_dynamic_modifier = {
+			modifier = very_fertile_land
+		}
+	}
+	360 = {
+		add_dynamic_modifier = {
+			modifier = very_fertile_land
+		}
+	}
+	357 = {
+		add_dynamic_modifier = {
+			modifier = very_fertile_land
+		}
+	}
+	359 = {
+		add_dynamic_modifier = {
+			modifier = fertile_land
+		}
+	}
+	362 = {
+		add_dynamic_modifier = {
+			modifier = fertile_land
+		}
+	}
+	193 = {
+		add_dynamic_modifier = {
+			modifier = infertile_land
+		}
+	}
+	194 = {
+		add_dynamic_modifier = {
+			modifier = infertile_land
+		}
+	}
+	195 = {
+		add_dynamic_modifier = {
+			modifier = infertile_land
+		}
+	}
+	203 = {
+		add_dynamic_modifier = {
+			modifier = infertile_land
+		}
+	}
+	205 = {
+		add_dynamic_modifier = {
+			modifier = infertile_land
+		}
+	}
+	207 = {
+		add_dynamic_modifier = {
+			modifier = infertile_land
+		}
+	}
+	365 = {
+		add_dynamic_modifier = {
+			modifier = infertile_land
+		}
+	}
+	every_state = {
+		limit = {
+			region = 12
+		}
+		add_dynamic_modifier = {
+			modifier = fertile_land
+		}
+	}
+	every_state = {
+		limit = {
+			is_owned_by = SNF
+			NOT = {
+				state = 324
+				state = 325
+				state = 253
+				state = 255
+			}
+		}
+		add_dynamic_modifier = {
+			modifier = infertile_land
+		}
+	}
+	354 = {
+		add_dynamic_modifier = {
+			modifier = infertile_land
+		}
+	}
+	337 = {
+		add_dynamic_modifier = {
+			modifier = infertile_land
+		}
+	}
+	345 = {
+		add_dynamic_modifier = {
+			modifier = fertile_land
+		}
+	}
+	242 = {
+		add_dynamic_modifier = {
+			modifier = fertile_land
+		}
+	}
+	249 = {
+		add_dynamic_modifier = {
+			modifier = fertile_land
+		}
+	}
+	272 = {
+		add_dynamic_modifier = {
+			modifier = fertile_land
+		}
+	}
+	288 = {
+		add_dynamic_modifier = {
+			modifier = infertile_land
+		}
+	}
+	323 = {
+		add_dynamic_modifier = {
+			modifier = infertile_land
+		}
+	}
+	310 = {
+		add_dynamic_modifier = {
+			modifier = infertile_land
+		}
+	}
+	268 = {
+		add_dynamic_modifier = {
+			modifier = infertile_land
+		}
+	}
+	304 = {
+		add_dynamic_modifier = {
+			modifier = infertile_land
+		}
+	}
+	282 = {
+		add_dynamic_modifier = {
+			modifier = infertile_land
+		}
+	}
+	every_state = {
+		limit = {
+			is_owned_by = PRK
+			NOT = {
+				region = 2
+				region = 3
+				region = 6
+				region = 37
+				region = 38
+			}
+		}
+		add_dynamic_modifier = {
+			modifier = infertile_land
+		}
+	}
+	every_state = {
+		limit = {
+			OR = {
+				region = 2
+				region = 37
+				region = 38
+			}
+		}
+		add_dynamic_modifier = {
+			modifier = very_infertile_land
+		}
+	}
+	every_state = {
+		limit = {
+			OR = {
+				region = 79
+				region = 80
+			}
+		}
+		add_dynamic_modifier = {
+			modifier = very_fertile_land
+		}
+	}
+	every_state = {
+		limit = {
+			OR = {
+				region = 81
+				region = 82
+			}
+		}
+		add_dynamic_modifier = {
+			modifier = fertile_land
+		}
+	}
+	every_state = {
+		limit = {
+			OR = {
+				region = 73
+				region = 88
+			}
+			NOT = {
+				state = 376
+				state = 372
+			}
+		}
+		add_dynamic_modifier = {
+			modifier = infertile_land
+		}
+	}
+	every_state = {
+		limit = {
+			region = 87
+		}
+		add_dynamic_modifier = {
+			modifier = infertile_land
+		}
+	}
+	every_state = {
+		limit = {
+			region = 91
+		}
+		add_dynamic_modifier = {
+			modifier = fertile_land
+		}
+	}
+	every_state = {
+		limit = {
+			region = 95
+		}
+		add_dynamic_modifier = {
+			modifier = very_fertile_land
+		}
+	}
+	every_state = {
+		limit = {
+			region = 94
+		}
+		add_dynamic_modifier = {
+			modifier = fertile_land
+		}
+	}
+	762 = {
+		add_dynamic_modifier = {
+			modifier = very_fertile_land
+		}
+	}
+	767 = {
+		add_dynamic_modifier = {
+			modifier = very_fertile_land
+		}
+	}
+	763 = {
+		add_dynamic_modifier = {
+			modifier = very_fertile_land
+		}
+	}
+	769 = {
+		add_dynamic_modifier = {
+			modifier = very_fertile_land
+		}
+	}
+	770 = {
+		add_dynamic_modifier = {
+			modifier = very_fertile_land
+		}
+	}
+	378 = {
+		add_dynamic_modifier = {
+			modifier = very_fertile_land
+		}
+	}
+	every_state = {
+		limit = {
+			OR = {
+				region = 105
+				region = 107
+			}
+		}
+		add_dynamic_modifier = {
+			modifier = infertile_land
+		}
+	}
+	every_state = {
+		limit = {
+			OR = {
+				region = 99
+				region = 101
+			}
+		}
+		add_dynamic_modifier = {
+			modifier = very_infertile_land
+		}
+	}
+	every_state = {
+		limit = {
+			region = 98
+		}
+		add_dynamic_modifier = {
+			modifier = infertile_land
+		}
+	}
+}

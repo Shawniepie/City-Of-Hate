@@ -4,13 +4,13 @@ state={
 	provinces={
 		2869 5917 5901 5890 359 3045 3001
 	}
-	state_category = pastoral
+	state_category = rural
 	manpower=3669
 	buildings_max_level_factor=1.000
 	history={
 		owner = GMR
 		buildings = {
-			infrastructure = 1
+			infrastructure = 5
 		}
 		add_core_of = GMR
 

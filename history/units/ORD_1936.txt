@@ -12,10 +12,28 @@ division_template = {
 	regiments = {
 		men_at_arms = { x = 0 y = 0 }
 		men_at_arms = { x = 0 y = 1 }
-		men_at_arms = { x = 0 y = 2 }
-        men_at_arms = { x = 1 y = 0 }
+        		halberdier = { x = 0 y = 2 }
+		men_at_arms = { x = 1 y = 0 }
 		men_at_arms = { x = 1 y = 1 }
-		men_at_arms = { x = 1 y = 2 }
+		swordsmen = { x = 1 y = 2 }
+		men_at_arms = { x = 2 y = 0 }
+		men_at_arms = { x = 2 y = 1 }
+		men_at_arms = { x = 2 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Arrowslingers"
+	regiments = {
+		men_at_arms = { x = 0 y = 0 }
+		archer_shortbow = { x = 0 y = 1 }
+        		archer_shortbow = { x = 0 y = 2 }
+		men_at_arms = { x = 1 y = 0 }
+		archer_shortbow = { x = 1 y = 1 }
+		archer_shortbow = { x = 1 y = 2 }
+		men_at_arms = { x = 2 y = 0 }
+		archer_shortbow = { x = 2 y = 1 }
+		archer_shortbow = { x = 2 y = 2 }
 	}
 }
 
@@ -28,7 +46,7 @@ division_template = {
 		light_cavalry = { x = 1 y = 1 }
 	}
 	support = {
-	    recon = { x = 0 y = 0 }
+	    scouts_cavalry = { x = 0 y = 0 }
 	}
 }
 
@@ -166,6 +184,34 @@ units = {
 		start_experience_factor = 0.4
 	}	
 	
+	division = {
+		name = "1st Arrowslingers"
+		location = 1184
+		division_template = "Arrowslingers"
+		start_experience_factor = 0.4
+	}	
+	
+	division = {
+		name = "2nd Arrowslingers"
+		location = 4182
+		division_template = "Arrowslingers"
+		start_experience_factor = 0.4
+	}	
+	
+	division = {
+		name = "3rd Arrowslingers"
+		location = 877
+		division_template = "Arrowslingers"
+		start_experience_factor = 0.4
+	}	
+	
+	division = {
+		name = "4th Arrowslingers"
+		location = 1007
+		division_template = "Arrowslingers"
+		start_experience_factor = 0.4
+	}	
+	
 }
 
 
@@ -182,10 +228,20 @@ instant_effect = {
 		progress = 0.48
 		efficiency = 37
 	}
+	
+	add_equipment_production = {
+		equipment = {
+			type = ranged_equipment_0
+			creator = "ORD"
+		}
+		requested_factories = 2
+		progress = 0.32
+		efficiency = 26
+	}
 
 	add_equipment_production = {
 		equipment = {
-			type = support_equipment_1
+			type = light_cavalry_equipment_0
 			creator = "ORD" 
 		}
 		requested_factories = 2

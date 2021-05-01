@@ -818,6 +818,10 @@ country_event = {#Reformed Administration
 			remove_idea = PRK_tribal_nation
 			add_idea = PRK_administrative_reform
 		}
+		swap_ideas = {
+			remove_idea = unorganized_economy
+			add_idea = agrarianism_economy
+		}
 	}
 }
 
@@ -838,6 +842,10 @@ country_event = {#Crown Wendelin
 		add_popularity = {
 			ideology = monarchy_constitutional
 			popularity = 0.1
+		}
+		swap_ideas = {
+			remove_idea = tribal_society
+			add_idea = feudal_society
 		}
 		remove_ideas = PRK_perkav_census_idea
 		add_stability = 0.15

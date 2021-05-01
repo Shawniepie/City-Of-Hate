@@ -1,0 +1,54 @@
+spriteTypes = {
+
+	### generic equipment archetypes ###
+	
+	SpriteType = {
+		name = "GFX_archetype_light_cavalry_equipment"
+		texturefile = "gfx/interface/archetypes/archetype_light_cavalry_equipment.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_archetype_heavy_cavalry_equipment"
+		texturefile = "gfx/interface/archetypes/archetype_heavy_cavalry_equipment.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_tech_heavy_cavalry_medium"
+		texturefile = "gfx/interface/technologies/heavy_cavalry_equipment_0.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_tech_light_cavalry_medium"
+		texturefile = "gfx/interface/technologies/light_cavalry_equipment_0.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_infantry_equipment_medium"
+		texturefile = "gfx/interface/technologies/infantry_equipment_0.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_ranged_equipment_medium"
+		texturefile = "gfx/interface/technologies/ranged_equipment_0.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_infantry_equipment_0"
+		texturefile = "gfx/interface/technologies/infantry_equipment_0.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_heavy_cavalry_equipment_0"
+		texturefile = "gfx/interface/technologies/heavy_cavalry_equipment_0.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_light_cavalry_equipment_0"
+		texturefile = "gfx/interface/technologies/light_cavalry_equipment_0.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_food_medium"
+		texturefile = "gfx/interface/technologies/food_medium.dds"
+	}
+}

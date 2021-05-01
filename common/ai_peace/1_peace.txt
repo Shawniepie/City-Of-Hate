@@ -65,6 +65,57 @@ peace_default = {#Default peace option
 			}
 		}
 		
+		#Won't take Oramfell land if allied to Dwarves
+		modifier = {
+			factor = 0
+			OR = {
+				AND = {
+					has_war_with = SKA
+					OR = {
+						is_in_faction_with = RMT
+						is_in_faction_with = BER
+						is_subject_of = RMT
+						is_subject_of = BER
+						RMT = {
+							is_subject_of = ROOT
+						}
+						BER = {
+							is_subject_of = ROOT
+						}
+						has_country_flag = UNG_nordtorf_summit_fails_RMT_favoured
+						AND = {
+							is_subject_of = UNG
+							UNG = {
+								has_country_flag = has_country_flag = UNG_nordtorf_summit_fails_RMT_favoured
+							}
+						}
+					}
+				}
+				AND = {
+					has_war_with = RMT
+					OR = {
+						is_in_faction_with = SKA
+						is_in_faction_with = BER
+						is_subject_of = SKA
+						is_subject_of = BER
+						SKA = {
+							is_subject_of = ROOT
+						}
+						BER = {
+							is_subject_of = ROOT
+						}
+						has_country_flag = UNG_nordtorf_summit_fails_SKA_favoured
+						AND = {
+							is_subject_of = UNG
+							UNG = {
+								has_country_flag = has_country_flag = UNG_nordtorf_summit_fails_SKA_favoured
+							}
+						}
+					}
+				}
+			}
+		}
+		
 		# prioritize cores and claims
 		modifier = {
 			factor = 25

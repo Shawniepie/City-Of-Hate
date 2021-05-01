@@ -1,47 +1,44 @@
 ﻿capital = 233
 
+set_major = yes
+
 set_oob = "UNG_1936"
 set_research_slots = 3
 
 set_technology = {
-	infantry_weapons = 1
-	infantry_weapons1 = 1
-	tech_support = 1
-	tech_recon = 1
+	implements_war = 1
+	tribal_warbands = 1
+	sparring_fields = 1
+	war_artisans = 1
+	advanced_leatherworking = 1
+	gambesons = 1
+	brigandines = 1
+	alloy_creation = 1
+	steel_working = 1
+	fullered_blades = 1
+	peasant_levy = 1
+	mail_hauberks = 1
+	improved_woodworking = 1
+	recurve_bow = 1
+	broadhead_arrows = 1
+	horseback_riding = 1
+	mounted_warriors = 1
+	saddles = 1
+	stirrups = 1
+	cavalry_lances = 1
+	flanking_tactics = 1
+	skirmish_tactics = 1
+	scouting_parties = 1
+	astrolabe = 1
+	compass = 1
+	cartography = 1
 }
 
-if = {
-	limit = {
-		not = { has_dlc = "Man the Guns" }
-	}
-	set_technology = {
-		early_submarine = 1
-		early_destroyer = 1
-		early_light_cruiser = 1
-		transport = 1
-	}
+set_variable = {
+	var = UNG_num_allies
+	value = 11
 }
-if = {
-	limit = {
-		has_dlc = "Man the Guns"
-	}
-	set_technology = {
-		basic_naval_mines = 1
-		submarine_mine_laying = 1
-		early_ship_hull_light = 1
-		basic_ship_hull_light = 1
-		early_ship_hull_submarine = 1
-		early_ship_hull_cruiser = 1
-		basic_battery = 1
-		basic_light_battery = 1
-		basic_torpedo = 1
-		sonar = 1
-		basic_depth_charges = 1
-		basic_secondary_battery = 1
-		mtg_transport = 1
-		basic_fire_control_system = 1
-	}
-}
+
 
 1939.1.1 = {
 }
@@ -73,6 +70,9 @@ add_ideas = {
 	UNG_trade_realm
 	human_country
 	septism_religion
+	heinrich_brengst
+	stella_galde
+	alko_blau
 }
 
 add_opinion_modifier = {
@@ -166,6 +166,7 @@ create_country_leader = {
 	picture = "gfx/leaders/UNG/Portrait_UNG_Vlussinger.dds"
 	ideology = monarchy_constitutional_ideology
 	traits = {
+		unproven_hochprinzessin
 	}
 }
 
@@ -206,11 +207,12 @@ create_country_leader = {
 }
 
 create_country_leader = {
-	name = "Adelina Vlussinger"
-	desc = "politics_UNG_vlussinger_desc"
-	picture = "gfx/leaders/UNG/Portrait_UNG_Vlussinger.dds"	
+	name = "Aristokratischer Rat"
+	desc = "politics_UNG_council_desc"
+	picture = "gfx/leaders/UNG/Portrait_UNG_Aristocratic_Council.dds"	
 	ideology = republic_aristocrat_ideology
 	traits = {
+		informal_council
 	}
 }
 

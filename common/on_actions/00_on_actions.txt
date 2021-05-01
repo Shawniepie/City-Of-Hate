@@ -1,27 +1,303 @@
-on_actions = {
-
+	on_actions = {	
+	
+	#Makes sure puppets have access to everyone's land
+	#on_peaceconference_ended = {
+	#	effect = {
+	#		every_country = {
+	#			limit = {
+	#				is_subject_of = UNG
+	#			}
+	#		give_military_access = THIS
+	#		}
+	#	}
+	#}
+	
+	#Sets fertility
+	on_startup = {
+		effect = {
+			every_state = {
+				set_fertility = yes
+			}
+		}
+	}
+	
+	#Sets Freiprinz Piety effects
+	on_startup = {
+		effect = {
+			every_country = {
+				limit = {
+					has_variable = FPT_piety
+				}
+				set_freiprinz_piety_effects = yes
+			}
+		}
+	}
+	
 	#Checks population change
 	on_daily = {
 		effect = {
 			check_population_change = yes
+			#check_steel_road_change = yes #Bugged
 		}
 	}
 
 	#Sets the Steel Road
 	on_startup = {
 		effect = {
-			every_country = {
+			random_state = {
 				set_steel_road = yes
 			}
 		}
 	}
 	
-	#Sets Vergall States
-	on_actions = {
+	#Sets Steel Road states
+	on_state_control_changed = {
 		effect = {
-			SKA = {
-				set_vergall_states = yes #Apparently I left this empty? There's no scripted effect for this? I thiiiink it's just useless but I'd need to investigate
+			set_variable = { global.NEW_CONTROLLER = ROOT }
+			set_variable = { global.OLD_CONTROLLER = FROM }
+			set_variable = { global.STATE = FROM.FROM }
+
+			if = {
+				limit = {
+					var:global.STATE = {
+						has_state_flag = steel_road_state
+					}
+				}
+				
+				var:global.OLD_CONTROLLER = {
+					remove_from_array = {
+						steelroadarray = global.STATE
+					}
+				}
+				
+				var:global.NEW_CONTROLLER = {
+					add_to_array = {
+						steelroadarray = global.STATE
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_variable = STLRD_state_control_var
+							}
+						}
+						set_variable = {
+							var = STLRD_state_control_var
+							value = 1
+						}
+						add_ideas = STLRD_control_1
+					}
+					if = {
+						limit = {
+							has_variable = STLRD_state_control_var
+						}
+						add_to_variable = {
+							var = STLRD_state_control_var
+							value = 1
+						}
+					}
+					if = {
+						limit {
+							check_variable = {
+								STLRD_state_control_var > 4
+								STLRD_state_control_var < 10
+							}
+						}
+						swap_ideas = {
+							remove_idea = STLRD_control_1
+							add_idea = STLRD_control_2
+						}
+					}
+					if = {
+						limit {
+							check_variable = {
+								STLRD_state_control_var > 9
+								STLRD_state_control_var < 15
+							}
+						}
+						swap_ideas = {
+							remove_idea = STLRD_control_2
+							add_idea = STLRD_control_3
+						}
+					}
+					if = {
+						limit {
+							check_variable = {
+								STLRD_state_control_var > 14
+								STLRD_state_control_var < 20
+							}
+						}
+						swap_ideas = {
+							remove_idea = STLRD_control_3
+							add_idea = STLRD_control_4
+						}
+					}
+					if = {
+						limit {
+							check_variable = {
+								STLRD_state_control_var > 19
+							}
+						}
+						swap_ideas = {
+							remove_idea = STLRD_control_4
+							add_idea = STLRD_control_5
+						}
+					}
+					if = {
+						limit {
+							check_variable = {
+								STLRD_state_control_var > 25
+							}
+							NOT = {
+								any_other_country = {
+									has_idea = STLRD_dominated
+								}
+							}
+						}
+						add_ideas = STLRD_dominated
+					}
+					if = {
+						limit {
+							check_variable = {
+								STLRD_state_control_var > 25
+							}
+							any_other_country = {
+								has_idea = STLRD_dominated
+								check_variable = {
+									variable = STLRD_state_control_var
+									value < global.NEW_CONTROLLER.STLRD_state_control_var
+								}
+							}
+						}
+						every_other_country = {
+							limit = {
+								has_idea = STLRD_dominated
+							}
+							remove_ideas = STLRD_dominated
+						}
+						add_ideas = STLRD_dominated
+					}
+					FROM = {
+						if = {
+							limit = {
+								check_variable = {
+									var = STLRD_state_control_var
+									value < 2
+								}
+							}
+							clear_variable = STLRD_state_control_var
+							remove_ideas = STLRD_control_1
+							#Following ones are for conquering countries like FTH or such that have different values
+							remove_ideas = STLRD_control_2
+							remove_ideas = STLRD_control_3
+							remove_ideas = STLRD_control_4
+							remove_ideas = STLRD_control_5
+						}
+					}
+					FROM = {
+						if = {
+							limit = {
+								check_variable = {
+									var = STLRD_state_control_var
+									value = 2
+									compare = greater_than_or_equals
+								}
+								num_of_controlled_states > 0
+							}
+							subtract_from_variable = {
+								var = STLRD_state_control_var
+								value = 1
+							}
+						}
+						if = {
+							limit = {
+								check_variable = {
+									var = STLRD_state_control_var
+									value = 2
+									compare = greater_than_or_equals
+								}
+								num_of_controlled_states < 1
+							}
+							clear_variable = STLRD_state_control_var
+							remove_ideas = STLRD_control_1
+							#Following ones are for conquering countries like FTH or such that have different values
+							remove_ideas = STLRD_control_2
+							remove_ideas = STLRD_control_3
+							remove_ideas = STLRD_control_4
+							remove_ideas = STLRD_control_5
+						}
+						if = {
+							limit {
+								check_variable = {
+									STLRD_state_control_var > 0
+									STLRD_state_control_var < 5
+								}
+								num_of_controlled_states > 0
+							}
+							swap_ideas = {
+								remove_idea = STLRD_control_2
+								add_idea = STLRD_control_1
+							}
+
+							remove_ideas = STLRD_control_3
+							remove_ideas = STLRD_control_4
+							remove_ideas = STLRD_control_5
+						}
+						if = {
+							limit {
+								check_variable = {
+									STLRD_state_control_var > 4
+									STLRD_state_control_var < 10
+								}
+								num_of_controlled_states > 0
+							}
+							swap_ideas = {
+								remove_idea = STLRD_control_3
+								add_idea = STLRD_control_2
+							}
+							
+							remove_ideas = STLRD_control_1
+							remove_ideas = STLRD_control_4
+							remove_ideas = STLRD_control_5
+						}
+						if = {
+							limit {
+								check_variable = {
+									STLRD_state_control_var > 9
+									STLRD_state_control_var < 15
+								}
+								num_of_controlled_states > 0
+							}
+							swap_ideas = {
+								remove_idea = STLRD_control_4
+								add_idea = STLRD_control_3
+							}
+							
+							remove_ideas = STLRD_control_1
+							remove_ideas = STLRD_control_2
+							remove_ideas = STLRD_control_5
+						}
+						if = {
+							limit {
+								check_variable = {
+									STLRD_state_control_var > 14
+									STLRD_state_control_var < 20
+								}
+								num_of_controlled_states > 0
+							}
+							swap_ideas = {
+								remove_idea = STLRD_control_5
+								add_idea = STLRD_control_4
+							}
+							remove_ideas = STLRD_control_1
+							remove_ideas = STLRD_control_2
+							remove_ideas = STLRD_control_3
+						}
+					}
+				}
 			}
+			clear_variable = global.NEW_CONTROLLER
+			clear_variable = global.OLD_CONTROLLER
+			clear_variable = global.STATE
 		}
 	}
 	
@@ -161,6 +437,52 @@ on_actions = {
 				country_event = {
 					id = ir.political.1
 					days = 3
+				}
+			}
+		}
+	}
+	
+	#Force economy laws for Puritans and Rosites
+	on_ruling_party_change = {
+		effect = {
+			if = {
+				limit = {
+					has_government = puritan
+				}
+				remove_ideas = agrarianism_economy
+				remove_ideas = manorialism_economy
+				remove_ideas = fiscalism_economy
+				remove_ideas = mercantilism_economy
+				remove_ideas = corporatism_economy
+				remove_ideas = communalism_economy
+				remove_ideas = steam_and_steel
+				if = {
+					limit = {
+						NOT = {
+							has_idea = unorganized_economy
+						}
+					}
+					add_ideas = autarkic_isolationism
+				}
+			}
+			if = {
+				limit = {
+					has_government = republic_peasant
+				}
+				remove_ideas = agrarianism_economy
+				remove_ideas = manorialism_economy
+				remove_ideas = fiscalism_economy
+				remove_ideas = mercantilism_economy
+				remove_ideas = autarkic_isolationism
+				remove_ideas = communalism_economy
+				remove_ideas = steam_and_steel
+				if = {
+					limit = {
+						NOT = {
+							has_idea = unorganized_economy
+						}
+					}
+					add_ideas = communalism_economy
 				}
 			}
 		}

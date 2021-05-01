@@ -10,6 +10,37 @@
 # protect
 # influence
 
+ungerdaler_buddies = {
+	enable = {
+		tag = RMT
+		NOT = {
+			has_government = puritan
+		}
+		OR = {
+			UNG = {
+				has_country_flag = UNG_nordtorf_summit_success_RMT_favoured
+				has_country_flag = UNG_nordtorf_summit_fails_RMT_favoured
+			}
+			is_in_faction_with = UNG #accounting for the 'Approach Rimatü' focus in the expansionist path
+		}
+	}
+	ai_strategy = {
+		type = befriend
+		id = "UNG"
+		value = 200
+	}
+	ai_strategy = {
+		type = alliance
+		id = "UNG"			
+		value = 200
+	}
+	ai_strategy = {
+		type = protect
+		id = "UNG"			
+		value = 200
+	}
+}
+
 stab_the_baguette_elves = {
 	enable = {
 		original_tag = RMT

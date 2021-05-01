@@ -19,8 +19,8 @@ spriteTypes = {
 	}
 
 	spriteType = {
-		name = "GFX_fuel"
-		texturefile = "gfx//interface//topbar//fuel_icon.dds"
+		name = "GFX_rations"
+		texturefile = "gfx//interface//topbar//rations_icon.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 	}
 	spriteType = {

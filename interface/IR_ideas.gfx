@@ -1,6 +1,326 @@
 spriteTypes = {
 
 	spriteType = {
+		name = "GFX_idea_tech_crossbows"
+		texturefile = "gfx/interface/ideas/tech_crossbows.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_ung_freisler"
+		texturefile = "gfx/interface/ideas/ung_freisler.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_ung_literate_society"
+		texturefile = "gfx/interface/ideas/ung_literate_society.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_ung_blau"
+		texturefile = "gfx/interface/ideas/ung_blau.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_ung_galde"
+		texturefile = "gfx/interface/ideas/ung_galde.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_ung_brengst"
+		texturefile = "gfx/interface/ideas/ung_brengst.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_STA_nebeltoter"
+		texturefile = "gfx/interface/ideas/STA_nebeltoter.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_idea_IRI_Flourishing_Lands"
+		texturefile = "gfx/interface/ideas/IRI_Flourishing_Lands.tga"			
+	}
+	
+	SpriteType = {
+		name = "GFX_idea_IRI_Depression_Evaded"
+		texturefile = "gfx/interface/ideas/IRI_Depression_Evaded.tga"			
+	}
+	
+	SpriteType = {
+		name = "GFX_idea_IRI_Irinthios_Will_Rise_Again"
+		texturefile = "gfx/interface/ideas/IRI_Irinthios_Will_Rise_Again.tga"		
+	}
+	
+	SpriteType = {
+		name = "GFX_idea_IRI_Citizens_1"
+		texturefile = "gfx/interface/ideas/IRI_Citizens_1.tga"		
+	}
+	
+	SpriteType = {
+		name = "GFX_idea_IRI_Citizens_2"
+		texturefile = "gfx/interface/ideas/IRI_Citizens_2.tga"		
+	}
+	
+	SpriteType = {
+		name = "GFX_idea_IRI_Generals_1"
+		texturefile = "gfx/interface/ideas/IRI_Generals_1.tga"		
+	}
+	
+	SpriteType = {
+		name = "GFX_idea_IRI_Generals_2"
+		texturefile = "gfx/interface/ideas/IRI_Generals_2.tga"		
+	}
+	
+	SpriteType = {
+		name = "GFX_idea_IRI_Ogre_Riots"
+		texturefile = "gfx/interface/ideas/IRI_Ogre_Riots.tga"		
+	}
+	
+	SpriteType = {
+		name = "GFX_idea_IRI_Ogre_Occupation"
+		texturefile = "gfx/interface/ideas/IRI_Ogre_Occupation.tga"		
+	}
+	
+	SpriteType = {
+		name = "GFX_idea_IRI_Ogre_Assimilation"
+		texturefile = "gfx/interface/ideas/IRI_Ogre_Assimilation.tga"		
+	}
+	
+	SpriteType = {
+		name = "GFX_idea_IRI_Sacked_North"
+		texturefile = "gfx/interface/ideas/IRI_Sacked_North.tga"		
+	}
+	
+	SpriteType = {
+		name = "GFX_idea_TLA_Sacked_North"
+		texturefile = "gfx/interface/ideas/IRI_Sacked_North.tga"		
+	}
+	
+	SpriteType = {
+		name = "GFX_idea_IRI_Glory_Built_On_Blood"
+		texturefile = "gfx/interface/ideas/IRI_Glory_Built_On_Blood.tga"
+	}
+	
+	SpriteType = {
+		name = "GFX_idea_IRI_Generals_Militaristic_1"
+		texturefile = "gfx/interface/ideas/IRI_Generals_Militaristic_1.tga"
+	}
+	
+	SpriteType = {
+		name = "GFX_idea_IRI_Generals_Militaristic_2"
+		texturefile = "gfx/interface/ideas/IRI_Generals_Militaristic_2.tga"
+	}
+	
+	SpriteType = {
+		name = "GFX_idea_IRI_Citizens_Militaristic_1"
+		texturefile = "gfx/interface/ideas/IRI_Citizens_Militaristic_1.tga"
+	}
+	
+	SpriteType = {
+		name = "GFX_idea_IRI_Citizens_Militaristic_2"
+		texturefile = "gfx/interface/ideas/IRI_Citizens_Militaristic_2.tga"
+	}
+	
+	SpriteType = {
+		name = "GFX_idea_IRI_Slavery_Allowed"
+		texturefile = "gfx/interface/ideas/IRI_Slavery_Allowed.tga"
+	}
+	
+	SpriteType = {
+		name = "GFX_idea_IRI_Spirit_Of_Purity"
+		texturefile = "gfx/interface/ideas/IRI_Spirit_Of_Purity.tga"
+	}
+	
+	SpriteType = {
+		name = "GFX_idea_IRI_Revolution"
+		texturefile = "gfx/interface/ideas/IRI_Revolution.tga"
+	}
+	
+	SpriteType = {
+		name = "GFX_idea_IRI_Florou"
+		texturefile = "gfx/interface/ideas/IRI_Florou.tga"
+	}
+	
+	SpriteType = {
+		name = "GFX_idea_IRI_Diamantis"
+		texturefile = "gfx/interface/ideas/IRI_Diamantis.tga"
+	}
+	
+	SpriteType = {
+		name = "GFX_idea_IRI_Ioanna"
+		texturefile = "gfx/interface/ideas/IRI_Ioanna.tga"
+	}
+	
+	SpriteType = {
+		name = "GFX_idea_IRI_Kyriazis"
+		texturefile = "gfx/interface/ideas/IRI_Kyriazis.tga"
+	}
+	
+	SpriteType = {
+		name = "GFX_idea_IRI_Petrakis"
+		texturefile = "gfx/interface/ideas/IRI_Petrakis.tga"
+	}
+	
+	SpriteType = {
+		name = "GFX_idea_IRI_Chalkia"
+		texturefile = "gfx/interface/ideas/IRI_Chalkia.tga"
+	}
+	
+	SpriteType = {
+		name = "GFX_idea_IRI_Heartstrong"
+		texturefile = "gfx/interface/ideas/IRI_Heartstrong.tga"
+	}
+	
+	SpriteType = {
+		name = "GFX_idea_IRI_Tosteratos"
+		texturefile = "gfx/interface/ideas/IRI_Tosteratos.tga"
+	}
+	
+	SpriteType = {
+		name = "GFX_idea_IRI_The_Bloodlust"
+		texturefile = "gfx/interface/ideas/IRI_The_Bloodlust.tga"
+	}
+	
+	SpriteType = {
+		name = "GFX_idea_IRI_Glorious_Speech"
+		texturefile = "gfx/interface/ideas/IRI_Glorious_Speech.tga"
+	}
+	
+	SpriteType = {
+		name = "GFX_idea_IRI_Forges_Mobilisation"
+		texturefile = "gfx/interface/ideas/IRI_Forges_Mobilisation.tga"
+	}
+	
+	SpriteType = {
+		name = "GFX_idea_IRI_Military_Parades"
+		texturefile = "gfx/interface/ideas/IRI_Military_Parades.tga"
+	}
+	
+	SpriteType = {
+		name = "GFX_idea_IRI_Suppress_Resistance"
+		texturefile = "gfx/interface/ideas/IRI_Suppress_Resistance.tga"
+	}
+
+	SpriteType = {
+		name = "GFX_decision_category_milfaction"
+		texturefile = "gfx/interface/decisions/decision_cat_milfaction.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_idea_IRI_Theoria_KataktisisSpirit"
+		texturefile = "gfx/interface/ideas/IRI_Theoria_KataktisisSpirit.tga"
+	}
+	
+	SpriteType = {
+		name = "GFX_idea_IRI_House_Of_Commons"
+		texturefile = "gfx/interface/ideas/IRI_House_Of_Commons.tga"
+	}
+	
+	SpriteType = {
+		name = "GFX_idea_IRI_Peasant_Courts"
+		texturefile = "gfx/interface/ideas/IRI_Peasant_Courts.tga"
+	}
+	
+	SpriteType = {
+		name = "GFX_idea_IRI_Rights_Of_Craftsmen"
+		texturefile = "gfx/interface/ideas/IRI_Rights_Of_Craftsmen.tga"
+	}
+	
+	SpriteType = {
+		name = "GFX_idea_IRI_Republican_Values"
+		texturefile = "gfx/interface/ideas/IRI_Republican_Values.tga"
+	}
+	
+	SpriteType = {
+		name = "GFX_idea_IRI_TlaProblems1"
+		texturefile = "gfx/interface/ideas/IRI_TlaProblems1.tga"
+	}
+	
+	SpriteType = {
+		name = "GFX_idea_IRI_TlaProblems2"
+		texturefile = "gfx/interface/ideas/IRI_TlaProblems2.tga"
+	}
+	
+	SpriteType = {
+		name = "GFX_idea_IRI_TlaProblems3"
+		texturefile = "gfx/interface/ideas/IRI_TlaProblems3.tga"
+	}
+	
+	SpriteType = {
+		name = "GFX_idea_IRI_Autonomous_Cities"
+		texturefile = "gfx/interface/ideas/IRI_Autonomous_Cities.tga"
+	}
+	
+	SpriteType = {
+		name = "GFX_idea_IRI_Guilds_Nationalized"
+		texturefile = "gfx/interface/ideas/IRI_Guilds_Nationalized.tga"
+	}
+	
+	SpriteType = {
+		name = "GFX_idea_IRI_The_Rebuilding"
+		texturefile = "gfx/interface/ideas/IRI_The_Rebuilding.tga"
+	}
+	
+	SpriteType = {
+		name = "GFX_report_event_sunday_provocation"
+		texturefile = "gfx/event_pictures/report_event_sunday_provocation.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_report_revolution_in_air"
+		texturefile = "gfx/event_pictures/report_revolution_in_air.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_news_event_iri_peasant_war"
+		texturefile = "gfx/event_pictures/news_event_iri_peasant_war.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_STA_faustburg_loyalties_1"
+		texturefile = "gfx/interface/ideas/STA_faustburg_loyalties_1.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_STA_faustburg_loyalties_2"
+		texturefile = "gfx/interface/ideas/STA_faustburg_loyalties_2.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_STA_faustburg_loyalties_3"
+		texturefile = "gfx/interface/ideas/STA_faustburg_loyalties_3.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_STA_faustburg_loyalties_4"
+		texturefile = "gfx/interface/ideas/STA_faustburg_loyalties_4.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_STA_meritocratic_autocracy_0"
+		texturefile = "gfx/interface/ideas/STA_meritocratic_autocracy_0.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_STA_meritocratic_autocracy_1"
+		texturefile = "gfx/interface/ideas/STA_meritocratic_autocracy_1.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_STA_meritocratic_autocracy_2"
+		texturefile = "gfx/interface/ideas/STA_meritocratic_autocracy_2.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_STA_meritocratic_autocracy_3"
+		texturefile = "gfx/interface/ideas/STA_meritocratic_autocracy_3.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_STA_meritocratic_autocracy_4"
+		texturefile = "gfx/interface/ideas/STA_meritocratic_autocracy_4.dds"
+	}
+
+	spriteType = {
 		name = "GFX_idea_generic_royal_marriage"
 		texturefile = "gfx/interface/ideas/generic_royal_marriage.dds"
 	}
@@ -436,51 +756,64 @@ spriteTypes = {
 	}
 	
 	spriteType = {
-		name = "GFX_idea_Agrarianism"
-		texturefile = "gfx/interface/ideas/Agrarianism.tga"
+		name = "GFX_idea_autarkic_isolationism"
+		texturefile = "gfx/interface/ideas/autarkic_isolationism.tga"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_agrarianism_economy"
+		texturefile = "gfx/interface/ideas/agrarianism_economy.tga"
 	}
 	spriteType = {
-		name = "GFX_idea_Primitive_Economy"
-		texturefile = "gfx/interface/ideas/Primitive_Economy.tga"
+		name = "GFX_idea_unorganized_economy"
+		texturefile = "gfx/interface/ideas/unorganized_economy.tga"
 	}
 	spriteType = {
-		name = "GFX_idea_Manoralism"
-		texturefile = "gfx/interface/ideas/Manoralism.tga"
+		name = "GFX_idea_manorialism_economy"
+		texturefile = "gfx/interface/ideas/manorialism_economy.tga"
 	}
 	spriteType = {
-		name = "GFX_idea_Fiscalism"
-		texturefile = "gfx/interface/ideas/Fiscalism.tga"
+		name = "GFX_idea_fiscalism_economy"
+		texturefile = "gfx/interface/ideas/fiscalism_economy.tga"
 	}
 	spriteType = {
-		name = "GFX_idea_Mercantilism"
-		texturefile = "gfx/interface/ideas/Mercantilism.tga"
+		name = "GFX_idea_mercantilism_economy"
+		texturefile = "gfx/interface/ideas/mercantilism_economy.tga"
 	}
 	spriteType = {
-		name = "GFX_idea_Corporatism"
-		texturefile = "gfx/interface/ideas/Corporatism.tga"
+		name = "GFX_idea_corporatism_economy"
+		texturefile = "gfx/interface/ideas/corporatism_economy.tga"
 	}
 	spriteType = {
-		name = "GFX_idea_Communalism"
-		texturefile = "gfx/interface/ideas/Communalism.tga"
+		name = "GFX_idea_communalism_economy"
+		texturefile = "gfx/interface/ideas/communalism_economy.tga"
 	}
 	spriteType = {
-		name = "GFX_idea_Steam_And_Steel"
-		texturefile = "gfx/interface/ideas/Steam_And_Steel.tga"
+		name = "GFX_idea_steam_and_steel"
+		texturefile = "gfx/interface/ideas/steam_and_steel.tga"
 	}
 	spriteType = {
-		name = "GFX_idea_Tribal"
-		texturefile = "gfx/interface/ideas/Tribal.tga"
+		name = "GFX_idea_tribal_society"
+		texturefile = "gfx/interface/ideas/tribal_society.tga"
 	}
 	spriteType = {
-		name = "GFX_idea_Feudal"
-		texturefile = "gfx/interface/ideas/Feudal.tga"
+		name = "GFX_idea_feudal_society"
+		texturefile = "gfx/interface/ideas/feudal_society.tga"
 	}
 	spriteType = {
-		name = "GFX_idea_Late_Feudal"
-		texturefile = "gfx/interface/ideas/Late_Feudal.tga"
+		name = "GFX_idea_late_feudal_society"
+		texturefile = "gfx/interface/ideas/late_feudal_society.tga"
 	}
 	spriteType = {
-		name = "GFX_idea_Industrial"
-		texturefile = "gfx/interface/ideas/Industrial.tga"
+		name = "GFX_idea_industrial_society"
+		texturefile = "gfx/interface/ideas/industrial_society.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_snf_decrepit_military"
+		texturefile = "gfx/interface/ideas/SNF_decrepit_military.tga"
+	}
+	spriteType = {
+		name = "GFX_idea_snf_brittle_economy"
+		texturefile = "gfx/interface/ideas/SNF_brittle_economy.tga"
 	}
 }

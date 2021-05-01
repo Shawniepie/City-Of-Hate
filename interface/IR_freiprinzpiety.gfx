@@ -1,0 +1,14 @@
+spriteTypes = {
+	
+	spriteType = { 
+		 name = "GFX_freiprinz_pious"
+		textureFile = "gfx/interface/freiprinz_pious.dds" 
+		noOfFrames = 1
+	}
+	
+	spriteType = { 
+		 name = "GFX_freiprinz_impious"
+		textureFile = "gfx/interface/freiprinz_impious.dds" 
+		noOfFrames = 1
+	}
+}

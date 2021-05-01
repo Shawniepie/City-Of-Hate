@@ -21,6 +21,7 @@ buildings = {
 		base_cost = 2200
 		icon_frame = 16
 		local_resources_food = 2 # May use local_resources_ + any resource name
+		local_resources_mount = 2
 		max_level = 4 # This is the max unlock level
 		shares_slots = yes
 		value = 5
@@ -129,6 +130,20 @@ buildings = {
 		naval_fort = 1
 		max_level = 5
 		value = 1
+	}
+	
+	dockyard = {
+		show_on_map = 1
+		show_on_map_meshes = 3
+		base_cost = 6400
+		only_costal = yes
+		naval_production = 1
+		icon_frame = 4
+		only_costal = yes
+		max_level = 20
+		shares_slots = yes
+		value = 5
+		infrastructure_construction_effect = yes
 	}
 
 }

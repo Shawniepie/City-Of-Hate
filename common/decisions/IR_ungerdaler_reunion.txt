@@ -35,6 +35,9 @@ ungerdaler_reunion = {
 				UNG = {
 					change_tag_from = HLZ
 				}
+				UNG = {
+					inherit_technology = HLZ
+				}
 				unite_the_union = yes
 			UNG = {
 				set_capital = 232
@@ -126,6 +129,9 @@ ungerdaler_reunion = {
 				UNG = {
 					change_tag_from = NOC
 				}
+				UNG = {
+					inherit_technology = NOC
+				}
 				unite_the_union = yes
 				UNG = {
 					set_capital = 228
@@ -216,6 +222,9 @@ ungerdaler_reunion = {
 			}
 			UNG = {
 				change_tag_from = SVT
+			}
+			UNG = {
+				inherit_technology = SVT
 			}
 			unite_the_union = yes
 			UNG = {
@@ -317,6 +326,9 @@ ungerdaler_reunion = {
 				UNG = {
 					change_tag_from = SPW
 				}
+				UNG = {
+					inherit_technology = SPW
+				}
 				unite_the_union = yes
 			UNG = {
 				set_capital = 226
@@ -407,6 +419,9 @@ ungerdaler_reunion = {
 				}
 				UNG = {
 					change_tag_from = TEI
+				}
+				UNG = {
+					inherit_technology = TEI
 				}
 				unite_the_union = yes
 			UNG = {
@@ -499,6 +514,9 @@ ungerdaler_reunion = {
 			UNG = {
 				change_tag_from = NRK
 			}
+			UNG = {
+				inherit_technology = NRK
+			}
 			unite_the_union = yes
 			UNG = {
 				set_capital = 284
@@ -590,6 +608,9 @@ ungerdaler_reunion = {
 				UNG = {
 					change_tag_from = STA
 				}
+				UNG = {
+					inherit_technology = STA
+				}
 				unite_the_union = yes
 				UNG = {
 					set_capital = 192
@@ -680,6 +701,9 @@ ungerdaler_reunion = {
 				}
 				UNG = {
 					change_tag_from = STA
+				}
+				UNG = {
+					inherit_technology = STA
 				}
 				unite_the_union = yes
 				UNG = {
@@ -796,6 +820,9 @@ ungerdaler_reunion = {
 				UNG = {
 					change_tag_from = SNF
 				}
+				UNG = {
+					inherit_technology = SNF
+				}
 				unite_the_union = yes
 			UNG = {
 				set_capital = 224
@@ -887,6 +914,9 @@ ungerdaler_reunion = {
 				UNG = {
 					change_tag_from = FAU
 				}
+				UNG = {
+					inherit_technology = FAU
+				}
 				unite_the_union = yes
 				UNG = {
 					set_capital = 233
@@ -929,6 +959,9 @@ ungerdaler_reunion = {
 			}
 			UNG = {
 				change_tag_from = ARK
+			}
+			UNG = {
+				inherit_technology = ARK
 			}
 			unite_the_union = yes
 			UNG = {
@@ -1021,6 +1054,9 @@ ungerdaler_reunion = {
 			UNG = {
 				change_tag_from = WIS
 			}
+			UNG = {
+				inherit_technology = WIS
+			}
 			unite_the_union = yes
 			UNG = {
 				set_capital = 234
@@ -1111,8 +1147,11 @@ ungerdaler_reunion = {
 				}
 				UNG = {
 					change_tag_from = FTH
-					unite_the_union = yes
 				}
+				UNG = {
+					inherit_technology = FTH
+				}
+				unite_the_union = yes
 				UNG = {
 					set_capital = 236
 				}
@@ -1203,7 +1242,10 @@ ungerdaler_reunion = {
 				UNG = {
 					change_tag_from = WSZ
 				}
-						unite_the_union = yes
+				UNG = {
+					inherit_technology = WSZ
+				}
+				unite_the_union = yes
 				UNG = {
 					set_capital = 235
 				}

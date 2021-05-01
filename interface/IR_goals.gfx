@@ -1,6 +1,160 @@
 spriteTypes = {	
 
 	#### Mod-specific goal icons
+	SpriteType = {
+	name = "GFX_focus_ung_freisler"
+	texturefile = "gfx/interface/goals/focus_ung_freisler.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_focus_freiprinzen_meet_schwarzenbach"
+	texturefile = "gfx/interface/goals/focus_freiprinzen_meet_schwarzenbach.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_focus_freiprinzen_schwarzenbach"
+	texturefile = "gfx/interface/goals/focus_freiprinzen_schwarzenbach.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_focus_freiprinzen_civilwar"
+	texturefile = "gfx/interface/goals/focus_freiprinzen_civilwar.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_focus_generic_ungerdaler_coin"
+	texturefile = "gfx/interface/goals/focus_generic_ungerdaler_coin.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_focus_freiprinzen_standardized_polearms"
+	texturefile = "gfx/interface/goals/focus_freiprinzen_standardized_polearms.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_focus_freiprinzen_septa"
+	texturefile = "gfx/interface/goals/focus_freiprinzen_septa.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_focus_freiprinzen_septists_hurting"
+	texturefile = "gfx/interface/goals/focus_freiprinzen_septists_hurting.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_focus_freiprinzen_septism_broken_church"
+	texturefile = "gfx/interface/goals/focus_freiprinzen_septism_broken_church.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_focus_generic_newspaper"
+	texturefile = "gfx/interface/goals/focus_generic_newspaper.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_focus_ung_long_expected_party"
+	texturefile = "gfx/interface/goals/focus_ung_long_expected_party.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_focus_ung_rimatu"
+	texturefile = "gfx/interface/goals/focus_ung_rimatu.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_focus_generic_cavalry"
+	texturefile = "gfx/interface/goals/focus_generic_cavalry.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_focus_STA_fate_adalinatruppen"
+	texturefile = "gfx/interface/goals/STA_fate_adalinatruppen.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_focus_IRI_Fate_Of_The_Merchant_Cities"
+	texturefile = "gfx/interface/goals/IRI_Fate_Of_The_Merchant_Cities.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_focus_IRI_Retake_Merchant_Cities"
+	texturefile = "gfx/interface/goals/IRI_Retake_Merchant_Cities.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_focus_STA_stahlheer"
+	texturefile = "gfx/interface/goals/STA_stahlheer.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_focus_STA_expeditious_retreat"
+	texturefile = "gfx/interface/goals/STA_expeditious_retreat.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_focus_STA_every_village_soldier"
+	texturefile = "gfx/interface/goals/STA_every_village_soldier.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_focus_STA_purge_boomers"
+	texturefile = "gfx/interface/goals/STA_purge_boomers.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_focus_STA_meat_grinder"
+	texturefile = "gfx/interface/goals/STA_meat_grinder.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_focus_STA_last_march"
+	texturefile = "gfx/interface/goals/STA_last_march.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_focus_ung_young_hochprinzessin"
+	texturefile = "gfx/interface/goals/focus_ung_young_hochprinzessin.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_focus_ung_shadowsun"
+	texturefile = "gfx/interface/goals/focus_ung_shadowsun.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_focus_generic_magic"
+	texturefile = "gfx/interface/goals/focus_generic_magic.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_focus_ung_cold_war"
+	texturefile = "gfx/interface/goals/focus_ung_cold_war.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_focus_ung_pact_arthenon"
+	texturefile = "gfx/interface/goals/focus_ung_pact_arthenon.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_focus_generic_economic_war"
+	texturefile = "gfx/interface/goals/focus_generic_economic_war.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_focus_ung_ban_irinthians"
+	texturefile = "gfx/interface/goals/focus_ung_ban_irinthians.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_focus_ung_seventh_campaign"
+	texturefile = "gfx/interface/goals/focus_ung_seventh_campaign.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_focus_ung_ally_skaelinger"
+	texturefile = "gfx/interface/goals/focus_ung_ally_skaelinger.dds"			
+	}
 	
 	SpriteType = {
 		name = "GFX_focus_generic_bergial_agreement"

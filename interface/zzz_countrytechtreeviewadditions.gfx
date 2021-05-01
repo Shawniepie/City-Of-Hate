@@ -94,9 +94,292 @@ spriteTypes = {
 		pause_on_loop = 0.0
 	}
 	
-	## Technologie Icons
+	## Technology Icons
 	
+	spriteType = {
+		name = "GFX_implements_war_medium"
+		texturefile = "gfx/interface/technologies/infantry_equipment_0.dds"
+	}
 	
+	spriteType = {
+		name = "GFX_tribal_warbands_medium"
+		texturefile = "gfx/interface/technologies/tribal_warbands.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_sparring_fields_medium"
+		texturefile = "gfx/interface/technologies/sparring_fields.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_war_artisans_medium"
+		texturefile = "gfx/interface/technologies/war_artisans.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_advanced_leatherworking_medium"
+		texturefile = "gfx/interface/technologies/advanced_leatherworking.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_gambesons_medium"
+		texturefile = "gfx/interface/technologies/gambesons.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_brigandines_medium"
+		texturefile = "gfx/interface/technologies/brigandines.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_alloy_creation_medium"
+		texturefile = "gfx/interface/technologies/alloy_creation.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_steel_working_medium"
+		texturefile = "gfx/interface/technologies/steel_working.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_fullered_blades_medium"
+		texturefile = "gfx/interface/technologies/fullered_blades.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_peasant_levy_medium"
+		texturefile = "gfx/interface/technologies/peasant_levy.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_mail_hauberks_medium"
+		texturefile = "gfx/interface/technologies/mail_hauberks.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_improved_woodworking_medium"
+		texturefile = "gfx/interface/technologies/improved_woodworking.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_recurve_bow_medium"
+		texturefile = "gfx/interface/technologies/recurve_bow.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_broadhead_arrows_medium"
+		texturefile = "gfx/interface/technologies/broadhead_arrows.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_horseback_riding_medium"
+		texturefile = "gfx/interface/technologies/light_cavalry_equipment_0.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_mounted_warriors_medium"
+		texturefile = "gfx/interface/technologies/mounted_warriors.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_saddles_medium"
+		texturefile = "gfx/interface/technologies/saddles.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_stirrups_medium"
+		texturefile = "gfx/interface/technologies/stirrups.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_cavalry_lances_medium"
+		texturefile = "gfx/interface/technologies/cavalry_lances.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_skirmish_tactics_medium"
+		texturefile = "gfx/interface/technologies/skirmish_tactics.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_flanking_tactics_medium"
+		texturefile = "gfx/interface/technologies/flanking_tactics.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_scouting_parties_medium"
+		texturefile = "gfx/interface/technologies/scouting_parties.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_astrolabe_medium"
+		texturefile = "gfx/interface/technologies/astrolabe.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_compass_medium"
+		texturefile = "gfx/interface/technologies/compass.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_cartography_medium"
+		texturefile = "gfx/interface/technologies/cartography.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_armoured_leather_medium"
+		texturefile = "gfx/interface/technologies/armoured_leather.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_kite_shields_medium"
+		texturefile = "gfx/interface/technologies/kite_shields.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_arm_straps_medium"
+		texturefile = "gfx/interface/technologies/arm_straps.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_bucklers_medium"
+		texturefile = "gfx/interface/technologies/bucklers.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_heater_shields_medium"
+		texturefile = "gfx/interface/technologies/heater_shields.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_pavises_medium"
+		texturefile = "gfx/interface/technologies/pavises.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_bastard_swords_medium"
+		texturefile = "gfx/interface/technologies/bastard_swords.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_great_helm_medium"
+		texturefile = "gfx/interface/technologies/great_helm.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_winged_helm_medium"
+		texturefile = "gfx/interface/technologies/winged_helm.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_two_handed_swords_medium"
+		texturefile = "gfx/interface/technologies/two_handed_swords.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_plate_armour_medium"
+		texturefile = "gfx/interface/technologies/plate_armour.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_bodkin_arrows_medium"
+		texturefile = "gfx/interface/technologies/bodkin_arrows.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_longbow_medium"
+		texturefile = "gfx/interface/technologies/ranged_equipment_1.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_quiver_medium"
+		texturefile = "gfx/interface/technologies/quiver.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_bracers_medium"
+		texturefile = "gfx/interface/technologies/bracers.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_composite_bow_medium"
+		texturefile = "gfx/interface/technologies/recurve_bow.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_crossbow_medium"
+		texturefile = "gfx/interface/technologies/crossbow_equipment_0.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_arbalest_medium"
+		texturefile = "gfx/interface/technologies/arbalest.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_composite_crossbow_medium"
+		texturefile = "gfx/interface/technologies/composite_crossbow.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_rolling_nut_lock_medium"
+		texturefile = "gfx/interface/technologies/rolling_nut_lock.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_standardized_gears_medium"
+		texturefile = "gfx/interface/technologies/standardized_gears.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_repeating_crossbow_medium"
+		texturefile = "gfx/interface/technologies/repeating_crossbow.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_light_cavalry_medium"
+		texturefile = "gfx/interface/technologies/light_cavalry.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_feints_medium"
+		texturefile = "gfx/interface/technologies/feints.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_war_bred_steeds_medium"
+		texturefile = "gfx/interface/technologies/war_bred_steeds.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_mounted_knights_medium"
+		texturefile = "gfx/interface/technologies/heavy_cavalry_equipment_0.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_heavy_lance_medium"
+		texturefile = "gfx/interface/technologies/heavy_lance.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_high_backed_saddle_medium"
+		texturefile = "gfx/interface/technologies/high_backed_saddle.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_cavalry_charge_medium"
+		texturefile = "gfx/interface/technologies/cavalry_charge.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_wedge_formations_medium"
+		texturefile = "gfx/interface/technologies/wedge_formations.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_shock_tactics_medium"
+		texturefile = "gfx/interface/technologies/shock_tactics.dds"
+	}
 	## Decision Categories
 	
 	spriteType = {
@@ -140,7 +423,7 @@ spriteTypes = {
 		pause_on_loop = 0.0
 	}
 	
-	## Technologie Icons
+	## Technology Icons
 	
 	spriteType = {
     name = "GFX_tech_tribal_pride_medium"

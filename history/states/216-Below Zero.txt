@@ -5,12 +5,13 @@ state={
 		5241 8504 2597 246 4160
 	}
 	state_category = rural
-	manpower=8223
+	manpower=9824
 	buildings_max_level_factor=1.000
 	history={
 		owner = STA
 		buildings = {
-			infrastructure = 2
+			infrastructure = 5
+			farm = 2
 		}
 		add_core_of = STA
 	}

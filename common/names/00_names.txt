@@ -6,7 +6,7 @@
 
 default = {
 	male = {
-		names = { John Bob Lucas Marcus Alexander Alex Peter Jonas Jim Johannes}
+		names = { John Bob Lucas Marcus Alexander Alex Peter Jonas Jim Johannes }
 		surnames = { }
 		callsigns = { }
 	}
@@ -308,7 +308,7 @@ PRK_OSG = {
 }
  
 ###############################################################
-# Perkavland
+# Perkavland + Tribes
 ###############################################################
 
 PRK = {
@@ -341,6 +341,275 @@ PRK = {
 	}
 }
 
+SVC = {
+	male = {
+		names = {
+			Jakub Kacper Filip Szymon Jan Antoni Michał Wojciech Mateusz
+			Bartosz Tomasz Grzegorz Zbigniew Piotr Maksymilian Paweł Łukasz Marcin Igor 
+			Leszek Karel Josef Jaroslav František Rostislav Václav Antonín Milan Stanislav Slavomír Jan Vilém Bořivoj Vladimír Alois Matúš Vojtěch
+			Aleksander Alexei Andrei Anton Boris Dmitry Fyodor Gennady 
+			Giorgi Grigoriy Igor Ilya Ivan Kirill Konstantin Lavr Leonid Lev Maxim 
+			Mikhail Nikita Nikolai Oleg Pavel Pyotr Roman Semyon Sergei 
+			Valery Vasily Viktor Vladimir Vladislav Yegor Yevgeny Yuri
+			Alexseyev Antonov Azarov Badanov Brusilov Budyonny Chibisov Denikin 
+		}
+	}
+	female = {
+		names = {
+			Zofia Wiktoria Natalia Renata Elżbieta Marie Anna Hana Božena Alžběta Marta
+		}
+	}
+	surnames = {
+		Nowakowska Kowalska Wiśniewska Kamińska Lewandowska Zielińska Szymańska Dąbrowska Kozłowska Jankowska Kwiatkowska Wojciechowska Piotrowska Grabowska
+		Kowalczyk Wójcik Woźniak Mazur Krawczyk Kaczmarek Havlíčková Dvořáková Nováková Kolářová Novotná Macháčková Veselá Vaňková Němcová Malá Adamcová Suchá Havlíková
+		Horváthová Majerová Kocianová Chalupová Ferková Nowak Kowalski Wiśniewski Kamiński Lewandowski Zieliński Szymański
+	 	Dąbrowski Kozłowski Jankowski Kwiatkowski Wojciechowski Piotrowski Grabowski
+	 	Aleksandrowicz Koter Havlíček Dvořák Novák Kolář Novotný Macháček Veselý Vaněk Němec Malý Adamec Suchý Havlík
+		Horváth Majer Kocian Chalupa Ferko Dragomirov Frolov Golivin Grishin Gurko Ivanov Ivannikov Konev Konstantinov Kornilov 
+		Kolchak Kuropatkin Lazarev Makarov Menshikov Nakhimov Nebogatov Nikolaevich Nikitin Ostrovsky Pavlov Putyatin Romanov Rozhestvensky Skobelev 
+		Shuvalov Surkov Tukhachevsky Yegorov Yudenich Vorontsov Voroshilov Zavoyko
+	}
+}
+
+KRL = {
+	male = {
+		names = {
+			Jakub Kacper Filip Szymon Jan Antoni Michał Wojciech Mateusz
+			Bartosz Tomasz Grzegorz Zbigniew Piotr Maksymilian Paweł Łukasz Marcin Igor 
+			Leszek Karel Josef Jaroslav František Rostislav Václav Antonín Milan Stanislav Slavomír Jan Vilém Bořivoj Vladimír Alois Matúš Vojtěch
+			Aleksander Alexei Andrei Anton Boris Dmitry Fyodor Gennady 
+			Giorgi Grigoriy Igor Ilya Ivan Kirill Konstantin Lavr Leonid Lev Maxim 
+			Mikhail Nikita Nikolai Oleg Pavel Pyotr Roman Semyon Sergei 
+			Valery Vasily Viktor Vladimir Vladislav Yegor Yevgeny Yuri
+			Alexseyev Antonov Azarov Badanov Brusilov Budyonny Chibisov Denikin 
+		}
+	}
+	female = {
+		names = {
+			Zofia Wiktoria Natalia Renata Elżbieta Marie Anna Hana Božena Alžběta Marta
+		}
+	}
+	surnames = {
+		Nowakowska Kowalska Wiśniewska Kamińska Lewandowska Zielińska Szymańska Dąbrowska Kozłowska Jankowska Kwiatkowska Wojciechowska Piotrowska Grabowska
+		Kowalczyk Wójcik Woźniak Mazur Krawczyk Kaczmarek Havlíčková Dvořáková Nováková Kolářová Novotná Macháčková Veselá Vaňková Němcová Malá Adamcová Suchá Havlíková
+		Horváthová Majerová Kocianová Chalupová Ferková Nowak Kowalski Wiśniewski Kamiński Lewandowski Zieliński Szymański
+	 	Dąbrowski Kozłowski Jankowski Kwiatkowski Wojciechowski Piotrowski Grabowski
+	 	Aleksandrowicz Koter Havlíček Dvořák Novák Kolář Novotný Macháček Veselý Vaněk Němec Malý Adamec Suchý Havlík
+		Horváth Majer Kocian Chalupa Ferko Dragomirov Frolov Golivin Grishin Gurko Ivanov Ivannikov Konev Konstantinov Kornilov 
+		Kolchak Kuropatkin Lazarev Makarov Menshikov Nakhimov Nebogatov Nikolaevich Nikitin Ostrovsky Pavlov Putyatin Romanov Rozhestvensky Skobelev 
+		Shuvalov Surkov Tukhachevsky Yegorov Yudenich Vorontsov Voroshilov Zavoyko
+	}
+}
+
+NVT = {
+	male = {
+		names = {
+			Jakub Kacper Filip Szymon Jan Antoni Michał Wojciech Mateusz
+			Bartosz Tomasz Grzegorz Zbigniew Piotr Maksymilian Paweł Łukasz Marcin Igor 
+			Leszek Karel Josef Jaroslav František Rostislav Václav Antonín Milan Stanislav Slavomír Jan Vilém Bořivoj Vladimír Alois Matúš Vojtěch
+			Aleksander Alexei Andrei Anton Boris Dmitry Fyodor Gennady 
+			Giorgi Grigoriy Igor Ilya Ivan Kirill Konstantin Lavr Leonid Lev Maxim 
+			Mikhail Nikita Nikolai Oleg Pavel Pyotr Roman Semyon Sergei 
+			Valery Vasily Viktor Vladimir Vladislav Yegor Yevgeny Yuri
+			Alexseyev Antonov Azarov Badanov Brusilov Budyonny Chibisov Denikin 
+		}
+	}
+	female = {
+		names = {
+			Zofia Wiktoria Natalia Renata Elżbieta Marie Anna Hana Božena Alžběta Marta
+		}
+	}
+	surnames = {
+		Nowakowska Kowalska Wiśniewska Kamińska Lewandowska Zielińska Szymańska Dąbrowska Kozłowska Jankowska Kwiatkowska Wojciechowska Piotrowska Grabowska
+		Kowalczyk Wójcik Woźniak Mazur Krawczyk Kaczmarek Havlíčková Dvořáková Nováková Kolářová Novotná Macháčková Veselá Vaňková Němcová Malá Adamcová Suchá Havlíková
+		Horváthová Majerová Kocianová Chalupová Ferková Nowak Kowalski Wiśniewski Kamiński Lewandowski Zieliński Szymański
+	 	Dąbrowski Kozłowski Jankowski Kwiatkowski Wojciechowski Piotrowski Grabowski
+	 	Aleksandrowicz Koter Havlíček Dvořák Novák Kolář Novotný Macháček Veselý Vaněk Němec Malý Adamec Suchý Havlík
+		Horváth Majer Kocian Chalupa Ferko Dragomirov Frolov Golivin Grishin Gurko Ivanov Ivannikov Konev Konstantinov Kornilov 
+		Kolchak Kuropatkin Lazarev Makarov Menshikov Nakhimov Nebogatov Nikolaevich Nikitin Ostrovsky Pavlov Putyatin Romanov Rozhestvensky Skobelev 
+		Shuvalov Surkov Tukhachevsky Yegorov Yudenich Vorontsov Voroshilov Zavoyko
+	}
+}
+
+RLV = {
+	male = {
+		names = {
+			Jakub Kacper Filip Szymon Jan Antoni Michał Wojciech Mateusz
+			Bartosz Tomasz Grzegorz Zbigniew Piotr Maksymilian Paweł Łukasz Marcin Igor 
+			Leszek Karel Josef Jaroslav František Rostislav Václav Antonín Milan Stanislav Slavomír Jan Vilém Bořivoj Vladimír Alois Matúš Vojtěch
+			Aleksander Alexei Andrei Anton Boris Dmitry Fyodor Gennady 
+			Giorgi Grigoriy Igor Ilya Ivan Kirill Konstantin Lavr Leonid Lev Maxim 
+			Mikhail Nikita Nikolai Oleg Pavel Pyotr Roman Semyon Sergei 
+			Valery Vasily Viktor Vladimir Vladislav Yegor Yevgeny Yuri
+			Alexseyev Antonov Azarov Badanov Brusilov Budyonny Chibisov Denikin 
+		}
+	}
+	female = {
+		names = {
+			Zofia Wiktoria Natalia Renata Elżbieta Marie Anna Hana Božena Alžběta Marta
+		}
+	}
+	surnames = {
+		Nowakowska Kowalska Wiśniewska Kamińska Lewandowska Zielińska Szymańska Dąbrowska Kozłowska Jankowska Kwiatkowska Wojciechowska Piotrowska Grabowska
+		Kowalczyk Wójcik Woźniak Mazur Krawczyk Kaczmarek Havlíčková Dvořáková Nováková Kolářová Novotná Macháčková Veselá Vaňková Němcová Malá Adamcová Suchá Havlíková
+		Horváthová Majerová Kocianová Chalupová Ferková Nowak Kowalski Wiśniewski Kamiński Lewandowski Zieliński Szymański
+	 	Dąbrowski Kozłowski Jankowski Kwiatkowski Wojciechowski Piotrowski Grabowski
+	 	Aleksandrowicz Koter Havlíček Dvořák Novák Kolář Novotný Macháček Veselý Vaněk Němec Malý Adamec Suchý Havlík
+		Horváth Majer Kocian Chalupa Ferko Dragomirov Frolov Golivin Grishin Gurko Ivanov Ivannikov Konev Konstantinov Kornilov 
+		Kolchak Kuropatkin Lazarev Makarov Menshikov Nakhimov Nebogatov Nikolaevich Nikitin Ostrovsky Pavlov Putyatin Romanov Rozhestvensky Skobelev 
+		Shuvalov Surkov Tukhachevsky Yegorov Yudenich Vorontsov Voroshilov Zavoyko
+	}
+}
+
+LNK = {
+	male = {
+		names = {
+			Jakub Kacper Filip Szymon Jan Antoni Michał Wojciech Mateusz
+			Bartosz Tomasz Grzegorz Zbigniew Piotr Maksymilian Paweł Łukasz Marcin Igor 
+			Leszek Karel Josef Jaroslav František Rostislav Václav Antonín Milan Stanislav Slavomír Jan Vilém Bořivoj Vladimír Alois Matúš Vojtěch
+			Aleksander Alexei Andrei Anton Boris Dmitry Fyodor Gennady 
+			Giorgi Grigoriy Igor Ilya Ivan Kirill Konstantin Lavr Leonid Lev Maxim 
+			Mikhail Nikita Nikolai Oleg Pavel Pyotr Roman Semyon Sergei 
+			Valery Vasily Viktor Vladimir Vladislav Yegor Yevgeny Yuri
+			Alexseyev Antonov Azarov Badanov Brusilov Budyonny Chibisov Denikin 
+		}
+	}
+	female = {
+		names = {
+			Zofia Wiktoria Natalia Renata Elżbieta Marie Anna Hana Božena Alžběta Marta
+		}
+	}
+	surnames = {
+		Nowakowska Kowalska Wiśniewska Kamińska Lewandowska Zielińska Szymańska Dąbrowska Kozłowska Jankowska Kwiatkowska Wojciechowska Piotrowska Grabowska
+		Kowalczyk Wójcik Woźniak Mazur Krawczyk Kaczmarek Havlíčková Dvořáková Nováková Kolářová Novotná Macháčková Veselá Vaňková Němcová Malá Adamcová Suchá Havlíková
+		Horváthová Majerová Kocianová Chalupová Ferková Nowak Kowalski Wiśniewski Kamiński Lewandowski Zieliński Szymański
+	 	Dąbrowski Kozłowski Jankowski Kwiatkowski Wojciechowski Piotrowski Grabowski
+	 	Aleksandrowicz Koter Havlíček Dvořák Novák Kolář Novotný Macháček Veselý Vaněk Němec Malý Adamec Suchý Havlík
+		Horváth Majer Kocian Chalupa Ferko Dragomirov Frolov Golivin Grishin Gurko Ivanov Ivannikov Konev Konstantinov Kornilov 
+		Kolchak Kuropatkin Lazarev Makarov Menshikov Nakhimov Nebogatov Nikolaevich Nikitin Ostrovsky Pavlov Putyatin Romanov Rozhestvensky Skobelev 
+		Shuvalov Surkov Tukhachevsky Yegorov Yudenich Vorontsov Voroshilov Zavoyko
+	}
+}
+
+KRZ = {
+	male = {
+		names = {
+			Jakub Kacper Filip Szymon Jan Antoni Michał Wojciech Mateusz
+			Bartosz Tomasz Grzegorz Zbigniew Piotr Maksymilian Paweł Łukasz Marcin Igor 
+			Leszek Karel Josef Jaroslav František Rostislav Václav Antonín Milan Stanislav Slavomír Jan Vilém Bořivoj Vladimír Alois Matúš Vojtěch
+			Aleksander Alexei Andrei Anton Boris Dmitry Fyodor Gennady 
+			Giorgi Grigoriy Igor Ilya Ivan Kirill Konstantin Lavr Leonid Lev Maxim 
+			Mikhail Nikita Nikolai Oleg Pavel Pyotr Roman Semyon Sergei 
+			Valery Vasily Viktor Vladimir Vladislav Yegor Yevgeny Yuri
+			Alexseyev Antonov Azarov Badanov Brusilov Budyonny Chibisov Denikin 
+		}
+	}
+	female = {
+		names = {
+			Zofia Wiktoria Natalia Renata Elżbieta Marie Anna Hana Božena Alžběta Marta
+		}
+	}
+	surnames = {
+		Nowakowska Kowalska Wiśniewska Kamińska Lewandowska Zielińska Szymańska Dąbrowska Kozłowska Jankowska Kwiatkowska Wojciechowska Piotrowska Grabowska
+		Kowalczyk Wójcik Woźniak Mazur Krawczyk Kaczmarek Havlíčková Dvořáková Nováková Kolářová Novotná Macháčková Veselá Vaňková Němcová Malá Adamcová Suchá Havlíková
+		Horváthová Majerová Kocianová Chalupová Ferková Nowak Kowalski Wiśniewski Kamiński Lewandowski Zieliński Szymański
+	 	Dąbrowski Kozłowski Jankowski Kwiatkowski Wojciechowski Piotrowski Grabowski
+	 	Aleksandrowicz Koter Havlíček Dvořák Novák Kolář Novotný Macháček Veselý Vaněk Němec Malý Adamec Suchý Havlík
+		Horváth Majer Kocian Chalupa Ferko Dragomirov Frolov Golivin Grishin Gurko Ivanov Ivannikov Konev Konstantinov Kornilov 
+		Kolchak Kuropatkin Lazarev Makarov Menshikov Nakhimov Nebogatov Nikolaevich Nikitin Ostrovsky Pavlov Putyatin Romanov Rozhestvensky Skobelev 
+		Shuvalov Surkov Tukhachevsky Yegorov Yudenich Vorontsov Voroshilov Zavoyko
+	}
+}
+
+WLT = {
+	male = {
+		names = {
+			Jakub Kacper Filip Szymon Jan Antoni Michał Wojciech Mateusz
+			Bartosz Tomasz Grzegorz Zbigniew Piotr Maksymilian Paweł Łukasz Marcin Igor 
+			Leszek Karel Josef Jaroslav František Rostislav Václav Antonín Milan Stanislav Slavomír Jan Vilém Bořivoj Vladimír Alois Matúš Vojtěch
+			Aleksander Alexei Andrei Anton Boris Dmitry Fyodor Gennady 
+			Giorgi Grigoriy Igor Ilya Ivan Kirill Konstantin Lavr Leonid Lev Maxim 
+			Mikhail Nikita Nikolai Oleg Pavel Pyotr Roman Semyon Sergei 
+			Valery Vasily Viktor Vladimir Vladislav Yegor Yevgeny Yuri
+			Alexseyev Antonov Azarov Badanov Brusilov Budyonny Chibisov Denikin 
+		}
+	}
+	female = {
+		names = {
+			Zofia Wiktoria Natalia Renata Elżbieta Marie Anna Hana Božena Alžběta Marta
+		}
+	}
+	surnames = {
+		Nowakowska Kowalska Wiśniewska Kamińska Lewandowska Zielińska Szymańska Dąbrowska Kozłowska Jankowska Kwiatkowska Wojciechowska Piotrowska Grabowska
+		Kowalczyk Wójcik Woźniak Mazur Krawczyk Kaczmarek Havlíčková Dvořáková Nováková Kolářová Novotná Macháčková Veselá Vaňková Němcová Malá Adamcová Suchá Havlíková
+		Horváthová Majerová Kocianová Chalupová Ferková Nowak Kowalski Wiśniewski Kamiński Lewandowski Zieliński Szymański
+	 	Dąbrowski Kozłowski Jankowski Kwiatkowski Wojciechowski Piotrowski Grabowski
+	 	Aleksandrowicz Koter Havlíček Dvořák Novák Kolář Novotný Macháček Veselý Vaněk Němec Malý Adamec Suchý Havlík
+		Horváth Majer Kocian Chalupa Ferko Dragomirov Frolov Golivin Grishin Gurko Ivanov Ivannikov Konev Konstantinov Kornilov 
+		Kolchak Kuropatkin Lazarev Makarov Menshikov Nakhimov Nebogatov Nikolaevich Nikitin Ostrovsky Pavlov Putyatin Romanov Rozhestvensky Skobelev 
+		Shuvalov Surkov Tukhachevsky Yegorov Yudenich Vorontsov Voroshilov Zavoyko
+	}
+}
+
+VLN = {
+	male = {
+		names = {
+			Jakub Kacper Filip Szymon Jan Antoni Michał Wojciech Mateusz
+			Bartosz Tomasz Grzegorz Zbigniew Piotr Maksymilian Paweł Łukasz Marcin Igor 
+			Leszek Karel Josef Jaroslav František Rostislav Václav Antonín Milan Stanislav Slavomír Jan Vilém Bořivoj Vladimír Alois Matúš Vojtěch
+			Aleksander Alexei Andrei Anton Boris Dmitry Fyodor Gennady 
+			Giorgi Grigoriy Igor Ilya Ivan Kirill Konstantin Lavr Leonid Lev Maxim 
+			Mikhail Nikita Nikolai Oleg Pavel Pyotr Roman Semyon Sergei 
+			Valery Vasily Viktor Vladimir Vladislav Yegor Yevgeny Yuri
+			Alexseyev Antonov Azarov Badanov Brusilov Budyonny Chibisov Denikin 
+		}
+	}
+	female = {
+		names = {
+			Zofia Wiktoria Natalia Renata Elżbieta Marie Anna Hana Božena Alžběta Marta
+		}
+	}
+	surnames = {
+		Nowakowska Kowalska Wiśniewska Kamińska Lewandowska Zielińska Szymańska Dąbrowska Kozłowska Jankowska Kwiatkowska Wojciechowska Piotrowska Grabowska
+		Kowalczyk Wójcik Woźniak Mazur Krawczyk Kaczmarek Havlíčková Dvořáková Nováková Kolářová Novotná Macháčková Veselá Vaňková Němcová Malá Adamcová Suchá Havlíková
+		Horváthová Majerová Kocianová Chalupová Ferková Nowak Kowalski Wiśniewski Kamiński Lewandowski Zieliński Szymański
+	 	Dąbrowski Kozłowski Jankowski Kwiatkowski Wojciechowski Piotrowski Grabowski
+	 	Aleksandrowicz Koter Havlíček Dvořák Novák Kolář Novotný Macháček Veselý Vaněk Němec Malý Adamec Suchý Havlík
+		Horváth Majer Kocian Chalupa Ferko Dragomirov Frolov Golivin Grishin Gurko Ivanov Ivannikov Konev Konstantinov Kornilov 
+		Kolchak Kuropatkin Lazarev Makarov Menshikov Nakhimov Nebogatov Nikolaevich Nikitin Ostrovsky Pavlov Putyatin Romanov Rozhestvensky Skobelev 
+		Shuvalov Surkov Tukhachevsky Yegorov Yudenich Vorontsov Voroshilov Zavoyko
+	}
+}
+
+VTZ = {
+	male = {
+		names = {
+			Jakub Kacper Filip Szymon Jan Antoni Michał Wojciech Mateusz
+			Bartosz Tomasz Grzegorz Zbigniew Piotr Maksymilian Paweł Łukasz Marcin Igor 
+			Leszek Karel Josef Jaroslav František Rostislav Václav Antonín Milan Stanislav Slavomír Jan Vilém Bořivoj Vladimír Alois Matúš Vojtěch
+			Aleksander Alexei Andrei Anton Boris Dmitry Fyodor Gennady 
+			Giorgi Grigoriy Igor Ilya Ivan Kirill Konstantin Lavr Leonid Lev Maxim 
+			Mikhail Nikita Nikolai Oleg Pavel Pyotr Roman Semyon Sergei 
+			Valery Vasily Viktor Vladimir Vladislav Yegor Yevgeny Yuri
+			Alexseyev Antonov Azarov Badanov Brusilov Budyonny Chibisov Denikin 
+		}
+	}
+	female = {
+		names = {
+			Zofia Wiktoria Natalia Renata Elżbieta Marie Anna Hana Božena Alžběta Marta
+		}
+	}
+	surnames = {
+		Nowakowska Kowalska Wiśniewska Kamińska Lewandowska Zielińska Szymańska Dąbrowska Kozłowska Jankowska Kwiatkowska Wojciechowska Piotrowska Grabowska
+		Kowalczyk Wójcik Woźniak Mazur Krawczyk Kaczmarek Havlíčková Dvořáková Nováková Kolářová Novotná Macháčková Veselá Vaňková Němcová Malá Adamcová Suchá Havlíková
+		Horváthová Majerová Kocianová Chalupová Ferková Nowak Kowalski Wiśniewski Kamiński Lewandowski Zieliński Szymański
+	 	Dąbrowski Kozłowski Jankowski Kwiatkowski Wojciechowski Piotrowski Grabowski
+	 	Aleksandrowicz Koter Havlíček Dvořák Novák Kolář Novotný Macháček Veselý Vaněk Němec Malý Adamec Suchý Havlík
+		Horváth Majer Kocian Chalupa Ferko Dragomirov Frolov Golivin Grishin Gurko Ivanov Ivannikov Konev Konstantinov Kornilov 
+		Kolchak Kuropatkin Lazarev Makarov Menshikov Nakhimov Nebogatov Nikolaevich Nikitin Ostrovsky Pavlov Putyatin Romanov Rozhestvensky Skobelev 
+		Shuvalov Surkov Tukhachevsky Yegorov Yudenich Vorontsov Voroshilov Zavoyko
+	}
+}
 ###############################################################
 # Dwarves of the Mountains
 ###############################################################
@@ -380,6 +649,23 @@ RMT = {
 		Brolin Cederholm Wickerström Tisander Rickne Ivarsson Åslund Norrevik Ekre
 		Sjöberg Lerström Hargelid Carlberg Ström Hultdin Renström Tronde
 	}
+}
+
+VRG = {
+	male = {
+		names = { Adolph Jens Sverre Odd Johan Frederik Lorentz Ole Hans
+			Harald Haakon Olaf Paul Petter Carl Christian Kaare Jacob Søren Wilhelm Tryggve Daniel
+		 }
+	}
+	
+	female = {
+		names = { Trine Kajsa Helga Paula Olivia Nela Monika Torhild Trude Ingeborg Gerda }
+	}
+
+	surnames = { Munthe Sejersted Ræder Dahl Nordhaug Hamre Fleischer Eriksen Berg Hauge
+			Prytz Lund Nørregaard Vilberg Hauge Sunde Petersen Brandt Lie Wergeland Frisvold
+			Teige Carenwall Falck
+	  }
 }
 
 ###############################################################

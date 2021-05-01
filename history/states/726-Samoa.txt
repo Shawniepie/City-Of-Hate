@@ -5,13 +5,13 @@ state={
 		1454 269 5923
 	}
 	state_category = rural
-	manpower=6102
+	manpower=4102
 	buildings_max_level_factor=1.000
 	history={
 		owner = RMT
 		buildings = {
-			infrastructure = 7
-			industrial_complex = 1
+			infrastructure = 3
+			workshop = 1
 		}
 		add_core_of = RMT
 	}

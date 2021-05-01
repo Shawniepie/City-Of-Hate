@@ -1,3 +1,297 @@
+#Formalize the Waterways
+
+formalize_waterways_steelroad = {
+	771 = {
+		clr_state_flag = steel_road_state
+		remove_from_array = { global.steelroadarray = THIS }
+	}
+	757 = {
+		clr_state_flag = steel_road_state
+		remove_from_array = { global.steelroadarray = THIS }
+	}
+	755 = {
+		clr_state_flag = steel_road_state
+		remove_from_array = { global.steelroadarray = THIS }
+	}
+	750 = {
+		clr_state_flag = steel_road_state
+		remove_from_array = { global.steelroadarray = THIS }
+	}
+	797 = {
+		clr_state_flag = steel_road_state
+		remove_from_array = { global.steelroadarray = THIS }
+	}
+	737 = {
+		clr_state_flag = steel_road_state
+		remove_from_array = { global.steelroadarray = THIS }
+	}
+	397 = {
+		clr_state_flag = steel_road_state
+		remove_from_array = { global.steelroadarray = THIS }
+	}
+	740 = {
+		clr_state_flag = steel_road_state
+		remove_from_array = { global.steelroadarray = THIS }
+	}
+	398 = {
+		clr_state_flag = steel_road_state
+		remove_from_array = { global.steelroadarray = THIS }
+	}
+	377 = {
+		clr_state_flag = steel_road_state
+		remove_from_array = { global.steelroadarray = THIS }
+	}
+	765 = {
+		clr_state_flag = steel_road_state
+		remove_from_array = { global.steelroadarray = THIS }
+	}
+	374 = {
+		clr_state_flag = steel_road_state
+		remove_from_array = { global.steelroadarray = THIS }
+	}
+	774 = {
+		clr_state_flag = steel_road_state
+		remove_from_array = { global.steelroadarray = THIS }
+	}
+	775 = {
+		clr_state_flag = steel_road_state
+		remove_from_array = { global.steelroadarray = THIS }
+	}
+	776 = {
+		clr_state_flag = steel_road_state
+		remove_from_array = { global.steelroadarray = THIS }
+	}
+	777 = {
+		clr_state_flag = steel_road_state
+		remove_from_array = { global.steelroadarray = THIS }
+	}
+	789 = {
+		clr_state_flag = steel_road_state
+		remove_from_array = { global.steelroadarray = THIS }
+	}
+	372 = {
+		clr_state_flag = steel_road_state
+		remove_from_array = { global.steelroadarray = THIS }
+	}
+	787 = {
+		clr_state_flag = steel_road_state
+		remove_from_array = { global.steelroadarray = THIS }
+	}
+	795 = {
+		clr_state_flag = steel_road_state
+		remove_from_array = { global.steelroadarray = THIS }
+	}
+	371 = {
+		clr_state_flag = steel_road_state
+		remove_from_array = { global.steelroadarray = THIS }
+	}
+	599 = {
+		clr_state_flag = steel_road_state
+		remove_from_array = { global.steelroadarray = THIS }
+	}
+	605 = {
+		clr_state_flag = steel_road_state
+		remove_from_array = { global.steelroadarray = THIS }
+	}
+	572 = {
+		clr_state_flag = steel_road_state
+		remove_from_array = { global.steelroadarray = THIS }
+	}
+	542 = {
+		clr_state_flag = steel_road_state
+		remove_from_array = { global.steelroadarray = THIS }
+	}
+	532 = {
+		clr_state_flag = steel_road_state
+		remove_from_array = { global.steelroadarray = THIS }
+	}
+	
+	370 = {
+		clr_state_flag = steel_road_state
+		remove_from_array = { global.steelroadarray = THIS }
+	}
+	582 = {
+		clr_state_flag = steel_road_state
+		remove_from_array = { global.steelroadarray = THIS }
+	}
+	613 = {
+		clr_state_flag = steel_road_state
+		remove_from_array = { global.steelroadarray = THIS }
+	}
+	604 = {
+		clr_state_flag = steel_road_state
+		remove_from_array = { global.steelroadarray = THIS }
+	}
+	611 = {
+		clr_state_flag = steel_road_state
+		remove_from_array = { global.steelroadarray = THIS }
+	}
+	368 = {
+		clr_state_flag = steel_road_state
+		remove_from_array = { global.steelroadarray = THIS }
+	}
+	580 = {
+		clr_state_flag = steel_road_state
+		remove_from_array = { global.steelroadarray = THIS }
+	}
+	614 = {
+		clr_state_flag = steel_road_state
+		remove_from_array = { global.steelroadarray = THIS }
+	}
+	551 = {
+		clr_state_flag = steel_road_state
+		remove_from_array = { global.steelroadarray = THIS }
+	}
+	545 = {
+		clr_state_flag = steel_road_state
+		remove_from_array = { global.steelroadarray = THIS }
+	}
+	583 = {
+		clr_state_flag = steel_road_state
+		remove_from_array = { global.steelroadarray = THIS }
+	}
+	585 = {
+		clr_state_flag = steel_road_state
+		remove_from_array = { global.steelroadarray = THIS }
+	}
+	347 = {
+		clr_state_flag = steel_road_state
+		remove_from_array = { global.steelroadarray = THIS }
+	}
+	
+	400 = {
+		set_state_flag = steel_road_state
+	}
+	742 = {
+		set_state_flag = steel_road_state
+	}
+	401 = {
+		set_state_flag = steel_road_state
+	}
+	402 = {
+		set_state_flag = steel_road_state
+	}
+	375 = {
+		set_state_flag = steel_road_state
+	}
+	373 = {
+		set_state_flag = steel_road_state
+	}
+	608 = {
+		set_state_flag = steel_road_state
+	}
+	406 = {
+		set_state_flag = steel_road_state
+	}
+	369 = {
+		set_state_flag = steel_road_state
+	}
+}
+
+#Check Steel Road
+
+check_steel_road_change = {
+	
+	if = {
+		limit {
+			check_variable = {
+				STLRD_state_control_var < 1
+			}
+		}
+		remove_ideas = STLRD_control_1
+		clear_variable = STLRD_state_control_var
+	}
+	if = {
+		limit {
+			check_variable = {
+				STLRD_state_control_var > 0
+				STLRD_state_control_var < 5
+			}
+			num_of_controlled_states > 0
+		}
+		swap_ideas = {
+			remove_idea = STLRD_control_2
+			add_idea = STLRD_control_1
+		}
+
+		remove_ideas = STLRD_control_3
+		remove_ideas = STLRD_control_4
+		remove_ideas = STLRD_control_5
+	}
+	if = {
+		limit {
+			check_variable = {
+				STLRD_state_control_var > 4
+				STLRD_state_control_var < 10
+			}
+		}
+		swap_ideas = {
+			remove_idea = STLRD_control_1
+			add_idea = STLRD_control_2
+		}
+		remove_ideas = STLRD_control_3
+		remove_ideas = STLRD_control_4
+		remove_ideas = STLRD_control_5
+	}
+	if = {
+		limit {
+			check_variable = {
+				STLRD_state_control_var > 9
+				STLRD_state_control_var < 15
+			}
+		}
+		swap_ideas = {
+			remove_idea = STLRD_control_2
+			add_idea = STLRD_control_3
+		}
+		remove_ideas = STLRD_control_1
+		remove_ideas = STLRD_control_4
+		remove_ideas = STLRD_control_5
+	}
+	if = {
+		limit {
+			check_variable = {
+				STLRD_state_control_var > 14
+				STLRD_state_control_var < 20
+			}
+		}
+		swap_ideas = {
+			remove_idea = STLRD_control_3
+			add_idea = STLRD_control_4
+		}
+		remove_ideas = STLRD_control_1
+		remove_ideas = STLRD_control_2
+		remove_ideas = STLRD_control_5
+	}
+	if = {
+		limit {
+			check_variable = {
+				STLRD_state_control_var > 19
+			}
+		}
+		swap_ideas = {
+			remove_idea = STLRD_control_4
+			add_idea = STLRD_control_5
+		}
+		remove_ideas = STLRD_control_1
+		remove_ideas = STLRD_control_2
+		remove_ideas = STLRD_control_3
+	}
+	if = {
+		limit {
+			check_variable = {
+				STLRD_state_control_var > 25
+			}
+			NOT = {
+				any_other_country = {
+					has_idea = STLRD_dominated
+				}
+			}
+		}
+		add_ideas = STLRD_dominated
+	}
+}
+
 #Assigns random magic item to country leader
 
 grant_magic_item_to_country_leader = {
@@ -41,40 +335,39 @@ set_perkav_raid_target = {
 	}
 }
 
+# Increase or decrease FROM relations with THIS. Apparently these shouldn't work, and yet they do.
 
-# Increase or decrease UNG relations with TLA or IRI
-
-UNG_worsen_IRI_relations = {
+FROM_worsen_THIS_relations = {#Worsen Relations
 	if = {
 		limit = {
-			IRI = {
+			THIS = {
 				has_relation_modifier = {
-					target = UNG
+					target = FROM
 					modifier = trusted_opinion
 				}
 			}
 		}
-		IRI = {
+		THIS = {
 			remove_opinion_modifier = {
-				target = UNG
+				target = FROM
 				modifier = trusted_opinion
 			}
 		}
-		IRI = {
+		THIS = {
 			add_opinion_modifier = {
-				target = UNG
+				target = FROM
 				modifier = liked_opinion
 			}
 		}
-		IRI = {
+		THIS = {
 			reverse_add_opinion_modifier = {
-				target = UNG
+				target = FROM
 				modifier = liked_opinion
 			}
 		}
-		UNG = {
+		FROM = {
 			remove_opinion_modifier = {
-				target = IRI
+				target = THIS
 				modifier = trusted_opinion
 			}
 		}
@@ -82,34 +375,34 @@ UNG_worsen_IRI_relations = {
 
 	if = {
 		limit = {
-			IRI = {
+			THIS = {
 				has_relation_modifier = {
-					target = UNG
+					target = FROM
 					modifier = liked_opinion
 				}
 			}
 		}
-		IRI = {
+		THIS = {
 			remove_opinion_modifier = {
-				target = UNG
+				target = FROM
 				modifier = liked_opinion
 			}
 		}
-		IRI = {
+		THIS = {
 			add_opinion_modifier = {
-				target = UNG
+				target = FROM
 				modifier = supportive_opinion
 			}
 		}
-		IRI = {
+		THIS = {
 			reverse_add_opinion_modifier = {
-				target = UNG
+				target = FROM
 				modifier = supportive_opinion
 			}
 		}
-		UNG = {
+		FROM = {
 			remove_opinion_modifier = {
-				target = IRI
+				target = THIS
 				modifier = liked_opinion
 			}
 		}
@@ -117,22 +410,22 @@ UNG_worsen_IRI_relations = {
 
 	if = {
 		limit = {
-			IRI = {
+			THIS = {
 				has_relation_modifier = {
-					target = UNG
+					target = FROM
 					modifier = supportive_opinion
 				}
 			}
 		}
-		IRI = {
+		THIS = {
 			remove_opinion_modifier = {
-				target = UNG
+				target = FROM
 				modifier = supportive_opinion
 			}
 		}
-		UNG = {
+		FROM = {
 			remove_opinion_modifier = {
-				target = IRI
+				target = THIS
 				modifier = supportive_opinion
 			}
 		}
@@ -140,44 +433,44 @@ UNG_worsen_IRI_relations = {
 
 	if = {
 		limit = {
-			IRI = {
+			THIS = {
 				NOT = {
 					has_relation_modifier = {
-						target = UNG
+						target = FROM
 						modifier = trusted_opinion
 					}
 					has_relation_modifier = {
-						target = UNG
+						target = FROM
 						modifier = supportive_opinion
 					}
 					has_relation_modifier = {
-						target = UNG
+						target = FROM
 						modifier = liked_opinion
 					}
 					has_relation_modifier = {
-						target = UNG
+						target = FROM
 						modifier = annoyed_opinion
 					}
 					has_relation_modifier = {
-						target = UNG
+						target = FROM
 						modifier = dislike_opinion
 					}
 					has_relation_modifier = {
-						target = UNG
+						target = FROM
 						modifier = threatened_opinion
 					}
 				}
 			}
 		}
-		IRI = {
+		THIS = {
 			add_opinion_modifier = {
-				target = UNG
+				target = FROM
 				modifier = annoyed_opinion
 			}
 		}
-		IRI = {
+		THIS = {
 			reverse_add_opinion_modifier = {
-				target = UNG
+				target = FROM
 				modifier = annoyed_opinion
 			}
 		}
@@ -185,34 +478,34 @@ UNG_worsen_IRI_relations = {
 
 	if = {
 		limit = {
-			IRI = {
+			THIS = {
 				has_relation_modifier = {
-					target = UNG
+					target = FROM
 					modifier = annoyed_opinion
 				}
 			}
 		}
-		IRI = {
+		THIS = {
 			remove_opinion_modifier = {
-				target = UNG
+				target = FROM
 				modifier = annoyed_opinion
 			}
 		}
-		UNG = {
+		FROM = {
 			remove_opinion_modifier = {
-				target = IRI
+				target = THIS
 				modifier = annoyed_opinion
 			}
 		}
-		IRI = {
+		THIS = {
 			add_opinion_modifier = {
-				target = UNG
+				target = FROM
 				modifier = dislike_opinion
 			}
 		}
-		IRI = {
+		THIS = {
 			reverse_add_opinion_modifier = {
-				target = UNG
+				target = FROM
 				modifier = dislike_opinion
 			}
 		}
@@ -220,72 +513,72 @@ UNG_worsen_IRI_relations = {
 
 	if = {
 		limit = {
-			IRI = {
+			THIS = {
 				has_relation_modifier = {
-					target = UNG
+					target = FROM
 					modifier = dislike_opinion
 				}
 			}
 		}
-		IRI = {
+		THIS = {
 			remove_opinion_modifier = {
-				target = UNG
+				target = FROM
 				modifier = dislike_opinion
 			}
 		}
-		UNG = {
+		FROM = {
 			remove_opinion_modifier = {
-				target = IRI
+				target = THIS
 				modifier = dislike_opinion
 			}
 		}
 		
-		IRI = {
+		THIS = {
 			add_opinion_modifier = {
-				target = UNG
+				target = FROM
 				modifier = threatened_opinion
 			}
 		}
-		IRI = {
+		THIS = {
 			reverse_add_opinion_modifier = {
-				target = UNG
+				target = FROM
 				modifier = threatened_opinion
 			}
 		}
 	}
 }
 
-UNG_improve_IRI_relations = {
+FROM_improve_THIS_relations = {#Improve relations
 	if = {
 		limit = {
-			IRI = {
+			THIS = {
 				has_relation_modifier = {
-					target = UNG
+					target = FROM
 					modifier = threatened_opinion
 				}
 			}
 		}
-		IRI = {
+		THIS = {
 			remove_opinion_modifier = {
-				target = UNG
+				target = FROM
 				modifier = threatened_opinion
 			}
 		}
-		IRI = {
+		THIS = {
 			add_opinion_modifier = {
-				target = UNG
+				target = FROM
 				modifier = dislike_opinion
 			}
 		}
-		IRI = {
+		THIS = {
 			reverse_add_opinion_modifier = {
-				target = UNG
+				target = FROM
 				modifier = dislike_opinion
 			}
 		}
-		UNG = {
+		FROM = {
 			remove_opinion_modifier = {
-				target = IRI
+				target = THIS
 				modifier = threatened_opinion
 			}
 		}
@@ -293,34 +586,34 @@ UNG_improve_IRI_relations = {
 
 	if = {
 		limit = {
-			IRI = {
+			THIS = {
 				has_relation_modifier = {
-					target = UNG
+					target = FROM
 					modifier = dislike_opinion
 				}
 			}
 		}
-		IRI = {
+		THIS = {
 			remove_opinion_modifier = {
-				target = UNG
+				target = FROM
 				modifier = dislike_opinion
 			}
 		}
-		IRI = {
+		THIS = {
 			add_opinion_modifier = {
-				target = UNG
+				target = FROM
 				modifier = annoyed_opinion
 			}
 		}
-		IRI = {
+		THIS = {
 			reverse_add_opinion_modifier = {
-				target = UNG
+				target = FROM
 				modifier = annoyed_opinion
 			}
 		}
-		UNG = {
+		FROM = {
 			remove_opinion_modifier = {
-				target = IRI
+				target = THIS
 				modifier = dislike_opinion
 			}
 		}
@@ -328,22 +621,22 @@ UNG_improve_IRI_relations = {
 
 	if = {
 		limit = {
-			IRI = {
+			THIS = {
 				has_relation_modifier = {
-					target = UNG
+					target = FROM
 					modifier = annoyed_opinion
 				}
 			}
 		}
-		IRI = {
+		THIS = {
 			remove_opinion_modifier = {
-				target = UNG
+				target = FROM
 				modifier = annoyed_opinion
 			}
 		}
-		UNG = {
+		FROM = {
 			remove_opinion_modifier = {
-				target = IRI
+				target = THIS
 				modifier = annoyed_opinion
 			}
 		}
@@ -351,44 +644,44 @@ UNG_improve_IRI_relations = {
 
 	if = {
 		limit = {
-			IRI = {
+			THIS = {
 				NOT = {
 					has_relation_modifier = {
-						target = UNG
+						target = FROM
 						modifier = trusted_opinion
 					}
 					has_relation_modifier = {
-						target = UNG
+						target = FROM
 						modifier = supportive_opinion
 					}
 					has_relation_modifier = {
-						target = UNG
+						target = FROM
 						modifier = liked_opinion
 					}
 					has_relation_modifier = {
-						target = UNG
+						target = FROM
 						modifier = annoyed_opinion
 					}
 					has_relation_modifier = {
-						target = UNG
+						target = FROM
 						modifier = dislike_opinion
 					}
 					has_relation_modifier = {
-						target = UNG
+						target = FROM
 						modifier = threatened_opinion
 					}
 				}
 			}
 		}
-		IRI = {
+		THIS = {
 			add_opinion_modifier = {
-				target = UNG
+				target = FROM
 				modifier = supportive_opinion
 			}
 		}
-		IRI = {
+		THIS = {
 			reverse_add_opinion_modifier = {
-				target = UNG
+				target = FROM
 				modifier = supportive_opinion
 			}
 		}
@@ -396,34 +689,34 @@ UNG_improve_IRI_relations = {
 
 	if = {
 		limit = {
-			IRI = {
+			THIS = {
 				has_relation_modifier = {
-					target = UNG
+					target = FROM
 					modifier = supportive_opinion
 				}
 			}
 		}
-		IRI = {
+		THIS = {
 			remove_opinion_modifier = {
-				target = UNG
+				target = FROM
 				modifier = supportive_opinion
 			}
 		}
-		UNG = {
+		FROM = {
 			remove_opinion_modifier = {
-				target = IRI
+				target = THIS
 				modifier = supportive_opinion
 			}
 		}
-		IRI = {
+		THIS = {
 			add_opinion_modifier = {
-				target = UNG
+				target = FROM
 				modifier = liked_opinion
 			}
 		}
-		IRI = {
+		THIS = {
 			reverse_add_opinion_modifier = {
-				target = UNG
+				target = FROM
 				modifier = liked_opinion
 			}
 		}
@@ -431,457 +724,35 @@ UNG_improve_IRI_relations = {
 
 	if = {
 		limit = {
-			IRI = {
+			THIS = {
 				has_relation_modifier = {
-					target = UNG
+					target = FROM
 					modifier = liked_opinion
 				}
 			}
 		}
-		IRI = {
+		THIS = {
 			remove_opinion_modifier = {
-				target = UNG
+				target = FROM
 				modifier = liked_opinion
 			}
 		}
-		UNG = {
+		FROM = {
 			remove_opinion_modifier = {
-				target = IRI
-				modifier = liked_opinion
-			}
-		}
-		
-		IRI = {
-			add_opinion_modifier = {
-				target = UNG
-				modifier = trusted_opinion
-			}
-		}
-		IRI = {
-			reverse_add_opinion_modifier = {
-				target = UNG
-				modifier = trusted_opinion
-			}
-		}
-	}
-}
-
-UNG_worsen_TLA_relations = {
-	if = {
-		limit = {
-			TLA = {
-				has_relation_modifier = {
-					target = UNG
-					modifier = trusted_opinion
-				}
-			}
-		}
-		TLA = {
-			remove_opinion_modifier = {
-				target = UNG
-				modifier = trusted_opinion
-			}
-		}
-		TLA = {
-			add_opinion_modifier = {
-				target = UNG
-				modifier = liked_opinion
-			}
-		}
-		TLA = {
-			reverse_add_opinion_modifier = {
-				target = UNG
-				modifier = liked_opinion
-			}
-		}
-		UNG = {
-			remove_opinion_modifier = {
-				target = TLA
-				modifier = trusted_opinion
-			}
-		}
-	}
-
-	if = {
-		limit = {
-			TLA = {
-				has_relation_modifier = {
-					target = UNG
-					modifier = liked_opinion
-				}
-			}
-		}
-		TLA = {
-			remove_opinion_modifier = {
-				target = UNG
-				modifier = liked_opinion
-			}
-		}
-		TLA = {
-			add_opinion_modifier = {
-				target = UNG
-				modifier = supportive_opinion
-			}
-		}
-		TLA = {
-			reverse_add_opinion_modifier = {
-				target = UNG
-				modifier = supportive_opinion
-			}
-		}
-		UNG = {
-			remove_opinion_modifier = {
-				target = TLA
-				modifier = liked_opinion
-			}
-		}
-	}
-
-	if = {
-		limit = {
-			TLA = {
-				has_relation_modifier = {
-					target = UNG
-					modifier = supportive_opinion
-				}
-			}
-		}
-		TLA = {
-			remove_opinion_modifier = {
-				target = UNG
-				modifier = supportive_opinion
-			}
-		}
-		UNG = {
-			remove_opinion_modifier = {
-				target = TLA
-				modifier = supportive_opinion
-			}
-		}
-	}
-
-	if = {
-		limit = {
-			TLA = {
-				NOT = {
-					has_relation_modifier = {
-						target = UNG
-						modifier = trusted_opinion
-					}
-					has_relation_modifier = {
-						target = UNG
-						modifier = supportive_opinion
-					}
-					has_relation_modifier = {
-						target = UNG
-						modifier = liked_opinion
-					}
-					has_relation_modifier = {
-						target = UNG
-						modifier = annoyed_opinion
-					}
-					has_relation_modifier = {
-						target = UNG
-						modifier = dislike_opinion
-					}
-					has_relation_modifier = {
-						target = UNG
-						modifier = threatened_opinion
-					}
-				}
-			}
-		}
-		TLA = {
-			add_opinion_modifier = {
-				target = UNG
-				modifier = annoyed_opinion
-			}
-		}
-		TLA = {
-			reverse_add_opinion_modifier = {
-				target = UNG
-				modifier = annoyed_opinion
-			}
-		}
-	}
-
-	if = {
-		limit = {
-			TLA = {
-				has_relation_modifier = {
-					target = UNG
-					modifier = annoyed_opinion
-				}
-			}
-		}
-		TLA = {
-			remove_opinion_modifier = {
-				target = UNG
-				modifier = annoyed_opinion
-			}
-		}
-		UNG = {
-			remove_opinion_modifier = {
-				target = TLA
-				modifier = annoyed_opinion
-			}
-		}
-		TLA = {
-			add_opinion_modifier = {
-				target = UNG
-				modifier = dislike_opinion
-			}
-		}
-		TLA = {
-			reverse_add_opinion_modifier = {
-				target = UNG
-				modifier = dislike_opinion
-			}
-		}
-	}
-
-	if = {
-		limit = {
-			TLA = {
-				has_relation_modifier = {
-					target = UNG
-					modifier = dislike_opinion
-				}
-			}
-		}
-		TLA = {
-			remove_opinion_modifier = {
-				target = UNG
-				modifier = dislike_opinion
-			}
-		}
-		UNG = {
-			remove_opinion_modifier = {
-				target = TLA
-				modifier = dislike_opinion
-			}
-		}
-		
-		TLA = {
-			add_opinion_modifier = {
-				target = UNG
-				modifier = threatened_opinion
-			}
-		}
-		TLA = {
-			reverse_add_opinion_modifier = {
-				target = UNG
-				modifier = threatened_opinion
-			}
-		}
-	}
-}
-
-UNG_improve_TLA_relations = {
-	if = {
-		limit = {
-			TLA = {
-				has_relation_modifier = {
-					target = UNG
-					modifier = threatened_opinion
-				}
-			}
-		}
-		TLA = {
-			remove_opinion_modifier = {
-				target = UNG
-				modifier = threatened_opinion
-			}
-		}
-		TLA = {
-			add_opinion_modifier = {
-				target = UNG
-				modifier = dislike_opinion
-			}
-		}
-		TLA = {
-			reverse_add_opinion_modifier = {
-				target = UNG
-				modifier = dislike_opinion
-			}
-		}
-		UNG = {
-			remove_opinion_modifier = {
-				target = TLA
-				modifier = threatened_opinion
-			}
-		}
-	}
-
-	if = {
-		limit = {
-			TLA = {
-				has_relation_modifier = {
-					target = UNG
-					modifier = dislike_opinion
-				}
-			}
-		}
-		TLA = {
-			remove_opinion_modifier = {
-				target = UNG
-				modifier = dislike_opinion
-			}
-		}
-		TLA = {
-			add_opinion_modifier = {
-				target = UNG
-				modifier = annoyed_opinion
-			}
-		}
-		TLA = {
-			reverse_add_opinion_modifier = {
-				target = UNG
-				modifier = annoyed_opinion
-			}
-		}
-		UNG = {
-			remove_opinion_modifier = {
-				target = TLA
-				modifier = dislike_opinion
-			}
-		}
-	}
-
-	if = {
-		limit = {
-			TLA = {
-				has_relation_modifier = {
-					target = UNG
-					modifier = annoyed_opinion
-				}
-			}
-		}
-		TLA = {
-			remove_opinion_modifier = {
-				target = UNG
-				modifier = annoyed_opinion
-			}
-		}
-		UNG = {
-			remove_opinion_modifier = {
-				target = TLA
-				modifier = annoyed_opinion
-			}
-		}
-	}
-
-	if = {
-		limit = {
-			TLA = {
-				NOT = {
-					has_relation_modifier = {
-						target = UNG
-						modifier = trusted_opinion
-					}
-					has_relation_modifier = {
-						target = UNG
-						modifier = supportive_opinion
-					}
-					has_relation_modifier = {
-						target = UNG
-						modifier = liked_opinion
-					}
-					has_relation_modifier = {
-						target = UNG
-						modifier = annoyed_opinion
-					}
-					has_relation_modifier = {
-						target = UNG
-						modifier = dislike_opinion
-					}
-					has_relation_modifier = {
-						target = UNG
-						modifier = threatened_opinion
-					}
-				}
-			}
-		}
-		TLA = {
-			add_opinion_modifier = {
-				target = UNG
-				modifier = supportive_opinion
-			}
-		}
-		TLA = {
-			reverse_add_opinion_modifier = {
-				target = UNG
-				modifier = supportive_opinion
-			}
-		}
-	}
-
-	if = {
-		limit = {
-			TLA = {
-				has_relation_modifier = {
-					target = UNG
-					modifier = supportive_opinion
-				}
-			}
-		}
-		TLA = {
-			remove_opinion_modifier = {
-				target = UNG
-				modifier = supportive_opinion
-			}
-		}
-		UNG = {
-			remove_opinion_modifier = {
-				target = TLA
-				modifier = supportive_opinion
-			}
-		}
-		TLA = {
-			add_opinion_modifier = {
-				target = UNG
-				modifier = liked_opinion
-			}
-		}
-		TLA = {
-			reverse_add_opinion_modifier = {
-				target = UNG
-				modifier = liked_opinion
-			}
-		}
-	}
-
-	if = {
-		limit = {
-			TLA = {
-				has_relation_modifier = {
-					target = UNG
-					modifier = liked_opinion
-				}
-			}
-		}
-		TLA = {
-			remove_opinion_modifier = {
-				target = UNG
-				modifier = liked_opinion
-			}
-		}
-		UNG = {
-			remove_opinion_modifier = {
-				target = TLA
+				target = THIS
 				modifier = liked_opinion
 			}
 		}
 		
-		TLA = {
+		THIS = {
 			add_opinion_modifier = {
-				target = UNG
+				target = FROM
 				modifier = trusted_opinion
 			}
 		}
-		TLA = {
+		THIS = {
 			reverse_add_opinion_modifier = {
-				target = UNG
+				target = FROM
 				modifier = trusted_opinion
 			}
 		}
@@ -893,246 +764,377 @@ UNG_improve_TLA_relations = {
 
 set_steel_road = {
 
-	347 = {
-		set_state_flag = steel_road_state
-	}
 	585 = {
 		set_state_flag = steel_road_state
+		add_to_array = { BER.steelroadarray = THIS }
 	}
 	583 = {
 		set_state_flag = steel_road_state
+		add_to_array = { BER.steelroadarray = THIS }
 	}
 	545 = {
 		set_state_flag = steel_road_state
+		add_to_array = { BER.steelroadarray = THIS }
 	}
 	551 = {
 		set_state_flag = steel_road_state
+		add_to_array = { BER.steelroadarray = THIS }
 	}
 	614 = {
 		set_state_flag = steel_road_state
+		add_to_array = { BER.steelroadarray = THIS }
 	}
 	580 = {
 		set_state_flag = steel_road_state
+		add_to_array = { BER.steelroadarray = THIS }
 	}
 	368 = {
 		set_state_flag = steel_road_state
-	}
-	368 = {
-		set_state_flag = steel_road_state
+		add_to_array = { BER.steelroadarray = THIS }
 	}
 	611 = {
 		set_state_flag = steel_road_state
+		add_to_array = { BER.steelroadarray = THIS }
 	}
 	604 = {
 		set_state_flag = steel_road_state
+		add_to_array = { BER.steelroadarray = THIS }
 	}
 	613 = {
 		set_state_flag = steel_road_state
+		add_to_array = { BER.steelroadarray = THIS }
 	}
 	582 = {
 		set_state_flag = steel_road_state
+		add_to_array = { BER.steelroadarray = THIS }
 	}
 	370 = {
 		set_state_flag = steel_road_state
+		add_to_array = { BER.steelroadarray = THIS }
 	}
 	532 = {
 		set_state_flag = steel_road_state
+		add_to_array = { BER.steelroadarray = THIS }
 	}
 	542 = {
 		set_state_flag = steel_road_state
+		add_to_array = { BER.steelroadarray = THIS }
 	}
 	572 = {
 		set_state_flag = steel_road_state
+		add_to_array = { BER.steelroadarray = THIS }
 	}
 	605 = {
 		set_state_flag = steel_road_state
+		add_to_array = { BER.steelroadarray = THIS }
 	}
 	599 = {
 		set_state_flag = steel_road_state
+		add_to_array = { BER.steelroadarray = THIS }
 	}
 	371 = {
 		set_state_flag = steel_road_state
+		add_to_array = { TLA.steelroadarray = THIS }
 	}
 	795 = {
 		set_state_flag = steel_road_state
+		add_to_array = { TLA.steelroadarray = THIS }
 	}
 	787 = {
 		set_state_flag = steel_road_state
+		add_to_array = { TLA.steelroadarray = THIS }
 	}
 	372 = {
 		set_state_flag = steel_road_state
+		add_to_array = { TLA.steelroadarray = THIS }
 	}
 	789 = {
 		set_state_flag = steel_road_state
+		add_to_array = { TLA.steelroadarray = THIS }
 	}
 	777 = {
 		set_state_flag = steel_road_state
+		add_to_array = { TLA.steelroadarray = THIS }
 	}
 	776 = {
 		set_state_flag = steel_road_state
+		add_to_array = { TLA.steelroadarray = THIS }
 	}
 	775 = {
 		set_state_flag = steel_road_state
+		add_to_array = { TLA.steelroadarray = THIS }
 	}
 	774 = {
 		set_state_flag = steel_road_state
+		add_to_array = { TLA.steelroadarray = THIS }
 	}
 	374 = {
 		set_state_flag = steel_road_state
+		add_to_array = { TLA.steelroadarray = THIS }
 	}
 	765 = {
 		set_state_flag = steel_road_state
+		add_to_array = { TLA.steelroadarray = THIS }
 	}
 	377 = {
 		set_state_flag = steel_road_state
+		add_to_array = { TLA.steelroadarray = THIS }
 	}
 	398 = {
 		set_state_flag = steel_road_state
-	}
-	399 = {
-		set_state_flag = steel_road_state
+		add_to_array = { IRI.steelroadarray = THIS }
 	}
 	740 = {
 		set_state_flag = steel_road_state
+		add_to_array = { IRI.steelroadarray = THIS }
 	}
 	397 = {
 		set_state_flag = steel_road_state
+		add_to_array = { IRI.steelroadarray = THIS }
 	}
 	737 = {
 		set_state_flag = steel_road_state
+		add_to_array = { IRI.steelroadarray = THIS }
 	}
 	797 = {
 		set_state_flag = steel_road_state
+		add_to_array = { IRI.steelroadarray = THIS }
 	}
 	396 = {
 		set_state_flag = steel_road_state
+		add_to_array = { IRI.steelroadarray = THIS }
 	}
 	750 = {
 		set_state_flag = steel_road_state
+		add_to_array = { IRI.steelroadarray = THIS }
 	}
 	755 = {
 		set_state_flag = steel_road_state
+		add_to_array = { IRI.steelroadarray = THIS }
 	}
 	757 = {
 		set_state_flag = steel_road_state
+		add_to_array = { IRI.steelroadarray = THIS }
 	}
 	753 = {
 		set_state_flag = steel_road_state
+		add_to_array = { IRI.steelroadarray = THIS }
 	}
 	386 = {
-		set_state_flag = steel_road_state_new
+		set_state_flag = steel_road_state
+		add_to_array = { IRI.steelroadarray = THIS }
+	}
+	830 = {
+		set_state_flag = steel_road_state
+		add_to_array = { BLD.steelroadarray = THIS }
+	}
+	829 = {
+		set_state_flag = steel_road_state
+		add_to_array = { BLD.steelroadarray = THIS }
+	}
+	761 = {
+		set_state_flag = steel_road_state
+		add_to_array = { BLD.steelroadarray = THIS }
+	}
+	771 = {
+		set_state_flag = steel_road_state
+		add_to_array = { BLD.steelroadarray = THIS }
 	}
 	385 = {
-		set_state_flag = steel_road_state_new
+		set_state_flag = steel_road_state
+		add_to_array = { BLD.steelroadarray = THIS }
 	}
 	711 = {
-		set_state_flag = steel_road_state_new
+		set_state_flag = steel_road_state
+		add_to_array = { RMT.steelroadarray = THIS }
 	}
 	710 = {
-		set_state_flag = steel_road_state_new
+		set_state_flag = steel_road_state
+		add_to_array = { RMT.steelroadarray = THIS }
 	}
 	382 = {
-		set_state_flag = steel_road_state_new
+		set_state_flag = steel_road_state
+		add_to_array = { RMT.steelroadarray = THIS }
 	}
 	721 = {
-		set_state_flag = steel_road_state_new
+		set_state_flag = steel_road_state
+		add_to_array = { RMT.steelroadarray = THIS }
 	}
 	722 = {
-		set_state_flag = steel_road_state_new
+		set_state_flag = steel_road_state
+		add_to_array = { RMT.steelroadarray = THIS }
 	}
 	733 = {
-		set_state_flag = steel_road_state_new
+		set_state_flag = steel_road_state
+		add_to_array = { RMT.steelroadarray = THIS }
 	}
 	720 = {
-		set_state_flag = steel_road_state_new
+		set_state_flag = steel_road_state
+		add_to_array = { RMT.steelroadarray = THIS }
 	}
 	383 = {
-		set_state_flag = steel_road_state_new
+		set_state_flag = steel_road_state
+		add_to_array = { RMT.steelroadarray = THIS }
 	}
 	716 = {
-		set_state_flag = steel_road_state_new
+		set_state_flag = steel_road_state
+		add_to_array = { RMT.steelroadarray = THIS }
 	}
 	718 = {
-		set_state_flag = steel_road_state_new
+		set_state_flag = steel_road_state
+		add_to_array = { RMT.steelroadarray = THIS }
 	}
 	730 = {
-		set_state_flag = steel_road_state_new
+		set_state_flag = steel_road_state
+		add_to_array = { RMT.steelroadarray = THIS }
 	}
 	731 = {
-		set_state_flag = steel_road_state_new
+		set_state_flag = steel_road_state
+		add_to_array = { RMT.steelroadarray = THIS }
 	}
 	384 = {
-		set_state_flag = steel_road_state_new
+		set_state_flag = steel_road_state
+		add_to_array = { RMT.steelroadarray = THIS }
+	}
+	399 = {
+		set_state_flag = steel_road_state
+		add_to_array = { IRI.steelroadarray = THIS }
 	}
 	406 = {
-		set_state_flag = steel_road_state_new
+		set_state_flag = steel_road_state
+		add_to_array = { BER.steelroadarray = THIS }
 	}
 	540 = {
-		set_state_flag = steel_road_state_new
+		set_state_flag = steel_road_state
+		add_to_array = { BER.steelroadarray = THIS }
 	}
 	529 = {
-		set_state_flag = steel_road_state_new
+		set_state_flag = steel_road_state
+		add_to_array = { BER.steelroadarray = THIS }
 	}
 	537 = {
-		set_state_flag = steel_road_state_new
+		set_state_flag = steel_road_state
+		add_to_array = { BER.steelroadarray = THIS }
 	}
 	576 = {
-		set_state_flag = steel_road_state_new
+		set_state_flag = steel_road_state
+		add_to_array = { BER.steelroadarray = THIS }
 	}
 	369 = {
-		set_state_flag = steel_road_state_new
+		set_state_flag = steel_road_state
+		add_to_array = { BER.steelroadarray = THIS }
 	}
 	400 = {
-		set_state_flag = steel_road_state_new
+		set_state_flag = steel_road_state
+		add_to_array = { IRI.steelroadarray = THIS }
 	}
 	742 = {
-		set_state_flag = steel_road_state_new
+		set_state_flag = steel_road_state
+		add_to_array = { IRI.steelroadarray = THIS }
 	}
 	401 = {
-		set_state_flag = steel_road_state_new
+		set_state_flag = steel_road_state
+		add_to_array = { IRI.steelroadarray = THIS }
 	}
 	233 = {
-		set_state_flag = steel_road_state_new
+		set_state_flag = steel_road_state
+		add_to_array = { UNG.steelroadarray = THIS }
 	}
 	249 = {
-		set_state_flag = steel_road_state_new
+		set_state_flag = steel_road_state
+		add_to_array = { UNG.steelroadarray = THIS }
 	}
 	328 = {
-		set_state_flag = steel_road_state_new
+		set_state_flag = steel_road_state
+		add_to_array = { UNG.steelroadarray = THIS }
 	}
 	342 = {
-		set_state_flag = steel_road_state_new
+		set_state_flag = steel_road_state
+		add_to_array = { UNG.steelroadarray = THIS }
 	}
 	357 = {
-		set_state_flag = steel_road_state_new
+		set_state_flag = steel_road_state
+		add_to_array = { WIS.steelroadarray = THIS }
 	}
 	361 = {
-		set_state_flag = steel_road_state_new
+		set_state_flag = steel_road_state
+		add_to_array = { WIS.steelroadarray = THIS }
+	}
+	347 = {
+		set_state_flag = steel_road_state
+		add_to_array = { FTH.steelroadarray = THIS }
 	}
 	356 = {
-		set_state_flag = steel_road_state_new
+		set_state_flag = steel_road_state
+		add_to_array = { FTH.steelroadarray = THIS }
 	}
 	339 = {
-		set_state_flag = steel_road_state_new
+		set_state_flag = steel_road_state
+		add_to_array = { FTH.steelroadarray = THIS }
 	}
 	345 = {
-		set_state_flag = steel_road_state_new
+		set_state_flag = steel_road_state
+		add_to_array = { FTH.steelroadarray = THIS }
 	}
 	236 = {
-		set_state_flag = steel_road_state_new
+		set_state_flag = steel_road_state
+		add_to_array = { FTH.steelroadarray = THIS }
 	}
-	
-	every_state = {
-		limit = {
-			OR = {
-				has_state_flag = steel_road_state
-				has_state_flag = steel_road_state_new
-			}
+	UNG = {
+		set_variable = {
+			var = STLRD_state_control_var
+			value = 4
 		}
-		add_to_array = {
-			array = steelroadarray
-			value = THIS
+		add_ideas = STLRD_control_1
+	}
+	WIS = {
+		set_variable = {
+			var = STLRD_state_control_var
+			value = 2
 		}
+		add_ideas = STLRD_control_1
+	}
+	FTH = {
+		set_variable = {
+			var = STLRD_state_control_var
+			value = 15 #Actually 5, but punching above their weight
+		}
+		add_ideas = STLRD_control_3
+	}
+	BER = {
+		set_variable = {
+			var = STLRD_state_control_var
+			value = 23
+		}
+		add_ideas = STLRD_control_4
+	}
+	TLA = {
+		set_variable = {
+			var = STLRD_state_control_var
+			value = 2 #12 States, but being bypassed
+		}
+		add_ideas = STLRD_control_1
+	}
+	IRI = {
+		set_variable = {
+			var = STLRD_state_control_var
+			value = 15
+		}
+		add_ideas = STLRD_control_3
+	}
+	BLD = {
+		set_variable = {
+			var = STLRD_state_control_var
+			value = 3 #Actually 5, but not able to capitalize on it
+		}
+		add_ideas = STLRD_control_1
+	}
+	RMT = {
+		set_variable = {
+			var = STLRD_state_control_var
+			value = 24 #Actually 13, but they own the source
+		}
+		add_ideas = STLRD_control_4
 	}
 }
 

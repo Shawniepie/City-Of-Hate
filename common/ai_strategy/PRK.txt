@@ -10,6 +10,32 @@
 # protect
 # influence
 
+ungerdaler_buddies = {
+	enable = {
+		tag = PRK
+		NOT = {
+			has_government = puritan
+		}
+		is_in_faction_with = UNG
+	}
+	
+	ai_strategy = {
+		type = befriend
+		id = "UNG"
+		value = 200
+	}
+	ai_strategy = {
+		type = alliance
+		id = "UNG"			
+		value = 200
+	}
+	ai_strategy = {
+		type = protect
+		id = "UNG"			
+		value = 200
+	}
+}
+
 default_unit_production = {
 	enable = {
 		original_tag = PRK

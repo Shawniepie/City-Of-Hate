@@ -1,5 +1,83 @@
 leader_traits = {
 	
+	informal_council = {
+		random = no
+		war_support_factor = -0.3
+		offensive_war_stability_factor = -0.4
+		mobilization_speed = -0.1
+		command_power_gain_mult = -0.33
+	}
+	
+	formalized_council = {
+		random = no
+		war_support_factor = -0.1
+		offensive_war_stability_factor = -0.15
+		mobilization_speed = -0.05
+		command_power_gain_mult = -0.2
+	}
+	
+	popular_council = {
+		random = no
+		war_support_factor = 0.1
+		offensive_war_stability_factor = 0.1
+		mobilization_speed = 0.05
+		command_power_gain_mult = 0.15
+	}
+	
+	genius_inventor = {
+		random = no
+		research_speed_factor = 0.05
+		production_speed_buildings_factor = 0.075
+		industrial_capacity_factory = 0.05
+		industry_free_repair_factor = 0.1
+	}
+	
+	foppish_journalist = {
+		random = no
+		stability_factor = -0.05
+		political_advisor_cost_factor = -0.33
+		trade_laws_cost_factor = -0.33
+		mobilization_laws_cost_factor = -0.33
+		economy_cost_factor = -0.33
+	}
+	
+	spymaster_general = {
+		random = no
+		foreign_subversive_activites = -0.15
+		intel_from_operatives_factor = 0.1
+	}
+	
+	calming_unifier = {
+		random = no
+		drift_defence_factor = 0.15
+		offensive_war_stability_factor = 0.05
+		defensive_war_stability_factor = 0.05
+	}
+	
+	beloved_freiprinzessin = {
+		random = no
+		stability_factor = 0.05
+		army_morale_factor = 0.1
+	}
+	
+	disempowered_freiprinzessin = {
+		random = no
+		political_power_gain = -0.35
+		stability_factor = 0.1
+	}
+	
+	scandalous_hochprinzessin = {
+		random = no
+		political_power_gain = -0.75
+		stability_factor = -0.25
+	}
+	
+	unproven_hochprinzessin = {
+		random = no
+		political_power_gain = -0.25
+		stability_factor = -0.05
+	}
+	
 	power_behind_throne = {
 		random = no
 		political_power_factor = 0.15
@@ -26,7 +104,7 @@ leader_traits = {
 	blasphemous_freiprinz = {
 		random = no
 		stability_factor = -0.15
-		partisan_effect  = -0.15
+		resistance_growth  = -0.15
 	}
 	
 	socialite_prince = {
@@ -169,7 +247,7 @@ leader_traits = {
 	
 	daskellin_bonuses = {
 		random = no
-		enemy_partisan_effect = -0.07
+		resistance_growth = -0.07
 		army_morale_factor = 0.05
 	}
 	
@@ -306,7 +384,7 @@ leader_traits = {
 	
 	heroic_commoner = {
 		army_morale_factor = 0.08
-		partisan_effect = 0.15
+		resistance_growth_on_our_occupied_states = 0.15
 	}
 	
 	grizzled_warrior = {
@@ -352,8 +430,8 @@ leader_traits = {
 	}
 	natural_philosopher = {
 		random = no
-	stability_factor = -0.2
-	research_speed_factor = 0.25
+		stability_factor = -0.2
+		research_speed_factor = 0.25
 	}
 
 	retired_strategos = {
@@ -361,34 +439,51 @@ leader_traits = {
 		planning_speed = 0.1
 		experience_gain_army_factor = 0.15
 	}
-	brilliant_administrator
+	
+	brilliant_administrator = {
 		random = no
 		stability_factor = 0.05
 		consumer_goods_factor = -0.05
 		MONTHLY_POPULATION = 0.05
 	}
-	
-	brilliant_administrator
-		random = yes
-		stability_factor = 0.05
-		consumer_goods_factor = -0.05
-		MONTHLY_POPULATION = 0.05
-	}
-	visionary_architect
-		random = yes
+
+	visionary_architect = {
+		random = no
 		consumer_goods_factor = 0.02
-		production_speed_buildings_factor = 0.1
-		research_speed_factor = 0.05
+		production_speed_buildings_factor = 0.04
 	}
-	dishonoured_dynasty
+	dishonoured_dynasty = {
 		random = no
 		stability_factor = -0.1
 		political_power_factor = -0.1
 	}
-	forgiven_dynasty
+	forgiven_dynasty = {
 		random = no
 		stability_factor = 0.1
 		army_core_attack_factor = 0.1
 		army_core_defence_factor = 0.1
+	}
+	ambitious_prince = {
+		random = no
+		opinion_gain_monthly_factor = 0.25
+		political_power_gain = 0.1
+	}
+	disliked_dynasty = {
+		random = no
+		stability_factor = -0.1
+		political_power_factor = -0.1
+	}
+	powerful_noble = {
+		random = no
+		drift_defence_factor = 0.15
+		offensive_war_stability_factor = 0.05
+		defensive_war_stability_factor = 0.05
+		political_power_gain = 0.15
+	}
+	second_prince = {
+		random = no
+		stability_factor = 0.1
+		army_morale_factor = 0.05
+		republic_aristocrat_drift = -0.1
 	}
 }

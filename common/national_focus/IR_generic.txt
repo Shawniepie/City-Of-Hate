@@ -3,7 +3,7 @@
 focus_tree = {
 	id = generic_focus
 	country = {
-		factor = 1	
+		factor = 1
 	}
 	default = yes
 	
@@ -46,6 +46,10 @@ focus_tree = {
 			modifier = {
 				factor = 0
 				has_country_flag = generic_theocratic_path
+			}
+			modifier = {
+				factor = 0
+				tag = RTH
 			}
 		}
 		prerequisite = {
@@ -1148,16 +1152,15 @@ focus_tree = {
 			factor = 14
 		}
 		completion_reward = {
-			add_tech_bonus = {
-				bonus = 0.5
-				uses = 1
-				category = industry
-			}
+			#add_tech_bonus = {
+			#	bonus = 0.5
+			#	uses = 1
+			#	category = industry
+			#}
 			country_event = {
 				id = generic.8
 				days = 1
 			}
-				
 		}
 	}
 
@@ -1180,11 +1183,11 @@ focus_tree = {
 			focus = GENERIC_curtail_guilds
 		}
 		completion_reward ={
-			add_tech_bonus = {
-				bonus = 0.5
-				uses = 1
-				category = industry_concentrated
-			}
+			#add_tech_bonus = {
+			#	bonus = 0.5
+			#	uses = 1
+			#	category = industry_concentrated
+			#}
 		}
 	}
 
@@ -1250,11 +1253,11 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_ideas = GENERIC_economies_of_scale
-			add_tech_bonus = {
-				bonus = 0.35
-				uses = 1
-				category = industry_concentrated
-			}
+			#add_tech_bonus = {
+			#	bonus = 0.35
+			#	uses = 1
+			#	category = industry_concentrated
+			#}
 		}
 	}
 
@@ -1344,11 +1347,11 @@ focus_tree = {
 			focus = GENERIC_empower_guilds
 		}
 		completion_reward ={
-			add_tech_bonus = {
-				bonus = 0.5
-				uses = 1
-				category = industry_dispersed
-			}
+			#add_tech_bonus = {
+			#	bonus = 0.5
+			#	uses = 1
+			#	category = industry_dispersed
+			#}
 		}
 	}
 
@@ -1462,11 +1465,11 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_ideas = GENERIC_diverse_economy
-			add_tech_bonus = {
-				bonus = 0.35
-				uses = 1
-				category = industry_dispersed
-			}
+			#add_tech_bonus = {
+			#	bonus = 0.35
+			#	uses = 1
+			#	category = industry_dispersed
+			#}
 		}
 	}
 
@@ -1521,7 +1524,7 @@ focus_tree = {
 					}
 				}
 				add_resource = {
-					type = aluminium
+					type = mount
 					amount = 16
 				}
 			}
@@ -1535,7 +1538,7 @@ focus_tree = {
 					}
 				}
 				add_resource = {
-					type = aluminium
+					type = mount
 					amount = 7
 				}
 			}
@@ -2002,7 +2005,7 @@ focus_tree = {
 	
 	focus = { #Mobile Warfare
 		id = GENERIC_trust_cavalry
-		icon = GFX_goal_generic_cavalry
+		icon = GFX_focus_generic_cavalry
 		
 		ai_will_do = {
 			factor = 14
@@ -2026,11 +2029,11 @@ focus_tree = {
 		y = 8
 		cost = 8
 		completion_reward = {
-			add_tech_bonus = {
-				bonus = 0.35
-				uses = 2
-				category = cat_mobile_warfare
-			}
+			#add_tech_bonus = {
+			#	bonus = 0.35
+			#	uses = 2
+			#	category = cat_mobile_warfare
+			#}
 		}
 	}
 	
@@ -2073,7 +2076,7 @@ focus_tree = {
 			add_tech_bonus = {
 				bonus = 0.25
 				uses = 1
-				category = infantry_weapons
+				category = light_melee_equipment
 			}
 			add_ideas = GENERIC_anvil_infantry
 		}
@@ -2105,11 +2108,11 @@ focus_tree = {
 		y = 8
 		cost = 8
 		completion_reward = {
-			add_tech_bonus = {
-				bonus = 0.35
-				uses = 2
-				category = cat_superior_firepower
-			}
+			#add_tech_bonus = {
+			#	bonus = 0.35
+			#	uses = 2
+			#	category = cat_superior_firepower
+			#}
 		}
 	}
 	
@@ -2153,7 +2156,7 @@ focus_tree = {
 			add_tech_bonus = {
 				bonus = 0.25
 				uses = 1
-				category = infantry_weapons
+				category = light_melee_equipment
 			}
 		}
 	}
@@ -2184,11 +2187,11 @@ focus_tree = {
 		y = 8
 		cost = 8
 		completion_reward = {
-			add_tech_bonus = {
-				bonus = 0.35
-				uses = 2
-				category = cat_mass_assault
-			}
+			#add_tech_bonus = {
+			#	bonus = 0.35
+			#	uses = 2
+			#	category = cat_mass_assault
+			#}
 		}
 	}
 	
@@ -2258,11 +2261,11 @@ focus_tree = {
 		y = 8
 		cost = 8
 		completion_reward = {
-			add_tech_bonus = {
-				bonus = 0.35
-				uses = 2
-				category = cat_grand_battle_plan
-			}
+			#add_tech_bonus = {
+			#	bonus = 0.35
+			#	uses = 2
+			#	category = cat_grand_battle_plan
+			#}
 		}
 	}
 	

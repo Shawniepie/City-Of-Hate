@@ -36,6 +36,23 @@ music = {
 	}	
 }
 
+# Note: Ordorian Ambience Theme
+music = {
+	song = "Rebirth of Sovereignty"
+	
+	chance = {
+		modifier = {
+			factor = 2.5
+
+			has_war = no
+			OR = {
+				tag = ORD
+				tag = EOR
+			}
+		}
+	}	
+}
+
 # Note: Generic Ambience Theme
 music = {
 	song = "Lathweynian Forests"
@@ -44,6 +61,20 @@ music = {
 		modifier = {
 			factor = 2
 
+			has_war = no
+		}	
+	}	
+}
+
+# Note: Generic Dwarven Ambience
+music = {
+	song = "Miner's Delight"
+	
+	chance = {
+		modifier = {
+			factor = 2
+			
+			has_idea = dwarf_country
 			has_war = no
 		}	
 	}	
@@ -133,3 +164,30 @@ music = {
 	}
 }
 
+
+# Note: Generic War Theme #2
+music = {
+	song = "Tactical Assault"
+	
+	chance = {
+		modifier = {
+			factor = 2
+
+			has_war = yes
+		}
+	}
+}
+
+# Note: Generic Elf War Theme
+music = {
+	song = "Elven Conquest"
+	
+	chance = {
+		modifier = {
+			factor = 2
+			
+			has_idea = elf_country
+			has_war = yes
+		}
+	}
+}

@@ -69,6 +69,13 @@ hire_mercenaries = {
 					load_oob = "PRK_hire_perkav_raiders"
 				}
 				
+				if = {
+					limit = {
+						tag = SNF
+					}
+					load_oob = "SNF_hire_perkav_raiders"
+				}
+				
 				add_timed_idea = {
 					idea = MERCS_hiring_perkav_raiders_idea
 					days = 183

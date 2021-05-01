@@ -9,8 +9,9 @@ state={
 	buildings_max_level_factor=1.000
 		history={	
 		owner = ORD
-		buildings = {	
-		infrastructure = 3
+		buildings = {
+			farm = 2
+			infrastructure = 3
 		}	
 		add_core_of = ORD
 		}

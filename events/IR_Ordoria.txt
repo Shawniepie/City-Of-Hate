@@ -1663,7 +1663,7 @@ country_event = {#Skaelinger Offers Peace
 			factor = 3
 			modifier = {
 				has_government = theocrat
-				modifier = 4
+				factor = 4
 			}
 		}
 		hidden_effect = {

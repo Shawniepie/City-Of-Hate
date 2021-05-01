@@ -1,4 +1,6 @@
+
 guiTypes = {
+	
 	containerWindowType = {
 		name = "steel_road_container"
 		position = {
@@ -22,116 +24,40 @@ guiTypes = {
 	
 	containerWindowType = {
 		name = "steel_road_list"
-		position = {
-			x = -250
-			y = -500
-		}
-
-		moveable = yes
-		click_to_front = yes
-		orientation= center	
+		position = { x = -250 y = -460}	
 		
 		size = {
 			width = 550
 			height = 1000
 		}
 		
-		buttonType = {
-				name = "close_button"
-				position = {
-					x = -69 #nice
-					y = 13
-				}
-				quadTextureSprite ="GFX_closebutton"
-				buttonFont = "hoi_16mbs"
-				shortcut = "ESCAPE"
-				Orientation = "UPPER_RIGHT"
-				clicksound = click_close
-				pdx_tooltip = "CLOSE"
-			}
-		
+		fade_time = 300
+		fade_type = linear
+		moveable = yes
+		show_sound = menu_open_window
+		click_to_front = yes
+        
+		orientation = center
+        
 		background = {
 			name = "Background"
 			spriteType = "GFX_steel_road_bg"
 		}
 		
-		containerWindowType = {
-			name = "steel_road_info"
+		buttonType = {
+			name = "close_button"
 			position = {
-				x = 0
-				y = 0
+				x = -69 #Nice
+				y = 13
 			}
-			size = {
-				width = 1000
-				height = 1000
-			}
-		}
-		
-		containerWindowType = {
-			name = "steel_road_entry"
-			position = { x=10 y=81 }
-			size = { width = 402 height = 54 }
-			clipping = no
-
-			iconType = {
-				name = "picture"
-				position = { x = 65 y = 20 }
-				spriteType = "GFX_steel_road_icon"
-			}
-
-			background = {
-				name = "Background"
-				quadTextureSprite ="GFX_bordered_window"
-			}
-
-			iconType ={
-				name ="country_flag_frame"
-				spriteType = "GFX_flag_small_golden_frame"
-				position = { x = 60 y = 110 }
-				alwaystransparent = yes
-			}
-			
-			buttonType = {
-				name = "relative_flag"
-				quadTextureSprite ="GFX_flag_smallest_overlay"
-				position = { x = 60 y = 107 }
-			}
-
-			instantTextboxType = {
-				name = "location"
-				position = { x = 94 y = 105 }
-				textureFile = ""
-				font = "hoi_30header"
-				borderSize = {x = 0 y = 0}
-				text = "Maus"
-				maxWidth = 150
-				maxHeight = 40
-				format = left
-				multiline = yes
-				vertical_alignment = center
-				alwaystransparent = yes
-			}
-		}
-
-        listboxType  = {
-            name = "steelroad_scrollbar"
-            position = {
-                x = -150
-                y = 0
-            }
-            orientation = "CENTER"
-            size = {
-                x = 100
-                y = 100
-            }
-            spacing = 0
-            scrollbartype = "standardlistbox_slider"
-            borderSize = {
-                x = 0
-                y = 0
-            }
-        }
-		
+			quadTextureSprite ="GFX_closebutton"
+			buttonFont = "hoi_16mbs"
+			shortcut = "ESCAPE"
+			Orientation = "UPPER_RIGHT"
+			clicksound = click_close
+			pdx_tooltip = "CLOSE"
+		}	
+        
 		instantTextBoxType = {
 			name = "title_text"
 			position = {
@@ -142,5 +68,106 @@ guiTypes = {
 			text = "The Steel Road"
 			font = "hoi_36header"
 		}
+		
+		# if you want a scroll bar, you have to add a parent container to your grid
+		containerWindowType = {
+			name = "country_grid_container"
+			position = {x = 10 y = 80}
+			size = {width = 507 height = 900 } 
+            margin = { top = 10 bottom = 10 }
+			Orientation = upper_left
+
+			verticalScrollbar = "right_vertical_slider"
+
+			# background is necesarry for scrollbars to work
+			background = {
+				name = "Background"
+				quadTextureSprite = "GFX_tiled_window_1b_thin_border"
+			}
+			
+			# this grid will be dynamically populated
+			gridboxtype = {
+				name = "country_grid"
+				position = { x = 10 y = 0 }
+				size = { width = 442 height = 100%% }
+				slotsize = { width = 442 height = 1 } #if width or height is 1, it will use slot element's dimension
+				max_slots_horizontal = 1
+				add_horizontal = no
+			}
+		}
+    }
+	
+	# this entry will be used to populate country_grid in steel_road
+	containerWindowType = {
+		name = "steel_road_country_entry"
+		position = { x = 0 y = 0}
+		size = { width = 470 height = 140 }
+		
+		
+		background = {
+			name = "Background"		
+			quadTextureSprite = "GFX_tiled_plain_bg"
+		}
+
+		instantTextBoxType = {
+			name = "name"
+			position = { x = 110 y = 15 }
+			font = "hoi_18mbs"
+			text = "[?this.GetName]"
+			format = left
+			maxWidth = 250
+			maxHeight = 24
+			fixedsize = yes
+			tooltip = "SCOPE_TEXT"
+		}
+		
+		gridboxtype = {
+			name = "state_grid"
+			position = { x = 35 y = 40 }
+			size = { width = 210 height = 90 }
+			slotsize = { width = 55 height = 30 }
+			max_slots_horizontal = 5
+			max_slots_vertical = 3
+			add_horizontal = yes
+		}
+		
+		iconType = {
+			name = "picture"
+			position = { x = 20 y = 75 }
+			spriteType = "GFX_steel_road_icon"
+		}
+		
+		iconType = {
+			name = "flag_frame"
+			position = { x = 14 y = 12 }
+			spriteType = "GFX_larger_flag_frame"
+		}
+		
+		buttonType = {
+			name = "flag"
+			quadTextureSprite = "GFX_shield_medium"
+			position = { x = 20 y = 16 }
+			Orientation = "UPPER_LEFT"
+		}
 	}
-}																			
+	
+	# this entry will be used to populate state_grid in steel_road_country_entry
+	containerWindowType = {
+		name = "steel_road_state_entry"
+		position = { x = 0 y = 0}	
+		size = { width = 250 height = 30 }
+		clipping = no
+		
+		instantTextBoxType = {
+			name = "scope_info"
+			position = { x = 0 y = 15 }
+			font = "Main_14"
+			text = "[this.GetName]"
+			tooltip = "SCOPE_TEXT"
+			format = left
+			maxWidth = 250
+			maxHeight = 24
+			fixedsize = no
+		}
+	}
+}

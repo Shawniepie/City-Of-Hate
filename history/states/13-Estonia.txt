@@ -9,13 +9,13 @@ state={
 		owner = GMR
 		victory_points = { 1731 8 }
 		buildings = {
-			infrastructure = 4
-			industrial_complex = 2
+			infrastructure = 5
+			workshop = 2
 		}
 		add_core_of = GMR
 	}
 	
-	state_category = town
+	state_category = rural
 	manpower=18253
 	buildings_max_level_factor=1.000
 }

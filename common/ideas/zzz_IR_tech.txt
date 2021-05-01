@@ -1,0 +1,26 @@
+ideas = {
+
+	country = {
+		
+		TECH_standardized_gears = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = tech_crossbows
+			
+			removal_cost = -1
+			
+			equipment_bonus = {
+				crossbow_equipment = {
+					build_cost_ic = -0.15 instant = yes
+				}
+			}
+		}
+	}
+}

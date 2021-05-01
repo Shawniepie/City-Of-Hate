@@ -19,12 +19,13 @@ This part mod, part world-building project allows you to play in Tharassian, a w
 
 But not all changes are political; inventors arcane and technological alike refuse to sit idly by as time marches on. From the Gate of the Gods on Kel, magic continues to flow back into the world, the Ages of Void and Autokratia, so devoid of sorcery, a distant memory. Every day, more and more ancient magical knowledge is rediscovered, greatly aided by the return of the Wizards of the Arkanisturm from their self-imposed aeons-long dimensional exile. Across the seas on the continent of Maslodan, the ever-inventive Sulfurisle Gnomes pioneer the use of blackpowder, with devastating new weaponry being almost ready for field-testing.
 
-Features​
--A completely original setting dreamt up by yours truly, and ever expanded upon by a wonderful Lore Team.
+Features
+-A completely original setting dreamt up by yours truly.
 -Seven unique ideologies, including monarchies, republics and theocracies.
 -A completely new generic Focus Tree with 67 foci to choose from.
--Two unique focus trees, with plenty more planned.
--Five unique units, with many more on the way.
+-Seven unique focus trees, with plenty more planned.
+-Thirteen unique units, with many more on the way.
+-A massive, completely reworked tech tree running from the Tribal Era to the Early Industrial Era (WIP)
 -A religion system - choose a Patron Deity for your people!
 -(Hopefully) a Hearts of Iron experience completely unlike anything you've seen before!
 

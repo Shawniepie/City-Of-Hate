@@ -1,0 +1,106 @@
+﻿capital = 421
+
+set_oob = "PRK_empty"
+
+set_technology = {
+	implements_war = 1
+	tribal_warbands = 1
+	sparring_fields = 1
+	perkav_raiders = 1
+}
+
+1939.1.1 = {
+}
+
+set_politics = {
+	ruling_party = monarchy_absolute
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	monarchy_absolute = 73
+
+	monarchy_constitutional = 6
+
+	republic_peasant = 0
+
+	republic_aristocrat = 4
+
+	republic_merchant = 6
+
+	theocrat = 11
+
+	puritan = 0
+}
+
+add_ideas = {
+	human_country
+	krostov_religion
+	PRK_tribal_nation
+	PRK_oral_tradition
+}
+
+create_country_leader = {
+	name = "Izajasz Sochaczewski"
+	desc = "politics_SVC_sochaczewski_desc"
+	picture = "gfx/leaders/PRK/Portrait_Perkavland_Generic_land_2.dds"
+	ideology = monarchy_constitutional_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Joachim Asnyk"
+	desc = "politics_SVC_asnyk_desc"
+	picture = "gfx/leaders/PRK/Portrait_Perkavland_Generic_land_1.dds"
+	ideology = republic_peasant_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Walentyn Kosiorek"
+	desc = "politics_SVC_kosiorek_desc"
+	picture = "gfx/leaders/PRK/Portrait_Perkavland_Generic_land_1.dds"
+	ideology = puritan_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Izajasz Sochaczewski"
+	desc = "politics_SVC_sochaczewski_desc"
+	picture = "gfx/leaders/PRK/Portrait_Perkavland_Generic_land_2.dds"
+	ideology = monarchy_absolute_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Urszula Smolak"
+	desc = "politics_SVC_smolak_desc"
+	picture = "gfx/leaders/PRK/Portrait_Perkavland_Generic_navy_3.dds"
+	ideology = theocrat_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Izajasz Sochaczewski"
+	desc = "politics_SVC_sochaczewski_desc"
+	picture = "gfx/leaders/PRK/Portrait_Perkavland_Generic_land_2.dds"
+	ideology = republic_aristocrat_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {	
+	name = "Zofia Bartol"
+	desc = "politics_SVC_bartol_desc"
+	picture = "gfx/leaders/PRK/Portrait_Perkavland_Generic_land_3.dds"
+	ideology = republic_merchant_ideology
+	traits = {
+	}
+}

@@ -1,5 +1,51 @@
 #reload countrycolors
 
+KRL = {
+	color = rgb { 66 85 255 }
+	color_ui = rgb { 72 91 255 }
+}
+
+NVT = {
+	color = rgb { 255 240 158 }
+	color_ui = rgb { 255 249 165 }
+}
+
+VTZ = {
+	color = rgb { 0 81 39 }
+	color_ui = rgb { 10 91 45 }
+}
+
+RLV = {
+	color = rgb { 3 0 109 }
+	color_ui = rgb { 11 9 116 }
+}
+
+WLT = {
+	color = rgb { 255 142 182 }
+	color_ui = rgb { 255 150 187 }
+}
+
+VLN = {
+	color = rgb { 112 0 18 }
+	color_ui = rgb { 120 7 26 }
+}
+
+KRZ = {
+	color = rgb { 86 42 84 }
+	color_ui = rgb { 92 47 91 }
+}
+
+LNK = {
+	color = rgb { 40 114 112 }
+	color_ui = rgb { 49 124 120 }
+}
+
+
+SVC = {
+	color = rgb { 241 255 173 }
+	color_ui = rgb { 252 255 183 }
+}
+
 VRG = {
 	color = rgb { 109 127 36 }
 	color_ui = rgb { 114 134 42 }
@@ -126,8 +172,8 @@ UNG = {
 }
 
 WIS = {
-	color = rgb { 250 235 163 }
-	color_ui = rgb { 255 240 168 }
+	color = rgb { 90 112 76 }
+	color_ui = rgb { 95 120 81 }
 }
 
 WSZ = {

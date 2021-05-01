@@ -28,6 +28,166 @@
 #	}
 #}
 
+oh_shit_we_need_money = { #Make the AI build workshops
+	enable = {
+		workshop < 5
+	}
+	
+	abort_when_not_enabled = yes
+	
+	ai_strategy = {
+		type = building_target
+		id = workshop
+		value = 5
+	}
+}
+
+oh_shit_we_need_swords = { #Make the AI build forges
+	enable = {
+		forge < 5
+	}
+	
+	abort_when_not_enabled = yes
+	
+	ai_strategy = {
+		type = building_target
+		id = forge
+		value = 5
+	}
+}
+
+oh_shit_we_need_food = { #Make the AI build farms
+	enable = {
+		farm < 5
+	}
+	
+	abort_when_not_enabled = yes
+	
+	ai_strategy = {
+		type = building_target
+		id = farm
+		value = 5
+	}
+}
+
+cavalry_too_expensive = { #Don't build heavy cav if you can't support them
+	enable = {
+		num_of_military_factories < 20
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = build_army
+		id = heavy_cavalry
+		value = -99999
+	}
+}
+
+division_limiter = { #Don't spam an ungodly amount of divisions please
+	enable = {
+		OR = {
+			AND = {
+				is_major = yes
+				NOT = {
+					tag = STA #Needs a leg up against the Union
+					tag = ORD #Fighting everyone means they need more dudes
+					tag = BLD #Not enough infrastructure for a large army
+					tag = PRK #Not enough infrastructure for a large army
+				}
+				num_divisions > 119
+			}
+			AND = {
+				is_major = no
+				NOT = {
+					tag = STA
+					tag = ORD
+					tag = BLD
+					tag = PRK
+				}
+				num_divisions > 47
+			}
+			AND = {
+				tag = STA
+				num_divisions > 71
+			}
+			AND = {
+				tag = ORD
+				num_divisions > 167
+			}
+			AND = {
+				tag = BLD
+				num_divisions > 23
+			}
+			AND = {
+				tag = PRK
+				num_divisions > 71
+			}
+		}
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = build_army
+		id = cavalry
+		value = -99999
+	}
+
+	ai_strategy = {
+		type = build_army
+		id = infantry
+		value = -99999
+	}
+	
+	ai_strategy = {
+		type = build_army
+		id = perkav_raiders
+		value = -99999
+	}
+	
+	ai_strategy = {
+		type = build_army
+		id = ogre_warriors
+		value = -99999
+	}
+	
+	ai_strategy = {
+		type = build_army
+		id = dwarven_warriors
+		value = -99999
+	}
+	
+	ai_strategy = {
+		type = build_army
+		id = garrison
+		value = -99999
+	}
+	
+	ai_strategy = {
+		type = build_army
+		id = men_at_arms
+		value = -99999
+	}
+	
+	ai_strategy = {
+		type = build_army
+		id = halberdier
+		value = -99999
+	}
+	
+	ai_strategy = {
+		type = build_army
+		id = light_cavalry
+		value = -99999
+	}
+	
+	ai_strategy = {
+		type = build_army
+		id = heavy_cavalry
+		value = -99999
+	}
+}
+
 invade_ordoria_priorities = {
 	enable = {
 		has_war_with = ORD
@@ -668,20 +828,32 @@ default_unit_production = {
 
 	ai_strategy = {
 		type = role_ratio
-		id = cavalry
-		value = 10
+		id = light_cavalry
+		value = 70
+	}
+	
+	ai_strategy = {
+		type = role_ratio
+		id = heavy_cavalry
+		value = 35
 	}
 
 	ai_strategy = {
 		type = role_ratio
 		id = garrison
-		value = 30
+		value = 5
 	}
 
 	ai_strategy = {
 		type = role_ratio
 		id = men_at_arms
-		value = 60
+		value = 160
+	}
+	
+	ai_strategy = {
+		type = role_ratio
+		id = halberdier
+		value = 160
 	}
 	
 	# Naval unit factors
@@ -711,20 +883,8 @@ default_unit_production = {
 	
 	ai_strategy = {
 		type = equipment_production_factor
-		id = fighter
-		value = 35
-	}
-	
-	ai_strategy = {
-		type = equipment_production_factor
 		id = infantry
 		value = 40
-	}
-	
-	ai_strategy = {
-		type = equipment_production_factor
-		id = artillery
-		value = 25
 	}
 }
 

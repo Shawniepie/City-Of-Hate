@@ -1,0 +1,1816 @@
+technologies = {
+	
+	@1918 = 0
+	@1936 = 2
+	@1938 = 4
+	@1939 = 6
+	@1940 = 8
+	@1941 = 10
+	@1942 = 12
+	@1943 = 14
+	@1944 = 16
+	@1945 = 18
+	@1946 = 20
+
+	###TRIBAL ERA TECH###
+	implements_war = {
+	
+        research_cost = 1 # Cost in time, where 1 is the default research time length.
+        start_year = 600  # Which year this technology stops receiving ahead-of-time penalities.
+
+        # Enables equipment
+		enable_equipments = {
+			infantry_equipment_0
+		}
+		
+		enable_building = {
+            building = forge
+            level = 1
+        }
+		
+        show_equipment_icon = yes # Show the equipment icon that is unlocked
+
+        # Multiple allowed. Controls the links between technologies.
+        path = {
+            leads_to_tech = tribal_warbands
+            research_cost_coeff = 1
+        }
+		path = {
+            leads_to_tech = horseback_riding
+            research_cost_coeff = 1
+        }
+		path = {
+            leads_to_tech = scouting_parties
+            research_cost_coeff = 1
+        }
+        
+        # Controls which folder (tab) the technology appears under.
+        folder = {
+            name = landcombat_folder # Found in 00_technology.txt
+            
+            # Position in the tech tree interface
+            position = { 
+                x = 5
+                y = 3
+            }
+        }
+        
+        # Which technology categories apply to this technology.
+        categories = {
+			tribal_tech
+			infantry_tech
+            melee_equipment
+			light_melee_equipment
+        }
+    }
+	
+	tribal_warbands = {
+	
+        research_cost = 1 # Cost in time, where 1 is the default research time length.
+        start_year = 600  # Which year this technology stops receiving ahead-of-time penalities.
+        
+        # Enable subunits
+        enable_subunits = {
+            garrison
+			warband
+        }
+        
+        # Multiple allowed. Controls the links between technologies.
+        path = {
+            leads_to_tech = sparring_fields
+            research_cost_coeff = 1
+        }
+        
+        # Controls which folder (tab) the technology appears under.
+        folder = {
+            name = landcombat_folder # Found in 00_technology.txt
+            
+            # Position in the tech tree interface
+            position = { 
+                x = 5
+                y = 6
+            }
+        }
+        
+        # Which technology categories apply to this technology.
+        categories = {
+			tribal_tech
+			infantry_tech
+            melee_equipment
+			light_melee_equipment
+        }
+    }
+	
+	sparring_fields = {
+	
+		research_cost = 1
+		start_year = 606
+		
+		experience_gain_army_unit_factor = 0.01
+		
+		warband = {
+			soft_attack = 0.05
+		}
+		
+		path = {
+            leads_to_tech = war_artisans
+            research_cost_coeff = 1
+        }
+		
+		folder = {
+			name = landcombat_folder
+		
+			position = {
+				x = 5
+				y = 8
+			}
+		}
+		categories = {
+			tribal_tech
+			infantry_tech
+            melee_equipment
+			light_melee_equipment
+        }
+	}
+	
+	war_artisans = {
+		research_cost = 1
+		start_year = 606
+		
+		industrial_capacity_factory = 0.02
+		
+		path = {
+            leads_to_tech = advanced_leatherworking
+            research_cost_coeff = 1
+        }
+		
+		path = {
+            leads_to_tech = alloy_creation
+            research_cost_coeff = 1
+        }
+		
+		path = {
+            leads_to_tech = improved_woodworking
+            research_cost_coeff = 1
+        }
+		
+		folder = {
+			name = landcombat_folder
+		
+			position = {
+				x = 5
+				y = 10
+			}
+		}
+		categories = {
+			tribal_tech
+			infantry_tech
+            melee_equipment
+        }
+	}
+	
+	advanced_leatherworking = {
+		research_cost = 1
+		start_year = 609
+		
+		category_light_infantry = {
+			defense = 0.02
+			breakthrough = 0.02
+		}
+		
+		path = {
+            leads_to_tech = gambesons
+            research_cost_coeff = 1
+        }
+		
+		folder = {
+			name = landcombat_folder
+		
+			position = {
+				x = 3
+				y = 13
+			}
+		}
+		categories = {
+			tribal_tech
+			infantry_tech
+            melee_equipment
+        }
+	}
+	
+	gambesons = {
+		research_cost = 1
+		start_year = 612
+		
+		category_light_infantry = {
+			defense = 0.02
+			breakthrough = 0.02
+		}
+		
+		path = {
+            leads_to_tech = brigandines
+            research_cost_coeff = 1
+        }
+		path = {
+            leads_to_tech = mail_hauberks
+            research_cost_coeff = 1
+        }
+		
+		folder = {
+			name = landcombat_folder
+		
+			position = {
+				x = 3
+				y = 22
+			}
+		}
+		categories = {
+			tribal_tech
+			infantry_tech
+            melee_equipment
+			light_melee_equipment
+        }
+	}
+	
+	brigandines = {
+		research_cost = 1
+		start_year = 627
+		
+		category_light_infantry = {
+			defense = 0.02
+			breakthrough = 0.02
+		}
+		
+		path = {
+            leads_to_tech = armoured_leather
+            research_cost_coeff = 1
+        }
+		
+		folder = {
+			name = landcombat_folder
+		
+			position = {
+				x = 3
+				y = 25
+			}
+		}
+		categories = {
+			tribal_tech
+			infantry_tech
+            melee_equipment
+			light_melee_equipment
+        }
+	}
+	
+	alloy_creation = {
+		research_cost = 1
+		start_year = 609
+		
+		category_light_infantry = {
+			soft_attack = 0.04
+		}
+		
+		path = {
+            leads_to_tech = steel_working
+            research_cost_coeff = 1
+        }
+		
+		folder = {
+			name = landcombat_folder
+		
+			position = {
+				x = 5
+				y = 13
+			}
+		}
+		categories = {
+			tribal_tech
+			infantry_tech
+            melee_equipment
+			heavy_melee_equipment
+        }
+	}
+	
+	steel_working = {
+		research_cost = 1
+		start_year = 618
+		
+		category_light_infantry = {
+			soft_attack = 0.03
+		}
+		
+		enable_building = {
+            building = forge
+            level = 2
+        }
+		
+		path = {
+            leads_to_tech = fullered_blades
+            research_cost_coeff = 1
+        }
+		
+		folder = {
+			name = landcombat_folder
+		
+			position = {
+				x = 5
+				y = 16
+			}
+		}
+		categories = {
+			tribal_tech
+			infantry_tech
+            melee_equipment
+			heavy_melee_equipment
+        }
+	}
+	
+	fullered_blades = {
+		research_cost = 1
+		start_year = 627
+		
+		category_light_infantry = {
+			soft_attack = 0.02
+		}
+		
+		path = {
+            leads_to_tech = peasant_levy
+            research_cost_coeff = 1
+        }
+		
+		folder = {
+			name = landcombat_folder
+		
+			position = {
+				x = 5
+				y = 19
+			}
+		}
+		categories = {
+			tribal_tech
+			infantry_tech
+            melee_equipment
+			heavy_melee_equipment
+        }
+	}
+	
+	peasant_levy = {
+		research_cost = 1
+		start_year = 635
+		
+		enable_subunits = {
+			men_at_arms
+		}
+		
+		conscription = 0.002
+		
+		path = {
+            leads_to_tech = mail_hauberks
+            research_cost_coeff = 1
+        }
+		
+		folder = {
+			name = landcombat_folder
+		
+			position = {
+				x = 5
+				y = 22
+			}
+		}
+		categories = {
+			tribal_tech
+			infantry_tech
+        }
+	}
+	
+	mail_hauberks = {
+		research_cost = 1
+		start_year = 650
+		
+		enable_subunits = {
+			swordsmen
+		}
+		
+		path = {
+            leads_to_tech = armoured_leather
+            research_cost_coeff = 1
+        }
+		
+		dependencies = {
+            gambesons = 1
+			peasant_levy = 1
+        }
+		
+		folder = {
+			name = landcombat_folder
+		
+			position = {
+				x = 5
+				y = 25
+			}
+		}
+		categories = {
+			tribal_tech
+			infantry_tech
+			melee_equipment
+			heavy_melee_equipment
+        }
+	}
+	
+	improved_woodworking = {
+		research_cost = 1
+		start_year = 609
+		
+		enable_equipments = {
+			ranged_equipment_0
+		}
+		
+		enable_subunits = {
+			archer_shortbow
+		}
+		
+		path = {
+            leads_to_tech = recurve_bow
+            research_cost_coeff = 1
+        }
+		
+		folder = {
+			name = landcombat_folder
+		
+			position = {
+				x = 7
+				y = 13
+			}
+		}
+		categories = {
+			tribal_tech
+			ranged_tech
+			light_ranged_equipment
+        }
+	}
+	
+	recurve_bow = {
+		research_cost = 1
+		start_year = 627
+		
+		archer_shortbow = {
+			hard_attack = 0.03
+		}
+		
+		path = {
+            leads_to_tech = broadhead_arrows
+            research_cost_coeff = 1
+        }
+		
+		folder = {
+			name = landcombat_folder
+		
+			position = {
+				x = 7
+				y = 19
+			}
+		}
+		categories = {
+			tribal_tech
+			ranged_tech
+			light_ranged_equipment
+        }
+	}
+	
+	broadhead_arrows = {
+		research_cost = 1
+		start_year = 635
+		
+		archer_shortbow = {
+			soft_attack = 0.03
+		}
+		
+		path = {
+            leads_to_tech = bodkin_arrows
+            research_cost_coeff = 1
+        }
+		
+		folder = {
+			name = landcombat_folder
+		
+			position = {
+				x = 7
+				y = 25
+			}
+		}
+		categories = {
+			tribal_tech
+			ranged_tech
+			light_ranged_equipment
+        }
+	}
+	
+	horseback_riding = {
+		research_cost = 1
+		start_year = 600
+		
+		enable_equipments = {
+			light_cavalry_equipment_0
+		}
+		
+		path = {
+            leads_to_tech = mounted_warriors
+            research_cost_coeff = 1
+        }
+		
+		folder = {
+			name = landcombat_folder
+		
+			position = {
+				x = 12
+				y = 9
+			}
+		}
+		categories = {
+			tribal_tech
+			cavalry_tech
+			light_cavalry_equipment
+        }
+	}
+	
+	mounted_warriors = {
+		research_cost = 1
+		start_year = 600
+		
+		enable_subunits = {
+			horsemen
+		}
+		
+		path = {
+            leads_to_tech = saddles
+            research_cost_coeff = 1
+        }
+		
+		path = {
+            leads_to_tech = stirrups
+            research_cost_coeff = 1
+        }
+		
+		folder = {
+			name = landcombat_folder
+		
+			position = {
+				x = 12
+				y = 14
+			}
+		}
+		categories = {
+			tribal_tech
+			cavalry_tech
+			light_cavalry_equipment
+        }
+	}
+	
+	saddles = {
+		research_cost = 1
+		start_year = 600
+		
+		horsemen = {
+			max_organisation = 1
+		}
+		
+		path = {
+            leads_to_tech = cavalry_lances
+            research_cost_coeff = 1
+        }
+		
+		folder = {
+			name = landcombat_folder
+		
+			position = {
+				x = 11
+				y = 17
+			}
+		}
+		categories = {
+			tribal_tech
+			cavalry_tech
+			light_cavalry_equipment
+        }
+	}
+	
+	stirrups = {
+		research_cost = 1
+		start_year = 600
+		
+		horsemen = {
+			default_morale = 0.03
+		}
+		
+		path = {
+            leads_to_tech = cavalry_lances
+            research_cost_coeff = 1
+        }
+		
+		folder = {
+			name = landcombat_folder
+		
+			position = {
+				x = 13
+				y = 17
+			}
+		}
+		categories = {
+			tribal_tech
+			cavalry_tech
+			light_cavalry_equipment
+        }
+	}
+	
+	cavalry_lances = {
+		research_cost = 1
+		start_year = 600
+		
+		horsemen = {
+			soft_attack = 0.03
+			breakthrough = 0.02
+		}
+		
+		path = {
+            leads_to_tech = flanking_tactics
+            research_cost_coeff = 1
+        }
+		
+		path = {
+            leads_to_tech = skirmish_tactics
+            research_cost_coeff = 1
+        }
+		
+		folder = {
+			name = landcombat_folder
+		
+			position = {
+				x = 12
+				y = 20
+			}
+		}
+		categories = {
+			tribal_tech
+			cavalry_tech
+			light_cavalry_equipment
+        }
+	}
+	
+	flanking_tactics = {
+		research_cost = 1
+		start_year = 600
+		
+		enable_tactic = tactic_outflank
+		
+		path = {
+            leads_to_tech = light_cavalry
+            research_cost_coeff = 1
+        }
+		
+		folder = {
+			name = landcombat_folder
+		
+			position = {
+				x = 11
+				y = 25
+			}
+		}
+		categories = {
+			tribal_tech
+			cavalry_tech
+			tactics_tech
+        }
+	}
+	
+	skirmish_tactics = {
+		research_cost = 1
+		start_year = 600
+		
+		enable_tactic = tactic_harry
+		
+		path = {
+            leads_to_tech = light_cavalry
+            research_cost_coeff = 1
+        }
+		
+		folder = {
+			name = landcombat_folder
+		
+			position = {
+				x = 13
+				y = 25
+			}
+		}
+		categories = {
+			tribal_tech
+			cavalry_tech
+			tactics_tech
+        }
+	}
+
+	scouting_parties = {
+		research_cost = 1
+		start_year = 609
+		
+		enable_subunits = {
+			scouts
+		}
+		
+		path = {
+            leads_to_tech = astrolabe
+            research_cost_coeff = 1
+        }
+		
+		folder = {
+			name = landcombat_folder
+		
+			position = {
+				x = 9
+				y = 6
+			}
+		}
+		categories = {
+			tribal_tech
+			support_tech
+			scout_tech
+        }
+	}
+	
+	astrolabe = {
+		research_cost = 1
+		start_year = 613
+		
+		category_recon = {
+			recon = 0.5
+		}
+		
+		path = {
+            leads_to_tech = compass
+            research_cost_coeff = 1
+        }
+		
+		folder = {
+			name = landcombat_folder
+		
+			position = {
+				x = 9
+				y = 13
+			}
+		}
+		categories = {
+			tribal_tech
+			support_tech
+			scout_tech
+        }
+	}
+	
+	compass = {
+		research_cost = 1
+		start_year = 635
+		
+		army_speed_factor = 0.02
+		
+		path = {
+            leads_to_tech = cartography
+            research_cost_coeff = 1
+        }
+		
+		folder = {
+			name = landcombat_folder
+		
+			position = {
+				x = 9
+				y = 20
+			}
+		}
+		categories = {
+			tribal_tech
+			support_tech
+			scout_tech
+        }
+	}
+	
+	cartography = {
+		research_cost = 1
+		start_year = 639
+		
+		planning_speed = 0.03
+		
+		folder = {
+			name = landcombat_folder
+		
+			position = {
+				x = 9
+				y = 25
+			}
+		}
+		categories = {
+			tribal_tech
+			support_tech
+			scout_tech
+        }
+	}
+	
+	###MEDIEVAL ERA TECH###
+	
+	armoured_leather = {
+		research_cost = 1
+		start_year = 645
+		
+		category_all_infantry = {
+			defense = 0.02
+			breakthrough = 0.02
+		}
+		
+		path = {
+            leads_to_tech = bastard_swords
+            research_cost_coeff = 1
+        }
+		
+		path = {
+			leads_to_tech = kite_shields
+			research_cost_coeff = 1
+		}
+		
+		folder = {
+			name = landcombat_folder
+		
+			position = {
+				x = 4
+				y = 30
+			}
+		}
+		categories = {
+			medieval_tech
+			infantry_tech
+			light_melee_equipment
+        }
+	}
+	
+	kite_shields = {
+		research_cost = 1
+		start_year = 648
+		
+		category_front_line = {
+			defense = 0.03
+			breakthrough = 0.03
+		}
+		
+		category_cavalry = {
+			defense = 0.03
+			breakthrough = 0.03
+		}
+		
+		path = {
+            leads_to_tech = bucklers
+            research_cost_coeff = 1
+        }
+		
+		path = {
+            leads_to_tech = arm_straps
+            research_cost_coeff = 1
+        }
+		
+		folder = {
+			name = landcombat_folder
+		
+			position = {
+				x = 2
+				y = 34
+			}
+		}
+		categories = {
+			medieval_tech
+			light_melee_equipment
+        }
+	}
+	
+	arm_straps = {
+		research_cost = 1
+		start_year = 650
+		
+		category_front_line = {
+			defense = 0.01
+			breakthrough = 0.01
+		}
+		
+		category_cavalry = {
+			defense = 0.01
+			breakthrough = 0.01
+		}
+		
+		folder = {
+			name = landcombat_folder
+		
+			position = {
+				x = 3
+				y = 36
+			}
+		}
+		categories = {
+			medieval_tech
+			light_melee_equipment
+        }
+	}
+	
+	bucklers = {
+		research_cost = 1
+		start_year = 652
+		
+		category_front_line = {
+			defense = 0.01
+			breakthrough = 0.01
+		}
+		
+		category_cavalry = {
+			defense = 0.01
+			breakthrough = 0.01
+		}
+		
+		path = {
+            leads_to_tech = heater_shields
+            research_cost_coeff = 1
+        }
+		
+		folder = {
+			name = landcombat_folder
+		
+			position = {
+				x = 2
+				y = 38
+			}
+		}
+		categories = {
+			medieval_tech
+			light_melee_equipment
+        }
+	}
+	
+	heater_shields = {
+		research_cost = 1
+		start_year = 659
+		
+		category_front_line = {
+			defense = 0.02
+			breakthrough = 0.02
+		}
+		
+		category_cavalry = {
+			defense = 0.02
+			breakthrough = 0.02
+		}
+		
+		path = {
+            leads_to_tech = pavises
+            research_cost_coeff = 1
+        }
+		
+		folder = {
+			name = landcombat_folder
+		
+			position = {
+				x = 2
+				y = 42
+			}
+		}
+		categories = {
+			medieval_tech
+			heavy_melee_equipment
+        }
+	}
+	
+	pavises = {
+		research_cost = 1
+		start_year = 703
+		
+		category_ranged_infantry = {
+			defense = 0.07
+			breakthrough = 0.07
+		}
+		
+		dependencies = {	
+			crossbow = 1
+		}
+		
+		folder = {
+			name = landcombat_folder
+		
+			position = {
+				x = 2
+				y = 50
+			}
+		}
+		categories = {
+			medieval_tech
+			ranged_tech
+			heavy_ranged_equipment
+        }
+	}
+	
+	bastard_swords = {
+		research_cost = 1
+		start_year = 657
+		
+		category_front_line = {
+			soft_attack = 0.04
+		}
+		
+		category_cavalry = {
+			soft_attack = 0.02
+		}
+		
+		path = {
+            leads_to_tech = great_helm
+            research_cost_coeff = 1
+        }
+		
+		folder = {
+			name = landcombat_folder
+		
+			position = {
+				x = 4
+				y = 34
+			}
+		}
+		categories = {
+			medieval_tech
+			infantry_tech
+			heavy_melee_equipment
+        }
+	}
+	
+	great_helm = {
+		research_cost = 1
+		start_year = 659
+		
+		category_front_line = {
+			defense = 0.03
+			breakthrough = 0.03
+		}
+		
+		category_cavalry = {
+			defense = 0.03
+			breakthrough = 0.03
+		}
+		
+		path = {
+            leads_to_tech = two_handed_swords
+            research_cost_coeff = 1
+        }
+		
+		path = {
+            leads_to_tech = winged_helm
+            research_cost_coeff = 1
+        }
+		
+		folder = {
+			name = landcombat_folder
+		
+			position = {
+				x = 4
+				y = 38
+			}
+		}
+		categories = {
+			medieval_tech
+			infantry_tech
+			heavy_melee_equipment
+        }
+	}
+	
+	winged_helm = {
+		research_cost = 1
+		start_year = 662
+		
+		swordsmen = {
+			max_organisation = 2
+			default_morale = 0.03
+		}
+		halberdier = {
+			max_organisation = 2
+			default_morale = 0.03
+		}
+		heavy_cavalry = {
+			max_organisation = 2
+			default_morale = 0.03
+		}
+		
+		folder = {
+			name = landcombat_folder
+		
+			position = {
+				x = 5
+				y = 40
+			}
+		}
+		categories = {
+			medieval_tech
+			infantry_tech
+			heavy_melee_equipment
+        }
+	}
+	
+	two_handed_swords = {
+		research_cost = 1
+		start_year = 665
+		
+		swordsmen = {
+			soft_attack = 0.07
+		}
+		
+		path = {
+            leads_to_tech = plate_armour
+            research_cost_coeff = 1
+        }
+		
+		folder = {
+			name = landcombat_folder
+		
+			position = {
+				x = 4
+				y = 46
+			}
+		}
+		categories = {
+			medieval_tech
+			infantry_tech
+			heavy_melee_equipment
+        }
+	}
+	
+	plate_armour = {
+		research_cost = 1
+		start_year = 682
+		
+		heavy_cavalry = {
+			defense = 0.1
+			breakthrough = 0.1
+		}
+		enable_building = {
+            building = forge
+            level = 3
+        }
+		
+		folder = {
+			name = landcombat_folder
+		
+			position = {
+				x = 4
+				y = 50
+			}
+		}
+		categories = {
+			medieval_tech
+			infantry_tech
+			heavy_melee_equipment
+        }
+	}
+	
+	bodkin_arrows = {
+		research_cost = 1
+		start_year = 645
+		
+		archer_shortbow = {
+			hard_attack = 0.07
+		}
+		
+		path = {
+            leads_to_tech = longbow
+            research_cost_coeff = 1
+        }
+		
+		path = {
+            leads_to_tech = crossbow
+            research_cost_coeff = 1
+        }
+		
+		folder = {
+			name = landcombat_folder
+		
+			position = {
+				x = 7
+				y = 30
+			}
+		}
+		categories = {
+			medieval_tech
+			ranged_tech
+			light_ranged_equipment
+        }
+	}
+	
+	longbow = {
+		research_cost = 1
+		start_year = 670
+		
+		enable_equipments = {
+			ranged_equipment_1
+		}
+		
+		enable_subunits = {
+			archer_longbow
+		}
+		
+		path = {
+            leads_to_tech = quiver
+            research_cost_coeff = 1
+        }
+		
+		folder = {
+			name = landcombat_folder
+		
+			position = {
+				x = 7
+				y = 34
+			}
+		}
+		categories = {
+			medieval_tech
+			ranged_tech
+			light_ranged_equipment
+        }
+	}
+	
+	quiver = {
+		research_cost = 1
+		start_year = 672
+		
+		category_archers = {
+			soft_attack = 0.02
+		}
+		
+		path = {
+            leads_to_tech = bracers
+            research_cost_coeff = 1
+        }
+		
+		folder = {
+			name = landcombat_folder
+		
+			position = {
+				x = 7
+				y = 38
+			}
+		}
+		categories = {
+			medieval_tech
+			ranged_tech
+			light_ranged_equipment
+        }
+	}
+	
+	bracers = {
+		research_cost = 1
+		start_year = 681
+		
+		category_archers = {
+			defense = 0.03
+			breakthrough = 0.03
+		}
+		
+		path = {
+            leads_to_tech = composite_bow
+            research_cost_coeff = 1
+        }
+		
+		folder = {
+			name = landcombat_folder
+		
+			position = {
+				x = 7
+				y = 41
+			}
+		}
+		categories = {
+			medieval_tech
+			ranged_tech
+			light_ranged_equipment
+        }
+	}
+	
+	composite_bow = {
+		research_cost = 1
+		start_year = 703
+		
+		category_archers = {
+			hard_attack = 0.03
+		}
+		
+		folder = {
+			name = landcombat_folder
+		
+			position = {
+				x = 7
+				y = 44
+			}
+		}
+		categories = {
+			medieval_tech
+			ranged_tech
+			light_ranged_equipment
+        }
+	}
+	
+	crossbow = {
+		research_cost = 1
+		start_year = 681
+		
+		enable_equipments = {
+			crossbow_equipment_0
+		}
+		
+		enable_subunits = {
+			arbalists
+		}
+		
+		path = {
+            leads_to_tech = arbalest
+            research_cost_coeff = 1
+        }
+		
+		folder = {
+			name = landcombat_folder
+		
+			position = {
+				x = 9
+				y = 36
+			}
+		}
+		categories = {
+			medieval_tech
+			ranged_tech
+			light_ranged_equipment
+        }
+	}
+	
+	arbalest = {
+		research_cost = 1
+		start_year = 690
+		
+		arbalists = {
+			soft_attack = 0.03
+			hard_attack = 0.03
+		}
+		
+		path = {
+            leads_to_tech = composite_crossbow
+            research_cost_coeff = 1
+        }
+		
+		folder = {
+			name = landcombat_folder
+		
+			position = {
+				x = 9
+				y = 40
+			}
+		}
+		categories = {
+			medieval_tech
+			ranged_tech
+			light_ranged_equipment
+        }
+	}
+	
+	composite_crossbow = {
+		research_cost = 1
+		start_year = 703
+		
+		arbalists = {
+			defense = 0.03
+			breakthrough = 0.03
+		}
+		
+		path = {
+            leads_to_tech = rolling_nut_lock
+            research_cost_coeff = 1
+        }
+		
+		path = {
+            leads_to_tech = standardized_gears
+            research_cost_coeff = 1
+        }
+		
+		folder = {
+			name = landcombat_folder
+		
+			position = {
+				x = 9
+				y = 44
+			}
+		}
+		categories = {
+			medieval_tech
+			ranged_tech
+			light_ranged_equipment
+        }
+	}
+	
+	rolling_nut_lock = {
+		research_cost = 1
+		start_year = 705
+		
+		arbalists = {
+			soft_attack = 0.03
+			hard_attack = 0.03
+		}
+		
+		path = {
+            leads_to_tech = repeating_crossbow
+            research_cost_coeff = 1
+        }
+		
+		folder = {
+			name = landcombat_folder
+		
+			position = {
+				x = 8
+				y = 47
+			}
+		}
+		categories = {
+			medieval_tech
+			ranged_tech
+			light_ranged_equipment
+        }
+	}
+	
+	standardized_gears = {
+		research_cost = 1
+		start_year = 705
+		
+		on_research_complete = {
+			add_ideas = TECH_standardized_gears
+		}
+		
+		path = {
+            leads_to_tech = repeating_crossbow
+            research_cost_coeff = 1
+        }
+		
+		folder = {
+			name = landcombat_folder
+		
+			position = {
+				x = 10
+				y = 47
+			}
+		}
+		categories = {
+			medieval_tech
+			ranged_tech
+			light_ranged_equipment
+        }
+	}
+	
+	repeating_crossbow = {
+		research_cost = 1
+		start_year = 732
+		
+		arbalists = {
+			soft_attack = 0.1
+		}
+		
+		folder = {
+			name = landcombat_folder
+		
+			position = {
+				x = 9
+				y = 49
+			}
+		}
+		categories = {
+			medieval_tech
+			ranged_tech
+			light_ranged_equipment
+        }
+	}
+	
+	light_cavalry = {
+		research_cost = 1
+		start_year = 645
+		
+		enable_subunits = {
+			light_cavalry
+		}
+		
+		path = {
+            leads_to_tech = feints
+            research_cost_coeff = 1
+        }
+		
+		folder = {
+			name = landcombat_folder
+		
+			position = {
+				x = 12
+				y = 29
+			}
+		}
+		categories = {
+			medieval_tech
+			cavalry_tech
+			light_cavalry_equipment
+        }
+	}
+	
+	feints = {
+		research_cost = 1
+		start_year = 650
+		
+		enable_tactic = tactic_feint
+		
+		path = {
+            leads_to_tech = war_bred_steeds
+            research_cost_coeff = 1
+        }
+		
+		folder = {
+			name = landcombat_folder
+		
+			position = {
+				x = 12
+				y = 32
+			}
+		}
+		categories = {
+			medieval_tech
+			cavalry_tech
+			tactics_tech
+        }
+	}
+	
+	war_bred_steeds = {
+		research_cost = 1
+		start_year = 650
+		
+		category_cavalry = {
+			maximum_speed = 0.05
+		}
+		
+		path = {
+            leads_to_tech = mounted_knights
+            research_cost_coeff = 1
+        }
+		
+		folder = {
+			name = landcombat_folder
+		
+			position = {
+				x = 12
+				y = 35
+			}
+		}
+		categories = {
+			medieval_tech
+			cavalry_tech
+			light_cavalry_equipment
+        }
+	}
+	
+	mounted_knights = {
+		research_cost = 1
+		start_year = 665
+		
+		enable_equipments = {
+			heavy_cavalry_equipment_0
+		}
+		
+		enable_subunits = {
+			heavy_cavalry
+		}
+		
+		path = {
+            leads_to_tech = heavy_lance
+            research_cost_coeff = 1
+        }
+		
+		path = {
+			leads_to_tech = high_backed_saddle
+			research_cost_coeff = 1
+		}
+		
+		dependencies = {
+			plate_armour = 1
+		}
+		
+		folder = {
+			name = landcombat_folder
+		
+			position = {
+				x = 12
+				y = 38
+			}
+		}
+		categories = {
+			medieval_tech
+			cavalry_tech
+			heavy_cavalry_equipment
+        }
+	}
+	
+	heavy_lance = {
+		research_cost = 1
+		start_year = 672
+		
+		heavy_cavalry = {
+			soft_attack = 0.07
+			hard_attack = 0.07
+		}
+		
+		path = {
+            leads_to_tech = cavalry_charge
+            research_cost_coeff = 1
+        }
+		
+		folder = {
+			name = landcombat_folder
+		
+			position = {
+				x = 11
+				y = 42
+			}
+		}
+		categories = {
+			medieval_tech
+			cavalry_tech
+			heavy_cavalry_equipment
+        }
+	}
+	
+	high_backed_saddle = {
+		research_cost = 1
+		start_year = 672
+		
+		category_cavalry = {
+			defense = 0.05
+			breakthrough = 0.05
+		}
+		
+		path = {
+            leads_to_tech = cavalry_charge
+            research_cost_coeff = 1
+        }
+		
+		folder = {
+			name = landcombat_folder
+		
+			position = {
+				x = 13
+				y = 42
+			}
+		}
+		categories = {
+			medieval_tech
+			cavalry_tech
+			heavy_cavalry_equipment
+        }
+	}
+	
+	cavalry_charge = {
+		research_cost = 1
+		start_year = 675
+		
+		enable_tactic = tactic_cavalry_charge
+		
+		path = {
+            leads_to_tech = wedge_formations
+            research_cost_coeff = 1
+        }
+		
+		folder = {
+			name = landcombat_folder
+		
+			position = {
+				x = 12
+				y = 44
+			}
+		}
+		categories = {
+			medieval_tech
+			cavalry_tech
+			tactics_tech
+        }
+	}
+	
+	wedge_formations = {
+		research_cost = 1
+		start_year = 680
+		
+		enable_tactic = tactic_cavalry_wedge
+		
+		path = {
+            leads_to_tech = shock_tactics
+            research_cost_coeff = 1
+        }
+		
+		folder = {
+			name = landcombat_folder
+		
+			position = {
+				x = 12
+				y = 47
+			}
+		}
+		categories = {
+			medieval_tech
+			cavalry_tech
+			tactics_tech
+        }
+	}
+	
+	shock_tactics = {
+		research_cost = 1
+		start_year = 685
+		
+		enable_tactic = tactic_cavalry_shock
+		
+		folder = {
+			name = landcombat_folder
+		
+			position = {
+				x = 12
+				y = 50
+			}
+		}
+		categories = {
+			medieval_tech
+			cavalry_tech
+			tactics_tech
+        }
+	}
+	
+	#UNIQUE TECHS
+	
+	ogre_warriors = {
+		
+		allow = {
+			always = no
+		}
+
+		research_cost = 1
+		start_year = 887
+
+		enable_subunits = {
+			ogre_warriors
+		}
+	}
+	
+	dwarven_warriors = {
+		
+		allow = {
+			always = no
+		}
+
+		research_cost = 1
+		start_year = 887
+
+		enable_subunits = {
+			dwarven_warriors
+		}
+	}
+	
+	perkav_raiders = {
+	
+		allow = {
+			always = no
+		}
+
+		research_cost = 1
+		start_year = 887
+
+		enable_subunits = {
+			perkav_raiders
+		}
+	}
+	
+	freiprinz_uniform_polearms = {
+		
+		allow = {
+			always = no
+		}
+
+		research_cost = 1
+		start_year = 887
+
+		halberdier = {
+			breakthrough = 0.05
+		}
+	}
+	
+	freiprinz_tag_im_monat_manner = {
+		
+		allow = {
+			always = no
+		}
+
+		research_cost = 1
+		start_year = 887
+
+		men_at_arms = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+			defense = 0.05
+		}
+	}
+}

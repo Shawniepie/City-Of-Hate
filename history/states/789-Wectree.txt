@@ -10,8 +10,8 @@ state={
 	history={
 		owner = TLA
 		buildings = {
-			infrastructure = 4
-			industrial_complex = 1
+			infrastructure = 5
+			workshop = 1
 		}
 		add_core_of = TLA
 	}

@@ -9,7 +9,8 @@ country_event = {#Elections
 	picture = GFX_report_event_military_planning
 	
 	trigger = {
-		date > 1938.03.07
+		tag = ARK
+		date > 888.03.07
 	}
 	
 	fire_only_once = yes
@@ -35,7 +36,7 @@ country_event = {#Elections
 		
 		STA = {
 			country_event = {
-				id = sta.8
+				id = sta.68
 				days = 5
 			}
 		}
@@ -93,7 +94,7 @@ country_event = {#Elections
 		
 		STA = {
 			country_event = {
-				id = sta.9
+				id = sta.69
 				days = 5
 			}
 		}

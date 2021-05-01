@@ -11,8 +11,9 @@ state={
 		victory_points = { 3139 10 }
 		owner = TLA
 		buildings = {
-			infrastructure = 3
+			infrastructure = 5
 			dockyard = 1
+			farm = 1
 		}
 		add_core_of = TLA
 	}

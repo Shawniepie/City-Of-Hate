@@ -12,8 +12,8 @@ state={
 		owner = IRI
 		buildings = {
 			infrastructure = 7
-			industrial_complex = 1
-			arms_factory = 2
+			workshop = 1
+			forge = 2
 			1501 = {
 				naval_base = 2
 			}

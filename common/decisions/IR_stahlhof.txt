@@ -1,3 +1,2537 @@
+STA_convince_freiprinzen = {
+	
+	STA_launch_civilwar = {
+		icon = GFX_decision_generic_prepare_civil_war
+		
+		allowed = {
+			tag = STA
+		}
+		
+		available = {
+			is_subject_of = UNG
+			has_completed_focus = STA_scare_the_faustburg_soldiers_into_submission
+			has_completed_focus = STA_the_priests_of_st_vichtlas
+			OR = {
+				has_completed_focus = STA_alliance_of_equals
+				has_completed_focus = STA_push_our_advantage
+			}
+		}
+		
+		visible = {
+			is_subject_of = UNG
+			tag = STA
+			NOT = {
+				has_country_flag = STA_started_civil_war
+			}
+		}
+		
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 0
+				has_war_with = ORD
+			}
+		}
+		
+		cost = 125
+		
+		complete_effect = {
+			set_country_flag = STA_started_civil_war
+			custom_effect_tooltip = STA_cast_die_tt
+		}
+	}
+	
+	STA_convince_HLZ = {
+		icon = GFX_decision_stahlhof_nationalism
+		
+		allowed = {
+			tag = STA
+		}
+		
+		available = {
+			is_subject_of = UNG
+			NOT = {
+				has_country_flag = STA_already_convincing_someone
+			}
+			HLZ = {
+				is_subject_of = UNG
+			}
+		}
+		
+		visible = {
+			is_subject_of = UNG
+			tag = STA
+			NOT = {
+				has_country_flag = STA_civil_war_started
+			}
+		}
+		
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				add = 5
+				AND = {
+					HLZ = {
+						check_variable = {
+							var = FPT_union_loyalty
+							value = var:FPT_stahlhof_loyalty
+							compare = equals
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+			modifier = {
+				add = 5
+				AND = {
+					HLZ = {
+						check_variable = {
+							var = FPT_union_loyalty
+							value = var:FPT_stahlhof_loyalty
+							compare = greater_than
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+		}
+		
+		cost = var:HLZ.FPT_small_loyalty_cost
+		
+		days_remove = 15
+		
+		complete_effect = {
+			set_country_flag = STA_already_convincing_someone
+		}
+		
+		remove_effect = {
+			clr_country_flag = STA_already_convincing_someone
+			add_to_variable = {
+				var = HLZ.FPT_stahlhof_loyalty
+				value = 1
+			}
+			HLZ = {
+				custom_effect_tooltip = FPT_increase_stahlhof_loyalty_small_tt
+			}
+			set_country_flag = {
+				flag = recently_convinced_freiprinz
+				days = 50
+			}
+		}
+	}
+	
+	STA_convince_HLZ_ii = {
+		icon = GFX_decision_stahlhof_nationalism
+		
+		allowed = {
+			tag = STA
+		}
+		
+		available = {
+			is_subject_of = UNG
+			NOT = {
+				has_country_flag = STA_already_convincing_someone
+			}
+			HLZ = {
+				is_subject_of = UNG
+			}
+		}
+		
+		visible = {
+			is_subject_of = UNG
+			tag = STA
+			NOT = {
+				has_country_flag = STA_civil_war_started
+			}
+		}
+		
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				add = 5
+				AND = {
+					HLZ = {
+						check_variable = {
+							var = FPT_union_loyalty
+							value = var:FPT_stahlhof_loyalty
+							compare = equals
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+			modifier = {
+				add = 5
+				AND = {
+					HLZ = {
+						check_variable = {
+							var = FPT_union_loyalty
+							value = var:FPT_stahlhof_loyalty
+							compare = greater_than
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+		}
+		
+		cost = var:HLZ.FPT_medium_loyalty_cost
+		
+		days_remove = 30
+		
+		complete_effect = {
+			set_country_flag = STA_already_convincing_someone
+		}
+		
+		remove_effect = {
+			clr_country_flag = STA_already_convincing_someone
+			add_to_variable = {
+				var = HLZ.FPT_stahlhof_loyalty
+				value = 3
+			}
+			HLZ = {
+				custom_effect_tooltip = FPT_increase_stahlhof_loyalty_tt
+			}
+			set_country_flag = {
+				flag = recently_convinced_freiprinz
+				days = 75
+			}
+		}
+	}
+	
+	STA_convince_HLZ_iii = {
+		icon = GFX_decision_stahlhof_nationalism
+		
+		allowed = {
+			tag = STA
+		}
+		
+		available = {
+			is_subject_of = UNG
+			NOT = {
+				has_country_flag = STA_already_convincing_someone
+			}
+			HLZ = {
+				is_subject_of = UNG
+			}
+		}
+		
+		visible = {
+			is_subject_of = UNG
+			tag = STA
+			NOT = {
+				has_country_flag = STA_civil_war_started
+			}
+		}
+		
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				add = 5
+				AND = {
+					HLZ = {
+						check_variable = {
+							var = FPT_union_loyalty
+							value = var:FPT_stahlhof_loyalty
+							compare = equals
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+			modifier = {
+				add = 5
+				AND = {
+					HLZ = {
+						check_variable = {
+							var = FPT_union_loyalty
+							value = var:FPT_stahlhof_loyalty
+							compare = greater_than
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+		}
+		
+		cost = var:HLZ.FPT_big_loyalty_cost
+		
+		days_remove = 50
+		
+		complete_effect = {
+			set_country_flag = STA_already_convincing_someone
+		}
+		
+		remove_effect = {
+			clr_country_flag = STA_already_convincing_someone
+			add_to_variable = {
+				var = HLZ.FPT_stahlhof_loyalty
+				value = 5
+			}
+			HLZ = {
+				custom_effect_tooltip = FPT_increase_stahlhof_loyalty_large_tt
+			}
+			set_country_flag = {
+				flag = recently_convinced_freiprinz
+				days = 100
+			}
+		}
+	}
+	
+	STA_convince_NOC = {
+		icon = GFX_decision_stahlhof_nationalism
+		
+		allowed = {
+			tag = STA
+		}
+		
+		available = {
+			is_subject_of = UNG
+			NOT = {
+				has_country_flag = STA_already_convincing_someone
+			}
+			NOC = {
+				is_subject_of = UNG
+			}
+		}
+		
+		visible = {
+			is_subject_of = UNG
+			tag = STA
+			NOT = {
+				has_country_flag = STA_civil_war_started
+			}
+		}
+		
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				add = 5
+				AND = {
+					NOC = {
+						check_variable = {
+							var = FPT_union_loyalty
+							value = var:FPT_stahlhof_loyalty
+							compare = equals
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+			modifier = {
+				add = 5
+				AND = {
+					NOC = {
+						check_variable = {
+							var = FPT_union_loyalty
+							value = var:FPT_stahlhof_loyalty
+							compare = greater_than
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+		}
+		
+		cost = var:NOC.FPT_small_loyalty_cost
+		
+		days_remove = 15
+		
+		complete_effect = {
+			set_country_flag = STA_already_convincing_someone
+		}
+		
+		remove_effect = {
+			clr_country_flag = STA_already_convincing_someone
+			add_to_variable = {
+				var = NOC.FPT_stahlhof_loyalty
+				value = 1
+			}
+			NOC = {
+				custom_effect_tooltip = FPT_increase_stahlhof_loyalty_small_tt
+			}
+			set_country_flag = {
+				flag = recently_convinced_freiprinz
+				days = 50
+			}
+		}
+	}
+	
+	STA_convince_NOC_ii = {
+		icon = GFX_decision_stahlhof_nationalism
+		
+		allowed = {
+			tag = STA
+		}
+		
+		available = {
+			is_subject_of = UNG
+			NOT = {
+				has_country_flag = STA_already_convincing_someone
+			}
+			NOC = {
+				is_subject_of = UNG
+			}
+		}
+		
+		visible = {
+			is_subject_of = UNG
+			tag = STA
+			NOT = {
+				has_country_flag = STA_civil_war_started
+			}
+		}
+		
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				add = 5
+				AND = {
+					NOC = {
+						check_variable = {
+							var = FPT_union_loyalty
+							value = var:FPT_stahlhof_loyalty
+							compare = equals
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+			modifier = {
+				add = 5
+				AND = {
+					NOC = {
+						check_variable = {
+							var = FPT_union_loyalty
+							value = var:FPT_stahlhof_loyalty
+							compare = greater_than
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+		}
+		
+		cost = var:NOC.FPT_medium_loyalty_cost
+		
+		days_remove = 30
+		
+		complete_effect = {
+			set_country_flag = STA_already_convincing_someone
+		}
+		
+		remove_effect = {
+			clr_country_flag = STA_already_convincing_someone
+			add_to_variable = {
+				var = NOC.FPT_stahlhof_loyalty
+				value = 3
+			}
+			NOC = {
+				custom_effect_tooltip = FPT_increase_stahlhof_loyalty_tt
+			}
+			set_country_flag = {
+				flag = recently_convinced_freiprinz
+				days = 75
+			}
+		}
+	}
+	
+	STA_convince_NOC_iii = {
+		icon = GFX_decision_stahlhof_nationalism
+		
+		allowed = {
+			tag = STA
+		}
+		
+		available = {
+			is_subject_of = UNG
+			NOT = {
+				has_country_flag = STA_already_convincing_someone
+			}
+			NOC = {
+				is_subject_of = UNG
+			}
+		}
+		
+		visible = {
+			is_subject_of = UNG
+			tag = STA
+			NOT = {
+				has_country_flag = STA_civil_war_started
+			}
+		}
+		
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				add = 5
+				AND = {
+					NOC = {
+						check_variable = {
+							var = FPT_union_loyalty
+							value = var:FPT_stahlhof_loyalty
+							compare = equals
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+			modifier = {
+				add = 5
+				AND = {
+					NOC = {
+						check_variable = {
+							var = FPT_union_loyalty
+							value = var:FPT_stahlhof_loyalty
+							compare = greater_than
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+		}
+		
+		cost = var:NOC.FPT_big_loyalty_cost
+		
+		days_remove = 50
+		
+		complete_effect = {
+			set_country_flag = STA_already_convincing_someone
+		}
+		
+		remove_effect = {
+			clr_country_flag = STA_already_convincing_someone
+			add_to_variable = {
+				var = NOC.FPT_stahlhof_loyalty
+				value = 5
+			}
+			NOC = {
+				custom_effect_tooltip = FPT_increase_stahlhof_loyalty_large_tt
+			}
+			set_country_flag = {
+				flag = recently_convinced_freiprinz
+				days = 100
+			}
+		}
+	}
+	
+	STA_convince_NRK = {
+		icon = GFX_decision_stahlhof_nationalism
+		
+		allowed = {
+			tag = STA
+		}
+		
+		available = {
+			is_subject_of = UNG
+			NOT = {
+				has_country_flag = STA_already_convincing_someone
+			}
+			NRK = {
+				is_subject_of = UNG
+			}
+		}
+		
+		visible = {
+			is_subject_of = UNG
+			tag = STA
+			NOT = {
+				has_country_flag = STA_civil_war_started
+			}
+		}
+		
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				add = 5
+				AND = {
+					NRK = {
+						check_variable = {
+							var = FPT_union_loyalty
+							value = var:FPT_stahlhof_loyalty
+							compare = equals
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+			modifier = {
+				add = 5
+				AND = {
+					NRK = {
+						check_variable = {
+							var = FPT_union_loyalty
+							value = var:FPT_stahlhof_loyalty
+							compare = greater_than
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+		}
+		
+		cost = var:NRK.FPT_small_loyalty_cost
+		
+		days_remove = 15
+		
+		complete_effect = {
+			set_country_flag = STA_already_convincing_someone
+		}
+		
+		remove_effect = {
+			clr_country_flag = STA_already_convincing_someone
+			add_to_variable = {
+				var = NRK.FPT_stahlhof_loyalty
+				value = 1
+			}
+			NRK = {
+				custom_effect_tooltip = FPT_increase_stahlhof_loyalty_small_tt
+			}
+			set_country_flag = {
+				flag = recently_convinced_freiprinz
+				days = 50
+			}
+		}
+	}
+	
+	STA_convince_NRK_ii = {
+		icon = GFX_decision_stahlhof_nationalism
+		
+		allowed = {
+			tag = STA
+		}
+		
+		available = {
+			is_subject_of = UNG
+			NOT = {
+				has_country_flag = STA_already_convincing_someone
+			}
+			NRK = {
+				is_subject_of = UNG
+			}
+		}
+		
+		visible = {
+			is_subject_of = UNG
+			tag = STA
+			NOT = {
+				has_country_flag = STA_civil_war_started
+			}
+		}
+		
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				add = 5
+				AND = {
+					NRK = {
+						check_variable = {
+							var = FPT_union_loyalty
+							value = var:FPT_stahlhof_loyalty
+							compare = equals
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+			modifier = {
+				add = 5
+				AND = {
+					NRK = {
+						check_variable = {
+							var = FPT_union_loyalty
+							value = var:FPT_stahlhof_loyalty
+							compare = greater_than
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+		}
+		
+		cost = var:NRK.FPT_medium_loyalty_cost
+		
+		days_remove = 30
+		
+		complete_effect = {
+			set_country_flag = STA_already_convincing_someone
+		}
+		
+		remove_effect = {
+			clr_country_flag = STA_already_convincing_someone
+			add_to_variable = {
+				var = NRK.FPT_stahlhof_loyalty
+				value = 3
+			}
+			NRK = {
+				custom_effect_tooltip = FPT_increase_stahlhof_loyalty_tt
+			}
+			set_country_flag = {
+				flag = recently_convinced_freiprinz
+				days = 75
+			}
+		}
+	}
+	
+	STA_convince_NRK_iii = {
+		icon = GFX_decision_stahlhof_nationalism
+		
+		allowed = {
+			tag = STA
+		}
+		
+		available = {
+			is_subject_of = UNG
+			NOT = {
+				has_country_flag = STA_already_convincing_someone
+			}
+			NRK = {
+				is_subject_of = UNG
+			}
+		}
+		
+		visible = {
+			is_subject_of = UNG
+			tag = STA
+			NOT = {
+				has_country_flag = STA_civil_war_started
+			}
+		}
+		
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				add = 5
+				AND = {
+					NRK = {
+						check_variable = {
+							var = FPT_union_loyalty
+							value = var:FPT_stahlhof_loyalty
+							compare = equals
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+			modifier = {
+				add = 5
+				AND = {
+					NRK = {
+						check_variable = {
+							var = FPT_union_loyalty
+							value = var:FPT_stahlhof_loyalty
+							compare = greater_than
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+		}
+		
+		cost = var:NRK.FPT_big_loyalty_cost
+		
+		days_remove = 50
+		
+		complete_effect = {
+			set_country_flag = STA_already_convincing_someone
+		}
+		
+		remove_effect = {
+			clr_country_flag = STA_already_convincing_someone
+			add_to_variable = {
+				var = NRK.FPT_stahlhof_loyalty
+				value = 5
+			}
+			NRK = {
+				custom_effect_tooltip = FPT_increase_stahlhof_loyalty_large_tt
+			}
+			set_country_flag = {
+				flag = recently_convinced_freiprinz
+				days = 100
+			}
+		}
+	}
+	
+	STA_convince_SPW = {
+		icon = GFX_decision_stahlhof_nationalism
+		
+		allowed = {
+			tag = STA
+		}
+		
+		available = {
+			is_subject_of = UNG
+			NOT = {
+				has_country_flag = STA_already_convincing_someone
+			}
+			SPW = {
+				is_subject_of = UNG
+			}
+		}
+		
+		visible = {
+			is_subject_of = UNG
+			tag = STA
+			NOT = {
+				has_country_flag = STA_civil_war_started
+			}
+		}
+		
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				add = 5
+				AND = {
+					SPW = {
+						check_variable = {
+							var = FPT_union_loyalty
+							value = var:FPT_stahlhof_loyalty
+							compare = equals
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+			modifier = {
+				add = 5
+				AND = {
+					SPW = {
+						check_variable = {
+							var = FPT_union_loyalty
+							value = var:FPT_stahlhof_loyalty
+							compare = greater_than
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+		}
+		
+		cost = var:SPW.FPT_small_loyalty_cost
+		
+		days_remove = 15
+		
+		complete_effect = {
+			set_country_flag = STA_already_convincing_someone
+		}
+		
+		remove_effect = {
+			clr_country_flag = STA_already_convincing_someone
+			add_to_variable = {
+				var = SPW.FPT_stahlhof_loyalty
+				value = 1
+			}
+			SPW = {
+				custom_effect_tooltip = FPT_increase_stahlhof_loyalty_small_tt
+			}
+			set_country_flag = {
+				flag = recently_convinced_freiprinz
+				days = 50
+			}
+		}
+	}
+	
+	STA_convince_SPW_ii = {
+		icon = GFX_decision_stahlhof_nationalism
+		
+		allowed = {
+			tag = STA
+		}
+		
+		available = {
+			is_subject_of = UNG
+			NOT = {
+				has_country_flag = STA_already_convincing_someone
+			}
+			SPW = {
+				is_subject_of = UNG
+			}
+		}
+		
+		visible = {
+			is_subject_of = UNG
+			tag = STA
+			NOT = {
+				has_country_flag = STA_civil_war_started
+			}
+		}
+		
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				add = 5
+				AND = {
+					SPW = {
+						check_variable = {
+							var = FPT_union_loyalty
+							value = var:FPT_stahlhof_loyalty
+							compare = equals
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+			modifier = {
+				add = 5
+				AND = {
+					SPW = {
+						check_variable = {
+							var = FPT_union_loyalty
+							value = var:FPT_stahlhof_loyalty
+							compare = greater_than
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+		}
+		
+		cost = var:SPW.FPT_medium_loyalty_cost
+		
+		days_remove = 30
+		
+		complete_effect = {
+			set_country_flag = STA_already_convincing_someone
+		}
+		
+		remove_effect = {
+			clr_country_flag = STA_already_convincing_someone
+			add_to_variable = {
+				var = SPW.FPT_stahlhof_loyalty
+				value = 3
+			}
+			SPW = {
+				custom_effect_tooltip = FPT_increase_stahlhof_loyalty_tt
+			}
+			set_country_flag = {
+				flag = recently_convinced_freiprinz
+				days = 75
+			}
+		}
+	}
+	
+	STA_convince_SPW_iii = {
+		icon = GFX_decision_stahlhof_nationalism
+		
+		allowed = {
+			tag = STA
+		}
+		
+		available = {
+			is_subject_of = UNG
+			NOT = {
+				has_country_flag = STA_already_convincing_someone
+			}
+			SPW = {
+				is_subject_of = UNG
+			}
+		}
+		
+		visible = {
+			is_subject_of = UNG
+			tag = STA
+			NOT = {
+				has_country_flag = STA_civil_war_started
+			}
+		}
+		
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				add = 5
+				AND = {
+					SPW = {
+						check_variable = {
+							var = FPT_union_loyalty
+							value = var:FPT_stahlhof_loyalty
+							compare = equals
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+			modifier = {
+				add = 5
+				AND = {
+					SPW = {
+						check_variable = {
+							var = FPT_union_loyalty
+							value = var:FPT_stahlhof_loyalty
+							compare = greater_than
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+		}
+		
+		cost = var:SPW.FPT_big_loyalty_cost
+		
+		days_remove = 50
+		
+		complete_effect = {
+			set_country_flag = STA_already_convincing_someone
+		}
+		
+		remove_effect = {
+			clr_country_flag = STA_already_convincing_someone
+			add_to_variable = {
+				var = SPW.FPT_stahlhof_loyalty
+				value = 5
+			}
+			SPW = {
+				custom_effect_tooltip = FPT_increase_stahlhof_loyalty_large_tt
+			}
+			set_country_flag = {
+				flag = recently_convinced_freiprinz
+				days = 100
+			}
+		}
+	}
+	
+	STA_convince_SVT = {
+		icon = GFX_decision_stahlhof_nationalism
+		
+		allowed = {
+			tag = STA
+		}
+		
+		available = {
+			is_subject_of = UNG
+			NOT = {
+				has_country_flag = STA_already_convincing_someone
+			}
+			SVT = {
+				is_subject_of = UNG
+			}
+		}
+		
+		visible = {
+			is_subject_of = UNG
+			tag = STA
+			NOT = {
+				has_country_flag = STA_civil_war_started
+			}
+		}
+		
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				add = 5
+				AND = {
+					SVT = {
+						check_variable = {
+							var = FPT_union_loyalty
+							value = var:FPT_stahlhof_loyalty
+							compare = equals
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+			modifier = {
+				add = 5
+				AND = {
+					SVT = {
+						check_variable = {
+							var = FPT_union_loyalty
+							value = var:FPT_stahlhof_loyalty
+							compare = greater_than
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+		}
+		
+		cost = var:SVT.FPT_small_loyalty_cost
+		
+		days_remove = 15
+		
+		complete_effect = {
+			set_country_flag = STA_already_convincing_someone
+		}
+		
+		remove_effect = {
+			clr_country_flag = STA_already_convincing_someone
+			add_to_variable = {
+				var = SVT.FPT_stahlhof_loyalty
+				value = 1
+			}
+			SVT = {
+				custom_effect_tooltip = FPT_increase_stahlhof_loyalty_small_tt
+			}
+			set_country_flag = {
+				flag = recently_convinced_freiprinz
+				days = 50
+			}
+		}
+	}
+	
+	STA_convince_SVT_ii = {
+		icon = GFX_decision_stahlhof_nationalism
+		
+		allowed = {
+			tag = STA
+		}
+		
+		available = {
+			is_subject_of = UNG
+			NOT = {
+				has_country_flag = STA_already_convincing_someone
+			}
+			SVT = {
+				is_subject_of = UNG
+			}
+		}
+		
+		visible = {
+			is_subject_of = UNG
+			tag = STA
+			NOT = {
+				has_country_flag = STA_civil_war_started
+			}
+		}
+		
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				add = 5
+				AND = {
+					SVT = {
+						check_variable = {
+							var = FPT_union_loyalty
+							value = var:FPT_stahlhof_loyalty
+							compare = equals
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+			modifier = {
+				add = 5
+				AND = {
+					SVT = {
+						check_variable = {
+							var = FPT_union_loyalty
+							value = var:FPT_stahlhof_loyalty
+							compare = greater_than
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+		}
+		
+		cost = var:SVT.FPT_medium_loyalty_cost
+		
+		days_remove = 30
+		
+		complete_effect = {
+			set_country_flag = STA_already_convincing_someone
+		}
+		
+		remove_effect = {
+			clr_country_flag = STA_already_convincing_someone
+			add_to_variable = {
+				var = SVT.FPT_stahlhof_loyalty
+				value = 3
+			}
+			SVT = {
+				custom_effect_tooltip = FPT_increase_stahlhof_loyalty_tt
+			}
+			set_country_flag = {
+				flag = recently_convinced_freiprinz
+				days = 75
+			}
+		}
+	}
+	
+	STA_convince_SVT_iii = {
+		icon = GFX_decision_stahlhof_nationalism
+		
+		allowed = {
+			tag = STA
+		}
+		
+		available = {
+			is_subject_of = UNG
+			NOT = {
+				has_country_flag = STA_already_convincing_someone
+			}
+			SVT = {
+				is_subject_of = UNG
+			}
+		}
+		
+		visible = {
+			is_subject_of = UNG
+			tag = STA
+			NOT = {
+				has_country_flag = STA_civil_war_started
+			}
+		}
+		
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				add = 5
+				AND = {
+					SVT = {
+						check_variable = {
+							var = FPT_union_loyalty
+							value = var:FPT_stahlhof_loyalty
+							compare = equals
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+			modifier = {
+				add = 5
+				AND = {
+					SVT = {
+						check_variable = {
+							var = FPT_union_loyalty
+							value = var:FPT_stahlhof_loyalty
+							compare = greater_than
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+		}
+		
+		cost = var:SVT.FPT_big_loyalty_cost
+		
+		days_remove = 50
+		
+		complete_effect = {
+			set_country_flag = STA_already_convincing_someone
+		}
+		
+		remove_effect = {
+			clr_country_flag = STA_already_convincing_someone
+			add_to_variable = {
+				var = SVT.FPT_stahlhof_loyalty
+				value = 5
+			}
+			SVT = {
+				custom_effect_tooltip = FPT_increase_stahlhof_loyalty_large_tt
+			}
+			set_country_flag = {
+				flag = recently_convinced_freiprinz
+				days = 100
+			}
+		}
+	}
+	
+	STA_convince_TEI = {
+		icon = GFX_decision_stahlhof_nationalism
+		
+		allowed = {
+			tag = STA
+		}
+		
+		available = {
+			is_subject_of = UNG
+			NOT = {
+				has_country_flag = STA_already_convincing_someone
+			}
+			TEI = {
+				is_subject_of = UNG
+			}
+		}
+		
+		visible = {
+			is_subject_of = UNG
+			tag = STA
+			NOT = {
+				has_country_flag = STA_civil_war_started
+			}
+		}
+		
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				add = 5
+				AND = {
+					TEI = {
+						check_variable = {
+							var = FPT_union_loyalty
+							value = var:FPT_stahlhof_loyalty
+							compare = equals
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+			modifier = {
+				add = 5
+				AND = {
+					TEI = {
+						check_variable = {
+							var = FPT_union_loyalty
+							value = var:FPT_stahlhof_loyalty
+							compare = greater_than
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+		}
+		
+		cost = var:TEI.FPT_small_loyalty_cost
+		
+		days_remove = 15
+		
+		complete_effect = {
+			set_country_flag = STA_already_convincing_someone
+		}
+		
+		remove_effect = {
+			clr_country_flag = STA_already_convincing_someone
+			add_to_variable = {
+				var = TEI.FPT_stahlhof_loyalty
+				value = 1
+			}
+			TEI = {
+				custom_effect_tooltip = FPT_increase_stahlhof_loyalty_small_tt
+			}
+			set_country_flag = {
+				flag = recently_convinced_freiprinz
+				days = 50
+			}
+		}
+	}
+	
+	STA_convince_TEI_ii = {
+		icon = GFX_decision_stahlhof_nationalism
+		
+		allowed = {
+			tag = STA
+		}
+		
+		available = {
+			is_subject_of = UNG
+			NOT = {
+				has_country_flag = STA_already_convincing_someone
+			}
+			TEI = {
+				is_subject_of = UNG
+			}
+		}
+		
+		visible = {
+			is_subject_of = UNG
+			tag = STA
+			NOT = {
+				has_country_flag = STA_civil_war_started
+			}
+		}
+		
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				add = 5
+				AND = {
+					TEI = {
+						check_variable = {
+							var = FPT_union_loyalty
+							value = var:FPT_stahlhof_loyalty
+							compare = equals
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+			modifier = {
+				add = 5
+				AND = {
+					TEI = {
+						check_variable = {
+							var = FPT_union_loyalty
+							value = var:FPT_stahlhof_loyalty
+							compare = greater_than
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+		}
+		
+		cost = var:TEI.FPT_medium_loyalty_cost
+		
+		days_remove = 30
+		
+		complete_effect = {
+			set_country_flag = STA_already_convincing_someone
+		}
+		
+		remove_effect = {
+			clr_country_flag = STA_already_convincing_someone
+			add_to_variable = {
+				var = TEI.FPT_stahlhof_loyalty
+				value = 3
+			}
+			TEI = {
+				custom_effect_tooltip = FPT_increase_stahlhof_loyalty_tt
+			}
+			set_country_flag = {
+				flag = recently_convinced_freiprinz
+				days = 75
+			}
+		}
+	}
+	
+	STA_convince_TEI_iii = {
+		icon = GFX_decision_stahlhof_nationalism
+		
+		allowed = {
+			tag = STA
+		}
+		
+		available = {
+			is_subject_of = UNG
+			NOT = {
+				has_country_flag = STA_already_convincing_someone
+			}
+			TEI = {
+				is_subject_of = UNG
+			}
+		}
+		
+		visible = {
+			is_subject_of = UNG
+			tag = STA
+			NOT = {
+				has_country_flag = STA_civil_war_started
+			}
+		}
+		
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				add = 5
+				AND = {
+					TEI = {
+						check_variable = {
+							var = FPT_union_loyalty
+							value = var:FPT_stahlhof_loyalty
+							compare = equals
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+			modifier = {
+				add = 5
+				AND = {
+					TEI = {
+						check_variable = {
+							var = FPT_union_loyalty
+							value = var:FPT_stahlhof_loyalty
+							compare = greater_than
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+		}
+		
+		cost = var:TEI.FPT_big_loyalty_cost
+		
+		days_remove = 50
+		
+		complete_effect = {
+			set_country_flag = STA_already_convincing_someone
+		}
+		
+		remove_effect = {
+			clr_country_flag = STA_already_convincing_someone
+			add_to_variable = {
+				var = TEI.FPT_stahlhof_loyalty
+				value = 5
+			}
+			TEI = {
+				custom_effect_tooltip = FPT_increase_stahlhof_loyalty_large_tt
+			}
+			set_country_flag = {
+				flag = recently_convinced_freiprinz
+				days = 100
+			}
+		}
+	}
+	
+	STA_convince_SNF = {
+		icon = GFX_decision_stahlhof_nationalism
+		
+		allowed = {
+			tag = STA
+		}
+		
+		available = {
+			is_subject_of = UNG
+			NOT = {
+				has_country_flag = STA_already_convincing_someone
+			}
+			SNF = {
+				is_subject_of = UNG
+			}
+		}
+		
+		visible = {
+			is_subject_of = UNG
+			tag = STA
+			NOT = {
+				has_country_flag = STA_civil_war_started
+			}
+		}
+		
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				add = 5
+				AND = {
+					SNF = {
+						check_variable = {
+							var = FPT_union_loyalty
+							value = var:FPT_stahlhof_loyalty
+							compare = equals
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+			modifier = {
+				add = 5
+				AND = {
+					SNF = {
+						check_variable = {
+							var = FPT_union_loyalty
+							value = var:FPT_stahlhof_loyalty
+							compare = greater_than
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+		}
+		
+		cost = var:SNF.FPT_small_loyalty_cost
+		
+		days_remove = 15
+		
+		complete_effect = {
+			set_country_flag = STA_already_convincing_someone
+		}
+		
+		remove_effect = {
+			clr_country_flag = STA_already_convincing_someone
+			add_to_variable = {
+				var = SNF.FPT_stahlhof_loyalty
+				value = 1
+			}
+			SNF = {
+				custom_effect_tooltip = FPT_increase_stahlhof_loyalty_small_tt
+			}
+			set_country_flag = {
+				flag = recently_convinced_freiprinz
+				days = 50
+			}
+		}
+	}
+	
+	STA_convince_SNF_ii = {
+		icon = GFX_decision_stahlhof_nationalism
+		
+		allowed = {
+			tag = STA
+		}
+		
+		available = {
+			is_subject_of = UNG
+			NOT = {
+				has_country_flag = STA_already_convincing_someone
+			}
+			SNF = {
+				is_subject_of = UNG
+			}
+		}
+		
+		visible = {
+			is_subject_of = UNG
+			tag = STA
+			NOT = {
+				has_country_flag = STA_civil_war_started
+			}
+		}
+		
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				add = 5
+				AND = {
+					SNF = {
+						check_variable = {
+							var = FPT_union_loyalty
+							value = var:FPT_stahlhof_loyalty
+							compare = equals
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+			modifier = {
+				add = 5
+				AND = {
+					SNF = {
+						check_variable = {
+							var = FPT_union_loyalty
+							value = var:FPT_stahlhof_loyalty
+							compare = greater_than
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+		}
+		
+		cost = var:SNF.FPT_medium_loyalty_cost
+		
+		days_remove = 30
+		
+		complete_effect = {
+			set_country_flag = STA_already_convincing_someone
+		}
+		
+		remove_effect = {
+			clr_country_flag = STA_already_convincing_someone
+			add_to_variable = {
+				var = SNF.FPT_stahlhof_loyalty
+				value = 3
+			}
+			SNF = {
+				custom_effect_tooltip = FPT_increase_stahlhof_loyalty_tt
+			}
+			set_country_flag = {
+				flag = recently_convinced_freiprinz
+				days = 75
+			}
+		}
+	}
+	
+	STA_convince_SNF_iii = {
+		icon = GFX_decision_stahlhof_nationalism
+		
+		allowed = {
+			tag = STA
+		}
+		
+		available = {
+			is_subject_of = UNG
+			NOT = {
+				has_country_flag = STA_already_convincing_someone
+			}
+			SNF = {
+				is_subject_of = UNG
+			}
+		}
+		
+		visible = {
+			is_subject_of = UNG
+			tag = STA
+			NOT = {
+				has_country_flag = STA_civil_war_started
+			}
+		}
+		
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				add = 5
+				AND = {
+					SNF = {
+						check_variable = {
+							var = FPT_union_loyalty
+							value = var:FPT_stahlhof_loyalty
+							compare = equals
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+			modifier = {
+				add = 5
+				AND = {
+					SNF = {
+						check_variable = {
+							var = FPT_union_loyalty
+							value = var:FPT_stahlhof_loyalty
+							compare = greater_than
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+		}
+		
+		cost = var:SNF.FPT_big_loyalty_cost
+		
+		days_remove = 50
+		
+		complete_effect = {
+			set_country_flag = STA_already_convincing_someone
+		}
+		
+		remove_effect = {
+			clr_country_flag = STA_already_convincing_someone
+			add_to_variable = {
+				var = SNF.FPT_stahlhof_loyalty
+				value = 5
+			}
+			SNF = {
+				custom_effect_tooltip = FPT_increase_stahlhof_loyalty_large_tt
+			}
+			set_country_flag = {
+				flag = recently_convinced_freiprinz
+				days = 100
+			}
+		}
+	}
+	
+	STA_convince_ARK = {
+		icon = GFX_decision_stahlhof_nationalism
+		
+		allowed = {
+			tag = STA
+		}
+		
+		available = {
+			is_subject_of = UNG
+			NOT = {
+				has_country_flag = STA_already_convincing_someone
+			}
+			ARK = {
+				is_subject_of = UNG
+			}
+		}
+		
+		visible = {
+			is_subject_of = UNG
+			tag = STA
+			NOT = {
+				has_country_flag = STA_civil_war_started
+			}
+		}
+		
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				add = 5
+				AND = {
+					ARK = {
+						check_variable = {
+							var = FPT_union_loyalty
+							value = var:FPT_stahlhof_loyalty
+							compare = equals
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+			modifier = {
+				add = 5
+				AND = {
+					ARK = {
+						check_variable = {
+							var = FPT_union_loyalty
+							value = var:FPT_stahlhof_loyalty
+							compare = greater_than
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+		}
+		
+		cost = var:ARK.FPT_small_loyalty_cost
+		
+		days_remove = 15
+		
+		complete_effect = {
+			set_country_flag = STA_already_convincing_someone
+		}
+		
+		remove_effect = {
+			clr_country_flag = STA_already_convincing_someone
+			add_to_variable = {
+				var = ARK.FPT_stahlhof_loyalty
+				value = 1
+			}
+			ARK = {
+				custom_effect_tooltip = FPT_increase_stahlhof_loyalty_small_tt
+			}
+			set_country_flag = {
+				flag = recently_convinced_freiprinz
+				days = 50
+			}
+		}
+	}
+	
+	STA_convince_ARK_ii = {
+		icon = GFX_decision_stahlhof_nationalism
+		
+		allowed = {
+			tag = STA
+		}
+		
+		available = {
+			is_subject_of = UNG
+			NOT = {
+				has_country_flag = STA_already_convincing_someone
+			}
+			ARK = {
+				is_subject_of = UNG
+			}
+		}
+		
+		visible = {
+			is_subject_of = UNG
+			tag = STA
+			NOT = {
+				has_country_flag = STA_civil_war_started
+			}
+		}
+		
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				add = 5
+				AND = {
+					ARK = {
+						check_variable = {
+							var = FPT_union_loyalty
+							value = var:FPT_stahlhof_loyalty
+							compare = equals
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+			modifier = {
+				add = 5
+				AND = {
+					ARK = {
+						check_variable = {
+							var = FPT_union_loyalty
+							value = var:FPT_stahlhof_loyalty
+							compare = greater_than
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+		}
+		
+		cost = var:ARK.FPT_medium_loyalty_cost
+		
+		days_remove = 30
+		
+		complete_effect = {
+			set_country_flag = STA_already_convincing_someone
+		}
+		
+		remove_effect = {
+			clr_country_flag = STA_already_convincing_someone
+			add_to_variable = {
+				var = ARK.FPT_stahlhof_loyalty
+				value = 3
+			}
+			ARK = {
+				custom_effect_tooltip = FPT_increase_stahlhof_loyalty_tt
+			}
+			set_country_flag = {
+				flag = recently_convinced_freiprinz
+				days = 75
+			}
+		}
+	}
+	
+	STA_convince_ARK_iii = {
+		icon = GFX_decision_stahlhof_nationalism
+		
+		allowed = {
+			tag = STA
+		}
+		
+		available = {
+			is_subject_of = UNG
+			NOT = {
+				has_country_flag = STA_already_convincing_someone
+			}
+			ARK = {
+				is_subject_of = UNG
+			}
+		}
+		
+		visible = {
+			is_subject_of = UNG
+			tag = STA
+			NOT = {
+				has_country_flag = STA_civil_war_started
+			}
+		}
+		
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				add = 5
+				AND = {
+					ARK = {
+						check_variable = {
+							var = FPT_union_loyalty
+							value = var:FPT_stahlhof_loyalty
+							compare = equals
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+			modifier = {
+				add = 5
+				AND = {
+					ARK = {
+						check_variable = {
+							var = FPT_union_loyalty
+							value = var:FPT_stahlhof_loyalty
+							compare = greater_than
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+		}
+		
+		cost = var:ARK.FPT_big_loyalty_cost
+		
+		days_remove = 50
+		
+		complete_effect = {
+			set_country_flag = STA_already_convincing_someone
+		}
+		
+		remove_effect = {
+			clr_country_flag = STA_already_convincing_someone
+			add_to_variable = {
+				var = ARK.FPT_stahlhof_loyalty
+				value = 5
+			}
+			ARK = {
+				custom_effect_tooltip = FPT_increase_stahlhof_loyalty_large_tt
+			}
+			set_country_flag = {
+				flag = recently_convinced_freiprinz
+				days = 100
+			}
+		}
+	}
+	
+	STA_convince_WIS = {
+		icon = GFX_decision_stahlhof_nationalism
+		
+		allowed = {
+			tag = STA
+		}
+		
+		available = {
+			is_subject_of = UNG
+			NOT = {
+				has_country_flag = STA_already_convincing_someone
+			}
+			WIS = {
+				is_subject_of = UNG
+			}
+		}
+		
+		visible = {
+			is_subject_of = UNG
+			tag = STA
+			NOT = {
+				has_country_flag = STA_civil_war_started
+			}
+		}
+		
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				add = 5
+				AND = {
+					WIS = {
+						check_variable = {
+							var = FPT_union_loyalty
+							value = var:FPT_stahlhof_loyalty
+							compare = equals
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+			modifier = {
+				add = 5
+				AND = {
+					WIS = {
+						check_variable = {
+							var = FPT_union_loyalty
+							value = var:FPT_stahlhof_loyalty
+							compare = greater_than
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+		}
+		
+		cost = var:WIS.FPT_small_loyalty_cost
+		
+		days_remove = 15
+		
+		complete_effect = {
+			set_country_flag = STA_already_convincing_someone
+		}
+		
+		remove_effect = {
+			clr_country_flag = STA_already_convincing_someone
+			add_to_variable = {
+				var = WIS.FPT_stahlhof_loyalty
+				value = 1
+			}
+			WIS = {
+				custom_effect_tooltip = FPT_increase_stahlhof_loyalty_small_tt
+			}
+			set_country_flag = {
+				flag = recently_convinced_freiprinz
+				days = 50
+			}
+		}
+	}
+	
+	STA_convince_WIS_ii = {
+		icon = GFX_decision_stahlhof_nationalism
+		
+		allowed = {
+			tag = STA
+		}
+		
+		available = {
+			is_subject_of = UNG
+			NOT = {
+				has_country_flag = STA_already_convincing_someone
+			}
+			WIS = {
+				is_subject_of = UNG
+			}
+		}
+		
+		visible = {
+			is_subject_of = UNG
+			tag = STA
+			NOT = {
+				has_country_flag = STA_civil_war_started
+			}
+		}
+		
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				add = 5
+				AND = {
+					WIS = {
+						check_variable = {
+							var = FPT_union_loyalty
+							value = var:FPT_stahlhof_loyalty
+							compare = equals
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+			modifier = {
+				add = 5
+				AND = {
+					WIS = {
+						check_variable = {
+							var = FPT_union_loyalty
+							value = var:FPT_stahlhof_loyalty
+							compare = greater_than
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+		}
+		
+		cost = var:WIS.FPT_medium_loyalty_cost
+		
+		days_remove = 30
+		
+		complete_effect = {
+			set_country_flag = STA_already_convincing_someone
+		}
+		
+		remove_effect = {
+			clr_country_flag = STA_already_convincing_someone
+			add_to_variable = {
+				var = WIS.FPT_stahlhof_loyalty
+				value = 3
+			}
+			WIS = {
+				custom_effect_tooltip = FPT_increase_stahlhof_loyalty_tt
+			}
+			set_country_flag = {
+				flag = recently_convinced_freiprinz
+				days = 75
+			}
+		}
+	}
+	
+	STA_convince_WIS_iii = {
+		icon = GFX_decision_stahlhof_nationalism
+		
+		allowed = {
+			tag = STA
+		}
+		
+		available = {
+			is_subject_of = UNG
+			NOT = {
+				has_country_flag = STA_already_convincing_someone
+			}
+			WIS = {
+				is_subject_of = UNG
+			}
+		}
+		
+		visible = {
+			is_subject_of = UNG
+			tag = STA
+			NOT = {
+				has_country_flag = STA_civil_war_started
+			}
+		}
+		
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				add = 5
+				AND = {
+					WIS = {
+						check_variable = {
+							var = FPT_union_loyalty
+							value = var:FPT_stahlhof_loyalty
+							compare = equals
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+			modifier = {
+				add = 5
+				AND = {
+					WIS = {
+						check_variable = {
+							var = FPT_union_loyalty
+							value = var:FPT_stahlhof_loyalty
+							compare = greater_than
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+		}
+		
+		cost = var:WIS.FPT_big_loyalty_cost
+		
+		days_remove = 50
+		
+		complete_effect = {
+			set_country_flag = STA_already_convincing_someone
+		}
+		
+		remove_effect = {
+			clr_country_flag = STA_already_convincing_someone
+			add_to_variable = {
+				var = WIS.FPT_stahlhof_loyalty
+				value = 5
+			}
+			WIS = {
+				custom_effect_tooltip = FPT_increase_stahlhof_loyalty_large_tt
+			}
+			set_country_flag = {
+				flag = recently_convinced_freiprinz
+				days = 100
+			}
+		}
+	}
+	
+	STA_convince_FTH = {
+		icon = GFX_decision_stahlhof_nationalism
+		
+		allowed = {
+			tag = STA
+		}
+		
+		available = {
+			is_subject_of = UNG
+			NOT = {
+				has_country_flag = STA_already_convincing_someone
+			}
+			FTH = {
+				is_subject_of = UNG
+			}
+		}
+		
+		visible = {
+			is_subject_of = UNG
+			tag = STA
+			NOT = {
+				has_country_flag = STA_civil_war_started
+			}
+		}
+		
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				add = 5
+				AND = {
+					FTH = {
+						check_variable = {
+							var = FPT_union_loyalty
+							value = var:FPT_stahlhof_loyalty
+							compare = equals
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+			modifier = {
+				add = 5
+				AND = {
+					FTH = {
+						check_variable = {
+							var = FPT_union_loyalty
+							value = var:FPT_stahlhof_loyalty
+							compare = greater_than
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+		}
+		
+		cost = var:FTH.FPT_small_loyalty_cost
+		
+		days_remove = 15
+		
+		complete_effect = {
+			set_country_flag = STA_already_convincing_someone
+		}
+		
+		remove_effect = {
+			clr_country_flag = STA_already_convincing_someone
+			add_to_variable = {
+				var = FTH.FPT_stahlhof_loyalty
+				value = 1
+			}
+			FTH = {
+				custom_effect_tooltip = FPT_increase_stahlhof_loyalty_small_tt
+			}
+			set_country_flag = {
+				flag = recently_convinced_freiprinz
+				days = 50
+			}
+		}
+	}
+	
+	STA_convince_FTH_ii = {
+		icon = GFX_decision_stahlhof_nationalism
+		
+		allowed = {
+			tag = STA
+		}
+		
+		available = {
+			is_subject_of = UNG
+			NOT = {
+				has_country_flag = STA_already_convincing_someone
+			}
+			FTH = {
+				is_subject_of = UNG
+			}
+		}
+		
+		visible = {
+			is_subject_of = UNG
+			tag = STA
+			NOT = {
+				has_country_flag = STA_civil_war_started
+			}
+		}
+		
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				add = 5
+				AND = {
+					FTH = {
+						check_variable = {
+							var = FPT_union_loyalty
+							value = var:FPT_stahlhof_loyalty
+							compare = equals
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+			modifier = {
+				add = 5
+				AND = {
+					FTH = {
+						check_variable = {
+							var = FPT_union_loyalty
+							value = var:FPT_stahlhof_loyalty
+							compare = greater_than
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+		}
+		
+		cost = var:FTH.FPT_medium_loyalty_cost
+		
+		days_remove = 30
+		
+		complete_effect = {
+			set_country_flag = STA_already_convincing_someone
+		}
+		
+		remove_effect = {
+			clr_country_flag = STA_already_convincing_someone
+			add_to_variable = {
+				var = FTH.FPT_stahlhof_loyalty
+				value = 3
+			}
+			FTH = {
+				custom_effect_tooltip = FPT_increase_stahlhof_loyalty_tt
+			}
+			set_country_flag = {
+				flag = recently_convinced_freiprinz
+				days = 75
+			}
+		}
+	}
+	
+	STA_convince_FTH_iii = {
+		icon = GFX_decision_stahlhof_nationalism
+		
+		allowed = {
+			tag = STA
+		}
+		
+		available = {
+			is_subject_of = UNG
+			NOT = {
+				has_country_flag = STA_already_convincing_someone
+			}
+			FTH = {
+				is_subject_of = UNG
+			}
+		}
+		
+		visible = {
+			is_subject_of = UNG
+			tag = STA
+			NOT = {
+				has_country_flag = STA_civil_war_started
+			}
+		}
+		
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				add = 5
+				AND = {
+					FTH = {
+						check_variable = {
+							var = FPT_union_loyalty
+							value = var:FPT_stahlhof_loyalty
+							compare = equals
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+			modifier = {
+				add = 5
+				AND = {
+					FTH = {
+						check_variable = {
+							var = FPT_union_loyalty
+							value = var:FPT_stahlhof_loyalty
+							compare = greater_than
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+		}
+		
+		cost = var:FTH.FPT_big_loyalty_cost
+		
+		days_remove = 50
+		
+		complete_effect = {
+			set_country_flag = STA_already_convincing_someone
+		}
+		
+		remove_effect = {
+			clr_country_flag = STA_already_convincing_someone
+			add_to_variable = {
+				var = FTH.FPT_stahlhof_loyalty
+				value = 5
+			}
+			FTH = {
+				custom_effect_tooltip = FPT_increase_stahlhof_loyalty_large_tt
+			}
+			set_country_flag = {
+				flag = recently_convinced_freiprinz
+				days = 100
+			}
+		}
+	}
+}
+
 STA_request_war_resources_category = {
 	 ##Idea 1
 	 STA_request_equipment_decision = {
@@ -33,11 +2567,45 @@ STA_a_convincing_act_category = {
 			has_completed_focus = STA_a_convincing_act
 			Not = { STA = { owns_state = 96 } }
 			owns_state = 194
-			has_border_war = false
+			has_border_war = no
+		}
+		remove_effect = {
+		194 = {
+		remove_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
+		96 = {
+		remove_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
+		if = {
+		 limit = {
+		 has_border_war_between = {
+ 		   attacker = 194
+  		   defender = 96
+		 }
+		 }
+		finalize_border_war = {
+   		defender_win = yes
+  		attacker = 194
+  		defender = 96
+		}
+		}
 		}
 		
 		complete_effect = {
-			
+		194 = {
+		add_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
+		96 = {
+		add_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
 			start_border_war = {
 				
 				change_state_after_war = no
@@ -60,10 +2628,6 @@ STA_a_convincing_act_category = {
 			}
 		}
 	}
-
-}
-
-STA_a_convincing_act_category = {
 	
 	STA_stahlplan_zhertis_decision = {
 		
@@ -76,10 +2640,46 @@ STA_a_convincing_act_category = {
 			has_completed_focus = STA_stahlplan_zhertis
 			Not = { STA = { owns_state = 105 } }
 			owns_state = 214
-			has_border_war = false
+			has_border_war = no
+		}
+		
+		remove_effect = {
+		214 = {
+		remove_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
+		105 = {
+		remove_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
+		if = {
+		 limit = {
+		 has_border_war_between = {
+ 		   attacker = 214
+  		   defender = 105
+		 }
+		 }
+		finalize_border_war = {
+   		defender_win = yes
+  		attacker = 214
+  		defender = 105
+		}
+		}
 		}
 		
 		complete_effect = {
+		214 = {
+		add_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
+		105 = {
+		add_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
 			
 			start_border_war = {
 				
@@ -103,10 +2703,6 @@ STA_a_convincing_act_category = {
 			}
 		}
 	}
-
-}
-
-STA_a_convincing_act_category = {
 	
 	STA_stahlplan_venoehr_decision = {
 		
@@ -119,10 +2715,45 @@ STA_a_convincing_act_category = {
 			has_completed_focus = STA_stahlplan_venoehr
 			Not = { STA = { owns_state = 106 } }
 			owns_state = 202
-			has_border_war = false
+			has_border_war = no
+		}
+		remove_effect = {
+		202 = {
+		remove_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
+		106 = {
+		remove_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
+		if = {
+		 limit = {
+		 has_border_war_between = {
+ 		   attacker = 202
+  		   defender = 106
+		 }
+		 }
+		finalize_border_war = {
+   		defender_win = yes
+  		attacker = 202
+  		defender = 106
+		}
+		}
 		}
 		
 		complete_effect = {
+		202 = {
+		add_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
+		106 = {
+		add_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
 			
 			start_border_war = {
 				
@@ -146,10 +2777,6 @@ STA_a_convincing_act_category = {
 			}
 		}
 	}
-
-}
-
-STA_a_convincing_act_category = {
 	
 	STA_stahlplan_anzitt_decision = {
 		
@@ -162,11 +2789,45 @@ STA_a_convincing_act_category = {
 			has_completed_focus = STA_stahlplan_anzitt
 			Not = { STA = { owns_state = 104 } }
 			owns_state = 195
-			has_border_war = false
+			has_border_war = no
+		}
+		remove_effect = {
+		195 = {
+		remove_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
+		104 = {
+		remove_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
+		if = {
+		 limit = {
+		has_border_war_between = {
+ 		   attacker = 195
+  		   defender = 104
+		 }
+		 }
+		finalize_border_war = {
+   		defender_win = yes
+  		attacker = 195
+  		defender = 104
+		}
+		}
 		}
 		
 		complete_effect = {
-			
+		195 = {
+		add_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
+		104 = {
+		add_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
 			start_border_war = {
 				
 				change_state_after_war = no
@@ -189,10 +2850,6 @@ STA_a_convincing_act_category = {
 			}
 		}
 	}
-
-}
-
-STA_a_convincing_act_category = {
 	
 	STA_stahlplan_fratin_decision = {
 		
@@ -205,10 +2862,45 @@ STA_a_convincing_act_category = {
 			has_completed_focus = STA_stahlplan_fratin
 			Not = { STA = { owns_state = 107 } }
 			owns_state = 105
-			has_border_war = false
+			has_border_war = no
+		}
+		remove_effect = {
+		105 = {
+		remove_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
+		107 = {
+		remove_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
+		if = {
+		 limit = {
+		 has_border_war_between = {
+ 		   attacker = 105
+  		   defender = 107
+		 }
+		 }
+		finalize_border_war = {
+   		defender_win = yes
+  		attacker = 105
+  		defender = 107
+		}
+		}
 		}
 		
 		complete_effect = {
+		105 = {
+		add_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
+		107 = {
+		add_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
 
 			start_border_war = {
 				
@@ -234,10 +2926,6 @@ STA_a_convincing_act_category = {
 		
 		}
 	}
-
-}
-
-STA_a_convincing_act_category = {
 	
 	STA_stahlplan_fratin_decision2 = {
 		
@@ -250,10 +2938,46 @@ STA_a_convincing_act_category = {
 			has_completed_focus = STA_stahlplan_fratin
 			Not = { STA = { owns_state = 107 } }
 			owns_state = 104
-			has_border_war = false
+			has_border_war = no
+		}
+		
+		remove_effect = {
+		104 = {
+		remove_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
+		107 = {
+		remove_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
+		if = {
+		 limit = {
+		has_border_war_between = {
+ 		   attacker = 104
+  		   defender = 107
+		 }
+		 }
+		finalize_border_war = {
+   		defender_win = yes
+  		attacker = 104
+  		defender = 107
+		}
+		}
 		}
 		
 		complete_effect = {
+		104 = {
+		add_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
+		107 = {
+		add_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
 
 			start_border_war = {
 				
@@ -295,10 +3019,46 @@ STA_trial_by_fire_category = {
 			has_completed_focus = STA_trial_by_fire
 			Not = { STA = { owns_state = 218 } }
 			owns_state = 212
-			has_border_war = false
+			has_border_war = no
+		}
+		
+		remove_effect = {
+		212 = {
+		remove_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
+		218 = {
+		remove_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
+		if = {
+		 limit = {
+		 has_border_war_between = {
+ 		   attacker = 212
+  		   defender = 118
+		 }
+		 }
+		finalize_border_war = {
+   		defender_win = yes
+  		attacker = 212
+  		defender = 118
+		}
+		}
 		}
 		
 		complete_effect = {
+		212 = {
+		add_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
+		218 = {
+		add_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
 			
 			start_border_war = {
 				

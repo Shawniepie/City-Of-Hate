@@ -2019,7 +2019,7 @@ focus = {#Punitive Expedition
 			amount = -2500
 		}
 		add_equipment_to_stockpile = {
-			type = support_equipment
+			type = light_cavalry_equipment
 			amount = -250
 		}
 		if = {
@@ -2491,7 +2491,7 @@ focus = {#Efficiency through Competition
 		}
 		random_owned_controlled_state = {
 			add_resource = {
-				type = aluminium
+				type = mount
 				amount = 12
 			}
 		}
@@ -2548,7 +2548,7 @@ focus = {#Efficiency through Personal Interest
 		}
 		random_owned_controlled_state = {
 			add_resource = {
-				type = aluminium
+				type = mount
 				amount = 12
 			}
 		}
@@ -2560,7 +2560,7 @@ focus = {#Efficiency through Personal Interest
 		}
 		random_owned_controlled_state = {
 			add_resource = {
-				type = aluminium
+				type = mount
 				amount = 6
 			}
 		}
@@ -3474,7 +3474,7 @@ focus = {#Communal Tax
 		}
 		random_owned_controlled_state = {
 			add_resource = {
-				type = aluminium
+				type = mount
 				amount = 10
 			}
 		}
@@ -3531,7 +3531,7 @@ focus = {#Day-Plow Rule
 		}
 		random_owned_controlled_state = {
 			add_resource = {
-				type = aluminium
+				type = mount
 				amount = 10
 			}
 		}
@@ -3543,7 +3543,7 @@ focus = {#Day-Plow Rule
 		}
 		random_owned_controlled_state = {
 			add_resource = {
-				type = aluminium
+				type = mount
 				amount = 5
 			}
 		}
@@ -3676,7 +3676,7 @@ focus = {#Princely Army
 		add_tech_bonus = {
 		bonus = 0.5
 		uses = 1
-		category = infantry_weapons	
+		category = light_melee_equipment	
 		}
 		army_experience = 15
 	}
@@ -3736,7 +3736,7 @@ focus = {#Resources for the Artillery
 	}
 	completion_reward = {
 		add_resource = { 
-			type = tungsten
+			type = steel
 			amount = 8
 			state = 304
 		}
@@ -3756,11 +3756,11 @@ focus = {#Artillery Improvements
 	x = 9
 	y = 4
 	completion_reward = {
-		add_tech_bonus = {
-			bonus = 1
-			uses = 1
-			category = artillery
-		}
+	#	add_tech_bonus = {
+	#		bonus = 1
+	#		uses = 1
+	#		category = artillery
+	#	}
 	}
 	ai_will_do = {
 		factor = 5
@@ -3807,8 +3807,8 @@ focus = {#Armed Forces Equipment Upgrade
 		add_tech_bonus = {
 			bonus = 1
 			uses = 1
-			category = infantry_weapons
-			category = artillery
+			category = light_melee_equipment
+			#category = artillery
 		}
 	}
 	ai_will_do = {
@@ -3826,11 +3826,11 @@ focus = {#Strategic Battleplans
 	x = 11
 	y = 4
 	completion_reward = {
-		add_tech_bonus = {
-			bonus = 1
-			uses = 1
-			category = land_doctrine
-		}
+		#add_tech_bonus = {
+		#	bonus = 1
+		#	uses = 1
+		#	category = land_doctrine
+		#}
 		custom_effect_tooltip = HLZ_kriegsplan_nord_tt
 		set_country_flag = HLZ_kriegsplan_nord
 		ORD = {
@@ -3898,11 +3898,11 @@ focus = {#Coast Guard
 	x = 13
 	y = 3
 	completion_reward = {
-		add_tech_bonus = {
-			bonus = 1
-			uses = 1
-			category = dd_tech
-		}
+		#add_tech_bonus = {
+		#	bonus = 1
+		#	uses = 1
+		#	category = dd_tech
+		#}
 	}
 	ai_will_do = {
 		factor = 5
@@ -3919,11 +3919,11 @@ focus = {#Kriegsflottenmodelle
 	x = 13
 	y = 4
 	completion_reward = {
-		add_tech_bonus = {
-			bonus = 1
-			uses = 1
-			category = cl_tech
-		}
+		#add_tech_bonus = {
+		#	bonus = 1
+		#	uses = 1
+		#	category = cl_tech
+		#}
 	}
 	ai_will_do = {
 		factor = 5
@@ -3940,13 +3940,13 @@ focus = {#Marine-Einheit
 	x = 15
 	y = 2
 	completion_reward = {
-		add_tech_bonus = {
-			bonus = 1
-			uses = 1
-			technology = marines
-			technology = marines2
-			technology = marines3
-		}
+		#add_tech_bonus = {
+		#	bonus = 1
+		#	uses = 1
+		#	technology = marines
+		#	technology = marines2
+		#	technology = marines3
+		#}
 	}
 	ai_will_do = {
 		factor = 4
@@ -3963,18 +3963,18 @@ focus = {#Naval Invasion Specialization
 	x = 15
 	y = 3
 	completion_reward = {
-		add_tech_bonus = {
-			bonus = 1
-			uses = 1
-			category = tp_tech
-		}
-		add_tech_bonus = {
-			bonus = 0.25
-			uses = 1
-			technology = marines
-			technology = marines2
-			technology = marines3
-		}
+		#add_tech_bonus = {
+		#	bonus = 1
+		#	uses = 1
+		#	category = tp_tech
+		#}
+		#add_tech_bonus = {
+		#	bonus = 0.25
+		#	uses = 1
+		#	technology = marines
+		#	technology = marines2
+		#	technology = marines3
+		#}
 		navy_experience = 10
 		random_country = {
 			limit = {
@@ -3988,18 +3988,18 @@ focus = {#Naval Invasion Specialization
 				}
 				is_puppet_of = UNG
 			}
-			add_tech_bonus = {
-				bonus = 1
-				uses = 1
-				category = tp_tech
-			}
-			add_tech_bonus = {
-				bonus = 1
-				uses = 1
-				technology = marines
-				technology = marines2
-				technology = marines3
-			}
+			#add_tech_bonus = {
+			#	bonus = 1
+			#	uses = 1
+			#	category = tp_tech
+			#}
+			#add_tech_bonus = {
+			#	bonus = 1
+			#	uses = 1
+			#	technology = marines
+			#	technology = marines2
+			#	technology = marines3
+			#}
 			navy_experience = 10
 		}
 	}

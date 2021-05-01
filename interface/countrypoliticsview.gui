@@ -187,7 +187,7 @@ guiTypes = {
 				#buttonText = "DIPLOMACY_DISMANTLE_FACTION_TITLE"
 			}			
 			
-		}
+		}		
 						
 		containerWindowType = {
 			name = "autonomy_progress_view"

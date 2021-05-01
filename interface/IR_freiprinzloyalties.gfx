@@ -1,0 +1,16 @@
+spriteTypes = {
+	
+	spriteType = { 
+		 name = "GFX_freiprinz_union_loyalty"
+		textureFile = "gfx/interface/union_flag_framed.dds"
+		noOfFrames = 1
+		legacy_lazy_load = no
+	}
+	
+	spriteType = { 
+		 name = "GFX_freiprinz_stahlhof_loyalty"
+		textureFile = "gfx/interface/stahlhof_flag_framed.dds" 
+		noOfFrames = 1
+		legacy_lazy_load = no
+	}
+}

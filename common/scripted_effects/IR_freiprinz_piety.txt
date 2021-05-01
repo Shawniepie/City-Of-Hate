@@ -1,0 +1,30 @@
+###Scripted effects for Ungerdaler piety mechanics
+
+set_freiprinz_piety_effects = {
+	
+	set_variable = {
+		var = FPT_pious_mobilization
+		value = FPT_piety
+	}
+	
+	set_variable = {
+		var = FPT_pious_science
+		value = FPT_piety
+	}
+	
+	multiply_variable = {
+		var = FPT_pious_mobilization
+		value = 0.02
+	}
+	
+	multiply_variable = {
+		var = FPT_pious_science
+		value = -0.01
+	}
+	
+	hidden_effect = {
+		add_dynamic_modifier = {
+			modifier = freiprinz_piety
+		}
+	}
+}

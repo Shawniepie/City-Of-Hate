@@ -5,12 +5,12 @@ state={
 		8665 2474 8648 8595 8635 8596 8573 8580 8562 2442
 	}
 	state_category = rural
-	manpower=2921
+	manpower=4320
 	buildings_max_level_factor=1.000
 	history={
 		owner = FTH
 		buildings = {
-			infrastructure = 2
+			infrastructure = 5	
 		}
 		add_core_of = FTH
 		}

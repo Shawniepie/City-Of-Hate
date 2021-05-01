@@ -2,9 +2,8 @@
 
 #THE MOD TEAM
 
-#Lead Devs
+#Lead Dev
 Omnicide101
-Silvestrich
 
 #Lore Team
 Old Man Duchense
@@ -20,11 +19,15 @@ Silvestrich
 Dregorin
 Shortpower
 Silvestrich
+Jim_
 
 #GFX Team
 Caelvanir
 
-#Admins
+#Music
+Dregorin
+
+#Server Admins
 Scoop
 Shawniepie
 
@@ -93,6 +96,10 @@ Portraits made by Yann Blomquist:
 	Lizardman Country Idea GFX
 	Lizardman Generals and Admirals
 
+#Loading Screens
+Any map loading screens made by Omnicide101
+Other map loading screens made with thanks to Artbreeder
+
 #Flag Icons
 
 Ordorian Tree - Icon available at www.thenounproject.com (made by Jhonatan)
@@ -127,7 +134,9 @@ Guildist Scales - Icon available at www.kissping.com
 Puritan Axe - Icon available at www.pixabay.com
 Puritan Skull - Icon available at www.thenounproject.com (made by Andrew Forrester)
 Felweyner Tower - Icon available at www.shareicon.net (made by buildings)
-Fritzhafer Anchor - Icon available at www.thenounproject.com (made by Public Domain Nouns)
+Fritzer Crown - Icon available at www.thenounproject.com (made by ProSymbols)
+Fritzer Ship - Icon available at www.shareicon.net (made by Orin zuu)
+Fritzer Anchor - Icon available at www.thenounproject.com (made by Public Domain Nouns)
 Stahlhoffer Wings - Icon available at www.thenounproject.com (made by Luis Prado)
 Navandonnite Ship's Wheel - Icon available at www.thenounproject.com (made by Ben)
 Nastrodoger Scythe - Icon available at www.thenounproject.com (made by Ralf Schmitzer)
@@ -148,3 +157,46 @@ Varinthian Sun - Icon available at www.thenounproject.com (made by Alice Design)
 Merchant's Hand Praying Hands - Icon available at www.thenounproject.com (made by Luis Durazo)
 Merchant's Hand Skull - Icon available at www.thenounproject.com (made by Jacopo Mencacci)
 Bilodyan Catttail - Icon available at www.thenounproject.com (made by Alex C.)
+Stotvic Harpoon - Icon available at www.thenounproject.com (made by Creative Mania)
+Krellsland Horn - Icon available at www.thenounproject.com (made by Becris)
+Perkav Crown - Icon available at www.thenounproject.com (made by Gilberto)
+Vlencin Crown - Icon available at www.thenounproject.com (made by Pedro Santos)
+Rlavyan Eagle - Icon available at www.thenounproject.com (made by Eucalyp)
+Vitrczin Pine - Icon available at www.thenounproject.com (made by iconcheese)
+Unused Crown - Icon available at www.thenounproject.com (made by Denicon)
+
+# Technology Icons
+
+Astrolabe - Photo taken by Andrew Dunn
+Recurve Bow - Photo taken by Gao Xiang
+Chainmail Hauberk - Photo taken by Walters Art Museum
+Brigandine Armour - Photo taken by Gaius Cornelius
+Stirrups - Photo taken by Wolfgang Sauber
+Quiver - Photo taken by Birkenleder
+Bracers - Photo taken by the Metropolitan Museum of Art
+Recurve Bow - Photo taken by Gao Xiang
+Crossbow - Photo taken by the Swedish Royal Armoury
+Repeating Crossbow - Photo taken by Liang Jieming
+Greaves - Photo taken by the Metropolitan Museum of Art
+Bastard Sword - Photo taken by Søren Niedziella
+Great Helm - Photo taken by Łukasz Olszewski
+Winged Helm - Photo taken by Dnalor 01
+Two-Handed Sword - Photo taken by Göran Schmidt
+Full Plate - Photo taken by Rama
+Kite Shield - Photo taken by Viollet-le-Duc
+Buckler - Photo taken by Ángel M. Felicísimo
+Pavise - Photo taken by Daderot
+Lance - Photo taken by the Cleveland Museum of Art
+Saddle - Photo taken by David Straub
+ - Photo taken by
+ - Photo taken by
+ - Photo taken by
+ - Photo taken by
+ - Photo taken by
+ - Photo taken by
+ - Photo taken by
+ - Photo taken by
+ - Photo taken by
+ - Photo taken by
+ - Photo taken by
+ - Photo taken by

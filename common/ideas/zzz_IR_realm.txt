@@ -100,7 +100,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				custom_effect_tt = royal_marriage_warning_tt
+				custom_modifier_tooltip = royal_marriage_warning_tt
 			}
 		}
 	}

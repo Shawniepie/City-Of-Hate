@@ -364,8 +364,8 @@ guiTypes = {
 		}
 		
 		iconType = {
-			name ="fuel_icon"
-			spriteType = "GFX_fuel_state"
+			name ="rations_icon"
+			spriteType = "GFX_rations"
 			position = { x= 490 y = 6 }
 			Orientation = "UPPER_LEFT"
 		}		

@@ -1,0 +1,1787 @@
+﻿### UNGERDALER UNION GENERIC FREIPRINZ FOCUS TREE ###
+
+focus_tree = { #General Foci
+	id = fpt_shared_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 5
+			OR = {
+				tag = SNF
+				tag = TEI
+				tag = SPW
+				tag = NOC
+				tag = NRK
+				tag = ARK
+				tag = FTH
+				tag = WIS
+				tag = WSZ
+			}
+		}
+	}
+	shared_focus = FPT_recover_hex_scare
+	
+	shared_focus = FPT_memories_crisis
+	
+	shared_focus = FPT_our_place_union
+}
+
+focus_tree = { #St. Vichtlas getting all foci except the Hex Scare ones
+	id = fpt_stvichtlas_foci
+	country = {
+		factor = 0
+		modifier = {
+			add = 5
+			tag = SVT
+		}
+	}
+
+	shared_focus = FPT_memories_crisis
+	
+	shared_focus = FPT_our_place_union
+}
+
+#THE HEX SCARE SHARED FOCI
+
+	#shared_focus = {
+	#	id = FPT_
+	#	icon = GFX_
+	#	cost = 10
+	#	prerequisite = {
+	#		focus = 
+	#	}
+	#	ai_will_do = {
+	#		factor = 
+	#	}
+	#	available = {
+	#		
+	#	}
+	#	bypass = {
+	#		
+	#	}
+	#	mutually_exclusive = {
+	#		focus = 
+	#	}
+	#	relative_position_id = 
+	#	x = 0
+	#	y = 0
+	#	completion_reward = {
+	#		
+	#		
+	#	}
+	#}
+
+	shared_focus = { #Recovery from the Fourth Inquisition
+		id = FPT_recover_hex_scare
+		icon = GFX_focus_freiprinzen_septists_hurting
+		cost = 5
+		ai_will_do = {
+			factor = 5
+		}
+		x = 3
+		y = 0
+		completion_reward = { 
+			country_event = {
+				id = fpt.1
+				days = 1
+			}
+		}
+	}
+	
+	shared_focus = {#Rapprochement
+		id = FPT_rapprochement_stvichtlas
+		icon = GFX_focus_freiprinzen_septa
+		cost = 10
+		available = {
+			has_country_flag = FPT_septists_forgiven
+		}
+		prerequisite = {
+			focus = FPT_recover_hex_scare
+		}
+		ai_will_do = {
+			factor = 7
+			modifier = {
+				factor = 0.5
+				tag = FTH
+			}
+			modifier = {#The Wizards and Vichtlites do NOT get along
+				factor = 0.2
+				tag = ARK
+			}
+			modifier = {#Impious bois
+				factor = 0.5
+				check_variable = {
+					FPT_piety < 5
+				}
+			}
+		}
+		mutually_exclusive = {
+			focus = FPT_denounce_septa
+		}
+		relative_position_id = FPT_recover_hex_scare
+		x = -1
+		y = 1
+		completion_reward = {
+			SVT = {
+				FROM_improve_THIS_relations = yes
+			}
+			custom_effect_tooltip = FPT_increase_piety_tt
+			add_to_variable = {
+				var = FPT_piety
+				value = 1
+			}
+			set_freiprinz_piety_effects = yes
+		}
+	}
+	
+	shared_focus = {#Forgive the Vichtlites
+		id = FPT_offer_forgiveness
+		icon = GFX_focus_generic_concessions
+		cost = 10
+		prerequisite = {
+			focus = FPT_rapprochement_stvichtlas
+		}
+		ai_will_do = {
+			factor = 9
+			modifier = {#Impious bois
+				factor = 0.5
+				check_variable = {
+					FPT_piety < 5
+				}
+			}
+		}
+		relative_position_id = FPT_rapprochement_stvichtlas
+		x = -2
+		y = 1
+		completion_reward = {
+			SVT = {
+				FROM_improve_THIS_relations = yes
+			}
+			custom_effect_tooltip = FPT_increase_piety_tt
+			add_to_variable = {
+				var = FPT_piety
+				value = 1
+			}
+			set_freiprinz_piety_effects = yes
+			add_ideas = FPT_spirit_conciliation
+			add_stability = 0.05
+		}
+	}
+	
+	shared_focus = {#Commemorate the Saint
+		id = FPT_commemorate_saint
+		icon = GFX_goal_generic_national_unity
+		cost = 10
+		prerequisite = {
+			focus = FPT_rapprochement_stvichtlas
+			focus = FPT_denounce_septa
+		}
+		ai_will_do = {
+			factor = 9
+			modifier = {#That is NOT happening
+				factor = 0
+				tag = ARK
+			}
+			modifier = {#Impious bois
+				factor = 0.5
+				check_variable = {
+					FPT_piety < 5
+				}
+			}
+		}
+		mutually_exclusive = {
+			focus = FPT_septa_too_young
+		}
+		relative_position_id = FPT_rapprochement_stvichtlas
+		x = 0
+		y = 1
+		completion_reward = {
+			SVT = {
+				FROM_improve_THIS_relations = yes
+			}
+			custom_effect_tooltip = FPT_increase_piety_tt
+			add_to_variable = {
+				var = FPT_piety
+				value = 1
+			}
+			set_freiprinz_piety_effects = yes
+			add_ideas = FPT_venerate_saint
+		}
+	}
+	
+	shared_focus = {#Monastic Orders
+		id = FPT_monastic_orders
+		icon = GFX_BLD_Unify_The_Church
+		cost = 10
+		prerequisite = {
+			focus = FPT_commemorate_saint
+			focus = FPT_septa_too_young
+		}
+		ai_will_do = {
+			factor = 11
+			modifier = {#The Wizards and Vichtlites do NOT get along
+				factor = 0
+				tag = ARK
+			}
+			modifier = {#Impious bois
+				factor = 0.5
+				check_variable = {
+					FPT_piety < 5
+				}
+			}
+		}
+		mutually_exclusive = {
+			focus = FPT_church_too_corrupt
+		}
+		relative_position_id = FPT_commemorate_saint
+		x = 0
+		y = 1
+		completion_reward = {
+			SVT = {
+				FROM_improve_THIS_relations = yes
+			}
+			custom_effect_tooltip = FPT_increase_piety_tt
+			add_to_variable = {
+				var = FPT_piety
+				value = 1
+			}			
+			set_freiprinz_piety_effects = yes
+			add_ideas = FPT_monasticism
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = workshop
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = workshop
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	shared_focus = {#Denounce Septa Kirchoff
+		id = FPT_denounce_septa
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 10
+		available = {
+			has_country_flag = FPT_septists_fucked
+		}
+		prerequisite = {
+			focus = FPT_recover_hex_scare
+		}
+		ai_will_do = {
+			factor = 7
+			modifier = {#Pious bois
+				factor = 0.5
+				check_variable = {
+					FPT_piety > 4
+				}
+			}
+		}
+		mutually_exclusive = {
+			focus = FPT_rapprochement_stvichtlas
+		}
+		relative_position_id = FPT_recover_hex_scare
+		x = 1
+		y = 1
+		completion_reward = {
+			SVT = {
+				FROM_worsen_THIS_relations = yes
+			}
+			custom_effect_tooltip = FPT_decrease_piety_tt
+			subtract_from_variable = {
+				var = FPT_piety
+				value = 1
+			}
+			set_freiprinz_piety_effects = yes
+		}
+	}
+	
+	shared_focus = {#Demand Apologies for the Dead
+		id = FPT_demand_apologies
+		icon = GFX_goal_generic_secret_weapon
+		cost = 10
+		prerequisite = {
+			focus = FPT_denounce_septa
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {#Pious bois
+				factor = 0.5
+				check_variable = {
+					FPT_piety > 4
+				}
+			}
+		}
+		available = {
+				custom_trigger_tooltip = {
+				tooltip = FPT_demand_apologies_tt
+					AND = {
+					check_variable = {
+						FPT_piety < 5
+					}
+				}
+			}
+		}
+		relative_position_id = FPT_denounce_septa
+		x = 2
+		y = 1
+		completion_reward = {
+			SVT = {
+				FROM_worsen_THIS_relations = yes
+			}
+			custom_effect_tooltip = FPT_decrease_piety_tt
+			subtract_from_variable = {
+				var = FPT_piety
+				value = 1
+			}
+			set_freiprinz_piety_effects = yes
+			add_ideas = FPT_honour_dead
+			add_war_support = 0.05
+		}
+	}
+	
+	shared_focus = {#A Septa too Young to Lead
+		id = FPT_septa_too_young
+		icon = GFX_goal_generic_demand_territory
+		cost = 10
+		prerequisite = {
+			focus = FPT_denounce_septa
+			focus = FPT_rapprochement_stvichtlas
+		}
+		ai_will_do = {
+			factor = 9
+			modifier = {#Pious bois
+				factor = 0.5
+				check_variable = {
+					FPT_piety > 4
+				}
+			}
+		}
+		mutually_exclusive = {
+			focus = FPT_commemorate_saint
+		}
+		relative_position_id = FPT_denounce_septa
+		x = 0
+		y = 1
+		completion_reward = {
+			SVT = {
+				FROM_worsen_THIS_relations = yes
+			}
+			custom_effect_tooltip = FPT_decrease_piety_tt
+			subtract_from_variable = {
+				var = FPT_piety
+				value = 1
+			}
+			set_freiprinz_piety_effects = yes
+			add_ideas = FPT_respect_elders
+		}
+	}
+	
+	shared_focus = {#A Church too Corrupt to Guide
+		id = FPT_church_too_corrupt
+		icon = GFX_focus_renounce_the_treaty_of_trianon
+		cost = 10
+		prerequisite = {
+			focus = FPT_septa_too_young
+			focus = FPT_commemorate_saint
+		}
+		ai_will_do = {
+			factor = 11
+			modifier = {#Pious bois
+				factor = 0.5
+				check_variable = {
+					FPT_piety > 4
+				}
+			}
+		}
+		mutually_exclusive = {
+			focus = FPT_monastic_orders
+		}
+		relative_position_id = FPT_septa_too_young
+		x = 0
+		y = 1
+		completion_reward = {
+			SVT = {
+				FROM_worsen_THIS_relations = yes
+			}
+			custom_effect_tooltip = FPT_decrease_piety_tt
+			subtract_from_variable = {
+				var = FPT_piety
+				value = 1
+			}
+			set_freiprinz_piety_effects = yes
+			add_ideas = FPT_anti_corruption_body
+		}
+	}
+	
+	shared_focus = {#Divided Church
+		id = FPT_church_divided
+		icon = GFX_focus_freiprinzen_septism_broken_church
+		cost = 10
+		prerequisite = {
+			focus = FPT_denounce_septa
+		}
+		prerequisite = {
+			focus = FPT_septa_too_young
+			focus = FPT_church_too_corrupt
+		}
+		
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = FPT_divide_church_tt
+					AND = {
+					check_variable = {
+						FPT_piety < 0
+					}
+				}
+			} 
+		}
+		
+		ai_will_do = {
+			factor = 13
+		}
+		mutually_exclusive = {
+			focus = FPT_secularization
+			focus = FPT_church_united
+		}
+		relative_position_id = FPT_church_too_corrupt
+		x = 1
+		y = 1
+		completion_reward = {
+			SVT = {
+				FROM_worsen_THIS_relations = yes
+			}
+			custom_effect_tooltip = FPT_decrease_piety_large_tt
+			subtract_from_variable = {
+				var = FPT_piety
+				value = 5
+			}
+			set_freiprinz_piety_effects = yes
+			
+		}
+	}
+	
+	shared_focus = {#Secularization
+		id = FPT_secularization
+		icon = GFX_focus_generic_temple
+		cost = 10
+		prerequisite = {
+			focus = FPT_monastic_orders
+			focus = FPT_church_too_corrupt
+		}
+		ai_will_do = {
+			factor = 13
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = FPT_secularize_tt
+					AND = {
+					check_variable = {
+						FPT_piety < 11
+					}
+					check_variable = {
+						FPT_piety > -6
+					}
+				}
+			} 
+		}
+		bypass = {
+			
+		}
+		mutually_exclusive = {
+			focus = FPT_church_divided
+			focus = FPT_church_united
+		}
+		relative_position_id = FPT_church_too_corrupt
+		x = -1
+		y = 1
+		completion_reward = {
+			custom_effect_tooltip = FPT_secularize_effect_tt
+			set_variable = {
+				var = FPT_piety
+				value = 0
+			}
+			set_freiprinz_piety_effects = yes
+		}
+	}
+	
+	shared_focus = {#Unite Church
+		id = FPT_church_united
+		icon = GFX_focus_freiprinzen_septism
+		cost = 10
+		
+		prerequisite = {
+			focus = FPT_rapprochement_stvichtlas
+		}
+		prerequisite = {
+			focus = FPT_commemorate_saint
+			focus = FPT_monastic_orders
+		}
+		ai_will_do = {
+			factor = 13
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = FPT_unite_church_tt
+					AND = {
+					check_variable = {
+						FPT_piety > 5
+					}
+				}
+			} 
+		}
+		mutually_exclusive = {
+			focus = FPT_church_divided
+			focus = FPT_secularization
+		}
+		relative_position_id = FPT_monastic_orders
+		x = -1
+		y = 1
+		completion_reward = {
+			SVT = {
+				FROM_improve_THIS_relations = yes
+			}
+			custom_effect_tooltip = FPT_increase_piety_large_tt
+			add_to_variable = {
+				var = FPT_piety
+				value = 5
+			}
+			set_freiprinz_piety_effects = yes
+			
+		}
+	}
+	
+#MEMORIES OF THE THIRD SUCCESSION CRISIS FOCI
+
+	shared_focus = {#Memories of the Third Crisis
+		id = FPT_memories_crisis
+		icon = GFX_focus_ord_shatter_union
+		cost = 10
+		ai_will_do = {
+			factor = 5
+		}
+		relative_position_id = FPT_recover_hex_scare
+		x = 12
+		y = 0
+		completion_reward = {
+			army_experience = 10
+		}
+	}
+	
+	shared_focus = {#Pike and Shot
+		id = FPT_pike_shot
+		icon = GFX_goal_generic_military_sphere
+		cost = 10
+		prerequisite = {
+			focus = FPT_memories_crisis
+		}
+		ai_will_do = {
+			factor = 7
+		}
+		mutually_exclusive = {
+			focus = FPT_plate_sword
+		}
+		relative_position_id = FPT_memories_crisis
+		x = -3
+		y = 1
+		completion_reward = {
+			#Should get a gunpowder doctrine research boost
+			#Not implemented yet though
+			custom_effect_tooltip = WIP_not_done_note
+		}
+	}
+	
+	shared_focus = {#Refine the Schwarzpulver
+		id = FPT_refine_schwarzpulver
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10
+		prerequisite = {
+			focus = FPT_pike_shot
+		}
+		ai_will_do = {
+			factor = 9
+		}
+		relative_position_id = FPT_pike_shot
+		x = -2
+		y = 1
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = forge
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = forge
+					level = 1
+					instant_build = yes
+				}
+			}
+			
+			add_ideas = FPT_demolition
+		}
+	}
+	
+	shared_focus = {#Standardize the Schnapphahnschloss
+		id = FPT_standardize_schnapphahnschloss
+		icon = GFX_goal_generic_small_arms
+		cost = 10
+		prerequisite = {
+			focus = FPT_refine_schwarzpulver
+		}
+		ai_will_do = {
+			factor = 11
+		}
+		relative_position_id = FPT_refine_schwarzpulver
+		x = -2
+		y = 1
+		completion_reward = {
+			#Needs to provide an attack buff to muskets
+			#Need musket units for that tho
+			custom_effect_tooltip = WIP_not_done_note
+			
+		}
+	}
+	
+	shared_focus = {#Uniform Polearm Lengths
+		id = FPT_uniform_polearm_lengths
+		icon = GFX_focus_freiprinzen_standardized_polearms
+		cost = 10
+		prerequisite = {
+			focus = FPT_refine_schwarzpulver
+		}
+		ai_will_do = {
+			factor = 11
+		}
+		relative_position_id = FPT_refine_schwarzpulver
+		x = 0
+		y = 1
+		completion_reward = {
+			set_technology = {
+				freiprinz_uniform_polearms = 1
+				popup = no
+			}
+		}
+	}
+	
+	shared_focus = {#Schnellmeisterschaft
+		id = FPT_schnellmeisterschaft
+		icon = GFX_focus_generic_manpower
+		cost = 10
+		prerequisite = {
+			focus = FPT_refine_schwarzpulver
+		}
+		ai_will_do = {
+			factor = 11
+		}
+		relative_position_id = FPT_refine_schwarzpulver
+		x = 2
+		y = 1
+		completion_reward = {
+			add_ideas = FPT_schnellmeisterschaft_idea
+		}
+	}
+	
+	shared_focus = {#Modern Army
+		id = FPT_modern_army
+		icon = GFX_focus_generic_military_mission
+		cost = 10
+		prerequisite = {
+			focus = FPT_standardize_schnapphahnschloss
+		}
+		prerequisite = {
+			focus = FPT_uniform_polearm_lengths
+		}
+		prerequisite = {
+			focus = FPT_schnellmeisterschaft
+		}
+		ai_will_do = {
+			factor = 13
+		}
+		relative_position_id = FPT_uniform_polearm_lengths
+		x = 0
+		y = 1
+		completion_reward = {
+			add_ideas = FPT_modern_army_idea	
+		}
+	}
+	
+	shared_focus = {#Day-a-Month Men
+		id = FPT_tag_im_monat
+		icon = GFX_BLD_Combined_Arsenal_Projects
+		cost = 10
+		prerequisite = {
+			focus = FPT_pike_shot
+			focus = FPT_plate_sword
+		}
+		ai_will_do = {
+			factor = 7
+		}
+		relative_position_id = FPT_pike_shot
+		x = 1
+		y = 1
+		completion_reward = {
+			set_technology = {
+				freiprinz_tag_im_monat_manner = 1
+				popup = no
+			}
+		}
+	}
+	
+	shared_focus = {#Ease the Bauernfreistellung
+		id = FPT_ease_bauernfreistellung
+		icon = GFX_BLD_Promote_Farming
+		cost = 10
+		prerequisite = {
+			focus = FPT_pike_shot
+			focus = FPT_plate_sword
+		}
+		ai_will_do = {
+			factor = 9
+		}
+		relative_position_id = FPT_pike_shot
+		x = 3
+		y = 1
+		completion_reward = {
+			remove_ideas = FPT_bauernfreistellung
+		}
+	}
+	
+	shared_focus = {#Encourage Smithies
+		id = FPT_encourage_smithies
+		icon = GFX_focus_hlz_light_up_forges
+		cost = 10
+		prerequisite = {
+			focus = FPT_pike_shot
+			focus = FPT_plate_sword
+		}
+		ai_will_do = {
+			factor = 7
+		}
+		relative_position_id = FPT_pike_shot
+		x = 5
+		y = 1
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = forge
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = forge
+					level = 2
+					instant_build = yes
+				
+				}
+			}
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = forge
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	shared_focus = {#Stricter Training
+		id = FPT_stricter_training
+		icon = GFX_focus_generic_military_academy
+		cost = 10
+		prerequisite = {
+			focus = FPT_tag_im_monat
+			focus = FPT_ease_bauernfreistellung
+			focus = FPT_encourage_smithies
+		}
+		mutually_exclusive = {
+			focus = FPT_harsher_recruitment
+		}
+		ai_will_do = {
+			factor = 9
+		}
+		relative_position_id = FPT_tag_im_monat
+		x = 1
+		y = 1
+		completion_reward = {
+			add_ideas = FPT_stricter_training_idea
+		}
+	}
+	
+	shared_focus = {#Harsher Recruitment
+		id = FPT_harsher_recruitment
+		icon = GFX_goal_demand_sudetenland
+		cost = 10
+		prerequisite = {
+			focus = FPT_tag_im_monat
+			focus = FPT_ease_bauernfreistellung
+			focus = FPT_encourage_smithies
+		}
+		mutually_exclusive = {
+			focus = FPT_stricter_training
+		}
+		ai_will_do = {
+			factor = 9
+		}
+		relative_position_id = FPT_tag_im_monat
+		x = 3
+		y = 1
+		completion_reward = {
+			add_ideas = FPT_harsher_recruitment_idea
+		}
+	}
+	
+	shared_focus = {#Plate and Sword
+		id = FPT_plate_sword
+		icon = GFX_BLD_Raider_Traditions
+		cost = 10
+		prerequisite = {
+			focus = FPT_memories_crisis
+		}
+		mutually_exclusive = {
+			focus = FPT_pike_shot
+		}
+		ai_will_do = {
+			factor = 7
+		}
+		relative_position_id = FPT_memories_crisis
+		x = 3
+		y = 1
+		completion_reward = {
+			custom_effect_tooltip = WIP_not_done_note
+		}
+	}
+	
+	shared_focus = {#Repeal the Dwarf-Toll
+		id = FPT_repeal_zwergenzoll
+		icon = GFX_focus_generic_ungerdaler_coin
+		cost = 10
+		prerequisite = {
+			focus = FPT_plate_sword
+		}
+		ai_will_do = {
+			factor = 9
+		}
+		relative_position_id = FPT_plate_sword
+		x = 2
+		y = 1
+		completion_reward = {
+			add_ideas = FPT_zwergenzoll_repealed
+		}
+	}
+	
+	shared_focus = {#Impenetrable Shieldwalls
+		id = FPT_impenetrable_shieldwalls
+		icon = GFX_goal_generic_defence
+		cost = 10
+		prerequisite = {
+			focus = FPT_repeal_zwergenzoll
+		}
+		ai_will_do = {
+			factor = 11
+		}
+		relative_position_id = FPT_repeal_zwergenzoll
+		x = -2
+		y = 1
+		completion_reward = {
+			add_ideas = FPT_impenetrable_shieldwalls_idea
+		}
+	}
+	
+	shared_focus = {#Freiprinztum's Finest
+		id = FPT_freiprinztums_finest
+		icon = GFX_focus_generic_cavalry
+		cost = 10
+		prerequisite = {
+			focus = FPT_repeal_zwergenzoll
+		}
+		ai_will_do = {
+			factor = 11
+		}
+		relative_position_id = FPT_repeal_zwergenzoll
+		x = 0
+		y = 1
+		completion_reward = {
+			set_technology = {
+				freiprinz_freiprinztums_finest = 1
+				popup = no
+			}
+		}
+	}
+	
+	shared_focus = {#Study Tistler
+		id = FPT_study_tistler
+		icon = GFX_BLD_Codex_Of_War
+		cost = 10
+		prerequisite = {
+			focus = FPT_repeal_zwergenzoll
+		}
+		ai_will_do = {
+			factor = 11
+		}
+		relative_position_id = FPT_repeal_zwergenzoll
+		x = 2
+		y = 1
+		completion_reward = {
+			add_ideas = FPT_tistler_studied
+			every_unit_leader = {
+				add_attack = 1
+			}
+		}
+	}
+	
+	shared_focus = {#Trad Army
+		id = FPT_traditional_army
+		icon = GFX_IRI_Enpower_The_Old_Guard
+		cost = 10
+		prerequisite = {
+			focus = FPT_impenetrable_shieldwalls
+		}
+		prerequisite = {
+			focus = FPT_freiprinztums_finest
+		}
+		prerequisite = {
+			focus = FPT_study_tistler
+		}
+		ai_will_do = {
+			factor = 13
+		}
+		relative_position_id = FPT_freiprinztums_finest
+		x = 0
+		y = 1
+		completion_reward = {
+			add_ideas = FPT_traditional_army_idea
+		}
+	}
+
+#OUR PLACE IN THE UNION TREE
+
+	shared_focus = {#Pick a Side
+		id = FPT_our_place_union
+		icon = GFX_focus_freiprinzen_civilwar
+		cost = 10
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+			is_subject_of = UNG
+			STA = {
+				is_subject_of = UNG
+			}
+			NOT = {
+				has_country_flag = UNG_civil_war_started
+			}
+		}
+		relative_position_id = FPT_memories_crisis
+		x = 0
+		y = 4
+		completion_reward = {
+			add_timed_idea = {
+				idea = FPT_orienting_allegiances
+				days = 100
+			}
+			country_event = fpt.2
+		}
+	}
+	
+	shared_focus = {#Adalina Path
+		id = FPT_join_adalina
+		icon = GFX_focus_ung_young_hochprinzessin
+		cost = 10
+		prerequisite = {
+			focus = FPT_our_place_union
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 0.25
+				has_completed_focus = FPT_join_ferdinand
+			}
+			modifier = {
+				factor = 0.05
+				has_country_flag = FPT_ferdinist_strats
+			}
+			modifier = {
+				factor = 0
+				has_country_flag = FPT_neutralist_strats
+			}
+		}
+		available = {
+			is_subject_of = UNG
+			STA = {
+				is_subject_of = UNG
+			}
+			NOT = {
+				has_country_flag = UNG_civil_war_started
+			}
+		}
+		mutually_exclusive = {
+			focus = FPT_exploit_chaos
+		}
+		relative_position_id = FPT_our_place_union
+		x = -3
+		y = 1
+		completion_reward = {
+			custom_effect_tooltip = FPT_increase_union_loyalty_tt
+			add_to_variable = {
+				var = FPT_union_loyalty
+				value = 3
+			}
+		}
+	}
+	
+	shared_focus = {#Reaffirm Loyalties
+		id = FPT_reaffirm_loyalties
+		icon = GFX_focus_generic_concessions
+		cost = 10
+		prerequisite = {
+			focus = FPT_join_adalina
+		}
+		ai_will_do = {
+			factor = 7
+			modifier = {
+				factor = 0.25
+				has_completed_focus = FPT_join_ferdinand
+			}
+			modifier = {
+				factor = 0.05
+				has_country_flag = FPT_ferdinist_strats
+			}
+			modifier = {
+				factor = 0
+				has_country_flag = FPT_neutralist_strats
+			}
+		}
+		available = {
+			is_subject_of = UNG
+			STA = {
+				is_subject_of = UNG
+			}
+			NOT = {
+				has_country_flag = UNG_civil_war_started
+			}
+		}
+		bypass = {
+			
+		}
+		mutually_exclusive = {
+			focus = 
+		}
+		relative_position_id = FPT_join_adalina
+		x = 0
+		y = 1
+		completion_reward = {
+			add_stability = 0.1
+			custom_effect_tooltip = FPT_increase_union_loyalty_tt
+			add_to_variable = {
+				var = FPT_union_loyalty
+				value = 3
+			}
+		}
+	}
+	
+	shared_focus = {#Expand Liberties
+		id = FPT_expand_liberties
+		icon = GFX_focus_generic_treaty
+		cost = 10
+		prerequisite = {
+			focus = FPT_reaffirm_loyalties
+		}
+		ai_will_do = {
+			factor = 9
+			modifier = {
+				factor = 0.25
+				has_completed_focus = FPT_join_ferdinand
+			}
+			modifier = {
+				factor = 0.05
+				has_country_flag = FPT_ferdinist_strats
+			}
+			modifier = {
+				factor = 0
+				has_country_flag = FPT_neutralist_strats
+			}
+		}
+		available = {
+			is_subject_of = UNG
+			STA = {
+				is_subject_of = UNG
+			}
+			NOT = {
+				has_country_flag = UNG_civil_war_started
+			}
+			custom_trigger_tooltip = {
+				tooltip = FPT_loyal_to_adalina_tt
+				check_variable = {
+					FPT_union_loyalty > 35
+				}
+				check_variable = {
+					FPT_union_loyalty > FPT_stahlhof_loyalty
+				}
+			}
+		}
+		mutually_exclusive = {
+			focus = FPT_faustburger_support
+		}
+		relative_position_id = FPT_reaffirm_loyalties
+		x = -2
+		y = 1
+		completion_reward = {
+			add_ideas = FPT_expand_liberties_idea
+			custom_effect_tooltip = FPT_increase_union_loyalty_tt
+			add_to_variable = {
+				var = FPT_union_loyalty
+				value = 3
+			}
+		}
+	}
+	
+	shared_focus = {#Faustbürger Support
+		id = FPT_faustburger_support
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10
+		prerequisite = {
+			focus = FPT_reaffirm_loyalties
+		}
+		ai_will_do = {
+			factor = 9
+			modifier = {
+				factor = 0.25
+				has_completed_focus = FPT_join_ferdinand
+			}
+			modifier = {
+				factor = 0.05
+				has_country_flag = FPT_ferdinist_strats
+			}
+			modifier = {
+				factor = 0
+				has_country_flag = FPT_neutralist_strats
+			}
+		}
+		available = {
+			is_subject_of = UNG
+			STA = {
+				is_subject_of = UNG
+			}
+			NOT = {
+				has_country_flag = UNG_civil_war_started
+			}
+			custom_trigger_tooltip = {
+				tooltip = FPT_loyal_to_adalina_tt
+				check_variable = {
+					FPT_union_loyalty > 35
+				}
+				check_variable = {
+					FPT_union_loyalty > FPT_stahlhof_loyalty
+				}
+			}
+		}
+		mutually_exclusive = {
+			focus = FPT_expand_liberties
+		}
+		relative_position_id = FPT_reaffirm_loyalties
+		x = 0
+		y = 1
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = workshop
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = workshop
+					level = 1
+					instant_build = yes
+				}
+			}
+			custom_effect_tooltip = FPT_increase_union_loyalty_large_tt
+			add_to_variable = {
+				var = FPT_union_loyalty
+				value = 5
+			}
+		}
+	}
+	
+	shared_focus = {#Commit to Adalina
+		id = FPT_united_stand
+		icon = GFX_focus_ung_union_forever
+		cost = 10
+		prerequisite = {
+			focus = FPT_expand_liberties
+			focus = FPT_faustburger_support
+		}
+		ai_will_do = {
+			factor = 11
+			modifier = {
+				factor = 0.25
+				has_completed_focus = FPT_join_ferdinand
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_country_flag = FPT_ferdinist_strats
+					has_country_flag = FPT_neutralist_strats
+				}
+			}
+		}
+		available = {
+			is_subject_of = UNG
+			STA = {
+				is_subject_of = UNG
+			}
+			NOT = {
+				has_country_flag = UNG_civil_war_started
+			}
+			custom_trigger_tooltip = {
+				tooltip = FPT_truly_loyal_to_adalina_tt
+				check_variable = {
+					FPT_union_loyalty > 50
+				}
+				check_variable = {
+					FPT_union_loyalty > FPT_stahlhof_loyalty
+				}
+			}
+		}
+		mutually_exclusive = {
+			focus = FPT_new_era
+		}
+		relative_position_id = FPT_faustburger_support
+		x = -1
+		y = 2
+		completion_reward = {
+			add_ideas = FPT_legitimist_freiprinztum
+			add_to_variable = {
+				var = FPT_union_loyalty
+				value = 30
+			}
+			custom_effect_tooltip = UNG_FPT_loyalty_tt
+		}
+	}
+	
+	shared_focus = {#Heated Ancap Moment
+		id = FPT_exploit_chaos
+		icon = GFX_goal_generic_dangerous_deal
+		cost = 10
+		prerequisite = {
+			focus = FPT_our_place_union
+		}
+		ai_will_do = {
+			factor = 1 #Pick a side you cowards
+			modifier = {
+				factor = 50
+				has_country_flag = FPT_neutralist_strats
+			}
+		}
+		available = {
+			is_subject_of = UNG
+			STA = {
+				is_subject_of = UNG
+			}
+			NOT = {
+				has_country_flag = UNG_civil_war_started
+			}
+		}
+		mutually_exclusive = {
+			focus = FPT_join_adalina
+			focus = FPT_join_ferdinand
+		}
+		relative_position_id = FPT_our_place_union
+		x = 0
+		y = 1
+		completion_reward = {
+			add_timed_idea = {
+				idea = FPT_sell_arms
+				days = 75
+			}
+			send_equipment = {
+				equipment = infantry_equipment
+				amount = 250
+				target = UNG
+			}
+			send_equipment = {
+				equipment = infantry_equipment
+				amount = 250
+				target = STA
+			}
+		}
+	}
+	
+	shared_focus = {#Strategic Grilling
+		id = FPT_strategic_ambivalence
+		icon = GFX_goal_generic_neutrality_focus
+		cost = 10
+		prerequisite = {
+			focus = FPT_exploit_chaos
+		}
+		ai_will_do = {
+			factor = 9
+		}
+		available = {
+			is_subject_of = UNG
+			STA = {
+				is_subject_of = UNG
+			}
+			NOT = {
+				has_country_flag = UNG_civil_war_started
+			}
+		}
+		relative_position_id = FPT_exploit_chaos
+		x = 0
+		y = 1
+		completion_reward = {
+			custom_effect_tooltip = FPT_set_neutrality_tt
+			set_variable = {
+				var = FPT_union_loyalty
+				value = 0
+			}
+			set_variable = {
+				var = FPT_stahlhof_loyalty
+				value = 0
+			}
+		}
+	}
+	
+	shared_focus = {#Grill for Longer
+		id = FPT_buying_time
+		icon = GFX_goal_generic_political_pressure
+		cost = 10
+		prerequisite = {
+			focus = FPT_strategic_ambivalence
+		}
+		ai_will_do = {
+			factor = 11
+		}
+		available = {
+			is_subject_of = UNG
+			STA = {
+				is_subject_of = UNG
+			}
+			NOT = {
+				has_country_flag = UNG_civil_war_started
+			}
+		}
+		relative_position_id = FPT_strategic_ambivalence
+		x = 0
+		y = 1
+		completion_reward = {
+			make_freiprinz_loyalty_decisions_more_expensive = yes
+			custom_effect_tooltip = FPT_more_expensive_loyalty_tt
+		}
+	}
+	
+	shared_focus = {#Join the winning team
+		id = FPT_join_winners
+		icon = GFX_goal_generic_attack_allies
+		cost = 10
+		prerequisite = {
+			focus = FPT_buying_time
+		}
+		ai_will_do = {
+			factor = 15 #Most likely
+		}
+		available = {
+			STA = {
+				has_war_with = UNG
+			}
+			custom_trigger_tooltip = {
+				tooltip = FPT_joining_winners_tt
+				OR = {	
+					check_variable = {
+						UNG_num_allies > STA_num_allies
+					}
+					check_variable = {
+						STA_num_allies > UNG_num_allies
+					}
+				}
+			}
+		}
+		mutually_exclusive = {
+			focus = FPT_break_from_union
+			focus = FPT_declare_neutrality
+		}
+		relative_position_id = FPT_buying_time
+		x = -2
+		y = 1
+		completion_reward = {
+			if = {
+				limit = {
+					UNG = {
+						check_variable = {
+							UNG_num_allies > STA_num_allies
+						}
+					}
+				}
+				UNG = {
+					add_to_faction = ROOT
+				}
+			}
+			if = {
+				limit = {
+					STA = {
+						check_variable = {
+							STA_num_allies > UNG_num_allies
+						}
+					}
+				}
+				STA = {
+					add_to_faction = ROOT
+				}
+			}
+		}
+	}
+	
+	shared_focus = {#Break from the Union
+		id = FPT_break_from_union
+		icon = GFX_goal_generic_major_war
+		cost = 10
+		prerequisite = {
+			focus = FPT_buying_time
+		}
+		ai_will_do = {
+			factor = 0 #What the hell? No, of course not
+		}
+		available = {
+			STA = {
+				has_war_with = UNG
+			}
+		}
+		mutually_exclusive = {
+			focus = FPT_join_winners
+			focus = FPT_declare_neutrality
+		}
+		relative_position_id = FPT_buying_time
+		x = 0
+		y = 1
+		completion_reward = {
+			declare_war_on = {
+				target = UNG
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = STA
+				type = annex_everything
+			}
+		}
+	}
+	
+	shared_focus = {#Just grill
+		id = FPT_declare_neutrality
+		icon = GFX_focus_generic_home_defense
+		cost = 10
+		prerequisite = {
+			focus = FPT_buying_time
+		}
+		ai_will_do = {
+			factor = 13 #Reasonable option
+		}
+		available = {
+			STA = {
+				has_war_with = UNG
+			}
+		}
+		mutually_exclusive = {
+			focus = FPT_join_winners
+			focus = FPT_break_from_union
+		}
+		relative_position_id = FPT_buying_time
+		x = 2
+		y = 1
+		completion_reward = {	
+			add_stability = 0.1
+			if = {
+				limit = {
+					is_in_faction = yes
+				}
+				leave_faction = yes
+			}
+			if = {
+				limit = {
+					has_war_with = UNG
+				}
+				white_peace = UNG
+			}
+			if = {
+				limit = {
+					has_war_with = STA
+				}
+				white_peace = STA
+			}
+		}
+	}
+	
+	shared_focus = {#Ferdinand Path
+		id = FPT_join_ferdinand
+		icon = GFX_focus_freiprinzen_schwarzenbach
+		cost = 10
+		prerequisite = {
+			focus = FPT_our_place_union
+		}
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 0.25
+				has_completed_focus = FPT_join_adalina
+			}
+			modifier = {
+				factor = 0.05
+				has_country_flag = FPT_loyalist_strats
+			}
+			modifier = {
+				factor = 0
+				has_country_flag = FPT_neutralist_strats
+			}
+		}
+		available = {
+			is_subject_of = UNG
+			STA = {
+				is_subject_of = UNG
+			}
+			NOT = {
+				has_country_flag = UNG_civil_war_started
+			}
+		}
+		mutually_exclusive = {
+			focus = FPT_exploit_chaos
+		}
+		relative_position_id = FPT_our_place_union
+		x = 3
+		y = 1
+		completion_reward = {
+			custom_effect_tooltip = FPT_increase_stahlhof_loyalty_tt
+			add_to_variable = {
+				var = FPT_stahlhof_loyalty
+				value = 3
+			}
+		}
+	}
+	
+	shared_focus = {#Approach the Bear
+		id = FPT_approach_bear
+		icon = GFX_focus_freiprinzen_meet_schwarzenbach
+		cost = 10
+		prerequisite = {
+			focus = FPT_join_ferdinand
+		}
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 0.25
+				has_completed_focus = FPT_join_adalina
+			}
+			modifier = {
+				factor = 0.05
+				has_country_flag = FPT_loyalist_strats
+			}
+			modifier = {
+				factor = 0
+				has_country_flag = FPT_neutralist_strats
+			}
+		}
+		available = {
+			is_subject_of = UNG
+			STA = {
+				is_subject_of = UNG
+			}
+			NOT = {
+				has_country_flag = UNG_civil_war_started
+			}
+		}
+		relative_position_id = FPT_join_ferdinand
+		x = 0
+		y = 1
+		completion_reward = {
+			add_war_support = 0.1
+			custom_effect_tooltip = FPT_increase_stahlhof_loyalty_tt
+			add_to_variable = {
+				var = FPT_stahlhof_loyalty
+				value = 3
+			}
+		}
+	}
+	
+	shared_focus = {#Clandestine Steel
+		id = FPT_shipping_steel
+		icon = GFX_focus_generic_iron_mine
+		cost = 10
+		prerequisite = {
+			focus = FPT_approach_bear
+		}
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 0.25
+				has_completed_focus = FPT_join_adalina
+			}
+			modifier = {
+				factor = 0.05
+				has_country_flag = FPT_loyalist_strats
+			}
+			modifier = {
+				factor = 0
+				has_country_flag = FPT_neutralist_strats
+			}
+		}
+		available = {
+			is_subject_of = UNG
+			STA = {
+				is_subject_of = UNG
+			}
+			NOT = {
+				has_country_flag = UNG_civil_war_started
+			}
+			custom_trigger_tooltip = {
+				tooltip = FPT_loyal_to_ferdinand_tt
+				check_variable = {
+					FPT_stahlhof_loyalty > 35
+				}
+				check_variable = {
+					FPT_stahlhof_loyalty > FPT_union_loyalty
+				}
+			}
+		}
+		mutually_exclusive = {
+			focus = FPT_stahlhoffer_instructors
+		}
+		relative_position_id = FPT_approach_bear
+		x = 0
+		y = 1
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = forge
+					level = 3
+					instant_build = yes
+				}
+			}
+			custom_effect_tooltip = FPT_increase_stahlhof_loyalty_large_tt
+			add_to_variable = {
+				var = FPT_stahlhof_loyalty
+				value = 5
+			}
+		}
+	}
+	
+	shared_focus = {#Stahlhoffer Instructors
+		id = FPT_stahlhoffer_instructors
+		icon = GFX_focus_STA_stahlheer
+		cost = 10
+		prerequisite = {
+			focus = FPT_approach_bear
+		}
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 0.25
+				has_completed_focus = FPT_join_adalina
+			}
+			modifier = {
+				factor = 0.05
+				has_country_flag = FPT_loyalist_strats
+			}
+			modifier = {
+				factor = 0
+				has_country_flag = FPT_neutralist_strats
+			}
+		}
+		available = {
+			is_subject_of = UNG
+			STA = {
+				is_subject_of = UNG
+			}
+			NOT = {
+				has_country_flag = UNG_civil_war_started
+			}
+			custom_trigger_tooltip = {
+				tooltip = FPT_loyal_to_ferdinand_tt
+				check_variable = {
+					FPT_stahlhof_loyalty > 35
+				}
+				check_variable = {
+					FPT_stahlhof_loyalty > FPT_union_loyalty
+				}
+			}
+		}
+		mutually_exclusive = {
+			focus = FPT_shipping_steel
+		}
+		relative_position_id = FPT_approach_bear
+		x = 2
+		y = 1
+		completion_reward = {
+			add_ideas = FPT_stahlhoffer_instructors_idea
+			custom_effect_tooltip = FPT_increase_stahlhof_loyalty_tt
+			add_to_variable = {
+				var = FPT_stahlhof_loyalty
+				value = 3
+			}
+		}
+	}
+	
+	shared_focus = {#New Era
+		id = FPT_new_era
+		icon = GFX_focus_ord_shatter_union
+		cost = 10
+		prerequisite = {
+			focus = FPT_shipping_steel
+			focus = FPT_stahlhoffer_instructors
+		}
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 0.25
+				has_completed_focus = FPT_join_adalina
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_country_flag = FPT_loyalist_strats
+					has_country_flag = FPT_neutralist_strats
+				}
+			}
+		}
+		available = {
+			is_subject_of = UNG
+			STA = {
+				is_subject_of = UNG
+			}
+			NOT = {
+				has_country_flag = UNG_civil_war_started
+			}
+			custom_trigger_tooltip = {
+				tooltip = FPT_truly_loyal_to_ferdinand_tt
+				check_variable = {
+					FPT_stahlhof_loyalty > 50
+				}
+				check_variable = {
+					FPT_stahlhof_loyalty > FPT_union_loyalty
+				}
+			}
+		}
+		mutually_exclusive = {
+			focus = FPT_united_stand
+		}
+		relative_position_id = FPT_shipping_steel
+		x = 1
+		y = 2
+		completion_reward = {
+			add_ideas = FPT_ferdinist_freiprinztum
+			add_to_variable = {
+				var = FPT_stahlhof_loyalty
+				value = 30
+			}
+			custom_effect_tooltip = STA_FPT_loyalty_tt
+		}
+	}

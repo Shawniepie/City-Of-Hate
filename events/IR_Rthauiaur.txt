@@ -395,10 +395,14 @@ country_event = {#Loris Pass Lost
 		NOT = {
 			has_country_flag = loris_pass_lost
 		}
-		controls_state = 118
-		controls_state = 136
-		controls_state = 119
-		controls_state = 122
+		OR = {
+			controls_state = 118
+			controls_state = 136
+		}
+		OR = {
+			controls_state = 119
+			controls_state = 122
+		}
 	}
 	
 	option = {#Damn
@@ -445,11 +449,13 @@ country_event = {#Loris Pass Unnecessary
 		original_tag = RTH
 		has_country_flag = loris_pass_lost
 		OR = {
-			NOT = {	controls_state = 122 }
+			AND = {
+				NOT = {	controls_state = 122 }
+				NOT = { controls_state = 119 }
+			}
 			AND = {
 				NOT = { controls_state = 118 }
 				NOT = { controls_state = 136 }
-				NOT = { controls_state = 119 }
 			}
 		}
 	}
@@ -611,6 +617,9 @@ country_event = {#Time to leave the AOF
 	trigger = {
 		is_in_faction_with = UNG
 		has_country_flag = RTH_anti_ordorian_front
+		UNG = {	
+			has_completed_focus = UNG_lesser_evil
+		}
 		NOT = {
 			OR = {
 				ORD = {
@@ -654,6 +663,7 @@ country_event = { # Union Grants Support
 			remove_idea = RTH_inexperienced_commanders
 			add_idea = RTH_unblooded_commanders
 		}
+		set_country_flag = RTH_anti_ordorian_front
 	}
 }
 
@@ -695,6 +705,7 @@ country_event = { # Union Offers Conditional Support
 				target = RTH
 			}
 		}
+		set_country_flag = RTH_ungerdaler_pressure
 		add_political_power = -35
 		add_ideas = alyssyna_lavynthis
 		UNG = {

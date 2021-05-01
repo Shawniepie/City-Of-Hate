@@ -1,3 +1,7 @@
 ﻿l_english:
  PRODUCTION_MATERIALS_FOOD:0 "Foodstuffs"
  food_desc:0 "Foodstuffs are what feeds your people. It is produced by your farmers working the land, and their harvests depend on the type of climate they're working in."
+ PRODUCTION_MATERIALS_MOUNT:0 "Mounts"
+ mount_desc:0 "Though horses are the most common steed, many on Tharassian ride to battle on the backs of ponies, dire wolves, or even stranger beasts. Regardless, they must be able to carry the wearer and their equipment, maintain their nerves in the heat of battle, and be somewhat tamable."
+ PRODUCTION_MATERIALS_LUMBER:0 "Lumber"
+ lumber_desc:0 "Forests are common on Tharassian, but not all wood is suitable for military purposes. For bows or siege weapons, we require strong yet flexible timber."

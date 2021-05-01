@@ -1,7 +1,172 @@
 ideas = {
 	
 	country = {
+		
+		#NATIONAL SPIRITS
+		
+		UNG_literate_society = {
+		
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = ung_literate_society
+			
+			removal_cost = -1
+			
+			modifier = {
+				research_speed_factor = 0.15
+				drift_defence_factor = -0.2
+			}
+		}
+		
+		UNG_edelverfassung = {
+		
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = gre_schachtplan
+			
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = 1
+				stability_factor = 0.2
+				conscription_factor = 0.1
+			}
+		}
+		
+		UNG_volksverfassung = {
+		
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = gre_schachtplan
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.2
+				political_power_gain = 0.5
+				army_core_attack_factor = 0.2
+				army_core_defence_factor = 0.2
+			}
+		}
+		
+		UNG_strict_protocol = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = SPA_carlism
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.1
+				political_power_gain = 0.25
+			}
+		}
+		
+		UNG_nobility_controlled = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = spr_appropriate_church_riches
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.05
+				mobilization_speed = 0.012
+				consumer_goods_factor = -0.02
+			}
+		}
+		
+		UNG_loyal_commanders = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = eng_imperial_conscription
+			
+			removal_cost = -1
+			
+			modifier = {
+				army_org_factor = 0.1
+			}
+		}
+		
+		UNG_hochprinzessinsauge = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = generic_spy_coup
+			
+			removal_cost = -1
+			
+			modifier = {
+				operative_slot = 1
+				compliance_gain = 0.05
+			}
+		}
 	
+		UNG_disgruntled_nobility = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = prc_low_popular_support3
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_weekly = -0.02
+				war_support_weekly = -0.02
+			}
+		}
+		
 		UNG_unruly_nobility = {
 			
 			allowed = {
@@ -473,7 +638,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				custom_effect_tt = royal_marriage_warning_tt
+				custom_modifier_tooltip = royal_marriage_warning_tt
 			}
 		}
 		
@@ -491,7 +656,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				custom_effect_tt = royal_marriage_warning_tt
+				custom_modifier_tooltip = royal_marriage_warning_tt
 			}
 		}
 		
@@ -513,6 +678,301 @@ ideas = {
 				consumer_goods_factor = -0.1
 				production_speed_buildings_factor = 0.15
 				production_factory_efficiency_gain_factor = 0.01
+			}
+		}
+		
+		UNG_RMT_trade = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = generic_economic_increase
+			
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.1
+				production_speed_buildings_factor = 0.075
+				local_resources_factor = 0.15
+			}
+		}
+		
+		UNG_freisleruniversitat_idea = {
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = jap_supremacy_of_technology
+			
+			removal_cost = -1
+			
+			modifier = {
+				research_speed_factor = 0.1
+			}
+		}
+		
+		UNG_bleeding_edge_idea = {
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = man_militarism
+			
+			removal_cost = -1
+			
+			modifier = {
+				equipment_upgrade_xp_cost = -0.33
+			}
+		}
+		
+		UNG_freislermuhle_idea = {
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = generic_agrarian_reform
+			
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_buildings_factor = 0.1
+			}
+		}
+		
+		UNG_blueprints_optimized = {
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = BLD_Open_To_The_WorldSpirit
+			
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+		
+		UNG_blueprints_mandated = {
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = BLD_Open_To_The_WorldSpirit
+			
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+				industry_repair_factor = 0.15
+			}
+		}
+		
+		UNG_modularmontage_idea = {
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = ast_volunteer_defence_corps
+			
+			removal_cost = -1
+			
+			modifier = {
+				production_factory_start_efficiency_factor = 0.1
+			}
+		}
+		
+		UNG_refine_irrigation_idea = {
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = generic_agrarian_society
+			
+			removal_cost = -1
+			
+			modifier = {
+				base_fuel_gain_factor = 0.25
+			}
+		}
+		
+		UNG_holistic_architecture_idea = {
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = gre_venerate_the_ancient_hellenes
+			
+			removal_cost = -1
+			
+			modifier = {
+				global_building_slots_factor = 0.1
+			}
+		}
+		
+		UNG_improvismontage_idea = {
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = IRI_The_Rebuilding
+			
+			removal_cost = -1
+			
+			modifier = {
+				production_lack_of_resource_penalty_factor = -0.35
+			}
+		}
+		
+		UNG_freislerfressen_idea = {
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = hlz_agricultural_boom
+			
+			removal_cost = -1
+			
+			modifier = {
+				supply_consumption_factor = -0.1
+			}
+		}
+		
+		UNG_explosive_entrenchment_idea = {
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = ast_naval_auxiliary_patrol
+			
+			removal_cost = -1
+			
+			modifier = {
+				dig_in_speed_factor = 0.5
+			}
+		}
+	}
+	
+	#ADVISORS
+	political_advisor = {
+	
+		heinrich_brengst = {
+			
+			picture = ung_brengst
+			
+			allowed = {
+				original_tag = UNG
+			}
+		
+			available = {
+				has_government = monarchy_constitutional	
+				has_completed_focus = UNG_gentle_hand
+			}
+			
+			traits = {
+				calming_unifier
+			}
+		}
+		
+		stella_galde = {
+			
+			picture = ung_galde
+			
+			allowed = {
+				original_tag = UNG
+			}
+		
+			available = {
+				has_government = monarchy_absolute
+				has_completed_focus = UNG_secret_service
+			}
+			
+			traits = {
+				spymaster_general
+			}
+		}
+		
+		alko_blau = {
+			
+			picture = ung_blau
+			
+			allowed = {
+				original_tag = UNG
+			}
+		
+			available = {
+				has_government = republic_aristocrat
+				has_completed_focus = UNG_support_zeitung
+			}
+			
+			traits = {
+				foppish_journalist
+			}
+		}
+		
+		cecilia_freisler = {
+			
+			picture = ung_freisler
+			
+			allowed = {
+				original_tag = UNG
+			}
+		
+			available = {
+				has_completed_focus = UNG_genius_schlosserhelmer
+			}
+			
+			traits = {
+				genius_inventor
 			}
 		}
 	}

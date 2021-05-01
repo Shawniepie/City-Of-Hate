@@ -3,10 +3,13 @@
 	regiments = {
 		men_at_arms = { x = 0 y = 0 }
 		men_at_arms = { x = 0 y = 1 }
-		men_at_arms = { x = 0 y = 2 }
-        men_at_arms = { x = 1 y = 0 }
+        		halberdier = { x = 0 y = 2 }
+		men_at_arms = { x = 1 y = 0 }
 		men_at_arms = { x = 1 y = 1 }
-		men_at_arms = { x = 1 y = 2 }
+		swordsmen = { x = 1 y = 2 }
+		men_at_arms = { x = 2 y = 0 }
+		men_at_arms = { x = 2 y = 1 }
+		men_at_arms = { x = 2 y = 2 }
 	}
 }
 

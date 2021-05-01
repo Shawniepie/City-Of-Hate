@@ -5,12 +5,12 @@ state={
 		4847 1410 6457
 	}
 	state_category = rural
-	manpower=5503
+	manpower=4503
 	buildings_max_level_factor=1.000
 	history={
 		owner = IRI
 		buildings = {
-			infrastructure = 8
+			infrastructure = 6
 		}
 		add_core_of = IRI
 	}

@@ -301,7 +301,7 @@ country_event = {#Distress signal for attacked country with RM
 	}
 	
 	mean_time_to_happen = {
-		days = 1
+		days = 2
 	}
 	
 	option = {

@@ -11,8 +11,9 @@ state={
 		victory_points = { 2319 10 }
 		owner = BER
 		buildings = {
-			infrastructure = 4
-			arms_factory = 1
+			infrastructure = 5
+			forge = 1
+			farm = 2
 		}
 		add_core_of = BER
 	}

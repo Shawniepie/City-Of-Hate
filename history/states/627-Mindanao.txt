@@ -12,7 +12,7 @@ state={
 		owner = PRK
 		buildings = {
 			infrastructure = 3
-			arms_factory = 2
+			forge = 2
 		}
 		add_core_of = PRK
 	}

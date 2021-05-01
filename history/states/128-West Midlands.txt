@@ -10,8 +10,9 @@ state={
 	buildings_max_level_factor=1.000
 		history={	
 		owner = RTH
-		buildings = {	
-		infrastructure = 1
+		buildings = {
+			farm = 1
+			infrastructure = 1
 		}	
 		add_core_of = RTH
 

@@ -11,16 +11,19 @@ focus_tree = {
 	default = no
 	focus = {
 		id = STA_das_stahlheer
-		icon = GFX_focus_generic_commonwealth_build_infantry
+		icon = GFX_focus_STA_stahlheer
 		cost = 10
 		x = 30
 		y = 0
 		
-		available = {
-		
-		}
-		bypass = {
-		
+		ai_will_do = {
+			factor = 15
+			modifier = {
+				NOT = {	
+					has_completed_focus = STA_the_unthinkable_deal
+				}
+				factor = 0 #Gotta sort the political situation first
+			}
 		}
 		completion_reward = {
 			army_experience = 15
@@ -34,14 +37,11 @@ focus_tree = {
 		x = 55
 		y = 0
 		
-		available = {
-		
-		}
-		bypass = {
-		
+		ai_will_do = {
+			factor = 15
 		}
 		completion_reward = {
-			add_political_power = 50
+			add_political_power = 75
 			add_timed_idea = { idea = STA_the_bear_of_stahlhof_idea days = 180 }
 		}
 
@@ -56,11 +56,8 @@ focus_tree = {
 		x = 22
 		y = 1
 		
-		available = {
-		
-		}
-		bypass = {
-		
+		ai_will_do = {
+			factor = 18
 		}
 		completion_reward = {
 			army_experience = 15
@@ -78,12 +75,10 @@ focus_tree = {
 		x = 27
 		y = 1
 		
-		available = {
-		
+		ai_will_do = {
+			factor = 18
 		}
-		bypass = {
 		
-		}
 		completion_reward = {
 		army_experience = 15
 		###Cavalry Research boost needs to be integrated here
@@ -92,7 +87,7 @@ focus_tree = {
 	}
 	focus = {
 		id = STA_fate_of_the_adalinatruppen
-		icon = GFX_goal_generic_cavalry
+		icon = GFX_focus_STA_fate_adalinatruppen
 		cost = 10
 		prerequisite = {
 			focus = STA_veterans_of_the_elbenkrieg
@@ -103,15 +98,13 @@ focus_tree = {
 		x = 5
 		y = 2
 		
-		continue_if_invalid = yes
-		available = {
-		has_manpower > 3500
+		ai_will_do = {
+			factor = 25 #Priority
 		}
-		bypass = {
 		
-		}
+		continue_if_invalid = yes
+		
 		select_effect = {
-			add_manpower = -3500
 			country_event = { id = sta.7 hours = 6 }
 		}
 		completion_reward = {
@@ -126,6 +119,11 @@ focus_tree = {
 		prerequisite = {
 			focus = STA_fate_of_the_adalinatruppen
 		}
+		
+		ai_will_do = {
+			factor = 30 #Other branch is the big suck atm
+		}
+		
 		mutually_exclusive = {
 			focus = STA_the_last_march_of_the_faustburgsoldaten
 		}
@@ -146,7 +144,7 @@ focus_tree = {
 	}
 	focus = {
 		id = STA_meat_for_the_grinder
-		icon = GFX_focus_RAJ_lions_of_the_great_war
+		icon = GFX_focus_STA_meat_grinder
 		cost = 10
 		prerequisite = {
 			focus = STA_lessons_of_the_restoration_war
@@ -154,21 +152,19 @@ focus_tree = {
 		x = 1
 		y = 4
 		
-		available = {
-		
+		ai_will_do = {
+			factor = 30 #Priority
 		}
-		bypass = {
 		
-		}
 		completion_reward = {
-			add_tech_bonus = { bonus = 1 uses = 1 category = mass_assault_doctrine }
+			#add_tech_bonus = { bonus = 1 uses = 1 category = mass_assault_doctrine }
 			add_ideas = STA_mass_recruiting_idea
 		}
 
 	}
 	focus = {
 		id = STA_swords_axes_and_maces
-		icon = GFX_goal_generic_construct_mil_factory
+		icon = GFX_IRI_Supreme_Arsenal
 		cost = 10
 		prerequisite = {
 			focus = STA_lessons_of_the_restoration_war
@@ -176,12 +172,10 @@ focus_tree = {
 		x = 5
 		y = 4
 		
-		available = {
-		
+		ai_will_do = {
+			factor = 24
 		}
-		bypass = {
 		
-		}
 		completion_reward = {
 			add_tech_bonus = { bonus = 1 uses = 1 category = light_melee_equipment }
 		}
@@ -200,12 +194,10 @@ focus_tree = {
 		x = 5
 		y = 6
 		
-		available = {
-		
+		ai_will_do = {
+			factor = 20 #Men > equipment
 		}
-		bypass = {
 		
-		}
 		completion_reward = {
 			add_tech_bonus = { bonus = 1 uses = 1 category = heavy_melee_equipment }
 			add_ideas = STA_every_village_a_weaponsmith_idea
@@ -214,7 +206,7 @@ focus_tree = {
 	}
 	focus = {
 		id = STA_the_last_march_of_the_faustburgsoldaten
-		icon = GFX_focus_mex_arrest_general_cedillo
+		icon = GFX_focus_STA_last_march
 		cost = 10
 		prerequisite = {
 			focus = STA_fate_of_the_adalinatruppen
@@ -228,11 +220,13 @@ focus_tree = {
 		available = {
 			has_country_flag = STA_expedition_flag
 		}
-		bypass = {
 		
+		ai_will_do = {
+			factor = 0 #The Big Suck until we introduce the mercenaries
 		}
+		
 		completion_reward = {
-			custom_effect_tooltip = STA_the_last_march_of_the_faustburgsoldaten_ctt
+			custom_effect_tooltip = WIP_not_done_note
 			hidden_effect = {
 				random_list = {
 					60 = { #Nobody noticed all died
@@ -471,12 +465,10 @@ focus_tree = {
 		x = 19
 		y = 2
 		
-		available = {
-		
+		ai_will_do = {
+			factor = 21
 		}
-		bypass = {
 		
-		}
 		completion_reward = {
 			custom_effect_tooltip = STA_path_clearer_batallions_ctt
 			hidden_effect = { set_technology = { STA_path_clearer_battalion_tech = 1 } }
@@ -496,15 +488,17 @@ focus_tree = {
 		x = 17
 		y = 3
 		
-		available = {
 		
+		ai_will_do = {
+			factor = 24
 		}
+		
 		bypass = {
-			random_country = {
-				limit = {
+			NOT = {
+				any_country	= {
 					original_tag = ORD
+					owns_state = 96
 				}
-				NOT = { owns_state = 96 }
 			}
 		}
 		completion_reward = {
@@ -522,12 +516,10 @@ focus_tree = {
 		x = 15
 		y = 4
 		
-		available = {
-		
+		ai_will_do = {
+			factor = 27
 		}
-		bypass = {
 		
-		}
 		completion_reward = {
 			custom_effect_tooltip = STA_stahlplan_zhertis_ctt
 		}
@@ -543,12 +535,10 @@ focus_tree = {
 		x = 17
 		y = 4
 		
-		available = {
-		
+		ai_will_do = {
+			factor = 27
 		}
-		bypass = {
 		
-		}
 		completion_reward = {
 			custom_effect_tooltip = STA_stahlplan_venoehr_ctt
 		}
@@ -564,12 +554,10 @@ focus_tree = {
 		x = 19
 		y = 4
 		
-		available = {
-		
+		ai_will_do = {
+			factor = 27
 		}
-		bypass = {
 		
-		}
 		completion_reward = {
 			custom_effect_tooltip = STA_stahlplan_anzitt_ctt
 		}
@@ -591,12 +579,10 @@ focus_tree = {
 		x = 17
 		y = 5
 		
-		available = {
-		
+		ai_will_do = {
+			factor = 30
 		}
-		bypass = {
 		
-		}
 		completion_reward = {
 			custom_effect_tooltip = STA_stahlplan_fratin_ctt
 		}
@@ -615,12 +601,10 @@ focus_tree = {
 		x = 22
 		y = 3
 		
-		available = {
-		
+		ai_will_do = {
+			factor = 28 #Priority, gotta secure manpower
 		}
-		bypass = {
 		
-		}
 		completion_reward = {
 			add_ideas = { STA_limited_engagement_idea }
 		}
@@ -628,7 +612,7 @@ focus_tree = {
 	}
 	focus = {
 		id = STA_rapid_retreats
-		icon = GFX_goal_generic_army_motorized
+		icon = GFX_focus_STA_expeditious_retreat
 		cost = 10
 		prerequisite = {
 			focus = STA_limited_engagement
@@ -636,12 +620,10 @@ focus_tree = {
 		x = 22
 		y = 4
 		
-		available = {
-		
+		ai_will_do = {
+			factor = 31
 		}
-		bypass = {
 		
-		}
 		completion_reward = {
 			swap_ideas = {
 				remove_idea = STA_limited_engagement_idea
@@ -660,12 +642,10 @@ focus_tree = {
 		x = 22
 		y = 5
 		
-		available = {
-		
+		ai_will_do = {
+			factor = 34
 		}
-		bypass = {
 		
-		}
 		completion_reward = {
 			add_ideas = { STA_much_ado_about_nothing_idea }
 		}
@@ -684,12 +664,10 @@ focus_tree = {
 		x = 30
 		y = 2
 		
-		available = {
-		
+		ai_will_do = {
+			factor = 18
 		}
-		bypass = {
 		
-		}
 		completion_reward = {
 			add_ideas = { STA_neuzeit_krieg_idea }
 		}
@@ -697,7 +675,7 @@ focus_tree = {
 	}
 	focus = {
 		id = STA_uproot_the_old_guard
-		icon = GFX_focus_generic_support_the_left_right
+		icon = GFX_focus_STA_purge_boomers
 		cost = 10
 		prerequisite = {
 			focus = STA_neuzeit_krieg
@@ -705,12 +683,10 @@ focus_tree = {
 		x = 26
 		y = 3
 		
-		available = {
-		
+		ai_will_do = {
+			factor = 21
 		}
-		bypass = {
 		
-		}
 		completion_reward = {
 			create_corps_commander = {
 			name = "Cornelius Kondor"
@@ -761,12 +737,10 @@ focus_tree = {
 		x = 25
 		y = 4
 		
-		available = {
-		
+		ai_will_do = {
+			factor = 20 #Doesn't give manpower, not priority
 		}
-		bypass = {
 		
-		}
 		completion_reward = {
 			swap_ideas = {
 				remove_idea = STA_meritocratic_autocracy_idea
@@ -785,12 +759,10 @@ focus_tree = {
 		x = 29
 		y = 3
 		
-		available = {
-		
+		ai_will_do = {
+			factor = 21
 		}
-		bypass = {
 		
-		}
 		completion_reward = {
 			add_war_support = 0.10
 			add_ideas = { STA_meritocratic_autocracy_idea }
@@ -813,12 +785,10 @@ focus_tree = {
 		x = 28
 		y = 4
 		
-		available = {
-		
+		ai_will_do = {
+			factor = 25 #Gives manpower, priority
 		}
-		bypass = {
 		
-		}
 		completion_reward = {
 			add_ideas = { STA_soldier_support_idea }
 		}
@@ -834,12 +804,10 @@ focus_tree = {
 		x = 28
 		y = 5
 		
-		available = {
-		
+		ai_will_do = {
+			factor = 28
 		}
-		bypass = {
 		
-		}
 		completion_reward = {
 			swap_ideas = {
 				remove_idea = STA_soldier_support_idea
@@ -858,12 +826,10 @@ focus_tree = {
 		x = 28
 		y = 6
 		
-		available = {
-		
+		ai_will_do = {
+			factor = 31
 		}
-		bypass = {
 		
-		}
 		completion_reward = {
 			swap_ideas = {
 				remove_idea = STA_soldier_support_idea2
@@ -882,12 +848,10 @@ focus_tree = {
 		x = 28
 		y = 7
 		
-		available = {
-		
+		ai_will_do = {
+			factor = 34
 		}
-		bypass = {
 		
-		}
 		completion_reward = {
 			swap_ideas = {
 				remove_idea = STA_soldier_support_idea3
@@ -906,6 +870,10 @@ focus_tree = {
 		x = 33
 		y = 3
 		
+		ai_will_do = {
+			factor = 21
+		}
+		
 		continue_if_invalid = yes
 		available = {
 			has_political_power > 250
@@ -913,9 +881,7 @@ focus_tree = {
 		select_effect = {
 			add_political_power = -250
 		}
-		bypass = {
-		
-		}
+
 		completion_reward = {
 			NRK = {
 			  add_political_power = 150
@@ -963,12 +929,10 @@ focus_tree = {
 		x = 34
 		y = 4
 		
-		available = {
-		
+		ai_will_do = {
+			factor = 24
 		}
-		bypass = {
 		
-		}
 		select_effect = {
 			country_event = { id = sta.55 days = 3 }
 		}
@@ -991,6 +955,10 @@ focus_tree = {
 		x = 32
 		y = 5
 		
+		ai_will_do = {
+			factor = 15 #Schwarzenbach not being a bossy fucker? Lol
+		}
+		
 		available = {
 			has_country_flag = sta_alliance_of_equals_flag
 			has_country_flag = sta_treaty_agreed_flag
@@ -1003,9 +971,13 @@ focus_tree = {
 			add_stability = 0.08
 			give_guarantee = NRK
 			NRK = { add_stability = 0.08 give_guarantee = STA }
-			set_country_flag = STA_nrk_ally
-			custom_effect_tooltip = STA_ally_this_freiprinz
-			
+			add_to_variable = {
+				var = NRK.FPT_stahlhof_loyalty
+				value = 50
+			}
+			NRK = {
+				custom_effect_tooltip = STA_NRK_loyalty_tt
+			}			
 		}
 
 	}
@@ -1022,6 +994,10 @@ focus_tree = {
 		x = 35
 		y = 5
 		
+		ai_will_do = {
+			factor = 30 #Now THIS is the Ferdinand style
+		}
+		
 		available = {
 			has_country_flag = sta_push_our_advantage_flag
 			has_country_flag = sta_treaty_agreed_flag
@@ -1037,8 +1013,13 @@ focus_tree = {
 					autonomy_state = autonomy_IR_freiprinztum
 				}
 			}
-			set_country_flag = STA_nrk_ally
-			custom_effect_tooltip = STA_ally_this_freiprinz
+			add_to_variable = {
+				var = NRK.FPT_stahlhof_loyalty
+				value = 30
+			}
+			NRK = {
+				custom_effect_tooltip = STA_NRK_loyalty_minor_tt
+			}
 		}
 
 	}
@@ -1052,9 +1033,10 @@ focus_tree = {
 		x = 35
 		y = 6
 		
-		available = {
-		
+		ai_will_do = {
+			factor = 30
 		}
+		
 		bypass = {
 		has_country_flag = sta_treaty_declined_flag
 		has_country_flag = sta_push_our_advantage_flag
@@ -1076,9 +1058,10 @@ focus_tree = {
 		x = 35
 		y = 7
 		
-		available = {
-		
+		ai_will_do = {
+			factor = 33
 		}
+		
 		bypass = {
 		has_country_flag = sta_treaty_declined_flag
 		has_country_flag = sta_push_our_advantage_flag
@@ -1100,12 +1083,10 @@ focus_tree = {
 		x = 40
 		y = 1
 		
-		available = {
-		
+		ai_will_do = {
+			factor = 18
 		}
-		bypass = {
 		
-		}
 		completion_reward = {
 			army_experience = 20
 			add_war_support = 0.05
@@ -1122,12 +1103,10 @@ focus_tree = {
 		x = 40
 		y = 2
 		
-		available = {
-		
+		ai_will_do = {
+			factor = 21
 		}
-		bypass = {
 		
-		}
 		completion_reward = {
 			custom_effect_tooltip = STA_trial_by_fire_ctt
 		}
@@ -1164,12 +1143,14 @@ focus_tree = {
 		x = 40
 		y = 3
 		
+		ai_will_do = {
+			factor = 24
+		}
+		
 		available = {
 			owns_state = 218
 		}
-		bypass = {
-		
-		}
+
 		completion_reward = {
 			army_experience = 15
 			add_war_support = 0.05
@@ -1333,12 +1314,12 @@ focus_tree = {
 		y = 6
 		
 		available = {
-			ARK = { has_civilwar = yes }
+			ARK = { has_civil_war = yes }
 		}
 		bypass = {
 	
 		}
-		leads_to_war_with = event_target:ARL_cnt
+		
 		completion_reward = {
 			
 			if = {
@@ -1395,13 +1376,53 @@ focus_tree = {
 		select_effect = {
 			add_political_power = -40
 		}
-		continue_if_invalid = yes
-		bypass = {
 		
+		ai_will_do = {
+			factor = 15
+			modifier = {
+				OR = {
+					AND = {
+						has_completed_focus = STA_turn_to_the_caravaneers
+						NOT = {
+							OR = {
+								has_completed_focus = STA_the_merchants_of_fritzhafen
+								has_completed_focus = STA_der_nordhandel_wuergegriff
+							}
+						}
+					}
+					AND = {
+						has_completed_focus = STA_the_iron_fist_of_schwarzenbach
+						NOT = {
+							has_completed_focus = STA_the_crown_infallible
+						}
+					}
+					AND = {
+						has_completed_focus = STA_the_league_of_temples
+						NOT = {
+							has_completed_focus = STA_the_priests_of_st_vichtlas
+						}
+					}
+					AND = {
+						has_completed_focus = STA_reach_out_to_the_hornbergers
+						NOT = {
+							OR = {
+								has_completed_focus = STA_the_aristocrats_of_stahlhof
+								has_completed_focus = STA_blood_ties_to_wertszvoerde
+							}
+						}
+					}
+					NOT = {
+						has_completed_focus = STA_reach_out_to_the_hornbergers
+					}
+				}
+				factor = 0
+			}
 		}
+		
+		continue_if_invalid = yes
 		completion_reward = {
 			add_popularity = { ideology = puritan popularity = 0.05 }
-			add_timed_idea = [ idea = puritan_drift_idea days = 365 }
+			add_timed_idea = { idea = puritan_drift_idea days = 365 }
 		}
 
 	}
@@ -1415,11 +1436,12 @@ focus_tree = {
 		x = 48
 		y = 2
 		
+		ai_will_do = {
+			factor = 18
+		}
+		
 		available = {
 			puritan > 0.15
-		}
-		bypass = {
-		
 		}
 		completion_reward = {
 			add_ideas = { STA_freiwillige_heimatverteidiger_idea }
@@ -1436,14 +1458,15 @@ focus_tree = {
 		x = 48
 		y = 3
 		
+		ai_will_do = {
+			factor = 21
+		}
+		
 		available = {
 			puritan > 0.25
 		}
-		bypass = {
-		
-		}
 		completion_reward = {
-			add_equipment_to_stockpile = { type = light_melee_equipment amount = 250 producer = ROOT }
+			add_equipment_to_stockpile = { type = infantry_equipment amount = 250 producer = ROOT }
 		}
 
 	}
@@ -1459,6 +1482,10 @@ focus_tree = {
 		}
 		x = 47
 		y = 4
+		
+		ai_will_do = {
+			factor = 24
+		}
 		
 		available = {
 			puritan > 0.35
@@ -1485,6 +1512,18 @@ focus_tree = {
 		x = 49
 		y = 4
 		
+		ai_will_do = {
+			factor = 27
+			modifier = {
+				NOT = {
+					HLZ = {
+						has_government = monarchy_absolute
+					}
+				}
+				factor = 0.5 #Can't trust people that ain't Pressler
+			}
+		}
+		
 		available = {
 			puritan > 0.35
 		}
@@ -1492,8 +1531,13 @@ focus_tree = {
 		
 		}
 		completion_reward = {
-			set_country_flag = STA_hlz_ally
-			custom_effect_tooltip = STA_ally_this_freiprinz
+			add_to_variable = {
+					var = HLZ.FPT_stahlhof_loyalty
+					value = 30
+				}
+			HLZ = {
+				custom_effect_tooltip = STA_FPT_loyalty_tt
+			}
 		}
 
 	}
@@ -1507,6 +1551,48 @@ focus_tree = {
 		x = 52
 		y = 1
 		
+		ai_will_do = {
+			factor = 15
+			modifier = {
+				OR = {
+					AND = {
+						has_completed_focus = STA_the_anti_ordorian_front
+						NOT = {
+							OR = {
+								has_completed_focus = STA_the_stahlheer
+								has_completed_focus = STA_the_pragmatik_allianz
+							}
+						}
+					}
+					AND = {
+						has_completed_focus = STA_the_iron_fist_of_schwarzenbach
+						NOT = {
+							has_completed_focus = STA_the_crown_infallible
+						}
+					}
+					AND = {
+						has_completed_focus = STA_the_league_of_temples
+						NOT = {
+							has_completed_focus = STA_the_priests_of_st_vichtlas
+						}
+					}
+					AND = {
+						has_completed_focus = STA_reach_out_to_the_hornbergers
+						NOT = {
+							OR = {
+								has_completed_focus = STA_the_aristocrats_of_stahlhof
+								has_completed_focus = STA_blood_ties_to_wertszvoerde
+							}
+						}
+					}
+					NOT = {
+						has_completed_focus = STA_reach_out_to_the_hornbergers
+					}
+				}
+				factor = 0
+			}
+		}
+		
 		available = {
 			has_political_power > 40
 		}
@@ -1519,7 +1605,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_popularity = { ideology = republic_merchant popularity = 0.05 }
-			add_timed_idea = [ idea = republic_merchant_drift_idea days = 365 }
+			add_timed_idea = {idea = republic_merchant_drift_idea days = 365 }
 		}
 
 	}
@@ -1533,14 +1619,20 @@ focus_tree = {
 		x = 51
 		y = 2
 		
+		ai_will_do = {
+			factor = 18
+		}
+		
 		available = {
 			republic_merchant > 0.15
 		}
 		bypass = {
-			free_building_slots = {
-			building = arms_factory
-			size < 2
-			include_locked = yes
+			any_owned_state = {
+				free_building_slots = {
+					building = arms_factory
+					size < 2
+					include_locked = yes
+				}
 			}
 		}
 		completion_reward = {
@@ -1565,6 +1657,10 @@ focus_tree = {
 		}
 		x = 52
 		y = 3
+		
+		ai_will_do = {
+			factor = 21
+		}
 		
 		available = {
 			republic_merchant > 0.25
@@ -1596,6 +1692,10 @@ focus_tree = {
 		x = 51
 		y = 4
 		
+		ai_will_do = {
+			factor = 25 #Need the help
+		}
+		
 		available = {
 			republic_merchant > 0.35
 		}
@@ -1603,8 +1703,13 @@ focus_tree = {
 		
 		}
 		completion_reward = {
-			set_country_flag = STA_frt_ally
-			custom_effect_tooltip = STA_ally_this_freiprinz
+			add_to_variable = {
+				var = NRK.FPT_stahlhof_loyalty
+				value = 30
+			}
+			FTH = {
+				custom_effect_tooltip = STA_FPT_loyalty_tt
+			}
 		}
 
 	}
@@ -1620,6 +1725,10 @@ focus_tree = {
 		}
 		x = 53
 		y = 4
+		
+		ai_will_do = {
+			factor = 16
+		}
 		
 		available = {
 			republic_merchant > 0.35
@@ -1642,15 +1751,53 @@ focus_tree = {
 		x = 55
 		y = 1
 		
-		available = {
-		
-		}
-		bypass = {
-		
+		ai_will_do = {
+			factor = 5 #Save for last, probably
+			modifier = {
+				OR = {
+					AND = {
+						has_completed_focus = STA_turn_to_the_caravaneers
+						NOT = {
+							OR = {
+								has_completed_focus = STA_the_merchants_of_fritzhafen
+								has_completed_focus = STA_der_nordhandel_wuergegriff
+							}
+						}
+					}
+					AND = {
+						has_completed_focus = STA_the_anti_ordorian_front
+						NOT = {
+							OR = {
+								has_completed_focus = STA_the_stahlheer
+								has_completed_focus = STA_the_pragmatik_allianz
+							}
+						}
+					}
+					AND = {
+						has_completed_focus = STA_the_league_of_temples
+						NOT = {
+							has_completed_focus = STA_the_priests_of_st_vichtlas
+						}
+					}
+					AND = {
+						has_completed_focus = STA_reach_out_to_the_hornbergers
+						NOT = {
+							OR = {
+								has_completed_focus = STA_the_aristocrats_of_stahlhof
+								has_completed_focus = STA_blood_ties_to_wertszvoerde
+							}
+						}
+					}
+					NOT = {
+						has_completed_focus = STA_reach_out_to_the_hornbergers
+					}
+				}
+				factor = 0
+			}
 		}
 		completion_reward = {
 			add_popularity = { ideology = monarchy_absolute popularity = 0.05 }
-			add_timed_idea = [ idea = monarchy_absolute_drift_idea days = 365 }
+			add_timed_idea = {idea = monarchy_absolute_drift_idea days = 365 }
 			add_stability = 0.05
 			add_political_power = 50
 		}
@@ -1665,6 +1812,10 @@ focus_tree = {
 		}
 		x = 55
 		y = 2
+		
+		ai_will_do = {
+			factor = 18
+		}
 		
 		available = {
 			monarchy_absolute > 0.15
@@ -1700,6 +1851,10 @@ focus_tree = {
 		}
 		x = 55
 		y = 3
+		
+		ai_will_do = {
+			factor = 21
+		}
 		
 		available = {
 			monarchy_absolute > 0.25
@@ -1743,19 +1898,66 @@ focus_tree = {
 		x = 58
 		y = 1
 		
+		ai_will_do = {
+			factor = 24
+		}
+		
 		available = {
 			has_political_power > 40
 		}
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				OR = {
+					AND = {
+						has_completed_focus = STA_turn_to_the_caravaneers
+						NOT = {
+							OR = {
+								has_completed_focus = STA_the_merchants_of_fritzhafen
+								has_completed_focus = STA_der_nordhandel_wuergegriff
+							}
+						}
+					}
+					AND = {
+						has_completed_focus = STA_the_iron_fist_of_schwarzenbach
+						NOT = {
+							has_completed_focus = STA_the_crown_infallible
+						}
+					}
+					AND = {
+						has_completed_focus = STA_the_anti_ordorian_front
+						NOT = {
+							OR = {
+								has_completed_focus = STA_the_stahlheer
+								has_completed_focus = STA_the_pragmatik_allianz
+							}
+						}
+					}
+					AND = {
+						has_completed_focus = STA_reach_out_to_the_hornbergers
+						NOT = {
+							OR = {
+								has_completed_focus = STA_the_aristocrats_of_stahlhof
+								has_completed_focus = STA_blood_ties_to_wertszvoerde
+							}
+						}
+					}
+					NOT = {
+						has_completed_focus = STA_reach_out_to_the_hornbergers
+					}
+				}
+				factor = 0
+			}
+		}
+		
 		select_effect = {
 			add_political_power = -40
 		}
 		continue_if_invalid = yes
-		bypass = {
-		
-		}
+
 		completion_reward = {
 			add_popularity = { ideology = theocrat popularity = 0.05 }
-			add_timed_idea = [ idea = theocrat_drift_idea days = 365 }
+			add_timed_idea = {idea = theocrat_drift_idea days = 365 }
 		}
 
 	}
@@ -1768,6 +1970,10 @@ focus_tree = {
 		}
 		x = 59
 		y = 2
+		
+		ai_will_do = {
+			factor = 27
+		}
 		
 		available = {
 			theocrat > 0.15
@@ -1822,6 +2028,10 @@ focus_tree = {
 		x = 57
 		y = 4
 		
+		ai_will_do = {
+			factor = 33 #Need the help
+		}
+		
 		available = {
 			theocrat > 0.35
 		}
@@ -1829,8 +2039,13 @@ focus_tree = {
 		
 		}
 		completion_reward = {
-			set_country_flag = STA_stv_ally
-			custom_effect_tooltip = STA_ally_this_freiprinz
+			add_to_variable = {
+				var = SVT.FPT_stahlhof_loyalty
+				value = 30
+			}
+			SVT = {
+				custom_effect_tooltip = STA_FPT_loyalty_tt
+			}
 		}
 
 	}
@@ -1868,6 +2083,45 @@ focus_tree = {
 		x = 62
 		y = 1
 		
+		ai_will_do = {
+			factor = 50 #Prioritize the PP
+			modifier = {
+				OR = {
+					AND = {
+						has_completed_focus = STA_turn_to_the_caravaneers
+						NOT = {
+							OR = {
+								has_completed_focus = STA_the_merchants_of_fritzhafen
+								has_completed_focus = STA_der_nordhandel_wuergegriff
+							}
+						}
+					}
+					AND = {
+						has_completed_focus = STA_the_iron_fist_of_schwarzenbach
+						NOT = {
+							has_completed_focus = STA_the_crown_infallible
+						}
+					}
+					AND = {
+						has_completed_focus = STA_the_league_of_temples
+						NOT = {
+							has_completed_focus = STA_the_priests_of_st_vichtlas
+						}
+					}
+					AND = {
+						has_completed_focus = STA_the_anti_ordorian_front
+						NOT = {
+							OR = {
+								has_completed_focus = STA_the_stahlheer
+								has_completed_focus = STA_the_pragmatik_allianz
+							}
+						}
+					}
+				}
+				factor = 0
+			}
+		}
+		
 		available = {
 			has_political_power > 40
 		}
@@ -1875,14 +2129,15 @@ focus_tree = {
 			add_political_power = -40
 		}
 		continue_if_invalid = yes
-		bypass = {
 		
-		}
 		completion_reward = {
 			add_popularity = { ideology = republic_aristocrat popularity = 0.05 }
-			add_timed_idea = [ idea = republic_aristocrat_drift_idea days = 365 }
-			add_ideas = { STA_divided_monarchists_idea }
-			add_stability = -0.2
+			add_timed_idea = {idea = republic_aristocrat_drift_idea days = 365 }
+			swap_ideas = {
+				remove_idea = STA_divided_monarchists_idea
+				add_idea = STA_negotiating_monarchists_idea
+			}
+			add_stability = -0.05
 		}
 
 	}
@@ -1895,6 +2150,10 @@ focus_tree = {
 		}
 		x = 62
 		y = 2
+		
+		ai_will_do = {
+			factor = 18
+		}
 		
 		available = {
 			republic_aristocrat > 0.15
@@ -1917,6 +2176,10 @@ focus_tree = {
 		x = 62
 		y = 3
 		
+		ai_will_do = {
+			factor = 21
+		}
+		
 		available = {
 			republic_aristocrat > 0.25
 		}
@@ -1924,8 +2187,10 @@ focus_tree = {
 		
 		}
 		completion_reward = {
-			remove_idea = { STA_divided_monarchists_idea }
-			add_stability = 0.1
+			swap_ideas = {
+				remove_idea = STA_negotiating_monarchists_idea
+				add_idea = STA_reconciled_monarchists_idea
+			}
 		}
 
 	}
@@ -1942,6 +2207,10 @@ focus_tree = {
 		x = 61
 		y = 4
 		
+		ai_will_do = {
+			factor = 15 #Not priority
+		}
+		
 		available = {
 			republic_aristocrat > 0.35
 		}
@@ -1950,7 +2219,10 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_stability = 0.05
-			add_ideas = { STA_joint_planning_commission_idea}
+			swap_ideas = {
+				remove_idea = STA_reconciled_monarchists_idea
+				add_idea = STA_united_monarchists_idea
+			}
 		}
 
 	}
@@ -1964,12 +2236,10 @@ focus_tree = {
 		x = 3
 		y = 4
 		
-		available = {
-		
+		ai_will_do = {
+			factor = 27
 		}
-		bypass = {
 		
-		}
 		completion_reward = {
 			swap_ideas = {
 				remove_idea = STA_adelina_troop_loyalty_idea
@@ -1980,7 +2250,7 @@ focus_tree = {
 	}
 	focus = {
 		id = STA_every_village_a_soldier
-		icon = GFX_BLD_Raider_Traditions
+		icon = GFX_focus_STA_every_village_soldier
 		cost = 10
 		prerequisite = {
 			focus = STA_meat_for_the_grinder
@@ -1991,14 +2261,12 @@ focus_tree = {
 		x = 1
 		y = 6
 		
-		available = {
-		
+		ai_will_do = {
+			factor = 35 #Priority
 		}
-		bypass = {
 		
-		}
 		completion_reward = {
-			add_ideas = { STA_every_village_a_solider_idea }
+			add_ideas = { STA_every_village_a_soldier_idea }
 		}
 
 	}
@@ -2012,13 +2280,25 @@ focus_tree = {
 		x = 3
 		y = 5
 		
-		available = {
-		
+		ai_will_do = {
+			factor = 30
 		}
-		bypass = {
 		
-		}
 		completion_reward = {
+			custom_effect_tooltip = STA_unlock_army_tt
+			custom_effect_tooltip = STA_loyal_adalinatroops
+			hidden_effect = {
+				load_oob = "STA_regain_army"
+				load_oob = "STA_converted_adalinatruppen"
+				set_division_template_lock = {
+					division_template = "Stadtwache"
+					is_locked = no
+				}
+				delete_unit_template_and_units = {
+					division_template = "Faustbürger Expeditionary Forces"
+					disband = no
+				}
+			}
 			swap_ideas = {
 				remove_idea = STA_adelina_troop_loyalty_idea2
 				add_idea = STA_adelina_troop_loyalty_idea3
@@ -2040,12 +2320,10 @@ focus_tree = {
 		x = 3
 		y = 7
 		
-		available = {
-		
+		ai_will_do = {
+			factor = 33
 		}
-		bypass = {
 		
-		}
 		completion_reward = {
 			add_ideas = STA_iron_discipline_idea
 		}
@@ -2061,12 +2339,10 @@ focus_tree = {
 		x = 25
 		y = 5
 		
-		available = {
-		
+		ai_will_do = {
+			factor = 27
 		}
-		bypass = {
 		
-		}
 		completion_reward = {
 			swap_ideas = {
 				remove_idea = STA_meritocratic_autocracy_idea2
@@ -2085,12 +2361,10 @@ focus_tree = {
 		x = 25
 		y = 6
 		
-		available = {
-		
+		ai_will_do = {
+			factor = 30
 		}
-		bypass = {
 		
-		}
 		completion_reward = {
 			swap_ideas = {
 				remove_idea = STA_meritocratic_autocracy_idea3
@@ -2109,12 +2383,10 @@ focus_tree = {
 		x = 25
 		y = 7
 		
-		available = {
-		
+		ai_will_do = {
+			factor = 33
 		}
-		bypass = {
 		
-		}
 		completion_reward = {
 			swap_ideas = {
 				remove_idea = STA_meritocratic_autocracy_idea4
@@ -2138,12 +2410,10 @@ focus_tree = {
 		x = 30
 		y = 9
 		
-		available = {
-		
+		ai_will_do = {
+			factor = 36
 		}
-		bypass = {
 		
-		}
 		completion_reward = {
 			add_stability = 0.1
 			add_war_support = 0.1
@@ -2152,7 +2422,7 @@ focus_tree = {
 	}
 	focus = {
 		id = STA_loyalty_through_fear
-		icon = GFX_focus_cze_german_puppet
+		icon = GFX_focus_eng_move_to_secure_the_dominions
 		cost = 10
 		prerequisite = {
 			focus = STA_force_an_iron_fist
@@ -2164,12 +2434,10 @@ focus_tree = {
 		x = 26
 		y = 8
 		
-		available = {
-		
+		ai_will_do = {
+			factor = 36
 		}
-		bypass = {
 		
-		}
 		completion_reward = {
 			add_ideas = { STA_loyalty_through_fear_idea }
 		}
@@ -2188,12 +2456,10 @@ focus_tree = {
 		x = 34
 		y = 8
 		
-		available = {
-		
+		ai_will_do = {
+			factor = 33
 		}
-		bypass = {
 		
-		}
 		completion_reward = {
 			add_ideas = { STA_loyalty_through_love_idea }
 		}
@@ -2209,12 +2475,10 @@ focus_tree = {
 		x = 33
 		y = 9
 		
-		available = {
-		
+		ai_will_do = {
+			factor = 36
 		}
-		bypass = {
 		
-		}
 		completion_reward = {
 			add_stability = 0.2
 		}
@@ -2230,12 +2494,10 @@ focus_tree = {
 		x = 27
 		y = 9
 		
-		available = {
-		
+		ai_will_do = {
+			factor = 36
 		}
-		bypass = {
 		
-		}
 		completion_reward = {
 			add_war_support = 0.2
 		}
@@ -2250,6 +2512,10 @@ focus_tree = {
 		}
 		x = 32
 		y = 6
+		
+		ai_will_do = {
+			factor = 30
+		}
 		
 		available = {
 			OR = {
@@ -2319,9 +2585,10 @@ focus_tree = {
 		x = 32
 		y = 7
 		
-		available = {
-		
+		ai_will_do = {
+			factor = 33
 		}
+		
 		bypass = {
 		has_country_flag = sta_treaty_declined_flag
 		has_country_flag = sta_alliance_of_equals_flag
@@ -2397,6 +2664,10 @@ focus_tree = {
 		x = 63
 		y = 4
 		
+		ai_will_do = {
+			factor = 30 #Need the help
+		}
+		
 		available = {
 			republic_aristocrat > 0.35
 		}
@@ -2404,8 +2675,13 @@ focus_tree = {
 		
 		}
 		completion_reward = {
-			custom_effect_tooltip = STA_ally_this_freiprinz
-			set_country_flag = STA_wer_ally
+			add_to_variable = {
+				var = WSZ.FPT_stahlhof_loyalty
+				value = 30
+			}
+			WSZ = {
+				custom_effect_tooltip = STA_FPT_loyalty_tt
+			}
 		}
 
 	}

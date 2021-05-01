@@ -10,6 +10,54 @@
 # protect
 # influence
 
+FPT_team_schwarzenbach = {#Makes Ferdinist Freiprinztümer actually commit to their alliance
+	enable = {
+		is_in_faction_with = STA
+		STA = {
+			is_faction_leader = yes
+		}
+		OR = {
+			is_subject = no
+			is_subject_of = STA
+		}
+	}
+	
+	abort_when_not_enabled = yes
+	
+	ai_strategy = {
+		type = alliance
+		id = "STA"
+		value = 200
+	}
+	
+	ai_strategy = {
+		type = befriend
+		id = "STA"
+		value = 200
+	}
+	
+	ai_strategy = {
+		type = antagonize
+		id = "UNG"
+		value = 200
+	}
+}
+
+STA_fuck_adalina = {#Makes Ferdinand hate Adalina
+
+	enable = {
+		tag = STA
+	}
+	
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = antagonize
+		id = "UNG"
+		value = 1200
+	}
+}
+
 HLZ_freiprinzen_buddies = {
 	enable = {
 		has_country_flag = joined_freiprinzer_alliance
@@ -19,7 +67,7 @@ HLZ_freiprinzen_buddies = {
 	}
 	ai_strategy = {
 		type = alliance
-		id = "HLZ"			
+		id = "HLZ"
 		value = 200
 	}
 }
@@ -33,7 +81,7 @@ NOC_freiprinzen_buddies = {
 	}
 	ai_strategy = {
 		type = alliance
-		id = "NOC"			
+		id = "NOC"
 		value = 200
 	}
 }
@@ -47,7 +95,7 @@ SPW_freiprinzen_buddies = {
 	}
 	ai_strategy = {
 		type = alliance
-		id = "SPW"			
+		id = "SPW"
 		value = 200
 	}
 }
@@ -61,7 +109,7 @@ SVT_freiprinzen_buddies = {
 	}
 	ai_strategy = {
 		type = alliance
-		id = "SVT"			
+		id = "SVT"	
 		value = 200
 	}
 }
@@ -75,7 +123,7 @@ STA_freiprinzen_buddies = {
 	}
 	ai_strategy = {
 		type = alliance
-		id = "STA"			
+		id = "STA"
 		value = 200
 	}
 }
@@ -89,7 +137,7 @@ NRK_freiprinzen_buddies = {
 	}
 	ai_strategy = {
 		type = alliance
-		id = "NRK"			
+		id = "NRK"
 		value = 200
 	}
 }
@@ -103,7 +151,7 @@ TEI_freiprinzen_buddies = {
 	}
 	ai_strategy = {
 		type = alliance
-		id = "TEI"			
+		id = "TEI"
 		value = 200
 	}
 }
@@ -117,7 +165,7 @@ SNF_freiprinzen_buddies = {
 	}
 	ai_strategy = {
 		type = alliance
-		id = "SNF"			
+		id = "SNF"
 		value = 200
 	}
 }
@@ -131,7 +179,7 @@ FAU_freiprinzen_buddies = {
 	}
 	ai_strategy = {
 		type = alliance
-		id = "FAU"			
+		id = "FAU"
 		value = 200
 	}
 }
@@ -145,7 +193,7 @@ ARK_freiprinzen_buddies = {
 	}
 	ai_strategy = {
 		type = alliance
-		id = "ARK"			
+		id = "ARK"
 		value = 200
 	}
 }
@@ -159,7 +207,7 @@ WIS_freiprinzen_buddies = {
 	}
 	ai_strategy = {
 		type = alliance
-		id = "WIS"			
+		id = "WIS"
 		value = 200
 	}
 }
@@ -173,7 +221,7 @@ WSZ_freiprinzen_buddies = {
 	}
 	ai_strategy = {
 		type = alliance
-		id = "WSZ"			
+		id = "WSZ"
 		value = 200
 	}
 }
@@ -187,7 +235,7 @@ FTH_freiprinzen_buddies = {
 	}
 	ai_strategy = {
 		type = alliance
-		id = "FTH"			
+		id = "FTH"
 		value = 200
 	}
 }

@@ -4,30 +4,19 @@ set_oob = "KUR_1936"
 
 
 set_technology = {
-	infantry_weapons = 1
-	tech_support = 1
-	tech_recon = 1
-}
-
-if = {
-	limit = {
-		not = { has_dlc = "Man the Guns" }
-	}
-	set_technology = {
-		early_destroyer = 1
-		transport = 1
-	}
-}
-if = {
-	limit = {
-		has_dlc = "Man the Guns"
-	}
-	set_technology = {
-		early_ship_hull_light = 1
-		basic_battery = 1
-		basic_light_battery = 1
-		mtg_transport = 1
-	}
+	implements_war = 1
+	horseback_riding = 1
+	mounted_warriors = 1
+	saddles = 1
+	stirrups = 1
+	cavalry_lances = 1
+	flanking_tactics = 1
+	skirmish_tactics = 1
+	scouting_parties = 1
+	astrolabe = 1
+	compass = 1
+	cartography = 1
+	
 }
 
 1939.1.1 = {

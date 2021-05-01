@@ -1,0 +1,24 @@
+scripted_gui = {
+
+	freiprinzpiety = {
+		context_type = player_context
+		
+		window_name = "freiprinzpiety_container"
+		
+		visible = {
+           has_variable = FPT_piety
+		}
+	}
+	
+	pious_freiprinz_icon = {
+		context_type = player_context
+		
+		window_name = "piousfreiprinz_container"
+		
+		visible = {
+			check_variable = {
+				FPT_piety > 0
+			}
+		}
+	}
+}

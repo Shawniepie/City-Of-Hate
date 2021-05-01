@@ -1,3 +1,12 @@
+GENERIC_join_wars = {
+	
+	icon = GFX_decision_category_hol_war_on_pacifism
+	
+	allowed = {
+		always = yes
+	}
+}
+
 commissiaries = {
 
 	icon = GFX_decision_category_commissiaries
@@ -88,6 +97,17 @@ UNG_perkav_census_decisions = {
 	}
 }
 
+FPT_loyalties = {
+
+	icon = GFX_decision_category_eng_appeal_to_imperial_loyalists
+
+	picture = GFX_decision_cat_union
+	
+	allowed = {
+		always = yes
+	}	
+}
+
 rally_princes = {
 
 	icon = GFX_decision_category_wiederherstellung
@@ -130,5 +150,35 @@ HLZ_invade_ordoria = {
 	
 	allowed = {
 		always = yes
+	}
+}
+
+SNF_drechts_opportunity = {
+	
+	icon = GFX_decision_category_power_struggle
+	
+	allowed = {
+		always = yes
+	}
+}
+
+SNF_Support_Kalaster = {
+
+	icon = GFX_decision_category_mercenaries
+	
+	allowed = {
+		always = yes
+	}
+}
+
+SNF_invade_perkav = {
+
+	icon = GFX_decision_category_border_conflicts
+	
+	allowed = {
+		always = yes
+		NOT = {
+		has_country_flag = SNF_UNG_said_no
+		}
 	}
 }

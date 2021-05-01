@@ -1,6 +1,11 @@
 spriteTypes = {	
 
 	### mod decisions
+	
+	spriteType = {
+		name = "GFX_decision_cat_union"
+		texturefile = "gfx/interface/decisions/decision_cat_union.dds"
+	}
 
 	spriteType = {
 		name = "GFX_decision_cat_vergallheim"
@@ -25,6 +30,11 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_decision_category_mercenaries"
 		texturefile = "gfx/interface/decisions/decision_category_mercenaries.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_decision_stahlhof_nationalism"
+		texturefile = "gfx/interface/decisions/decision_stahlhof_nationalism.dds"
 	}
 	
 	spriteType = {
@@ -487,8 +497,8 @@ spriteTypes = {
 	}
 	
 	spriteType = {
-		name = "GFX_decision_rubber"
-		texturefile = "gfx/interface/decisions/decision_rubber.dds"
+		name = "GFX_decision_lumber"
+		texturefile = "gfx/interface/decisions/decision_lumber.dds"
 	}
 	
 	spriteType = {
@@ -502,8 +512,8 @@ spriteTypes = {
 	}
 	
 	spriteType = {
-		name = "GFX_decision_aluminium"
-		texturefile = "gfx/interface/decisions/decision_aluminium.dds"
+		name = "GFX_decision_mount"
+		texturefile = "gfx/interface/decisions/decision_mount.dds"
 	}
 	
 	spriteType = {

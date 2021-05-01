@@ -1,12 +1,13 @@
-dwarven_warriors_generic = {
-
-	production_prio = {
-		factor = 5.0
-	}
+ogre_warriors_generic = {
 
 	roles = {
-		dwarven_warriors
+		ogre_warriors
+		infantry
 	}
+	
+	available_for = {
+        BLD
+    }
 	
 	upgrade_prio = {
 		factor = 2
@@ -18,7 +19,11 @@ dwarven_warriors_generic = {
 
 	match_to_count = 0.10
 	
-	dwarven_warriors_default = {
+	ogre_warriors_default = {
+		
+		production_prio = {
+			factor = 5.0
+		}
 	
 		upgrade_prio = {
 			factor = 2
@@ -68,11 +73,199 @@ dwarven_warriors_generic = {
 			match_value = 3000.0
 			
 			support = {
-				engineer = 1
-				recon = 1
-				field_hospital = 1
-				anti_tank = 1
-				artillery = 1
+				scouts_cavalry = 1
+			}
+			
+			regiments = {
+				ogre_warriors = 6
+			}
+		}
+		
+		allowed_types = {
+			ogre_warriors
+			scouts_cavalry
+		}
+	}
+}
+
+perkav_raiders_generic = {
+
+	roles = {
+		perkav_raiders
+		infantry
+	}
+	
+	available_for = {
+		PRK
+		KRL
+		SVC
+		RLV
+		WLT
+		VTZ
+		NVT
+		VLN
+		KRZ
+		LNK
+    }
+	
+	upgrade_prio = {
+		factor = 2
+
+		modifier = {
+			factor = 5
+		}
+	}
+
+	match_to_count = 0.10
+	
+	perkav_raiders_default = {
+	
+		production_prio = {
+			factor = 5.0
+		}
+		
+		upgrade_prio = {
+			factor = 2
+
+			modifier = {
+				factor = 1
+			}
+		}
+		
+		target_width = 12.0
+		width_weight = 1.0
+		column_swap_factor = 0.5
+		
+		stat_weights = {
+			0.00 #-- default_morale
+			0.00 #-- defense
+			1.00 #-- breakthrough
+			0.00 #-- hardness
+			4.00 #-- soft_attack
+			0.00 #-- hard_attack
+			0.00 #-- recon
+			1.00 #-- entrenchment
+			0.00 #-- initiative
+			0.00 #-- casualty_trickleback
+			0.00 #-- supply_consumption_factor
+			0.00 #-- supply_consumption
+			0.00 #-- suppression
+			0.00 #-- suppression_factor
+			0.00 #-- experience_loss_factor
+			0.00 #-- equipment_capture_factor
+			#-- Air Values
+			0.00 #-- air_attack
+			#-- Common Values
+			0.60 #-- max_organisation
+			0.40 #-- max_strength
+			0.00 #-- maximum_speed
+			0.00 #-- armor_value
+			0.20 #-- ap_attack
+			0.00 #-- reliability
+			0.00 #-- reliability_factor
+			0.00 #-- weight
+			0.00 #-- build_cost_ic
+		}
+		
+		target_template = {
+			weight = 0.9
+			match_value = 3000.0
+			
+			support = {
+				scouts_cavalry = 1
+			}
+			
+			regiments = {
+				perkav_raiders = 6
+			}
+		}
+		
+		allowed_types = {
+			perkav_raiders
+			scouts_cavalry
+		}
+	}
+}
+
+dwarven_warriors_generic = {
+
+	roles = {
+		dwarven_warriors
+		infantry
+	}
+	
+	available_for = {
+        SKA
+		BER
+		RMT
+		VRG
+    }
+	
+	upgrade_prio = {
+		factor = 2
+
+		modifier = {
+			factor = 5
+		}
+	}
+
+	match_to_count = 0.10
+	
+	dwarven_warriors_default = {
+	
+		production_prio = {
+			factor = 5.0
+		}
+	
+		upgrade_prio = {
+			factor = 2
+
+			modifier = {
+				factor = 1
+			}
+		}
+		
+		target_width = 12.0
+		width_weight = 1.0
+		column_swap_factor = 0.5
+		
+		stat_weights = {
+			0.00 #-- default_morale
+			0.00 #-- defense
+			1.00 #-- breakthrough
+			0.00 #-- hardness
+			4.00 #-- soft_attack
+			0.00 #-- hard_attack
+			0.00 #-- recon
+			1.00 #-- entrenchment
+			0.00 #-- initiative
+			0.00 #-- casualty_trickleback
+			0.00 #-- supply_consumption_factor
+			0.00 #-- supply_consumption
+			0.00 #-- suppression
+			0.00 #-- suppression_factor
+			0.00 #-- experience_loss_factor
+			0.00 #-- equipment_capture_factor
+			#-- Air Values
+			0.00 #-- air_attack
+			#-- Common Values
+			0.60 #-- max_organisation
+			0.40 #-- max_strength
+			0.00 #-- maximum_speed
+			0.00 #-- armor_value
+			0.20 #-- ap_attack
+			0.00 #-- reliability
+			0.00 #-- reliability_factor
+			0.00 #-- weight
+			0.00 #-- build_cost_ic
+		}
+		
+		target_template = {
+			weight = 0.9
+			match_value = 3000.0
+			
+			support = {
+				scouts_cavalry = 1
 			}
 			
 			regiments = {
@@ -82,22 +275,102 @@ dwarven_warriors_generic = {
 		
 		allowed_types = {
 			dwarven_warriors
-			engineer
-			recon
-			field_hospital
-			logistics_company
+			scouts_cavalry
+		}
+	}
+}
+
+garrison_generic = {
+
+	roles = {
+		garrison
+		infantry
+	}
+	
+	upgrade_prio = {
+		factor = 2
+
+		modifier = {
+			factor = 0.1 #Backline
+		}
+	}
+
+	match_to_count = 0.10
+	
+	garrison_default = {
+	
+		production_prio = {
+			factor = 0 #Backline
+		}
+	
+		upgrade_prio = {
+			factor = 0.1 #Backline
+
+			modifier = {
+				factor = 1
+			}
+		}
+		
+		target_width = 5.0
+		width_weight = 1.0
+		column_swap_factor = 0.5
+		
+		stat_weights = {
+			0.00 #-- default_morale
+			0.00 #-- defense
+			0.00 #-- breakthrough
+			0.00 #-- hardness
+			0.00 #-- soft_attack
+			0.00 #-- hard_attack
+			0.00 #-- recon
+			0.00 #-- entrenchment
+			0.00 #-- initiative
+			0.00 #-- casualty_trickleback
+			0.00 #-- supply_consumption_factor
+			1.00 #-- supply_consumption
+			1.00 #-- suppression
+			0.00 #-- suppression_factor
+			0.00 #-- experience_loss_factor
+			0.00 #-- equipment_capture_factor
+			#-- Air Values
+			0.00 #-- air_attack
+			#-- Common Values
+			0.60 #-- max_organisation
+			0.40 #-- max_strength
+			0.00 #-- maximum_speed
+			0.00 #-- armor_value
+			0.20 #-- ap_attack
+			0.00 #-- reliability
+			0.00 #-- reliability_factor
+			0.00 #-- weight
+			0.00 #-- build_cost_ic
+		}
+		
+		target_template = {
+			weight = 0.9
+			match_value = 3000.0
+			
+			support = {
+				scouts_cavalry = 1
+			}
+			
+			regiments = {
+				garrison = 5
+			}
+		}
+		
+		allowed_types = {
+			garrison
+			scouts_cavalry
 		}
 	}
 }
 
 men_at_arms_generic = {
 
-	production_prio = {
-		factor = 5.0
-	}
-
 	roles = {
 		men_at_arms
+		infantry
 	}
 	
 	upgrade_prio = {
@@ -112,6 +385,10 @@ men_at_arms_generic = {
 	
 	men_at_arms_default = {
 	
+		production_prio = {
+			factor = 7.0 #Frontline
+		}
+	
 		upgrade_prio = {
 			factor = 2
 
@@ -120,19 +397,19 @@ men_at_arms_generic = {
 			}
 		}
 		
-		target_width = 12.0
+		target_width = 20.0
 		width_weight = 1.0
 		column_swap_factor = 0.5
 		
 		stat_weights = {
-			0.00 #-- default_morale
+			0.50 #-- default_morale
 			0.00 #-- defense
-			1.00 #-- breakthrough
+			0.00 #-- breakthrough
 			0.00 #-- hardness
-			4.00 #-- soft_attack
+			2.00 #-- soft_attack
 			0.00 #-- hard_attack
 			0.00 #-- recon
-			1.00 #-- entrenchment
+			0.00 #-- entrenchment
 			0.00 #-- initiative
 			0.00 #-- casualty_trickleback
 			0.00 #-- supply_consumption_factor
@@ -160,36 +437,26 @@ men_at_arms_generic = {
 			match_value = 3000.0
 			
 			support = {
-				engineer = 1
-				recon = 1
-				field_hospital = 1
-				anti_tank = 1
-				artillery = 1
+				scouts_cavalry = 1
 			}
 			
 			regiments = {
-				men_at_arms = 6
+				men_at_arms = 10
 			}
 		}
 		
 		allowed_types = {
 			men_at_arms
-			engineer
-			recon
-			field_hospital
-			logistics_company
+			scouts_cavalry
 		}
 	}
 }
 
-garrison_generic = {
-
-	production_prio = {
-		factor = 5.0
-	}
+halberdier_generic = {
 
 	roles = {
-		garrison
+		halberdier
+		infantry
 	}
 	
 	upgrade_prio = {
@@ -202,7 +469,11 @@ garrison_generic = {
 
 	match_to_count = 0.10
 	
-	garrison_default = {
+	halberdier_default = {
+	
+		production_prio = {
+			factor = 6.0 #Frontline
+		}
 	
 		upgrade_prio = {
 			factor = 2
@@ -212,19 +483,19 @@ garrison_generic = {
 			}
 		}
 		
-		target_width = 12.0
+		target_width = 15.0
 		width_weight = 1.0
 		column_swap_factor = 0.5
 		
 		stat_weights = {
 			0.00 #-- default_morale
 			0.00 #-- defense
-			1.00 #-- breakthrough
+			0.00 #-- breakthrough
 			0.00 #-- hardness
-			4.00 #-- soft_attack
-			0.00 #-- hard_attack
+			0.00 #-- soft_attack
+			2.00 #-- hard_attack
 			0.00 #-- recon
-			1.00 #-- entrenchment
+			0.00 #-- entrenchment
 			0.00 #-- initiative
 			0.00 #-- casualty_trickleback
 			0.00 #-- supply_consumption_factor
@@ -252,35 +523,25 @@ garrison_generic = {
 			match_value = 3000.0
 			
 			support = {
-				engineer = 1
-				recon = 1
-				field_hospital = 1
-				anti_tank = 1
-				artillery = 1
+				scouts_cavalry = 1
 			}
 			
 			regiments = {
-				garrison = 6
+				halberdier = 5
 			}
 		}
 		
 		allowed_types = {
-			garrison
-			engineer
-			recon
-			field_hospital
-			logistics_company
+			halberdier
+			scouts_cavalry
 		}
 	}
 }
 
-cavalry_generic = {
-
-	production_prio = {
-		factor = 5.0
-	}
+light_cavalry_generic = {
 
 	roles = {
+		light_cavalry
 		cavalry
 	}
 	
@@ -294,29 +555,33 @@ cavalry_generic = {
 
 	match_to_count = 0.10
 	
-	cavalry_default = {
+	light_cavalry_default = {
+	
+		production_prio = {
+			factor = 5 #Expensive!
+		}
 	
 		upgrade_prio = {
-			factor = 2
+			factor = 1
 
 			modifier = {
-				factor = 1
+				factor = 15
 			}
 		}
 		
-		target_width = 12.0
+		target_width = 15.0
 		width_weight = 1.0
 		column_swap_factor = 0.5
 		
 		stat_weights = {
 			0.00 #-- default_morale
 			0.00 #-- defense
-			1.00 #-- breakthrough
+			5.00 #-- breakthrough
 			0.00 #-- hardness
-			4.00 #-- soft_attack
+			1.00 #-- soft_attack
 			0.00 #-- hard_attack
 			0.00 #-- recon
-			1.00 #-- entrenchment
+			0.00 #-- entrenchment
 			0.00 #-- initiative
 			0.00 #-- casualty_trickleback
 			0.00 #-- supply_consumption_factor
@@ -344,24 +609,104 @@ cavalry_generic = {
 			match_value = 3000.0
 			
 			support = {
-				engineer = 1
-				recon = 1
-				field_hospital = 1
-				anti_tank = 1
-				artillery = 1
+				scouts_cavalry = 1
 			}
 			
 			regiments = {
-				cavalry = 6
+				light_cavalry = 5
 			}
 		}
 		
 		allowed_types = {
-			cavalry
-			engineer
-			recon
-			field_hospital
-			logistics_company
+			light_cavalry
+			scouts_cavalry
 		}
 	}
 }
+	
+	heavy_cavalry_generic = {
+
+	roles = {
+		heavy_cavalry
+		cavalry
+	}
+	
+	upgrade_prio = {
+		factor = 3 #Important!
+
+		modifier = {
+			factor = 5
+		}
+	}
+
+	match_to_count = 0.10
+	
+	heavy_cavalry_default = {
+	
+		production_prio = {
+			factor = 2.5 #Expensive!
+		}
+	
+		upgrade_prio = {
+			factor = 2
+
+			modifier = {
+				factor = 1
+			}
+		}
+		
+		target_width = 20.0
+		width_weight = 1.0
+		column_swap_factor = 0.5
+		
+		stat_weights = {
+			0.00 #-- default_morale
+			0.00 #-- defense
+			1.00 #-- breakthrough
+			0.00 #-- hardness
+			5.00 #-- soft_attack
+			2.00 #-- hard_attack
+			0.00 #-- recon
+			0.00 #-- entrenchment
+			0.00 #-- initiative
+			0.00 #-- casualty_trickleback
+			0.00 #-- supply_consumption_factor
+			0.00 #-- supply_consumption
+			0.00 #-- suppression
+			0.00 #-- suppression_factor
+			0.00 #-- experience_loss_factor
+			0.00 #-- equipment_capture_factor
+			#-- Air Values
+			0.00 #-- air_attack
+			#-- Common Values
+			0.60 #-- max_organisation
+			0.40 #-- max_strength
+			0.00 #-- maximum_speed
+			0.00 #-- armor_value
+			0.20 #-- ap_attack
+			0.00 #-- reliability
+			0.00 #-- reliability_factor
+			0.00 #-- weight
+			0.00 #-- build_cost_ic
+		}
+		
+		target_template = {
+			weight = 0.9
+			match_value = 3000.0
+			
+			support = {
+				scouts_cavalry = 1
+			}
+			
+			regiments = {
+				heavy_cavalry = 4
+			}
+		}
+		
+		allowed_types = {
+			heavy_cavalry
+			scouts_cavalry
+		}
+	}
+}
+

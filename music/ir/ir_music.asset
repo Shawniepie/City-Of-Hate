@@ -1,8 +1,16 @@
+# MAIN THEME
+music = {
+	name = "maintheme"
+	file = "the_union_forever.ogg"
+	volume = 1
+}
+
 music = {
 	name = "The Union Forever"
 	file = "the_union_forever.ogg"
 	volume = 1
 }
+
 music = {
 	name = "March on Faustburg"
 	file = "march_on_faustburg.ogg"
@@ -36,5 +44,25 @@ music = {
 music = {
 	name = "Authors of History"
 	file = "authors_of_history.ogg"
+	volume = 1
+}
+music = {
+	name = "Rebirth of Sovereignty"
+	file = "rebirth_of_sovereignty.ogg"
+	volume = 1
+}
+music = {
+	name = "Elven Conquest"
+	file = "the_elven_conquest.ogg"
+	volume = 1
+}
+music = {
+	name = "Miner's Delight"
+	file = "miners_delight.ogg"
+	volume = 1
+}
+music = {
+	name = "Tactical Assault"
+	file = "tactical_assault.ogg"
 	volume = 1
 }

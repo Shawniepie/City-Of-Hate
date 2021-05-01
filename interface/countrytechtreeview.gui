@@ -68,12 +68,12 @@ guiTypes = {
             
 					# All the other elements are optional, refer to the actual file for details.
 				}
-				#gridboxtype = {
-				#	name = "tech_tribal_pride_tree"
-				#	position = { x = 140 y = 525 } ##steps of 105
-				#	slotsize = { width = 70 height = 70 }
-				#	format = "LEFT"
-				#}
+				gridboxtype = {
+					name = "implements_war_tree"
+					position = { x = 0 y = 0 } ##steps of 105
+					slotsize = { width = 70 height = 70 }
+					format = "LEFT"
+				}
 			}
 			
 			containerWindowType = {
@@ -493,7 +493,7 @@ guiTypes = {
 			position = { x=3 y=3 }
 			spriteType = "GFX_technology_medium"
 			alwaystransparent = yes
-		}	
+		}
 		
 		iconType = {
 			name = "bonus_icon"

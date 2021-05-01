@@ -4,13 +4,13 @@ state={
 	provinces={
 		7488 5221 7398 7382 2048
 	}
-	state_category = pastoral
-	manpower=2394
+	state_category = rural
+	manpower=4394
 	buildings_max_level_factor=1.000
 		history={	
 		owner = ORD
 		buildings = {	
-		infrastructure = 2
+		infrastructure = 5
 		}	
 		add_core_of = ORD
 		}

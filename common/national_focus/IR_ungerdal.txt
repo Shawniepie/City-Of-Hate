@@ -46,9 +46,6 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
-		available = {
-			date > 889.01.01
-		}
 		x = 20
 		y = 0
 		completion_reward = {
@@ -274,7 +271,7 @@ focus_tree = {
 			factor = 9
 			modifier = {
 				has_war = yes
-				modifier = 0
+				factor = 0
 			}
 		}
 		relative_position_id = UNG_irinthian_dissenters
@@ -315,7 +312,7 @@ focus_tree = {
 			factor = 7
 			modifier = {
 				has_war = yes
-				modifier = 0
+				factor = 0
 			}
 		}
 		relative_position_id = UNG_irinthian_dissenters
@@ -363,6 +360,11 @@ focus_tree = {
 				add_opinion_modifier = {
 					target = UNG
 					modifier = supportive_opinion
+				}
+				custom_effect_tooltip = FPT_increase_union_loyalty_small_tt
+				add_to_variable = {
+					var = FPT_union_loyalty
+					value = 1
 				}
 			}
 		}
@@ -420,6 +422,11 @@ focus_tree = {
 					modifier = embargo_trade
 				}
 				add_ideas = UNG_embargoed_bergial
+				custom_effect_tooltip = FPT_decrease_union_loyalty_small_tt
+				add_to_variable = {
+					var = FPT_union_loyalty
+					value = -1
+				}
 			}
 			FTH = {
 				add_opinion_modifier = {
@@ -427,6 +434,11 @@ focus_tree = {
 					modifier = trade_monopoly
 				}
 				add_ideas = FTH_trade_monopolized
+				custom_effect_tooltip = FPT_increase_union_loyalty_tt
+				add_to_variable = {
+					var = FPT_union_loyalty
+					value = 3
+				}
 			}
 			add_ideas = UNG_embargoed_bergial	
 			add_opinion_modifier = {
@@ -468,11 +480,11 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			navy_experience = 20
-			add_tech_bonus = {
-				bonus = 0.35
-				uses = 2
-				category = naval_equipment
-			}
+			#add_tech_bonus = {
+			#	bonus = 0.35
+			#	uses = 2
+			#	category = naval_equipment
+			#}
 		}
 	}
 	
@@ -497,7 +509,7 @@ focus_tree = {
 			factor = 11
 			modifier = {
 				has_war = yes
-				modifier = 0
+				factor = 0
 			}
 		}
 		relative_position_id = UNG_escalate_trade_war
@@ -544,11 +556,16 @@ focus_tree = {
 					target = BER
 					modifier = embargo_trade
 				}
-				BER = {
-					remove_opinion_modifier = {
+				custom_effect_tooltip = FPT_increase_union_loyalty_small_tt
+				add_to_variable = {
+					var = FPT_union_loyalty
+					value = 1
+				}
+			}
+			BER = {
+				remove_opinion_modifier = {
 					target = ROOT
 					modifier = embargo_trade
-					}
 				}
 				remove_ideas = UNG_embargoed_bergial
 			}
@@ -618,10 +635,7 @@ focus_tree = {
 		completion_reward = {
 			every_state = {
 				limit = {
-					OR = {
-						has_state_flag = steel_road_state
-						has_state_flag = steel_road_state_new
-					}
+					has_state_flag = steel_road_state
 					OR = {
 						is_owned_and_controlled_by = UNG
 						AND = {
@@ -667,8 +681,22 @@ focus_tree = {
 					level = 3
 					instant_build = yes
 				}
-				add_ideas = UNG_steel_road_dominated
 			}
+			add_to_variable = {
+				var = STLRD_state_control_var
+				value = 30
+			}
+			every_other_country = {
+				limit = {
+					is_subject_of = UNG
+					has_variable = STLRD_state_control_var
+				}	
+				subtract_from_variable = {
+					var = STLRD_state_control_var
+					value = 30
+				}
+			}
+			custom_effect_tooltip = UNG_steel_road_dominated_tt
 		}
 	}
 
@@ -688,11 +716,23 @@ focus_tree = {
 			}
 		}
 		bypass = {
-			GMR = {
-				is_sphered = yes
-			}
-			ORD = {
-				is_sphered = yes
+			AND = {
+				OR = {
+					GMR = {
+						is_sphered = yes
+					}
+					NOT = {
+						country_exists = GMR
+					}
+				}
+				OR = {
+					ORD = {
+						is_sphered = yes
+					}
+					NOT = {
+						country_exists = ORD
+					}
+				}
 			}
 		}
 		ai_will_do = {
@@ -799,7 +839,14 @@ focus_tree = {
 			focus = UNG_monitor_elves
 		}
 		bypass = {
-			is_not_sphered = yes
+			OR = {
+				ORD = {
+					is_sphered = yes
+				}
+				NOT = {
+					country_exists = ORD
+				}
+			}
 		}
 		ai_will_do = {
 			factor = 14
@@ -876,22 +923,40 @@ focus_tree = {
 		}
 		available = {
 			has_country_flag = UNG_stabbing_rthaur
-			ORD = {
-				is_not_sphered = yes
-			}
-			RTH = {
-				is_not_sphered = yes
+			OR = {
+				AND = {
+					ORD = {
+						is_not_sphered = yes
+					}
+					country_exists = ORD
+				}
+				AND = {
+					RTH = {
+						is_not_sphered = yes
+					}
+					country_exists = RTH
+				}
 			}
 		}
 		mutually_exclusive = {
 			focus = UNG_lesser_evil
 		}
 		bypass = {
-			RTH = {
-				is_sphered = yes
+			OR = {
+				RTH = {
+					is_sphered = yes
+				}
+				NOT = {
+					country_exists = RTH
+				}
 			}
-			ORD = {
-				is_sphered = yes
+			OR = {
+				ORD = {
+					is_sphered = yes
+				}
+				NOT = {
+					country_exists = ORD
+				}
 			}
 		}
 		ai_will_do = {
@@ -920,6 +985,7 @@ focus_tree = {
 				limit = {
 					has_completed_focus = UNG_lesser_evil
 				}
+				country_exists = ORD
 				ORD = {
 					is_not_sphered = yes
 				}
@@ -929,11 +995,19 @@ focus_tree = {
 				limit = {
 					has_completed_focus = UNG_both_sides
 				}
-				ORD = {
-					is_not_sphered = yes
-				}
-				RTH = {
-					is_not_sphered = yes
+				OR = {
+					AND = {
+						country_exists = ORD
+						ORD = {
+							is_not_sphered = yes
+						}
+					}
+					AND = {
+						country_exists = RTH
+						RTH = {
+							is_not_sphered = yes
+						}
+					}
 				}
 			}
 		}
@@ -943,8 +1017,13 @@ focus_tree = {
 				limit = {
 					has_completed_focus = UNG_lesser_evil
 				}
-				ORD = {
-					is_sphered = yes
+				OR = {
+					ORD = {
+						is_sphered = yes
+					}
+					NOT = {
+						country_exists = ORD
+					}
 				}
 			}
 			
@@ -952,11 +1031,21 @@ focus_tree = {
 				limit = {
 					has_completed_focus = UNG_both_sides
 				}
-				ORD = {
-					is_sphered = yes
+				OR = {
+					ORD = {
+						is_sphered = yes
+					}
+					NOT = {
+						country_exists = ORD
+					}
 				}
-				RTH = {
-					is_sphered = yes
+				OR = {
+					RTH = {
+						is_sphered = yes
+					}
+					NOT = {
+						country_exists = RTH
+					}
 				}
 			}
 		}
@@ -965,7 +1054,7 @@ focus_tree = {
 			factor = 18
 			modifier = {
 				has_war = yes
-				modifier = 0
+				factor = 0
 			}
 		}
 		relative_position_id = UNG_lesser_evil
@@ -1164,7 +1253,7 @@ focus_tree = {
 			factor = 20
 			modifier = {
 				has_war = yes
-				modifier = 0
+				factor = 0
 			}
 		}
 		relative_position_id = UNG_approach_lirothlind
@@ -1219,6 +1308,13 @@ focus_tree = {
 		x = 3
 		y = 1
 		completion_reward = {
+			custom_effect_tooltip = UNG_diplomatic_victory
+			if = {
+				limit = {
+					has_country_leader_with_trait = scandalous_hochprinzessin
+				}
+				remove_country_leader_trait = scandalous_hochprinzessin
+			}
 			add_ideas = UNG_union_forever_idea
 		}
 	}
@@ -1275,17 +1371,22 @@ focus_tree = {
 			factor = 12
 		}
 		available = {
+			country_exists = ORD
 			ORD = {
 				is_not_sphered = yes
+			}
+			NOT = {
+				is_subject_of = ORD
 			}
 		}
 		bypass = {
 			ORD = {
 				is_sphered = yes
 			}
-		}
-		mutually_exclusive = {
-			
+			has_war_with = ORD
+			NOT = {
+				country_exists = ORD
+			}
 		}
 		relative_position_id = UNG_imperial_diplomacy
 		x = -5
@@ -1414,6 +1515,13 @@ focus_tree = {
 		x = 0
 		y = 1
 		completion_reward = {
+			HLZ = {
+				custom_effect_tooltip = FPT_increase_union_loyalty_small_tt
+				add_to_variable = {
+					var = FPT_union_loyalty
+					value = 1
+				}
+			}
 			send_equipment = {
 				equipment = infantry_equipment
 				amount = 750
@@ -1472,15 +1580,15 @@ focus_tree = {
 			STA = {
 					is_sphered = yes
 			}
-			bypass = {
-				OR = {
-					NOT = {
-						country_exists = STA
-					}
+		}
+		bypass = {
+			OR = {
+				NOT = {
+					country_exists = STA
 				}
-				STA = {
-					is_not_sphered = yes
-				}
+			}
+			STA = {
+				is_not_sphered = yes
 			}
 		}
 		mutually_exclusive = {
@@ -1530,6 +1638,13 @@ focus_tree = {
 		x = 0
 		y = 1
 		completion_reward = {
+			HLZ = {
+				custom_effect_tooltip = FPT_increase_union_loyalty_tt
+				add_to_variable = {
+					var = FPT_union_loyalty
+					value = 3
+				}
+			}
 			send_equipment = {
 				equipment = infantry_equipment
 				amount = 1500
@@ -1588,11 +1703,25 @@ focus_tree = {
 			has_country_flag = UNG_unconditional_rthaur_support
 			RTH = {
 				is_not_sphered = yes
+				is_independent = yes
 			}
 		}
 		bypass = {
-			RTH = {
-				is_sphered = yes
+			OR = {
+				RTH = {
+					is_sphered = yes
+					is_not_independent = yes
+					NOT = {
+						country_exists = RTH
+					}
+				}
+				ORD = {
+					is_sphered = yes
+					is_not_independent = yes
+					NOT = {
+						country_exists = ORD
+					}
+				}
 			}
 		}
 		mutually_exclusive = {
@@ -1626,6 +1755,16 @@ focus_tree = {
 			has_country_flag = UNG_conditional_rthaur_support
 			RTH = {
 				is_not_sphered = yes
+			}
+		}
+		bypass = {
+			OR = {
+				NOT = {
+					country_exists = RTH
+				}
+				RTH = {
+					is_sphered = yes
+				}
 			}
 		}
 		mutually_exclusive = {
@@ -1662,13 +1801,27 @@ focus_tree = {
 					is_in_faction_with = ORD
 				}
 			}
+			ORD = {
+				is_not_sphered = yes
+			}
 			NOT = {
 				is_in_faction_with = ORD
 			}
 		}
 		bypass = {
-			GMR = {
-				is_sphered = yes
+			OR = {
+				GMR = {
+					is_sphered = yes
+				}
+				ORD = {
+					is_sphered = yes
+				}
+				NOT = {
+					country_exists = GMR
+				}
+				NOT = {
+					country_exists = ORD
+				}
 			}
 		}
 		relative_position_id = UNG_unconditional_support
@@ -1700,21 +1853,33 @@ focus_tree = {
 			}
 		}
 		bypass = {
-			ORD = {
-				is_sphered = yes
+			OR = {
+				ORD = {
+					is_sphered = yes
+				}
+				NOT = {
+					country_exists = ORD
+				}
 			}
 		}
 		ai_will_do = {
 			factor = 23
 			modifier = {
 				has_war = yes
-				modifier = 0
+				factor = 0
 			}
 		}
 		relative_position_id = UNG_pact_with_arthenon
 		x = 0
 		y = 1
 		completion_reward = {
+			custom_effect_tooltip = UNG_diplomatic_victory
+			if = {
+				limit = {
+					has_country_leader_with_trait = scandalous_hochprinzessin
+				}
+				remove_country_leader_trait = scandalous_hochprinzessin
+			}
 			declare_war_on = {
 				target = ORD
 				type = annex_everything
@@ -1900,8 +2065,8 @@ focus_tree = {
 				remove_ideas = UNG_trade_realm
 			}
 			if = {
-				GMR = {
-					limit = {
+				limit = {
+					GMR = {
 						has_idea = GMR_trade_union
 					}
 				}
@@ -2009,7 +2174,7 @@ focus_tree = {
 			factor = 18
 			modifier = {
 				has_war = yes
-				modifier = 0.5
+				factor = 0.5
 			}
 		}
 		relative_position_id = UNG_fuck_arthenon_too
@@ -2101,7 +2266,7 @@ focus_tree = {
 			factor = 33
 			modifier = {
 				has_war = yes
-				modifier = 0
+				factor = 0
 			}
 		}
 		relative_position_id = UNG_warn_hastalia
@@ -2141,9 +2306,13 @@ focus_tree = {
 		x = -2
 		y = 1
 		completion_reward = {
-			UNG_improve_TLA_relations = yes
+			TLA = {
+				FROM_improve_THIS_relations = yes
+			}
 			
-			UNG_worsen_IRI_relations = yes
+			IRI = {
+				FROM_worsen_THIS_relations = yes
+			}
 			add_political_power = 75
 		}
 	}
@@ -2177,9 +2346,13 @@ focus_tree = {
 		x = 0
 		y = 1
 		completion_reward = {
-			UNG_improve_TLA_relations = yes
+			TLA = {
+				FROM_improve_THIS_relations = yes
+			}
 			
-			UNG_worsen_IRI_relations = yes
+			IRI = {
+				FROM_worsen_THIS_relations = yes
+			}
 			TLA = {
 				country_event = {
 					id = tla.2
@@ -2216,9 +2389,13 @@ focus_tree = {
 		x = 0
 		y = 1
 		completion_reward = {
-			UNG_improve_TLA_relations = yes
+			TLA = {
+				FROM_improve_THIS_relations = yes
+			}
 			
-			UNG_worsen_IRI_relations = yes
+			IRI = {
+				FROM_worsen_THIS_relations = yes
+			}
 			
 			IRI = {
 				add_ideas = IRI_embargoed
@@ -2254,7 +2431,7 @@ focus_tree = {
 
 			IRI = {
 				country_event = {
-					id = iri.19
+					id = iri.53
 					days = 3
 				}
 			}
@@ -2288,9 +2465,13 @@ focus_tree = {
 		x = 0
 		y = 1
 		completion_reward = {
-			UNG_improve_IRI_relations = yes
+			IRI = {
+				FROM_improve_THIS_relations = yes
+			}
 			
-			UNG_worsen_TLA_relations = yes
+			TLA = {
+				FROM_worsen_THIS_relations = yes
+			}
 			
 			IRI = {
 				country_event = {
@@ -2322,9 +2503,13 @@ focus_tree = {
 		x = 0
 		y = 1
 		completion_reward = {
-			UNG_improve_IRI_relations = yes
+			IRI = {
+				FROM_improve_THIS_relations = yes
+			}
 			
-			UNG_worsen_TLA_relations = yes
+			TLA = {
+				FROM_worsen_THIS_relations = yes
+			}
 			
 			custom_effect_tooltip = UNG_tlarthingia_circumvented_tt
 			
@@ -2333,13 +2518,13 @@ focus_tree = {
 					limit = {
 						OR = {
 							has_state_flag = steel_road_state
-							has_state_flag = steel_road_state_new
+							has_state_flag = steel_road_state
 						}
 						is_owned_and_controlled_by = TLA
 					}
+					clr_state_flag = steel_road_state
+					clr_state_flag = steel_road_state
 				}
-				clr_state_flag = steel_road_state
-				clr_state_flag = steel_road_state_new
 			}
 		}
 	}
@@ -2516,9 +2701,16 @@ focus_tree = {
 			factor = 27
 		}
 		relative_position_id = UNG_guarantee_bergial
-		x = -2
+		x = -3
 		y = 1
 		completion_reward = {
+			custom_effect_tooltip = UNG_diplomatic_victory
+			if = {
+				limit = {
+					has_country_leader_with_trait = scandalous_hochprinzessin
+				}
+				remove_country_leader_trait = scandalous_hochprinzessin
+			}
 			swap_ideas = {
 				remove_idea = UNG_trade_bergial
 				add_idea = UNG_trade_bergial_ii
@@ -2634,7 +2826,7 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = UNG_strengthen_bergialer_connections
 			focus = UNG_recognize_high_king
-			focus = UNG_recognize_rimatu
+			focus = UNG_recognize_rimatan_independence
 		}
 		ai_will_do = {
 			factor = 14
@@ -2643,9 +2835,78 @@ focus_tree = {
 		x = 0
 		y = 1
 		completion_reward = {
+			if = {
+				limit = {
+					has_completed_focus = UNG_aid_skaelinger_against_kurgur
+				}
+				SKA = {
+					add_opinion_modifier = {
+						target = UNG
+						modifier = incredible_betrayal
+					}
+				}
+			}
 			BER = {
-				country_event = ber.1
-				days = 1
+				country_event = {
+					id = ber.1
+					days = 1
+				}
+			}
+		}
+	}
+	
+	focus = {#Allies on the Seas
+		id = UNG_ally_bergialer_dwarves
+		icon = GFX_goal_generic_improve_relations
+		cost = 5
+		prerequisite = {
+			focus = UNG_assist_terugkeer
+		}
+		available = {
+			BER = {
+				is_independent = yes
+				owns_state = 172
+				owns_state = 173
+				owns_state = 174
+				owns_state = 176
+				owns_state = 179
+			}
+		}
+		ai_will_do = {
+			factor = 17
+		}
+		relative_position_id = UNG_assist_terugkeer
+		x = 0
+		y = 1
+		completion_reward = {
+			custom_effect_tooltip = UNG_diplomatic_victory
+			if = {
+				limit = {
+					has_country_leader_with_trait = scandalous_hochprinzessin
+				}
+				remove_country_leader_trait = scandalous_hochprinzessin
+			}
+			if = {
+				limit = {
+					is_faction_leader = yes
+				}
+				add_to_faction = BER
+			}
+			if = {
+				limit = {
+					is_in_faction = yes
+					is_faction_leader = no
+				}
+				leave_faction = yes
+				create_faction = new_alliance
+				add_to_faction = BER
+			}
+			if = {
+				limit = {
+					is_in_faction = no
+				}
+				create_faction = new_alliance
+				add_to_faction = BER
 			}
 		}
 	}
@@ -2663,7 +2924,7 @@ focus_tree = {
         }
 
         ai_will_do = {
-            factor = 17
+            factor = 15
         }
         relative_position_id = UNG_the_exiles
         x = 1
@@ -2690,6 +2951,11 @@ focus_tree = {
 				add_opinion_modifier = {
 					target = UNG
 					modifier = supportive_opinion
+				}
+				custom_effect_tooltip = FPT_increase_union_loyalty_small_tt
+				add_to_variable = {
+					var = FPT_union_loyalty
+					value = 1
 				}
 			}
         }
@@ -2722,11 +2988,13 @@ focus_tree = {
 		}
 		available = {
 			SKA = {
-				is_independent = yes }
+				is_independent = yes
+			}
 		}
 		bypass = {
 			SKA = {
-				is_not_independent = yes }
+				is_not_independent = yes
+			}
 		}
 		ai_will_do = {
 			factor = 18
@@ -2809,6 +3077,17 @@ focus_tree = {
 		x = 0
 		y = 1
 		completion_reward = {
+			if = {
+				limit = {
+					has_completed_focus = UNG_assist_terugkeer
+				}
+				BER = {
+					add_opinion_modifier = {
+						target = UNG
+						modifier = incredible_betrayal
+					}
+				}
+			}
 			SKA = {
 				country_event = {
 					id = ska.11
@@ -2831,8 +3110,8 @@ focus_tree = {
 			}
 		}
 		mutually_exclusive = {
-			 focus = UNG_assist_terugkeer
-			 focus = UNG_recognize_rimatu
+			focus = UNG_assist_terugkeer
+			focus = UNG_recognize_rimatan_independence
 		}
 
 		ai_will_do = {
@@ -2851,12 +3130,297 @@ focus_tree = {
 		}
 	}
 	
+	focus = {#The Separatists
+		id = UNG_the_separatists
+		icon = GFX_focus_ung_rimatu
+		cost = 3
+		prerequisite = {
+			focus = UNG_dwarven_contacts
+		}
+		available = {
+			RMT = {
+				is_independent = yes
+			}
+		}
+		ai_will_do = {
+			factor = 18
+		}
+		relative_position_id = UNG_dwarven_contacts
+		x = 4
+		y = 1
+		completion_reward = {
+			add_opinion_modifier = {
+				target = RMT
+				modifier = liked_opinion 
+			}
+			reverse_add_opinion_modifier = {
+				target = RMT
+				modifier = liked_opinion
+			}
+		}
+	}
+	
+	focus = {#Monopolize the Steel Road
+		id = UNG_monopolize_the_steel_road
+		icon = GFX_IRI_Debase_Currency
+		cost = 15
+		prerequisite = {
+			focus = UNG_the_separatists
+		}
+		available = {
+			NOT = {
+				TLA = {
+					is_not_sphered = yes
+				}
+			}
+		}
+		mutually_exclusive = {
+			focus = UNG_handelpakt
+		}
+		ai_will_do = {
+			factor = 19
+		}
+		relative_position_id = UNG_the_separatists
+		x = -2
+		y = 1
+		completion_reward = {
+			every_country = {
+				limit = {
+					any_owned_state = {
+						is_steel_road_state = yes
+					}
+					NOT = {
+						tag = RMT
+						tag = UNG
+						is_subject_of = UNG
+						is_in_faction_with = UNG
+					}
+				}
+				country_event = {
+					id = steel_road.1
+					days = 7
+				}
+			}
+		}
+	}
+	
+	focus = {#Trade Deals
+		id = UNG_trade_deals_with_rimatu
+		icon = GFX_IRI_Restore_Old_Currency_Value
+		cost = 10
+		prerequisite = {
+			focus = UNG_monopolize_the_steel_road
+		}
+		mutually_exclusive = {
+			focus = 
+		}
+		ai_will_do = {
+			factor = 24
+		}
+		relative_position_id = UNG_monopolize_the_steel_road
+		x = 0
+		y = 1
+		completion_reward = {
+			RMT = {
+				country_event = {
+					id = rmt.8
+					days = 7
+				}
+			}
+		}
+	}
+	
+	focus = {#Handelpakt
+		id = UNG_handelpakt
+		icon = GFX_BLD_Pact_Of_Hospitality
+		cost = 15
+		prerequisite = {
+			focus = UNG_the_separatists
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = UNG_handelpakt_trigger_tt
+				any_other_country = {
+					is_subject = no
+					any_owned_state = {
+						is_steel_road_state = yes
+					}
+				}
+			}
+		}
+		mutually_exclusive = {
+			focus = UNG_monopolize_the_steel_road
+		}
+		ai_will_do = {
+			factor = 25
+		}
+		relative_position_id = UNG_the_separatists
+		x = 1
+		y = 1
+		completion_reward = {
+			every_country = {
+				limit = {
+					any_owned_state = {
+						is_steel_road_state = yes
+					}
+					NOT = {
+						tag = UNG
+					}
+				}
+				country_event = {
+					id = steel_road.9
+					days = 7
+				}
+			}
+		}
+	}
+	
+	focus = {#Coordinate Renovations
+		id = UNG_coordinate_renovations
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10
+		prerequisite = {
+			focus = UNG_handelpakt
+		}
+		available = {
+			has_idea = STLRD_handelpakt_signatory
+			TLA = {
+				has_idea = STLRD_handelpakt_signatory
+			}
+		}
+		mutually_exclusive = {
+			focus = UNG_formalize_waterways
+		}
+		bypass = {
+			check_variable = {
+				var = UNG_handelpakt_not_working
+				value = 7
+				compare = greater_than_or_equals
+			}
+		}
+		ai_will_do = {
+			factor = 21
+			modifier = {
+				factor = 0
+				OR = {
+					has_war_with = TLA
+					is_in_faction_with = TLA
+				}
+			}
+		}
+		relative_position_id = UNG_handelpakt
+		x = -1
+		y = 1
+		completion_reward = {
+			every_country = {
+				limit = {
+					has_idea = STLRD_handelpakt_signatory
+				}
+				country_event = {
+					id = steel_road.12
+					days = 7
+				}
+				every_owned_state = {
+					limit = {
+						is_steel_road_state = yes
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 5
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	
+	focus = {#Formalize Waterways
+		id = UNG_formalize_waterways
+		icon = GFX_goal_generic_navy_battleship
+		cost = 10
+		available = {
+			has_idea = STLRD_handelpakt_signatory
+			TLA = {
+				NOT = {
+					has_idea = STLRD_handelpakt_signatory
+				}
+			}
+		}
+		prerequisite = {
+			focus = UNG_handelpakt
+		}
+		mutually_exclusive = {
+			focus = UNG_coordinate_renovations
+		}
+		ai_will_do = {
+			factor = 24
+			modifier = {
+				factor = 0.1
+				OR = {
+					is_in_faction_with = TLA
+					TLA = {
+						is_subject_of = UNG
+					}
+				}
+			}
+		}
+		relative_position_id = UNG_handelpakt
+		x = 1
+		y = 1
+		completion_reward = {
+			every_country = {
+				limit = {
+					has_idea = STLRD_handelpakt_signatory
+				}
+				country_event = {
+					id = steel_road.12
+					days = 7
+				}
+			}
+			formalize_waterways_steelroad = yes
+		}
+	}
+	
+	focus = {#Recognize Rimatu
+		id = UNG_recognize_rimatan_independence
+		icon = GFX_focus_generic_rimatu_agreement
+		cost = 10
+		prerequisite = {
+			focus = UNG_trade_deals_with_rimatu
+			focus = UNG_coordinate_renovations
+			focus = UNG_formalize_waterways
+		}
+		available = {
+			
+		}
+		mutually_exclusive = {
+			focus = UNG_recognize_high_king
+			focus = UNG_assist_terugkeer
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		relative_position_id = UNG_coordinate_renovations
+		x = 0
+		y = 1
+		completion_reward = {
+			RMT = {
+				country_event = {
+					id = rmt.9
+					days = 7
+				}
+				give_guarantee = RMT
+			}
+		}
+	}
+	
 	focus = { # Mediate between Skaelinger and Rimatü
 		id = UNG_mediate_skaelinger_rimatu
 		icon = GFX_IRI_Found_Coallition_Of_Irinth
 		cost = 30
 		prerequisite = {
 			focus = UNG_recognize_high_king
+			focus = UNG_recognize_rimatan_independence
 		}
 		available = {
 			SKA = {
@@ -2889,7 +3453,7 @@ focus_tree = {
 			factor = 30
 		}
 		relative_position_id = UNG_recognize_high_king
-		x = 0
+		x = 2
 		y = 1
 		completion_reward = {
 			SKA = {
@@ -2906,7 +3470,746 @@ focus_tree = {
 			}
         }
     }
+	
+	focus = { #Succesful Negotiations
+		id = UNG_succesful_negotiations
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		cost = 10
+		prerequisite = {
+			focus = UNG_mediate_skaelinger_rimatu
+		}
+		mutually_exclusive = {
+			focus = UNG_continue_politics
+		}
+		available = {
+			OR = {
+				has_country_flag = UNG_nordtorf_summit_success_RMT_favoured
+				has_country_flag = UNG_nordtorf_summit_success_SKA_favoured
+			}
+		}
+		ai_will_do = {
+			factor = 33
+		}
+		relative_position_id = UNG_mediate_skaelinger_rimatu
+		x = -1
+		y = 1
+		completion_reward = {
+			custom_effect_tooltip = UNG_diplomatic_victory
+			if = {
+				limit = {
+					has_country_leader_with_trait = scandalous_hochprinzessin
+				}
+				remove_country_leader_trait = scandalous_hochprinzessin
+			}
+			add_political_power = 250
+			add_stability = 0.15
+		}
+	}
+	
+	focus = { #Continuation of Politics
+		id = UNG_continue_politics
+		icon = GFX_goal_generic_major_war
+		cost = 5
+		prerequisite = {
+			focus = UNG_mediate_skaelinger_rimatu
+		}
+		available = {
+			OR = {
+				has_country_flag = UNG_nordtorf_summit_fails_SKA_favoured
+				has_country_flag = UNG_nordtorf_summit_fails_RMT_favoured
+			}
+		}
+		mutually_exclusive = {
+			focus = UNG_succesful_negotiations
+		}
+		ai_will_do = {
+			factor = 33
+		}
+		relative_position_id = UNG_mediate_skaelinger_rimatu
+		x = 1
+		y = 1
+		completion_reward = {
+			if = {
+				limit = {
+					has_country_flag = UNG_nordtorf_summit_fails_SKA_favoured
+					any_country = {
+						OR = {
+							is_subject_of = UNG
+							tag = UNG
+						}
+						OR = {
+							is_neighbor_of = SKA
+							is_neighbor_of = RMT
+						}
+					}
+				}
+				declare_war_on = {
+					target = RMT	
+					type = annex_everything
+				}
+				SKA = {
+					country_event = {
+						id = ska.17
+						days = 5
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = UNG_nordtorf_summit_fails_SKA_favoured
+					NOT = {
+						any_country = {
+							OR = {
+								is_subject_of = UNG
+								tag = UNG
+							}
+							OR = {
+								is_neighbor_of = SKA
+								is_neighbor_of = RMT
+							}
+						}
+					}
+				}
+				set_rule = {
+					can_send_volunteers = yes
+				}
+				SKA = {
+					country_event = {
+						id = ska.17
+						days = 5
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = UNG_nordtorf_summit_fails_RMT_favoured
+					any_country = {
+						OR = {
+							is_subject_of = UNG
+							tag = UNG
+						}
+						OR = {
+							is_neighbor_of = SKA
+							is_neighbor_of = RMT
+						}
+					}
+				}
+				declare_war_on = {
+					target = SKA
+					type = annex_everything
+				}
+				RMT = {
+					country_event = {
+						id = rmt.7
+						days = 5
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = UNG_nordtorf_summit_fails_RMT_favoured
+					NOT = {
+						any_country = {
+							OR = {
+								is_subject_of = UNG
+								tag = UNG
+							}
+							OR = {
+								is_neighbor_of = SKA
+								is_neighbor_of = RMT
+							}
+						}
+					}
+				}
+				set_rule = {
+					can_send_volunteers = yes
+				}
+				RMT = {
+					country_event = {
+						id = rmt.7
+						days = 5
+					}
+				}
+			}
+		}
+	}
+	
+	focus = { #Ally Dwarves
+		id = UNG_dwarven_allies
+		icon = GFX_focus_generic_diplomatic_treaty
+		cost = 5
+		prerequisite = {
+			focus = UNG_succesful_negotiations
+			focus = UNG_continue_politics
+		}
+		available = {
+			OR = {
+				AND = {
+					OR = {
+						has_country_flag = UNG_nordtorf_summit_fails_SKA_favoured
+						has_country_flag = UNG_nordtorf_summit_success_SKA_favoured
+					}
+					OR = {
+						SKA = {
+							owns_state = 383
+						}
+						RMT = {
+							is_puppet_of = SKA
+						}
+					}
+				}
+				AND = {
+					OR = {
+						has_country_flag = UNG_nordtorf_summit_fails_RMT_favoured
+						has_country_flag = UNG_nordtorf_summit_success_RMT_favoured
+					}
+					OR = {
+						RMT = {
+							owns_state = 146
+							has_non_aggression_pact_with = SKA
+						}
+						SKA = {
+							is_puppet_of = RMT
+						}
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 36
+		}
+		relative_position_id = UNG_succesful_negotiations
+		x = 1
+		y = 1
+		completion_reward = {
+			custom_effect_tooltip = UNG_diplomatic_victory
+			if = {
+				limit = {
+					has_country_leader_with_trait = scandalous_hochprinzessin
+				}
+				remove_country_leader_trait = scandalous_hochprinzessin
+			}
+			if = {
+				limit = {
+					OR = {
+						has_country_flag = UNG_nordtorf_summit_fails_SKA_favoured
+						has_country_flag = UNG_nordtorf_summit_success_SKA_favoured
+					}
+					is_faction_leader = yes
+				}
+				add_to_faction = SKA
+			}
+			if = {
+				limit = {
+					OR = {
+						has_country_flag = UNG_nordtorf_summit_fails_SKA_favoured
+						has_country_flag = UNG_nordtorf_summit_success_SKA_favoured
+					}
+					is_in_faction = yes
+					is_faction_leader = no
+				}
+				leave_faction = yes
+				create_faction = old_alliance
+				add_to_faction = SKA
+			}
+			if = {
+				limit = {
+					OR = {
+						has_country_flag = UNG_nordtorf_summit_fails_SKA_favoured
+						has_country_flag = UNG_nordtorf_summit_success_SKA_favoured
+					}
+					is_in_faction = no
+				}
+				create_faction = old_alliance
+				add_to_faction = SKA
+			}
+			if = {
+				limit = {
+					OR = {
+						has_country_flag = UNG_nordtorf_summit_fails_RMT_favoured
+						has_country_flag = UNG_nordtorf_summit_success_RMT_favoured
+					}
+					is_faction_leader = yes
+				}
+				add_to_faction = RMT
+			}
+			if = {
+				limit = {
+					OR = {
+						has_country_flag = UNG_nordtorf_summit_fails_RMT_favoured
+						has_country_flag = UNG_nordtorf_summit_success_RMT_favoured
+					}
+					is_in_faction = yes
+					is_faction_leader = no
+				}
+				leave_faction = yes
+				create_faction = new_alliance
+				add_to_faction = RMT
+			}
+			if = {
+				limit = {
+					OR = {
+						has_country_flag = UNG_nordtorf_summit_fails_RMT_favoured
+						has_country_flag = UNG_nordtorf_summit_success_RMT_favoured
+					}
+					is_in_faction = no
+				}
+				create_faction = new_alliance
+				add_to_faction = RMT
+			}
+		}
+	}
+	
+	### A LONG-EXPECTED PARTY ###
+	
+	focus = { #Long-Expected Party
+		id = UNG_long_expected_party
+		icon = GFX_focus_ung_long_expected_party
+		cost = 15
+		available = {
+			has_war = no
+		}
+		ai_will_do = {
+			factor = 35
+		}
+		relative_position_id = UNG_looking_outwards
+		x = 24
+		y = 0
+		completion_reward = {
+			country_event = {
+				id = ung.46
+				days = 1
+			}
+		}
+	}
+	
+	focus = { #Arrest Traitors
+		id = UNG_arrest_nobility
+		icon = GFX_focus_generic_strike_at_democracy1
+		cost = 2
+		prerequisite = {
+			focus = UNG_long_expected_party
+		}
+		available = {
+			has_country_flag = UNG_arrest_traitors
+		}
+		ai_will_do = {
+			factor = 38
+		}
+		relative_position_id = UNG_long_expected_party
+		x = -2
+		y = 1
+		completion_reward = {
+			add_stability = -0.1
+			add_popularity = {
+				ideology = monarchy_absolute
+				popularity = 0.05
+			}
+			random_list = {
+				60 = {
+					country_event = {
+						id = ung.47
+					}
+				}
+				40 = {
+					country_event = {
+						id = ung.48
+					}
+				}
+			}
+		}
+	}
+	
+	focus = { #Sicherheitsdiktat
+		id = UNG_sicherheitsdiktat
+		icon = GFX_focus_eng_move_to_secure_the_dominions
+		cost = 3
+		prerequisite = {
+			focus = UNG_arrest_nobility
+		}
+		available = {
+			has_country_flag = UNG_sicherheitsdiktat_flag
+		}
+		ai_will_do = {
+			factor = 41
+		}
+		relative_position_id = UNG_arrest_nobility
+		x = -1
+		y = 1
+		completion_reward = {
+			set_politics = {
+				ruling_party = monarchy_absolute
+			}
+			add_popularity = {
+				ideology = monarchy_absolute
+				popularity = 0.15
+			}
+			add_stability = 0.15
+		}
+	}
+	
+	focus = { #Oaths of Loyalty
+		id = UNG_oath_of_loyalty
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+		prerequisite = {
+			focus = UNG_sicherheitsdiktat
+		}
+		available = {
+			has_government = monarchy_absolute
+		}
+		ai_will_do = {
+			factor = 44
+		}
+		relative_position_id = UNG_sicherheitsdiktat
+		x = -2
+		y = 1
+		completion_reward = {
+			add_popularity = {
+				ideology = monarchy_absolute
+				popularity = 0.07
+			}
+			add_war_support = 0.10
+			add_ideas = UNG_loyal_commanders
+		}
+	}
+	
+	focus = { #Eyes of the Hochprinzessin
+		id = UNG_secret_service
+		icon = GFX_focus_generic_self_management
+		cost = 10
+		prerequisite = {
+			focus = UNG_sicherheitsdiktat
+		}
+		available = {	
+			has_government = monarchy_absolute
+		}
+		ai_will_do = {
+			factor = 44
+		}
+		relative_position_id = UNG_sicherheitsdiktat
+		x = 0
+		y = 1
+		completion_reward = {
+			add_popularity = {
+				ideology = monarchy_absolute
+				popularity = 0.12
+			}
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = stella_galde
+			add_ideas = UNG_hochprinzessinsauge
+			add_stability = 0.09
+		}
+	}
+	
+	focus = { #Control Nobility
+		id = UNG_control_nobility
+		icon = GFX_focus_spa_save_the_alcazar
+		cost = 12
+		prerequisite = {
+			focus = UNG_secret_service
+			focus = UNG_oath_of_loyalty
+		}
+		available = {
+			has_government = monarchy_absolute
+		}
+		ai_will_do = {
+			factor = 36
+		}
+		relative_position_id = UNG_secret_service
+		x = -1
+		y = 1
+		completion_reward = {
+			add_popularity = {
+				ideology = monarchy_absolute
+				popularity = 0.16
+				add_ideas = UNG_nobility_controlled
+			}
+		}
+	}
+	
+	focus = { #The Gentle Hand of Constitutionalism
+		id = UNG_gentle_hand
+		icon = GFX_focus_generic_diplomatic_treaty
+		cost = 10
+		prerequisite = {
+			focus = UNG_long_expected_party
+		}
+		available = {
+			has_country_flag = UNG_steady_as_she_goes
+		}
+		ai_will_do = {
+			factor = 38
+		}
+		relative_position_id = UNG_long_expected_party
+		x = 0
+		y = 1
+		completion_reward = {
+			add_stability = 0.15
+			add_political_power = 125
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = heinrich_brengst
+		}
+	}
+	
+	focus = { # Guide the Nobility
+		id = UNG_guide_nobility
+		icon = GFX_goal_generic_demand_territory
+		cost = 5
+		prerequisite = {
+			focus = UNG_gentle_hand
+		}
+		available = {
+			has_government = monarchy_constitutional
+		}
+		ai_will_do = {
+			factor = 41
+		}
+		relative_position_id = UNG_gentle_hand
+		x = -1
+		y = 1
+		completion_reward = {
+			add_ideas = UNG_strict_protocol
+		}
+	}
+	
+	focus = { #The People's Princess
+		id = UNG_peoples_princess
+		icon = GFX_focus_ung_young_hochprinzessin
+		cost = 5
+		prerequisite = {
+			focus = UNG_gentle_hand 
+		}
+		available = {
+			monarchy_constitutional > 0.4
+		}
+		bypass = {
+			monarchy_constitutional > 0.9
+		}
+		ai_will_do = {
+			factor = 41
+		}		
+		relative_position_id = UNG_gentle_hand
+		x = 1
+		y = 1
+		completion_reward = {
+			add_country_leader_trait = beloved_freiprinzessin
+		}
+	}
+	
+	focus = { #Faustburger Constitution
+		id = UNG_faustburg_constitution
+		icon = GFX_focus_generic_treaty
+		cost = 13
+		prerequisite = {
+			focus = UNG_peoples_princess
+		}
+		prerequisite = {
+			focus = UNG_guide_nobility
+		}
+		available = {
+			has_government = monarchy_constitutional
+		}
+		
+		ai_will_do = {
+			factor = 44 
+		}
+		relative_position_id = UNG_guide_nobility
+		
+		x = 1
+		y = 1
+		completion_reward = {
+			country_event = {
+				id = ung.80
+				days = 1
+			}
+		}
+	}
+	
+	focus = { #Popular Constitution
+		id = UNG_constitution_popular
+		icon = GFX_IRI_Bill_Of_Civil_Rights
+		cost = 15
+		prerequisite = {
+			focus = UNG_faustburg_constitution
+		}
+		available = {
+			has_country_flag = UNG_popular_constitution
+		}
+		mutually_exclusive = {
+			focus = UNG_constitution_aristocratic
+		}
+		ai_will_do = {
+			factor = 47
+		}
+		relative_position_id = UNG_faustburg_constitution
+		x = 1
+		y = 1
+		completion_reward = {
+			add_ideas = UNG_volksverfassung
+		}
+	}
+	
+	focus = { #Aristocratic Constitution
+		id = UNG_constitution_aristocratic
+		icon = GFX_IRI_Emperors_Party
+		cost = 15
+		prerequisite = {
+			focus = UNG_faustburg_constitution
+		}
+		available = {
+			has_country_flag = UNG_aristocratic_constitution
+		}
+		mutually_exclusive = {
+			focus = UNG_constitution_popular
+		}
+		ai_will_do = {
+			factor = 47
+		}
+		relative_position_id = UNG_faustburg_constitution
+		x = -1
+		y = 1
+		completion_reward = {
+			add_ideas = UNG_edelverfassung
+		}
+	}
+	
+	focus = { #Concessions to the Aristocracy
+		id = UNG_transfer_power
+		icon = GFX_BLD_Swear_Loyalty_To_Irinthios
+		cost = 3
+		prerequisite = {
+			focus = UNG_long_expected_party
+		}
+		available = {
+			has_country_flag = UNG_noble_power_flag
+		}
+		ai_will_do = {
+			factor = 38
+		}
+		relative_position_id = UNG_long_expected_party
+		x = 4
+		y = 1
+		completion_reward = {
+			set_politics = {
+				ruling_party = republic_aristocrat 
+			}
+			add_popularity = {
+				ideology = republic_aristocrat
+				popularity = 0.08
+			}
+		}
+	}
 
+	focus = { #Limit Adalina
+		id = UNG_limit_powers
+		icon = GFX_focus_rom_handle_king
+		cost = 5
+		prerequisite = {
+			focus = UNG_transfer_power
+		}
+		available = {
+			has_government = republic_aristocrat
+		}
+		ai_will_do =  {
+			factor = 41
+		}
+		relative_position_id = UNG_transfer_power
+		x = 0
+		y = 1
+		completion_reward = {
+			remove_country_leader_trait = informal_council
+			add_country_leader_trait = formalized_council
+			add_popularity = {
+				ideology = republic_aristocrat
+				popularity = 0.12
+			}
+		}
+	}
+	focus = { #Support the Faustbürger Zeitung
+		id = UNG_support_zeitung
+		icon = GFX_focus_generic_newspaper
+		cost = 5
+		prerequisite = {
+			focus = UNG_limit_powers
+		}
+		available = {
+			has_government = republic_aristocrat
+		}
+		ai_will_do = {
+			factor = 44
+		}
+		relative_position_id = UNG_limit_powers
+		x = 0
+		y = 1
+		completion_reward = {
+			add_popularity = {
+				ideology = republic_aristocrat
+				popularity = 0.13
+			}
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = alko_blau
+			remove_country_leader_trait = formalized_council
+			add_country_leader_trait = popular_council
+		}
+	}
+	
+	focus = { #Literacy Drive
+		id = UNG_literacy_drive
+		icon = GFX_focus_generic_treaty
+		cost = 15
+		prerequisite = {
+			focus = UNG_support_zeitung
+		}
+		available = {
+			has_government = republic_aristocrat
+		}
+		ai_will_do = {
+			factor = 47
+		}
+		relative_position_id = UNG_support_zeitung
+		x = -1
+		y = 1
+		completion_reward = {
+			add_popularity = {
+				ideology = republic_aristocrat
+				popularity = 0.21
+			}
+			add_ideas = UNG_literate_society
+		}
+	}
+	
+	focus = { #Printing Press
+		id = UNG_printing_press
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 5
+		prerequisite = {
+			focus = UNG_support_zeitung
+		}
+		available = {
+			has_government = republic_aristocrat
+		}
+		ai_will_do = {
+			factor = 47
+		}
+		relative_position_id = UNG_support_zeitung
+		x = 1
+		y = 1
+		completion_reward = {
+			add_popularity = {
+				ideology = republic_aristocrat
+				popularity = 0.07
+			}
+			233 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
 	###	SACK OF SCHNEEFILDE ###
 	
 	focus = { #Sack of Scheefilde
@@ -2923,7 +4226,7 @@ focus_tree = {
 			factor = 50
 		}
 		relative_position_id = UNG_looking_outwards
-		x = 23
+		x = 38
 		y = 0
 		completion_reward = {
 			country_event = {
@@ -2952,6 +4255,13 @@ focus_tree = {
 		x = -7
 		y = 1
 		completion_reward = {
+			SNF = {
+				custom_effect_tooltip = FPT_increase_union_loyalty_small_tt
+				add_to_variable = {
+					var = FPT_union_loyalty
+					value = 1
+				}
+			}
 			if = {
 				limit = {
 					SNF = {
@@ -3075,6 +4385,20 @@ focus_tree = {
 					days = 125
 				}
 			}
+			every_country = {
+				limit = {
+					is_subject_of = UNG
+					NOT = {
+						tag = STA
+						tag = SNF
+					}
+				}
+				custom_effect_tooltip = FPT_decrease_union_loyalty_small_tt
+				add_to_variable = {
+					var = FPT_union_loyalty
+					value = -1
+				}
+			}
 		}
 	}
 	
@@ -3134,6 +4458,11 @@ focus_tree = {
 					idea = SNF_tax_breaks
 					days = 356
 				}
+				custom_effect_tooltip = FPT_increase_union_loyalty_tt
+				add_to_variable = {
+					var = FPT_union_loyalty
+					value = 3
+				}
 			}
 		}
 	}
@@ -3166,6 +4495,13 @@ focus_tree = {
 			country_event = {
 				id = ung.17
 				days = 1
+			}
+			SNF = {
+				custom_effect_tooltip = FPT_decrease_union_loyalty_small_tt
+				add_to_variable = {
+					var = FPT_union_loyalty
+					value = -1
+				}
 			}
 		}
 	}
@@ -3210,7 +4546,7 @@ focus_tree = {
 		available = {
 			OR = {
 				PRK = {
-					owns_state = 335
+					owns_state = 253
 				}
 				PRK = {
 					owns_state = 336
@@ -3325,6 +4661,20 @@ focus_tree = {
 					days = 100
 				}
 			}
+			every_country = {
+				limit = {
+					is_subject_of = UNG
+					NOT = {
+						tag = STA
+						tag = SNF
+					}
+				}
+				custom_effect_tooltip = FPT_decrease_union_loyalty_small_tt
+				add_to_variable = {
+					var = FPT_union_loyalty
+					value = -1
+				}
+			}
 		}
 	}
 	
@@ -3432,6 +4782,11 @@ focus_tree = {
 					idea = SNF_garrison_reinforcement
 					days = 35
 				}
+				custom_effect_tooltip = FPT_increase_union_loyalty_small_tt
+				add_to_variable = {
+					var = FPT_union_loyalty
+					value = 1
+				}
 			}
 		}
 	}
@@ -3487,6 +4842,13 @@ focus_tree = {
 						all_provinces = yes
 						limit_to_border = yes
 					}
+				}
+			}
+			SNF = {
+				custom_effect_tooltip = FPT_increase_union_loyalty_small_tt
+				add_to_variable = {
+					var = FPT_union_loyalty
+					value = 1
 				}
 			}
 		}
@@ -3649,7 +5011,7 @@ focus_tree = {
 			factor = 80
 			modifier = {
 				has_war = yes
-				modifier = 0
+				factor = 0
 			}
 		}
 		
@@ -3935,6 +5297,13 @@ focus_tree = {
 		}
 		
 		completion_reward = {
+			custom_effect_tooltip = UNG_diplomatic_victory
+			if = {
+				limit = {
+					has_country_leader_with_trait = scandalous_hochprinzessin
+				}
+				remove_country_leader_trait = scandalous_hochprinzessin
+			}
 			add_stability = 0.1
 			create_faction = southern_alliance
 			add_to_faction = PRK
@@ -3968,6 +5337,13 @@ focus_tree = {
 		}
 		
 		completion_reward = {
+			custom_effect_tooltip = UNG_diplomatic_victory
+			if = {
+				limit = {
+					has_country_leader_with_trait = scandalous_hochprinzessin
+				}
+				remove_country_leader_trait = scandalous_hochprinzessin
+			}
 			PRK = {
 				country_event = {
 					id = prk.21
@@ -4007,6 +5383,13 @@ focus_tree = {
 		y = 1
 		
 		completion_reward = {
+			custom_effect_tooltip = UNG_diplomatic_victory
+			if = {
+				limit = {
+					has_country_leader_with_trait = scandalous_hochprinzessin
+				}
+				remove_country_leader_trait = scandalous_hochprinzessin
+			}
 			add_stability = 0.2
 			add_war_support = 0.15
 			add_political_power = 125
@@ -4014,6 +5397,556 @@ focus_tree = {
 			PRK = {
 				clr_country_flag = PRK_can_raid
 			}
+			SNF = {
+				custom_effect_tooltip = FPT_increase_union_loyalty_tt
+				add_to_variable = {
+					var = FPT_union_loyalty
+					value = 3
+				}
+			}
+			TEI = {
+				custom_effect_tooltip = FPT_increase_union_loyalty_tt
+				add_to_variable = {
+					var = FPT_union_loyalty
+					value = 3
+				}
+			}
+			WSZ = {
+				custom_effect_tooltip = FPT_increase_union_loyalty_tt
+				add_to_variable = {
+					var = FPT_union_loyalty
+					value = 3
+				}
+			}
 		}
-	}		
+	}
+
+	focus = { #The Genius of Schlosserhelmer
+		id = UNG_genius_schlosserhelmer
+		icon = GFX_focus_ung_freisler
+		cost = 5
+		available = {
+			controls_state = 342
+			has_country_flag = UNG_heard_of_freisler
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = UNG_constitution_popular
+		x = 1
+		y = 1
+		completion_reward = {
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = cecilia_freisler
+		}
+	}
+	
+	focus = { #
+		id = UNG_labratory_freisler
+		icon = GFX_BLD_Ogre_Scholars_Group
+		cost = 10
+		prerequisite = {
+			focus = UNG_genius_schlosserhelmer
+		}
+		available = {
+			controls_state = 233
+		}
+		ai_will_do = {
+			factor = 12
+		}
+		relative_position_id = UNG_genius_schlosserhelmer
+		x = -2
+		y = 1 
+		completion_reward = {
+			233 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = workshop
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = forge
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = { #The Freisleruniversität
+		id = UNG_found_freisleruniversitat
+		icon = GFX_focus_research2
+		cost = 10
+		prerequisite = {
+			focus = UNG_labratory_freisler
+		}
+		mutually_exclusive = {
+			focus = UNG_freislerfakultat
+		}
+		ai_will_do = {
+			factor = 14
+		}
+		relative_position_id = UNG_labratory_freisler
+		x = -4
+		y = 1
+		completion_reward = {
+			add_research_slot = 1
+			add_ideas = UNG_freisleruniversitat_idea
+		}
+	}
+	
+	focus = { #The Bleeding Edge
+		id = UNG_bleeding_edge
+		icon = GFX_goal_generic_small_arms
+		cost = 10
+		prerequisite = {
+			focus = UNG_found_freisleruniversitat
+		}
+		ai_will_do = {
+			factor = 16
+		}
+		relative_position_id = UNG_found_freisleruniversitat
+		x = 0
+		y = 1
+		completion_reward = {
+			add_ideas = UNG_bleeding_edge_idea
+		}
+	}
+	
+	focus = { #Freisler Faculty
+		id = UNG_freislerfakultat
+		icon = GFX_IRI_International_Academy_Of_Philosophy
+		cost = 5
+		prerequisite = {
+			focus = UNG_labratory_freisler
+		}
+		available = {
+			SVT = {
+				is_sphered = yes
+			}
+		}
+		mutually_exclusive = {
+			focus = UNG_found_freisleruniversitat
+		}
+		ai_will_do = {
+			factor = 14
+		}
+		relative_position_id = UNG_labratory_freisler
+		x = 0
+		y = 1
+		completion_reward = {
+			add_to_tech_sharing_group = UNG_SVT_freisler_tech_group
+			SVT = {
+				add_to_tech_sharing_group = UNG_SVT_freisler_tech_group
+				custom_effect_tooltip = FPT_increase_union_loyalty_tt
+				add_to_variable = {
+					var = FPT_union_loyalty
+					value = 3
+				}
+			}
+		}
+	}
+	
+	focus = { #Pioneer Arcanotech
+		id = UNG_pioneer_arcanotech
+		icon = GFX_focus_generic_magic
+		cost = 5
+		prerequisite = {
+			focus = UNG_found_freisleruniversitat
+			focus = UNG_freislerfakultat
+		}
+		available = {
+			ARK = {
+				is_sphered = yes
+			}
+		}
+		ai_will_do = {
+			factor = 16
+		}
+		relative_position_id = UNG_found_freisleruniversitat
+		x = 2
+		y = 1
+		completion_reward = {
+			custom_effect_tooltip = WIP_not_done_note
+		}
+	}
+	
+	focus = { #All-Ungerdaler Academia
+		id = UNG_all_ungerdaler_academia
+		icon = GFX_goal_generic_scientific_exchange
+		cost = 10
+		prerequisite = {
+			focus = UNG_freislerfakultat
+		}
+		available = {
+			
+		}
+		mutually_exclusive = {
+			focus = 
+		}
+		bypass = {
+			
+		}
+		ai_will_do = {
+			factor = 
+		}
+		relative_position_id = UNG_freislerfakultat
+		x = 0
+		y = 1
+		completion_reward = {
+			every_country = {
+				limit = {
+					NOT = {
+						tag = STA
+						tag = SVT
+					}
+					is_subject_of = UNG
+				}
+				add_to_tech_sharing_group = UNG_SVT_freisler_tech_group
+				custom_effect_tooltip = FPT_increase_union_loyalty_small_tt
+				add_to_variable = {
+					var = FPT_union_loyalty
+					value = 1
+				}
+			}
+		}
+	}
+	
+	focus = { #Industrialize Faustburg
+		id = UNG_industrialize_faustburg
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 20
+		prerequisite = {
+			focus = UNG_genius_schlosserhelmer
+		}
+		ai_will_do = {
+			factor = 12
+		}
+		relative_position_id = UNG_genius_schlosserhelmer
+		x = 0
+		y = 1
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = workshop
+					level = 3
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = workshop
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = { #Freislermühle
+		id = UNG_freislermuhle
+		icon = GFX_goal_generic_construction2
+		cost = 10
+		prerequisite = {
+			focus = UNG_industrialize_faustburg
+		}
+		ai_will_do = {
+			factor = 14
+		}
+		relative_position_id = UNG_industrialize_faustburg
+		x = 0
+		y = 1
+		completion_reward = {
+			add_ideas = UNG_freislermuhle_idea
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = workshop
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = workshop
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = { #Optimize the Blueprints
+		id = UNG_optimize_blueprints
+		icon = GFX_BLD_Give_Lead_To_Progressive_Faction
+		cost = 8
+		prerequisite = {
+			focus = UNG_freislermuhle
+		}
+		ai_will_do = {
+			factor = 16
+		}
+		relative_position_id = UNG_freislermuhle
+		x = 0
+		y = 1
+		completion_reward = {
+			add_ideas = UNG_blueprints_optimized
+		}
+	}
+	
+	focus = { #
+		id = UNG_mandate_blueprints
+		icon = GFX_BLD_Textile_Manufacturing
+		cost = 4
+		prerequisite = {
+			focus = UNG_optimize_blueprints
+		}
+		ai_will_do = {
+			factor = 18
+		}
+		relative_position_id = UNG_optimize_blueprints
+		x = -2
+		y = 1
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = UNG_blueprints_optimized
+				add_idea = UNG_blueprints_mandated
+			}
+		}
+	}
+	
+	focus = { #Modularmontage
+		id = UNG_modularmontage
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10
+		prerequisite = {
+			focus = UNG_optimize_blueprints
+		}
+		mutually_exclusive = {
+			focus = UNG_improvismontage
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		relative_position_id = UNG_optimize_blueprints
+		x = 0
+		y = 1
+		completion_reward = {
+			add_ideas = UNG_modularmontage_idea
+		}
+	}
+	
+	focus = { #Neuwege
+		id = UNG_neuwege
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10
+		prerequisite = {
+			focus = UNG_genius_schlosserhelmer
+		}
+		ai_will_do = {
+			factor = 12
+		}
+		relative_position_id = UNG_genius_schlosserhelmer
+		x = 2
+		y = 1
+		completion_reward = {
+			313 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+			330 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+			343 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+			326 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = { #Geological Surveys
+		id = UNG_geological_surveys
+		icon = GFX_IRI_Reach_Southern_Mineral_Deposits
+		cost = 20
+		prerequisite = {
+			focus = UNG_neuwege
+		}
+		ai_will_do = {
+			factor = 14
+		}
+		relative_position_id = UNG_neuwege
+		x = 0
+		y = 1
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_resource = {
+					type = steel
+					amount = 12
+					state = 330
+				}
+				add_resource = {
+					type = steel
+					amount = 7
+					state = 342
+				}
+				add_resource = {
+					type = steel
+					amount = 4
+					state = 323
+				}
+				add_resource = {
+					type = steel
+					amount = 2
+					state = 251
+				}
+			}
+		}
+	}
+	
+	focus = { #Holistic Architecture
+		id = UNG_holistic_architecture
+		icon = GFX_focus_spa_the_spanish_miracle
+		cost = 10
+		prerequisite = {
+			focus = UNG_geological_surveys
+		}
+		ai_will_do = {
+			factor = 16
+		}
+		relative_position_id = UNG_geological_surveys
+		x = 2
+		y = 1
+		completion_reward = {
+			add_ideas = UNG_holistic_architecture_idea
+		}
+	}
+	
+	focus = { #Refine Irrigation
+		id = UNG_refine_irrigation
+		icon = GFX_BLD_Promote_Farming
+		cost = 10
+		prerequisite = {
+			focus = UNG_geological_surveys
+		}
+		ai_will_do = {
+			factor = 16
+		}
+		relative_position_id = UNG_geological_surveys
+		x = 0
+		y = 1
+		completion_reward = {
+			add_ideas = UNG_refine_irrigation_idea
+		}
+	}
+	
+	focus = { #Improvismontage
+		id = UNG_improvismontage
+		icon = GFX_focus_focus_fra_maquis
+		cost = 4
+		prerequisite = {
+			focus = UNG_refine_irrigation
+		}
+		mutually_exclusive = {
+			focus = UNG_modularmontage
+		}
+		ai_will_do = {
+			factor = 16
+		}
+		relative_position_id = UNG_refine_irrigation
+		x = 0
+		y = 1
+		completion_reward = {
+			add_ideas = UNG_improvismontage_idea
+		}
+	}
+	
+	focus = { #Freislerfressen
+		id = UNG_freislerfressen
+		icon = GFX_focus_hlz_day_plow_rule
+		cost = 10
+		prerequisite = {
+			focus = UNG_genius_schlosserhelmer
+		}
+		ai_will_do = {
+			factor = 12
+		}
+		relative_position_id = UNG_genius_schlosserhelmer
+		x = 4
+		y = 1
+		completion_reward = {
+			add_ideas = UNG_freislerfressen_idea
+		}
+	}
+	
+	focus = { #Prototype Foundries
+		id = UNG_prototype_foundries
+		icon = GFX_BLD_Create_First_Smithing_Guild
+		cost = 10
+		prerequisite = {
+			focus = UNG_freislerfressen
+		}
+		ai_will_do = {
+			factor = 14
+		}
+		relative_position_id = UNG_freislerfressen
+		x = 1
+		y = 1
+		completion_reward = {
+			233 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = forge
+					level = 3
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = forge
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = { #Explosive Entrenchment
+		id = UNG_explosive_entrenchment
+		icon = GFX_BLD_Urbanisation_Investments
+		cost = 10
+		prerequisite = {
+			focus = UNG_prototype_foundries
+		}
+		ai_will_do = {
+			factor = 16
+		}
+		relative_position_id = UNG_prototype_foundries
+		x = 1
+		y = 1
+		completion_reward = {
+			add_ideas = UNG_explosive_entrenchment_idea
+		}
+	}
 }

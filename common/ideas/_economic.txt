@@ -2,15 +2,17 @@ ideas = {
 
 	economy = {
 		law = yes
-
 		
-		Primitive_Economy = {
+		unorganized_economy = {
 			
-			
+			available = {
+				always = no
+			}
 			
 			allowed = {
 				always = no
 			}
+			
 			removal_cost = -1
 			
 			modifier = {
@@ -21,10 +23,7 @@ ideas = {
 			min_export = 0
 			}
 			allowed_to_remove = {
-				OR = {
-					has_war_support > 0.75
-					has_war = yes					
-				}
+				always =  no
 			}
 			
 			cancel_if_invalid = no
@@ -34,8 +33,74 @@ ideas = {
    			}
 		}
 		
-		Agrarianism = {
+		
+		autarkic_isolationism = {
 			
+			available = {
+				has_government = puritan
+			}
+			
+			allowed = {
+				OR = {
+					has_government = puritan
+					AND = {
+						tag = ORD
+						has_government = theocrat
+					}
+					AND = {
+						tag = EOR
+						has_government = theocrat
+					}
+				}
+			}
+			removal_cost = -1
+			
+			modifier = {
+				trade_opinion_factor = -1
+				consumer_goods_factor = 0.3
+				production_factory_max_efficiency_factor = -0.05
+				min_export = 0
+			}
+			allowed_to_remove = {
+				NOT = {
+					OR = {
+						has_government = puritan
+						AND = {
+							tag = ORD
+							OR = {
+								has_government = theocrat
+								has_government = monarchy_absolute
+							}
+						}
+						AND = {
+							tag = EOR
+							has_government = theocrat
+						}
+					}
+				}
+			}
+			
+			cancel_if_invalid = no
+			
+			ai_will_do = {
+   				factor = 0
+				modifier = {
+					add = 500
+					has_government = puritan
+				}
+				modifier = {
+					add = 500
+					tag = ORD
+					has_government = theocrat
+				}
+   			}
+		}
+		
+		agrarianism_economy = {
+			
+			allowed = {
+				always = yes
+			}
 		
 			cost = 150
 			removal_cost = -1
@@ -56,10 +121,10 @@ ideas = {
    			}
 		}
 		
-		Manoralism = {
+		manorialism_economy = {
 			
 			available = {
-					has_war_support > 0.15	
+				always = yes
 			}
 			
 			cost = 150
@@ -79,10 +144,10 @@ ideas = {
    			}
 		}
 		
-		Fiscalism = {
+		fiscalism_economy = {
 			
 			available = {
-				has_war_support > 0.25
+				always = yes
 			}
 
 			cost = 150
@@ -101,11 +166,11 @@ ideas = {
    			}
 		}
 		
-		Mercantilism = {
+		mercantilism_economy = {
 			
 			
 			available = {
-	
+				always = yes
 			}
 		
 			cost = 150
@@ -125,11 +190,11 @@ ideas = {
    			}
 		}
 		
-		Corporatism = {
+		corporatism_economy = {
 			
 			
 			available = {
-
+				always = yes
 			}
 
 			ai_will_do = {
@@ -149,10 +214,14 @@ ideas = {
 			cancel_if_invalid = no
 		}
 		
-		Communalism = {
+		communalism_economy = {
+			
+			allowed = {
+				has_government = republic_peasant
+			}
 			
 			available = {
-					always = no
+				always = no
 			}
 			
 			cost = 150
@@ -172,7 +241,7 @@ ideas = {
    			}
 		}
 
-		Steam_And_Steel = {
+		steam_and_steel = {
 			
 			available = {
 				always = no
@@ -190,11 +259,6 @@ ideas = {
 			}
 			
 			cancel_if_invalid = no
-			
-			on_add = {
-				custom_effect_tooltip = Steam_And_Steel_tt
-			}
-			
 
 			ai_will_do = {
    				factor = 0
@@ -205,7 +269,7 @@ ideas = {
 	trade_laws = {
 		law = yes
 
-		Tribal = {
+		tribal_society = {
 			
 			available = {
 				always = no
@@ -220,10 +284,6 @@ ideas = {
 			research_speed_factor = -0.1
 			}
 			
-			on_add = {
-				custom_effect_tooltip = Tribal_tt
-			}
-			
 			cancel_if_invalid = no
 			
 			ai_will_do = {
@@ -231,22 +291,17 @@ ideas = {
    			}
 		}
 		
-		Feudal = {
+		feudal_society = {
 			
 			available = {
-
+				always = no
 			}
-			
 			
 			cost = 300
 			removal_cost = -1
 			
 			modifier = {
 			MONTHLY_POPULATION = 0.1
-			}
-			
-			on_add = {
-				custom_effect_tooltip = Feudal_tt
 			}
 			
 			default = yes
@@ -258,7 +313,7 @@ ideas = {
    			}
 		}
 		
-		Late_Feudal = {
+		late_feudal_society = {
 			
 			available = {
 				always = no
@@ -271,10 +326,6 @@ ideas = {
 			research_speed_factor = 0.05
 			}
 			
-			on_add = {
-				custom_effect_tooltip = Late_Feudal_tt
-			}
-			
 			cancel_if_invalid = no
 
 			ai_will_do = {
@@ -282,7 +333,7 @@ ideas = {
    			}
 		}
 		
-		Industrial = {
+		industrial_society = {
 			
 			
 			available = {
@@ -296,10 +347,6 @@ ideas = {
 			modifier = {
 			MONTHLY_POPULATION = -0.15
 			research_speed_factor = 0.15
-			}
-				
-			on_add = {
-				custom_effect_tooltip = Industrial_tt
 			}
 			
 			cancel_if_invalid = no

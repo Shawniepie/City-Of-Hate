@@ -25,23 +25,31 @@ country_event = { #Fleet Raided!
 		hidden_effect = {
 			random_list = {
 				60 = {# Random Trade Cargo
-					country_event = arr.2
-					days = 2
+					country_event = {
+						id = arr.2
+						days = 2
+					}
 				}
 				
 				30 = {# Military Cargo
-					country_event = arr.3
-					days = 2
+					country_event = {
+						id = arr.3
+						days = 2
+					}
 				}
 				
 				7 = {# Scholarly Tomes!
-					country_event = arr.4
-					days = 2
+					country_event = {
+						id = arr.4
+						days = 2
+					}
 				}
 				
 				3 = {# A Priceless Artifact!
-					country_event = arr.5
-					days = 2
+					country_event = {
+						id = arr.5
+						days = 2
+					}
 				}
 			}
 		}

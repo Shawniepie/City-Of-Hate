@@ -7,6 +7,11 @@ spriteTypes = {
 		texturefile = "gfx/interface/technology_sharing/UNG_BER_schiffstudien.dds"
 	}
 	
+	spriteType = {
+		name = "GFX_UNG_SVT_freislerfakultat"
+		texturefile = "gfx/interface/technology_sharing/UNG_SVT_freislerfakultat.dds"
+	}
+	
 	# Vanilla
 	
 	spriteType = {

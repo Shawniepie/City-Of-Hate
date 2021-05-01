@@ -1,0 +1,20 @@
+###Scripted effects for Ungerdaler loyalty mechanics
+
+make_freiprinz_loyalty_decisions_more_expensive = {
+	
+	multiply_variable = {
+		var = FPT_small_loyalty_cost
+		value = 2
+	}
+	
+	multiply_variable = {
+		var = FPT_medium_loyalty_cost
+		value = 2
+	}
+	
+	multiply_variable = {
+		var = FPT_big_loyalty_cost
+		value = 2
+	}
+	
+}

@@ -11,9 +11,9 @@ state={
 	history={
 		owner = GMR
 		buildings = {
-			infrastructure = 4
-			industrial_complex = 2
-			arms_factory = 1
+			infrastructure = 5
+			workshop = 1
+			forge = 1
 		}
 		add_core_of = GMR
 	}

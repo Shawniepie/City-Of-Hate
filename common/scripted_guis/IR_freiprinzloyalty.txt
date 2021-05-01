@@ -1,0 +1,17 @@
+scripted_gui = {
+
+	freiprinzloyalty = {
+		context_type = decision_category
+		
+		window_name = "freiprinzloyalty_container"
+		
+		visible = {
+			is_subject_of = UNG
+			NOT = {
+				STA = {
+					has_country_flag = STA_civil_war_started
+				}
+			}
+		}
+	}
+}

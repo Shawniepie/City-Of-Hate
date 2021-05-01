@@ -10,7 +10,8 @@ state={
 	history={
 		owner = UNG
 		buildings = {
-			infrastructure = 3
+			infrastructure = 5
+			farm = 2
 		}
 		add_core_of = UNG
 		}

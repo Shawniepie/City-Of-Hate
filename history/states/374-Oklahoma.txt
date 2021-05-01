@@ -12,7 +12,8 @@ state={
 		owner = TLA
 		buildings = {
 			infrastructure = 6
-			industrial_complex = 1
+			workshop = 1
+			farm = 2
 		}
 		add_core_of = TLA
 	}

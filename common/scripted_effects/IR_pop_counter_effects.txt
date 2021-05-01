@@ -24,6 +24,14 @@ check_population_change = {
 			}
 		}
 	}
+	set_variable = {
+		var = civilian_food_consumption_var
+		value = var:total_population
+	}
+	multiply_variable = {
+		var = civilian_food_consumption_var
+		value = 0.001
+	}
 	if = { limit = { check_variable = { core_population > 1000 } } 
 		set_variable = { core_population_k = core_population }
 		divide_variable = { core_population_k = 1000 }

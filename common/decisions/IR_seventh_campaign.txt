@@ -6,6 +6,7 @@ DORF_seventh_campaign = {
 		
 		allowed = {
 			original_tag = SKA
+			is_subject = no
 		}
 
 		
@@ -60,7 +61,7 @@ DORF_seventh_campaign = {
 				original_tag = RMT
 				original_tag = BER
 			}
-			num_of_civilian_factories > 14
+			is_subject = no
 		}
 		
 		highlight_state_targets = {
@@ -69,6 +70,7 @@ DORF_seventh_campaign = {
 		
 		available = {
 			owns_state = 174
+			num_of_civilian_factories > 14
 		}
 		
 		cost = 0
@@ -92,7 +94,7 @@ DORF_seventh_campaign = {
 		
 		cost = 250
 		
-		days_remove = 365
+		days_remove = 1
 		
 		modifier = {
 			civilian_factory_use = 15
@@ -100,7 +102,7 @@ DORF_seventh_campaign = {
 			industrial_capacity_factory = -0.35
 			mobilization_speed = -0.15
 			political_power_gain = -0.75
-			MONTHLY_POPULATION = -1.2
+			MONTHLY_POPULATION = -2
 		}
 		
 		remove_effect = {
@@ -217,14 +219,15 @@ DORF_seventh_campaign = {
 				original_tag = RMT
 				original_tag = BER
 			}
+			is_subject = no
+		}
+		
+		available = {
 			OR = {
 				has_government = monarchy_absolute
 				has_government = monarchy_constitutional
 				has_government = puritan
 			}
-		}
-		
-		available = {
 			has_country_flag = DORF_we_got_zarathum
 			owns_state = 174
 			owns_state = 146
@@ -290,6 +293,7 @@ DORF_border_skirmishes = {
 			NOT = {
 				owns_state = 179
 			}
+			is_subject = no
 			
 		}
 		
@@ -362,6 +366,7 @@ DORF_border_skirmishes = {
 		}
 		
 		cost = 50
+		days_remove = 35
 		
 		ai_will_do = {
 			factor = 20
@@ -387,7 +392,17 @@ DORF_border_skirmishes = {
 					border_conflict_state = THIS
 				}
 			}
-			
+		var:border_conflict_state = {
+		set_state_flag = ongoing_border_war_state_flag
+			add_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+			}
+		}
+		179 = {
+			add_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+			}
+		}
 			start_border_war = {
 				change_state_after_war = no
 				attacker = {
@@ -405,6 +420,53 @@ DORF_border_skirmishes = {
 					on_cancel = dorf_invade.6
 				}
 			}
+		}
+		remove_effect = {
+		every_owned_state = {
+			limit = {
+				is_controlled_by = ROOT
+				any_neighbor_state = {
+				state = 179
+				}
+				ROOT = {
+				divisions_in_border_state = {
+					size > 2
+					state = PREV
+					border_state = 179
+					}
+				}
+			}
+		set_temp_variable = {
+					border_conflict_state = THIS
+				}
+		}
+		every_owned_state = {
+			limit = {
+				has_state_flag = ongoing_border_war_state_flag
+				}
+			clr_state_flag = ongoing_border_war_state_flag
+			remove_dynamic_modifier = {
+				modifier = ongoing_border_conflict
+				}
+			}
+		179 = {
+		remove_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
+		if = {
+		 limit = {
+		 has_border_war_between = {
+ 		   attacker = var:border_conflict_state
+  		   defender = 179
+		 }
+		 }
+		finalize_border_war = {
+   		defender_win = yes
+  		attacker = var:border_conflict_state
+  		defender = 179
+		}
+		}
 		}
 	}
 	
@@ -499,13 +561,13 @@ DORF_border_skirmishes = {
 		}
 		
 		cost = 50
-		
+		days_remove = 35
 		ai_will_do = {
 			factor = 20
 		}
 		
 		complete_effect = {
-			
+		
 			every_owned_state = {
 				limit = {
 					is_controlled_by = ROOT
@@ -524,7 +586,17 @@ DORF_border_skirmishes = {
 					border_conflict_state = THIS
 				}
 			}
-			
+		var:border_conflict_state = {
+		set_state_flag = ongoing_border_war_state_flag
+			add_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+			}
+		}
+		659 = {
+			add_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+			}
+		}
 			start_border_war = {
 				change_state_after_war = no
 				attacker = {
@@ -542,6 +614,53 @@ DORF_border_skirmishes = {
 					on_cancel = dorf_invade.12
 				}
 			}
+		}
+		remove_effect = {
+		every_owned_state = {
+			limit = {
+				is_controlled_by = ROOT
+				any_neighbor_state = {
+				state = 659
+				}
+				ROOT = {
+				divisions_in_border_state = {
+					size > 2
+					state = PREV
+					border_state = 659
+					}
+				}
+			}
+		set_temp_variable = {
+					border_conflict_state = THIS
+				}
+		}
+		every_owned_state = {
+			limit = {
+				has_state_flag = ongoing_border_war_state_flag
+				}
+			clr_state_flag = ongoing_border_war_state_flag
+			remove_dynamic_modifier = {
+				modifier = ongoing_border_conflict
+				}
+			}
+		659 = {
+		remove_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
+		if = {
+		 limit = {
+		 has_border_war_between = {
+ 		   attacker = var:border_conflict_state
+  		   defender = 659
+		 }
+		 }
+		finalize_border_war = {
+   		defender_win = yes
+  		attacker = var:border_conflict_state
+  		defender = 659
+		}
+		}
 		}
 	}
 	
@@ -636,7 +755,7 @@ DORF_border_skirmishes = {
 		}
 		
 		cost = 50
-		
+		days_remove = 35
 		ai_will_do = {
 			factor = 20
 		}
@@ -661,7 +780,17 @@ DORF_border_skirmishes = {
 					border_conflict_state = THIS
 				}
 			}
-			
+		var:border_conflict_state = {
+		set_state_flag = ongoing_border_war_state_flag
+			add_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+			}
+		}
+		176 = {
+			add_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+			}
+		}
 			start_border_war = {
 				change_state_after_war = no
 				attacker = {
@@ -679,6 +808,53 @@ DORF_border_skirmishes = {
 					on_cancel = dorf_invade.18
 				}
 			}
+		}
+		remove_effect = {
+		every_owned_state = {
+			limit = {
+				is_controlled_by = ROOT
+				any_neighbor_state = {
+				state = 176
+				}
+				ROOT = {
+				divisions_in_border_state = {
+					size > 2
+					state = PREV
+					border_state = 176
+					}
+				}
+			}
+		set_temp_variable = {
+					border_conflict_state = THIS
+				}
+		}
+		every_owned_state = {
+			limit = {
+				has_state_flag = ongoing_border_war_state_flag
+				}
+			clr_state_flag = ongoing_border_war_state_flag
+			remove_dynamic_modifier = {
+				modifier = ongoing_border_conflict
+				}
+			}
+		176 = {
+		remove_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
+		if = {
+		 limit = {
+		 has_border_war_between = {
+ 		   attacker = var:border_conflict_state
+  		   defender = 176
+		 }
+		 }
+		finalize_border_war = {
+   		defender_win = yes
+  		attacker = var:border_conflict_state
+  		defender = 176
+		}
+		}
 		}
 	}
 
@@ -773,7 +949,7 @@ DORF_border_skirmishes = {
 		}
 		
 		cost = 50
-		
+		days_remove = 35
 		ai_will_do = {
 			factor = 20
 		}
@@ -798,7 +974,17 @@ DORF_border_skirmishes = {
 					border_conflict_state = THIS
 				}
 			}
-			
+		var:border_conflict_state = {
+		set_state_flag = ongoing_border_war_state_flag
+			add_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+			}
+		}
+		174 = {
+			add_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+			}
+		}
 			start_border_war = {
 				change_state_after_war = no
 				attacker = {
@@ -816,6 +1002,53 @@ DORF_border_skirmishes = {
 					on_cancel = dorf_invade.24
 				}
 			}
+		}
+		remove_effect = {
+		every_owned_state = {
+			limit = {
+				is_controlled_by = ROOT
+				any_neighbor_state = {
+				state = 174
+				}
+				ROOT = {
+				divisions_in_border_state = {
+					size > 2
+					state = PREV
+					border_state = 174
+					}
+				}
+			}
+		set_temp_variable = {
+					border_conflict_state = THIS
+				}
+		}
+		every_owned_state = {
+			limit = {
+				has_state_flag = ongoing_border_war_state_flag
+				}
+			clr_state_flag = ongoing_border_war_state_flag
+			remove_dynamic_modifier = {
+				modifier = ongoing_border_conflict
+				}
+			}
+		174 = {
+		remove_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
+		if = {
+		 limit = {
+		 has_border_war_between = {
+ 		   attacker = var:border_conflict_state
+  		   defender = 174
+		 }
+		 }
+		finalize_border_war = {
+   		defender_win = yes
+  		attacker = var:border_conflict_state
+  		defender = 174
+		}
+		}
 		}
 	}
 	
@@ -909,7 +1142,8 @@ DORF_border_skirmishes = {
 			state = 173
 		}
 		
-		cost = 50
+		cost = 50 
+		days_remove = 35
 		
 		ai_will_do = {
 			factor = 20
@@ -935,7 +1169,17 @@ DORF_border_skirmishes = {
 					border_conflict_state = THIS
 				}
 			}
-			
+		var:border_conflict_state = {
+		set_state_flag = ongoing_border_war_state_flag
+			add_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+			}
+		}
+		173 = {
+			add_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+			}
+		}
 			start_border_war = {
 				change_state_after_war = no
 				attacker = {
@@ -953,6 +1197,53 @@ DORF_border_skirmishes = {
 					on_cancel = dorf_invade.30
 				}
 			}
+		}
+		remove_effect = {
+		every_owned_state = {
+			limit = {
+				is_controlled_by = ROOT
+				any_neighbor_state = {
+				state = 173
+				}
+				ROOT = {
+				divisions_in_border_state = {
+					size > 2
+					state = PREV
+					border_state = 173
+					}
+				}
+			}
+		set_temp_variable = {
+					border_conflict_state = THIS
+				}
+		}
+		every_owned_state = {
+			limit = {
+				has_state_flag = ongoing_border_war_state_flag
+				}
+			clr_state_flag = ongoing_border_war_state_flag
+			remove_dynamic_modifier = {
+				modifier = ongoing_border_conflict
+				}
+			}
+		173 = {
+		remove_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
+		if = {
+		 limit = {
+		 has_border_war_between = {
+ 		   attacker = var:border_conflict_state
+  		   defender = 173
+		 }
+		 }
+		finalize_border_war = {
+   		defender_win = yes
+  		attacker = var:border_conflict_state
+  		defender = 173
+		}
+		}
 		}
 	}
 	
@@ -1047,7 +1338,7 @@ DORF_border_skirmishes = {
 		}
 		
 		cost = 50
-		
+		days_remove = 35
 		ai_will_do = {
 			factor = 20
 		}
@@ -1072,7 +1363,17 @@ DORF_border_skirmishes = {
 					border_conflict_state = THIS
 				}
 			}
-			
+		var:border_conflict_state = {
+		set_state_flag = ongoing_border_war_state_flag
+			add_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+			}
+		}
+		106 = {
+			add_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+			}
+		}
 			start_border_war = {
 				change_state_after_war = no
 				attacker = {
@@ -1090,6 +1391,53 @@ DORF_border_skirmishes = {
 					on_cancel = dorf_invade.36
 				}
 			}
+		}
+		remove_effect = {
+		every_owned_state = {
+			limit = {
+				is_controlled_by = ROOT
+				any_neighbor_state = {
+				state = 106
+				}
+				ROOT = {
+				divisions_in_border_state = {
+					size > 2
+					state = PREV
+					border_state = 106
+					}
+				}
+			}
+		set_temp_variable = {
+					border_conflict_state = THIS
+				}
+		}
+		every_owned_state = {
+			limit = {
+				has_state_flag = ongoing_border_war_state_flag
+				}
+			clr_state_flag = ongoing_border_war_state_flag
+			remove_dynamic_modifier = {
+				modifier = ongoing_border_conflict
+				}
+			}
+		106 = {
+		remove_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
+		if = {
+		 limit = {
+		 has_border_war_between = {
+ 		   attacker = var:border_conflict_state
+  		   defender = 106
+		 }
+		 }
+		finalize_border_war = {
+   		defender_win = yes
+  		attacker = var:border_conflict_state
+  		defender = 106
+		}
+		}
 		}
 	}
 	
@@ -1184,7 +1532,7 @@ DORF_border_skirmishes = {
 		}
 		
 		cost = 50
-		
+		days_remove = 35
 		ai_will_do = {
 			factor = 20
 		}
@@ -1209,7 +1557,17 @@ DORF_border_skirmishes = {
 					border_conflict_state = THIS
 				}				
 			}
-			
+		var:border_conflict_state = {
+		set_state_flag = ongoing_border_war_state_flag
+			add_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+			}
+		}
+		139 = {
+			add_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+			}
+		}
 			start_border_war = {
 				change_state_after_war = no
 				attacker = {
@@ -1227,6 +1585,53 @@ DORF_border_skirmishes = {
 					on_cancel = dorf_invade.42
 				}
 			}
+		}
+		remove_effect = {
+		every_owned_state = {
+			limit = {
+				is_controlled_by = ROOT
+				any_neighbor_state = {
+				state = 139
+				}
+				ROOT = {
+				divisions_in_border_state = {
+					size > 2
+					state = PREV
+					border_state = 139
+					}
+				}
+			}
+		set_temp_variable = {
+					border_conflict_state = THIS
+				}
+		}
+		every_owned_state = {
+			limit = {
+				has_state_flag = ongoing_border_war_state_flag
+				}
+			clr_state_flag = ongoing_border_war_state_flag
+			remove_dynamic_modifier = {
+				modifier = ongoing_border_conflict
+				}
+			}
+		139 = {
+		remove_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
+		if = {
+		 limit = {
+		 has_border_war_between = {
+ 		   attacker = var:border_conflict_state
+  		   defender = 139
+		 }
+		 }
+		finalize_border_war = {
+   		defender_win = yes
+  		attacker = var:border_conflict_state
+  		defender = 139
+		}
+		}
 		}
 	}
 	
@@ -1321,7 +1726,7 @@ DORF_border_skirmishes = {
 		}
 		
 		cost = 50
-		
+		days_remove = 35
 		ai_will_do = {
 			factor = 20
 		}
@@ -1346,7 +1751,17 @@ DORF_border_skirmishes = {
 					border_conflict_state = THIS
 				}
 			}
-			
+		var:border_conflict_state = {
+		set_state_flag = ongoing_border_war_state_flag
+			add_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+			}
+		}
+		172 = {
+			add_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+			}
+		}
 			start_border_war = {
 				change_state_after_war = no
 				attacker = {
@@ -1364,6 +1779,53 @@ DORF_border_skirmishes = {
 					on_cancel = dorf_invade.48
 				}
 			}
+		}
+		remove_effect = {
+		every_owned_state = {
+			limit = {
+				is_controlled_by = ROOT
+				any_neighbor_state = {
+				state = 172
+				}
+				ROOT = {
+				divisions_in_border_state = {
+					size > 2
+					state = PREV
+					border_state = 172
+					}
+				}
+			}
+		set_temp_variable = {
+					border_conflict_state = THIS
+				}
+		}
+		every_owned_state = {
+			limit = {
+				has_state_flag = ongoing_border_war_state_flag
+				}
+			clr_state_flag = ongoing_border_war_state_flag
+			remove_dynamic_modifier = {
+				modifier = ongoing_border_conflict
+				}
+			}
+		172 = {
+		remove_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
+		if = {
+		 limit = {
+		 has_border_war_between = {
+ 		   attacker = var:border_conflict_state
+  		   defender = 172
+		 }
+		 }
+		finalize_border_war = {
+   		defender_win = yes
+  		attacker = var:border_conflict_state
+  		defender = 172
+		}
+		}
 		}
 	}
 	
@@ -1458,7 +1920,7 @@ DORF_border_skirmishes = {
 		}
 		
 		cost = 50
-		
+		days_remove = 35
 		ai_will_do = {
 			factor = 20
 		}
@@ -1483,7 +1945,17 @@ DORF_border_skirmishes = {
 					border_conflict_state = THIS
 				}
 			}
-			
+		var:border_conflict_state = {
+		set_state_flag = ongoing_border_war_state_flag
+			add_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+			}
+		}
+		203 = {
+			add_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+			}
+		}
 			start_border_war = {
 				change_state_after_war = no
 				attacker = {
@@ -1501,6 +1973,53 @@ DORF_border_skirmishes = {
 					on_cancel = dorf_invade.54
 				}
 			}
+		}
+		remove_effect = {
+		every_owned_state = {
+			limit = {
+				is_controlled_by = ROOT
+				any_neighbor_state = {
+				state = 203
+				}
+				ROOT = {
+				divisions_in_border_state = {
+					size > 2
+					state = PREV
+					border_state = 203
+					}
+				}
+			}
+		set_temp_variable = {
+					border_conflict_state = THIS
+				}
+		}
+		every_owned_state = {
+			limit = {
+				has_state_flag = ongoing_border_war_state_flag
+				}
+			clr_state_flag = ongoing_border_war_state_flag
+			remove_dynamic_modifier = {
+				modifier = ongoing_border_conflict
+				}
+			}
+		203 = {
+		remove_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
+		if = {
+		 limit = {
+		 has_border_war_between = {
+ 		   attacker = var:border_conflict_state
+  		   defender = 203
+		 }
+		 }
+		finalize_border_war = {
+   		defender_win = yes
+  		attacker = var:border_conflict_state
+  		defender = 203
+		}
+		}
 		}
 	}
 	
@@ -1595,7 +2114,7 @@ DORF_border_skirmishes = {
 		}
 		
 		cost = 50
-		
+		days_remove = 35
 		ai_will_do = {
 			factor = 20
 		}
@@ -1620,7 +2139,17 @@ DORF_border_skirmishes = {
 					border_conflict_state = THIS
 				}
 			}
-			
+		var:border_conflict_state = {
+		set_state_flag = ongoing_border_war_state_flag
+			add_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+			}
+		}
+		365 = {
+			add_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+			}
+		}
 			start_border_war = {
 				change_state_after_war = no
 				attacker = {
@@ -1638,6 +2167,53 @@ DORF_border_skirmishes = {
 					on_cancel = dorf_invade.60
 				}
 			}
+		}
+		remove_effect = {
+		every_owned_state = {
+			limit = {
+				is_controlled_by = ROOT
+				any_neighbor_state = {
+				state = 365
+				}
+				ROOT = {
+				divisions_in_border_state = {
+					size > 2
+					state = PREV
+					border_state = 365
+					}
+				}
+			}
+		set_temp_variable = {
+					border_conflict_state = THIS
+				}
+		}
+		every_owned_state = {
+			limit = {
+				has_state_flag = ongoing_border_war_state_flag
+				}
+			clr_state_flag = ongoing_border_war_state_flag
+			remove_dynamic_modifier = {
+				modifier = ongoing_border_conflict
+				}
+			}
+		365 = {
+		remove_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
+		if = {
+		 limit = {
+		 has_border_war_between = {
+ 		   attacker = var:border_conflict_state
+  		   defender = 365
+		 }
+		 }
+		finalize_border_war = {
+   		defender_win = yes
+  		attacker = var:border_conflict_state
+  		defender = 365
+		}
+		}
 		}
 	}
 	
@@ -1732,7 +2308,7 @@ DORF_border_skirmishes = {
 		}
 		
 		cost = 50
-		
+		days_remove = 35
 		ai_will_do = {
 			factor = 20
 		}
@@ -1757,7 +2333,17 @@ DORF_border_skirmishes = {
 					border_conflict_state = THIS
 				}
 			}
-			
+		var:border_conflict_state = {
+		set_state_flag = ongoing_border_war_state_flag
+			add_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+			}
+		}
+		207 = {
+			add_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+			}
+		}
 			start_border_war = {
 				change_state_after_war = no
 				attacker = {
@@ -1775,6 +2361,53 @@ DORF_border_skirmishes = {
 					on_cancel = dorf_invade.66
 				}
 			}
+		}
+		remove_effect = {
+		every_owned_state = {
+			limit = {
+				is_controlled_by = ROOT
+				any_neighbor_state = {
+				state = 207
+				}
+				ROOT = {
+				divisions_in_border_state = {
+					size > 2
+					state = PREV
+					border_state = 207
+					}
+				}
+			}
+		set_temp_variable = {
+					border_conflict_state = THIS
+				}
+		}
+		any_state = {
+			limit = {
+				has_state_flag = ongoing_border_war_state_flag
+				}
+			remove_state_flag = ongoing_border_war_state_flag
+			remove_dynamic_modifier = {
+				modifier = ongoing_border_conflict
+				}
+			}
+		207 = {
+		remove_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
+		if = {
+		 limit = {
+		 has_border_war_between = {
+ 		   attacker = var:border_conflict_state
+  		   defender = 207
+		 }
+		 }
+		finalize_border_war = {
+   		defender_win = yes
+  		attacker = var:border_conflict_state
+  		defender = 207
+		}
+		}
 		}
 	}
 	
@@ -1869,7 +2502,7 @@ DORF_border_skirmishes = {
 		}
 		
 		cost = 50
-		
+		days_remove = 35
 		ai_will_do = {
 			factor = 20
 		}
@@ -1894,7 +2527,17 @@ DORF_border_skirmishes = {
 					border_conflict_state = THIS
 				}
 			}
-			
+		var:border_conflict_state = {
+		set_state_flag = ongoing_border_war_state_flag
+			add_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+			}
+		}
+		135 = {
+			add_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+			}
+		}
 			start_border_war = {
 				change_state_after_war = no
 				attacker = {
@@ -1912,6 +2555,53 @@ DORF_border_skirmishes = {
 					on_cancel = dorf_invade.72
 				}
 			}
+		}
+		remove_effect = {
+		every_owned_state = {
+			limit = {
+				is_controlled_by = ROOT
+				any_neighbor_state = {
+				state = 135
+				}
+				ROOT = {
+				divisions_in_border_state = {
+					size > 2
+					state = PREV
+					border_state = 135
+					}
+				}
+			}
+		set_temp_variable = {
+					border_conflict_state = THIS
+				}
+		}
+		every_owned_state = {
+			limit = {
+				has_state_flag = ongoing_border_war_state_flag
+				}
+			clr_state_flag = ongoing_border_war_state_flag
+			remove_dynamic_modifier = {
+				modifier = ongoing_border_conflict
+				}
+			}
+		135 = {
+		remove_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
+		if = {
+		 limit = {
+		 has_border_war_between = {
+ 		   attacker = var:border_conflict_state
+  		   defender = 135
+		 }
+		 }
+		finalize_border_war = {
+   		defender_win = yes
+  		attacker = var:border_conflict_state
+  		defender = 135
+		}
+		}
 		}
 	}
 	
@@ -2006,7 +2696,7 @@ DORF_border_skirmishes = {
 		}
 		
 		cost = 50
-		
+		days_remove = 35
 		ai_will_do = {
 			factor = 20
 		}
@@ -2031,7 +2721,17 @@ DORF_border_skirmishes = {
 					border_conflict_state = THIS
 				}
 			}
-			
+		var:border_conflict_state = {
+		set_state_flag = ongoing_border_war_state_flag
+			add_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+			}
+		}
+		133 = {
+			add_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+			}
+		}
 			start_border_war = {
 				change_state_after_war = no
 				attacker = {
@@ -2049,6 +2749,53 @@ DORF_border_skirmishes = {
 					on_cancel = dorf_invade.78
 				}
 			}
+		}
+		remove_effect = {
+		every_owned_state = {
+			limit = {
+				is_controlled_by = ROOT
+				any_neighbor_state = {
+				state = 133
+				}
+				ROOT = {
+				divisions_in_border_state = {
+					size > 2
+					state = PREV
+					border_state = 133
+					}
+				}
+			}
+		set_temp_variable = {
+					border_conflict_state = THIS
+				}
+		}
+		every_owned_state = {
+			limit = {
+				has_state_flag = ongoing_border_war_state_flag
+				}
+			clr_state_flag = ongoing_border_war_state_flag
+			remove_dynamic_modifier = {
+				modifier = ongoing_border_conflict
+				}
+			}
+		133 = {
+		remove_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
+		if = {
+		 limit = {
+		 has_border_war_between = {
+ 		   attacker = var:border_conflict_state
+  		   defender = 133
+		 }
+		 }
+		finalize_border_war = {
+   		defender_win = yes
+  		attacker = var:border_conflict_state
+  		defender = 133
+		}
+		}
 		}
 	}
 	
@@ -2143,7 +2890,7 @@ DORF_border_skirmishes = {
 		}
 		
 		cost = 50
-		
+		days_remove = 35
 		ai_will_do = {
 			factor = 20
 		}
@@ -2168,7 +2915,17 @@ DORF_border_skirmishes = {
 					border_conflict_state = THIS
 				}
 			}
-			
+		var:border_conflict_state = {
+		set_state_flag = ongoing_border_war_state_flag
+			add_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+			}
+		}
+		723 = {
+			add_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+			}
+		}
 			start_border_war = {
 				change_state_after_war = no
 				attacker = {
@@ -2176,7 +2933,7 @@ DORF_border_skirmishes = {
 					num_provinces = 1
 					on_win = dorf_invade.79
 					on_lose = dorf_invade.80
-					on_cancel = dorf_invade.1
+					on_cancel = dorf_invade.81
 				}
 				defender = {
 					state = 723
@@ -2186,6 +2943,53 @@ DORF_border_skirmishes = {
 					on_cancel = dorf_invade.84
 				}
 			}
+		}
+		remove_effect = {
+		every_owned_state = {
+			limit = {
+				is_controlled_by = ROOT
+				any_neighbor_state = {
+				state = 723
+				}
+				ROOT = {
+				divisions_in_border_state = {
+					size > 2
+					state = PREV
+					border_state = 723
+					}
+				}
+			}
+		set_temp_variable = {
+					border_conflict_state = THIS
+				}
+		}
+		every_owned_state = {
+			limit = {
+				has_state_flag = ongoing_border_war_state_flag
+				}
+			clr_state_flag = ongoing_border_war_state_flag
+			remove_dynamic_modifier = {
+				modifier = ongoing_border_conflict
+				}
+			}
+		723 = {
+		remove_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
+		if = {
+		 limit = {
+		 has_border_war_between = {
+ 		   attacker = var:border_conflict_state
+  		   defender = 723
+		 }
+		 }
+		finalize_border_war = {
+   		defender_win = yes
+  		attacker = var:border_conflict_state
+  		defender = 723
+		}
+		}
 		}
 	}
 	
@@ -2280,7 +3084,7 @@ DORF_border_skirmishes = {
 		}
 		
 		cost = 50
-		
+		days_remove = 35
 		ai_will_do = {
 			factor = 20
 		}
@@ -2305,24 +3109,81 @@ DORF_border_skirmishes = {
 					border_conflict_state = THIS
 				}
 			}
-			
+			var:border_conflict_state = {
+			set_state_flag = ongoing_border_war_state_flag
+			add_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+			}
+		}
+		815 = {
+			add_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+			}
+		}
 			start_border_war = {
 				change_state_after_war = no
 				attacker = {
 					state = var:border_conflict_state
 					num_provinces = 1
-					on_win = dorf_invade.79
-					on_lose = dorf_invade.80
-					on_cancel = dorf_invade.81
+					on_win = dorf_invade.85
+					on_lose = dorf_invade.86
+					on_cancel = dorf_invade.87
 				}
 				defender = {
 					state = 815
 					num_provinces = 1
-					on_win = dorf_invade.82
-					on_lose = dorf_invade.83
-					on_cancel = dorf_invade.84
+					on_win = dorf_invade.88
+					on_lose = dorf_invade.89
+					on_cancel = dorf_invade.90
 				}
 			}
+		}
+		remove_effect = {
+		every_owned_state = {
+			limit = {
+				is_controlled_by = ROOT
+				any_neighbor_state = {
+				state = 815
+				}
+				ROOT = {
+				divisions_in_border_state = {
+					size > 2
+					state = PREV
+					border_state = 815
+					}
+				}
+			}
+		set_temp_variable = {
+					border_conflict_state = THIS
+				}
+		}
+		every_owned_state = {
+			limit = {
+				has_state_flag = ongoing_border_war_state_flag
+				}
+			clr_state_flag = ongoing_border_war_state_flag
+			remove_dynamic_modifier = {
+				modifier = ongoing_border_conflict
+				}
+			}
+		815 = {
+		remove_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
+		if = {
+		 limit = {
+		 has_border_war_between = {
+ 		   attacker = var:border_conflict_state
+  		   defender = 815
+		 }
+		 }
+		finalize_border_war = {
+   		defender_win = yes
+  		attacker = var:border_conflict_state
+  		defender = 815
+		}
+		}
 		}
 	}
 }

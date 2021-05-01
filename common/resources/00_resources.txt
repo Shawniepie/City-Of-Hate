@@ -6,13 +6,13 @@ resources = {
 		convoys = 0.1
 	}
 
-	aluminium = {
+	mount = {
 		icon_frame = 2
 		cic = 0.125
 		convoys = 0.1
 	}
 
-	rubber = {
+	lumber = {
 		icon_frame = 3
 		cic = 0.125
 		convoys = 0.1

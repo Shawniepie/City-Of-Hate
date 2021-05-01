@@ -4,12 +4,47 @@ set_oob = "SNF_1936"
 
 
 set_technology = {
-	infantry_weapons = 1
-	tech_support = 1
-	tech_recon = 1
+	implements_war = 1
+	tribal_warbands = 1
+	sparring_fields = 1
+	war_artisans = 1
+	advanced_leatherworking = 1
+	gambesons = 1
+	brigandines = 1
+	alloy_creation = 1
+	steel_working = 1
+	fullered_blades = 1
+	peasant_levy = 1
+	mail_hauberks = 1
+	improved_woodworking = 1
+	recurve_bow = 1
+	broadhead_arrows = 1
+	horseback_riding = 1
+	mounted_warriors = 1
+	saddles = 1
+	stirrups = 1
+	cavalry_lances = 1
+	flanking_tactics = 1
+	skirmish_tactics = 1
+	scouting_parties = 1
+	astrolabe = 1
+	compass = 1
+	cartography = 1
 }
 
-1939.1.1 = {
+set_variable = {
+	var = FPT_piety
+	value = 1
+}
+
+set_variable = {
+	var = FPT_union_loyalty
+	value = 3
+}
+
+set_variable = {
+	var = FPT_stahlhof_loyalty
+	value = 0
 }
 
 set_politics = {
@@ -19,6 +54,21 @@ set_politics = {
 	elections_allowed = no
 }
 
+set_variable = {
+	var = FPT_small_loyalty_cost
+	value = 50
+}
+
+set_variable = {
+	var = FPT_medium_loyalty_cost
+	value = 75
+}
+
+set_variable = {
+	var = FPT_big_loyalty_cost
+	value = 100
+}
+
 set_popularities = {
 	monarchy_absolute = 52
 
@@ -26,19 +76,30 @@ set_popularities = {
 
 	republic_peasant = 10
 
-	republic_aristocrat = 4
+	republic_aristocrat = 9
 
-	republic_merchant = 3
+	republic_merchant = 0
 
 	theocrat = 17
 
-	puritan = 2
+	puritan = 0
 }
 
 add_ideas = {
 	human_country
 	hutrig_patron
+	FPT_bauernfreistellung
+	SNF_entrenched_society
+	SNF_decrepit_military
+	SNF_brittle_economy
 }
+
+create_import = {
+    resource = steel
+    amount = 8
+    exporter = GMR
+}
+
 
 give_military_access = UNG
 give_military_access = HLZ
@@ -59,24 +120,7 @@ create_country_leader = {
 	picture = "gfx/leaders/SNF/Portrait_SNF_Kolb.dds"
 	ideology = monarchy_constitutional_ideology
 	traits = {
-	}
-}
-
-create_country_leader = {
-	name = "Andrea Schiefer"
-	desc = "politics_SNF_schiefer_desc"
-	picture = "gfx/leaders/SNF/Portrait_SNF_Schiefer.dds"
-	ideology = republic_peasant_ideology
-	traits = {
-	}
-}
-
-create_country_leader = {
-	name = "Louise Straussler"
-	desc = "politics_SNF_straussler_desc"
-	picture = "gfx/leaders/SNF/Portrait_SNF_Straussler.dds"
-	ideology = puritan_ideology
-	traits = {
+	ambitious_prince
 	}
 }
 
@@ -86,6 +130,17 @@ create_country_leader = {
 	picture = "gfx/leaders/SNF/Portrait_SNF_Kolb.dds"
 	ideology = monarchy_absolute_ideology
 	traits = {
+	ambitious_prince
+	}
+}
+
+create_country_leader = {
+	name = "Ulrich Drecht"
+	desc = "politics_SNF_Drecht_desc"
+	picture = "gfx/leaders/SNF/Portrait_SNF_Schechter.dds"
+	ideology = republic_aristocrat_ideology
+	traits = {
+	disliked_dynasty ####powerful_noble added later
 	}
 }
 
@@ -99,10 +154,10 @@ create_country_leader = {
 }
 
 create_country_leader = {
-	name = "Lennart Schechter"
-	desc = "politics_SNF_Schechter_desc"
-	picture = "gfx/leaders/SNF/Portrait_SNF_Schechter.dds"
-	ideology = republic_aristocrat_ideology
+	name = "Andrea Schiefer"
+	desc = "politics_SNF_schiefer_desc"
+	picture = "gfx/leaders/SNF/Portrait_SNF_Schiefer.dds"
+	ideology = republic_peasant_ideology
 	traits = {
 	}
 }
@@ -115,3 +170,41 @@ create_country_leader = {
 	traits = {
 	}
 }
+
+create_country_leader = {
+	name = "Louise Straussler"
+	desc = "politics_SNF_straussler_desc"
+	picture = "gfx/leaders/SNF/Portrait_SNF_Straussler.dds"
+	ideology = puritan_ideology
+	traits = {
+	}
+}
+
+create_field_marshal = {
+				name = "Otto Kolb"
+				picture = "Portrait_SNF_Kolb.dds"
+				id = 11
+				traits = {
+				inflexible_strategist
+				winter_specialist
+				}
+				skill = 3
+				attack_skill = 1
+				defense_skill = 3
+				planning_skill = 3
+				logistics_skill = 2
+			}
+create_corps_commander = {
+				name = "Fridrich Huber"
+				picture = gfx/leaders/UnionSouth/Portrait_Union_South_Generic_land_4.dds
+				traits = {
+				cavalry_officer
+				commando
+				}
+				skill = 3
+				attack_skill = 2
+				defense_skill = 2
+				planning_skill = 2
+				logistics_skill = 4
+			}
+

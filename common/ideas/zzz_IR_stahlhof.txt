@@ -12,14 +12,14 @@ ideas = {
 				always = yes
 			}
 			
-			picture = ung_ordorian_refugees
+			picture = STA_faustburg_loyalties_1
 			
 			removal_cost = -1
 			
 			modifier = {
 				army_org_factor = -0.08
 				war_support_factor = -0.10
-				stability_factor = 0.10
+				stability_factor = -0.10
 			}
 		}
 		STA_adelina_troop_loyalty_idea_dealt = {
@@ -32,7 +32,7 @@ ideas = {
 				always = yes
 			}
 			
-			picture = ung_ordorian_refugees
+			picture = STA_faustburg_loyalties_4
 			
 			removal_cost = -1
 			
@@ -52,13 +52,13 @@ ideas = {
 				always = yes
 			}
 			
-			picture = ung_ordorian_refugees
+			picture = STA_faustburg_loyalties_2
 			
 			removal_cost = -1
 			
 			modifier = {
 				war_support_factor = -0.05
-				stability_factor = 0.10
+				stability_factor = -0.05
 				army_org_factor = -0.04
 			}
 		}
@@ -72,7 +72,7 @@ ideas = {
 				always = yes
 			}
 			
-			picture = ung_ordorian_refugees
+			picture = STA_faustburg_loyalties_3
 			
 			removal_cost = -1
 			
@@ -92,7 +92,7 @@ ideas = {
 				always = yes
 			}
 			
-			picture = ung_ordorian_refugees
+			picture = eng_special_air_service
 			
 			removal_cost = -1
 			
@@ -111,7 +111,7 @@ ideas = {
 				always = yes
 			}
 			
-			picture = ung_ordorian_refugees
+			picture = generic_reserve_divisions
 			
 			removal_cost = -1
 			
@@ -130,7 +130,7 @@ ideas = {
 				always = yes
 			}
 			
-			picture = ung_ordorian_refugees
+			picture = hol_expand_the_colonial_army
 			
 			removal_cost = -1
 			
@@ -149,7 +149,7 @@ ideas = {
 				always = yes
 			}
 			
-			picture = ung_ordorian_refugees
+			picture = IRI_The_Rebuilding
 			
 			removal_cost = -1
 			
@@ -169,7 +169,7 @@ ideas = {
 				always = yes
 			}
 			
-			picture = ung_ordorian_refugees
+			picture = IRI_Slavery_Allowed
 			
 			removal_cost = -1
 			
@@ -189,7 +189,7 @@ ideas = {
 				always = yes
 			}
 			
-			picture = ung_ordorian_refugees
+			picture = IRI_Citizens_Militaristic_1
 			
 			removal_cost = -1
 			
@@ -210,7 +210,7 @@ ideas = {
 				always = yes
 			}
 			
-			picture = ung_ordorian_refugees
+			picture = IRI_Citizens_Militaristic_2
 			
 			removal_cost = -1
 			
@@ -230,7 +230,7 @@ ideas = {
 				always = yes
 			}
 			
-			picture = ung_ordorian_refugees
+			picture = mex_politicised_army_2
 			
 			removal_cost = -1
 			
@@ -250,7 +250,7 @@ ideas = {
 				always = yes
 			}
 			
-			picture = ung_ordorian_refugees
+			picture = generic_purge
 			
 			removal_cost = -1
 			
@@ -271,7 +271,7 @@ ideas = {
 				always = yes
 			}
 			
-			picture = ung_ordorian_refugees
+			picture = unioncouncil_jointcommand
 			
 			removal_cost = -1
 			
@@ -293,7 +293,7 @@ ideas = {
 				always = yes
 			}
 			
-			picture = ung_ordorian_refugees
+			picture = generic_war_preparation
 			
 			removal_cost = -1
 
@@ -316,7 +316,7 @@ ideas = {
 				always = yes
 			}
 			
-			picture = ung_ordorian_refugees
+			picture = por_monarchist_uprising
 			
 			removal_cost = -1
 
@@ -335,7 +335,7 @@ ideas = {
 				always = yes
 			}
 			
-			picture = ung_ordorian_refugees
+			picture = STA_meritocratic_autocracy_0
 			
 			removal_cost = -1
 
@@ -355,7 +355,7 @@ ideas = {
 				always = yes
 			}
 			
-			picture = ung_ordorian_refugees
+			picture = prc_low_popular_support
 			
 			removal_cost = -1
 
@@ -374,7 +374,7 @@ ideas = {
 				always = yes
 			}
 			
-			picture = ung_ordorian_refugees
+			picture = prc_low_popular_support2
 			
 			removal_cost = -1
 
@@ -393,7 +393,7 @@ ideas = {
 				always = yes
 			}
 			
-			picture = ung_ordorian_refugees
+			picture = prc_low_popular_support3
 			
 			removal_cost = -1
 
@@ -412,7 +412,7 @@ ideas = {
 				always = yes
 			}
 			
-			picture = ung_ordorian_refugees
+			picture = generic_morale_bonus
 			
 			removal_cost = -1
 
@@ -432,7 +432,7 @@ ideas = {
 				always = yes
 			}
 			
-			picture = ung_ordorian_refugees
+			picture = STA_meritocratic_autocracy_1
 			
 			removal_cost = -1
 
@@ -454,7 +454,7 @@ ideas = {
 				always = yes
 			}
 			
-			picture = ung_ordorian_refugees
+			picture = STA_meritocratic_autocracy_2
 			
 			removal_cost = -1
 
@@ -476,7 +476,7 @@ ideas = {
 				always = yes
 			}
 			
-			picture = ung_ordorian_refugees
+			picture = STA_meritocratic_autocracy_3
 			
 			removal_cost = -1
 
@@ -498,7 +498,7 @@ ideas = {
 				always = yes
 			}
 			
-			picture = ung_ordorian_refugees
+			picture = STA_meritocratic_autocracy_4
 			
 			removal_cost = -1
 
@@ -522,7 +522,7 @@ ideas = {
 				always = yes
 			}
 			
-			picture = ung_ordorian_refugees
+			picture = IRI_Forges_Mobilisation
 			
 			removal_cost = -1
 
@@ -542,7 +542,7 @@ ideas = {
 				always = yes
 			}
 			
-			picture = ung_ordorian_refugees
+			picture = IRI_Sacked_North
 			
 			removal_cost = -1
 
@@ -563,7 +563,7 @@ ideas = {
 				always = yes
 			}
 			
-			picture = ung_ordorian_refugees
+			picture = IRI_Depression_Evaded
 			
 			removal_cost = -1
 
@@ -581,7 +581,7 @@ ideas = {
 				always = yes
 			}
 			
-			picture = ung_ordorian_refugees
+			picture = generic_infantry_bonus
 			
 			removal_cost = -1
 
@@ -601,13 +601,13 @@ ideas = {
 				always = yes
 			}
 			
-			picture = ung_ordorian_refugees
+			picture = IRI_Glorious_Speech
 			
 			removal_cost = -1
 
 			modifier = {
 				army_morale_factor = 0.1
-				partisan_effect = 0.2
+				resistance_growth_on_our_occupied_states = 0.2
 				army_core_defence_factor = 0.1
 			}
 		}
@@ -621,7 +621,7 @@ ideas = {
 				always = yes
 			}
 			
-			picture = ung_ordorian_refugees
+			picture = STA_nebeltoter
 			
 			removal_cost = -1
 			
@@ -638,7 +638,7 @@ ideas = {
 				always = yes
 			}
 			
-			picture = ung_ordorian_refugees
+			picture = generic_spy_political
 			
 			removal_cost = -1
 
@@ -658,7 +658,7 @@ ideas = {
 				always = yes
 			}
 			
-			picture = ung_ordorian_refugees
+			picture = generic_embargo
 			
 			removal_cost = -1
 
@@ -676,7 +676,7 @@ ideas = {
 				always = yes
 			}
 			
-			picture = ung_ordorian_refugees
+			picture = IRI_Depression_Evaded
 			
 			removal_cost = -1
 
@@ -695,7 +695,7 @@ ideas = {
 				always = yes
 			}
 			
-			picture = ung_ordorian_refugees
+			picture = IRI_Revolution
 			
 			removal_cost = -1
 
@@ -717,7 +717,7 @@ ideas = {
 				always = yes
 			}
 			
-			picture = ung_ordorian_refugees
+			picture = FRA_la_deluge
 			
 			removal_cost = -1
 
@@ -725,6 +725,7 @@ ideas = {
 				stability_weekly = 0.008
 			}
 		}
+		
 		STA_divided_monarchists_idea = {
 			
 			allowed = {
@@ -735,15 +736,17 @@ ideas = {
 				always = yes
 			}
 			
-			picture = ung_ordorian_refugees
+			picture = generic_disjointed_gov
 			
 			removal_cost = -1
 
 			modifier = {
 				political_power_factor = -0.5
+				stability_factor = -0.15
 			}
 		}
-		STA_joint_planning_commission_idea = {
+		
+		STA_negotiating_monarchists_idea = {
 			
 			allowed = {
 				always = no
@@ -753,16 +756,18 @@ ideas = {
 				always = yes
 			}
 			
-			picture = ung_ordorian_refugees
+			picture = generic_deal_with_the_devil
 			
 			removal_cost = -1
 
 			modifier = {
-				planning_speed = 0.25
+				political_power_factor = -0.75
+				stability_factor = -0.25
 			}
 		}
-		puritan_drift_idea = {
 		
+		STA_reconciled_monarchists_idea = {
+			
 			allowed = {
 				always = no
 			}
@@ -771,17 +776,18 @@ ideas = {
 				always = yes
 			}
 			
-			picture = ung_ordorian_refugees
+			picture = generic_constitutional_guarantees
 			
 			removal_cost = -1
 
 			modifier = {
-				puritan_drift = 0.15
+				political_power_factor = 0.1
+				stability_factor = 0.05
 			}
-		
 		}
-		theocrat_drift_idea = {
 		
+		STA_united_monarchists_idea = {
+			
 			allowed = {
 				always = no
 			}
@@ -790,72 +796,16 @@ ideas = {
 				always = yes
 			}
 			
-			picture = ung_ordorian_refugees
+			picture = ast_abandon_the_westminster_system
 			
 			removal_cost = -1
 
 			modifier = {
-				theocrat_drift = 0.15
+				political_power_factor = 0.25
+				stability_factor = 0.15
 			}
-		
 		}
-		republic_merchant_drift_idea = {
 		
-			allowed = {
-				always = no
-			}
-			
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			picture = ung_ordorian_refugees
-			
-			removal_cost = -1
-
-			modifier = {
-				republic_merchant_drift = 0.15
-			}
-		
-		}
-		monarchy_absolute_drift_idea = {
-		
-			allowed = {
-				always = no
-			}
-			
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			picture = ung_ordorian_refugees
-			
-			removal_cost = -1
-
-			modifier = {
-				monarchy_absolute_drift = 0.15
-			}
-		
-		}
-		republic_aristocrat_drift_idea = {
-		
-			allowed = {
-				always = no
-			}
-			
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			picture = ung_ordorian_refugees
-			
-			removal_cost = -1
-
-			modifier = {
-				republic_aristocrat_drift = 0.15
-			}
-		
-		}
 		STA_freiwillige_heimatverteidiger_idea = {
 		
 			allowed = {
@@ -866,7 +816,7 @@ ideas = {
 				always = yes
 			}
 			
-			picture = ung_ordorian_refugees
+			picture = IRI_Theoria_KataktisisSpirit
 			
 			removal_cost = -1
 

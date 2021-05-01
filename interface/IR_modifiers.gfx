@@ -1,0 +1,23 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_modifier_state_fertility"
+		textureFile = "gfx/interface/modifiers/modifier_state_fertility.dds"
+	}
+	spriteType = {
+		name = "GFX_modifier_state_big_fertility"
+		textureFile = "gfx/interface/modifiers/modifier_state_big_fertility.dds"
+	}
+	spriteType = {
+		name = "GFX_modifier_state_infertility"
+		textureFile = "gfx/interface/modifiers/modifier_state_infertility.dds"
+	}
+	spriteType = {
+		name = "GFX_modifier_state_big_infertility"
+		textureFile = "gfx/interface/modifiers/modifier_state_big_infertility.dds"
+	}
+	spriteType = {
+		name = "GFX_modifier_ongoing_conflict"
+		textureFile = "gfx/interface/modifiers/modifier_ongoing_conflict.dds"
+	}
+}

@@ -139,7 +139,7 @@ country_event = { #Random Migrants Arrive
 	}
 	
 	mean_time_to_happen = {
-		days = 1
+		days = 30
 	}
 	
 	option = {#Welcome!
@@ -148,49 +148,136 @@ country_event = { #Random Migrants Arrive
 			random_list = {
 				35 = {
 					174 = {
-					add_manpower = 1702
+						add_manpower = 1702
+					}
 				}
 				5 = {
 					174 = {
-					add_manpower = 15321
+						add_manpower = 15321
+					}
 				}
 				15 = {
 					174 = {
-					add_manpower = 835
+						add_manpower = 835
+					}
 				}
 				3 = {
 					174 = {
-					add_manpower = 27431
+						add_manpower = 27431
+					}
 				}
 				7 = {
 					174 = {
-					add_manpower = 38253
+						add_manpower = 38253
+					}
 				}
 				3 = {
 					174 = {
-					add_manpower = 10924
+						add_manpower = 10924
+					}
 				}
 				2 = {
 					174 = {
-					add_manpower = 48124
+						add_manpower = 48124
+					}
 				}
 				16 = {
 					174 = {
-					add_manpower = 8934
-					clr_country_flag = DORF_migrants_coming
+						add_manpower = 8934
+						clr_country_flag = DORF_migrants_coming
+					}
+				}
+				10 = {
+					174 = {
+						add_manpower = 12935
+						clr_country_flag = DORF_migrants_coming
+					}
 				}
 				9 = {
 					174 = {
-					add_manpower = 12935
-					clr_country_flag = DORF_migrants_coming
+						add_manpower = 18923
+						clr_country_flag = DORF_migrants_coming
+					}
 				}
-				5 = {
-					174 = {
-					add_manpower = 18923
-					clr_country_flag = DORF_migrants_coming
-				}
-				fixed_random_seed = no
 			}
+		}
+	}
+}
+
+country_event = { #Bergialer Independence
+	id = vrg.6
+	title = vrg.6.t
+	desc = vrg.6.d
+	picture = GFX_report_event_crowd_in_prague
+	
+	is_triggered_only = yes
+	
+	option = {#Puppet in peace
+		name = vrg.6.a
+		release_autonomy = {
+			target = BER
+			autonomy_state = autonomy_integrated_puppet
+			freedom_level = 0.5
+		}
+	}
+	
+	option = {#Hell nahw
+		name = vrg.6.b
+		ai_chance = {
+			factor = 0 #don't be daft
+		}
+		add_stability = -0.15
+		release = BER
+		hidden_effect = {
+			transfer_state = 365
+			add_state_core = 365
+		}
+		BER = {
+			set_politics = {
+				ruling_party = republic_merchant
+			}
+			hidden_effect = {
+				set_popularities = {
+					monarchy_absolute = 3
+					monarchy_constitutional = 1
+					republic_aristocrat = 1
+					republic_merchant = 72
+					republic_peasant = 8
+					theocrat = 3
+					puritan = 12
+				}
+			}
+		}
+		transfer_units_fraction = {
+			target = BER
+			size = 0.4
+			stockpile_ratio = 0.4
+			army_ratio = 0.4
+			navy_ratio = 1.0 #VRG is landlocked
+			air_ratio = 0.4
+		}
+		country_event = {
+			id = vrg.7
+			days = 7
+		}
+		set_country_flag = VRG_can_annex_BER
+		custom_effect_tooltip = civil_war_tt
+	}
+}
+
+country_event = { #Bergialer Independence
+	id = vrg.7
+	title = vrg.7.t
+	desc = vrg.7.d
+	picture = GFX_report_event_german_reichstag_gathering
+	
+	is_triggered_only = yes
+	
+	option = {#Let's fucking go
+		name = vrg.7.a
+		declare_war_on = {
+			target = BER
+			type = civil_war
 		}
 	}
 }

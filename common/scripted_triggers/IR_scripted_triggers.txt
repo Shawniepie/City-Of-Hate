@@ -1,5 +1,14 @@
 ###General Scripted Triggers
 
+# checks if a country is a Steel Road state
+
+is_steel_road_state = {
+	OR = {
+		has_state_flag = steel_road_state
+		has_state_flag = steel_road_state
+	}
+}
+
 # checks if any country holds a state that is within range of Perkav raiders
 
 perkav_raiding_target_exists = {

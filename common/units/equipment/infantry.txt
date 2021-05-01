@@ -3,7 +3,7 @@
 equipments = {
 
 	infantry_equipment = {
-		year = 1936
+		year = 600
 	
 		is_archetype = yes
 		picture = archetype_infantry_equipment		
@@ -20,7 +20,7 @@ equipments = {
 		maximum_speed = 4
 
 		#Defensive Abilities
-		defense = 20
+		defense = 4
 		breakthrough = 2
 		hardness = 0
 		armor_value = 0
@@ -28,21 +28,21 @@ equipments = {
 		#Offensive Abilities
 		soft_attack = 3
 		hard_attack = 0.5
-		ap_attack = 1
-		air_attack = 0
 
 		#Space taken in convoy
 		lend_lease_cost = 1
 		
-		build_cost_ic = 0.4
+		build_cost_ic = 0.2
 		resources = {
 			steel = 2
 		}
 		
+		fuel_consumption = 0.2 #Food!
+		
 	}
 
 	infantry_equipment_0 = {
-		year = 1918
+		year = 600
 	
 		archetype = infantry_equipment
 		active = yes
@@ -52,9 +52,9 @@ equipments = {
 
 
 
-	# Regular infantry  1936
+	# Regular infantry
 	infantry_equipment_1 = {
-		year = 1936
+		year = 890
 	
 		archetype = infantry_equipment
 		parent = infantry_equipment_0
@@ -62,21 +62,19 @@ equipments = {
 		visual_level = 1
 
 		#Defensive Abilities
-		defense = 22
+		defense = 6
 		breakthrough = 3
 
 		#Offensive Abilities
-		soft_attack = 6
+		soft_attack = 5
 		hard_attack = 1
-		ap_attack = 4
-		air_attack = 0
 
-		build_cost_ic = 0.5
+		build_cost_ic = 0.3
 	}
 
-	# Improved weapons  ~1939
+	# Improved weapons
 	infantry_equipment_2 = {
-		year = 1939
+		year = 895
 	
 		archetype = infantry_equipment
 		parent = infantry_equipment_1
@@ -90,18 +88,16 @@ equipments = {
 		#Offensive Abilities
 		soft_attack = 9
 		hard_attack = 1.5
-		ap_attack = 5
-		air_attack = 0
 		
-		build_cost_ic = 0.6
+		build_cost_ic = 0.4
 		resources = {
 			steel = 3
 		}
 	}
 	
-	# Advanced weapons  ~1942
+	# Advanced weapons
 	infantry_equipment_3 = {
-		year = 1942
+		year = 907
 	
 		archetype = infantry_equipment
 		parent = infantry_equipment_2
@@ -115,13 +111,125 @@ equipments = {
 		#Offensive Abilities
 		soft_attack = 12
 		hard_attack = 2
-		ap_attack = 10
-		air_attack = 0
 		
 		reliability = 0.8
-		build_cost_ic = 0.7
+		build_cost_ic = 0.5
 		resources = {
 			steel = 4
 		}
+	}
+	
+	ranged_equipment = {
+		year = 600
+	
+		is_archetype = yes
+		picture = archetype_infantry_equipment		
+		is_buildable = no
+		type = infantry
+		group_by = archetype
+		
+		interface_category = interface_category_land
+		
+		active = no
+		
+		#Misc Abilities
+		reliability = 0.9
+		maximum_speed = 4
+
+		#Defensive Abilities
+		defense = 4.5
+		breakthrough = 1
+		hardness = 0
+		armor_value = 0
+
+		#Offensive Abilities
+		soft_attack = 3.5
+		hard_attack = 0.2
+		
+		#Space taken in convoy
+		lend_lease_cost = 1
+		
+		build_cost_ic = 0.15
+		resources = {
+			lumber = 2			
+		}
+		
+		fuel_consumption = 0.2 #Food!
+		
+	}
+
+	ranged_equipment_0 = {
+		year = 600
+	
+		archetype = ranged_equipment
+		active = no
+		priority = 05
+		visual_level = 0
+	}
+	
+	ranged_equipment_1 = {
+		year = 700
+	
+		archetype = ranged_equipment
+		parent = ranged_equipment_0
+		priority = 10
+		visual_level = 1
+
+		#Defensive Abilities
+		defense = 5
+		breakthrough = 1
+
+		#Offensive Abilities
+		soft_attack = 4
+		hard_attack = 0.7
+		build_cost_ic = 0.33
+	}
+	
+	crossbow_equipment = {
+		year = 600
+	
+		is_archetype = yes
+		picture = archetype_infantry_equipment		
+		is_buildable = no
+		type = infantry
+		group_by = archetype
+		
+		interface_category = interface_category_land
+		
+		active = no
+		
+		#Misc Abilities
+		reliability = 0.75
+		maximum_speed = 4
+
+		#Defensive Abilities
+		defense = 4.5
+		breakthrough = 3
+		hardness = 0
+		armor_value = 0
+
+		#Offensive Abilities
+		soft_attack = 3.5
+		hard_attack = 2
+		
+		#Space taken in convoy
+		lend_lease_cost = 1
+		
+		build_cost_ic = 0.4
+		resources = {
+			lumber = 2			
+		}
+		
+		fuel_consumption = 0.2 #Food!
+		
+	}
+
+	crossbow_equipment_0 = {
+		year = 600
+	
+		archetype = crossbow_equipment
+		active = no
+		priority = 05
+		visual_level = 0
 	}
 }

@@ -14,10 +14,13 @@ division_template = {
 	regiments = {
 		men_at_arms = { x = 0 y = 0 }
 		men_at_arms = { x = 0 y = 1 }
-		men_at_arms = { x = 0 y = 2 }
-        men_at_arms = { x = 1 y = 0 }
+        		halberdier = { x = 0 y = 2 }
+		men_at_arms = { x = 1 y = 0 }
 		men_at_arms = { x = 1 y = 1 }
-		men_at_arms = { x = 1 y = 2 }
+		swordsmen = { x = 1 y = 2 }
+		men_at_arms = { x = 2 y = 0 }
+		men_at_arms = { x = 2 y = 1 }
+		men_at_arms = { x = 2 y = 2 }
 	}
 }
 
@@ -42,7 +45,7 @@ division_template = {
 		light_cavalry = { x = 1 y = 1 }
 	}
 	support = {
-	    recon = { x = 0 y = 0 }
+	    scouts_cavalry = { x = 0 y = 0 }
 	}
 }
 
@@ -50,39 +53,39 @@ units = {
 
 	division = {
 		name = "Anzer Militia"
-		location = 1810
+		location = 366
 		division_template = "Town Watch"
 		start_experience_factor = 0.1
 
 	}
 	
 	division = {
-		name = "Dorissus Militia"
-		location = 2285
+		name = "Ywen Militia"
+		location = 5973
 		division_template = "Town Watch"
 		start_experience_factor = 0.1
 
 	}
 
 	division = {
-		name = "Quent Militia"
-		location = 6502
-		division_template = "Town Watch"
-		start_experience_factor = 0.1
-
-	}
-	
-	division = {
-		name = "Westrenne Militia"
-		location = 4363
+		name = "Celin Militia"
+		location = 1225
 		division_template = "Town Watch"
 		start_experience_factor = 0.1
 
 	}
 	
 	division = {
-		name = "Naxgolin Militia"
-		location = 1784
+		name = "Splythwass Militia"
+		location = 5428
+		division_template = "Town Watch"
+		start_experience_factor = 0.1
+
+	}
+	
+	division = {
+		name = "Thorinthelin Militia"
+		location = 3165
 		division_template = "Town Watch"
 		start_experience_factor = 0.1
 
@@ -90,7 +93,7 @@ units = {
 
 	division = {
 		name = "Nastrodoge King's Guard"
-		location = 4931
+		location = 6489
 		division_template = "King's Guard"
 		start_experience_factor = 1.2
 
@@ -98,7 +101,7 @@ units = {
 	
 	division = {
 		name = "Kortinall King's Guard"
-		location = 7830
+		location = 6594
 		division_template = "King's Guard"
 		start_experience_factor = 1.2
 
@@ -106,7 +109,7 @@ units = {
 	
 	division = {
 		name = "Kaltire King's Guard"
-		location = 3863
+		location = 6053
 		division_template = "King's Guard"
 		start_experience_factor = 1.2
 
@@ -114,7 +117,7 @@ units = {
 	
 	division = {
 		name = "Trifell King's Guard"
-		location = 8702
+		location = 2379
 		division_template = "King's Guard"
 		start_experience_factor = 1.2
 
@@ -122,7 +125,7 @@ units = {
 	
 	division = {
 		name = "1st Levy"
-		location = 4469
+		location = 6187
 		division_template = "King's Guard"
 		start_experience_factor = 0.13
 
@@ -130,7 +133,7 @@ units = {
 	
 	division = {
 		name = "2nd Levy"
-		location = 1568
+		location = 3893
 		division_template = "King's Guard"
 		start_experience_factor = 0.13
 
@@ -138,7 +141,7 @@ units = {
 	
 	division = {
 		name = "3rd Levy"
-		location = 2914
+		location = 6593
 		division_template = "King's Guard"
 		start_experience_factor = 0.13
 
@@ -146,7 +149,7 @@ units = {
 	
 	division = {
 		name = "4th Levy"
-		location = 2913
+		location = 6634
 		division_template = "King's Guard"
 		start_experience_factor = 0.13
 
@@ -154,7 +157,7 @@ units = {
 	
 	division = {
 		name = "5th Levy"
-		location = 1571
+		location = 5945
 		division_template = "King's Guard"
 		start_experience_factor = 0.13
 
@@ -162,7 +165,7 @@ units = {
 	
 	division = {
 		name = "6th Levy"
-		location = 1570
+		location = 6004
 		division_template = "King's Guard"
 		start_experience_factor = 0.13
 
@@ -170,7 +173,7 @@ units = {
 	
 	division = {
 		name = "7th Levy"
-		location = 8317
+		location = 6035
 		division_template = "King's Guard"
 		start_experience_factor = 0.13
 
@@ -178,7 +181,7 @@ units = {
 	
 	division = {
 		name = "8th Levy"
-		location = 4695
+		location = 5916
 		division_template = "King's Guard"
 		start_experience_factor = 0.13
 
@@ -186,7 +189,7 @@ units = {
 	
 	division = {
 		name = "9th Levy"
-		location = 4470
+		location = 6184
 		division_template = "King's Guard"
 		start_experience_factor = 0.13
 
@@ -194,7 +197,7 @@ units = {
 	
 	division = {
 		name = "10th Levy"
-		location = 6621
+		location = 6206
 		division_template = "King's Guard"
 		start_experience_factor = 0.13
 
@@ -202,7 +205,7 @@ units = {
 	
 	division = {
 		name = "11th Levy"
-		location = 5915
+		location = 633
 		division_template = "King's Guard"
 		start_experience_factor = 0.13
 
@@ -210,7 +213,7 @@ units = {
 	
 	division = {
 		name = "12th Levy"
-		location = 5914
+		location = 2561
 		division_template = "King's Guard"
 		start_experience_factor = 0.13
 
@@ -218,7 +221,7 @@ units = {
 	
 	division = {
 		name = "13th Levy"
-		location = 2408
+		location = 6208
 		division_template = "King's Guard"
 		start_experience_factor = 0.13
 
@@ -226,7 +229,7 @@ units = {
 	
 	division = {
 		name = "14th Levy"
-		location = 4644
+		location = 6641
 		division_template = "King's Guard"
 		start_experience_factor = 0.13
 
@@ -234,7 +237,7 @@ units = {
 	
 	division = {
 		name = "15th Levy"
-		location = 6566
+		location = 6670
 		division_template = "King's Guard"
 		start_experience_factor = 0.13
 
@@ -242,7 +245,7 @@ units = {
 	
 	division = {
 		name = "16th Levy"
-		location = 7219
+		location = 3354
 		division_template = "King's Guard"
 		start_experience_factor = 0.13
 
@@ -250,7 +253,7 @@ units = {
 	
 	division = {
 		name = "17th Levy"
-		location = 4647
+		location = 6599
 		division_template = "King's Guard"
 		start_experience_factor = 0.13
 
@@ -258,7 +261,7 @@ units = {
 	
 	division = {
 		name = "18th Levy"
-		location = 5917
+		location = 716
 		division_template = "King's Guard"
 		start_experience_factor = 0.13
 
@@ -266,7 +269,7 @@ units = {
 	
 	division = {
 		name = "19th Levy"
-		location = 4646
+		location = 2207
 		division_template = "King's Guard"
 		start_experience_factor = 0.13
 
@@ -274,7 +277,7 @@ units = {
 	
 	division = {
 		name = "20th Levy"
-		location = 8434
+		location = 755
 		division_template = "King's Guard"
 		start_experience_factor = 0.13
 
@@ -282,7 +285,7 @@ units = {
 	
 	division = {
 		name = "21st Levy"
-		location = 2361
+		location = 3357
 		division_template = "King's Guard"
 		start_experience_factor = 0.13
 
@@ -290,7 +293,7 @@ units = {
 	
 	division = {
 		name = "22nd Levy"
-		location = 7864
+		location = 2650
 		division_template = "King's Guard"
 		start_experience_factor = 0.13
 
@@ -298,7 +301,7 @@ units = {
 	
 	division = {
 		name = "23rd Levy"
-		location = 2746
+		location = 6074
 		division_template = "King's Guard"
 		start_experience_factor = 0.13
 
@@ -306,7 +309,7 @@ units = {
 	
 	division = {
 		name = "24th Levy"
-		location = 741
+		location = 4459
 		division_template = "King's Guard"
 		start_experience_factor = 0.13
 
@@ -314,7 +317,7 @@ units = {
 	
 	division = {
 		name = "25th Levy"
-		location = 6807
+		location = 6106
 		division_template = "King's Guard"
 		start_experience_factor = 0.13
 
@@ -322,7 +325,7 @@ units = {
 	
 	division = {
 		name = "26th Levy"
-		location = 62
+		location = 4209
 		division_template = "King's Guard"
 		start_experience_factor = 0.13
 
@@ -330,7 +333,7 @@ units = {
 	
 	division = {
 		name = "27th Levy"
-		location = 2824
+		location = 1602
 		division_template = "King's Guard"
 		start_experience_factor = 0.13
 
@@ -338,7 +341,7 @@ units = {
 	
 	division = {
 		name = "28th Levy"
-		location = 742
+		location = 6704
 		division_template = "King's Guard"
 		start_experience_factor = 0.13
 
@@ -346,7 +349,7 @@ units = {
 	
 	division = {
 		name = "29th Levy"
-		location = 3479
+		location = 2591
 		division_template = "King's Guard"
 		start_experience_factor = 0.13
 
@@ -354,7 +357,7 @@ units = {
 	
 	division = {
 		name = "30th Levy"
-		location = 1922
+		location = 4814
 		division_template = "King's Guard"
 		start_experience_factor = 0.13
 
@@ -362,7 +365,7 @@ units = {
 	
 	division = {
 		name = "31st Levy"
-		location = 8219
+		location = 6028
 		division_template = "King's Guard"
 		start_experience_factor = 0.13
 
@@ -370,7 +373,7 @@ units = {
 	
 	division = {
 		name = "32nd Levy"
-		location = 1564
+		location = 2203
 		division_template = "King's Guard"
 		start_experience_factor = 0.13
 
@@ -378,7 +381,7 @@ units = {
 	
 	division = {
 		name = "33rd Levy"
-		location = 7479
+		location = 4154
 		division_template = "King's Guard"
 		start_experience_factor = 0.13
 
@@ -386,7 +389,7 @@ units = {
 	
 	division = {
 		name = "34th Levy"
-		location = 7780
+		location = 228
 		division_template = "King's Guard"
 		start_experience_factor = 0.13
 
@@ -394,7 +397,7 @@ units = {
 	
 	division = {
 		name = "35th Levy"
-		location = 827
+		location = 5929
 		division_template = "King's Guard"
 		start_experience_factor = 0.13
 
@@ -402,7 +405,7 @@ units = {
 	
 	division = {
 		name = "36th Levy"
-		location = 3671
+		location = 6018
 		division_template = "King's Guard"
 		start_experience_factor = 0.13
 
@@ -410,7 +413,7 @@ units = {
 	
 	division = {
 		name = "37th Levy"
-		location = 2757
+		location = 6068
 		division_template = "King's Guard"
 		start_experience_factor = 0.13
 
@@ -418,7 +421,7 @@ units = {
 	
 	division = {
 		name = "38th Levy"
-		location = 851
+		location = 548
 		division_template = "King's Guard"
 		start_experience_factor = 0.13
 
@@ -426,7 +429,7 @@ units = {
 	
 	division = {
 		name = "39th Levy"
-		location = 1680
+		location = 3672
 		division_template = "King's Guard"
 		start_experience_factor = 0.13
 
@@ -434,7 +437,7 @@ units = {
 	
 	division = {
 		name = "40th Levy"
-		location = 6612
+		location = 6336
 		division_template = "King's Guard"
 		start_experience_factor = 0.13
 

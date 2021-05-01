@@ -1,0 +1,43 @@
+capital = 414
+
+set_oob = "PRK_empty"
+
+set_technology = {
+	implements_war = 1
+	tribal_warbands = 1
+	sparring_fields = 1
+	perkav_raiders = 1
+}
+
+1939.1.1 = {
+}
+
+set_politics = {
+	ruling_party = monarchy_absolute
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	monarchy_absolute = 83
+
+	monarchy_constitutional = 0
+
+	republic_peasant = 0
+
+	republic_aristocrat = 0
+
+	republic_merchant = 0
+
+	theocrat = 0
+
+	puritan = 17
+}
+
+add_ideas = {
+	human_country
+	krostov_religion
+	PRK_tribal_nation
+	PRK_oral_tradition
+}

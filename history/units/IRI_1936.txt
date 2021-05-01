@@ -12,10 +12,38 @@ division_template = {
 	regiments = {
 		men_at_arms = { x = 0 y = 0 }
 		men_at_arms = { x = 0 y = 1 }
-		men_at_arms = { x = 0 y = 2 }
-        men_at_arms = { x = 1 y = 0 }
+        		halberdier = { x = 0 y = 2 }
+        		halberdier = { x = 0 y = 3 }
+		men_at_arms = { x = 1 y = 0 }
 		men_at_arms = { x = 1 y = 1 }
-		men_at_arms = { x = 1 y = 2 }
+		halberdier = { x = 1 y = 2 }
+		halberdier = { x = 1 y = 3 }
+		men_at_arms = { x = 2 y = 0 }
+		men_at_arms = { x = 2 y = 1 }
+		swordsmen = { x = 2 y = 2 }
+		swordsmen = { x = 2 y = 3 }
+		men_at_arms = { x = 3 y = 0 }
+		men_at_arms = { x = 3 y = 1 }
+		swordsmen = { x = 3 y = 2 }
+		swordsmen = { x = 3 y = 3 }
+	}
+}
+
+division_template = {
+	name = "Τοeότες"
+	regiments = {
+		men_at_arms = { x = 0 y = 0 }
+		archer_shortbow = { x = 0 y = 1 }
+        		archer_shortbow = { x = 0 y = 2 }
+        		archer_shortbow = { x = 0 y = 3 }
+		men_at_arms = { x = 1 y = 0 }
+		archer_shortbow = { x = 1 y = 1 }
+		archer_shortbow = { x = 1 y = 2 }
+		archer_shortbow = { x = 1 y = 3 }
+		men_at_arms = { x = 2 y = 0 }
+		archer_shortbow = { x = 2 y = 1 }
+		archer_shortbow = { x = 2 y = 2 }
+		archer_shortbow = { x = 2 y = 3 }
 	}
 }
 
@@ -24,10 +52,8 @@ division_template = {
 	regiments = {
 		heavy_cavalry = { x = 0 y = 0 }
         heavy_cavalry = { x = 0 y = 1 }
-        heavy_cavalry = { x = 0 y = 2 }
 		heavy_cavalry = { x = 1 y = 0 }
 		heavy_cavalry = { x = 1 y = 1 }
-		heavy_cavalry = { x = 1 y = 2 }
 	}
 }
 
@@ -40,7 +66,7 @@ division_template = {
 		light_cavalry = { x = 1 y = 1 }
 	}
 	support = {
-	    recon = { x = 0 y = 0 }
+	    scouts_cavalry = { x = 0 y = 0 }
 	}
 }
 
@@ -177,7 +203,7 @@ units = {
 	division = {
 		name = "2. Polemistés"
 		location = 6590
-		division_template = "Aftokratorikoí Polemistés"
+		division_template = "Τοeότες"
 		start_experience_factor = 0.6
 
 	}
@@ -297,7 +323,7 @@ units = {
 	division = {
 		name = "17. Polemistés"
 		location = 6562
-		division_template = "Aftokratorikoí Polemistés"
+		division_template = "Τοeότες"
 		start_experience_factor = 0.6
 
 	}
@@ -353,7 +379,7 @@ units = {
 	division = {
 		name = "24. Polemistés"
 		location = 4204
-		division_template = "Aftokratorikoí Polemistés"
+		division_template = "Τοeότες"
 		start_experience_factor = 0.6
 
 	}
@@ -406,18 +432,28 @@ instant_effect = {
 			type = infantry_equipment_1
 			creator = "IRI"
 		}
-		requested_factories = 18
+		requested_factories = 10
 		progress = 0.48
 		efficiency = 8
 	}
 
 	add_equipment_production = {
 		equipment = {
-			type = support_equipment_1
+			type = heavy_cavalry_equipment_0
 			creator = "IRI" 
 		}
-		requested_factories = 6
+		requested_factories = 8
 		progress = 0.3
-		efficiency = 4
+		efficiency = 6
+	}
+	
+	add_equipment_production = {
+		equipment = {
+			type = light_cavalry_equipment_0
+			creator = "IRI" 
+		}
+		requested_factories = 4
+		progress = 0.7
+		efficiency = 3
 	}
 }

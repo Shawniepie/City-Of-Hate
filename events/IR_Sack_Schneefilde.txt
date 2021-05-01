@@ -68,6 +68,10 @@ country_event = {
 		name = schneefilde_schneefilder_sack.1.a
 		UNG = {
 			set_country_flag = UNG_schneefilde_sacked
+			country_event = {
+				id = ung.13
+				days = 2
+			}
 		}
 		add_political_power = 50
 		add_war_support = 0.05
@@ -77,7 +81,7 @@ country_event = {
 				level = 2
 			}
 			remove_building = {
-				type = industrial_complex
+				type = workshop
 				level = 1
 			}
 		}
@@ -99,6 +103,10 @@ country_event = {
 		name = schneefilde_schneefilder_sack.2.a
 		UNG = {
 			set_country_flag = UNG_schneefilde_sacked
+			country_event = {
+				id = ung.13
+				days = 2
+			}
 		}
 		add_political_power = -50
 		add_stability = -0.05
@@ -112,11 +120,11 @@ country_event = {
 				level = 3
 			}
 			remove_building = {
-				type = industrial_complex
+				type = workshop
 				level = 2
 			}
 			remove_building = {
-				type = arms_factory
+				type = forge
 				level = 1
 			}
 		}
@@ -157,6 +165,10 @@ country_event = {
 		name = schneefilde_schneefilder_sack.3.a
 		UNG = {
 			set_country_flag = UNG_schneefilde_sacked
+			country_event = {
+				id = ung.13
+				days = 2
+			}
 		}
 		add_political_power = 25
 		add_timed_idea = {
@@ -169,11 +181,11 @@ country_event = {
 				level = 1
 			}
 			remove_building = {
-				type = industrial_complex
+				type = workshop
 				level = 1
 			}
 			remove_building = {
-				type = arms_factory
+				type = forge
 				level = 1
 			}
 		}

@@ -12,10 +12,28 @@ division_template = {
 	regiments = {
 		men_at_arms = { x = 0 y = 0 }
 		men_at_arms = { x = 0 y = 1 }
-		men_at_arms = { x = 0 y = 2 }
-        men_at_arms = { x = 1 y = 0 }
+        		halberdier = { x = 0 y = 2 }
+		men_at_arms = { x = 1 y = 0 }
 		men_at_arms = { x = 1 y = 1 }
-		men_at_arms = { x = 1 y = 2 }
+		swordsmen = { x = 1 y = 2 }
+		men_at_arms = { x = 2 y = 0 }
+		men_at_arms = { x = 2 y = 1 }
+		men_at_arms = { x = 2 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Bogenschützen"
+	regiments = {
+		men_at_arms = { x = 0 y = 0 }
+		archer_shortbow = { x = 0 y = 1 }
+        		archer_shortbow = { x = 0 y = 2 }
+		men_at_arms = { x = 1 y = 0 }
+		archer_shortbow = { x = 1 y = 1 }
+		archer_shortbow = { x = 1 y = 2 }
+		men_at_arms = { x = 2 y = 0 }
+		archer_shortbow = { x = 2 y = 1 }
+		archer_shortbow = { x = 2 y = 2 }
 	}
 }
 
@@ -23,66 +41,56 @@ division_template = {
 	name = "Prinzritter"
 	regiments = {
 		heavy_cavalry = { x = 0 y = 0 }
-        heavy_cavalry = { x = 0 y = 1 }
-        heavy_cavalry = { x = 0 y = 2 }
+        		heavy_cavalry = { x = 0 y = 1 }
 		heavy_cavalry = { x = 1 y = 0 }
 		heavy_cavalry = { x = 1 y = 1 }
-		heavy_cavalry = { x = 1 y = 2 }
 	}
 }
 
 division_template = {
 	name = "Späher"
 	regiments = {
-		light_cavalry = { x = 0 y = 0 }
-        light_cavalry = { x = 0 y = 1 }
-        light_cavalry = { x = 1 y = 0 }
-		light_cavalry = { x = 1 y = 1 }
+	 light_cavalry = { x = 0 y = 0 }
+       	 light_cavalry = { x = 0 y = 1 }
+       	 light_cavalry = { x = 1 y = 0 }
+	 light_cavalry = { x = 1 y = 1 }
 	}
 	support = {
-	    recon = { x = 0 y = 0 }
+	    scouts_cavalry = { x = 0 y = 0 }
 	}
 }
 
 units = {
-
-	division = {
-		name = "1st Regiment 'Weissmans Schwerter'"
-		location = 2355
-		division_template = "Prinztruppen"
-		start_experience_factor = 0.5
-
-	}
 	
 	division = {
-		name = "2nd Regiment 'Feldkämpfer'"
+		name = "1nd Regiment 'Feldkämpfer'"
 		location = 2780
 		division_template = "Prinztruppen"
-		start_experience_factor = 0.5
-
-	}
-	
-	division = {
-		name = "3rd Regiment 'Kaltachsen'"
-		location = 2699
-		division_template = "Prinztruppen"
-		start_experience_factor = 0.5
+		start_experience_factor = 0.4
 
 	}
 
 	division = {
 		name = "1st Cavalry 'Der Gegenangriff'"
 		location = 1131
-		division_template = "Prinzritter"
-		start_experience_factor = 0.5
+		division_template = "Späher"
+		start_experience_factor = 0.6
 
 	}
 	
 	division = {
 		name = "2nd Cavalry 'Die Antwort'"
 		location = 1491
-		division_template = "Prinzritter"
-		start_experience_factor = 0.5
+		division_template = "Späher"
+		start_experience_factor = 0.6
+
+	}
+	
+	division = {
+		name = "3nd Cavalry 'Die Verteidigung'"
+		location = 2355
+		division_template = "Späher"
+		start_experience_factor = 0.6
 
 	}
 	
@@ -92,5 +100,37 @@ units = {
 		division_template = "Stadtwache"
 		start_experience_factor = 0.05
 
+	}
+}
+
+### STARTING PRODUCTION ###
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_0
+			creator = "SNF"
+		}
+		requested_factories = 1
+		progress = 0.28
+		efficiency = 24
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = light_cavalry_equipment_0
+			creator = "SNF" 
+		}
+		requested_factories = 1
+		progress = 0.32
+		efficiency = 48
+	}
+	add_equipment_production = {
+		equipment = {
+			type = heavy_cavalry_equipment_0
+			creator = "SNF" 
+		}
+		requested_factories = 1
+		progress = 0.32
+		efficiency = 48
 	}
 }

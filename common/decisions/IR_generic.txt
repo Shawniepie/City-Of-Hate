@@ -1,0 +1,49 @@
+GENERIC_join_wars = {
+
+	DORF_join_union_war_against_opponent = { #As RMT or SKA, Join UNG against SKA or RMT
+
+		icon = GFX_decision_generic_prepare_civil_war
+		
+		available = {
+			OR = {
+				has_country_flag = SKA_UNG_invade_rimatu
+				has_country_flag = RMT_UNG_invade_skaelinger
+			}
+		}
+		
+		cost = 0
+
+		ai_will_do = {
+			factor = 200
+		}
+
+		visible = {
+			has_country_flag = SKA_UNG_invade_rimatu
+		}
+
+		is_good = yes
+		
+		fire_only_once = yes
+
+		complete_effect = {
+			if = {
+				limit = {
+					has_country_flag = SKA_UNG_invade_rimatu
+				}
+				declare_war_on = {
+					target = RMT
+					type = annex_everything
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = RMT_UNG_invade_skaelinger
+				}
+				declare_war_on = {
+					target = SKA
+					type = annex_everything
+				}
+			}
+		}
+	}
+}

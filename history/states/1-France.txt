@@ -12,16 +12,16 @@ state={
 	resources = {
 		steel = 13
 	}
-
-		
+	
 	history={
 		owner = GMR
 		victory_points = { 3069 53 }
 			buildings = {
 				infrastructure = 7
-				arms_factory = 4
-				industrial_complex = 5
+				forge = 3
+				workshop = 4
 				dockyard = 2
+				farm = 1
 				3069  = {
 					naval_base = 5
 				}

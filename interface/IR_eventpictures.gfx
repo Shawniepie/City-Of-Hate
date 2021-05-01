@@ -1,0 +1,47 @@
+spriteTypes = {
+	
+	spriteType = {
+		name = "GFX_news_event_ord_moderates"
+		texturefile = "gfx/event_pictures/news_event_ord_moderates.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_news_event_ord_traditionalists"
+		texturefile = "gfx/event_pictures/news_event_ord_traditionalists.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_ung_civil_warning"
+		texturefile = "gfx/event_pictures/report_event_ung_civil_warning.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_perkavland_sacked"
+		texturefile = "gfx/event_pictures/report_event_perkavland_sacked.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_dead_ungerdaler"
+		texturefile = "gfx/event_pictures/report_event_dead_ungerdaler.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_realm_separatists"
+		texturefile = "gfx/event_pictures/report_event_realm_separatists.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_irinthios_sanctions"
+		texturefile = "gfx/event_pictures/report_event_irinthios_sanctions.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_irinthios_warcrimes"
+		texturefile = "gfx/event_pictures/report_event_irinthios_warcrimes.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_irinthios_coup"
+		texturefile = "gfx/event_pictures/report_event_irinthios_coup.dds"
+	}
+}

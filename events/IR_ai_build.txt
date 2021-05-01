@@ -1,0 +1,97 @@
+﻿### EVENTS FOR MAKING THE AI BUILD THINGS SINCE IT'S DUMB
+
+add_namespace = ai_build
+
+
+country_event = {#Build Farms
+	id = ai_build.1
+	
+	hidden = yes
+	
+	trigger = {
+		is_ai = yes
+		any_controlled_state = {
+			free_building_slots = {
+				building = farm
+				size > 1
+				include_locked = no
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	option = {
+		random_owned_controlled_state = {
+			add_building_construction = {
+				type = farm
+				level = 1
+				instant_build = no
+			}
+		}
+	}
+}
+
+country_event = {#Build Workshops
+	id = ai_build.2
+	
+	hidden = yes
+	
+	trigger = {
+		is_ai = yes
+		any_controlled_state = {
+			free_building_slots = {
+				building = workshop
+				size > 1
+				include_locked = no
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 4
+	}
+	
+	option = {
+		random_owned_controlled_state = {
+			add_building_construction = {
+				type = workshop
+				level = 1
+				instant_build = no
+			}
+		}
+	}
+}
+
+country_event = {#Build Forges
+	id = ai_build.3
+	
+	hidden = yes
+	
+	trigger = {
+		is_ai = yes
+		any_controlled_state = {
+			free_building_slots = {
+				building = forge
+				size > 1
+				include_locked = no
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 6
+	}
+	
+	option = {
+		random_owned_controlled_state = {
+			add_building_construction = {
+				type = forge
+				level = 1
+				instant_build = no
+			}
+		}
+	}
+}

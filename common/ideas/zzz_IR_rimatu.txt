@@ -1,0 +1,46 @@
+ideas = {
+	
+	country = {
+	
+		RMT_UNG_trade = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = generic_economic_increase
+			
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.1
+				production_speed_buildings_factor = 0.075
+				local_resources_factor = 0.15
+			}
+		}
+		
+		RMT_legitimized_nation = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = HUN_treaty_of_triannon
+			
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = 0.25
+				enemy_justify_war_goal_time = 0.15
+			}
+		}
+	}
+}

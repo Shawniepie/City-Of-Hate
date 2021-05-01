@@ -1586,4 +1586,32 @@ spriteTypes = {
 	name = "GFX_idea_BLD_Swamp_Is_Our_Home"
 	texturefile = "gfx/interface/ideas/BLD_Swamp_Is_Our_Home.tga"			
 	}
+	SpriteType = {
+	name = "GFX_idea_BLD_The_Ogregeld"
+	texturefile = "gfx/interface/ideas/BLD_The_Ogregeld.tga"			
+	}
+	SpriteType = {
+	name = "GFX_idea_BLD_The_Ogregeld2"
+	texturefile = "gfx/interface/ideas/BLD_The_Ogregeld2.tga"			
+	}
+	SpriteType = {
+	name = "GFX_idea_BLD_The_Ogregeld_RMT"
+	texturefile = "gfx/interface/ideas/BLD_The_Ogregeld_RMT.tga"			
+	}
+	SpriteType = {
+	name = "GFX_idea_BLD_The_Ogregeld_RMT2"
+	texturefile = "gfx/interface/ideas/BLD_The_Ogregeld_RMT2.tga"			
+	}
+	SpriteType = {
+	name = "GFX_idea_BLD_Open_To_The_WorldSpirit"
+	texturefile = "gfx/interface/ideas/BLD_Open_To_The_WorldSpirit.tga"			
+	}
+	SpriteType = {
+	name = "GFX_idea_BLD_Raider_Traditions"
+	texturefile = "gfx/interface/ideas/BLD_Raider_Traditions.tga"			
+	}
+	SpriteType = {
+	name = "GFX_idea_BLD_The_Firetrial"
+	texturefile = "gfx/interface/ideas/BLD_The_Firetrial.tga"			
+	}
 }

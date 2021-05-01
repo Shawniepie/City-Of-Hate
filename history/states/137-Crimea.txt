@@ -7,12 +7,12 @@ state={
 	state_category = rural
 	manpower=4991
 	buildings_max_level_factor=1.000
-		history={	
+	history={	
 		owner = RTH
-		buildings = {	
-		infrastructure = 3
-		}	
-		add_core_of = RTH
-
+		buildings = {
+			farm = 2
+			infrastructure = 3
 		}
+		add_core_of = RTH
+	}
 }

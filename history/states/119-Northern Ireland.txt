@@ -8,15 +8,16 @@ state={
 	manpower=17438
 	buildings_max_level_factor=1.000
 	
-	resources = { aluminium = 8}
+	resources = { mount = 8}
 	
 		history={
 		victory_points = {6954 14}
 		owner = RTH
 		buildings = {	
 		infrastructure = 5
-		industrial_complex = 2
-		arms_factory = 1
+		workshop = 2
+		forge = 1
+		farm = 1
 		}	
 		add_core_of = RTH
 

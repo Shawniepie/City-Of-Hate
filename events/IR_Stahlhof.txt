@@ -269,15 +269,15 @@ country_event = {#Fate of the Adelina Truppen
 		}
 	}
 	
-	option = { #Send them on an "expedition".
-		name = sta.7.b
-		ai_chance = {
-			factor = 2
-		}
-		hidden_effect = {
-			set_country_flag = STA_expedition_flag
-		}
-	}
+	#option = { #Send them on an "expedition".
+	#	name = sta.7.b
+	#		ai_chance = {
+	#		factor = 0
+	#	}
+	#	hidden_effect = {
+	#		set_country_flag = STA_expedition_flag
+	#	}
+	#}
 }
 
 country_event = {#Request Equipment
@@ -290,21 +290,30 @@ country_event = {#Request Equipment
 	
 	option = { #Yes
 		name = sta.8.a
-		add_political_power = 30
 		trigger = {
-			has_equipment = { 
-				OR = {
-					light_melee_equipment_1 > 124
-					light_melee_equipment_2 > 124
-					light_melee_equipment_3 > 124
-					light_melee_equipment_4 > 124
+			OR = {
+				has_equipment = {
+				infantry_equipment_0 > 124
 				}
+				has_equipment = {
+				infantry_equipment_1 > 124
+				}
+				has_equipment = {
+				infantry_equipment_2 > 124
+				}
+				has_equipment = {
+				infantry_equipment_3 > 124
+				}
+				}
+		}
+		add_political_power = 30
+		STA = {
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = 125
+				producer = UNG
 			}
 		}
-		ai_chance = {
-			factor = 2
-		}
-		STA = { add_equipment_to_stockpile = { type = light_melee_equipment amount = 125 producer = UNG } }
 		hidden_effect = {
 			STA = { country_event = { id = sta.9 hours = 12 } }
 		}
@@ -312,21 +321,24 @@ country_event = {#Request Equipment
 	
 	option = { #No
 		name = sta.8.b
+		trigger = {
+			OR = {
+				has_equipment = {
+				infantry_equipment_0 > 124
+				}
+				has_equipment = {
+				infantry_equipment_1 > 124
+				}
+				has_equipment = {
+				infantry_equipment_2 > 124
+				}
+				has_equipment = {
+				infantry_equipment_3 > 124
+				}
+				}
+		}
 		add_political_power = -30
 		add_popularity = { ideology = party_ideology@ruling_party popularity = -0.02 }
-		trigger = {
-			has_equipment = { 
-				OR = {
-					light_melee_equipment_1 > 124
-					light_melee_equipment_2 > 124
-					light_melee_equipment_3 > 124
-					light_melee_equipment_4 > 124
-				}
-			}
-		}
-		ai_chance = {
-			factor = 1
-		}
 		hidden_effect = {
 			STA = { country_event = { id = sta.10 hours = 12 } }
 		}
@@ -334,22 +346,26 @@ country_event = {#Request Equipment
 	
 	option = { #We cant
 		name = sta.8.c
-		add_political_power = -30
+
 		trigger = {
 		NOT = {
-			has_equipment = {
-				OR = {
-					light_melee_equipment_1 > 124
-					light_melee_equipment_2 > 124
-					light_melee_equipment_3 > 124
-					light_melee_equipment_4 > 124
+			OR = {
+				has_equipment = {
+				infantry_equipment_0 > 124
 				}
-			}
-		 }
+				has_equipment = {
+				infantry_equipment_1 > 124
+				}
+				has_equipment = {
+				infantry_equipment_2 > 124
+				}
+				has_equipment = {
+				infantry_equipment_3 > 124
+				}
+				}
 		}
-		ai_chance = {
-			factor = 3
 		}
+		add_political_power = -30
 		hidden_effect = {
 			STA = { country_event = { id = sta.11 hours = 12 } }
 		}
@@ -408,7 +424,7 @@ country_event = {#STA Success Faustburg
 		swap_ideas = {
 				remove_idea = STA_adelina_troop_loyalty_idea
 				add_idea = STA_adelina_troop_loyalty_idea_dealt
-			}
+		}
 	}
 }
 
@@ -1221,7 +1237,7 @@ country_event = {#Arkanisturm drop tag
 	
 	option = { #
 		name = sta.66.a
-		drop_cosmetic_tag = true
+		drop_cosmetic_tag = yes
 		if = {
 			limit = {
 				NOT = { is_subject_of = UNG }
@@ -1467,10 +1483,7 @@ id = sta.70
 	trigger = {
 		tag = STA
 		OR = {
-			AND = {
-				has_country_flag = STA_stv_ally
-				has_country_flag = STA_nrk_ally
-			}
+			has_country_flag = STA_started_civil_war
 			has_country_flag = STA_forced_to_start_civil_war
 		}
 	}
@@ -1485,9 +1498,16 @@ id = sta.70
 		name = sta.70.a
 		
 		hidden_effect = {
-			UNG = {
-				release = NRK
-				release = SVT
+			every_country = {
+				limit = {
+					OR = {
+						is_subject_of = UNG
+						tag = UNG
+					}
+					NOT = {
+						tag = STA
+					}
+				}
 				country_event = { id = sta.71 hours = 6 }
 			}
 			
@@ -1497,105 +1517,58 @@ id = sta.70
 					autonomy_state = autonomy_free
 				}
 			}
-			
-			if = {
-				limit = {
-					has_country_flag = STA_hlz_ally
-				}
-				UNG = {
-					release = HLZ
-				}
-			}
-			if = {
-				limit = {
-					has_country_flag = STA_fth_ally
-				}
-				UNG = {
-					release = FTH
-				}
-			}
-			if = {
-				limit = {
-					has_country_flag = STA_wer_ally
-				}
-				UNG = {
-					release = WER
-				}
-			}
 		}
 		UNG = {
-			create_faction = ung_cv_faction
+			if = {
+				limit = {
+					is_in_faction = no
+				}
+				create_faction = ung_cv_faction
+			}
 		}
 		STA = {
 			create_faction = sta_cv_faction
 			hidden_effect = {
-				add_to_faction = SVT
-				add_to_faction = NRK
-				if = {
-					limit = {
-						has_country_flag = STA_hlz_ally
-					}
-					add_to_faction = HLZ
-				}
-				if = {
-					limit = {
-						has_country_flag = STA_fth_ally
-					}
-					add_to_faction = FTH
-				}
-				if = {
-					limit = {
-						has_country_flag = STA_wer_ally
-					}
-					add_to_faction = WSZ
+				country_event = {
+					id = sta.73
+					days = 14
 				}
 			}
-			declare_war_on = { target = UNG type = annex_everything }
 		}
-		NRK = {
-			add_to_war = { 
-				targeted_alliance = STA 
-				enemy = UNG
-			}
-		}
-		SVT = {
-			add_to_war = { 
-				targeted_alliance = STA 
-				enemy = UNG
-			}
-		}
-		if = {
+		
+		
+		every_country = {
 			limit = {
-				has_country_flag = STA_hlz_ally
-			}
-			HLZ = {
-				add_to_war = { 
-					targeted_alliance = STA 
-					enemy = UNG
+				is_subject_of = UNG
+				check_variable = {
+					var = FPT_stahlhof_loyalty 
+					value = var:FPT_union_loyalty
+					compare = greater_than
+				}
+				NOT = {
+					has_completed_focus = FPT_exploit_chaos
 				}
 			}
-		}
-		if = {
+			end_puppet = UNG
+			leave_faction = yes
+			STA = {
+				add_to_faction = PREV
+			}
+			STA_steal_UNG_ally = yes
+		}		
+		set_country_flag = STA_civil_war_started
+		every_country = {
 			limit = {
-				has_country_flag = STA_fth_ally
+				is_subject_of = UNG
+				has_completed_focus = FPT_exploit_chaos
 			}
-			FTH = {
-				add_to_war = { 
-					targeted_alliance = STA 
-					enemy = UNG
+			UNG = {
+				set_autonomy = {
+					target = PREV
+					autonomy_state = autonomy_free #remaining neutral
 				}
 			}
-		}
-		if = {
-			limit = {
-				has_country_flag = STA_wer_ally
-			}
-			WSZ		= {
-				add_to_war = { 
-					targeted_alliance = STA 
-					enemy = UNG
-				}
-			}
+			UNG_lose_ally = yes
 		}
 	}
 }
@@ -1610,6 +1583,29 @@ country_event = { #Stahlhof Ignites CW, but you are union member
 	
 	option = { # Fuck
 		name = sta.71.a
+		trigger = {
+			OR = {
+				tag = UNG
+				check_variable = {
+					var = FPT_union_loyalty 
+					value = var:FPT_stahlhof_loyalty
+					compare = greater_than
+				}
+			}
+		}
+		set_country_flag = UNG_civil_war_started
+	}
+	
+	option = { # Yay
+		name = sta.71.b
+		trigger = {
+			check_variable = {
+				var = FPT_stahlhof_loyalty 
+				value = var:FPT_union_loyalty
+				compare = greater_than
+			}
+		}
+		set_country_flag = UNG_civil_war_started
 	}
 }
 
@@ -1627,5 +1623,40 @@ country_event = {#Forced to start CW in a week
 		set_country_flag = STA_forced_to_start_civil_war
 		
 		custom_effect_tooltip = UNG_union_fraying_tt
+	}
+}
+
+country_event = {#Launch Civil War
+	id = sta.73
+	title = sta.73.t
+	desc = sta.73.d
+	picture = GFX_report_event_german_inspect_troops
+	
+	is_triggered_only = yes
+	
+	option = {#To Arms!
+		name = sta.73.a
+		
+		declare_war_on = { target = UNG type = annex_everything }
+		every_country = {
+			limit = {
+				is_in_faction_with = STA
+			}
+			add_to_war = { 
+				targeted_alliance = STA
+				enemy = UNG
+				hostility_reason = asked_to_join
+			}
+		}
+		every_country = {
+			limit = {
+				is_in_faction_with = UNG
+			}
+			add_to_war = { 
+				targeted_alliance = UNG
+				enemy = STA
+				hostility_reason = asked_to_join
+			}
+		}
 	}
 }

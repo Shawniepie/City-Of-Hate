@@ -1,0 +1,444 @@
+ideas = {
+	
+	country = {
+		
+		FPT_bauernfreistellung = {
+		
+			allowed = {
+				always = yes
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = generic_agrarian_society
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.1
+				monthly_population = 0.15
+				conscription_factor = -0.35
+			}
+		}
+		
+		FPT_spirit_conciliation = {
+			
+			allowed = {
+				always = yes
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = SPR_torchbearers_of_tomorrow
+			
+			removal_cost = -1
+			
+			modifier = {
+				opinion_gain_monthly_factor = 0.1
+				resistance_target = -0.05
+			}
+		}
+		
+		FPT_honour_dead = {
+			
+			allowed = {
+				always = yes
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = gre_venerate_the_ancient_hellenes_plato
+			
+			removal_cost = -1
+			
+			modifier = {
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+			}
+		}
+		
+		FPT_venerate_saint = {
+			
+			allowed = {
+				always = yes
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = gre_venerate_the_ancient_hellenes_plato
+			
+			removal_cost = -1
+			
+			modifier = {
+				surrender_limit = 0.15
+				army_morale_factor = 0.05
+			}
+		}
+		
+		FPT_respect_elders = {
+			
+			allowed = {
+				always = yes
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = tur_legacy_of_ataturk
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.07
+				experience_gain_army = 0.05
+			}
+		
+		
+		}
+		
+		FPT_anti_corruption_body = {
+			
+			allowed = {
+				always = yes
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = generic_intel_bonus
+			
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+				political_power_gain = 0.25
+			}
+		
+		
+		}
+		
+		FPT_monasticism = {
+			
+			allowed = {
+				always = yes
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = FRA_fortification_focus
+			
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_workshop_factor = 0.05
+				production_speed_industrial_complex_factor = 0.05
+				compliance_gain = 0.04
+			}
+		
+		
+		}
+		
+		FPT_demolition = {
+			
+			allowed = {
+				always = yes
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = generic_build_infrastructure
+			
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_infrastructure_factor = 0.2
+			}
+		}
+		
+		FPT_schnellmeisterschaft_idea = {
+			
+			allowed = {
+				always = yes
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = por_colonial_army
+			
+			removal_cost = -1
+			
+			modifier = {
+				training_time_factor = -0.15
+			}
+		}
+		
+		FPT_modern_army_idea = {
+			
+			allowed = {
+				always = yes
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = chi_army_corruption3
+			
+			removal_cost = -1
+			
+			modifier = {
+				conscription_factor = 0.05
+				army_org_factor = 0.1
+			}
+		}
+		
+		FPT_stricter_training_idea = {
+			
+			allowed = {
+				always = yes
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = generic_war_preparation
+			
+			removal_cost = -1
+			
+			modifier = {
+				experience_gain_army_unit_factor = 0.07
+			}
+		}
+		
+		FPT_harsher_recruitment_idea = {
+			
+			allowed = {
+				always = yes
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = generic_reserve_divisions
+			
+			removal_cost = -1
+			
+			modifier = {
+				land_reinforce_rate = 0.02
+			}
+		}
+		
+		FPT_zwergenzoll_repealed = {
+			
+			allowed = {
+				always = yes
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = generic_economic_increase
+			
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.07
+			}
+		}
+		
+		FPT_impenetrable_shieldwalls_idea = {
+			
+			allowed = {
+				always = yes
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = YUG_federal_defense_council
+			
+			removal_cost = -1
+			
+			modifier = {
+				army_infantry_defence_factor = 0.05
+			}
+		}
+		
+		FPT_tistler_studied = {
+			
+			allowed = {
+				always = yes
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = tur_odpa
+			
+			removal_cost = -1
+			
+			modifier = {
+				army_leader_start_attack_level = 1 
+			}
+		}
+		
+		FPT_traditional_army_idea = {
+			
+			allowed = {
+				always = yes
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = FRA_national_mobilization_focus
+			
+			removal_cost = -1
+			
+			modifier = {
+				army_speed_factor = 0.1
+				command_power_gain_mult = 0.15
+			}
+		}
+		
+		FPT_orienting_allegiances = {
+			
+			allowed = {
+				always = yes
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = generic_disjointed_gov
+			
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = 0.25
+			}
+		}
+		
+		FPT_expand_liberties_idea = {
+			
+			allowed = {
+				always = yes
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = fiscalism_economy
+			
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				consumer_goods_factor = -0.05
+			}
+		}
+		
+		FPT_legitimist_freiprinztum = {
+			
+			allowed = {
+				always = yes
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = fiscalism_economy
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.15
+				army_morale_factor = 0.1
+			}
+		}
+		
+		FPT_sell_arms = {
+			
+			allowed = {
+				always = yes
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = generic_economic_increase
+			
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.35
+			}
+		}
+		
+		FPT_stahlhoffer_instructors_idea = {
+			
+			allowed = {
+				always = yes
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = STA_faustburg_loyalties_3
+			
+			removal_cost = -1
+			
+			modifier = {
+				training_time_factor = -0.15
+				army_org_factor = 0.1
+			}
+		}
+		
+		FPT_ferdinist_freiprinztum = {
+			
+			allowed = {
+				always = yes
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = generic_monarchist_uprising
+			
+			removal_cost = -1
+			
+			modifier = {
+				conscription_factor = 0.05
+				army_attack_factor = 0.1
+			}
+		}
+	}
+}

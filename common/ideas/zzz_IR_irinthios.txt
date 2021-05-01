@@ -836,7 +836,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				custom_effect_tt = royal_marriage_warning_tt
+				custom_modifier_tooltip = royal_marriage_warning_tt
 			}
 		}
 	}
@@ -855,7 +855,7 @@ ideas = {
 			available = {
 				OR = {
 					has_government = republic_peasant
-					has_completed_focus = IRI_Sunday_Provocation
+					has_completed_focus = IRI_Chairopons_Promises
 				}
 			}
 			
@@ -875,7 +875,7 @@ ideas = {
 			available = {
 				OR = {
 					has_government = republic_aristocrat
-					has_completed_focus = IRI_Sunday_Provocation
+					has_completed_focus = IRI_Chairopons_Promises
 				}
 			}
 			

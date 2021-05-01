@@ -5,12 +5,12 @@ state={
 		4238 8761 951 8684 1561
 	}
 	state_category = pastoral
-	manpower=1321
+	manpower=1049
 	buildings_max_level_factor=1.000
 	history={
 		owner = UNG
 		buildings = {
-			infrastructure = 5	
+			infrastructure = 2
 		}
 		add_core_of = UNG
 		}

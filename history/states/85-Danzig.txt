@@ -8,12 +8,13 @@ state={
 	manpower=1066921
 	buildings_max_level_factor=1.000
 		history={	
-		victory_points = { 3654 51 }
-		owner = ORD
-		buildings = {	
-		infrastructure = 7
-		arms_factory = 3
-		industrial_complex = 4
+			victory_points = { 3654 51 }
+			owner = ORD
+			buildings = {	
+			infrastructure = 7
+			forge = 3
+			workshop = 4
+			farm = 1
 		}	
 		add_core_of = ORD
 		}

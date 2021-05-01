@@ -123,6 +123,106 @@ ideas = {
 	}
 	
 	country = {
+	
+		puritan_drift_idea = {
+		
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = IRI_Glory_Built_On_Blood
+			
+			removal_cost = -1
+
+			modifier = {
+				puritan_drift = 0.15
+			}
+		
+		}
+		
+		theocrat_drift_idea = {
+		
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = generic_temple
+			
+			removal_cost = -1
+
+			modifier = {
+				theocrat_drift = 0.15
+			}
+		
+		}
+		
+		republic_merchant_drift_idea = {
+		
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = IRI_Depression_Evaded
+			
+			removal_cost = -1
+
+			modifier = {
+				republic_merchant_drift = 0.15
+			}
+		
+		}
+		
+		monarchy_absolute_drift_idea = {
+		
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = generic_monarchy_strengthening
+			
+			removal_cost = -1
+
+			modifier = {
+				monarchy_absolute_drift = 0.15
+			}
+		
+		}
+		
+		republic_aristocrat_drift_idea = {
+		
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = IRI_Autonomous_Cities
+			
+			removal_cost = -1
+
+			modifier = {
+				republic_aristocrat_drift = 0.15
+			}
+		
+		}
 		
 		GENERIC_ban_foreigners = {
 			
@@ -224,7 +324,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				enemy_partisan_effect = -0.1
+				resistance_growth = -0.1
 				mobilization_laws_cost_factor = -0.33
 				economy_cost_factor = -0.33
 				trade_laws_cost_factor = -0.33
@@ -375,7 +475,8 @@ ideas = {
 			picture = generic_agrarian_society
 			
 			modifier = {
-				army_core_defence_factor = 0.25
+				fuel_gain_factor = 0.15
+				army_core_defence_factor = 0.1
 			}
 		}
 		
@@ -413,7 +514,7 @@ ideas = {
 			picture = FRA_national_mobilization_focus
 			
 			modifier = {
-				partisan_effect = 0.2
+				resistance_target_on_our_occupied_states = 0.2
 			}
 		}
 		
@@ -753,6 +854,24 @@ ideas = {
 			modifier = {
 				ai_call_ally_desire_factor = -1250
 				ai_join_ally_desire_factor = -1250
+			}
+		}
+		
+		GENERIC_border_war_fun = {
+		
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = chi_war_of_resistance2
+			
+			modifier = {
+				army_org_regain = -15
+				army_speed_factor = -15
 			}
 		}
 	}

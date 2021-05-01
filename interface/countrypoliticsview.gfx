@@ -1,7 +1,6 @@
 spriteTypes = {
 	
 	#Mod Stuff
-	
 	spriteType = {
 		name = "GFX_autonomy_IR_freiprinztum_icon"
 		textureFile = "gfx/interface/autonomy/autonomy_freiprinztum_icon.dds"

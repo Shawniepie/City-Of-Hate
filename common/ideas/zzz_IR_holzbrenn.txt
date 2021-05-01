@@ -41,13 +41,14 @@
 			removal_cost = -1
 			
 			modifier = {
+				base_fuel_gain_factor = -0.35
 				army_morale_factor = -0.2
 				war_support_factor = -0.15
 				stability_factor = -0.1
 				production_speed_buildings_factor = -0.015
 				production_factory_efficiency_gain_factor = -0.15
 				local_resources_factor = -0.3
-				MONTHLY_POPULATION = -0.33
+				monthly_population = -0.33
 			}
 			
 		}
@@ -403,7 +404,7 @@
 			picture = neutrality_idea
 			
 			modifier = {
-				enemy_partisan_effect = -0.25
+				resistance_growth = -0.25
 				production_factory_start_efficiency_factor = 0.15
 			}
 		}
@@ -439,8 +440,8 @@
 			picture = generic_constitutional_guarantees
 			
 			modifier = {
-				MONTHLY_POPULATION = 0.1
-				enemy_partisan_effect = -0.15
+				monthly_population = 0.1
+				resistance_growth = -0.15
 				stability_factor = 0.25
 			}
 		}
@@ -458,7 +459,7 @@
 			picture = generic_agrarian_reform
 		
 			modifier = {
-				production_speed_buildings_factor = 0.15
+				base_fuel_gain_factor = 0.15
 			}
 		}
 		
@@ -513,7 +514,7 @@
 			picture = prc_low_popular_support3
 			
 			modifier = {
-				MONTHLY_POPULATION = 0.35
+				monthly_population = 0.35
 				stability_factor = -0.2
 			}
 		}
@@ -629,7 +630,8 @@
 			picture = hlz_agricultural_boom
 			
 			modifier = {
-				MONTHLY_POPULATION = 1
+				base_fuel_gain_factor = 0.35
+				monthly_population = 1
 			}
 		}
 		

@@ -10,7 +10,7 @@ state={
 	history={
 		owner = RMT
 		buildings = {
-			infrastructure = 4
+			infrastructure = 7
 		}
 		add_core_of = RMT
 	}

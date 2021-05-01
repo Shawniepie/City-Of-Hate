@@ -32,6 +32,7 @@ claim_vergallheim_territory = {
 reform_vergallheim = {
 	VRG = {
 		transfer_state = 174
+		inherit_technology = ROOT
 	}
 	puppet = VRG
 	every_country = {
@@ -65,12 +66,6 @@ reform_vergallheim = {
 			}
 		}
 		add_core_of = VRG
-		limit = {
-			is_owned_by = ROOT
-		}
-		VRG = {
-			transfer_state = PREV
-		}
 	}
 	if = {
 		limit = {
@@ -170,11 +165,36 @@ reform_vergallheim = {
 				ideology = theocrat
 				name = SKA_theocrat_party
 			}
+			if = {
+				limit = {
+					UNG = {
+						OR = {
+							has_country_flag = UNG_nordtorf_summit_success_SKA_favoured
+							has_country_flag = UNG_nordtorf_summit_fails_SKA_favoured
+						}
+					}
+				}
+				set_country_flag = VRG_UNG_alliance
+			}
 		}
 	}
 	if = {
 		limit = {
 			tag = BER
+		}
+		hidden_effect = {
+			BER = {
+				remove_state_core = 174
+				remove_state_core = 365
+			}
+			VRG = {
+				set_country_flag = VRG_formed_by_BER
+				country_event = {
+					id = vrg.6
+					days = 7
+				}
+				add_state_core = 174
+			}
 		}
 		VRG = {
 			create_country_leader = {
@@ -269,6 +289,14 @@ reform_vergallheim = {
 			set_party_name = { 
 				ideology = theocrat
 				name = BER_theocrat_party
+			}
+			if = {
+				limit = {
+					UNG = {
+						has_completed_focus = UNG_assist_terugkeer
+					}
+				}
+				set_country_flag = VRG_UNG_alliance
 			}
 		}
 	}
@@ -367,7 +395,42 @@ reform_vergallheim = {
 				ideology = theocrat
 				name = RMT_theocrat_party
 			}
+			if = {
+				limit = {
+					UNG = {
+						OR = {
+							has_country_flag = UNG_nordtorf_summit_success_RMT_favoured
+							has_country_flag = UNG_nordtorf_summit_fails_RMT_favoured
+						}
+					}
+				}
+				set_country_flag = VRG_UNG_alliance
+			}
 		}
+	}
+	ROOT = {
+			every_unit_leader = {
+				set_nationality = VRG
+			}
+		}
+	every_country = {
+		limit = {
+			is_in_faction_with = ROOT
+		}
+		PREV = {
+			add_to_faction = VRG
+		}
+	}
+	every_country = {
+		limit = {
+			has_war_with = ROOT
+		}
+		VRG = {
+		add_to_war = { 
+    		targeted_alliance = ROOT 
+   		enemy = PREV
+   		}
+   		}
 	}
 	VRG = {
 		annex_country = {

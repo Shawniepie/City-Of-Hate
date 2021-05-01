@@ -5,12 +5,12 @@ state={
 		6318 4681 6260 6279 6261 6237 3893
 	}
 	state_category = rural
-	manpower=4924
+	manpower=5924
 	buildings_max_level_factor=1.000
 	history={
 		owner = GMR
 		buildings = {
-			infrastructure = 3
+			infrastructure = 5
 		}
 		add_core_of = GMR
 

@@ -1,0 +1,2017 @@
+SNF_drechts_opportunity = {
+	
+	SNF_drecht_hiding = {
+	
+		icon = GFX_decision_hol_war_on_pacifism
+		
+		visible = {
+			original_tag = SNF	
+			has_country_flag = SNF_Drecht_opportunity_flag
+			NOT = {
+			has_country_flag = SNF_drecht_final_push
+			}
+		}
+		
+		available = {
+			always = no #targeted only
+		}
+		
+		activation = {
+			always = no #targeted only
+		}
+		
+		days_mission_timeout = 70
+		
+		fire_only_once = no
+		
+		is_good = no
+		
+		timeout_effect = {
+			activate_mission = SNF_Drecht_consolidation
+			add_popularity = {
+			ideology = republic_aristocrat
+			popularity = 0.02
+		}
+		}
+	}
+	
+	SNF_drecht_consolidation = {
+	
+		icon = GFX_decision_generic_political_discourse
+		
+		visible = {
+			original_tag = SNF	
+			has_country_flag = SNF_Drecht_opportunity_flag
+			NOT = {
+			has_country_flag = SNF_drecht_final_push
+			}
+		}
+		
+		available = {
+			always = no #targeted only
+		}
+		
+		activation = {
+			always = no #targeted only
+		}
+
+		days_mission_timeout = 70
+		
+		fire_only_once = no
+		
+		is_good = no
+		
+		modifier = {
+		}	
+		
+		timeout_effect = {
+		add_popularity = {
+			ideology = republic_aristocrat
+			popularity = 0.05
+		}
+			if = {
+				limit = {
+				republic_aristocrat > 0.30
+				}
+			activate_mission = SNF_drecht_gathering_nobles
+			else = {
+			random_list = {
+				60 = {
+					activate_mission = SNF_drecht_consolidation
+				}
+				40 = {
+					activate_mission = SNF_drecht_hiding
+				}
+			}
+			}
+			}
+		}
+	
+	}
+	
+	SNF_drecht_gathering_nobles = {
+		
+		icon = GFX_decision_generic_nationalism
+		
+		visible = {
+			original_tag = SNF	
+			has_country_flag = SNF_Drecht_opportunity_flag
+			republic_aristocrat > 30
+		}
+		
+		available = {
+			always = no #targeted only
+		}
+		
+		activation = {
+			always = no #targeted only
+		}
+		
+		days_mission_timeout = 90
+		
+		fire_only_once = no
+		
+		is_good = no
+		
+		timeout_effect = {
+			country_event = snf.100
+		}
+	}
+}
+
+SNF_Support_Kalaster = {
+	
+	SNF_develop_bomtsalger = {
+
+		icon = generic_construction
+
+		available = {
+			has_country_flag = SNF_supporting_kalaster_farming
+			NOT = {
+			has_country_flag = SNF_developing_stop_flag
+			}
+			owns_state = 325
+		}
+		
+		fire_only_once = yes
+		
+		visible = {
+			has_country_flag = SNF_supporting_kalaster_farming
+		}
+
+		days_remove = 120
+		
+		cost = 50
+		
+		complete_effect = {
+		set_country_flag = SNF_developing_stop_flag
+		}
+
+		modifier = {
+			civilian_factory_use = 2
+		}
+		
+		remove_effect = {
+		clr_country_flag  = SNF_developing_stop_flag
+		325 = {
+		set_state_category = rural
+		add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 50
+		}
+	}
+	SNF_develop_tzuringen = {
+
+		icon = generic_construction
+
+		available = {
+			has_country_flag = SNF_supporting_kalaster_farming
+			NOT = {
+			has_country_flag = SNF_developing_stop_flag
+			}
+			owns_state = 332
+		}
+		
+		fire_only_once = yes
+		
+		visible = {
+			has_country_flag = SNF_supporting_kalaster_farming
+		}
+
+		days_remove = 120
+		
+		cost = 50
+		
+		complete_effect = {
+		set_country_flag = SNF_developing_stop_flag
+		}
+
+		modifier = {
+			civilian_factory_use = 2
+		}
+		
+		remove_effect = {
+		clr_country_flag  = SNF_developing_stop_flag
+		332 = {
+		add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+		add_extra_state_shared_building_slots = 1
+			}
+		}
+
+		ai_will_do = {
+			factor = 50
+		}
+	}
+	SNF_develop_barsoringer = {
+
+		icon = generic_construction
+
+		available = {
+			has_country_flag = SNF_supporting_kalaster_farming
+			NOT = {
+			has_country_flag = SNF_developing_stop_flag
+			}
+			owns_state = 335
+		}
+		
+		fire_only_once = yes
+		
+		visible = {
+			has_country_flag = SNF_supporting_kalaster_farming
+		}
+
+		days_remove = 120
+		
+		cost = 50
+		
+		complete_effect = {
+		set_country_flag = SNF_developing_stop_flag
+		}
+
+		modifier = {
+			civilian_factory_use = 2
+		}
+		
+		remove_effect = {
+		clr_country_flag  = SNF_developing_stop_flag
+		335 = {
+		set_state_category = rural
+		add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 50
+		}
+	}
+	SNF_develop_namzeche = {
+
+		icon = generic_construction
+
+		available = {
+			has_country_flag = SNF_supporting_new_territory
+			NOT = {
+			has_country_flag = SNF_developing_stop_flag
+			}
+			owns_state = 622
+		}
+		
+		fire_only_once = yes
+		
+		visible = {
+			has_country_flag = SNF_supporting_new_territory
+		}
+
+		days_remove = 120
+		
+		cost = 50
+		
+		complete_effect = {
+		set_country_flag = SNF_developing_stop_flag
+		}
+
+		modifier = {
+			civilian_factory_use = 4
+		}
+		
+		remove_effect = {
+		clr_country_flag  = SNF_developing_stop_flag
+		622 = {
+		set_state_category = rural
+		add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 50
+		}
+	}
+	SNF_develop_lienihafen = {
+
+		icon = generic_construction
+
+		available = {
+			has_country_flag = SNF_supporting_new_territory
+			NOT = {
+			has_country_flag = SNF_developing_stop_flag
+			}
+			owns_state = 418
+		}
+		
+		fire_only_once = yes
+		
+		visible = {
+			has_country_flag = SNF_supporting_new_territory
+		}
+
+		days_remove = 120
+		
+		cost = 50
+		
+		complete_effect = {
+		set_country_flag = SNF_developing_stop_flag
+		}
+
+		modifier = {
+			civilian_factory_use = 4
+		}
+		
+		remove_effect = {
+		clr_country_flag  = SNF_developing_stop_flag
+		418 = {
+		set_state_category = city
+		add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 50
+		}
+	}
+	SNF_develop_gecsin = {
+
+		icon = generic_construction
+
+		available = {
+			has_country_flag = SNF_supporting_new_territory
+			NOT = {
+			has_country_flag = SNF_developing_stop_flag
+			}
+			owns_state = 642
+		}
+		
+		fire_only_once = yes
+		
+		visible = {
+			has_country_flag = SNF_supporting_new_territory
+		}
+
+		days_remove = 120
+		
+		cost = 50
+		
+		complete_effect = {
+		set_country_flag = SNF_developing_stop_flag
+		}
+
+		modifier = {
+			civilian_factory_use = 4
+		}
+		
+		remove_effect = {
+		clr_country_flag  = SNF_developing_stop_flag
+		642 = {
+		set_state_category = rural
+		add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 50
+		}
+	}
+	SNF_develop_karistadt = {
+
+		icon = generic_construction
+
+		available = {
+			has_country_flag = SNF_supporting_new_territory
+			NOT = {
+			has_country_flag = SNF_developing_stop_flag
+			}
+			owns_state = 416
+		}
+		
+		fire_only_once = yes
+		
+		visible = {
+			has_country_flag = SNF_supporting_new_territory
+		}
+
+		days_remove = 120
+		
+		cost = 50
+		
+		complete_effect = {
+		set_country_flag = SNF_developing_stop_flag
+		}
+
+		modifier = {
+			civilian_factory_use = 4
+		}
+		
+		remove_effect = {
+		clr_country_flag  = SNF_developing_stop_flag
+		416 = {
+		set_state_category = city
+		add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 50
+		}
+	}
+	SNF_develop_tsotoff = {
+
+		icon = generic_construction
+
+		available = {
+			has_country_flag = SNF_supporting_new_territory
+			NOT = {
+			has_country_flag = SNF_developing_stop_flag
+			}
+			owns_state = 645
+		}
+		
+		fire_only_once = yes
+		
+		visible = {
+			has_country_flag = SNF_supporting_new_territory
+		}
+
+		days_remove = 120
+		
+		cost = 50
+		
+		complete_effect = {
+		set_country_flag = SNF_developing_stop_flag
+		}
+
+		modifier = {
+			civilian_factory_use = 4
+		}
+		
+		remove_effect = {
+		clr_country_flag  = SNF_developing_stop_flag
+		645 = {
+		set_state_category = rural
+		add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 50
+		}
+	}
+	SNF_develop_schnitt = {
+
+		icon = generic_construction
+
+		available = {
+			has_country_flag = SNF_supporting_new_territory
+			NOT = {
+			has_country_flag = SNF_developing_stop_flag
+			}
+			owns_state = 649
+		}
+		
+		fire_only_once = yes
+		
+		visible = {
+			has_country_flag = SNF_supporting_new_territory
+		}
+
+		days_remove = 120
+		
+		cost = 50
+		
+		complete_effect = {
+		set_country_flag = SNF_developing_stop_flag
+		}
+
+		modifier = {
+			civilian_factory_use = 4
+		}
+		
+		remove_effect = {
+		clr_country_flag  = SNF_developing_stop_flag
+		649 = {
+		set_state_category = rural
+		add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 50
+		}
+	}
+	SNF_develop_flankenin = {
+
+		icon = generic_construction
+
+		available = {
+			has_country_flag = SNF_supporting_new_territory
+			NOT = {
+			has_country_flag = SNF_developing_stop_flag
+			}
+			owns_state = 631
+		}
+		
+		fire_only_once = yes
+		
+		visible = {
+			has_country_flag = SNF_supporting_new_territory
+		}
+
+		days_remove = 120
+		
+		cost = 50
+		
+		complete_effect = {
+		set_country_flag = SNF_developing_stop_flag
+		}
+
+		modifier = {
+			civilian_factory_use = 4
+		}
+		
+		remove_effect = {
+		clr_country_flag  = SNF_developing_stop_flag
+		631 = {
+		set_state_category = rural
+		add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 50
+		}
+	}
+	SNF_develop_scheidin = {
+
+		icon = generic_construction
+
+		available = {
+			has_country_flag = SNF_supporting_new_territory
+			NOT = {
+			has_country_flag = SNF_developing_stop_flag
+			}
+			owns_state = 623
+		}
+		
+		fire_only_once = yes
+		
+		visible = {
+			has_country_flag = SNF_supporting_new_territory
+		}
+
+		days_remove = 120
+		
+		cost = 50
+		
+		complete_effect = {
+		set_country_flag = SNF_developing_stop_flag
+		}
+
+		modifier = {
+			civilian_factory_use = 4
+		}
+		
+		remove_effect = {
+		clr_country_flag  = SNF_developing_stop_flag
+		623 = {
+		add_extra_state_shared_building_slots = 1
+		add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 50
+		}
+	}
+	SNF_develop_nevedenn = {
+
+		icon = generic_construction
+
+		available = {
+			has_country_flag = SNF_supporting_new_territory
+			NOT = {
+			has_country_flag = SNF_developing_stop_flag
+			}
+			OR = {
+			owns_state = 420
+			WSZ = {
+			owns_state = 420
+			}
+			}
+		}
+		
+		fire_only_once = yes
+		
+		visible = {
+			has_country_flag = SNF_supporting_new_territory
+		}
+
+		days_remove = 120
+		
+		cost = 50
+		
+		complete_effect = {
+		set_country_flag = SNF_developing_stop_flag
+		}
+
+		modifier = {
+			civilian_factory_use = 4
+		}
+		
+		remove_effect = {
+		clr_country_flag  = SNF_developing_stop_flag
+		420 = {
+		set_state_category = city
+		add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 50
+		}
+	}
+}
+
+SNF_invade_perkav = {
+	
+	SNF_retake_lienihafen = {
+		
+		icon = generic_prepare_civil_war
+		
+		visible = {
+			original_tag = SNF
+			has_country_flag = SNF_retake_lienihafen_flag
+			NOT = {
+				owns_state = 418
+			}
+		}
+		
+		available = {
+			has_country_flag = SNF_retake_lienihafen_flag
+			divisions_in_border_state = {
+				size > 2
+				state = 255
+				border_state = 418
+			}
+			NOT = {
+				has_border_war_with = PRK
+				owns_state = 418
+			}
+		}
+		
+		cost = 50
+		days_remove = 30
+		
+		ai_will_do = {
+			factor = 20
+		}
+		
+		remove_effect = {
+		255 = {
+		remove_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
+		418 = {
+		remove_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
+		if = {
+		 limit = {
+		 has_border_war_between = {
+ 		   attacker = 255
+  		   defender = 418
+		 }
+		 }
+		finalize_border_war = {
+   		defender_win = yes
+  		attacker = 255
+  		defender = 418
+		}
+		}
+		}
+		
+		complete_effect = {
+		255 = {
+		add_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
+		418 = {
+		add_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
+			start_border_war = {
+				change_state_after_war = no
+				attacker = {
+					state = 255
+					num_provinces = 1
+					on_win = schneefilde_invade.1
+					on_lose = schneefilde_invade.2
+					on_cancel = schneefilde_invade.3
+				}
+				defender = {
+					state = 418
+					num_provinces = 2
+					on_win = schneefilde_invade.4
+					on_lose = schneefilde_invade.5
+					on_cancel = schneefilde_invade.6
+				}
+			}
+		}
+	}
+	
+	SNF_retake_namweis  = {
+		
+		icon = generic_prepare_civil_war
+		
+		visible = {
+			original_tag = SNF
+			has_country_flag = SNF_retake_lienihafen_flag
+			NOT = {
+				owns_state = 622
+			}
+		}
+		
+		available = {
+			has_country_flag = SNF_retake_local_lienihafen_flag
+			divisions_in_border_state = {
+				size > 2
+				state = 418
+				border_state = 622
+			}
+			NOT = {
+				has_border_war_with = PRK
+				owns_state = 622
+			}
+		}
+		
+		cost = 50
+		days_remove = 30
+		
+		ai_will_do = {
+			factor = 20
+		}
+		
+		remove_effect = {
+		622 = {
+		remove_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
+		418 = {
+		remove_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
+		if = {
+		 limit = {
+		 has_border_war_between = {
+ 		   attacker = 418
+  		   defender = 622
+		 }
+		 }
+		finalize_border_war = {
+   		defender_win = yes
+  		attacker = 418
+  		defender = 622
+		}
+		}
+		}
+		
+		complete_effect = {
+		622 = {
+		add_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
+		418 = {
+		add_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
+			start_border_war = {
+				change_state_after_war = no
+				attacker = {
+					state = 418
+					num_provinces = 1
+					on_win = schneefilde_invade.7
+					on_lose = schneefilde_invade.2
+					on_cancel = schneefilde_invade.3
+				}
+				defender = {
+					state = 622
+					num_provinces = 1
+					on_win = schneefilde_invade.4
+					on_lose = schneefilde_invade.5
+					on_cancel = schneefilde_invade.6
+				}
+			}
+		}
+	}
+	
+	SNF_retake_gecsin  = {
+		
+		icon = generic_prepare_civil_war
+		
+		visible = {
+			original_tag = SNF
+			has_country_flag = SNF_retake_lienihafen_flag
+			NOT = {
+				owns_state = 642
+			}
+		}
+		
+		available = {
+			has_country_flag = SNF_retake_local_lienihafen_flag
+			divisions_in_border_state = {
+				size > 4
+				state = 418
+				border_state = 642
+			}
+			NOT = {
+				has_border_war_with = PRK
+				owns_state = 642
+			}
+		}
+		
+		cost = 50
+		days_remove = 30
+		
+		ai_will_do = {
+			factor = 20
+		}
+		
+		remove_effect = {
+		642 = {
+		remove_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
+		418 = {
+		remove_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
+		if = {
+		 limit = {
+		 has_border_war_between = {
+ 		   attacker = 418
+  		   defender = 642
+		 }
+		 }
+		finalize_border_war = {
+   		defender_win = yes
+  		attacker = 418
+  		defender = 642
+		}
+		}
+		}
+		
+		complete_effect = {
+		642 = {
+		add_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
+		418 = {
+		add_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
+			start_border_war = {
+				change_state_after_war = no
+				attacker = {
+					state = 418
+					num_provinces = 2
+					on_win = schneefilde_invade.8
+					on_lose = schneefilde_invade.2
+					on_cancel = schneefilde_invade.3
+				}
+				defender = {
+					state = 642
+					num_provinces = 2
+					on_win = schneefilde_invade.4
+					on_lose = schneefilde_invade.5
+					on_cancel = schneefilde_invade.6
+				}
+			}
+		}
+	}
+	SNF_retake_krakincs   = {
+		
+		icon = generic_prepare_civil_war
+		
+		visible = {
+			original_tag = SNF
+			has_country_flag = SNF_retake_lienihafen_flag
+			NOT = {
+				owns_state = 629
+			}
+		}
+		
+		available = {
+			has_country_flag = SNF_retake_local_lienihafen_flag
+			divisions_in_border_state = {
+				size > 2
+				state = 418
+				border_state = 629
+			}
+			NOT = {
+				has_border_war_with = PRK
+				owns_state = 629
+			}
+		}
+		
+		cost = 50
+		days_remove = 30
+		
+		ai_will_do = {
+			factor = 20
+		}
+		
+		remove_effect = {
+		629 = {
+		remove_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
+		418 = {
+		remove_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
+		if = {
+		 limit = {
+		 has_border_war_between = {
+ 		   attacker = 418
+  		   defender = 629
+		 }
+		 }
+		finalize_border_war = {
+   		defender_win = yes
+  		attacker = 418
+  		defender = 629
+		}
+		}
+		}
+		
+		complete_effect = {
+		629 = {
+		remove_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
+		418 = {
+		remove_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
+			start_border_war = {
+				change_state_after_war = no
+				attacker = {
+					state = 418
+					num_provinces = 1
+					on_win = schneefilde_invade.9
+					on_lose = schneefilde_invade.2
+					on_cancel = schneefilde_invade.3
+				}
+				defender = {
+					state = 629
+					num_provinces = 1
+					on_win = schneefilde_invade.4
+					on_lose = schneefilde_invade.5
+					on_cancel = schneefilde_invade.6
+				}
+			}
+		}
+	}
+	SNF_retake_vrizim   = {
+		
+		icon = generic_prepare_civil_war
+		
+		visible = {
+			original_tag = SNF
+			has_country_flag = SNF_retake_lienihafen_flag
+			NOT = {
+				owns_state = 621
+			}
+		}
+		
+		available = {
+			has_country_flag = SNF_karistadt_flag
+			divisions_in_border_state = {
+				size > 5
+				state = 224
+				border_state = 621
+			}
+			NOT = {
+				has_border_war_with = PRK
+				owns_state = 621
+			}
+		}
+		
+		cost = 50
+		days_remove = 30
+		
+		ai_will_do = {
+			factor = 20
+		}
+		
+		remove_effect = {
+		224 = {
+		remove_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
+		621 = {
+		remove_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
+		if = {
+		 limit = {
+		 has_border_war_between = {
+ 		   attacker = 224
+  		   defender = 621
+		 }
+		 }
+		finalize_border_war = {
+   		defender_win = yes
+  		attacker = 224
+  		defender = 621
+		}
+		}
+		}
+		
+		complete_effect = {
+		224 = {
+		add_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
+		621 = {
+		add_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
+			start_border_war = {
+				change_state_after_war = no
+				attacker = {
+					state = 224
+					num_provinces = 3
+					on_win = schneefilde_invade.10
+					on_lose = schneefilde_invade.2
+					on_cancel = schneefilde_invade.3
+				}
+				defender = {
+					state = 621
+					num_provinces = 4
+					on_win = schneefilde_invade.4
+					on_lose = schneefilde_invade.5
+					on_cancel = schneefilde_invade.6
+				}
+			}
+		}
+	}
+	SNF_retake_Pashinz   = {
+		
+		icon = generic_prepare_civil_war
+		
+		visible = {
+			original_tag = SNF
+			has_country_flag = SNF_retake_lienihafen_flag
+			NOT = {
+				owns_state = 630
+			}
+		}
+		
+		available = {
+			has_country_flag = SNF_karistadt_flag
+			divisions_in_border_state = {
+				size > 2
+				state = 621
+				border_state = 630
+			}
+			owns_state = 621
+			NOT = {
+				has_border_war_with = PRK
+				owns_state = 630
+			}
+		}
+		
+		cost = 50
+		days_remove = 30
+		
+		ai_will_do = {
+			factor = 20
+		}
+		
+		remove_effect = {
+		630 = {
+		remove_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
+		621 = {
+		remove_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
+		if = {
+		 limit = {
+		 has_border_war_between = {
+ 		   attacker = 621
+  		   defender = 630
+		 }
+		 }
+		finalize_border_war = {
+   		defender_win = yes
+  		attacker = 621
+  		defender = 630
+		}
+		}
+		}
+		
+		complete_effect = {
+		630 = {
+		add_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
+		621 = {
+		add_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
+			start_border_war = {
+				change_state_after_war = no
+				attacker = {
+					state = 621
+					num_provinces = 1
+					on_win = schneefilde_invade.11
+					on_lose = schneefilde_invade.2
+					on_cancel = schneefilde_invade.3
+				}
+				defender = {
+					state = 630
+					num_provinces = 1
+					on_win = schneefilde_invade.4
+					on_lose = schneefilde_invade.5
+					on_cancel = schneefilde_invade.6
+				}
+			}
+		}
+	}
+	SNF_retake_stufen   = {
+		
+		icon = generic_prepare_civil_war
+		
+		visible = {
+			original_tag = SNF
+			has_country_flag = SNF_retake_lienihafen_flag
+			NOT = {
+				owns_state = 650
+			}
+		}
+		
+		available = {
+			has_country_flag = SNF_karistadt_flag
+			divisions_in_border_state = {
+				size > 2
+				state = 630
+				border_state = 650
+			}
+			owns_state = 630
+			NOT = {
+				has_border_war_with = PRK
+				owns_state = 650
+			}
+		}
+		
+		cost = 50
+		days_remove = 30
+		
+		ai_will_do = {
+			factor = 20
+		}
+		
+		remove_effect = {
+		630 = {
+		remove_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
+		650 = {
+		remove_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
+		if = {
+		 limit = {
+		 has_border_war_between = {
+ 		   attacker = 630
+  		   defender = 650
+		 }
+		 }
+		finalize_border_war = {
+   		defender_win = yes
+  		attacker = 630
+  		defender = 650
+		}
+		}
+		}
+		
+		complete_effect = {
+		630 = {
+		add_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
+		650 = {
+		add_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
+			start_border_war = {
+				change_state_after_war = no
+				attacker = {
+					state = 630
+					num_provinces = 1
+					on_win = schneefilde_invade.12
+					on_lose = schneefilde_invade.2
+					on_cancel = schneefilde_invade.3
+				}
+				defender = {
+					state = 650
+					num_provinces = 1
+					on_win = schneefilde_invade.4
+					on_lose = schneefilde_invade.5
+					on_cancel = schneefilde_invade.6
+				}
+			}
+		}
+	}
+	SNF_retake_karistadt   = {
+		
+		icon = generic_prepare_civil_war
+		
+		visible = {
+			original_tag = SNF
+			has_country_flag = SNF_retake_lienihafen_flag
+			NOT = {
+				owns_state = 416
+			}
+		}
+		
+		available = {
+			has_country_flag = SNF_karistadt_flag
+			divisions_in_border_state = {
+				size > 5
+				state = 650
+				border_state = 416
+			}
+			owns_state = 650
+			NOT = {
+				has_border_war_with = PRK
+				owns_state = 416
+			}
+		}
+		
+		cost = 50
+		days_remove = 30
+		
+		ai_will_do = {
+			factor = 20
+		}
+		
+		remove_effect = {
+		416 = {
+		remove_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
+		650 = {
+		remove_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
+		if = {
+		 limit = {
+		 has_border_war_between = {
+ 		   attacker = 650
+  		   defender = 416
+		 }
+		 }
+		finalize_border_war = {
+   		defender_win = yes
+  		attacker = 650
+  		defender = 416
+		}
+		}
+		}
+		
+		complete_effect = {
+		416 = {
+		add_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
+		650 = {
+		add_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
+			start_border_war = {
+				change_state_after_war = no
+				attacker = {
+					state = 650
+					num_provinces = 4
+					on_win = schneefilde_invade.13
+					on_lose = schneefilde_invade.2
+					on_cancel = schneefilde_invade.3
+				}
+				defender = {
+					state = 416
+					num_provinces = 3
+					on_win = schneefilde_invade.4
+					on_lose = schneefilde_invade.5
+					on_cancel = schneefilde_invade.6
+				}
+			}
+		}
+	}
+	SNF_retake_tsotoff   = {
+		
+		icon = generic_prepare_civil_war
+		
+		visible = {
+			original_tag = SNF
+			has_country_flag = SNF_retake_lienihafen_flag
+			NOT = {
+				owns_state = 645
+			}
+		}
+		
+		available = {
+			has_country_flag = SNF_push_eastwards_flag
+			divisions_in_border_state = {
+				size > 2
+				state = 416
+				border_state = 645
+			}
+			owns_state = 416
+			NOT = {
+				has_border_war_with = PRK
+				owns_state = 645
+			}
+		}
+		
+		cost = 50
+		days_remove = 30
+		
+		ai_will_do = {
+			factor = 20
+		}
+		
+		remove_effect = {
+		416 = {
+		remove_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
+		645 = {
+		remove_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
+		if = {
+		 limit = {
+		 has_border_war_between = {
+ 		   attacker = 416
+  		   defender = 645
+		 }
+		 }
+		finalize_border_war = {
+   		defender_win = yes
+  		attacker = 416
+  		defender = 645
+		}
+		}
+		}
+		
+		complete_effect = {
+		416 = {
+		add_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
+		645 = {
+		add_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
+			start_border_war = {
+				change_state_after_war = no
+				attacker = {
+					state = 416
+					num_provinces = 1
+					on_win = schneefilde_invade.19
+					on_lose = schneefilde_invade.2
+					on_cancel = schneefilde_invade.3
+				}
+				defender = {
+					state = 645
+					num_provinces = 1
+					on_win = schneefilde_invade.4
+					on_lose = schneefilde_invade.5
+					on_cancel = schneefilde_invade.6
+				}
+			}
+		}
+	}
+	SNF_retake_tinash   = {
+		
+		icon = generic_prepare_civil_war
+		
+		visible = {
+			original_tag = SNF
+			has_country_flag = SNF_push_eastwards_flag
+			NOT = {
+				owns_state = 620
+			}
+		}
+		
+		available = {
+			has_country_flag = SNF_push_eastwards_flag
+			divisions_in_border_state = {
+				size > 2
+				state = 329
+				border_state = 620
+			}
+			owns_state = 329
+			NOT = {
+				has_border_war_with = PRK
+				owns_state = 620
+			}
+		}
+		
+		cost = 50
+		days_remove = 30
+		
+		ai_will_do = {
+			factor = 20
+		}
+		
+		remove_effect = {
+		329 = {
+		remove_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
+		620 = {
+		remove_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
+		if = {
+		 limit = {
+		 has_border_war_between = {
+ 		   attacker = 329
+  		   defender = 620
+		 }
+		 }
+		finalize_border_war = {
+   		defender_win = yes
+  		attacker = 329
+  		defender = 620
+		}
+		}
+		}
+		
+		complete_effect = {
+		329 = {
+		add_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
+		620 = {
+		add_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
+			start_border_war = {
+				change_state_after_war = no
+				attacker = {
+					state = 329
+					num_provinces = 2
+					on_win = schneefilde_invade.14
+					on_lose = schneefilde_invade.2
+					on_cancel = schneefilde_invade.3
+				}
+				defender = {
+					state = 620
+					num_provinces = 2
+					on_win = schneefilde_invade.4
+					on_lose = schneefilde_invade.5
+					on_cancel = schneefilde_invade.6
+				}
+			}
+		}
+	}
+	SNF_retake_scheidin   = {
+		
+		icon = generic_prepare_civil_war
+		
+		visible = {
+			original_tag = SNF
+			has_country_flag = SNF_retake_lienihafen_flag
+			NOT = {
+				owns_state = 623
+			}
+		}
+		
+		available = {
+			has_country_flag = SNF_push_eastwards_flag
+			divisions_in_border_state = {
+				size > 5
+				state = 621
+				border_state = 623
+			}
+			owns_state = 621
+			NOT = {
+				has_border_war_with = PRK
+				owns_state = 623
+			}
+		}
+		
+		cost = 50
+		days_remove = 30
+		
+		ai_will_do = {
+			factor = 20
+		}
+		
+		remove_effect = {
+		621 = {
+		remove_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
+		623 = {
+		remove_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
+		if = {
+		 limit = {
+		 has_border_war_between = {
+ 		   attacker = 621
+  		   defender = 623
+		 }
+		 }
+		finalize_border_war = {
+   		defender_win = yes
+  		attacker = 621
+  		defender = 623
+		}
+		}
+		}
+		
+		complete_effect = {
+		621 = {
+		add_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
+		623 = {
+		add_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
+			start_border_war = {
+				change_state_after_war = no
+				attacker = {
+					state = 621
+					num_provinces = 4
+					on_win = schneefilde_invade.15
+					on_lose = schneefilde_invade.2
+					on_cancel = schneefilde_invade.3
+				}
+				defender = {
+					state = 623
+					num_provinces = 4
+					on_win = schneefilde_invade.4
+					on_lose = schneefilde_invade.5
+					on_cancel = schneefilde_invade.6
+				}
+			}
+		}
+	}
+	SNF_retake_flankenin   = {
+		
+		icon = generic_prepare_civil_war
+		
+		visible = {
+			original_tag = SNF
+			has_country_flag = SNF_retake_lienihafen_flag
+			NOT = {
+				owns_state = 631
+			}
+		}
+		
+		available = {
+			has_country_flag = SNF_push_eastwards_flag
+			divisions_in_border_state = {
+				size > 2
+				state = 630
+				border_state = 631
+			}
+			owns_state = 630
+			NOT = {
+				has_border_war_with = PRK
+				owns_state = 631
+			}
+		}
+		
+		cost = 50
+		days_remove = 30
+		
+		ai_will_do = {
+			factor = 20
+		}
+		
+		remove_effect = {
+		631 = {
+		remove_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
+		630 = {
+		remove_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
+		if = {
+		 limit = {
+		 has_border_war_between = {
+ 		   attacker = 630
+  		   defender = 631
+		 }
+		 }
+		finalize_border_war = {
+   		defender_win = yes
+  		attacker = 630
+  		defender = 631
+		}
+		}
+		}
+		
+		complete_effect = {
+		631 = {
+		add_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
+		630 = {
+		add_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
+			start_border_war = {
+				change_state_after_war = no
+				attacker = {
+					state = 630
+					num_provinces = 2
+					on_win = schneefilde_invade.16
+					on_lose = schneefilde_invade.2
+					on_cancel = schneefilde_invade.3
+				}
+				defender = {
+					state = 631
+					num_provinces = 3
+					on_win = schneefilde_invade.4
+					on_lose = schneefilde_invade.5
+					on_cancel = schneefilde_invade.6
+				}
+			}
+		}
+	}
+	SNF_retake_schnitt   = {
+		
+		icon = generic_prepare_civil_war
+		
+		visible = {
+			original_tag = SNF
+			has_country_flag = SNF_retake_lienihafen_flag
+			NOT = {
+				owns_state = 649
+			}
+		}
+		
+		available = {
+			has_country_flag = SNF_push_eastwards_flag
+			divisions_in_border_state = {
+				size > 2
+				state = 650
+				border_state = 649
+			}
+			owns_state = 650
+			NOT = {
+				has_border_war_with = PRK
+				owns_state = 649
+			}
+		}
+		
+		cost = 50
+		days_remove = 30
+		
+		ai_will_do = {
+			factor = 20
+		}
+		
+		remove_effect = {
+		650 = {
+		remove_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
+		649 = {
+		remove_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
+		if = {
+		 limit = {
+		has_border_war_between = {
+ 		   attacker = 650
+  		   defender = 649
+		 }
+		 }
+		finalize_border_war = {
+   		defender_win = yes
+  		attacker = 650
+  		defender = 649
+		}
+		}
+		}
+		
+		complete_effect = {
+		650 = {
+		add_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
+		649 = {
+		add_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
+			start_border_war = {
+				change_state_after_war = no
+				attacker = {
+					state = 650
+					num_provinces = 1
+					on_win = schneefilde_invade.17
+					on_lose = schneefilde_invade.2
+					on_cancel = schneefilde_invade.3
+				}
+				defender = {
+					state = 649
+					num_provinces = 1
+					on_win = schneefilde_invade.4
+					on_lose = schneefilde_invade.5
+					on_cancel = schneefilde_invade.6
+				}
+			}
+		}
+	}
+	SNF_retake_nevedenn_snf   = {
+		
+		icon = generic_prepare_civil_war
+		
+		visible = {
+			original_tag = SNF
+			has_country_flag = SNF_retake_nevedenn_flag
+			NOT = {
+				owns_state = 420
+			}
+		}
+		
+		available = {
+			has_country_flag = SNF_retake_nevedenn_flag
+			divisions_in_border_state = {
+				size > 5
+				state = 620
+				border_state = 420
+			}
+			owns_state = 623
+			NOT = {
+				has_border_war_with = PRK
+				owns_state = 420
+			}
+		}
+		
+		cost = 50
+		days_remove = 30
+		
+		ai_will_do = {
+			factor = 20
+		}
+		
+		remove_effect = {
+		620 = {
+		remove_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
+		420 = {
+		remove_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
+		if = {
+		 limit = {
+		has_border_war_between = {
+ 		   attacker = 620
+  		   defender = 420
+		 }
+		 }
+		finalize_border_war = {
+   		defender_win = yes
+  		attacker = 620
+  		defender = 420
+		}
+		}
+		}
+		
+		complete_effect = {
+		620 = {
+		add_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
+		420 = {
+		add_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
+			start_border_war = {
+				change_state_after_war = no
+				attacker = {
+					state = 620
+					num_provinces = 3
+					on_win = schneefilde_invade.18
+					on_lose = schneefilde_invade.2
+					on_cancel = schneefilde_invade.3
+				}
+				defender = {
+					state = 420
+					num_provinces = 2
+					on_win = schneefilde_invade.4
+					on_lose = schneefilde_invade.5
+					on_cancel = schneefilde_invade.6
+				}
+			}
+		}
+	}
+	SNF_retake_nevedenn_wsz   = {
+		name = SNF_retake_nevedenn_snf
+		icon = generic_prepare_civil_war
+		
+		visible = {
+			original_tag = WSZ
+			has_country_flag = SNF_retake_nevedenn_flag
+			NOT = {
+				owns_state = 420
+			}
+		}
+		
+		available = {
+			has_country_flag = SNF_retake_nevedenn_flag
+			divisions_in_border_state = {
+				size > 4
+				state = 336
+				border_state = 420
+			}
+			owns_state = 336
+			NOT = {
+				has_border_war_with = PRK
+				owns_state = 420
+			}
+		}
+		
+		cost = 50
+		days_remove = 30
+		
+		ai_will_do = {
+			factor = 20
+		}
+		
+		remove_effect = {
+		336 = {
+		remove_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
+		420 = {
+		remove_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
+		if = {
+		 limit = {
+		has_border_war_between = {
+ 		   attacker = 336
+  		   defender = 420
+		 }
+		 }
+		finalize_border_war = {
+   		defender_win = yes
+  		attacker = 336
+  		defender = 420
+		}
+		}
+		}
+		
+		complete_effect = {
+		336 = {
+		add_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
+		420 = {
+		add_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
+			start_border_war = {
+				change_state_after_war = no
+				attacker = {
+					state = 336
+					num_provinces = 2
+					on_win = schneefilde_invade.18
+					on_lose = schneefilde_invade.2
+					on_cancel = schneefilde_invade.3
+				}
+				defender = {
+					state = 420
+					num_provinces = 2
+					on_win = schneefilde_invade.4
+					on_lose = schneefilde_invade.5
+					on_cancel = schneefilde_invade.6
+				}
+			}
+		}
+	}
+}

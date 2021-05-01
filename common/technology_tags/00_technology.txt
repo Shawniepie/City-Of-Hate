@@ -9,9 +9,20 @@ technology_categories = {
 	light_melee_equipment
 	heavy_melee_equipment
 	ranged_equipment
+	light_ranged_equipment
+	heavy_ranged_equipment
+	cavalry_equipment
+	light_cavalry_equipment
+	heavy_cavalry_equipment
 	siege_equipment
+	infantry_tech
+	ranged_tech
+	crossbow_tech
 	cavalry_tech
 	gunpowder_tech
+	support_tech
+	scout_tech
+	tactics_tech
 	
 	##Era and culture
 	
@@ -19,7 +30,7 @@ technology_categories = {
 	tribal_tech
 	medieval_tech
 	renaissance_tech
-	eary_industrial_tech
+	early_industrial_tech
 	
 	
 }

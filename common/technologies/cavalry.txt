@@ -1,0 +1,24 @@
+technologies = {
+	
+	@887 = 0
+	@890 = 2
+	@893 = 4
+	
+	#Unique Techs
+	
+	freiprinz_freiprinztums_finest = {
+		
+		allow = {
+			always = no
+		}
+
+		research_cost = 1
+		start_year = 887
+
+		heavy_cavalry = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+			defense = 0.05
+		}
+	}
+}

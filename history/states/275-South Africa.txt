@@ -8,15 +8,15 @@ state={
 	manpower=12351
 	buildings_max_level_factor=1.000
 	resources = {
-		aluminium = 14
+		mount = 14
 	}
 	history={
 		owner = UNG
 		victory_points = { 931 16 }
 		buildings = {
 			infrastructure = 6
-			industrial_complex = 2
-			arms_factory = 1
+			workshop = 2
+			forge = 1
 		}
 		add_core_of = UNG
 		}

@@ -1,0 +1,29 @@
+defined_text = { # Country
+	name = GetFreiprinzUnionLoyalty
+	text = { 
+		trigger = {
+			is_subject_of = UNG
+			NOT = {
+				STA = {
+					has_country_flag = STA_civil_war_started
+				}
+			}
+		}
+		localization_key = "[?FPT_union_loyalty|Y0]"
+	}
+}
+
+defined_text = { # Country
+	name = GetFreiprinzStahlhofLoyalty
+	text = { 
+		trigger = {
+			is_subject_of = UNG
+			NOT = {
+				STA = {
+					has_country_flag = STA_civil_war_started
+				}
+			}
+		}
+		localization_key = "[?FPT_stahlhof_loyalty|Y0]"
+	}
+}

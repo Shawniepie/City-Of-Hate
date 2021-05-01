@@ -1,3 +1,2435 @@
+UNG_convince_freiprinzen = {
+	UNG_convince_HLZ = {
+		icon = GFX_decision_restore_ungerdaler_union
+		
+		allowed = {
+			tag = UNG
+		}
+		
+		available = {
+			NOT = {
+				has_country_flag = UNG_already_convincing_someone
+			}
+			HLZ = {
+				is_subject_of = UNG
+			}
+		}
+		
+		visible = {
+			tag = UNG
+			NOT = {
+				has_country_flag = UNG_civil_war_started
+			}
+		}
+		
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				add = 5
+				AND = {
+					HLZ = {
+						check_variable = {
+							var = FPT_stahlhof_loyalty
+							value = var:FPT_union_loyalty
+							compare = equals
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+			modifier = {
+				add = 5
+				AND = {
+					HLZ = {
+						check_variable = {
+							var = FPT_stahlhof_loyalty
+							value = var:FPT_union_loyalty
+							compare = greater_than
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+		}
+		
+		cost = var:HLZ.FPT_small_loyalty_cost
+		
+		days_remove = 15
+		
+		complete_effect = {
+			set_country_flag = UNG_already_convincing_someone
+		}
+		
+		remove_effect = {
+			clr_country_flag = UNG_already_convincing_someone
+			HLZ = {
+				custom_effect_tooltip = FPT_increase_union_loyalty_small_tt
+				add_to_variable = {
+					var = FPT_union_loyalty
+					value = 1
+				}
+			}
+			set_country_flag = {
+				flag = recently_convinced_freiprinz
+				days = 50
+			}
+		}
+	}
+	
+	UNG_convince_HLZ_ii = {
+		icon = GFX_decision_restore_ungerdaler_union
+		
+		allowed = {
+			tag = UNG
+		}
+		
+		available = {
+			NOT = {
+				has_country_flag = UNG_already_convincing_someone
+			}
+			HLZ = {
+				is_subject_of = UNG
+			}
+		}
+		
+		visible = {
+			tag = UNG
+			NOT = {
+				has_country_flag = UNG_civil_war_started
+			}
+		}
+		
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				add = 5
+				AND = {
+					HLZ = {
+						check_variable = {
+							var = FPT_stahlhof_loyalty
+							value = var:FPT_union_loyalty
+							compare = equals
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+			modifier = {
+				add = 5
+				AND = {
+					HLZ = {
+						check_variable = {
+							var = FPT_stahlhof_loyalty
+							value = var:FPT_union_loyalty
+							compare = greater_than
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+		}
+		
+		cost = var:HLZ.FPT_medium_loyalty_cost
+		
+		days_remove = 30
+		
+		complete_effect = {
+			set_country_flag = UNG_already_convincing_someone
+		}
+		
+		remove_effect = {
+			clr_country_flag = UNG_already_convincing_someone
+			HLZ = {
+				custom_effect_tooltip = FPT_increase_union_loyalty_tt
+				add_to_variable = {
+					var = FPT_union_loyalty
+					value = 3
+				}
+			}
+			set_country_flag = {
+				flag = recently_convinced_freiprinz
+				days = 75
+			}
+		}
+	}
+	
+	UNG_convince_HLZ_iii = {
+		icon = GFX_decision_restore_ungerdaler_union
+		
+		allowed = {
+			tag = UNG
+		}
+		
+		available = {
+			NOT = {
+				has_country_flag = UNG_already_convincing_someone
+			}
+			HLZ = {
+				is_subject_of = UNG
+			}
+		}
+		
+		visible = {
+			tag = UNG
+			NOT = {
+				has_country_flag = UNG_civil_war_started
+			}
+		}
+		
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				add = 5
+				AND = {
+					HLZ = {
+						check_variable = {
+							var = FPT_stahlhof_loyalty
+							value = var:FPT_union_loyalty
+							compare = equals
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+			modifier = {
+				add = 5
+				AND = {
+					HLZ = {
+						check_variable = {
+							var = FPT_stahlhof_loyalty
+							value = var:FPT_union_loyalty
+							compare = greater_than
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+		}
+		
+		cost = var:HLZ.FPT_big_loyalty_cost
+		
+		days_remove = 50
+		
+		complete_effect = {
+			set_country_flag = UNG_already_convincing_someone
+		}
+		
+		remove_effect = {
+			clr_country_flag = UNG_already_convincing_someone
+			HLZ = {
+				custom_effect_tooltip = FPT_increase_union_loyalty_large_tt
+				add_to_variable = {
+					var = FPT_union_loyalty
+					value = 5
+				}
+			}
+			set_country_flag = {
+				flag = recently_convinced_freiprinz
+				days = 100
+			}
+		}
+	}
+	
+	UNG_convince_NOC = {
+		icon = GFX_decision_restore_ungerdaler_union
+		
+		allowed = {
+			tag = UNG
+		}
+		
+		available = {
+			NOT = {
+				has_country_flag = UNG_already_convincing_someone
+			}
+			NOC = {
+				is_subject_of = UNG
+			}
+		}
+		
+		visible = {
+			tag = UNG
+			NOT = {
+				has_country_flag = UNG_civil_war_started
+			}
+		}
+		
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				add = 5
+				AND = {
+					NOC = {
+						check_variable = {
+							var = FPT_stahlhof_loyalty
+							value = var:FPT_union_loyalty
+							compare = equals
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+			modifier = {
+				add = 5
+				AND = {
+					NOC = {
+						check_variable = {
+							var = FPT_stahlhof_loyalty
+							value = var:FPT_union_loyalty
+							compare = greater_than
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+		}
+		
+		cost = var:NOC.FPT_small_loyalty_cost
+		
+		days_remove = 15
+		
+		complete_effect = {
+			set_country_flag = UNG_already_convincing_someone
+		}
+		
+		remove_effect = {
+			clr_country_flag = UNG_already_convincing_someone
+			NOC = {
+				custom_effect_tooltip = FPT_increase_union_loyalty_small_tt
+				add_to_variable = {
+					var = FPT_union_loyalty
+					value = 1
+				}
+			}
+			set_country_flag = {
+				flag = recently_convinced_freiprinz
+				days = 50
+			}
+		}
+	}
+	
+	UNG_convince_NOC_ii = {
+		icon = GFX_decision_restore_ungerdaler_union
+		
+		allowed = {
+			tag = UNG
+		}
+		
+		available = {
+			NOT = {
+				has_country_flag = UNG_already_convincing_someone
+			}
+			NOC = {
+				is_subject_of = UNG
+			}
+		}
+		
+		visible = {
+			tag = UNG
+			NOT = {
+				has_country_flag = UNG_civil_war_started
+			}
+		}
+		
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				add = 5
+				AND = {
+					NOC = {
+						check_variable = {
+							var = FPT_stahlhof_loyalty
+							value = var:FPT_union_loyalty
+							compare = equals
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+			modifier = {
+				add = 5
+				AND = {
+					NOC = {
+						check_variable = {
+							var = FPT_stahlhof_loyalty
+							value = var:FPT_union_loyalty
+							compare = greater_than
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+		}
+		
+		cost = var:NOC.FPT_medium_loyalty_cost
+		
+		days_remove = 30
+		
+		complete_effect = {
+			set_country_flag = UNG_already_convincing_someone
+		}
+		
+		remove_effect = {
+			clr_country_flag = UNG_already_convincing_someone
+			NOC = {
+				custom_effect_tooltip = FPT_increase_union_loyalty_tt
+				add_to_variable = {
+					var = FPT_union_loyalty
+					value = 3
+				}
+			}
+			set_country_flag = {
+				flag = recently_convinced_freiprinz
+				days = 75
+			}
+		}
+	}
+	
+	UNG_convince_NOC_iii = {
+		icon = GFX_decision_restore_ungerdaler_union
+		
+		allowed = {
+			tag = UNG
+		}
+		
+		available = {
+			NOT = {
+				has_country_flag = UNG_already_convincing_someone
+			}
+			NOC = {
+				is_subject_of = UNG
+			}
+		}
+		
+		visible = {
+			tag = UNG
+			NOT = {
+				has_country_flag = UNG_civil_war_started
+			}
+		}
+		
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				add = 5
+				AND = {
+					NOC = {
+						check_variable = {
+							var = FPT_stahlhof_loyalty
+							value = var:FPT_union_loyalty
+							compare = equals
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+			modifier = {
+				add = 5
+				AND = {
+					NOC = {
+						check_variable = {
+							var = FPT_stahlhof_loyalty
+							value = var:FPT_union_loyalty
+							compare = greater_than
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+		}
+		
+		cost = var:NOC.FPT_big_loyalty_cost
+		
+		days_remove = 50
+		
+		complete_effect = {
+			set_country_flag = UNG_already_convincing_someone
+		}
+		
+		remove_effect = {
+			clr_country_flag = UNG_already_convincing_someone
+			NOC = {
+				custom_effect_tooltip = FPT_increase_union_loyalty_large_tt
+				add_to_variable = {
+					var = FPT_union_loyalty
+					value = 5
+				}
+			}
+			set_country_flag = {
+				flag = recently_convinced_freiprinz
+				days = 100
+			}
+		}
+	}
+	
+	UNG_convince_NRK = {
+		icon = GFX_decision_restore_ungerdaler_union
+		
+		allowed = {
+			tag = UNG
+		}
+		
+		available = {
+			NOT = {
+				has_country_flag = UNG_already_convincing_someone
+			}
+			NRK = {
+				is_subject_of = UNG
+			}
+		}
+		
+		visible = {
+			tag = UNG
+			NOT = {
+				has_country_flag = UNG_civil_war_started
+			}
+		}
+		
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				add = 5
+				AND = {
+					NRK = {
+						check_variable = {
+							var = FPT_stahlhof_loyalty
+							value = var:FPT_union_loyalty
+							compare = equals
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+			modifier = {
+				add = 5
+				AND = {
+					NRK = {
+						check_variable = {
+							var = FPT_stahlhof_loyalty
+							value = var:FPT_union_loyalty
+							compare = greater_than
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+		}
+		
+		cost = var:NRK.FPT_small_loyalty_cost
+		
+		days_remove = 15
+		
+		complete_effect = {
+			set_country_flag = UNG_already_convincing_someone
+		}
+		
+		remove_effect = {
+			clr_country_flag = UNG_already_convincing_someone
+			NRK = {
+				custom_effect_tooltip = FPT_increase_union_loyalty_small_tt
+				add_to_variable = {
+					var = FPT_union_loyalty
+					value = 1
+				}
+			}
+			set_country_flag = {
+				flag = recently_convinced_freiprinz
+				days = 50
+			}
+		}
+	}
+	
+	UNG_convince_NRK_ii = {
+		icon = GFX_decision_restore_ungerdaler_union
+		
+		allowed = {
+			tag = UNG
+		}
+		
+		available = {
+			NOT = {
+				has_country_flag = UNG_already_convincing_someone
+			}
+			NRK = {
+				is_subject_of = UNG
+			}
+		}
+		
+		visible = {
+			tag = UNG
+			NOT = {
+				has_country_flag = UNG_civil_war_started
+			}
+		}
+		
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				add = 5
+				AND = {
+					NRK = {
+						check_variable = {
+							var = FPT_stahlhof_loyalty
+							value = var:FPT_union_loyalty
+							compare = equals
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+			modifier = {
+				add = 5
+				AND = {
+					NRK = {
+						check_variable = {
+							var = FPT_stahlhof_loyalty
+							value = var:FPT_union_loyalty
+							compare = greater_than
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+		}
+		
+		cost = var:NRK.FPT_medium_loyalty_cost
+		
+		days_remove = 30
+		
+		complete_effect = {
+			set_country_flag = UNG_already_convincing_someone
+		}
+		
+		remove_effect = {
+			clr_country_flag = UNG_already_convincing_someone
+			NRK = {
+				custom_effect_tooltip = FPT_increase_union_loyalty_tt
+				add_to_variable = {
+					var = FPT_union_loyalty
+					value = 3
+				}
+			}
+			set_country_flag = {
+				flag = recently_convinced_freiprinz
+				days = 75
+			}
+		}
+	}
+	
+	UNG_convince_NRK_iii = {
+		icon = GFX_decision_restore_ungerdaler_union
+		
+		allowed = {
+			tag = UNG
+		}
+		
+		available = {
+			NOT = {
+				has_country_flag = UNG_already_convincing_someone
+			}
+			NRK = {
+				is_subject_of = UNG
+			}
+		}
+		
+		visible = {
+			tag = UNG
+			NOT = {
+				has_country_flag = UNG_civil_war_started
+			}
+		}
+		
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				add = 5
+				AND = {
+					NRK = {
+						check_variable = {
+							var = FPT_stahlhof_loyalty
+							value = var:FPT_union_loyalty
+							compare = equals
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+			modifier = {
+				add = 5
+				AND = {
+					NRK = {
+						check_variable = {
+							var = FPT_stahlhof_loyalty
+							value = var:FPT_union_loyalty
+							compare = greater_than
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+		}
+		
+		cost = var:NRK.FPT_big_loyalty_cost
+		
+		days_remove = 50
+		
+		complete_effect = {
+			set_country_flag = UNG_already_convincing_someone
+		}
+		
+		remove_effect = {
+			clr_country_flag = UNG_already_convincing_someone
+			NRK = {
+				custom_effect_tooltip = FPT_increase_union_loyalty_large_tt
+				add_to_variable = {
+					var = FPT_union_loyalty
+					value = 5
+				}
+			}
+			set_country_flag = {
+				flag = recently_convinced_freiprinz
+				days = 100
+			}
+		}
+	}
+	
+	UNG_convince_SPW = {
+		icon = GFX_decision_restore_ungerdaler_union
+		
+		allowed = {
+			tag = UNG
+		}
+		
+		available = {
+			NOT = {
+				has_country_flag = UNG_already_convincing_someone
+			}
+			SPW = {
+				is_subject_of = UNG
+			}
+		}
+		
+		visible = {
+			tag = UNG
+			NOT = {
+				has_country_flag = UNG_civil_war_started
+			}
+		}
+		
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				add = 5
+				AND = {
+					SPW = {
+						check_variable = {
+							var = FPT_stahlhof_loyalty
+							value = var:FPT_union_loyalty
+							compare = equals
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+			modifier = {
+				add = 5
+				AND = {
+					SPW = {
+						check_variable = {
+							var = FPT_stahlhof_loyalty
+							value = var:FPT_union_loyalty
+							compare = greater_than
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+		}
+		
+		cost = var:SPW.FPT_small_loyalty_cost
+		
+		days_remove = 15
+		
+		complete_effect = {
+			set_country_flag = UNG_already_convincing_someone
+		}
+		
+		remove_effect = {
+			clr_country_flag = UNG_already_convincing_someone
+			SPW = {
+				custom_effect_tooltip = FPT_increase_union_loyalty_small_tt
+				add_to_variable = {
+					var = FPT_union_loyalty
+					value = 1
+				}
+			}
+			set_country_flag = {
+				flag = recently_convinced_freiprinz
+				days = 50
+			}
+		}
+	}
+	
+	UNG_convince_SPW_ii = {
+		icon = GFX_decision_restore_ungerdaler_union
+		
+		allowed = {
+			tag = UNG
+		}
+		
+		available = {
+			NOT = {
+				has_country_flag = UNG_already_convincing_someone
+			}
+			SPW = {
+				is_subject_of = UNG
+			}
+		}
+		
+		visible = {
+			tag = UNG
+			NOT = {
+				has_country_flag = UNG_civil_war_started
+			}
+		}
+		
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				add = 5
+				AND = {
+					SPW = {
+						check_variable = {
+							var = FPT_stahlhof_loyalty
+							value = var:FPT_union_loyalty
+							compare = equals
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+			modifier = {
+				add = 5
+				AND = {
+					SPW = {
+						check_variable = {
+							var = FPT_stahlhof_loyalty
+							value = var:FPT_union_loyalty
+							compare = greater_than
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+		}
+		
+		cost = var:SPW.FPT_medium_loyalty_cost
+		
+		days_remove = 30
+		
+		complete_effect = {
+			set_country_flag = UNG_already_convincing_someone
+		}
+		
+		remove_effect = {
+			clr_country_flag = UNG_already_convincing_someone
+			SPW = {
+				custom_effect_tooltip = FPT_increase_union_loyalty_tt
+				add_to_variable = {
+					var = FPT_union_loyalty
+					value = 3
+				}
+			}
+			set_country_flag = {
+				flag = recently_convinced_freiprinz
+				days = 75
+			}
+		}
+	}
+	
+	UNG_convince_SPW_iii = {
+		icon = GFX_decision_restore_ungerdaler_union
+		
+		allowed = {
+			tag = UNG
+		}
+		
+		available = {
+			NOT = {
+				has_country_flag = UNG_already_convincing_someone
+			}
+			SPW = {
+				is_subject_of = UNG
+			}
+		}
+		
+		visible = {
+			tag = UNG
+			NOT = {
+				has_country_flag = UNG_civil_war_started
+			}
+		}
+		
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				add = 5
+				AND = {
+					SPW = {
+						check_variable = {
+							var = FPT_stahlhof_loyalty
+							value = var:FPT_union_loyalty
+							compare = equals
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+			modifier = {
+				add = 5
+				AND = {
+					SPW = {
+						check_variable = {
+							var = FPT_stahlhof_loyalty
+							value = var:FPT_union_loyalty
+							compare = greater_than
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+		}
+		
+		cost = var:SPW.FPT_big_loyalty_cost
+		
+		days_remove = 50
+		
+		complete_effect = {
+			set_country_flag = UNG_already_convincing_someone
+		}
+		
+		remove_effect = {
+			clr_country_flag = UNG_already_convincing_someone
+			SPW = {
+				custom_effect_tooltip = FPT_increase_union_loyalty_large_tt
+				add_to_variable = {
+					var = FPT_union_loyalty
+					value = 5
+				}
+			}
+			set_country_flag = {
+				flag = recently_convinced_freiprinz
+				days = 100
+			}
+		}
+	}
+	
+	UNG_convince_SVT = {
+		icon = GFX_decision_restore_ungerdaler_union
+		
+		allowed = {
+			tag = UNG
+		}
+		
+		available = {
+			NOT = {
+				has_country_flag = UNG_already_convincing_someone
+			}
+			SVT = {
+				is_subject_of = UNG
+			}
+		}
+		
+		visible = {
+			tag = UNG
+			NOT = {
+				has_country_flag = UNG_civil_war_started
+			}
+		}
+		
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				add = 5
+				AND = {
+					SVT = {
+						check_variable = {
+							var = FPT_stahlhof_loyalty
+							value = var:FPT_union_loyalty
+							compare = equals
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+			modifier = {
+				add = 5
+				AND = {
+					SVT = {
+						check_variable = {
+							var = FPT_stahlhof_loyalty
+							value = var:FPT_union_loyalty
+							compare = greater_than
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+		}
+		
+		cost = var:SVT.FPT_small_loyalty_cost
+		
+		days_remove = 15
+		
+		complete_effect = {
+			set_country_flag = UNG_already_convincing_someone
+		}
+		
+		remove_effect = {
+			clr_country_flag = UNG_already_convincing_someone
+			SVT = {
+				custom_effect_tooltip = FPT_increase_union_loyalty_small_tt
+				add_to_variable = {
+					var = FPT_union_loyalty
+					value = 1
+				}
+			}
+			set_country_flag = {
+				flag = recently_convinced_freiprinz
+				days = 50
+			}
+		}
+	}
+	
+	UNG_convince_SVT_ii = {
+		icon = GFX_decision_restore_ungerdaler_union
+		
+		allowed = {
+			tag = UNG
+		}
+		
+		available = {
+			NOT = {
+				has_country_flag = UNG_already_convincing_someone
+			}
+			SVT = {
+				is_subject_of = UNG
+			}
+		}
+		
+		visible = {
+			tag = UNG
+			NOT = {
+				has_country_flag = UNG_civil_war_started
+			}
+		}
+		
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				add = 5
+				AND = {
+					SVT = {
+						check_variable = {
+							var = FPT_stahlhof_loyalty
+							value = var:FPT_union_loyalty
+							compare = equals
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+			modifier = {
+				add = 5
+				AND = {
+					SVT = {
+						check_variable = {
+							var = FPT_stahlhof_loyalty
+							value = var:FPT_union_loyalty
+							compare = greater_than
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+		}
+		
+		cost = var:SVT.FPT_medium_loyalty_cost
+		
+		days_remove = 30
+		
+		complete_effect = {
+			set_country_flag = UNG_already_convincing_someone
+		}
+		
+		remove_effect = {
+			clr_country_flag = UNG_already_convincing_someone
+			SVT = {
+				custom_effect_tooltip = FPT_increase_union_loyalty_tt
+				add_to_variable = {
+					var = FPT_union_loyalty
+					value = 3
+				}
+			}
+			set_country_flag = {
+				flag = recently_convinced_freiprinz
+				days = 75
+			}
+		}
+	}
+	
+	UNG_convince_SVT_iii = {
+		icon = GFX_decision_restore_ungerdaler_union
+		
+		allowed = {
+			tag = UNG
+		}
+		
+		available = {
+			NOT = {
+				has_country_flag = UNG_already_convincing_someone
+			}
+			SVT = {
+				is_subject_of = UNG
+			}
+		}
+		
+		visible = {
+			tag = UNG
+			NOT = {
+				has_country_flag = UNG_civil_war_started
+			}
+		}
+		
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				add = 5
+				AND = {
+					SVT = {
+						check_variable = {
+							var = FPT_stahlhof_loyalty
+							value = var:FPT_union_loyalty
+							compare = equals
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+			modifier = {
+				add = 5
+				AND = {
+					SVT = {
+						check_variable = {
+							var = FPT_stahlhof_loyalty
+							value = var:FPT_union_loyalty
+							compare = greater_than
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+		}
+		
+		cost = var:SVT.FPT_big_loyalty_cost
+		
+		days_remove = 50
+		
+		complete_effect = {
+			set_country_flag = UNG_already_convincing_someone
+		}
+		
+		remove_effect = {
+			clr_country_flag = UNG_already_convincing_someone
+			SVT = {
+				custom_effect_tooltip = FPT_increase_union_loyalty_large_tt
+				add_to_variable = {
+					var = FPT_union_loyalty
+					value = 5
+				}
+			}
+			set_country_flag = {
+				flag = recently_convinced_freiprinz
+				days = 100
+			}
+		}
+	}
+	
+	UNG_convince_TEI = {
+		icon = GFX_decision_restore_ungerdaler_union
+		
+		allowed = {
+			tag = UNG
+		}
+		
+		available = {
+			NOT = {
+				has_country_flag = UNG_already_convincing_someone
+			}
+			TEI = {
+				is_subject_of = UNG
+			}
+		}
+		
+		visible = {
+			tag = UNG
+			NOT = {
+				has_country_flag = UNG_civil_war_started
+			}
+		}
+		
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				add = 5
+				AND = {
+					TEI = {
+						check_variable = {
+							var = FPT_stahlhof_loyalty
+							value = var:FPT_union_loyalty
+							compare = equals
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+			modifier = {
+				add = 5
+				AND = {
+					TEI = {
+						check_variable = {
+							var = FPT_stahlhof_loyalty
+							value = var:FPT_union_loyalty
+							compare = greater_than
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+		}
+		
+		cost = var:TEI.FPT_small_loyalty_cost
+		
+		days_remove = 15
+		
+		complete_effect = {
+			set_country_flag = UNG_already_convincing_someone
+		}
+		
+		remove_effect = {
+			clr_country_flag = UNG_already_convincing_someone
+			TEI = {
+				custom_effect_tooltip = FPT_increase_union_loyalty_small_tt
+				add_to_variable = {
+					var = FPT_union_loyalty
+					value = 1
+				}
+			}
+			set_country_flag = {
+				flag = recently_convinced_freiprinz
+				days = 50
+			}
+		}
+	}
+	
+	UNG_convince_TEI_ii = {
+		icon = GFX_decision_restore_ungerdaler_union
+		
+		allowed = {
+			tag = UNG
+		}
+		
+		available = {
+			NOT = {
+				has_country_flag = UNG_already_convincing_someone
+			}
+			TEI = {
+				is_subject_of = UNG
+			}
+		}
+		
+		visible = {
+			tag = UNG
+			NOT = {
+				has_country_flag = UNG_civil_war_started
+			}
+		}
+		
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				add = 5
+				AND = {
+					TEI = {
+						check_variable = {
+							var = FPT_stahlhof_loyalty
+							value = var:FPT_union_loyalty
+							compare = equals
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+			modifier = {
+				add = 5
+				AND = {
+					TEI = {
+						check_variable = {
+							var = FPT_stahlhof_loyalty
+							value = var:FPT_union_loyalty
+							compare = greater_than
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+		}
+		
+		cost = var:TEI.FPT_medium_loyalty_cost
+		
+		days_remove = 30
+		
+		complete_effect = {
+			set_country_flag = UNG_already_convincing_someone
+		}
+		
+		remove_effect = {
+			clr_country_flag = UNG_already_convincing_someone
+			TEI = {
+				custom_effect_tooltip = FPT_increase_union_loyalty_tt
+				add_to_variable = {
+					var = FPT_union_loyalty
+					value = 3
+				}
+			}
+			set_country_flag = {
+				flag = recently_convinced_freiprinz
+				days = 75
+			}
+		}
+	}
+	
+	UNG_convince_TEI_iii = {
+		icon = GFX_decision_restore_ungerdaler_union
+		
+		allowed = {
+			tag = UNG
+		}
+		
+		available = {
+			NOT = {
+				has_country_flag = UNG_already_convincing_someone
+			}
+			TEI = {
+				is_subject_of = UNG
+			}
+		}
+		
+		visible = {
+			tag = UNG
+			NOT = {
+				has_country_flag = UNG_civil_war_started
+			}
+		}
+		
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				add = 5
+				AND = {
+					TEI = {
+						check_variable = {
+							var = FPT_stahlhof_loyalty
+							value = var:FPT_union_loyalty
+							compare = equals
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+			modifier = {
+				add = 5
+				AND = {
+					TEI = {
+						check_variable = {
+							var = FPT_stahlhof_loyalty
+							value = var:FPT_union_loyalty
+							compare = greater_than
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+		}
+		
+		cost = var:TEI.FPT_big_loyalty_cost
+		
+		days_remove = 50
+		
+		complete_effect = {
+			set_country_flag = UNG_already_convincing_someone
+		}
+		
+		remove_effect = {
+			clr_country_flag = UNG_already_convincing_someone
+			TEI = {
+				custom_effect_tooltip = FPT_increase_union_loyalty_large_tt
+				add_to_variable = {
+					var = FPT_union_loyalty
+					value = 5
+				}
+			}
+			set_country_flag = {
+				flag = recently_convinced_freiprinz
+				days = 100
+			}
+		}
+	}
+	
+	UNG_convince_SNF = {
+		icon = GFX_decision_restore_ungerdaler_union
+		
+		allowed = {
+			tag = UNG
+		}
+		
+		available = {
+			NOT = {
+				has_country_flag = UNG_already_convincing_someone
+			}
+			SNF = {
+				is_subject_of = UNG
+			}
+		}
+		
+		visible = {
+			tag = UNG
+			NOT = {
+				has_country_flag = UNG_civil_war_started
+			}
+		}
+		
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				add = 5
+				AND = {
+					SNF = {
+						check_variable = {
+							var = FPT_stahlhof_loyalty
+							value = var:FPT_union_loyalty
+							compare = equals
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+			modifier = {
+				add = 5
+				AND = {
+					SNF = {
+						check_variable = {
+							var = FPT_stahlhof_loyalty
+							value = var:FPT_union_loyalty
+							compare = greater_than
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+		}
+		
+		cost = var:SNF.FPT_small_loyalty_cost
+		
+		days_remove = 15
+		
+		complete_effect = {
+			set_country_flag = UNG_already_convincing_someone
+		}
+		
+		remove_effect = {
+			clr_country_flag = UNG_already_convincing_someone
+			SNF = {
+				custom_effect_tooltip = FPT_increase_union_loyalty_small_tt
+				add_to_variable = {
+					var = FPT_union_loyalty
+					value = 1
+				}
+			}
+			set_country_flag = {
+				flag = recently_convinced_freiprinz
+				days = 50
+			}
+		}
+	}
+	
+	UNG_convince_SNF_ii = {
+		icon = GFX_decision_restore_ungerdaler_union
+		
+		allowed = {
+			tag = UNG
+		}
+		
+		available = {
+			NOT = {
+				has_country_flag = UNG_already_convincing_someone
+			}
+			SNF = {
+				is_subject_of = UNG
+			}
+		}
+		
+		visible = {
+			tag = UNG
+			NOT = {
+				has_country_flag = UNG_civil_war_started
+			}
+		}
+		
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				add = 5
+				AND = {
+					SNF = {
+						check_variable = {
+							var = FPT_stahlhof_loyalty
+							value = var:FPT_union_loyalty
+							compare = equals
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+			modifier = {
+				add = 5
+				AND = {
+					SNF = {
+						check_variable = {
+							var = FPT_stahlhof_loyalty
+							value = var:FPT_union_loyalty
+							compare = greater_than
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+		}
+		
+		cost = var:SNF.FPT_medium_loyalty_cost
+		
+		days_remove = 30
+		
+		complete_effect = {
+			set_country_flag = UNG_already_convincing_someone
+		}
+		
+		remove_effect = {
+			clr_country_flag = UNG_already_convincing_someone
+			SNF = {
+				custom_effect_tooltip = FPT_increase_union_loyalty_tt
+				add_to_variable = {
+					var = FPT_union_loyalty
+					value = 3
+				}
+			}
+			set_country_flag = {
+				flag = recently_convinced_freiprinz
+				days = 75
+			}
+		}
+	}
+	
+	UNG_convince_SNF_iii = {
+		icon = GFX_decision_restore_ungerdaler_union
+		
+		allowed = {
+			tag = UNG
+		}
+		
+		available = {
+			NOT = {
+				has_country_flag = UNG_already_convincing_someone
+			}
+			SNF = {
+				is_subject_of = UNG
+			}
+		}
+		
+		visible = {
+			tag = UNG
+			NOT = {
+				has_country_flag = UNG_civil_war_started
+			}
+		}
+		
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				add = 5
+				AND = {
+					SNF = {
+						check_variable = {
+							var = FPT_stahlhof_loyalty
+							value = var:FPT_union_loyalty
+							compare = equals
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+			modifier = {
+				add = 5
+				AND = {
+					SNF = {
+						check_variable = {
+							var = FPT_stahlhof_loyalty
+							value = var:FPT_union_loyalty
+							compare = greater_than
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+		}
+		
+		cost = var:SNF.FPT_big_loyalty_cost
+		
+		days_remove = 50
+		
+		complete_effect = {
+			set_country_flag = UNG_already_convincing_someone
+		}
+		
+		remove_effect = {
+			clr_country_flag = UNG_already_convincing_someone
+			SNF = {
+				custom_effect_tooltip = FPT_increase_union_loyalty_large_tt
+				add_to_variable = {
+					var = FPT_union_loyalty
+					value = 5
+				}
+			}
+			set_country_flag = {
+				flag = recently_convinced_freiprinz
+				days = 100
+			}
+		}
+	}
+	
+	UNG_convince_ARK = {
+		icon = GFX_decision_restore_ungerdaler_union
+		
+		allowed = {
+			tag = UNG
+		}
+		
+		available = {
+			NOT = {
+				has_country_flag = UNG_already_convincing_someone
+			}
+			ARK = {
+				is_subject_of = UNG
+			}
+		}
+		
+		visible = {
+			tag = UNG
+			NOT = {
+				has_country_flag = UNG_civil_war_started
+			}
+		}
+		
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				add = 5
+				AND = {
+					ARK = {
+						check_variable = {
+							var = FPT_stahlhof_loyalty
+							value = var:FPT_union_loyalty
+							compare = equals
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+			modifier = {
+				add = 5
+				AND = {
+					ARK = {
+						check_variable = {
+							var = FPT_stahlhof_loyalty
+							value = var:FPT_union_loyalty
+							compare = greater_than
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+		}
+		
+		cost = var:ARK.FPT_small_loyalty_cost
+		
+		days_remove = 15
+		
+		complete_effect = {
+			set_country_flag = UNG_already_convincing_someone
+		}
+		
+		remove_effect = {
+			clr_country_flag = UNG_already_convincing_someone
+			ARK = {
+				custom_effect_tooltip = FPT_increase_union_loyalty_small_tt
+				add_to_variable = {
+					var = FPT_union_loyalty
+					value = 1
+				}
+			}
+			set_country_flag = {
+				flag = recently_convinced_freiprinz
+				days = 50
+			}
+		}
+	}
+	
+	UNG_convince_ARK_ii = {
+		icon = GFX_decision_restore_ungerdaler_union
+		
+		allowed = {
+			tag = UNG
+		}
+		
+		available = {
+			NOT = {
+				has_country_flag = UNG_already_convincing_someone
+			}
+			ARK = {
+				is_subject_of = UNG
+			}
+		}
+		
+		visible = {
+			tag = UNG
+			NOT = {
+				has_country_flag = UNG_civil_war_started
+			}
+		}
+		
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				add = 5
+				AND = {
+					ARK = {
+						check_variable = {
+							var = FPT_stahlhof_loyalty
+							value = var:FPT_union_loyalty
+							compare = equals
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+			modifier = {
+				add = 5
+				AND = {
+					ARK = {
+						check_variable = {
+							var = FPT_stahlhof_loyalty
+							value = var:FPT_union_loyalty
+							compare = greater_than
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+		}
+		
+		cost = var:ARK.FPT_medium_loyalty_cost
+		
+		days_remove = 30
+		
+		complete_effect = {
+			set_country_flag = UNG_already_convincing_someone
+		}
+		
+		remove_effect = {
+			clr_country_flag = UNG_already_convincing_someone
+			ARK = {
+				custom_effect_tooltip = FPT_increase_union_loyalty_tt
+				add_to_variable = {
+					var = FPT_union_loyalty
+					value = 3
+				}
+			}
+			set_country_flag = {
+				flag = recently_convinced_freiprinz
+				days = 75
+			}
+		}
+	}
+	
+	UNG_convince_ARK_iii = {
+		icon = GFX_decision_restore_ungerdaler_union
+		
+		allowed = {
+			tag = UNG
+		}
+		
+		available = {
+			NOT = {
+				has_country_flag = UNG_already_convincing_someone
+			}
+			ARK = {
+				is_subject_of = UNG
+			}
+		}
+		
+		visible = {
+			tag = UNG
+			NOT = {
+				has_country_flag = UNG_civil_war_started
+			}
+		}
+		
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				add = 5
+				AND = {
+					ARK = {
+						check_variable = {
+							var = FPT_stahlhof_loyalty
+							value = var:FPT_union_loyalty
+							compare = equals
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+			modifier = {
+				add = 5
+				AND = {
+					ARK = {
+						check_variable = {
+							var = FPT_stahlhof_loyalty
+							value = var:FPT_union_loyalty
+							compare = greater_than
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+		}
+		
+		cost = var:ARK.FPT_big_loyalty_cost
+		
+		days_remove = 50
+		
+		complete_effect = {
+			set_country_flag = UNG_already_convincing_someone
+		}
+		
+		remove_effect = {
+			clr_country_flag = UNG_already_convincing_someone
+			ARK = {
+				custom_effect_tooltip = FPT_increase_union_loyalty_large_tt
+				add_to_variable = {
+					var = FPT_union_loyalty
+					value = 5
+				}
+			}
+			set_country_flag = {
+				flag = recently_convinced_freiprinz
+				days = 100
+			}
+		}
+	}
+	
+	UNG_convince_WIS = {
+		icon = GFX_decision_restore_ungerdaler_union
+		
+		allowed = {
+			tag = UNG
+		}
+		
+		available = {
+			NOT = {
+				has_country_flag = UNG_already_convincing_someone
+			}
+			WIS = {
+				is_subject_of = UNG
+			}
+		}
+		
+		visible = {
+			tag = UNG
+			NOT = {
+				has_country_flag = UNG_civil_war_started
+			}
+		}
+		
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				add = 5
+				AND = {
+					WIS = {
+						check_variable = {
+							var = FPT_stahlhof_loyalty
+							value = var:FPT_union_loyalty
+							compare = equals
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+			modifier = {
+				add = 5
+				AND = {
+					WIS = {
+						check_variable = {
+							var = FPT_stahlhof_loyalty
+							value = var:FPT_union_loyalty
+							compare = greater_than
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+		}
+		
+		cost = var:WIS.FPT_small_loyalty_cost
+		
+		days_remove = 15
+		
+		complete_effect = {
+			set_country_flag = UNG_already_convincing_someone
+		}
+		
+		remove_effect = {
+			clr_country_flag = UNG_already_convincing_someone
+			WIS = {
+				custom_effect_tooltip = FPT_increase_union_loyalty_small_tt
+				add_to_variable = {
+					var = FPT_union_loyalty
+					value = 1
+				}
+			}
+			set_country_flag = {
+				flag = recently_convinced_freiprinz
+				days = 50
+			}
+		}
+	}
+	
+	UNG_convince_WIS_ii = {
+		icon = GFX_decision_restore_ungerdaler_union
+		
+		allowed = {
+			tag = UNG
+		}
+		
+		available = {
+			NOT = {
+				has_country_flag = UNG_already_convincing_someone
+			}
+			WIS = {
+				is_subject_of = UNG
+			}
+		}
+		
+		visible = {
+			tag = UNG
+			NOT = {
+				has_country_flag = UNG_civil_war_started
+			}
+		}
+		
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				add = 5
+				AND = {
+					WIS = {
+						check_variable = {
+							var = FPT_stahlhof_loyalty
+							value = var:FPT_union_loyalty
+							compare = equals
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+			modifier = {
+				add = 5
+				AND = {
+					WIS = {
+						check_variable = {
+							var = FPT_stahlhof_loyalty
+							value = var:FPT_union_loyalty
+							compare = greater_than
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+		}
+		
+		cost = var:WIS.FPT_medium_loyalty_cost
+		
+		days_remove = 30
+		
+		complete_effect = {
+			set_country_flag = UNG_already_convincing_someone
+		}
+		
+		remove_effect = {
+			clr_country_flag = UNG_already_convincing_someone
+			WIS = {
+				custom_effect_tooltip = FPT_increase_union_loyalty_tt
+				add_to_variable = {
+					var = FPT_union_loyalty
+					value = 3
+				}
+			}
+			set_country_flag = {
+				flag = recently_convinced_freiprinz
+				days = 75
+			}
+		}
+	}
+	
+	UNG_convince_WIS_iii = {
+		icon = GFX_decision_restore_ungerdaler_union
+		
+		allowed = {
+			tag = UNG
+		}
+		
+		available = {
+			NOT = {
+				has_country_flag = UNG_already_convincing_someone
+			}
+			WIS = {
+				is_subject_of = UNG
+			}
+		}
+		
+		visible = {
+			tag = UNG
+			NOT = {
+				has_country_flag = UNG_civil_war_started
+			}
+		}
+		
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				add = 5
+				AND = {
+					WIS = {
+						check_variable = {
+							var = FPT_stahlhof_loyalty
+							value = var:FPT_union_loyalty
+							compare = equals
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+			modifier = {
+				add = 5
+				AND = {
+					WIS = {
+						check_variable = {
+							var = FPT_stahlhof_loyalty
+							value = var:FPT_union_loyalty
+							compare = greater_than
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+		}
+		
+		cost = var:WIS.FPT_big_loyalty_cost
+		
+		days_remove = 50
+		
+		complete_effect = {
+			set_country_flag = UNG_already_convincing_someone
+		}
+		
+		remove_effect = {
+			clr_country_flag = UNG_already_convincing_someone
+			WIS = {
+				custom_effect_tooltip = FPT_increase_union_loyalty_large_tt
+				add_to_variable = {
+					var = FPT_union_loyalty
+					value = 5
+				}
+			}
+			set_country_flag = {
+				flag = recently_convinced_freiprinz
+				days = 100
+			}
+		}
+	}
+	
+	UNG_convince_FTH = {
+		icon = GFX_decision_restore_ungerdaler_union
+		
+		allowed = {
+			tag = UNG
+		}
+		
+		available = {
+			NOT = {
+				has_country_flag = UNG_already_convincing_someone
+			}
+			FTH = {
+				is_subject_of = UNG
+			}
+		}
+		
+		visible = {
+			tag = UNG
+			NOT = {
+				has_country_flag = UNG_civil_war_started
+			}
+		}
+		
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				add = 5
+				AND = {
+					FTH = {
+						check_variable = {
+							var = FPT_stahlhof_loyalty
+							value = var:FPT_union_loyalty
+							compare = equals
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+			modifier = {
+				add = 5
+				AND = {
+					FTH = {
+						check_variable = {
+							var = FPT_stahlhof_loyalty
+							value = var:FPT_union_loyalty
+							compare = greater_than
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+		}
+		
+		cost = var:FTH.FPT_small_loyalty_cost
+		
+		days_remove = 15
+		
+		complete_effect = {
+			set_country_flag = UNG_already_convincing_someone
+		}
+		
+		remove_effect = {
+			clr_country_flag = UNG_already_convincing_someone
+			FTH = {
+				custom_effect_tooltip = FPT_increase_union_loyalty_small_tt
+				add_to_variable = {
+					var = FPT_union_loyalty
+					value = 1
+				}
+			}
+			set_country_flag = {
+				flag = recently_convinced_freiprinz
+				days = 50
+			}
+		}
+	}
+	
+	UNG_convince_FTH_ii = {
+		icon = GFX_decision_restore_ungerdaler_union
+		
+		allowed = {
+			tag = UNG
+		}
+		
+		available = {
+			NOT = {
+				has_country_flag = UNG_already_convincing_someone
+			}
+			FTH = {
+				is_subject_of = UNG
+			}
+		}
+		
+		visible = {
+			tag = UNG
+			NOT = {
+				has_country_flag = UNG_civil_war_started
+			}
+		}
+		
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				add = 5
+				AND = {
+					FTH = {
+						check_variable = {
+							var = FPT_stahlhof_loyalty
+							value = var:FPT_union_loyalty
+							compare = equals
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+			modifier = {
+				add = 5
+				AND = {
+					FTH = {
+						check_variable = {
+							var = FPT_stahlhof_loyalty
+							value = var:FPT_union_loyalty
+							compare = greater_than
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+		}
+		
+		cost = var:FTH.FPT_medium_loyalty_cost
+		
+		days_remove = 30
+		
+		complete_effect = {
+			set_country_flag = UNG_already_convincing_someone
+		}
+		
+		remove_effect = {
+			clr_country_flag = UNG_already_convincing_someone
+			FTH = {
+				custom_effect_tooltip = FPT_increase_union_loyalty_tt
+				add_to_variable = {
+					var = FPT_union_loyalty
+					value = 3
+				}
+			}
+			set_country_flag = {
+				flag = recently_convinced_freiprinz
+				days = 75
+			}
+		}
+	}
+	
+	UNG_convince_FTH_iii = {
+		icon = GFX_decision_restore_ungerdaler_union
+		
+		allowed = {
+			tag = UNG
+		}
+		
+		available = {
+			NOT = {
+				has_country_flag = UNG_already_convincing_someone
+			}
+			FTH = {
+				is_subject_of = UNG
+			}
+		}
+		
+		visible = {
+			tag = UNG
+			NOT = {
+				has_country_flag = UNG_civil_war_started
+			}
+		}
+		
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				add = 5
+				AND = {
+					FTH = {
+						check_variable = {
+							var = FPT_stahlhof_loyalty
+							value = var:FPT_union_loyalty
+							compare = equals
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+			modifier = {
+				add = 5
+				AND = {
+					FTH = {
+						check_variable = {
+							var = FPT_stahlhof_loyalty
+							value = var:FPT_union_loyalty
+							compare = greater_than
+						}
+					}
+					NOT = {
+						has_country_flag = recently_convinced_freiprinz
+					}
+				}
+			}
+		}
+		
+		cost = var:FTH.FPT_big_loyalty_cost
+		
+		days_remove = 50
+		
+		complete_effect = {
+			set_country_flag = UNG_already_convincing_someone
+		}
+		
+		remove_effect = {
+			clr_country_flag = UNG_already_convincing_someone
+			FTH = {
+				custom_effect_tooltip = FPT_increase_union_loyalty_large_tt
+				add_to_variable = {
+					var = FPT_union_loyalty
+					value = 5
+				}
+			}
+			set_country_flag = {
+				flag = recently_convinced_freiprinz
+				days = 100
+			}
+		}
+	}
+}
+
 UNG_manage_refugee_crisis = {
 	
 	UNG_resettle_refugees_UNG = {

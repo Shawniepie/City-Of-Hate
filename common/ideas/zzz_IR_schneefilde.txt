@@ -179,5 +179,669 @@ ideas = {
 				weekly_manpower = 1000
 			}
 		}
+########################## STARTING IDEAS ###################
+		SNF_entrenched_society = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = ung_ordorian_refugees
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_weekly = -0.0033
+				political_power_gain = -0.60
+				republic_aristocrat_drift = 0.06
+			}
+		}
+		
+		SNF_decrepit_military = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = snf_decrepit_military
+			
+			removal_cost = -1
+			
+			modifier = {
+				acclimatization_cold_climate_gain_factor = 0.05
+				war_support_factor = -0.15
+				mobilization_speed = -0.10
+				cavalry_defence_factor = 0.05
+				army_morale_factor = -0.05
+			}
+		}
+		
+		SNF_brittle_economy = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = snf_brittle_economy
+			
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.15
+				industrial_capacity_factory = -0.15
+				base_fuel_gain_factor = -0.10
+				local_resources_factor = -0.20
+				production_factory_efficiency_gain_factor = -0.25
+				trade_opinion_factor = -0.25
+				min_export = -0.50
+			}
+		}
+############################### FOCUS IDEAS #########################################
+
+		SNF_opposing_nobility = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = prc_low_popular_support3
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.10
+				political_power_gain = -0.40
+				republic_aristocrat_drift = 0.05
+			}
+		}
+		SNF_curtailed_nobility = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = prc_low_popular_support2
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.15
+				political_power_gain = -0.25
+				republic_aristocrat_drift = 0.04
+			}
+		}
+		SNF_vilified_nobility = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = prc_low_popular_support
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.25
+				political_power_gain = -0.15
+				republic_aristocrat_drift = 0.02
+			}
+	         }
+	         SNF_dwindling_nobility = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = prc_low_popular_support
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.15
+				political_power_gain = -0.10
+			}
+	         }
+	         SNF_opposed_nobles = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = ung_ordorian_refugees
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.10
+				political_power_gain = -0.30
+				republic_aristocrat_drift = 0.03
+			}
+		}
+		SNF_wary_of_nobles = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = prc_low_popular_support2
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.10
+				political_power_gain = -0.20
+			}
+		}
+		SNF_worried_nobles = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = prc_low_popular_support
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.05
+				political_power_gain = -0.10
+			}
+		}
+####
+SNF_brittle_economy2 = {
+			name = SNF_brittle_economy
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = snf_brittle_economy
+			
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.15
+				industrial_capacity_factory = -0.10
+				local_resources_factor = -0.10
+				production_factory_efficiency_gain_factor = -0.25
+				trade_opinion_factor = -0.25
+				min_export = -0.50
+			}
+		}
+SNF_brittle_economy3 = {
+			name = SNF_brittle_economy
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = snf_brittle_economy
+			
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.10
+				industrial_capacity_factory = -0.10
+				production_factory_efficiency_gain_factor = -0.20
+				trade_opinion_factor = -0.25
+				min_export = -0.50
+			}
+		}
+SNF_brittle_economy4 = {
+			name = SNF_brittle_economy
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = snf_brittle_economy
+			
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.10
+				production_factory_efficiency_gain_factor = -0.10
+				trade_opinion_factor = -0.25
+				min_export = -0.50
+			}
+		}
+SNF_brittle_economy5 = {
+			name = SNF_brittle_economy
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = snf_brittle_economy
+			
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.05
+				trade_opinion_factor = -0.25
+				min_export = -0.50
+			}
+		}
+SNF_supported_farmers = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = generic_constitutional_guarantees
+			
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.05
+				base_fuel_gain_factor = 0.25
+			}
+		}
+SNF_mil_equipment_standart = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = gre_schachtplan
+			
+			removal_cost = -1
+			
+			equipment_bonus = {
+			heavy_cavalry_equipment = {
+				build_cost_ic = -0.1 instant = yes
+				}
+			light_cavalry_equipment = {
+				build_cost_ic = -0.1 instant = yes
+				}
+		}
+}
+####
+SNF_decrepit_military2 = {
+			name = SNF_decrepit_military
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = snf_decrepit_military
+			
+			removal_cost = -1
+			
+			modifier = {
+				acclimatization_cold_climate_gain_factor = 0.05
+				war_support_factor = -0.10
+				mobilization_speed = -0.10
+				cavalry_defence_factor = 0.1
+			}
+		}
+SNF_decrepit_military3 = {
+			name = SNF_decrepit_military
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = snf_decrepit_military
+			
+			removal_cost = -1
+			
+			modifier = {
+				acclimatization_cold_climate_gain_factor = 0.05
+				war_support_factor = -0.05
+				mobilization_speed = 0.10
+				conscription_factor = 0.05
+				cavalry_defence_factor = 0.1
+			}
+		}
+SNF_decrepit_military4 = {
+			name = SNF_decrepit_military
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = snf_decrepit_military
+			
+			removal_cost = -1
+			
+			modifier = {
+				acclimatization_cold_climate_gain_factor = 0.1
+				mobilization_speed = 0.10
+				conscription_factor = 0.05
+				cavalry_defence_factor = 0.1
+			}
+		}
+SNF_decrepit_military5 = {
+			name = SNF_decrepit_military
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = snf_decrepit_military
+			
+			removal_cost = -1
+			
+			modifier = {
+				acclimatization_cold_climate_gain_factor = 0.05
+				war_support_factor = -0.1
+				mobilization_speed = -0.10
+			}
+		}
+SNF_decrepit_military6 = {
+			name = SNF_decrepit_military
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = snf_decrepit_military
+			
+			removal_cost = -1
+			
+			modifier = {
+				acclimatization_cold_climate_gain_factor = 0.10
+				war_support_factor = -0.05
+				mobilization_speed = -0.10
+				infantry_defence_factor = 0.1
+				infantry_attack_factor = 0.1
+			}
+		}
+SNF_decrepit_military7 = {
+			name = SNF_decrepit_military
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = snf_decrepit_military
+			
+			removal_cost = -1
+			
+			modifier = {
+				acclimatization_cold_climate_gain_factor = 0.10
+				infantry_defence_factor = 0.1
+				infantry_attack_factor = 0.1
+				army_speed_factor = 0.05
+				army_morale_factor = 0.1
+			}
+		}
+SNF_schneesoldaten_sp = {
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = tur_arctic_wolves
+			
+			removal_cost = -1
+			
+			modifier = {
+				acclimatization_cold_climate_gain_factor = 0.15
+				infantry_defence_factor = 0.1
+				infantry_attack_factor = 0.1
+				army_speed_factor = 0.05
+				army_morale_factor = 0.1
+				dig_in_speed_factor = 0.2
+				out_of_supply_factor = -0.2
+				
+			}
+		}
+SNF_hutrigs_guard = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = ung_kaltwetter_corps
+			
+			removal_cost = -1
+			
+			modifier = {
+				acclimatization_cold_climate_gain_factor = 0.15
+				mobilization_speed = 0.10
+				conscription_factor = 0.05
+				army_org_factor = 0.05
+				cavalry_defence_factor = 0.1
+				cavalry_attack_factor = 0.1
+				special_forces_min = 8
+			}
+		}
+####
+	         SNF_military_loyalty = {
+			
+			available = {
+				NOT = { 
+				has_government = republic_aristocrat
+				}
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			allowed = {
+				always = no
+			}
+			
+			picture = eng_imperial_conscription
+			
+			removal_cost = -1
+			
+			modifier = {
+				army_org_factor = 0.04
+				army_morale_factor = 0.05
+			}
+	         }
+	         SNF_spy_network = {
+			
+			available = {
+				NOT = { 
+				has_government = republic_aristocrat
+				}
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			allowed = {
+				always = no
+			}
+			
+			picture = generic_spy_coup
+			
+			removal_cost = -1
+			
+			modifier = {
+				resistance_growth  = -0.15
+				compliance_gain = -0.05
+			}
+		}
+#####
+	SNF_extra_taxes = {
+			
+			available = {
+			country_exists = UNG
+			}
+			allowed = {
+				always = yes
+			}
+			
+			allowed_civil_war = {
+				always = no
+			}
+			
+			picture = generic_economic_increase
+			
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.14
+			}
+		}
+	SNF_repayment = {
+			available = {
+			country_exists = UNG
+			}
+			
+			allowed = {
+				always = yes
+			}
+			
+			allowed_civil_war = {
+				always = no
+			}
+			
+			picture = generic_economic_increase
+			
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.14
+			}
+		}
+		
+#####
+
+SNF_perkav_studied = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = CZE_planning_bonus
+			
+			removal_cost = -1
+			
+			targeted_modifier = {
+					tag = PRK
+					attack_bonus_against = 0.05
+					defense_bonus_against = 0.05
+			}
+		}
+	}
+	political_advisor = {
+	
+		ulrich_drecht = {
+			
+			picture = IRI_Diamantis #PLACEHOLDER
+			
+			allowed = {
+				original_tag = SNF
+			}
+		
+			available = {
+				has_government = monarchy_absolute	
+				has_country_flag = SNF_Drecht_advisor
+				NOT = {
+				has_country_leader = {
+   				 name = "Ulrich Drecht"
+   				 ruling_only = yes
+				}
+				}
+			}
+			
+			traits = {
+				second_prince
+			}
+		}
 	}
 }

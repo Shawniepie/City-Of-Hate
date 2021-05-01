@@ -10,6 +10,34 @@
 # protect
 # influence
 
+ungerdaler_buddies = {
+	enable = {
+		tag = RTH
+		OR = {	
+			has_country_flag = RTH_anti_ordorian_front
+			has_country_flag = RTH_ungerdaler_pressure
+		}
+	}
+	
+	abort_when_not_enabled = yes
+	
+	ai_strategy = {
+		type = befriend
+		id = "UNG"
+		value = 200
+	}
+	ai_strategy = {
+		type = alliance
+		id = "UNG"			
+		value = 200
+	}
+	ai_strategy = {
+		type = protect
+		id = "UNG"			
+		value = 200
+	}
+}
+
 skaelinger_buddies = {
 	enable = {
 		original_tag = RTH

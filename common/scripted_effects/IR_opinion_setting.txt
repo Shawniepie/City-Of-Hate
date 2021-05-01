@@ -81,6 +81,10 @@ clear_opinion_modifier = {
 				target = PREV
 				modifier = IR_puritan_vermin
 			}
+			remove_opinion_modifier = {
+				target = PREV
+				modifier = IR_puritan_vermin_trade
+			}
 		}
 		remove_opinion_modifier = {
 			target = ROOT
@@ -97,6 +101,10 @@ clear_opinion_modifier = {
 				target = PREV
 				modifier = IR_puritan_butchers
 			}
+			remove_opinion_modifier = {
+				target = PREV
+				modifier = IR_puritan_butchers_trade
+			}
 		}
 		remove_opinion_modifier = {
 			target = ROOT
@@ -104,12 +112,24 @@ clear_opinion_modifier = {
 		}
 		remove_opinion_modifier = {
 			target = ROOT
+			modifier = IR_puritan_butchers_trade
+		}
+		remove_opinion_modifier = {
+			target = ROOT
 			modifier = IR_wrong_puritans
+		}
+		remove_opinion_modifier = {
+			target = ROOT
+			modifier = IR_wrong_puritans_trade
 		}
 		ROOT = {
 			remove_opinion_modifier = {
 				target = PREV
 				modifier = IR_wrong_puritans
+			}
+			remove_opinion_modifier = {
+				target = PREV
+				modifier = IR_wrong_puritans_trade
 			}
 		}
 		remove_opinion_modifier = {
@@ -354,9 +374,9 @@ set_opinion_modifiers = {
 				}
 			}
 			add_opinion_modifier = {
-					target = ROOT
-					modifier = IR_puritan_extremists
-				}
+				target = ROOT
+				modifier = IR_puritan_extremists
+			}
 			reverse_add_opinion_modifier = {
 				target = ROOT
 				modifier = IR_puritan_good_race
@@ -374,12 +394,20 @@ set_opinion_modifiers = {
 				}
 			}
 			add_opinion_modifier = {
-					target = ROOT
-					modifier = IR_wrong_puritans
-				}
+				target = ROOT
+				modifier = IR_wrong_puritans
+			}
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = IR_wrong_puritans_trade
+			}
 			reverse_add_opinion_modifier = {
 				target = ROOT
 				modifier = IR_wrong_puritans
+			}
+			reverse_add_opinion_modifier = {
+				target = ROOT
+				modifier = IR_wrong_puritans_trade
 			}
 		}
 		every_country = {
@@ -390,12 +418,20 @@ set_opinion_modifiers = {
 				}
 			}
 			add_opinion_modifier = {
-					target = ROOT
-					modifier = IR_puritan_butchers
-				}
+				target = ROOT
+				modifier = IR_puritan_butchers
+			}
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = IR_puritan_butchers_trade
+			}
 			reverse_add_opinion_modifier = {
 				target = ROOT
 				modifier = IR_puritan_vermin
+			}
+			reverse_add_opinion_modifier = {
+				target = ROOT
+				modifier = IR_puritan_vermin_trade
 			}
 		}
 	}

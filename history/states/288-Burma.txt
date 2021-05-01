@@ -5,13 +5,14 @@ state={
 		9123 3635 4513 808 9060 5556 9107 2872 9137 3692 3697 
 	}
 	state_category = rural
-	manpower=4572
+	manpower=3204
 	buildings_max_level_factor=1.000
 	history={
 		owner = SPW
 		buildings = {
 			infrastructure = 5	
+			farm = 1
 		}
 		add_core_of = SPW
-	}
+		}
 }

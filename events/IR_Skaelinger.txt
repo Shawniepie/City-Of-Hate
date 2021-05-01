@@ -329,6 +329,13 @@ country_event = { #Second Rthaur Revolution
 			}
 		}
 		
+		if = {
+			limit = {
+				has_idea = OSG_settler_government
+			}
+			remove_ideas = OSG_settler_government
+		}
+		
 		create_faction = "brotherhood_alliance"
 		add_to_faction = SKA
 		add_to_faction = RTH
@@ -933,5 +940,20 @@ country_event = {#Rimatu Declines
 	option = {#Oh shit
 		name = ung.68.a
 		add_war_support = 0.05
+	}
+}
+
+country_event = {#Union DoW's Rimatü
+	id = ska.17
+	title = ska.17.t
+	desc = ska.17.d
+	picture = GFX_report_event_carol_meeting
+	
+	is_triggered_only = yes
+	
+	option = {#Yay
+		name = ska.17.a
+		set_country_flag = SKA_UNG_invade_rimatu
+		custom_effect_tooltip = SKA_UNG_invade_rimatu_tt
 	}
 }

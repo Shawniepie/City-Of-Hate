@@ -11,6 +11,7 @@ state={
 		owner = SKA
 		buildings = {
 			infrastructure = 1
+			farm = 1
 		}
 		add_core_of = SKA
 

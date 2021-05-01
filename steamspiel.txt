@@ -25,8 +25,9 @@ Features:
 	-A completely original setting dreamt up by yours truly.
 	-Seven unique ideologies, including monarchies, republics and theocracies.
 	-A completely new generic Focus Tree with 67 foci to choose from.
-	-Six unique focus trees, with plenty more planned.
-	-Six unique units, with many more on the way.
+	-Seven unique focus trees, with plenty more planned.
+	-Thirteen unique units, with many more on the way.
+	-A massive, completely reworked tech tree running from the Tribal Era to the Early Industrial Era (WIP)
 	-A religion system - choose a Patron Deity for your people!
 	-(Hopefully) a Hearts of Iron experience completely unlike anything you've seen before!
 

@@ -451,7 +451,11 @@ country_event = {#Response to Perkavland
 	option = {#We have bigger fish to fry
 		name = ung.14.a
 		ai_chance = {
-			factor = 3
+			factor = 2
+			modifier = {
+				has_government = republic_aristocrat
+				factor = 3
+			}
 		}
 		set_country_flag = UNG_fry_bigger_fish
 	}
@@ -459,7 +463,11 @@ country_event = {#Response to Perkavland
 	option = {#Time for War
 		name = ung.14.b
 		ai_chance = {
-			factor = 5
+			factor = 3
+			modifier = {
+				has_government = monarchy_absolute
+				factor = 2
+			}
 		}
 		set_country_flag = UNG_war_perkavland_flag
 	}
@@ -468,6 +476,10 @@ country_event = {#Response to Perkavland
 		name = ung.14.c
 		ai_chance = {
 			factor = 1
+			modifier = {
+				has_government = monarchy_constitutional
+				factor = 6
+			}
 		}
 		PRK = {
 			country_event = {
@@ -497,6 +509,13 @@ country_event = {#Territorial Concessions
 				days = 1
 			}
 		}
+		SNF = {
+			custom_effect_tooltip = FP_decrease_union_loyalty_tt
+			add_to_variable = {
+				var = FPT_union_loyalty
+				value = -3
+			}
+		}
 	}
 	
 	option = { #Wertszvorde
@@ -508,6 +527,13 @@ country_event = {#Territorial Concessions
 			country_event = {
 				id = prk.2
 				days = 5
+			}
+		}
+		WSZ = {
+			custom_effect_tooltip = FP_decrease_union_loyalty_tt
+			add_to_variable = {
+				var = FPT_union_loyalty
+				value = -3
 			}
 		}
 	}
@@ -652,7 +678,7 @@ country_event = {#Proselytizing Accepted
 	}
 }
 
-country_event = {#Proselytizing Accepted
+country_event = {#Proselytizing Rejected
 	id = ung.22
 	title = ung.22.t
 	desc = ung.22.d
@@ -737,6 +763,10 @@ country_event = {#Looking Outwards
 		name = ung.25.a
 		ai_chance = {
 			factor = 5
+			modifier = {
+				has_government = monarchy_absolute
+				factor = 2
+			}
 		}
 		add_war_support = 0.03
 		set_country_flag = UNG_expansionist_flag
@@ -746,6 +776,12 @@ country_event = {#Looking Outwards
 		name = ung.25.b
 		ai_chance = {
 			factor = 20
+			modifier = {
+				NOT = {
+					has_government = monarchy_absolute
+				}
+				factor = 2
+			}
 		}
 		add_stability = 0.03
 		set_country_flag = UNG_soft_power_flag
@@ -1172,6 +1208,12 @@ country_event = {#Position on Rthaur
 	
 	option = {#Ally Rthaur
 		name = ung.36.a
+		trigger = {
+			ORD = {
+				is_not_sphered = yes
+			}
+			country_exists = ORD
+		}
 		ai_chance = {
 			factor = 5
 		}
@@ -1395,15 +1437,11 @@ country_event = {#Risk of Civil War
 	picture = GFX_report_event_ung_civil_warning
 	
 	trigger = {
-		tag = UNG
-		has_stability < 0.21
-		NOT = {
-			has_country_flag = UNG_unstable
-		}
+		always = no #disabled because it's obsolete
 	}
 	
 	mean_time_to_happen = {
-		days = 1
+		days = 2
 	}
 	
 	immediate = {
@@ -1423,13 +1461,11 @@ country_event = {#Restabilization
 	picture = GFX_report_event_ung_civil_warning
 	
 	trigger = {
-		tag = UNG
-		has_stability > 0.29
-		has_country_flag = UNG_unstable
+		always = no #disabled because it's obsolete
 	}
 	
 	mean_time_to_happen = {
-		days = 1
+		days = 2
 	}
 	
 	immediate = {
@@ -1441,42 +1477,19 @@ country_event = {#Restabilization
 	}
 }
 
-country_event = {#Faustburg Plot
+country_event = {#A Long-Expected Party
 	id = ung.46
 	title = ung.46.t
 	desc = ung.46.d
-	picture = GFX_report_event_carol_meeting
+	picture = GFX_report_event_romania_parliament
 	
-	fire_only_once = yes
-	
-	trigger = {
-		date > 1936.4.1
-	}
+	is_triggered_only = yes
 
-	option = {#Arrest
+	option = {#Hurrah!
 		name = ung.46.a
-		ai_chance = {
-			factor = 1
-		}
 		add_political_power = 50
-		add_stability = -0.05
-		set_country_flag = UNG_arrest_traitors
-		hidden_effect = {
-			unlock_national_focus = UNG_young_hochprinzessin
-		}
-	}
-	
-	option = {#Negotiate
-		name = ung.46.b
-		ai_chance = {
-			factor = 1
-		}
-		add_political_power = -50
-		add_stability = 0.-5
-		set_country_flag = UNG_discourse_traitors
-		hidden_effect = {
-			unlock_national_focus = UNG_young_hochprinzessin
-		}
+		remove_country_leader_trait = unproven_hochprinzessin
+		set_country_flag = UNG_adalina_boinks_halfling
 	}
 }
 
@@ -1499,7 +1512,8 @@ country_event = {#Rebels Arrested
 			ideology = monarchy_constitutional
 			popularity = 0.05
 		}
-		set_country_flag = UNG_stay_the_course_flag
+		set_country_flag = UNG_steady_as_she_goes
+		remove_ideas = UNG_disgruntled_nobility
 
 	}
 	
@@ -1515,6 +1529,7 @@ country_event = {#Rebels Arrested
 			popularity = 0.05
 		}
 		set_country_flag = UNG_sicherheitsdiktat_flag
+		remove_ideas = UNG_disgruntled_nobility
 	}
 }
 
@@ -1564,8 +1579,9 @@ country_event = {#Revolt Crushed
 		add_popularity = {
 			ideology = monarchy_constitutional
 			popularity = 0.05
-		}
-		set_country_flag = UNG_stay_the_course_flag
+		}	
+		set_country_flag = UNG_steady_as_she_goes
+		remove_ideas = UNG_disgruntled_nobility
 
 	}
 	
@@ -1580,7 +1596,16 @@ country_event = {#Revolt Crushed
 			ideology = monarchy_absolute
 			popularity = 0.05
 		}
+		if = {
+			limit = {
+				NOT = {
+					has_completed_focus = UNG_arrest_nobility
+				}
+			}
+			unlock_national_focus = UNG_arrest_nobility
+		}
 		set_country_flag = UNG_sicherheitsdiktat_flag
+		remove_ideas = UNG_disgruntled_nobility
 	}
 }
 
@@ -1592,23 +1617,20 @@ country_event = {#Power Seized
 	
 	is_triggered_only = yes
 
-	option = {#Constitutionalist
+	option = {#Aristocratic
 		name = ung.50.a
-		ai_chance = {
-			factor = 6
-		}
 		add_stability = -0.1
 		add_political_power = -75
 		add_popularity = {
 			ideology = republic_aristocrat
 			popularity = 0.35
 		}
-		add_political_power = {
+		add_popularity = {
 			ideology = monarchy_constitutional
 			popularity = -0.35
 		}
 		set_country_flag = UNG_noble_power_flag
-
+		remove_ideas = UNG_disgruntled_nobility
 	}
 }
 
@@ -1664,6 +1686,7 @@ country_event = {#Tlarthingia Rejects!
 }
 
 country_event = {#the choice of Monarchy
+### OBSOLETE EVENT ###
 	id = ung.53
 	title = ung.53.t
 	desc = ung.53.d
@@ -1673,31 +1696,6 @@ country_event = {#the choice of Monarchy
 	fire_only_once = yes
 
 	option = { #Hard power Monarchy
-		name = ung.53.a
-		add_idea = UNG_hard_power_constitution
-		complete_national_focus = UNG_hard_power
-
-		ai_chance = {
-			chance = 10
-			modifier = { monarchy_absolute < 0.2 
-				factor = 5
-			}
-		}
-	}
-	option = {#Soft power Monarchy
-	name = ung.53.b
-		add_idea = UNG_soft_power_constitution
-		complete_national_focus = UNG_soft_power
-
-		ai_chance = {
-			chance = 10
-			modifier = { monarchy_constitutional=< 0.2 
-				factor = 5
-			}
-			modifier = { republic_aristocrat =< 0.2
-				factor = 5
-			}
-		}
 	}
 }
 
@@ -1786,9 +1784,13 @@ country_event = {#Irinthios Marriage!
 		add_ideas = marriage_UNG_IRI
 		add_political_power = 50
 		
-		UNG_improve_IRI_relations = yes
+		IRI = {
+			FROM_improve_THIS_relations = yes
+		}
 		
-		UNG_worsen_TLA_relations = yes
+		TLA = {
+			FROM_worsen_THIS_relations = yes
+		}
 	}
 }
 
@@ -1940,16 +1942,8 @@ country_event = {#SKA and RMT attend
 	}
 	
 	trigger = {
-		AND = {
-			OR = {
-				has_country_flag = UNG_nordtorf_summit_SKA_attends
-				has_country_flag = UNG_nordtorf_summit_SKA_refuses_to_attend
-			}
-			OR = {
-				has_country_flag = UNG_nordtorf_summit_RMT_attends
-				has_country_flag = UNG_nordtorf_summit_RMT_refuses_to_attend
-			}
-		}
+		has_country_flag = UNG_nordtorf_summit_SKA_attends
+		has_country_flag = UNG_nordtorf_summit_RMT_attends
 	}
 
 	option = {#Back SKA
@@ -1975,13 +1969,13 @@ country_event = {#SKA and RMT attend
 		SKA = {
 			country_event = {
 				id = ska.13
-				day = 3
+				days = 3
 			}
 		}
 		RMT = {
 			country_event = {
 				id = rmt.3
-				day = 3
+				days = 3
 			}
 		}
 	}
@@ -2009,13 +2003,13 @@ country_event = {#SKA and RMT attend
 		SKA = {
 			country_event = {
 				id = ska.14
-				day = 3
+				days = 3
 			}
 		}
 		RMT = {
 			country_event = {
 				id = rmt.4
-				day = 3
+				days = 3
 			}
 		}
 	}
@@ -2146,5 +2140,341 @@ country_event = {#SKA Declines
 		add_political_power = -75
 		
 		set_country_flag = UNG_nordtorf_summit_fails_RMT_favoured
+	}
+}
+
+country_event = {#One attends, the other doesn't
+	id = ung.71
+	title = ung.71.t
+	desc = ung.71.d
+	picture = GFX_report_event_fascist_gatherings
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		days = 15
+	}
+	
+	trigger = {
+		OR = {
+			AND = {
+				has_country_flag = UNG_nordtorf_summit_SKA_refuses_to_attend
+				has_country_flag = UNG_nordtorf_summit_RMT_attends
+			}
+			AND = {
+				has_country_flag = UNG_nordtorf_summit_SKA_attends
+				has_country_flag = UNG_nordtorf_summit_RMT_refuses_to_attend
+			}
+		}
+	}
+	
+	option = {#War it is
+		name = ung.71.a
+		
+		add_political_power = -5
+
+		if = {
+			limit = {
+				has_country_flag = UNG_nordtorf_summit_RMT_attends
+			}
+		}
+		set_country_flag = UNG_nordtorf_summit_fails_RMT_favoured
+		
+		if = {
+			limit = {
+				has_country_flag = UNG_nordtorf_summit_SKA_attends
+			}
+		}
+		set_country_flag = UNG_nordtorf_summit_fails_SKA_favoured
+	}
+}
+
+
+country_event = {#Neither attends
+	id = ung.72
+	title = ung.72.t
+	desc = ung.72.d
+	picture = GFX_report_event_german_advisors_remain
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		days = 15
+	}
+	
+	trigger = {
+		has_country_flag = UNG_nordtorf_summit_SKA_refuses_to_attend
+		has_country_flag = UNG_nordtorf_summit_RMT_refuses_to_attend
+	}
+	
+	option = {#I guess we're backing our allies then?
+		name = ung.72.a
+		
+		add_political_power = -125
+		add_stability = -0.05
+
+		if = {
+			limit = {				
+				has_completed_focus = UNG_recognize_high_king
+			}
+			set_country_flag = UNG_nordtorf_summit_fails_SKA_favoured
+		}
+		
+		if = {
+			limit = {				
+				has_completed_focus = UNG_recognize_rimatu
+			}
+			set_country_flag = UNG_nordtorf_summit_fails_RMT_favoured
+		}
+	}
+}
+
+country_event = {#RMT Declines Trade Deal
+	id = ung.73
+	title = ung.73.t
+	desc = ung.73.d
+	picture = GFX_report_event_indonesia_handover
+	
+	is_triggered_only = yes
+	
+	option = {#War it is
+		name = ung.73.a
+		add_ideas = UNG_RMT_trade
+	}
+}
+
+country_event = {#RMT Declines Trade Deal
+	id = ung.74
+	title = ung.74.t
+	desc = ung.74.d
+	picture = GFX_report_event_indonesia_handover
+	
+	is_triggered_only = yes
+	
+	option = {#War it is
+		name = ung.74.a
+		add_political_power = -25
+	}
+}
+
+country_event = {#Adalina's Dalliance Uncovered
+	id = ung.75
+	title = ung.75.t
+	desc = ung.75.d
+	picture = GFX_report_event_german_advisors_remain
+	
+	trigger = {
+		has_country_flag = UNG_adalina_boinks_halfling
+	}
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		days = 16
+	}
+
+	option = {#Oh god oh fuck
+		name = ung.75.a
+		add_country_leader_trait = scandalous_hochprinzessin
+		hidden_effect = {
+			country_event = {
+				id = ung.76
+				days = 7
+			}
+		}
+	}
+}
+
+country_event = {#Nobles Upset
+	id = ung.76
+	title = ung.76.t
+	desc = ung.76.d
+	picture = GFX_report_event_german_italian_pact
+	
+	is_triggered_only = yes
+	
+	option = {#Oh god oh fuck
+		name = ung.76.a
+		ai_chance = {
+			factor = 2
+		}
+		add_ideas = UNG_disgruntled_nobility
+		set_country_flag = UNG_arrest_traitors
+	}
+	
+	option = {#Negotiate?
+		name = ung.76.b
+		ai_chance = {
+			factor = 6
+		}
+		add_ideas = UNG_disgruntled_nobility
+		country_event = {
+			id = ung.77
+			days = 10
+		}
+	}
+}
+	
+	
+country_event = {#Negotiations
+	id = ung.77
+	title = ung.77.t
+	desc = ung.77.d
+	picture = GFX_report_event_aid_pact
+	
+	is_triggered_only = yes
+	
+	option = {#Hardline Stance
+		name = ung.77.a
+		ai_chance = {
+			factor = 1
+		}
+		random_list = {
+			30 = {
+				country_event = {
+					id = ung.78
+					days = 10
+				}
+				set_country_flag = UNG_hardliner_success
+			}
+			70 = {
+				country_event = {
+					id = ung.79
+					days = 10
+				}
+			}
+		}
+	}
+	
+	option = {#Status Quo
+		name = ung.77.b
+		ai_chance = {
+			factor = 5
+		}
+		random_list = {
+			70 = {
+				country_event = {
+					id = ung.78
+					days = 10
+				}
+				set_country_flag = UNG_moderate_success
+			}
+			30 = {
+				country_event = {
+					id = ung.79
+					days = 10
+				}
+			}
+		}
+	}
+
+	option = {#Concede
+		name = ung.77.c
+		ai_chance = {
+			factor = 2
+		}
+		add_country_leader_trait = disempowered_freiprinzessin
+		remove_ideas = UNG_disgruntled_nobility
+		add_popularity = {
+			ideology = republic_aristocrat
+			popularity = 0.2
+		}
+		add_stability = 0.05
+		add_political_power = -50
+		custom_effect_tooltip = UNG_devolve_powers_warning_tt
+		set_country_flag = UNG_noble_power_flag
+	}
+}
+
+country_event = {#Negotiations - Success!
+	id = ung.78
+	title = ung.78.t
+	desc = ung.78.d
+	picture = GFX_report_event_gre_officers_chatting
+	
+	is_triggered_only = yes
+	
+	option = {#Excellent
+		name = ung.78.a
+		if = {
+			limit = {
+				has_country_flag = UNG_hardliner_success
+			}
+			unlock_national_focus = UNG_arrest_nobility
+			set_country_flag = UNG_sicherheitsdiktat_flag
+			add_stability = 0.1
+		}
+		if = {
+			limit = {
+				has_country_flag = UNG_moderate_success
+			}
+			set_country_flag = UNG_steady_as_she_goes
+			add_stability = 0.1
+		}
+		remove_ideas = UNG_disgruntled_nobility
+	}
+}
+
+country_event = {#Negotiations - Failure!
+	id = ung.79
+	title = ung.79.t
+	desc = ung.79.d
+	picture = GFX_report_event_gre_trial
+	
+	is_triggered_only = yes
+	
+	option = {#Oh God oh Fuck
+		name = ung.79.a
+		add_stability = -0.15
+		set_country_flag = UNG_arrest_traitors
+	}
+}
+
+country_event = {#Faustburger Constitution
+	id = ung.80
+	title = ung.80.t
+	desc = ung.80.d
+	picture = GFX_report_event_gre_cabinet_meeting
+	
+	is_triggered_only = yes
+	
+	option = {#Popular Constitution
+		name = ung.80.a
+		add_popularity = {
+			ideology = republic_merchant
+			popularity = 0.15
+		}
+		set_country_flag = UNG_popular_constitution
+	}
+	
+	option = {#Aristocratic Constitution
+		name = ung.80.b
+		add_popularity = {
+			ideology = republic_aristocrat
+			popularity = 0.15
+		}
+		set_country_flag = UNG_aristocratic_constitution
+	}
+}
+
+country_event = {#Frau Freisler
+	id = ung.81
+	title = ung.81.t
+	desc = ung.81.d
+	picture = GFX_report_event_bul_making_bricks_for_school
+	
+	trigger = {
+		tag = UNG
+	}
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		days = 35
+	}
+	
+	option = {#Interesting
+		name = ung.81.a
+		set_country_flag = UNG_heard_of_freisler
 	}
 }

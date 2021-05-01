@@ -323,3 +323,68 @@ country_event = {#Skaelinger Declines
 		add_war_support = 0.05
 	}
 }
+
+country_event = {#Union DoW's Skaelinger
+	id = rmt.7
+	title = ska.17.t #no sense in wasting good loc
+	desc = ska.17.d
+	picture = GFX_report_event_carol_meeting
+	
+	is_triggered_only = yes
+	
+	option = {#Yay
+		name = ska.17.a
+		set_country_flag = RMT_UNG_invade_skaelinger
+		custom_effect_tooltip = SKA_UNG_invade_rimatu_tt
+	}
+}
+
+country_event = {#Union offers trade deal
+	id = rmt.8
+	title = rmt.8.t #no sense in wasting good loc
+	desc = rmt.8.d
+	picture = GFX_report_event_gre_diplomacy
+	
+	is_triggered_only = yes
+	
+	option = {#Yes
+		name = rmt.8.a
+		ai_chance = {
+			factor = 9
+		}
+		add_ideas = RMT_UNG_trade
+		UNG = {
+			country_event = {
+				id = ung.73
+				days = 7
+			}
+		}
+	}
+	
+	option = {#No
+		name = rmt.8.b
+		ai_chance = {
+			factor = 1
+		}
+		UNG = {
+			country_event = {
+				id = ung.74
+				days = 7
+			}
+		}
+	}
+}
+
+country_event = {#Union offers trade deal
+	id = rmt.9
+	title = rmt.9.t
+	desc = rmt.9.d
+	picture = GFX_report_event_gre_diplomacy
+	
+	is_triggered_only = yes
+	
+	option = {#Yes
+		name = rmt.9.a
+		add_ideas = RMT_legitimized_nation
+	}
+}

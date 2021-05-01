@@ -2165,9 +2165,9 @@ commissiaries = {
 					PRK = {
 						has_idea = PRK_tribal_nation
 					}
-					PRK = {
-						remove_ideas = PRK_tribal_nation
-					}
+				}
+				PRK = {
+					remove_ideas = PRK_tribal_nation
 				}
 			}
 			
@@ -2176,9 +2176,9 @@ commissiaries = {
 					PRK = {
 						has_idea = PRK_administrative_reform
 					}
-					PRK = {
-						remove_ideas = PRK_administrative_reform
-					}
+				}
+				PRK = {
+					remove_ideas = PRK_administrative_reform
 				}
 			}
 			
@@ -2187,31 +2187,31 @@ commissiaries = {
 					PRK = {
 						has_idea = PRK_perkav_census_idea
 					}
-					PRK = {
-						remove_ideas = PRK_perkav_census_idea
-					}
+				}
+				PRK = {
+					remove_ideas = PRK_perkav_census_idea
 				}
 			}
-			
+
 			if = {
 				limit = {
 					PRK = {
 						has_idea = PRK_perkav_script
 					}
-					PRK = {
-						remove_ideas = PRK_perkav_script
-					}
+				}
+				PRK = {
+					remove_ideas = PRK_perkav_script
 				}
 			}
-			
+
 			if = {
 				limit = {
 					PRK = {
 						has_idea = PRK_oral_tradition
 					}
-					PRK = {
-						remove_ideas = PRK_oral_tradition
-					}
+				}
+				PRK = {
+					remove_ideas = PRK_oral_tradition
 				}
 			}
 			
@@ -2220,9 +2220,9 @@ commissiaries = {
 					PRK = {
 						has_idea = PRK_beginnings_literacy
 					}
-					PRK = {
-						remove_ideas = PRK_beginnings_literacy
-					}
+				}
+				PRK = {
+					remove_ideas = PRK_beginnings_literacy
 				}
 			}
 			

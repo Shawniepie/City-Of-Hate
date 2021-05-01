@@ -44,7 +44,45 @@ plunder_schneefilde = {
 			factor = 200
 		}
 		
+		days_remove = 50
+		
+		remove_effect = {
+		621 = {
+		remove_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
+		224 = {
+		remove_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
+		if = {
+		 limit = {
+		 has_border_war_between = {
+ 		   attacker = 621
+  		   defender = 224
+		 }
+		 }
+		finalize_border_war = {
+   		defender_win = yes
+  		attacker = 621
+  		defender = 224
+		}
+		}
+		}
+		
 		complete_effect = {
+		621 = {
+		add_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
+		224 = {
+		add_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
 			SNF = {
 				country_event = {
 					id = snf.1
@@ -89,11 +127,12 @@ perkav_piracy = {
 				tooltip = PRK_coastal_state_in_raid_range_flag
 				perkav_raiding_target_exists = yes
 			}
-			ships_in_state_ports = {
-				type = destroyer
-				size > 2
-				state = 413
-			}
+			#Disabled until we add a navy
+			#ships_in_state_ports = {
+			#	type = destroyer
+			#	size > 2
+			#	state = 413
+			#}
 			has_country_flag = PRK_can_raid
 			NOT = {
 				has_country_flag = PRK_recent_raid

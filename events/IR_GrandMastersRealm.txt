@@ -725,13 +725,13 @@ country_event = { #Separatist Uprisings
 		}
 		
 		random_list = { #Felwerin Loyalty
-			35 = { 
+			25 = { 
 				country_event = { #Loyal 
 					days = 2
 					id = gmr.14
 				}
 			}
-			65 = { 
+			75 = { 
 				country_event = { #Revolt
 					days = 2
 					id = gmr.15
@@ -755,13 +755,13 @@ country_event = { #Separatist Uprisings
 		}
 		
 		random_list = { #Nastrogdar Loyalty
-			45 = { 
+			35 = { 
 				country_event = { #Loyal 
 					days = 2
 					id = gmr.18
 				}
 			}
-			55 = { 
+			65 = { 
 				country_event = { #Revolt
 					days = 2
 					id = gmr.19
@@ -800,13 +800,13 @@ country_event = { #Separatist Uprisings
 		}
 		
 		random_list = { #Navandon Loyalty
-			45 = { 
+			40 = { 
 				country_event = { #Loyal 
 					days = 2
 					id = gmr.24
 				}
 			}
-			55 = { 
+			60 = { 
 				country_event = { #Revolt
 					days = 2
 					id = gmr.25
@@ -920,10 +920,6 @@ country_event = { #Separatist Uprisings
 					add_state_core = 13
 					add_state_core = 31
 					add_state_core = 14
-					declare_war_on = {
-						target = GMR
-						type = annex_everything
-					}
 					load_oob = "IRT_free"
 				}
 			}
@@ -1024,10 +1020,6 @@ country_event = { #Separatist Uprisings
 					add_state_core = 52
 					add_state_core = 46
 					add_state_core = 33
-					declare_war_on = {
-						target = GMR
-						type = annex_everything
-					}
 					load_oob = "FEL_free"
 				}
 			}
@@ -1039,13 +1031,13 @@ country_event = { #Separatist Uprisings
 				factor = 9
 			}
 			random_list = { #Will it work?
-				65 = {
+				75 = {
 					country_event = { #Nope
 						days = 2
 						id = gmr.29
 					}
 				}
-				35 = {
+				25 = {
 					country_event = { #Yes!
 						days = 2
 						id = gmr.28
@@ -1130,10 +1122,6 @@ country_event = { #Separatist Uprisings
 					add_state_core = 24
 					add_state_core = 12
 					add_state_core = 30
-					declare_war_on = {
-						target = GMR
-						type = annex_everything
-					}
 					load_oob = "KRT_free"
 				}
 				KRT = {
@@ -1148,13 +1136,13 @@ country_event = { #Separatist Uprisings
 				factor = 9
 			}
 			random_list = { #Will it work?
-				70 = {
+				80 = {
 					country_event = { #Nope
 						days = 2
 						id = gmr.31
 					}
 				}
-				30 = {
+				20 = {
 					country_event = { #Yes!
 						days = 2
 						id = gmr.30
@@ -1237,10 +1225,6 @@ country_event = { #Separatist Uprisings
 					transfer_state = 20
 					transfer_state = 21
 					transfer_state = 22
-					declare_war_on = {
-						target = GMR
-						type = annex_everything
-					}
 					load_oob = "NAS_free"
 				}
 			}
@@ -1252,13 +1236,13 @@ country_event = { #Separatist Uprisings
 				factor = 9
 			}
 			random_list = { #Will it work?
-				55 = {
+				65 = {
 					country_event = { #Nope
 						days = 2
 						id = gmr.34
 					}
 				}
-				45 = {
+				35 = {
 					country_event = { #Yes!
 						days = 2
 						id = gmr.35
@@ -1350,12 +1334,8 @@ country_event = { #Separatist Uprisings
 					transfer_state = 55
 					transfer_state = 51
 					transfer_state = 61
-					declare_war_on = {
-						target = GMR
-						type = annex_everything
+					load_oob = "KAL_free"
 				}
-				load_oob = "KAL_free"
-			}
 			hidden_effect = {
 				KAL = {
 					load_oob = "KAL_free"
@@ -1370,13 +1350,13 @@ country_event = { #Separatist Uprisings
 				factor = 9
 			}
 			random_list = { #Will it work?
-				40 = {
+				15 = {
 					country_event = { #Yes!
 						days = 2
 						id = gmr.36
 					}
 				}
-				60 = {
+				85 = {
 					country_event = { #Nope
 						days = 2
 						id = gmr.37
@@ -1471,10 +1451,6 @@ country_event = { #Separatist Uprisings
 					add_state_core = 59
 					add_state_core = 53
 					add_state_core = 54
-					declare_war_on = {
-						target = GMR
-						type = annex_everything
-					}
 					load_oob = "TRI_free"
 				}
 			}
@@ -1486,14 +1462,14 @@ country_event = { #Separatist Uprisings
 				factor = 9
 			}
 			random_list = { #Will it work?
-				15 = {
-					country_event = { #Nope
+				5 = {
+					country_event = { #Yes!
 						days = 2
 						id = gmr.38
 					}
 				}
-				85 = {
-					country_event = { #Yes!
+				95 = {
+					country_event = { #Nope
 						days = 2
 						id = gmr.39
 					}
@@ -1573,10 +1549,6 @@ country_event = { #Separatist Uprisings
 					add_state_core = 67
 					add_state_core = 71
 					add_state_core = 66
-					declare_war_on = {
-						target = GMR
-						type = annex_everything
-					}
 					load_oob = "NAV_free"
 				}
 			}
@@ -1699,10 +1671,6 @@ country_event = { #Separatist Uprisings
 					add_state_core = 13
 					add_state_core = 31
 					add_state_core = 14
-					declare_war_on = {
-						target = GMR
-						type = annex_everything
-					}
 					load_oob = "IRT_free"
 				}
 			}
@@ -1776,10 +1744,6 @@ country_event = { #Separatist Uprisings
 					add_state_core = 52
 					add_state_core = 46
 					add_state_core = 33
-					declare_war_on = {
-						target = GMR
-						type = annex_everything
-					}
 					load_oob = "FEL_free"
 				}
 			}
@@ -1840,7 +1804,8 @@ country_event = { #Separatist Uprisings
 					transfer_state = 23
 					transfer_state = 24
 					transfer_state = 12
-
+					transfer_state = 19
+					
 					add_state_core = 36
 					add_state_core = 75
 					add_state_core = 35
@@ -1852,10 +1817,6 @@ country_event = { #Separatist Uprisings
 					add_state_core = 24
 					add_state_core = 12
 					add_state_core = 30
-					declare_war_on = {
-						target = GMR
-						type = annex_everything
-					}
 					load_oob = "KRT_free"
 				}
 				KRT = {
@@ -1978,10 +1939,6 @@ country_event = {#Failed Suppression in Nastrogdar
 					transfer_state = 20
 					transfer_state = 21
 					transfer_state = 22
-					declare_war_on = {
-						target = GMR
-						type = annex_everything
-					}
 					load_oob = "NAS_free"
 				}
 			}
@@ -2082,11 +2039,7 @@ country_event = {#Succesful Suppression in Caltireth
 					transfer_state = 55
 					transfer_state = 51
 					transfer_state = 61
-					declare_war_on = {
-						target = GMR
-						type = annex_everything
-					}
-				load_oob = "KAL_free"
+					load_oob = "KAL_free"
 				}
 			}
 		}
@@ -2171,10 +2124,6 @@ country_event = {#Succesful Suppression in Caltireth
 					add_state_core = 59
 					add_state_core = 53
 					add_state_core = 54
-					declare_war_on = {
-						target = GMR
-						type = annex_everything
-					}
 					load_oob = "TRI_free"
 				}
 			}
@@ -2247,10 +2196,6 @@ country_event = {#Succesful Suppression in Caltireth
 					add_state_core = 67
 					add_state_core = 71
 					add_state_core = 66
-					declare_war_on = {
-						target = GMR
-						type = annex_everything
-					}
 					load_oob = "NAV_free"
 				}
 			}
@@ -2594,11 +2539,6 @@ country_event = {#Kingsmen Rebellion!
 		
 			NPC = {
 				load_oob = "NPC_revolution"
-				
-				declare_war_on = {
-					target = GMR
-					type = annex_everything
-				}
 			}
 		}
 	}
@@ -2683,11 +2623,6 @@ country_event = {#Kingsmen Rebellion!
 				
 				delete_unit_template_and_units = {
 					division_template = "Outrider Scouts"
-				}
-				
-				declare_war_on = {
-					target = GMR
-					type = annex_everything
 				}
 				change_tag_from = GMR
 			}
@@ -2988,6 +2923,128 @@ country_event = {#Royal Marriage with the Union?
 			country_event = {
 				id = ung.60
 				days = 3
+			}
+		}
+	}
+}
+
+country_event = {#Start wars a little bit after independence declared to force GMR troops to leave enemy territory
+	id = gmr.51
+	
+	hidden = yes
+	
+	trigger = {
+		tag = GMR
+		OR = {
+			country_exists = NPC
+			country_exists = IRT
+			country_exists = KRT
+			country_exists = NAS
+			country_exists = KAL
+			country_exists = FEL
+			country_exists = TRI
+			country_exists = NAV
+		}
+		NOT = {
+			has_country_flag = GMR_civil_war_started
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 10
+	}
+	
+	immediate = {
+		set_country_flag = GMR_civil_war_started
+	}
+	
+	option = {
+		if = {
+			limit = {
+				country_exists = NPC
+			}
+			NPC = {
+				declare_war_on = {
+					target = GMR
+					type = annex_everything
+				}
+			}
+		}
+		if = {
+			limit = {
+				country_exists = IRT
+			}
+			IRT = {
+				declare_war_on = {
+					target = GMR
+					type = annex_everything
+				}
+			}
+		}
+		if = {
+			limit = {
+				country_exists = KRT
+			}
+			KRT = {
+				declare_war_on = {
+					target = GMR
+					type = annex_everything
+				}
+			}
+		}
+		if = {
+			limit = {
+				country_exists = NAS
+			}
+			NAS = {
+				declare_war_on = {
+					target = GMR
+					type = annex_everything
+				}
+			}
+		}
+		if = {
+			limit = {
+				country_exists = KAL
+			}
+			KAL = {
+				declare_war_on = {
+					target = GMR
+					type = annex_everything
+				}
+			}
+		}
+		if = {
+			limit = {
+				country_exists = FEL
+			}
+			FEL = {
+				declare_war_on = {
+					target = GMR
+					type = annex_everything
+				}
+			}
+		}
+		if = {
+			limit = {
+				country_exists = TRI
+			}
+			TRI = {
+				declare_war_on = {
+					target = GMR
+					type = annex_everything
+				}
+			}
+		}
+		if = {
+			limit = {
+				country_exists = NAV
+			}
+			NAV = {
+				declare_war_on = {
+					target = GMR
+					type = annex_everything
+				}
 			}
 		}
 	}

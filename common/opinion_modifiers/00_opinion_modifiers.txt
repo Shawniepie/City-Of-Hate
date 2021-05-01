@@ -217,6 +217,11 @@ opinion_modifiers = {
 		value = -200
 	}
 	
+	IR_puritan_vermin_trade = {
+		value = -200
+		trade = yes
+	}
+	
 	IR_puritan_extremists = {
 		value = -10
 	}
@@ -225,10 +230,20 @@ opinion_modifiers = {
 		value = -200
 	}
 	
+	IR_puritan_butchers_trade = {
+		value = -200
+		trade = yes
+	}
+	
 	IR_wrong_puritans = {
 		value = -200
 	}
 	
+	IR_wrong_puritans_trade = {
+		value = -200
+		trade = yes
+	}
+
 	IR_same_faith = {
 		value = 5
 	}

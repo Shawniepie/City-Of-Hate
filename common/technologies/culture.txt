@@ -28,16 +28,9 @@ technologies = {
 		path = {
 			leads_to_tech = tech_wheel
 		}
-		path = {
-			leads_to_tech = tech_loom
-		}
 		
 		folder = {
 			name = culture_folder
-			position = { x = 0 y = 0 }
-		}
-		folder = {
-			name = landcombat_folder
 			position = { x = 0 y = 0 }
 		}
 		
@@ -187,7 +180,7 @@ technologies = {
 		}
 		
 		categories = {
-            _tech
+            tribal_tech
         }
 		
 		ai_will_do = {
@@ -475,11 +468,6 @@ technologies = {
 			
 		}
 		
-		enable_building = {
-            building = forge
-            level = 1
-        }
-		
 		path = {
 			leads_to_tech = tech_forging
 		}
@@ -643,11 +631,6 @@ technologies = {
 		on_research_complete = {
 			
 		}
-		
-		enable_building = {
-            building = forge
-            level = 2
-        }
 		
 		path = {
 			leads_to_tech = tech_medieval_development
@@ -925,11 +908,6 @@ technologies = {
 		on_research_complete = {
 			
 		}
-		
-		enable_building = {
-            building = forge
-            level = 3
-        }
 		
 		path = {
 			leads_to_tech = tech_steel
@@ -1426,10 +1404,6 @@ technologies = {
 		}
 		
 		enable_building = {
-            building = forge
-            level = 4
-        }
-		enable_building = {
             building = bunker
             level = 5
         }
@@ -1466,11 +1440,6 @@ technologies = {
 		on_research_complete = {
 			
 		}
-		
-		enable_building = {
-            building = forge
-            level = 4
-        }
 		
 		path = {
 			leads_to_tech = tech_renaissance_thought
@@ -1951,9 +1920,7 @@ technologies = {
 	
 	tech_national_sovereignty = {
 		
-		enemy_justify_war_goal_time = 0.35
-		add_state_core = { all_owned_state }
-		
+		enemy_justify_war_goal_time = 0.35	
 		
 		research_cost = 2
 		

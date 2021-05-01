@@ -85,3 +85,1710 @@ country_event = {#Defeat in Gielhasser
 	}
 }
 
+### Schneefilde focus tree events
+
+country_event = {#Nobility end their struggle
+	id = snf.5
+	title = snf.5.t
+	desc = snf.5.d
+	picture = GFX_report_event_molotov_ribentrop_handshake
+	
+	fire_only_once = yes
+	
+	trigger = {
+	tag = SNF
+	UNG = {
+	has_country_flag = UNG_schneefilde_sacked
+	      }
+	}
+	
+	mean_time_to_happen = {
+		days = 20
+	}
+	
+	option = {#Finally!
+		name = snf.5.a
+		add_popularity = {
+			ideology = monarchy_absolute
+			popularity = 0.05
+		}
+		add_popularity = {
+			ideology = republic_peasant
+			popularity = 0.02
+		}
+		swap_ideas = {
+		remove_idea = SNF_entrenched_society
+		add_idea = SNF_opposing_nobility
+		}
+	}
+}
+
+country_event = {#New Opportunity - Our leap onto the stage
+	id = snf.6
+	title = snf.6.t
+	desc = snf.6.d
+	picture = GFX_report_event_fascist_speech
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {#Curtail Nobility
+		name = snf.6.a
+		set_country_flag = SNF_curtail_nobility
+		add_war_support = 0.05
+		
+	}
+	option = {#Gain support from the commoners
+		name = snf.6.b
+		set_country_flag = SNF_folksprintz
+		add_stability = 0.05
+	}
+}
+
+country_event = {#Schneefilde asks support from Faustburg 
+	id = snf.7
+	title = snf.7.t
+	desc = snf.7.d
+	picture = GFX_report_event_hitler_handshake
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {#Support Otto Kolb's legitimacy
+		name = snf.7.a
+		ai_chance = {
+			factor = 10
+			modifier = {
+				has_government = republic_aristocrat
+				factor = 0
+			}
+		}
+		SNF = {
+		country_event = {
+			id = snf.8
+			days = 2
+			}
+		custom_effect_tooltip = FPT_increase_union_loyalty_tt
+				add_to_variable = {
+					var = FPT_union_loyalty
+					value = 3
+				}
+		}
+		
+	}
+	option = {#no, we don't care.
+		name = snf.7.b
+		ai_chance = {
+			factor = 10
+			modifier = {
+				OR = {
+				has_government = monarchy_absolute
+				has_government = monarchy_constitutional
+				}
+				factor = 0
+			}
+		}
+		SNF = {
+		country_event = {
+			id = snf.9
+			days = 2
+			}
+		custom_effect_tooltip = FPT_decrease_union_loyalty_tt
+				add_to_variable = {
+					var = FPT_union_loyalty
+					value = -3
+				}
+		}
+	}
+	option = {#actually, fuck you.
+		name = snf.7.c
+		trigger = {
+			UNG = {
+			has_government = republic_aristocrat
+			}
+		}
+		ai_chance = {
+			factor = 1
+		}
+		SNF = {
+		country_event = {
+			id = snf.10
+			days = 5
+			}
+		}
+	}
+}
+
+country_event = {#Otto gains legitimacy
+	id = snf.8
+	title = snf.8.t
+	desc = snf.8.d
+	picture = GFX_report_event_hol_cabinet_gerbrandy
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {#yay
+		name = snf.8.a
+		if = {
+		   limit = { has_idea = SNF_vilified_nobility }
+		swap_ideas = {
+		remove_idea = SNF_vilified_nobility
+		add_idea = SNF_dwindling_nobility
+		}
+		}
+		if = {
+		limit = { has_idea = SNF_wary_of_nobles }
+		swap_ideas = {
+		remove_idea = SNF_wary_of_nobles
+		add_idea = SNF_worried_nobles
+		}
+		}
+		
+	}
+}
+
+country_event = {#Otto gains nothing
+	id = snf.9
+	title = snf.9.t
+	desc = snf.9.d
+	picture = GFX_report_event_indonesia_handover
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {#oh
+		name = snf.9.a
+		add_political_power = -50
+		
+	}
+}
+
+country_event = {#Otto gets screwed over
+	id = snf.10
+	title = snf.10.t
+	desc = snf.10.d
+	picture = GFX_report_event_spr_falangist_troops2
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {#oh, no
+		name = snf.10.a
+		hidden_effect = {
+		remove_mission = SNF_drecht_hiding
+		remove_mission = SNF_drecht_consolidation
+		}
+		add_popularity = {
+				ideology = republic_aristocrat
+				popularity = 0.20
+			}
+		activate_mission = SNF_drecht_gathering_nobles
+		set_country_flag = SNF_drecht_final_push
+		
+	}
+}
+
+country_event = {#Otto recovers from getting screwed over
+	id = snf.11
+	title = snf.11.t
+	desc = snf.11.d
+	picture = GFX_report_event_spr_anarchist_uprising
+	
+	fire_only_once = yes
+	
+	trigger = {
+	tag = SNF
+	has_country_flag = SNF_drecht_final_push
+	has_country_flag = SNF_Drecht_opportunity_flag
+	republic_aristocrat < 0.30
+	NOT = {
+	has_active_mission = SNF_drecht_gathering_nobles
+	}
+	}
+
+	
+	option = {#crisis averted
+		name = snf.11.a
+		add_to_variable = {
+				var = HLZ.FPT_stahlhof_loyalty
+				value = 5
+			}
+				custom_effect_tooltip = FPT_increase_stahlhof_loyalty_large_tt
+		add_popularity = {
+				ideology = republic_aristocrat
+				popularity = -0.20
+			}
+		clr_country_flag  = SNF_Drecht_opportunity_flag
+		clr_country_flag  = SNF_drecht_final_push
+		add_stability = -0.05
+		hidden_effect = {
+		remove_ideas = {
+		SNF_entrenched_society
+		SNF_curtailed_nobility
+		SNF_opposing_nobility
+		SNF_vilified_nobility
+		SNF_dwindling_nobility
+		SNF_opposed_nobles
+		SNF_wary_of_nobles
+		SNF_worried_nobles
+			}
+		}
+	}
+}
+
+country_event = {#Nobility dealt with
+	id = snf.12
+	title = snf.12.t
+	desc = snf.12.d
+	picture = GFX_report_event_spain_civil_war_volunteers_02
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {#owned B)
+		name = snf.12.a
+		remove_ideas = {
+		SNF_vilified_nobility
+		SNF_dwindling_nobility
+		SNF_wary_of_nobles
+		SNF_worried_nobles
+		}
+
+		hidden_effect = {
+			remove_mission = SNF_drecht_gathering_nobles
+			remove_mission = SNF_drecht_consolidation
+			remove_mission = SNF_drecht_hiding
+			}
+		if = {
+			limit = {
+				has_country_flag = SNF_fuck_drecht
+			}
+			add_popularity = {
+			ideology = republic_aristocrat
+			popularity = -0.09
+			}
+			clr_country_flag  = SNF_Drecht_opportunity_flag
+		}
+		if = {
+			limit = {
+				has_country_flag = SNF_friends_drecht
+			}
+			clr_country_flag  = SNF_Drecht_opportunity_flag
+			set_country_flag = SNF_Drecht_advisor
+			add_political_power = 20
+		}
+	}
+}
+
+country_event = {#Nobility doesn't surrender
+	id = snf.13
+	title = snf.13.t
+	desc = snf.13.d
+	picture = GFX_report_event_spr_falangist_troops2
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {#owned B)
+		name = snf.13.a
+		hidden_effect = {
+		remove_mission = SNF_drecht_hiding
+		remove_mission = SNF_drecht_consolidation
+		}
+		add_popularity = {
+				ideology = republic_aristocrat
+				popularity = 0.20
+			}
+		activate_mission = SNF_drecht_gathering_nobles
+		set_country_flag = SNF_drecht_final_push
+	}
+}
+####################################
+country_event = {#What we gonna do with Drecht?
+	id = snf.14
+	title = snf.14.t
+	desc = snf.14.d
+	picture = GFX_report_event_military_planning
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {#no cooperation
+		name = snf.14.a
+		set_country_flag = SNF_fuck_drecht
+	}
+	option = {#maybe reconcile?
+		name = snf.14.b
+		set_country_flag = SNF_friends_drecht
+	}
+}
+
+country_event = {#Drecht Surrenders
+	id = snf.15
+	title = snf.15.t
+	desc = snf.15.d
+	picture = GFX_report_event_chamberlain_announce
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {#woah
+		name = snf.15.a
+		clr_country_flag  = SNF_Drecht_opportunity_flag
+	}
+}
+country_event = {#Drecht befriended
+	id = snf.16
+	title = snf.16.t
+	desc = snf.16.d
+	picture = GFX_report_event_molotov_ribentrop_handshake
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {#woah
+		name = snf.16.a
+		clr_country_flag  = SNF_Drecht_opportunity_flag
+		set_country_flag = SNF_Drecht_advisor
+	}
+}
+###############
+country_event = {#Perkav warning
+	id = snf.17
+	title = snf.17.t
+	desc = snf.17.d
+	picture = GFX_report_event_military_planning
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {#oh no
+		name = snf.17.a
+	}
+}
+#################
+country_event = {#Wertzvorde supplies
+	id = snf.18
+	title = snf.18.t
+	desc = snf.18.d
+	picture = GFX_report_event_hitler_handshake
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {#nice
+		name = snf.18.a
+		ai_chance = {
+			factor = 40
+		}
+		custom_effect_tooltip = retake_nevedenn_tooltip
+		set_country_flag = SNF_retake_nevedenn_flag
+		420 = {
+		add_claim_by = WSZ
+		}
+		add_opinion_modifier = {
+					target = SNF
+					modifier = supportive_opinion
+				}
+		add_equipment_to_stockpile = {
+   		type = infantry_equipment_0
+   		amount = 500
+		}
+		add_equipment_to_stockpile = {
+   		type = light_cavalry_equipment_0
+   		amount = 250
+		}
+		SNF = {
+			country_event = {
+			id = snf.19
+			days = 1
+			}
+			}
+	}
+	option = {#no
+		name = snf.18.b
+		ai_chance = {
+			factor = 0
+		}
+		SNF = {
+		country_event = {
+			id = snf.20
+			days = 1
+			}
+		}
+	}
+}
+country_event = {#Wertzvorde agrees
+	id = snf.19
+	title = snf.19.t
+	desc = snf.19.d
+	picture = GFX_report_event_hitler_handshake
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {#good!
+	name = snf.19.a
+	add_opinion_modifier = {
+					target = WSZ
+					modifier = supportive_opinion
+				}
+	add_equipment_to_stockpile = {
+   			type = infantry_equipment_0
+   			amount = -500
+			}
+			add_equipment_to_stockpile = {
+   			type = light_cavalry_equipment_0
+   			amount = -250
+			}
+	}
+}
+country_event = {#Wertzvorde declines
+	id = snf.20
+	title = snf.20.t
+	desc = snf.20.d
+	picture = GFX_report_event_hitler_handshake
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {#i guess we gotta do it ourselves
+	name = snf.20.a
+	custom_effect_tooltip = retake_nevedenn_tooltip
+	set_country_flag = SNF_retake_nevedenn_flag
+	420 = {
+		add_claim_by = SNF
+		}
+	}
+}
+###
+country_event = {#Gain cores since funny war
+	id = snf.21
+	title = snf.21.t
+	desc = snf.21.d
+	picture = GFX_report_event_spr_anarchist_uprising
+	
+	fire_only_once = yes
+	
+	trigger = {
+	tag = SNF
+	UNG = {
+	has_war_with = PRK
+	}
+	SNF = {
+	has_completed_focus = SNF_southern_reclamation
+	}
+	}
+	
+	option = {#mfw
+	name = snf.21.a
+	every_state = {
+			limit = {
+        			is_owned_by = PRK
+     			is_claimed_by = SNF
+    			}
+    		add_core_of = SNF
+		}
+	set_country_flag = SNF_SPK_WAR
+	}
+}
+##################
+country_event = {#Schneefilde getting mildy annoying for Perkav
+	id = snf.22
+	title = snf.22.t
+	desc = snf.22.d
+	picture = GFX_report_event_spr_falangist_troops2
+	fire_only_once = yes
+	
+	trigger = {
+	tag = PRK
+	SNF = {
+	owns_state = 416
+	}
+	UNG = {
+	OR = {
+	has_completed_focus = UNG_appeasement
+	has_completed_focus = UNG_ally_perkavland
+	has_completed_focus = UNG_vassalive_perkavland
+	}
+	}
+	}
+	
+	option = {#Union wtf please do something
+	name = snf.22.a
+	ai_chance = {
+			factor = 20
+			}
+	UNG = {
+		country_event = {
+		id = snf.23
+		days = 2
+			}
+		}
+	}
+	option = {#We kinda don't care
+	name = snf.22.b
+	ai_chance = {
+			factor = 10
+			modifier = {
+				has_country_leader = {
+    				name = "Wendelin Krell"
+  				ruling_only = yes
+				}
+				UNG = {
+				has_completed_focus = UNG_stabilize_perkavland
+				}
+				factor = 40
+			}
+		}
+	add_war_support = 0.10 ### Should probably also upset one of the warlords who owns Karczyk but he also looses alot of influence
+	}
+}
+country_event = {#Faustburg finds out about these outrageos conquests
+	id = snf.23
+	title = snf.23.t
+	desc = snf.23.d
+	picture = GFX_report_event_chamberlain_announce
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {#Schneefilde wtf stop
+	name = snf.23.a
+	ai_chance = {
+			factor = 20
+			modifier = {
+				has_government = republic_aristocrat
+				factor = 20
+			}
+			modifier = {
+				has_completed_focus = UNG_ally_perkavland
+				factor = 25
+			}
+			}
+	SNF = {
+		country_event = {
+		id = snf.24
+		days = 1
+			}
+	custom_effect_tooltip = FPT_decrease_union_loyalty_tt
+				add_to_variable = {
+					var = FPT_union_loyalty
+					value = -3
+				}
+		}
+	}
+	option = {#Your problem Perkav
+	name = snf.23.b
+	ai_chance = {
+			factor = 10
+			modifier = {
+				has_government = monarchy_absolute
+				factor = 20
+			}
+			modifier = {
+				has_completed_focus = UNG_vassalive_perkavland
+				factor = 25
+			}
+		}
+	PRK = {
+		country_event = {
+		id = snf.30
+		days = 2
+			}
+		}
+	PRK = {
+				add_opinion_modifier = {
+					target = UNG
+					modifier = UNG_tensions
+				}
+			}
+	add_stability = 0.05
+	}
+}
+country_event = {#Schneefilde please stop
+	id = snf.24
+	title = snf.24.t
+	desc = snf.24.d
+	picture = GFX_report_event_chamberlain_announce
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {#no
+	name = snf.24.a
+	ai_chance = {
+			factor = 20
+			modifier = {
+				has_country_leader = {
+    				name = "Otto Kolb"
+  				ruling_only = yes
+				}
+				factor = 25
+			}
+			}
+	custom_effect_tooltip = FPT_increase_stahlhof_loyalty_tt
+			add_to_variable = {
+				var = FPT_stahlhof_loyalty
+				value = 3
+			}
+	UNG = {
+		country_event = {
+		id = snf.25
+		days = 1
+			}
+		}
+	}
+	option = {#ok sure
+	name = snf.24.b
+	ai_chance = {
+			factor = 20
+			modifier = {
+				has_country_leader = {
+    				name = "Ulrich Drecht"
+  				ruling_only = yes
+				}
+				factor = 25
+			}
+			}
+	set_country_flag = SNF_UNG_said_no
+	UNG = {
+		country_event = {
+		id = snf.26
+		days = 1
+			}
+		}
+	}
+	option = {#gib land
+	name = snf.24.c
+	ai_chance = {
+			factor = 20
+			modifier = {
+				has_country_leader = {
+    				name = "Otto Kolb"
+  				ruling_only = yes
+				}
+				factor = 40
+			}
+			modifier = {
+				has_country_leader = {
+    				name = "Ulrich Drecht"
+  				ruling_only = yes
+				}
+				factor = 40
+			}
+			}
+	UNG = {
+		country_event = {
+		id = snf.27
+		days = 1
+			}
+		}
+	}
+}
+country_event = {#Schneefilde says no
+	id = snf.25
+	title = snf.25.t
+	desc = snf.25.d
+	picture = GFX_report_event_dead_soldiers
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {#demand payment
+	name = snf.25.a
+	ai_chance = {
+			factor = 20
+			modifier = {
+				has_government = republic_aristocrat
+				factor = 20
+			}
+		}
+	PRK = {
+		country_event = {
+		id = snf.29
+		days = 2
+			}
+		}
+	}
+	option = {#don't care tbh
+	name = snf.25.b
+	ai_chance = {
+			factor = 20
+			modifier = {
+				has_government = monarchy_absolute
+				factor = 20
+			}
+		}
+	PRK = {
+		country_event = {
+		id = snf.30
+		days = 2
+			}
+		}
+	}
+	option = {#territorial negotiations.
+	name = snf.25.c
+	ai_chance = {
+			factor = 20
+			modifier = {
+				has_government = monarchy_constitutional
+				factor = 20
+			}
+		}
+	PRK = {
+		country_event = {
+		id = snf.31
+		days = 2
+			}
+		}
+	}
+	}
+#
+country_event = {#Schneefilde stops
+	id = snf.26
+	title = snf.26.t
+	desc = snf.26.d
+	picture = GFX_report_event_spr_anarchist_uprising
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {#yay
+	name = snf.26.a
+	add_political_power = 50
+	PRK = {
+		country_event = {
+		id = snf.32
+		days = 2
+			}
+		}
+	}
+}
+country_event = {#Schneefilde demands territory
+	id = snf.27
+	title = snf.27.t
+	desc = snf.27.d
+	picture = GFX_report_event_dutch_soldiers_indonesia
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {#we can try
+	name = snf.27.a
+	ai_chance = {
+			factor = 20
+			modifier = {
+				has_government = monarchy_constitutional
+				factor = 20
+			}
+		}
+	PRK = {
+		country_event = {
+		id = snf.31
+		days = 2
+			}
+		}
+	}
+	
+	option = {#don't care tbh
+	name = snf.27.b
+	ai_chance = {
+			factor = 20
+			modifier = {
+				has_government = monarchy_absolute
+				factor = 20
+			}
+		}
+	PRK = {
+		country_event = {
+		id = snf.30
+		days = 2
+			}
+		}
+	}
+}
+country_event = {#Schneefilde gets taxed
+	id = snf.28
+	title = snf.28.t
+	desc = snf.28.d
+	picture = GFX_report_event_chamberlain_announce
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {#kinda sucks
+	name = snf.28.a
+	ai_chance = {
+			factor = 20
+			modifier = {
+				has_country_leader = {
+    				name = "Otto Kolb"
+  				ruling_only = yes
+				}
+				factor = 40
+			}
+		}
+	add_political_power = -50
+	custom_effect_tooltip = FPT_increase_stahlhof_loyalty_tt
+			add_to_variable = {
+				var = FPT_stahlhof_loyalty
+				value = 3
+			}
+	}
+	option = {#actually, we are sorry.
+	name = snf.28.b
+	ai_chance = {
+			factor = 20
+			}
+	remove_ideas = SNF_extra_taxes
+	set_country_flag = SNF_UNG_said_no
+	UNG = {
+		country_event = {
+		id = snf.26
+		days = 1
+			}
+		}
+	}
+}
+country_event = {#Repayment offer? Perkav
+	id = snf.29
+	title = snf.29.t
+	desc = snf.29.d
+	picture = GFX_report_event_chamberlain_announce
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {#sure
+	name = snf.28.a
+	ai_chance = {
+			factor = 20
+		}
+	add_ideas = SNF_repayment
+	SNF = {
+	add_ideas = SNF_extra_taxes
+		country_event = {
+		id = snf.28
+		days = 1
+			}
+		}
+	}
+	option = {#no
+	name = snf.28.b
+	ai_chance = {
+			factor = 1
+			}
+		country_event = {
+		id = snf.30
+		days = 1
+			}
+		}
+	}
+country_event = {#Perkav mad
+	id = snf.30
+	title = snf.30.t
+	desc = snf.30.d
+	picture = GFX_report_event_spr_falangist_troops2
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {#we do a little war 
+	name = snf.30.a
+	ai_chance = {
+			factor = 1
+		}
+	##uh, um uhh
+	declare_war_on = {
+				target = SNF
+				type = annex_everything
+			}
+	}
+	option = {#give up
+	name = snf.30.b
+	ai_chance = {
+			factor = 20
+			}
+	}
+	option = {#leave treaties
+	name = snf.30.c
+	trigger = {
+	OR = {
+	is_in_faction_with = UNG
+	has_non_aggression_pact_with = UNG
+	}
+	}
+	ai_chance = {
+			factor = 40
+			}
+	if = {
+	limit {
+	is_in_faction_with = UNG
+	}
+	leave_faction = yes
+	}
+	if = {
+	limit {
+	has_non_aggression_pact_with = UNG
+	}
+	diplomatic_relation = {
+   	 country = UNG
+  	  relation = non_aggression_pact
+  	  active = no
+	}
+	}
+	}
+}
+country_event = {#Territorial Negotiations - Perkav
+	id = snf.31
+	title = snf.31.t
+	desc = snf.31.d
+	picture = GFX_report_event_chamberlain_announce
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {#Give them everything
+	name = snf.31.a
+	ai_chance = {
+			factor = 1
+		}
+	UNG = {
+		country_event = {
+		id = snf.32
+		days = 1
+			}
+		}
+	}
+	option = {#Keep current borders
+	name = snf.31.b
+	ai_chance = {
+			factor = 20
+		}
+	UNG = {
+		country_event = {
+		id = snf.33
+		days = 1
+			}
+		}
+	}
+	option = {#demand territory up to Lienihafen
+	name = snf.31.c
+	ai_chance = {
+			factor = 40
+		}
+	UNG = {
+		country_event = {
+		id = snf.34
+		days = 1
+			}
+		}
+	}
+}
+country_event = {#Perlav surrenders everything
+	id = snf.32
+	title = snf.32.t
+	desc = snf.32.d
+	picture = GFX_report_event_chamberlain_announce
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {#nice
+	name = snf.32.a
+	ai_chance = {
+			factor = 10
+		}
+	every_state = {
+			limit = {
+        			is_owned_by = PRK
+     			is_claimed_by = SNF
+    			}
+    		add_core_of = SNF
+    		transfer_state = PREV
+		}
+	}
+}
+country_event = {#Perkav ask for status quo
+	id = snf.33
+	title = snf.33.t
+	desc = snf.33.d
+	picture = GFX_report_event_chamberlain_announce
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {#sure
+	name = snf.33.a
+	ai_chance = {
+			factor = 15
+		}
+	SNF = {
+		country_event = {
+		id = snf.35
+		days = 1
+			}
+		}
+	}
+	option = {#don't care tbh
+	name = snf.33.b
+	ai_chance = {
+			factor = 10
+			modifier = {
+				has_government = monarchy_absolute
+				factor = 20
+			}
+		}
+	PRK = {
+		country_event = {
+		id = snf.30
+		days = 2
+			}
+		}
+	}
+}
+country_event = {#Perkav asks us to surrender lands
+	id = snf.34
+	title = snf.34.t
+	desc = snf.34.d
+	picture = GFX_report_event_chamberlain_announce
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {#sure
+	name = snf.34.a
+	ai_chance = {
+			factor = 5
+		}
+	SNF = {
+		country_event = {
+		id = snf.36
+		days = 1
+			}
+		}
+	}
+	option = {#don't care tbh
+	name = snf.34.b
+	ai_chance = {
+			factor = 10
+			modifier = {
+				has_government = monarchy_absolute
+				factor = 20
+			}
+		}
+	PRK = {
+		country_event = {
+		id = snf.30
+		days = 2
+			}
+		}
+	}
+}
+country_event = {#SNF demanded to stop
+	id = snf.35
+	title = snf.35.t
+	desc = snf.35.d
+	picture = GFX_report_event_spr_anarchist_uprising
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {#sure
+	name = snf.35.a
+	ai_chance = {
+			factor = 25
+		}
+	set_country_flag = SNF_UNG_said_no
+	UNG = {
+		country_event = {
+		id = snf.26
+		days = 1
+			}
+		}
+	
+	}
+	option = {#don't care tbh
+	name = snf.35.b
+	ai_chance = {
+			factor = 10
+		}
+	PRK = {
+		country_event = {
+		id = snf.30
+		days = 2
+			}
+		}
+	}
+}
+country_event = {#SNF demanded to stop and concede
+	id = snf.36
+	title = snf.36.t
+	desc = snf.36.d
+	picture = GFX_report_event_spr_anarchist_uprising
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {#sure
+	name = snf.36.a
+	ai_chance = {
+			factor = 5
+		}
+	set_country_flag = SNF_UNG_said_no
+	UNG = {
+		country_event = {
+		id = snf.26
+		days = 1
+			}
+		}
+	416 = {
+	add_core_of = PRK
+	}
+	621 = {
+	add_core_of = PRK
+	}
+	630 = {
+	add_core_of = PRK
+	}
+	650 = {
+	add_core_of = PRK
+	}
+    	transfer_state = 416
+    	transfer_state = 621
+    	transfer_state = 630
+    	transfer_state = 650
+	}
+	option = {#don't care tbh
+	name = snf.36.b
+	ai_chance = {
+			factor = 10
+		}
+	PRK = {
+		country_event = {
+		id = snf.30
+		days = 2
+			}
+		}
+	}
+}
+################
+country_event = {#Drecht wins
+	id = snf.100
+	title = snf.100.t
+	desc = snf.100.d
+	picture = GFX_report_event_chamberlain_announce
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {#woah
+		name = snf.100.a
+		clr_country_flag  = SNF_Drecht_opportunity_flag
+		clr_country_flag  = SNF_curtail_nobility
+		clr_country_flag  = SNF_folksprintz
+		clr_country_flag  = SNF_fuck_drecht
+		clr_country_flag  = SNF_friends_drecht
+		set_politics = {
+			ruling_party = republic_aristocrat
+			}
+			add_popularity = {
+				ideology = republic_aristocrat
+				popularity = 0.15
+			}
+			add_stability = 0.15
+			hidden_effect = {
+			remove_ideas = SNF_entrenched_society
+			remove_ideas = SNF_curtailed_nobility
+			remove_ideas = SNF_opposing_nobility
+			remove_ideas = SNF_vilified_nobility
+			remove_ideas = SNF_dwindling_nobility
+			remove_ideas = SNF_opposed_nobles
+			remove_ideas = SNF_wary_of_nobles
+			remove_ideas = SNF_worried_nobles
+			remove_unit_leader = 11
+			}
+		
+	}
+	option = {#no way
+		name = snf.100.b
+		trigger = {
+			has_completed_focus = SNF_demand_loyalty_knights
+		}
+		add_stability = -0.1
+			add_popularity = {
+				ideology = monarchy_absolute
+				popularity = 0.05
+			}
+			random_list = {
+				60 = {
+					country_event = {
+						id = snf.101
+					}
+				}
+				40 = {
+					country_event = {
+						id = snf.102
+					}
+				}
+			}
+		
+	}
+	
+}
+
+country_event = {#Nobility loses
+	id = snf.101
+	title = snf.101.t
+	desc = snf.101.d
+	picture = GFX_report_event_spr_anarchist_uprising
+	
+	
+	is_triggered_only = yes
+	
+	option = {#saved
+		name = snf.101.a
+		clr_country_flag  = SNF_Drecht_opportunity_flag
+		set_politics = {
+			ruling_party = monarchy_absolute
+			}
+			add_popularity = {
+				ideology = monarchy_absolute
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = republic_aristocrat
+				popularity = -0.10
+			}
+			add_stability = 0.05
+			hidden_effect = {
+			remove_ideas = SNF_entrenched_society
+			remove_ideas = SNF_curtailed_nobility
+			remove_ideas = SNF_opposing_nobility
+			remove_ideas = SNF_vilified_nobility
+			remove_ideas = SNF_dwindling_nobility
+			remove_ideas = SNF_opposed_nobles
+			remove_ideas = SNF_wary_of_nobles
+			remove_ideas = SNF_worried_nobles
+			}
+		
+	}
+	
+}
+country_event = {#Nobility wins
+	id = snf.102
+	title = snf.102.t
+	desc = snf.102.d
+	picture = GFX_report_event_spr_falangist_troops2
+	
+	
+	is_triggered_only = yes
+	
+	option = {#saved
+		name = snf.102.a
+		clr_country_flag  = SNF_Drecht_opportunity_flag
+		clr_country_flag  = SNF_curtail_nobility
+		clr_country_flag  = SNF_folksprintz
+		clr_country_flag  = SNF_fuck_drecht
+		clr_country_flag  = SNF_friends_drecht
+		set_politics = {
+			ruling_party = republic_aristocrat
+			}
+			add_popularity = {
+				ideology = republic_aristocrat
+				popularity = 0.15
+			}
+			add_stability = -0.05
+			hidden_effect = {
+			remove_ideas = SNF_entrenched_society
+			remove_ideas = SNF_curtailed_nobility
+			remove_ideas = SNF_opposing_nobility
+			remove_ideas = SNF_vilified_nobility
+			remove_ideas = SNF_dwindling_nobility
+			remove_ideas = SNF_opposed_nobles
+			remove_ideas = SNF_wary_of_nobles
+			remove_ideas = SNF_worried_nobles
+			remove_unit_leader = 11
+			}
+		
+	}
+	
+}
+##############################################
+#BORDER CONFLICTS WITH PERKAV##################
+##############################################
+add_namespace = schneefilde_invade
+country_event = {#Lienihafen Victory
+	id = schneefilde_invade.1
+	title = schneefilde_invade.1.t
+	desc = schneefilde_invade.1.d
+	
+	picture = GFX_report_event_dutch_soldiers_indonesia
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = schneefilde_invade.1.a
+		add_political_power = 15
+		transfer_state = 418
+		add_state_core = 418
+		418 = {
+			set_state_name = "Lienihafen"
+		}
+		set_province_name = {
+			id = 9478
+			name = "Lienihafen"
+		}
+	}
+}
+
+country_event = {#Lienihafen - Defeat
+	id = schneefilde_invade.2
+	title = schneefilde_invade.2.t
+	desc = schneefilde_invade.2.d
+	
+	picture = GFX_report_event_dead_soldiers
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = schneefilde_invade.2.a
+		add_political_power = -25
+	}
+}
+
+country_event = {#Lienihafen - Draw
+	id = schneefilde_invade.3
+	title = schneefilde_invade.3.t
+	desc = schneefilde_invade.3.d
+	
+	picture = GFX_report_event_soldiers_in_france
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = schneefilde_invade.3.a
+		add_political_power = -15
+	}
+}
+
+country_event = {#Perkav - Victory
+	id = schneefilde_invade.4
+	title = schneefilde_invade.4.t
+	desc = schneefilde_invade.4.d
+	
+	picture = GFX_report_event_albanian_partisans
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = schneefilde_invade.4.a
+		add_political_power = 25
+	}
+}
+
+country_event = {#Perkav - Defeat
+	id = schneefilde_invade.5
+	title = schneefilde_invade.5.t
+	desc = schneefilde_invade.5.d
+	
+	picture = GFX_report_event_dead_soldiers
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = schneefilde_invade.5.a
+		add_political_power = -50
+		add_stability = -0.05
+	}
+}
+
+country_event = {#Perkav - Draw
+	id = schneefilde_invade.6
+	title = schneefilde_invade.6.t
+	desc = schneefilde_invade.6.d
+	
+	picture = GFX_report_event_soldiers_in_france
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = schneefilde_invade.6.a
+		add_political_power = 15
+	}
+}
+
+country_event = {#Namweis Victory
+	id = schneefilde_invade.7
+	title = schneefilde_invade.7.t
+	desc = schneefilde_invade.7.d
+	
+	picture = GFX_report_event_dutch_soldiers_indonesia
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = schneefilde_invade.7.a
+		add_political_power = 15
+		transfer_state = 622
+		add_state_core = 622
+		622 = {
+			set_state_name = "Namweis"
+		}
+	}
+}
+country_event = {#Gecsin Victory
+	id = schneefilde_invade.8
+	title = schneefilde_invade.7.t
+	desc = schneefilde_invade.7.d
+	
+	picture = GFX_report_event_dutch_soldiers_indonesia
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = schneefilde_invade.7.a
+		add_political_power = 15
+		transfer_state = 642
+		add_state_core = 642
+		642 = {
+			set_state_name = "Gecsin"
+		}
+	}
+}
+country_event = {#Krakincs Victory
+	id = schneefilde_invade.9
+	title = schneefilde_invade.7.t
+	desc = schneefilde_invade.7.d
+	
+	picture = GFX_report_event_dutch_soldiers_indonesia
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = schneefilde_invade.7.a
+		add_political_power = 15
+		transfer_state = 629
+		add_state_core = 629
+		629 = {
+			set_state_name = "Krakincs"
+		}
+	}
+}
+country_event = {#Vrizim Victory
+	id = schneefilde_invade.10
+	title = schneefilde_invade.7.t
+	desc = schneefilde_invade.7.d
+	
+	picture = GFX_report_event_dutch_soldiers_indonesia
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = schneefilde_invade.7.a
+		add_political_power = 15
+		transfer_state = 621
+		add_state_core = 621
+		621 = {
+			set_state_name = "Vrizim"
+		}
+	}
+}
+country_event = {#Pashinz Victory
+	id = schneefilde_invade.11
+	title = schneefilde_invade.7.t
+	desc = schneefilde_invade.7.d
+	
+	picture = GFX_report_event_dutch_soldiers_indonesia
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = schneefilde_invade.7.a
+		add_political_power = 15
+		transfer_state = 630
+		add_state_core = 630
+		630 = {
+			set_state_name = "Pashinz"
+		}
+	}
+}
+country_event = {#stufen Victory
+	id = schneefilde_invade.12
+	title = schneefilde_invade.7.t
+	desc = schneefilde_invade.7.d
+	
+	picture = GFX_report_event_dutch_soldiers_indonesia
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = schneefilde_invade.7.a
+		add_political_power = 15
+		transfer_state = 650
+		add_state_core = 650
+		650 = {
+			set_state_name = "Stufen"
+		}
+	}
+}
+country_event = {#Karistadt Victory
+	id = schneefilde_invade.13
+	title = schneefilde_invade.13.t
+	desc = schneefilde_invade.13.d
+	
+	picture = GFX_report_event_dutch_soldiers_indonesia
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = schneefilde_invade.13.a
+		add_political_power = 15
+		transfer_state = 416
+		add_state_core = 416
+		416 = {
+			set_state_name = "Karistadt"
+		}
+		set_province_name = {
+			id = 4944
+			name = "Karistadt"
+		}
+	}
+}
+country_event = {#Tinash Victory
+	id = schneefilde_invade.14
+	title = schneefilde_invade.7.t
+	desc = schneefilde_invade.7.d
+	
+	picture = GFX_report_event_dutch_soldiers_indonesia
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = schneefilde_invade.7.a
+		add_political_power = 15
+		transfer_state = 620
+		add_state_core = 620
+		620 = {
+			set_state_name = "Tinash"
+		}
+	}
+}
+country_event = {#Scheidin Victory
+	id = schneefilde_invade.15
+	title = schneefilde_invade.7.t
+	desc = schneefilde_invade.7.d
+	
+	picture = GFX_report_event_dutch_soldiers_indonesia
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = schneefilde_invade.7.a
+		add_political_power = 15
+		transfer_state = 623
+		add_state_core = 623
+		623 = {
+			set_state_name = "Scheidin"
+		}
+	}
+}
+country_event = {#Flankenin Victory
+	id = schneefilde_invade.16
+	title = schneefilde_invade.7.t
+	desc = schneefilde_invade.7.d
+	
+	picture = GFX_report_event_dutch_soldiers_indonesia
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = schneefilde_invade.7.a
+		add_political_power = 15
+		transfer_state = 631
+		add_state_core = 631
+		631 = {
+			set_state_name = "Flankenin"
+		}
+	}
+}
+country_event = {#Schnitt Victory
+	id = schneefilde_invade.17
+	title = schneefilde_invade.7.t
+	desc = schneefilde_invade.7.d
+	
+	picture = GFX_report_event_dutch_soldiers_indonesia
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = schneefilde_invade.7.a
+		add_political_power = 15
+		transfer_state = 649
+		add_state_core = 649
+		649 = {
+			set_state_name = "Schnitt"
+		}
+	}
+}
+country_event = {#Nevedenn Victory
+	id = schneefilde_invade.18
+	title = schneefilde_invade.18.t
+	desc = schneefilde_invade.18.d
+	
+	picture = GFX_report_event_dutch_soldiers_indonesia
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = schneefilde_invade.7.a
+		add_political_power = 15
+		transfer_state = 420
+		add_state_core = 420
+		420 = {
+			set_state_name = "Nevedenn"
+		}
+		set_province_name = {
+			id = 819
+			name = "Nevedenn"
+		}
+	}
+}
+country_event = {#Tsotoff Victory
+	id = schneefilde_invade.19
+	title = schneefilde_invade.7.t
+	desc = schneefilde_invade.7.d
+	
+	picture = GFX_report_event_dutch_soldiers_indonesia
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = schneefilde_invade.7.a
+		add_political_power = 15
+		transfer_state = 645
+		add_state_core = 645
+		645 = {
+			set_state_name = "Tsotoff"
+		}
+	}
+}
+
+

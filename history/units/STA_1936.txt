@@ -1,5 +1,6 @@
 ﻿division_template = {
 	name = "Stadtwache"	
+	is_locked = yes
 	regiments = {
 		garrison = { x = 0 y = 0 }
 		garrison = { x = 0 y = 1 }
@@ -8,73 +9,76 @@
 }
 
 division_template = {
-	name = "Prinztruppen"
+	name = "Faustbürger Expeditionary Forces"
+	is_locked = yes	
+	template_counter = 44
 	regiments = {
 		men_at_arms = { x = 0 y = 0 }
 		men_at_arms = { x = 0 y = 1 }
-		men_at_arms = { x = 0 y = 2 }
-        men_at_arms = { x = 1 y = 0 }
+        		halberdier = { x = 0 y = 2 }
+		men_at_arms = { x = 1 y = 0 }
 		men_at_arms = { x = 1 y = 1 }
-		men_at_arms = { x = 1 y = 2 }
+		swordsmen = { x = 1 y = 2 }
+		men_at_arms = { x = 2 y = 0 }
+		men_at_arms = { x = 2 y = 1 }
+		men_at_arms = { x = 2 y = 2 }
 	}
 }
 
 division_template = {
-	name = "Stahlritter"
+	name = "Bogenschützen"
 	regiments = {
-		heavy_cavalry = { x = 0 y = 0 }
-        heavy_cavalry = { x = 0 y = 1 }
-        heavy_cavalry = { x = 0 y = 2 }
-		heavy_cavalry = { x = 1 y = 0 }
-		heavy_cavalry = { x = 1 y = 1 }
-		heavy_cavalry = { x = 1 y = 2 }
-	}
-}
-
-division_template = {
-	name = "Späher"
-	regiments = {
-		light_cavalry = { x = 0 y = 0 }
-        light_cavalry = { x = 0 y = 1 }
-        light_cavalry = { x = 1 y = 0 }
-		light_cavalry = { x = 1 y = 1 }
-	}
-	support = {
-	    recon = { x = 0 y = 0 }
+		men_at_arms = { x = 0 y = 0 }
+		archer_shortbow = { x = 0 y = 1 }
+        		archer_shortbow = { x = 0 y = 2 }
+		men_at_arms = { x = 1 y = 0 }
+		archer_shortbow = { x = 1 y = 1 }
+		archer_shortbow = { x = 1 y = 2 }
+		men_at_arms = { x = 2 y = 0 }
+		archer_shortbow = { x = 2 y = 1 }
+		archer_shortbow = { x = 2 y = 2 }
 	}
 }
 
 units = {
 
 	division = {
-		name = "1st Regiment 'Elftöter'"
-		location = 7955
-		division_template = "Prinztruppen"
+		name = "1st Faustbürger Expeditionary Force 'Adalina's Hilfe'"
+		location = 8164
+		division_template = "Faustbürger Expeditionary Forces"
 		start_experience_factor = 0.5
 
 	}
 	
 	division = {
-		name = "2nd Regiment 'Nordwacht'"
+		name = "2nd Faustbürger Expeditionary Force 'Die Schwerter der Staatenbund'"
 		location = 8038
-		division_template = "Prinztruppen"
+		division_template = "Faustbürger Expeditionary Forces"
 		start_experience_factor = 0.5
 
 	}
 	
 	division = {
-		name = "1st Cavalry 'Haus Schwarzenbaum'"
-		location = 262
-		division_template = "Stahlritter"
-		start_experience_factor = 0.7
+		name = "3rd Faustbürger Expeditionary Force 'Südmänner'"
+		location = 7955
+		division_template = "Faustbürger Expeditionary Forces"
+		start_experience_factor = 0.5
 
 	}
 	
 	division = {
-		name = "1st Scouts 'Elfjäger'"
+		name = "4th Faustbürger Expeditionary Force 'Stahlhofs Freunde'"
 		location = 4649
-		division_template = "Späher"
-		start_experience_factor = 1.0
+		division_template = "Faustbürger Expeditionary Forces"
+		start_experience_factor = 0.5
+
+	}
+	
+	division = {
+		name = "5th Faustbürger Expeditionary Force 'Anti-Ordorische Freiwilliger'"
+		location = 262
+		division_template = "Faustbürger Expeditionary Forces"
+		start_experience_factor = 0.5
 
 	}
 	
@@ -84,5 +88,28 @@ units = {
 		division_template = "Stadtwache"
 		start_experience_factor = 0.05
 
+	}
+}
+
+### STARTING PRODUCTION ###
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_0
+			creator = "STA"
+		}
+		requested_factories = 2
+		progress = 0.48
+		efficiency = 37
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = light_cavalry_equipment_0
+			creator = "STA"
+		}
+		requested_factories = 1
+		progress = 0.3
+		efficiency = 12
 	}
 }

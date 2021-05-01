@@ -1,0 +1,711 @@
+### STEEL ROAD
+
+add_namespace = steel_road
+
+### UNION DEMANDS MONOPOLY
+
+country_event = {# The Union Demands Concessions
+	id = steel_road.1
+	title = steel_road.1.t
+	desc = steel_road.1.d
+	picture = GFX_report_event_molotov_ribbentrop_stalin_pact
+
+	is_triggered_only = yes
+
+	option = {#I suppose
+		name = steel_road.1.a
+		ai_chance = {
+			factor = 3
+			modifier = {
+				factor = 2
+				strength_ratio = {
+					tag = UNG #Let's not mess with those stronger than ourselves
+					ratio < 1.5
+				}
+			}
+			modifier = {
+				factor = 2
+				strength_ratio = {
+					tag = UNG #Let's not mess with those stronger than ourselves
+					ratio < 1
+				}
+			}
+			modifier = {
+				factor = 0.5
+				strength_ratio = {
+					tag = UNG #They're weak, fuck 'em
+					ratio > 1
+				}
+			}
+			modifier = {
+				factor = 0
+				strength_ratio = {
+					tag = UNG #They're weak, fuck 'em
+					ratio > 1.5
+				}
+			}
+		}
+		UNG = {
+			country_event = {
+				id = steel_road.2
+				days = 7
+			}
+		}
+		if = {
+			limit = {
+				has_idea = STLRD_control_1
+				NOT = {
+					has_country_flag = STLRD_already_switched
+				}
+			}
+			remove_ideas = STLRD_control_1
+			set_country_flag = STLRD_already_switched
+		}
+		if = {
+			limit = {
+				has_idea = STLRD_control_2
+				NOT = {
+					has_country_flag = STLRD_already_switched
+				}
+			}
+			remove_ideas = STLRD_control_2
+			set_country_flag = STLRD_already_switched
+		}
+		if = {
+			limit = {
+				has_idea = STLRD_control_3
+				NOT = {
+					has_country_flag = STLRD_already_switched
+				}
+			}
+			remove_ideas = STLRD_control_3
+			set_country_flag = STLRD_already_switched
+		}
+		if = {
+			limit = {
+				has_idea = STLRD_control_4
+				NOT = {
+					has_country_flag = STLRD_already_switched
+				}
+			}
+			remove_ideas = STLRD_control_4
+			set_country_flag = STLRD_already_switched
+		}
+		if = {
+			limit = {
+				has_idea = STLRD_control_5
+				NOT = {
+					has_country_flag = STLRD_already_switched
+				}
+			}
+			remove_ideas = STLRD_control_5
+			set_country_flag = STLRD_already_switched
+		}
+		if = {
+			limit = {
+				has_idea = STLRD_dominated
+			}
+			remove_ideas = STLRD_dominated
+		}
+	}
+	
+	option = {#Absolutely not!
+		name = steel_road.1.b
+		ai_chance = {
+			factor = 5
+		}
+		UNG = {
+			country_event = {
+				id = steel_road.3
+				days = 7
+			}
+		}
+	}
+}
+
+country_event = {# FROM Accepts
+	id = steel_road.2
+	title = steel_road.2.t
+	desc = steel_road.2.d
+	picture = GFX_report_event_pierre_laval
+
+	is_triggered_only = yes
+
+	option = {#Sweet
+		name = steel_road.2.a
+		add_political_power = 35
+		if = {
+			limit = {
+				has_idea = STLRD_control_1
+				NOT = {
+					has_country_flag = STLRD_already_switched
+				}
+			}
+			remove_ideas = STLRD_control_1
+			set_country_flag = STLRD_already_switched
+		}
+		if = {
+			limit = {
+				has_idea = STLRD_control_2
+				NOT = {
+					has_country_flag = STLRD_already_switched
+				}
+			}
+			remove_ideas = STLRD_control_2
+			set_country_flag = STLRD_already_switched
+		}
+		if = {
+			limit = {
+				has_idea = STLRD_control_3
+				NOT = {
+					has_country_flag = STLRD_already_switched
+				}
+			}
+			remove_ideas = STLRD_control_3
+			set_country_flag = STLRD_already_switched
+		}
+		if = {
+			limit = {
+				has_idea = STLRD_control_4
+				NOT = {
+					has_country_flag = STLRD_already_switched
+				}
+			}
+			remove_ideas = STLRD_control_4
+			set_country_flag = STLRD_already_switched
+		}
+		if = {
+			limit = {
+				has_idea = STLRD_control_5
+				NOT = {
+					has_country_flag = STLRD_already_switched
+				}
+			}
+			remove_ideas = STLRD_control_5
+			set_country_flag = STLRD_already_switched
+		}
+		if = {
+			limit = {
+				has_idea = STLRD_dominated
+			}
+			remove_ideas = STLRD_dominated
+		}
+	}
+}
+
+country_event = {# FROM Declines
+	id = steel_road.3
+	title = steel_road.3.t
+	desc = steel_road.3.d
+	picture = GFX_report_event_king_speech
+
+	is_triggered_only = yes
+
+	option = {#Rude
+		name = steel_road.3.a
+		add_political_power = -25
+	}
+	
+	option = {#Send Expedition
+		trigger = {
+			has_manpower > 499
+		}
+		name = steel_road.3.b
+		ai_chance = {
+			factor = 1
+			modifier = {
+				has_manpower < 1000
+				factor = 0 #let's not waste valuable troops on a minor skirmish
+			}
+		}
+		add_manpower = -500
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = -350
+		}
+		FROM = {
+			country_event = {
+				id = steel_road.4
+				days = 7
+			}
+		}
+	}
+}
+
+country_event = {# Union Sends Punitive Expedition
+	id = steel_road.4
+	title = steel_road.4.t
+	desc = steel_road.4.d
+	picture = GFX_report_event_manchukuo_army
+
+	is_triggered_only = yes
+
+	option = {#Concede
+		name = steel_road.4.a.
+		
+		if = {
+			limit = {
+				has_idea = STLRD_control_1
+			}
+			remove_ideas = STLRD_control_1
+		}
+		if = {
+			limit = {
+				has_idea = STLRD_control_2
+			}
+			remove_ideas = STLRD_control_2
+		}
+		if = {
+			limit = {
+				has_idea = STLRD_control_3
+			}
+			remove_ideas = STLRD_control_3
+		}
+		if = {
+			limit = {
+				has_idea = STLRD_control_4
+			}
+			remove_ideas = STLRD_control_4
+		}
+		if = {
+			limit = {
+				has_idea = STLRD_control_5
+			}
+			remove_ideas = STLRD_control_5
+		}
+		if = {
+			limit = {
+				has_idea = STLRD_dominated
+			}
+			remove_ideas = STLRD_dominated
+		}
+		UNG = {
+			country_event = {
+				id = steel_road.5
+				days = 7
+			}
+		}
+	}
+	
+	option = {#Fight Back!
+		name = steel_road.4.b
+		add_war_support = 0.05
+		add_manpower = -450
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = -325
+		}
+		random_list = {
+			60 = {
+				UNG = {
+					country_event = {
+						id = steel_road.6
+						days = 7
+					}
+				}
+				country_event = {
+					id = steel_road.6
+					days = 7
+				}
+			}
+			40 = {
+				UNG = {
+					country_event = {
+						id = steel_road.7
+						days = 7
+					}
+				}
+				country_event = {
+					id = steel_road.7
+					days = 7
+				}
+			}
+		}
+	}
+}
+
+country_event = {# FROM Concedes
+	id = steel_road.5
+	title = steel_road.5.t
+	desc = steel_road.5.d
+	picture = GFX_report_event_japan_europe_pact
+
+	is_triggered_only = yes
+
+	option = {#Yay
+		name = steel_road.5.a
+		
+		add_manpower = 500
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 350
+		}
+		
+		if = {
+			limit = {
+				has_idea = STLRD_control_1
+				NOT = {
+					has_country_flag = STLRD_already_switched
+				}
+			}
+			remove_ideas = STLRD_control_1
+			set_country_flag = STLRD_already_switched
+		}
+		if = {
+			limit = {
+				has_idea = STLRD_control_2
+				NOT = {
+					has_country_flag = STLRD_already_switched
+				}
+			}
+			remove_ideas = STLRD_control_2
+			set_country_flag = STLRD_already_switched
+		}
+		if = {
+			limit = {
+				has_idea = STLRD_control_3
+				NOT = {
+					has_country_flag = STLRD_already_switched
+				}
+			}
+			remove_ideas = STLRD_control_3
+			set_country_flag = STLRD_already_switched
+		}
+		if = {
+			limit = {
+				has_idea = STLRD_control_4
+				NOT = {
+					has_country_flag = STLRD_already_switched
+				}
+			}
+			remove_ideas = STLRD_control_4
+			set_country_flag = STLRD_already_switched
+		}
+		if = {
+			limit = {
+				has_idea = STLRD_control_5
+				NOT = {
+					has_country_flag = STLRD_already_switched
+				}
+			}
+			remove_ideas = STLRD_control_5
+			set_country_flag = STLRD_already_switched
+		}
+		if = {
+			limit = {
+				has_idea = STLRD_dominated
+			}
+			remove_ideas = STLRD_dominated
+		}
+	}
+}
+
+country_event = {# PunEx - UNG Wins
+	id = steel_road.6
+	title = steel_road.6.t
+	desc = steel_road.6.d
+	picture = GFX_report_event_japan_europe_pact
+
+	is_triggered_only = yes
+
+	option = {#Yay
+		name = steel_road.6.a
+		trigger = {
+			tag = UNG
+		}
+		add_manpower = 482
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 317
+		}
+		if = {
+			limit = {
+				has_idea = STLRD_control_1
+				NOT = {
+					has_country_flag = STLRD_already_switched
+				}
+			}
+			remove_ideas = STLRD_control_1
+			set_country_flag = STLRD_already_switched
+		}
+		if = {
+			limit = {
+				has_idea = STLRD_control_2
+				NOT = {
+					has_country_flag = STLRD_already_switched
+				}
+			}
+			remove_ideas = STLRD_control_2
+			set_country_flag = STLRD_already_switched
+		}
+		if = {
+			limit = {
+				has_idea = STLRD_control_3
+				NOT = {
+					has_country_flag = STLRD_already_switched
+				}
+			}
+			remove_ideas = STLRD_control_3
+			set_country_flag = STLRD_already_switched
+		}
+		if = {
+			limit = {
+				has_idea = STLRD_control_4
+				NOT = {
+					has_country_flag = STLRD_already_switched
+				}
+			}
+			remove_ideas = STLRD_control_4
+			set_country_flag = STLRD_already_switched
+		}
+		if = {
+			limit = {
+				has_idea = STLRD_control_5
+				NOT = {
+					has_country_flag = STLRD_already_switched
+				}
+			}
+			remove_ideas = STLRD_control_5
+			set_country_flag = STLRD_already_switched
+		}
+		if = {
+			limit = {
+				has_idea = STLRD_dominated
+			}
+			remove_ideas = STLRD_dominated
+		}
+		add_political_power = 50
+	}
+	
+	option = {#Nahw
+		name = steel_road.6.b
+		trigger = {
+			NOT = {
+				tag = UNG
+			}
+		}
+		add_manpower = 417
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 316
+		}
+		if = {
+			limit = {
+				has_idea = STLRD_control_1
+			}
+			remove_ideas = STLRD_control_1
+		}
+		if = {
+			limit = {
+				has_idea = STLRD_control_2
+			}
+			remove_ideas = STLRD_control_2
+		}
+		if = {
+			limit = {
+				has_idea = STLRD_control_3
+			}
+			remove_ideas = STLRD_control_3
+		}
+		if = {
+			limit = {
+				has_idea = STLRD_control_4
+			}
+			remove_ideas = STLRD_control_4
+		}
+		if = {
+			limit = {
+				has_idea = STLRD_control_5
+			}
+			remove_ideas = STLRD_control_5
+		}
+		if = {
+			limit = {
+				has_idea = STLRD_dominated
+			}
+			remove_ideas = STLRD_dominated
+		}
+		add_war_support = -0.05
+	}
+}
+
+country_event = {# PunEx - FROM Wins
+	id = steel_road.7
+	title = steel_road.7.t
+	desc = steel_road.7.d
+	picture = GFX_report_event_japan_europe_pact
+
+	is_triggered_only = yes
+
+	option = {#Nahw
+		name = steel_road.7.a
+		trigger = {
+			tag = UNG
+		}
+		add_war_support = -0.05
+		add_manpower = 474
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 306
+		}
+	}
+	
+	option = {#Yay
+		name = steel_road.7.b
+		trigger = {
+			NOT = {
+				tag = UNG
+			}
+		}
+		add_manpower = 431
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 337
+		}
+		add_political_power = 50
+	}
+}
+
+country_event = {# Clears check
+	id = steel_road.8
+	title = steel_road.8.t
+	desc = steel_road.8.d
+
+	hidden = yes
+	
+	mean_time_to_happen = {
+		days = 3
+	}
+	
+	trigger = {
+		has_country_flag = STLRD_already_switched
+	}
+	
+	option = {
+		clr_country_flag = STLRD_already_switched
+	}
+}
+
+country_event = {# Handelpakt?
+	id = steel_road.9
+	title = steel_road.9.t
+	desc = steel_road.9.d
+	picture = GFX_report_event_canada_patriation
+
+	is_triggered_only = yes
+
+	option = {#Yes
+		ai_chance = {
+			factor = 3
+		}
+		name = steel_road.9.a
+		UNG = {
+			country_event = {
+				id = steel_road.10
+			}
+		}
+		add_ideas = STLRD_handelpakt_signatory
+	}
+	
+	option = {#No
+		ai_chance = {
+			factor = 2
+		}
+		trigger = {
+			NOT = {
+				is_subject_of = UNG
+			}
+		}
+		name = steel_road.9.b
+		UNG = {
+			country_event = {
+				id = steel_road.11
+			}
+		}
+		add_political_power = 50
+	}
+}
+
+country_event = {# Handelpakt - FROM Joins
+	id = steel_road.10
+	title = steel_road.10.t
+	desc = steel_road.10.d
+	picture = GFX_report_event_canada_treaty
+
+	is_triggered_only = yes
+
+	option = {#Huzzah
+		name = steel_road.10.a
+		if = {
+			limit = {
+				NOT = {
+					has_idea = STLRD_handelpakt_signatory
+				}
+			}
+			add_ideas = STLRD_handelpakt_signatory
+		}
+	}
+}
+
+country_event = {# Handelpakt - FROM Declines
+	id = steel_road.11
+	title = steel_road.11.t
+	desc = steel_road.11.d
+	picture = GFX_report_event_generic_rally_3
+
+	is_triggered_only = yes
+
+	option = {#Ahw
+		name = steel_road.11.a
+		if = {
+			limit = {
+				NOT = {
+					has_variable = UNG_handelpakt_not_working
+				}
+			}
+			set_variable = {
+				var = UNG_handelpakt_not_working
+				value = 1
+			}
+		}
+		if = {
+			limit = {
+				has_variable = UNG_handelpakt_not_working
+			}
+			add_to_variable = {
+				var = UNG_handelpakt_not_working
+				value = 1
+			}
+		}
+	}
+}
+
+country_event = {# Handelpakt - Renovations
+	id = steel_road.12
+	title = steel_road.12.t
+	desc = steel_road.12.d
+	picture = GFX_report_event_generic_rally_3
+
+	is_triggered_only = yes
+
+	option = {#Hurrah!
+		name = steel_road.12.a
+	}
+}
+
+country_event = {# Handelpakt - Renovations
+	id = steel_road.13
+	title = steel_road.13.t
+	desc = steel_road.13.d
+	picture = GFX_report_event_generic_rally_3
+
+	is_triggered_only = yes
+
+	option = {#Hurrah!
+		name = steel_road.13.a
+		swap_ideas = {
+			remove_idea = STLRD_handelpakt_signatory
+			add_idea = STLRD_handelpakt_waterways
+		}
+	}
+}

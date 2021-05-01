@@ -5,13 +5,13 @@ state={
 		5368 7136 5038 154 7181
 	}
 	state_category = rural
-	manpower=3492
+	manpower=4492
 	resources = { steel = 19 }
 	buildings_max_level_factor=1.000
 	history={
 		owner = SKA
 		buildings = {
-			infrastructure = 2
+			infrastructure = 5
 		}
 		add_core_of = SKA
 

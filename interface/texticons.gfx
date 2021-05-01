@@ -3,8 +3,64 @@ spriteTypes = {
 	### MOD TEXTICONS ###
 	
 	spriteType = {
+		name = "GFX_unit_warband_icon_small"
+		texturefile = "gfx/texticons/unit_warband_icon_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}
+	
+	spriteType = {
 		name = "GFX_unit_men_at_arms_icon_small"
 		texturefile = "gfx/texticons/unit_men_at_arms_icon_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}
+	
+	spriteType = {
+		name = "GFX_unit_swordsmen_icon_small"
+		texturefile = "gfx/texticons/unit_swordsmen_icon_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}
+	
+	spriteType = {
+		name = "GFX_unit_halberdier_icon_small"
+		texturefile = "gfx/texticons/unit_halberdier_icon_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}
+	
+	spriteType = {
+		name = "GFX_unit_archer_shortbow_icon_small"
+		texturefile = "gfx/texticons/unit_archer_shortbow_icon_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}
+	
+	spriteType = {
+		name = "GFX_unit_archer_longbow_icon_small"
+		texturefile = "gfx/texticons/unit_archer_longbow_icon_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}
+	
+	spriteType = {
+		name = "GFX_unit_arbalists_icon_small"
+		texturefile = "gfx/texticons/unit_arbalists_icon_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}
+	
+	spriteType = {
+		name = "GFX_unit_scouts_icon_small"
+		texturefile = "gfx/texticons/unit_scouts_icon_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}
+	
+	spriteType = {
+		name = "GFX_unit_scouts_cavalry_icon_small"
+		texturefile = "gfx/texticons/unit_scouts_cavalry_icon_small.dds"
 		legacy_lazy_load = no
 		noOfFrames = 2
 	}
@@ -38,8 +94,8 @@ spriteTypes = {
 	}
 	
 	spriteType = {
-		name = "GFX_unit_heavy_cavalry_icon_small"
-		texturefile = "gfx/texticons/unit_heavy_cavalry_icon_small.dds"
+		name = "GFX_unit_horsemen_icon_small"
+		texturefile = "gfx/texticons/unit_horsemen_icon_small.dds"
 		legacy_lazy_load = no
 		noOfFrames = 2
 	}
@@ -47,6 +103,13 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_unit_light_cavalry_icon_small"
 		texturefile = "gfx/texticons/unit_light_cavalry_icon_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}
+	
+	spriteType = {
+		name = "GFX_unit_heavy_cavalry_icon_small"
+		texturefile = "gfx/texticons/unit_heavy_cavalry_icon_small.dds"
 		legacy_lazy_load = no
 		noOfFrames = 2
 	}

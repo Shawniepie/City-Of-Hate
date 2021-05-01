@@ -209,12 +209,49 @@ HLZ_invade_ordoria = {
 		}
 		
 		cost = 50
+		days_remove = 70
 		
 		ai_will_do = {
 			factor = 20
 		}
 		
+		remove_effect = {
+		297 = {
+		remove_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
+		96 = {
+		remove_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
+		if = {
+		 limit = {
+		has_border_war_between = {
+ 		   attacker = 297
+  		   defender = 96
+		 }
+		 }
+		finalize_border_war = {
+   		defender_win = yes
+  		attacker = 297
+  		defender = 96
+		}
+		}
+		}
+		
 		complete_effect = {
+		297 = {
+		add_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
+		96 = {
+		add_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
 			start_border_war = {
 				change_state_after_war = no
 				attacker = {
@@ -262,12 +299,49 @@ HLZ_invade_ordoria = {
 		}
 		
 		cost = 50
+		days_remove = 70
 		
 		ai_will_do = {
 			factor = 20
 		}
 		
+		remove_effect = {
+		98 = {
+		remove_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
+		96 = {
+		remove_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
+		if = {
+		 limit = {
+		 has_border_war_between = {
+ 		   attacker = 96
+  		   defender = 98
+		 }
+		 }
+		finalize_border_war = {
+   		defender_win = yes
+  		attacker = 96
+  		defender = 98
+		}
+		}
+		}
+		
 		complete_effect = {
+		98 = {
+		add_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
+		96 = {
+		add_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
 			start_border_war = {
 				change_state_after_war = no
 				attacker = {
@@ -315,12 +389,49 @@ HLZ_invade_ordoria = {
 		}
 		
 		cost = 50
+		days_remove = 70
 		
 		ai_will_do = {
 			factor = 20
 		}
 		
+		remove_effect = {
+		98 = {
+		remove_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
+		97 = {
+		remove_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
+		if = {
+		 limit = {
+		 has_border_war_between = {
+ 		   attacker = 98
+  		   defender = 97
+		 }
+		 }
+		finalize_border_war = {
+   		defender_win = yes
+  		attacker = 98
+  		defender = 97
+		}
+		}
+		}
+		
 		complete_effect = {
+		98 = {
+		add_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
+		97 = {
+		add_dynamic_modifier = {
+			modifier = ongoing_border_conflict
+		}
+		}
 			start_border_war = {
 				change_state_after_war = no
 				attacker = {

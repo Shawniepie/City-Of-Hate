@@ -41,7 +41,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				consumer_goods_factor = 0.35
+				consumer_goods_factor = 0.25
 				production_speed_buildings_factor = -0.40
 				production_factory_efficiency_gain_factor = -0.25
 			}
@@ -63,7 +63,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				consumer_goods_factor = 0.25
+				consumer_goods_factor = 0.15
 				production_speed_buildings_factor = -0.25
 				production_factory_efficiency_gain_factor = -0.1
 			}
@@ -112,7 +112,7 @@ ideas = {
 			modifier = {
 				army_core_attack_factor = 0.1
 				army_core_defence_factor = 0.1
-				partisan_effect = 0.15
+				resistance_growth = 0.15
 			}
 		}
 		
@@ -134,6 +134,7 @@ ideas = {
 				production_speed_buildings_factor = 0.15
 				consumer_goods_factor = -0.05
 				production_factory_efficiency_gain_factor = 0.1
+				base_fuel_gain_factor = 0.15
 			}
 		}
 		
@@ -259,6 +260,27 @@ ideas = {
 			}
 		}
 		
+		ORD_oiled_war_machine = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = MEX_politicised_army_2
+			
+			removal_cost = -1
+			
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.15 instant = yes
+				}
+			}
+		}
+		
 		ORD_export_death_idea = {
 			
 			allowed = {
@@ -332,7 +354,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				max_dig_in = 0.1
+				max_dig_in_factor = 0.1
 				army_defence_factor = 0.05
 			}
 		}
@@ -479,6 +501,26 @@ ideas = {
 				production_factory_efficiency_gain_factor = 0.15
 				production_factory_max_efficiency_factor = 0.15
 				local_resources_factor = 0.3
+			}
+		}
+		
+		ORD_limited_trade = {
+			
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				has_government = monarchy_absolute
+			}
+			
+			picture = can_wartime_prices_and_trade_board
+			
+			removal_cost = -1
+			
+			modifier = {
+				trade_opinion_factor = 0.35
+				min_export = 0.15
 			}
 		}
 		
@@ -846,7 +888,7 @@ ideas = {
 			modifier = {
 				decryption_factor = 0.2
 				drift_defence_factor = 0.33
-				enemy_partisan_effect = -0.25
+				resistance_target = -0.25
 			}
 		}
 		

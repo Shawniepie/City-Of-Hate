@@ -7397,7 +7397,7 @@ country_event = { #Conquest of Perkavland
 		name = annex.27.b
 
 		ai_chance = {
-			factor = 50
+			factor = 5
 			modifier = {
 				factor = 0
 				NOT = {
@@ -7445,7 +7445,7 @@ country_event = { #Conquest of Perkavland
 		}
 		
 		ai_chance = {
-			factor = 100
+			factor = 5
 		}
 		
 		every_state = {
@@ -7469,6 +7469,119 @@ country_event = { #Conquest of Perkavland
 			}
 		}
 	}
+	
+	option = {# Liberate Chiefs
+		name = annex.27.e
+		trigger = {
+			NOT = {
+				OR = {
+					tag = UNG
+					is_subject_of = UNG
+				}
+			}
+		}
+
+		ai_chance = {
+			modifier = {
+				factor = 0
+				OR = {
+					has_government = puritan
+					has_government = theocrat
+				}
+			}
+			factor = 100
+		}
+
+		shatter_perkavland = yes
+		puppet = KRL
+		puppet = SVC
+		puppet = WLT
+		puppet = RLV
+		puppet = VLN
+		puppet = LNK
+		puppet = KRZ
+		puppet = VTZ
+		puppet = NVT
+		set_country_flag = conquest_of_perkavland
+	}
+	
+	option = {# Freiprinztum Chiefs
+		name = annex.27.f
+		trigger = {
+			OR = {
+				tag = UNG
+				is_subject_of = UNG
+			}
+		}
+
+		ai_chance = {
+			modifier = {
+				factor = 0
+				OR = {
+					has_government = puritan
+					has_government = theocrat
+				}
+			}
+			factor = 100
+		}
+
+		shatter_perkavland = yes
+		UNG = {
+			set_autonomy = {
+				target = KRL
+				autonomy_state = autonomy_IR_freiprinztum
+			}
+		}
+		UNG = {
+			set_autonomy = {
+				target = SVC
+				autonomy_state = autonomy_IR_freiprinztum
+			}
+		}
+		UNG = {
+			set_autonomy = {
+				target = WLT
+				autonomy_state = autonomy_IR_freiprinztum
+			}
+		}
+		UNG = {
+			set_autonomy = {
+				target = RLV
+				autonomy_state = autonomy_IR_freiprinztum
+			}
+		}
+		UNG = {
+			set_autonomy = {
+				target = VLN
+				autonomy_state = autonomy_IR_freiprinztum
+			}
+		}
+		UNG = {
+			set_autonomy = {
+				target = LNK
+				autonomy_state = autonomy_IR_freiprinztum
+			}
+		}
+		UNG = {
+			set_autonomy = {
+				target = KRZ
+				autonomy_state = autonomy_IR_freiprinztum
+			}
+		}
+		UNG = {
+			set_autonomy = {
+				target = VTZ
+				autonomy_state = autonomy_IR_freiprinztum
+			}
+		}
+		UNG = {
+			set_autonomy = {
+				target = NVT
+				autonomy_state = autonomy_IR_freiprinztum
+			}
+		}
+		set_country_flag = conquest_of_perkavland
+	}
 }
 
 country_event = { #Conquest of Bergial
@@ -7482,6 +7595,18 @@ country_event = { #Conquest of Bergial
 	trigger = {
 		NOT = {
 			original_tag = BER
+		}
+		OR = {
+			NOT = {
+				AND = {
+					tag = VRG
+					has_country_flag = VRG_formed_by_BER
+				}
+			}
+			AND = {
+				tag = VRG
+				has_country_flag = VRG_can_annex_BER
+			}
 		}
 		OR = {
 			AND = {
@@ -7512,6 +7637,7 @@ country_event = { #Conquest of Bergial
 				OR = {
 					tag = UNG
 					is_subject_of = UNG
+					has_country_flag = VRG_can_annex_BER
 				}
 			}
 		}
@@ -7546,7 +7672,13 @@ country_event = { #Conquest of Bergial
 	
 	option = { # Annex
 		name = annex.28.b
-
+		
+		trigger = {
+			NOT = {
+				has_country_flag = VRG_can_annex_BER
+			}
+		}
+		
 		ai_chance = {
 			factor = 50
 			modifier = {
@@ -7592,6 +7724,9 @@ country_event = { #Conquest of Bergial
 				UNG = {
 					is_subject_of = ROOT
 				}
+			}			
+			NOT = {
+				has_country_flag = VRG_can_annex_BER
 			}
 		}
 		
@@ -7618,6 +7753,27 @@ country_event = { #Conquest of Bergial
 				target = BER
 				autonomy_state = autonomy_IR_freiprinztum
 			}
+		}
+	}
+	
+	option = { # Vergallheim cores Bergial
+		name = annex.28.e
+
+		ai_chance = {
+			factor = 500
+		}
+		
+		trigger = {
+			has_country_flag = VRG_can_annex_BER
+		}
+
+		set_country_flag = conquest_of_bergial
+
+		every_state = {
+			limit = {
+				is_core_of = BER
+			}
+			add_core_of = VRG
 		}
 	}
 }
@@ -9715,5 +9871,6 @@ country_event = { #Conquest of Merchant's Hand
 				add_state_core = PREV
 			}
 		}
+		set_country_flag = conquest_of_merchants_hand
 	}
 }

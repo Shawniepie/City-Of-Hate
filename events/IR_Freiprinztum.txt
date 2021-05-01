@@ -1,0 +1,223 @@
+﻿### FREIPRINZLICHE EVENTS
+
+add_namespace = fpt
+
+country_event = {#Ten Years of Safety Parties
+	id = fpt.1
+	title = fpt.1.t
+	desc = fpt.1.d
+	picture = GFX_report_event_generic_rally2
+	
+	is_triggered_only = yes
+	
+	option = {#Fuck the Septists
+		name = fpt.1.a
+		ai_chance = {
+			factor = 1
+		}
+		add_stability = 0.03
+		SVT = {
+			FROM_worsen_THIS_relations = yes
+		}
+		hidden_effect = {
+			subtract_from_variable = {
+				var = FPT_piety
+				value = 1
+			}
+		}
+		custom_effect_tooltip = FPT_decrease_piety_tt
+		set_country_flag = FPT_septists_fucked
+		set_freiprinz_piety_effects = yes
+	}
+	
+	option = {#Forgive the Septists
+		name = fpt.1.b
+		ai_chance = {
+			factor = 2
+		}
+		add_popularity = {
+			ideology = theocrat
+			popularity = 0.05
+		}
+		add_stability = -0.02
+		SVT = {
+			FROM_improve_THIS_relations = yes
+		}
+		hidden_effect = {
+			add_to_variable = {
+				var = FPT_piety
+				value = 1
+			}
+		}
+		custom_effect_tooltip = FPT_increase_piety_tt
+		set_country_flag = FPT_septists_forgiven
+		set_freiprinz_piety_effects = yes
+	}
+}
+
+country_event = {#Picking a Side
+	id = fpt.2
+	title = fpt.2.t
+	desc = fpt.2.d
+	picture = GFX_report_event_ung_civil_warning
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = {
+					is_ai = yes
+					OR = { #Likely to be Loyalists
+						tag = SVT
+						tag = ARK
+						tag = NOC
+					}
+				}
+				random_list = {
+					85 = {#Loyalist
+						set_country_flag = FPT_loyalist_strats
+					}
+					10 = {#Ferdinist
+						set_country_flag = FPT_ferdinist_strats
+					}
+					5 = {#Neutral
+						set_country_flag = FPT_neutralist_strats
+					}
+				}
+			}
+			if = {
+				limit = {
+					is_ai = yes
+					OR = { #Likely to be Ferdinists
+						tag = WSZ
+						tag = SNF
+						tag = NRK
+					}
+				}
+				random_list = {
+					85 = {#Ferdinist
+						set_country_flag = FPT_ferdinist_strats
+					}
+					10 = {#Loyalist
+						set_country_flag = FPT_loyalist_strats
+					}
+					5 = {#Neutral
+						set_country_flag = FPT_neutralist_strats
+					}
+				}
+			}
+			if = {
+				limit = {
+					is_ai = yes
+					tag = TEI #Likely to be Neutral
+				}
+				random_list = {
+					90 = {#Neutral
+						set_country_flag = FPT_neutralist_strats
+					}
+					5 = {#Loyalist
+						set_country_flag = FPT_loyalist_strats
+					}
+					5 = {#Ferdinist
+						set_country_flag = FPT_ferdinist_strats
+					}
+				}
+			}
+		}
+	}
+	
+	option = {#Adalina Gang
+		name = fpt.2.a
+		custom_effect_tooltip = FPT_increase_union_loyalty_small_tt
+		add_to_variable = {
+			var = FPT_union_loyalty
+			value = 1
+		}
+	}
+	
+	option = {#I just wanna grill for God's sake
+		name = fpt.2.b
+		add_political_power = 25
+	}
+	
+	option = {#Schwarzenbach Gang
+		name = fpt.2.c
+		custom_effect_tooltip = FPT_increase_stahlhof_loyalty_small_tt
+		add_to_variable = {
+			var = FPT_stahlhof_loyalty
+			value = 1
+		}
+	}
+}
+
+country_event = {#FPT Returns home
+	id = fpt.3
+	title = fpt.3.t
+	desc = fpt.3.d
+	picture = GFX_report_event_generic_rally
+	
+	trigger = {
+	has_completed_focus = FPT_exploit_chaos
+	has_country_flag = UNG_civil_war_started
+	is_subject = no
+	NOT = {
+	UNG = {
+	has_war_with = STA
+	}
+	has_war_with = STA
+	has_war_with = UNG
+	has_completed_focus = FPT_break_from_union
+	has_country_flag = FPT_unneutraled
+	}
+	}
+	
+	option = {#Adalina Gang
+		name = fpt.3.a
+		trigger = {
+		UNG = {
+			is_faction_leader = yes
+			exists = yes
+			is_subject = no
+			}
+		STA = {
+			NOT = {
+			is_faction_leader = yes
+			}
+			}
+		}
+		set_country_flag = FPT_unneutraled
+		UNG = {
+				set_autonomy = {
+					target = ROOT
+					autonomy_state = autonomy_IR_freiprinztum
+					freedom_level = 0.4
+				}
+			}
+	}
+	
+	
+	option = {#Schwarzenbach Gang
+		name = fpt.3.b
+		trigger = {
+		UNG = {
+			NOT = {
+			is_faction_leader = yes
+			}
+			}
+		STA = {
+			is_faction_leader = yes
+			exists = yes
+			is_subject = no
+			}
+		}
+		set_country_flag = FPT_unneutraled
+		STA = {
+				set_autonomy = {
+					target = ROOT
+					autonomy_state = autonomy_IR_freiprinztum
+					freedom_level = 0.4
+				}
+			}
+		}
+	}

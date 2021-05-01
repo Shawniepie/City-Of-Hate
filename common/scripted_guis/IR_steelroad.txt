@@ -9,7 +9,7 @@ scripted_gui = {
 			any_controlled_state = {
 				OR = {
 					has_state_flag = steel_road_state
-					has_state_flag = steel_road_state_new
+					has_state_flag = steel_road_state
 				}
 			}
 		}
@@ -17,6 +17,16 @@ scripted_gui = {
 		effects = {
 			steel_road_button_click = {
 				set_country_flag = open_steel_road_button_flag
+				every_country = {
+					limit = {
+						#only add if NOT player and NOT in array
+						NOT = { is_in_array = { PREV.country_array = THIS } }
+						any_owned_state = {
+							has_state_flag = steel_road_state
+						}
+					}
+					add_to_array = { PREV.country_array = THIS } 
+				}
 			}
 		}
 	}
@@ -37,16 +47,30 @@ scripted_gui = {
 		}
 		
 		dynamic_lists = {
-			GRID_NAME = {
-			  array = steelroadarray
-			  entry = ENTRYNAME 
+			# THIS is the main grid that contains added countries
+			country_grid = {
+				array = country_array #the array that will be used for populating the array
+				change_scope = yes # since our array contains scope objects (countries) we can set change_scope to yes, which will chance current scope to array element while displaying the lists
+				# index = i current index and value is also stored as temp variables and can be used in effects/triggers if wanted. You can rename them to another temp variables
+				# value = v
+				
+				entry_container = steel_road_country_entry # gui container name of the entry (THIS is actually scripted localization. you can have different containers depending on scope)
+			}
+			
+			# each country element also has a grid box in it, which is populated by its states
+			
+			state_grid = {
+				array = steelroadarray #This set in the scripted effects and on_actions, and the TAG.steelroadarray part scopes it to the TAG
+				change_scope = yes
+				entry_container = steel_road_state_entry
 			}
 		}
-	}
-	
-	steelroad_scrollbar = {
-		visible = {
-			always = yes
+		
+        properties = {
+			#change flag textures to actual flag texture
+            flag = {
+                image = "[This.GetFlag]"
+            }
 		}
 	}
 }

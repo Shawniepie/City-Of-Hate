@@ -4,13 +4,13 @@ state={
 	provinces={
 		8831 702 8848 4294 8826 5616 2281 8734 
 	}
-	state_category = pastoral
-	manpower=1002
+	state_category = rural
+	manpower=4829
 	buildings_max_level_factor=1.000
 	history={
 		owner = NRK
 		buildings = {
-			infrastructure = 1
+			infrastructure = 5	
 		}
 		add_core_of = NRK
 		}

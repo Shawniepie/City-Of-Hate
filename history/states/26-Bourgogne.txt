@@ -13,8 +13,9 @@ state={
 		victory_points = { 396 18 }
 		buildings = {
 			infrastructure = 6
-			industrial_complex = 2
-			arms_factory = 2
+			workshop = 1
+			forge = 2
+			farm = 1
 		}
 		add_core_of = GMR
 
