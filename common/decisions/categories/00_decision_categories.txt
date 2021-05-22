@@ -79,6 +79,63 @@ perkav_piracy = {
 	}
 }
 
+PRK_council = {
+	icon = GFX_decision_category_power_struggle
+	allowed = {
+		tag = PRK
+		}
+	priority = {
+		base = 10
+	}
+	#custom_icon = {
+	#	tag = KRZ #Western Chieftains
+	#	value = krz_var_icon_value
+	#	desc = krz_var_full_influence_breakdown
+	#
+	#	visible = {
+	#	NOT = {
+	#		country_exists = KRZ
+	#	}
+	#	}
+	#}
+	#custom_icon = {
+	#	tag = WLT #Southern Chieftains
+	#	value = wlt_var_icon_value
+	#	desc = wlt_var_full_influence_breakdown
+	#	visible = {
+	#	NOT = {
+	#		country_exists = WLT
+	#	}
+	#	}
+	#}
+	#custom_icon = {
+	#	tag = VTZ #Krostovite Druids
+	#	value = vtz_var_icon_value
+	#	desc = vtz_var_full_influence_breakdown
+	#	visible = {
+	#	NOT = {
+	#		country_exists = VTZ
+	#	}
+	#	}
+	#}
+	#custom_icon = {
+	#	tag = VLN # Pirate Raiders
+	#	value = vln_var_icon_value
+	#	desc = vln_var_full_influence_breakdown
+	#	visible = {
+	#	NOT = {
+	#		country_exists = VLN
+	#	}
+	#	}
+	#}
+	visible_when_empty = yes
+	visible = {
+	NOT = {
+	has_country_flag = PRK_council_ended
+	}
+	}
+}
+
 UNG_manage_refugee_crisis = {
 	
 	icon = GFX_decision_category_eng_organize_the_blackshirts

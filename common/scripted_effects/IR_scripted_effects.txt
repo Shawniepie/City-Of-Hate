@@ -1199,3 +1199,247 @@ unite_the_union = {
 #		limit = {
 #			OR = {
 #	
+
+
+#Sets up the tribal territories in Perkavland
+
+set_prk_tribal_ter = {
+	#Western Alliance
+	621 = {
+	set_state_flag = PRK_tribal_territory_krz
+	}
+	630 = {
+	set_state_flag = PRK_tribal_territory_krz
+	}
+	650 = {
+	set_state_flag = PRK_tribal_territory_krz
+	}
+	631 = {
+	set_state_flag = PRK_tribal_territory_krz
+	}
+	649 = {
+	set_state_flag = PRK_tribal_territory_krz
+	}
+	648 = {
+	set_state_flag = PRK_tribal_territory_krz
+	}
+	645 = {
+	set_state_flag = PRK_tribal_territory_krz
+	}
+	652 = {
+	set_state_flag = PRK_tribal_territory_krz
+	}
+	651 = {
+	set_state_flag = PRK_tribal_territory_krz
+	}
+	417 = {
+	set_state_flag = PRK_tribal_territory_krz
+	}
+	640 = {
+	set_state_flag = PRK_tribal_territory_krz
+	}
+	641 = {
+	set_state_flag = PRK_tribal_territory_krz
+	}
+	416 = {
+	set_state_flag = PRK_tribal_territory_krz
+	}
+	642 = {
+	set_state_flag = PRK_tribal_territory_krz
+	}
+	629 = {
+	set_state_flag = PRK_tribal_territory_krz
+	}
+	418 = {
+	set_state_flag = PRK_tribal_territory_krz
+	}
+	622 = {
+	set_state_flag = PRK_tribal_territory_krz
+	}
+	#
+	#Southern Dominion
+	#
+	646 = {
+	set_state_flag = PRK_tribal_territory_wlt
+	}
+	639 = {
+	set_state_flag = PRK_tribal_territory_wlt
+	}
+	415 = {
+	set_state_flag = PRK_tribal_territory_wlt
+	}
+	626 = {
+	set_state_flag = PRK_tribal_territory_wlt
+	}
+	643 = {
+	set_state_flag = PRK_tribal_territory_wlt
+	}
+	633 = {
+	set_state_flag = PRK_tribal_territory_wlt
+	}
+	638 = {
+	set_state_flag = PRK_tribal_territory_wlt
+	}
+	637 = {
+	set_state_flag = PRK_tribal_territory_wlt
+	}
+	419 = {
+	set_state_flag = PRK_tribal_territory_wlt
+	}
+	636 = {
+	set_state_flag = PRK_tribal_territory_wlt
+	}
+	628 = {
+	set_state_flag = PRK_tribal_territory_wlt
+	}
+	655 = {
+	set_state_flag = PRK_tribal_territory_wlt
+	}
+	627 = {
+	set_state_flag = PRK_tribal_territory_wlt
+	}
+	644 = {
+	set_state_flag = PRK_tribal_territory_wlt
+	}
+	634 = {
+	set_state_flag = PRK_tribal_territory_wlt
+	}
+	635 = {
+	set_state_flag = PRK_tribal_territory_wlt
+	}
+	421 = {
+	set_state_flag = PRK_tribal_territory_wlt
+	}
+	#
+	#Druidic Circles
+	#
+	414 = {
+	set_state_flag = PRK_tribal_territory_vtz
+	}
+	653 = {
+	set_state_flag = PRK_tribal_territory_vtz
+	}
+	654 = {
+	set_state_flag = PRK_tribal_territory_vtz
+	}
+	647 = {
+	set_state_flag = PRK_tribal_territory_vtz
+	}
+	646 = {
+	set_state_flag = PRK_tribal_territory_vtz
+	}
+	639 = {
+	set_state_flag = PRK_tribal_territory_vtz
+	}
+	415 = {
+	set_state_flag = PRK_tribal_territory_vtz
+	}
+	626 = {
+	set_state_flag = PRK_tribal_territory_vtz
+	}
+	643 = {
+	set_state_flag = PRK_tribal_territory_vtz
+	}
+	633 = {
+	set_state_flag = PRK_tribal_territory_vtz
+	}
+	638 = {
+	set_state_flag = PRK_tribal_territory_vtz
+	}
+	637 = {
+	set_state_flag = PRK_tribal_territory_vtz
+	}
+	419 = {
+	set_state_flag = PRK_tribal_territory_vtz
+	}
+	636 = {
+	set_state_flag = PRK_tribal_territory_vtz
+	}
+	628 = {
+	set_state_flag = PRK_tribal_territory_vtz
+	}
+	655 = {
+	set_state_flag = PRK_tribal_territory_vtz
+	}
+	627 = {
+	set_state_flag = PRK_tribal_territory_vtz
+	}
+	644 = {
+	set_state_flag = PRK_tribal_territory_vtz
+	}
+	634 = {
+	set_state_flag = PRK_tribal_territory_vtz
+	}
+	635 = {
+	set_state_flag = PRK_tribal_territory_vtz
+	}
+	421 = {
+	set_state_flag = PRK_tribal_territory_vtz
+	}
+	#
+	#Pirate-Raiders
+	#
+	623 = {
+	set_state_flag = PRK_tribal_territory_vln
+	}
+	620 = {
+	set_state_flag = PRK_tribal_territory_vln
+	}
+	420 = {
+	set_state_flag = PRK_tribal_territory_vln
+	}
+	619 = {
+	set_state_flag = PRK_tribal_territory_vln
+	}
+	621 = {
+	set_state_flag = PRK_tribal_territory_vln
+	}
+	630 = {
+	set_state_flag = PRK_tribal_territory_vln
+	}
+	650 = {
+	set_state_flag = PRK_tribal_territory_vln
+	}
+	631 = {
+	set_state_flag = PRK_tribal_territory_vln
+	}
+	649 = {
+	set_state_flag = PRK_tribal_territory_vln
+	}
+	648 = {
+	set_state_flag = PRK_tribal_territory_vln
+	}
+	645 = {
+	set_state_flag = PRK_tribal_territory_vln
+	}
+	652 = {
+	set_state_flag = PRK_tribal_territory_vln
+	}
+	651 = {
+	set_state_flag = PRK_tribal_territory_vln
+	}
+	417 = {
+	set_state_flag = PRK_tribal_territory_vln
+	}
+	640 = {
+	set_state_flag = PRK_tribal_territory_vln
+	}
+	641 = {
+	set_state_flag = PRK_tribal_territory_vln
+	}
+	416 = {
+	set_state_flag = PRK_tribal_territory_vln
+	}
+	642 = {
+	set_state_flag = PRK_tribal_territory_vln
+	}
+	629 = {
+	set_state_flag = PRK_tribal_territory_vln
+	}
+	418 = {
+	set_state_flag = PRK_tribal_territory_vln
+	}
+	622 = {
+	set_state_flag = PRK_tribal_territory_vln
+	}
+	}

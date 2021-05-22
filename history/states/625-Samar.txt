@@ -11,7 +11,7 @@ state={
 		owner = PRK
 		buildings = {
 			infrastructure = 2
-			workshop = 1
+			farm = 1
 		}
 		add_core_of = PRK
 	}

@@ -89,7 +89,7 @@ units = {
 	division = {
 		name = "3nd Cavalry 'Die Verteidigung'"
 		location = 2355
-		division_template = "Späher"
+		division_template = "Prinzritter"
 		start_experience_factor = 0.6
 
 	}

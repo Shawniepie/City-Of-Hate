@@ -30,7 +30,7 @@ division_template = {
 }
 
 division_template = {
-	name = "Τοeότες"
+	name = "Toeteci"
 	regiments = {
 		men_at_arms = { x = 0 y = 0 }
 		archer_shortbow = { x = 0 y = 1 }
@@ -203,7 +203,7 @@ units = {
 	division = {
 		name = "2. Polemistés"
 		location = 6590
-		division_template = "Τοeότες"
+		division_template = "Toeteci"
 		start_experience_factor = 0.6
 
 	}
@@ -323,7 +323,7 @@ units = {
 	division = {
 		name = "17. Polemistés"
 		location = 6562
-		division_template = "Τοeότες"
+		division_template = "Toeteci"
 		start_experience_factor = 0.6
 
 	}
@@ -379,7 +379,7 @@ units = {
 	division = {
 		name = "24. Polemistés"
 		location = 4204
-		division_template = "Τοeότες"
+		division_template = "Toeteci"
 		start_experience_factor = 0.6
 
 	}
@@ -429,11 +429,21 @@ units = {
 instant_effect = {
 	add_equipment_production = {
 		equipment = {
-			type = infantry_equipment_1
+			type = infantry_equipment_0
 			creator = "IRI"
 		}
 		requested_factories = 10
 		progress = 0.48
+		efficiency = 8
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = ranged_equipment_0
+			creator = "IRI"
+		}
+		requested_factories = 8
+		progress = 0.37
 		efficiency = 8
 	}
 

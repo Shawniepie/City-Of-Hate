@@ -1,0 +1,29 @@
+### Perkavland FOCUS TREE
+
+focus_tree = {
+	id = perkavland_focus
+	country = {
+		factor = 0
+	#	modifier = {
+	#		add = 10
+	#		tag = PRK
+	#	}
+	}
+	#Issues tree
+	focus = {#What to do with the spoils?
+		id = PRK_spoils_of_schneefilde
+		icon = GFX_goal_generic_political_pressure
+		cost = 6.8
+		x = 7
+		y = 0
+		ai_will_do = {
+			factor = 15
+		}
+		completion_reward = {
+			add_stability = -0.05
+			country_event = {
+				id = prk.30			
+				days = 1
+			}
+		}
+	}

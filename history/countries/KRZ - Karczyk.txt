@@ -20,9 +20,9 @@ set_politics = {
 }
 
 set_popularities = {
-	monarchy_absolute = 27
+	monarchy_absolute = 59
 
-	monarchy_constitutional = 11
+	monarchy_constitutional = 0
 
 	republic_peasant = 14
 
@@ -30,9 +30,9 @@ set_popularities = {
 
 	republic_merchant = 12
 
-	theocrat = 10
+	theocrat = 0
 
-	puritan = 11
+	puritan = 0
 }
 
 add_ideas = {
