@@ -1,3 +1,167 @@
+PRK_council = {
+	
+PRK_upset_krz = {
+		
+		icon = GFX_decision_generic_nationalism
+		
+		allowed = {
+			tag = PRK
+		}
+		visible = {
+			NOT = {
+			has_country_flag = PRK_council_ended
+			country_exists = KRZ
+			}
+		}
+		available = {
+			custom_trigger_tooltip = {
+			tooltip = krz_unupset_trigger_val_tt
+			check_variable = { krz_var > 15 }
+			}
+		}
+		
+		activation = {
+		NOT = {
+		has_active_mission = PRK_upset_vln
+		}
+			custom_trigger_tooltip = {
+			tooltip = krz_upset_trigger_val_tt
+			check_variable = { krz_var < 15 }
+			}
+		}
+		
+		days_mission_timeout = 180
+		
+		fire_only_once = no
+		selectable_mission = no
+		is_good = no
+		
+		timeout_effect = {
+			country_event = prk.100
+		}
+	}
+PRK_upset_wlt = {
+		
+		icon = GFX_decision_generic_nationalism
+		
+		allowed = {
+			tag = PRK
+		}
+		visible = {
+			NOT = {
+			has_country_flag = PRK_council_ended
+			country_exists = KRZ
+			}
+		}
+		available = {
+			custom_trigger_tooltip = {
+			tooltip = wlt_unupset_trigger_val_tt
+			check_variable = { wlt_var > 15 }
+			}
+		}
+		
+		activation = {
+		NOT = {
+		has_active_mission = PRK_upset_vtz
+		}
+			custom_trigger_tooltip = {
+			tooltip = wlt_upset_trigger_val_tt
+			check_variable = { wlt_var < 15 }
+			}
+		}
+		
+		days_mission_timeout = 180
+		
+		fire_only_once = no
+		selectable_mission = no
+		is_good = no
+		
+		timeout_effect = {
+			country_event = prk.101
+		}
+	}
+PRK_upset_vtz = {
+		
+		icon = GFX_decision_generic_nationalism
+		
+		allowed = {
+			tag = PRK
+		}
+		visible = {
+			NOT = {
+			has_country_flag = PRK_council_ended
+			country_exists = KRZ
+			}
+		}
+		available = {
+			custom_trigger_tooltip = {
+			tooltip = vtz_unupset_trigger_val_tt
+			check_variable = { vtz_var > 15 }
+			}
+		}
+		
+		activation = {
+		NOT = {
+		has_active_mission = PRK_upset_wlt
+		}
+			custom_trigger_tooltip = {
+			tooltip = vtz_upset_trigger_val_tt
+			check_variable = { vtz_var < 15 }
+			}
+		}
+		
+		days_mission_timeout = 180
+		
+		fire_only_once = no
+		selectable_mission = no
+		is_good = no
+		
+		timeout_effect = {
+			country_event = prk.102
+		}
+	}
+PRK_upset_vln = {
+		
+		icon = GFX_decision_generic_nationalism
+		
+		allowed = {
+			tag = PRK
+		}
+		visible = {
+			NOT = {
+			has_country_flag = PRK_council_ended
+			country_exists = KRZ
+			}
+		}
+		available = {
+			custom_trigger_tooltip = {
+			tooltip = vln_unupset_trigger_val_tt
+			check_variable = { vln_var > 15 }
+			}
+		}
+		
+		activation = {
+		NOT = {
+		has_active_mission = PRK_upset_krz
+		}
+			custom_trigger_tooltip = {
+			tooltip = vln_upset_trigger_val_tt
+			check_variable = { vln_var < 15 }
+			}
+		}
+		
+		days_mission_timeout = 180
+		
+		fire_only_once = no
+		selectable_mission = no
+		is_good = no
+		
+		timeout_effect = {
+			country_event = prk.103
+		}
+	}	
+}
+
 plunder_schneefilde = {
 		
 	PRK_plunder_schneefilde = {

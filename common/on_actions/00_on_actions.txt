@@ -330,6 +330,42 @@
 			}
 		}
 	}
+	#remove state flag from tribal territories that don't belong to PRK anymore
+	on_state_owner_changed = {
+	 effect = {
+	   all_state = {
+	  	 	limit = {
+	  			 OR = {
+	  			 has_state_flag = PRK_tribal_territory_krz
+	  			 has_state_flag = PRK_tribal_territory_wlt
+	  			 has_state_flag = PRK_tribal_territory_vtz
+	  			 has_state_flag = PRK_tribal_territory_vln
+	  			 }
+	  			 NOT = {
+	  			 OR = {
+	  			 is_owned_by = PRK
+	  			 is_owned_by = KRZ
+	  			 is_owned_by = WLT
+	  			 is_owned_by = VTZ
+	  			 is_owned_by = VLN
+	  			 }
+	 		 	 }
+			   }
+			clr_state_flag = PRK_tribal_territory_krz
+			clr_state_flag = PRK_tribal_territory_wlt
+		    clr_state_flag = PRK_tribal_territory_vtz
+			clr_state_flag = PRK_tribal_territory_vln
+	  }
+	 }
+	}
+	#Sets up the tribal territories
+	on_startup = {
+		effect = {
+			random_state = {
+				set_prk_tribal_ter = yes
+			}
+		}
+	}
 	
 	#Sets Politics and Faith
 	on_startup = {

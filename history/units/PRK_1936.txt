@@ -12,13 +12,26 @@ division_template = {
 	regiments = {
 		warband = { x = 0 y = 0 }
 		warband = { x = 0 y = 1 }
-        		warband = { x = 0 y = 2 }
+        warband = { x = 0 y = 2 }
 		warband = { x = 1 y = 0 }
 		warband = { x = 1 y = 1 }
 		warband = { x = 1 y = 2 }
 		warband = { x = 2 y = 0 }
 		warband = { x = 2 y = 1 }
 		warband = { x = 2 y = 2 }
+	}
+}
+division_template = {
+	name = "Lukostřelci"
+	regiments = {
+		perkav_raiders = { x = 0 y = 0 }
+		archer_shortbow = { x = 0 y = 1 }
+        archer_shortbow = { x = 0 y = 2 }
+        archer_shortbow = { x = 0 y = 3 }
+		perkav_raiders = { x = 1 y = 0 }
+		archer_shortbow = { x = 1 y = 1 }
+		archer_shortbow = { x = 1 y = 2 }
+		archer_shortbow = { x = 1 y = 3 }
 	}
 }
 
@@ -28,7 +41,7 @@ division_template = {
 		perkav_raiders = { x = 0 y = 0 }
 		perkav_raiders = { x = 0 y = 1 }
 		perkav_raiders = { x = 0 y = 2 }
-      		perkav_raiders = { x = 1 y = 0 }
+      	perkav_raiders = { x = 1 y = 0 }
 		perkav_raiders = { x = 1 y = 1 }
 		perkav_raiders = { x = 1 y = 2 }
 	}
@@ -46,7 +59,7 @@ units = {
 	division = {
 		name = "Warband of Nevetko"
 		location = 819
-		division_template = "Fosztogató"
+		division_template = "Lukostřelci"
 		start_experience_factor = 0.5
 	}
 	
@@ -81,7 +94,7 @@ units = {
 	division = {
 		name = "Warband of Rlavya"
 		location = 3786
-		division_template = "Fosztogató"
+		division_template = "Lukostřelci"
 		start_experience_factor = 0.5
 	}
 	
@@ -128,8 +141,17 @@ instant_effect = {
 			type = infantry_equipment_0
 			creator = "PRK"
 		}
-		requested_factories = 22
-		progress = 0.31
+		requested_factories = 10
+		progress = 0.21
+		efficiency = 13
+	}
+	add_equipment_production = {
+		equipment = {
+			type = ranged_equipment_0
+			creator = "PRK"
+		}
+		requested_factories = 10
+		progress = 0.19
 		efficiency = 13
 	}
 }

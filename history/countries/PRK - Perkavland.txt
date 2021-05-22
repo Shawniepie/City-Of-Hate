@@ -6,6 +6,8 @@ set_technology = {
 	implements_war = 1
 	tribal_warbands = 1
 	sparring_fields = 1
+	war_artisans = 1
+	improved_woodworking = 1
 	perkav_raiders = 1
 }
 
@@ -36,6 +38,12 @@ set_popularities = {
 
 	puritan = 0
 }
+
+set_variable = { var = krz_var value = 18 }
+set_variable = { var = wlt_var value = 23 }
+set_variable = { var = vtz_var value = 28 }
+set_variable = { var = vln_var value = 20 }
+
 
 add_ideas = {
 	tribal_society

@@ -1,0 +1,58 @@
+﻿l_english:
+PRK_council:0 "The Perkav Grand Council"
+PRK_council_desc:0 "The Perkav Grand Council of the Confederacy was created in 830 to unify the Perkav people and lead them together to a brighter future, we will have to carefully navigate the political instability of Perkavland using this council.\n§HWestern Alliance's§! current loyalty [?ROOT.krz_var|+0]\n§HSouthern Dominion's§! current loyalty [?ROOT.wlt_var|+0]\n§HDruidic Circles'§! current loyalty [?ROOT.vtz_var|+0]\n§HPirate-Raider's§! current loyalty [?ROOT.vln_var|+0]\nLetting one of the faction's loyalty drop §Runder 15§! will cause them to §Rrebel!§!"
+
+PRK_upset_krz:0 "Western Alliance Rebellion!"
+krz_upset_trigger_val_tt:0 "The §HWestern Alliance's§! loyalty is under §R15§!"
+krz_unupset_trigger_val_tt:0 "§HWestern Alliance's§! loyalty has to be over §G15§!"
+
+PRK_upset_wlt:0 "Southern Dominion Rebellion!"
+wlt_upset_trigger_val_tt:0 "The §HSouthern Dominion's§! loyalty is under §R15§!"
+wlt_unupset_trigger_val_tt:0 "§HSouthern Dominion's§! loyalty has to be over §G15§!"
+
+PRK_upset_vtz:0 "Druidic Rebellion!"
+vtz_upset_trigger_val_tt:0 "The §HDruidic Circles'§! loyalty is under §R15§!"
+vtz_unupset_trigger_val_tt:0 "§HDruidic Circles'§! loyalty has to be over §G15§!"
+
+PRK_upset_vln:0 "Pirate-Raider Rebellion!"
+vln_upset_trigger_val_tt:0 "The §HPirate-Raider's§! loyalty is under §R15§!"
+vln_unupset_trigger_val_tt:0 "§HPirate-Raider's§! loyalty has to be over §G15§!"
+#
+prk_rebel_defeat_tooltip:0 "By §Hdefeating§! these rebels all §Hfactions§! §Gincrease their loyalty by 10§!."
+#
+prk.100.t:0 "Western Alliance Rebels"
+prk.100.d:0 "It seems due to dissatisfaction with our policies the Western Tribes have reignited their alliance and have rosen up against our rule, this is terrible but if we manage to defeat them our rule shall be solidified even further."
+prk.100.a:0 "The Council knows best!"
+prk.100.b:0 "Their cause is just!"
+#
+prk.101.t:0 "Southern Dominion Rebels"
+prk.101.d:0 "It seems due to dissatisfaction with our policies the Southern Tribe Welt and their vassals have united forces and have rosen up against our rule, this is terrible but if we manage to defeat them our rule shall be solidified even further."
+prk.101.a:0 "The Council knows best!"
+prk.101.b:0 "The Welts are the true hier of Perkav!"
+#
+prk.102.t:0 "Druidic Rebellion"
+prk.102.d:0 "It seems due to dissatisfaction with our policies and religious activity the druids of many deeply Krostovite tribes have submitted or joined forces with the Druidic Council and have rosen up against our rule, this is terrible but if we manage to defeat them our rule shall be solidified even further."
+prk.102.a:0 "The Council knows best!"
+prk.102.b:0 "End this Heresy!"
+#
+prk.103.t:0 "Pirate-Raider Rebellion"
+prk.103.d:0 "It seems due to dissatisfaction with our policies many tribes with raider traditions and desire for glory have rosen up against our rule, this is terrible but if we manage to defeat them our rule shall be solidified even further."
+prk.103.a:0 "The Council knows best!"
+prk.103.b:0 "A pirate's way is the only way!"
+#
+prk.104.t:0 "Rebellion Crushed"
+prk.104.d:0 "Using the power of our might and great leadership, we have crushed the rebelling tribes and put them back into their place. It is stable for now"
+prk.104.a:0 "Let's hope we are closer to unity"
+#
+prk.105.t:0 "Victory over the grand council"
+prk.105.d:0 "Using the power of our might and great leadership, we have crushed the tyranical leadership of the Grand Council. It is now we can dictate the future of the perkav people as we are destined to rule."
+prk.105.a:0 "it's a heavy burden for our short-guided ambitious"
+prk.105.b:0 "We shall lead Perkavland to glory!"
+#krz_var_icon_value:0 "[?ROOT.krz_var|0H]"
+#wlt_var_icon_value:0 "[?ROOT.wlt_var|0H]"
+#vtz_var_icon_value:0 "[?ROOT.vtz_var|0H]"
+#vln_var_icon_value:0 "[?ROOT.vln_var|0H]"
+#krz_var_full_influence_breakdown:0 "The §HWestern Alliance's§! current loyalty [?ROOT.krz_var|+0]"
+#wlt_var_full_influence_breakdown:0 "The §HSouthern Dominion's§! current loyalty [?ROOT.wlt_var|+0]"
+#vtz_var_full_influence_breakdown:0 "The §HDruidic Circles'§! current loyalty [?ROOT.vtz_var|+0]"
+#vln_var_full_influence_breakdown:0 "The §HPirate Raider's§! current loyalty [?ROOT.vln_var|+0]"

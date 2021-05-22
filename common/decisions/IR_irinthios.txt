@@ -386,7 +386,6 @@ IRI_category_territorial_integration = {
 		
 		hidden_effect = {
 		clr_country_flag = IRI_Integration_Progress
-		set_country_flag = IRI_Integration_Progress
 		set_country_flag = IRI_Tla_Integrated_2
 		remove_ideas = IRI_TlaProblems1
 		remove_ideas = IRI_TlaProblems2
@@ -406,6 +405,7 @@ IRI_category_territorial_integration = {
 			add_state_core = 787
 			add_state_core = 789
 			add_state_core = 778
+			add_state_core = 792
 			}
 		}
 	}
@@ -465,6 +465,7 @@ IRI_category_territorial_integration = {
 			add_state_core = 780
 			add_state_core = 779
 			add_state_core = 786
+			add_state_core = 827
 			}
 		}
 	}
@@ -484,7 +485,10 @@ IRI_irinthios_influence_sphere = {
 		hidden_trigger = {
 			has_completed_focus = IRI_Influence_Sphere_Ambitions }
 			NOT = { has_global_flag = IRI_kur_influenced }
-			KUR = { is_subject = no }
+			KUR = { 
+			is_subject = no
+			exists = yes
+			}
 		}
 		
 		available = {
@@ -527,7 +531,10 @@ IRI_irinthios_influence_sphere = {
 		hidden_trigger = {
 			has_completed_focus = IRI_Influence_Sphere_Ambitions }
 			has_global_flag = IRI_kur_influenced
-			KUR = { is_subject = no }
+			KUR = { 
+			is_subject = no
+			exists = yes
+			}
 		}
 		
 		available = {
@@ -570,7 +577,10 @@ IRI_irinthios_influence_sphere = {
 		hidden_trigger = {
 			has_completed_focus = IRI_Influence_Sphere_Ambitions }
 			NOT = { has_global_flag = IRI_BER_influenced }
-			BER = { is_subject = no }
+			BER = { 
+			is_subject = no
+			exists = yes
+			}
 		}
 		
 		available = {
@@ -613,7 +623,10 @@ IRI_irinthios_influence_sphere = {
 		hidden_trigger = {
 			has_completed_focus = IRI_Influence_Sphere_Ambitions }
 			has_global_flag = IRI_BER_influenced
-			BER = { is_subject = no }
+			BER = { 
+			is_subject = no
+			exists = yes
+			}
 		}
 		
 		available = {
@@ -656,14 +669,20 @@ IRI_irinthios_influence_sphere = {
 		hidden_trigger = {
 			has_completed_focus = IRI_Influence_Sphere_Ambitions }
 			NOT = { has_global_flag = IRI_LIR_influenced }
-			LIR = { is_subject = no }
+			LIR = { 
+			is_subject = no
+			exists = yes
+			}
 		}
 		
 		available = {
 			NOT = { has_war_with = LIR }
 			is_subject = no
 			hidden_trigger = {
-			LIR = { is_subject = no }
+			LIR = { 
+			is_subject = no
+			has_civil_war = no
+			}
 			has_completed_focus = IRI_Influence_Sphere_Ambitions			
 			}
 			NOT = { has_global_flag = IRI_LIR_influenced }
@@ -699,14 +718,20 @@ IRI_irinthios_influence_sphere = {
 		hidden_trigger = {
 			has_completed_focus = IRI_Influence_Sphere_Ambitions }
 			has_global_flag = IRI_LIR_influenced
-			LIR = { is_subject = no }
+			LIR = { 
+			is_subject = no
+			exists = yes
+			}
 		}
 		
 		available = {
 			NOT = { has_war_with = LIR }
 			is_subject = no
 			hidden_trigger = {
-			LIR = { is_subject = no }
+			LIR = { 
+			is_subject = no
+			has_civil_war = no
+			}
 			has_completed_focus = IRI_Influence_Sphere_Ambitions			
 			}
 			has_global_flag = IRI_LIR_influenced
@@ -742,7 +767,10 @@ IRI_irinthios_influence_sphere = {
 		hidden_trigger = {
 			has_completed_focus = IRI_Influence_Sphere_Ambitions }
 			NOT = { has_global_flag = IRI_RMT_influenced }
-			RMT = { is_subject = no }
+			RMT = { 
+			is_subject = no
+			exists = yes
+			}
 		}
 		
 		available = {
@@ -785,7 +813,10 @@ IRI_irinthios_influence_sphere = {
 		hidden_trigger = {
 			has_completed_focus = IRI_Influence_Sphere_Ambitions }
 			has_global_flag = IRI_RMT_influenced
-			RMT = { is_subject = no }
+			RMT = { 
+			is_subject = no
+			exists = yes
+			}
 		}
 		
 		available = {
@@ -828,7 +859,10 @@ IRI_irinthios_influence_sphere = {
 		hidden_trigger = {
 			has_completed_focus = IRI_Influence_Sphere_Ambitions }
 			NOT = { has_global_flag = IRI_MER_influenced }
-			MER = { is_subject = no }
+			MER = { 
+			is_subject = no
+			exists = yes
+			}
 		}
 		
 		available = {
@@ -871,7 +905,10 @@ IRI_irinthios_influence_sphere = {
 		hidden_trigger = {
 			has_completed_focus = IRI_Influence_Sphere_Ambitions }
 			has_global_flag = IRI_MER_influenced
-			MER = { is_subject = no }
+			MER = { 
+			is_subject = no
+			exists = yes
+			}
 		}
 		
 		available = {
@@ -914,7 +951,10 @@ IRI_irinthios_influence_sphere = {
 		hidden_trigger = {
 			has_completed_focus = IRI_Influence_Sphere_Ambitions }
 			NOT = { has_global_flag = IRI_BLD_influenced }
-			BLD = { is_subject = no }
+			BLD = { 
+			is_subject = no
+			exists = yes
+			}
 		}
 		
 		available = {
@@ -957,7 +997,10 @@ IRI_irinthios_influence_sphere = {
 		hidden_trigger = {
 			has_completed_focus = IRI_Influence_Sphere_Ambitions }
 			has_global_flag = IRI_BLD_influenced
-			BLD = { is_subject = no }
+			BLD = { 
+			is_subject = no
+			exists = yes
+			}
 		}
 		
 		available = {

@@ -1049,3 +1049,578 @@ country_event = {#Union-Bergialer Joint Patrols
 		custom_effect_tooltip = PRK_raids_harder_tt
 	}
 }
+
+
+###################################### REBELLIONS
+
+country_event = {#Western Alliance rebels
+	id = prk.100
+	title = prk.100.t
+	desc = prk.100.d
+	picture = GFX_report_event_perkavland_sacked
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+		UNG = {
+			set_country_flag = UNG_perkav_rebels # IDK what this means for UNG tbh
+		}
+		add_ideas = GENERIC_civil_war_isolation
+		set_variable = { var = krz_var value = 15 }
+		every_state = {
+			limit = {
+			has_state_flag = PRK_tribal_territory_krz
+			is_owned_by = PRK
+			}
+		KRZ = {
+		transfer_state = PREV
+		}
+		add_core_of = KRZ
+		}
+		#release = KRZ
+		KRZ = {
+		inherit_technology = PRK
+		add_ideas = GENERIC_civil_war_isolation
+		set_cosmetic_tag = KRZ_Western_Alliance
+		}
+		transfer_units_fraction= {
+			target = KRZ
+			size = 0.1
+			stockpile_ratio = 0.4
+			army_ratio = 0.3
+			navy_ratio = 0.2
+			air_ratio = 0.0
+		}
+		}
+	}
+	
+	option = {#Support Krell
+		name = prk.100.a
+		ai_chance = {
+			factor = 1
+		}
+		KRZ = {
+		declare_war_on = {
+  			  target = PRK
+		      type = annex_everything
+			}
+		}
+	}
+	
+	option = {#Support Western Alliance
+		name = prk.100.b
+		
+		ai_chance = {
+			factor = 0
+		}
+		KRZ = { change_tag_from = PRK }
+		hidden_effect = {
+			KRZ = {
+			declare_war_on = {
+  			  target = PRK
+		      type = annex_everything
+			}
+		}
+		}
+		}
+	}
+
+country_event = {#southern dominion rebels
+	id = prk.101
+	title = prk.101.t
+	desc = prk.101.d
+	picture = GFX_report_event_perkavland_sacked
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+		UNG = {
+			set_country_flag = UNG_perkav_rebels # IDK what this means for UNG tbh
+		}
+		add_ideas = GENERIC_civil_war_isolation
+		set_variable = { var = wlt_var value = 15 }
+		every_state = {
+			limit = {
+			has_state_flag = PRK_tribal_territory_wlt
+			is_owned_by = PRK
+			}
+		WLT = {
+		transfer_state = PREV
+		}
+		add_core_of = WLT
+		}
+		WLT = {
+		inherit_technology = PRK
+		add_ideas = GENERIC_civil_war_isolation
+		set_cosmetic_tag = WLT_Dominion
+		}
+		transfer_units_fraction= {
+			target = WLT
+			size = 0.1
+			stockpile_ratio = 0.4
+			army_ratio = 0.3
+			navy_ratio = 0.2
+			air_ratio = 0.0
+		}
+		}
+	}
+	
+	option = {#Support Krell
+		name = prk.101.a
+		ai_chance = {
+			factor = 1
+		}
+		WLT = {
+		declare_war_on = {
+  			  target = PRK
+		      type = annex_everything
+			}
+		}
+	}
+	
+	option = {#Support dominion
+		name = prk.101.b
+		
+		ai_chance = {
+			factor = 0
+		}
+		WLT = { change_tag_from = PRK }
+		hidden_effect = {
+			WLT = {
+			declare_war_on = {
+  			  target = PRK
+		      type = annex_everything
+			}
+		}
+		}
+		}
+	}
+
+country_event = {#Druidic Circles' rebels
+	id = prk.102
+	title = prk.102.t
+	desc = prk.102.d
+	picture = GFX_report_event_perkavland_sacked
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+		UNG = {
+			set_country_flag = UNG_perkav_rebels # IDK what this means for UNG tbh
+		}
+		add_ideas = GENERIC_civil_war_isolation
+		set_variable = { var = vtz_var value = 15 }
+		every_state = {
+			limit = {
+			has_state_flag = PRK_tribal_territory_vtz
+			is_owned_by = PRK
+			}
+		VTZ = {
+		transfer_state = PREV
+		}
+		add_core_of = VTZ
+		}
+		VTZ = {
+		inherit_technology = PRK
+		add_ideas = GENERIC_civil_war_isolation
+		set_cosmetic_tag = VTZ_druids
+		retire_leader = yes
+		create_country_leader = {
+		name = "Wojskav Rekow"
+		desc = "politics_PRK_rekow_desc"
+		picture = "gfx/leaders/PRK/Portrait_PRK_Rekow.dds"
+		ideology = monarchy_absolute_ideology
+		}
+		}
+		transfer_units_fraction= {
+			target = VTZ
+			size = 0.1
+			stockpile_ratio = 0.4
+			army_ratio = 0.4
+			navy_ratio = 0.2
+			air_ratio = 0.0
+		}
+		}
+	}
+	
+	option = {#Support Krell
+		name = prk.102.a
+		ai_chance = {
+			factor = 1
+		}
+		VTZ = {
+		declare_war_on = {
+  			  target = PRK
+		      type = annex_everything
+			}
+		}
+	}
+	
+	option = {#Support druids
+		name = prk.102.b
+		
+		ai_chance = {
+			factor = 0
+		}
+		VTZ = { change_tag_from = PRK }
+		hidden_effect = {
+			VTZ = {
+			declare_war_on = {
+  			  target = PRK
+		      type = annex_everything
+			}
+		}
+		}
+		}
+	}
+
+country_event = {#Druidic Circles' rebels
+	id = prk.103
+	title = prk.103.t
+	desc = prk.103.d
+	picture = GFX_report_event_perkavland_sacked
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+		UNG = {
+			set_country_flag = UNG_perkav_rebels # IDK what this means for UNG tbh
+		}
+		add_ideas = GENERIC_civil_war_isolation
+		set_variable = { var = vln_var value = 15 }
+		every_state = {
+			limit = {
+			has_state_flag = PRK_tribal_territory_vln
+			is_owned_by = PRK
+			}
+		VLN = {
+		transfer_state = PREV
+		}
+		add_core_of = VLN
+		}
+		VLN = {
+		inherit_technology = PRK
+		add_ideas = GENERIC_civil_war_isolation
+		set_cosmetic_tag = VLN_pirates
+		retire_leader = yes
+		create_country_leader = {
+		name = "Tobiasz Janeczko"
+		desc = "politics_PRK_Janec_desc"
+		picture = "gfx/leaders/PRK/Portrait_PRK_Janec.dds"
+		ideology = monarchy_absolute_ideology
+		}
+		}
+		transfer_units_fraction= {
+			target = VLN
+			stockpile_ratio = 0.4
+			army_ratio = 0.3
+			navy_ratio = 0.4
+			air_ratio = 0.0
+		}
+		}
+	}
+	
+	option = {#Support Krell
+		name = prk.103.a
+		ai_chance = {
+			factor = 1
+		}
+		VLN = {
+		declare_war_on = {
+  			  target = PRK
+		      type = annex_everything
+			}
+		}
+	}
+	
+	option = {#Support druids
+		name = prk.103.b
+		
+		ai_chance = {
+			factor = 0
+		}
+		VLN = { change_tag_from = PRK }
+		hidden_effect = {
+			VLN = {
+			declare_war_on = {
+  			  target = PRK
+		      type = annex_everything
+			}
+		}
+		}
+		}
+	}
+#Rebellion outcome
+##################
+country_event = {#Rebels defeated
+	id = prk.104
+	title = prk.104.t
+	desc = prk.104.d
+	picture = GFX_report_event_czech_soldiers_01
+	
+	fire_only_once = no
+	trigger = {
+	tag = PRK
+	UNG = {
+			has_country_flag = UNG_perkav_rebels # IDK what this means for UNG tbh
+		}
+	#has_idea = GENERIC_civil_war_isolation
+	any_state = {
+		OR = {
+		is_core_of = KRZ
+		is_core_of = WLT
+		is_core_of = VTZ
+		is_core_of = VLN
+		}
+	}
+	has_war = no
+	has_capitulated = no
+	exists = yes
+	}
+	option = {#Good
+		name = prk.104.a
+		ai_chance = {
+			factor = 1
+		}
+		custom_effect_tooltip = prk_rebel_defeat_tooltip
+		add_to_variable = {
+			var = krz_var
+			value = 10
+		}
+		add_to_variable = {
+			var = wlt_var
+			value = 10
+		}
+		add_to_variable = {
+			var = vtz_var
+			value = 10
+		}
+		add_to_variable = {
+			var = vln_var
+			value = 10
+		}
+		UNG = {
+			clr_country_flag = UNG_perkav_rebels # IDK what this means for UNG tbh
+		}
+		remove_ideas = GENERIC_civil_war_isolation
+		all_country = {
+		limit = {
+		has_idea = GENERIC_civil_war_isolation
+			OR = {
+				tag = KRZ
+				tag = WLT
+				tag = VTZ
+				tag = VLN
+				}
+			}
+		remove_ideas = GENERIC_civil_war_isolation
+		}
+		every_state = {
+			limit = {
+			OR = {
+				is_core_of = KRZ
+				is_core_of = WLT
+				is_core_of = VTZ
+				is_core_of = VLN
+				}
+			}
+		remove_core_of = KRZ
+		remove_core_of = WLT
+		remove_core_of = VTZ
+		remove_core_of = VLN
+		}
+	}
+}
+
+country_event = {#Rebels win
+	id = prk.105
+	title = prk.105.t
+	desc = prk.105.d
+	picture = GFX_report_event_czech_soldiers_01
+	
+	fire_only_once = yes
+	trigger = {
+	OR = {
+	tag = KRZ
+	tag = WLT
+	tag = VTZ
+	tag = VLN
+	}
+	UNG = {
+			has_country_flag = UNG_perkav_rebels # IDK what this means for UNG tbh
+		}
+	#has_idea = GENERIC_civil_war_isolation
+	has_war = no
+	has_capitulated = no
+	exists = yes
+	}
+	option = {#balkanazisation time
+		name = prk.105.a
+		trigger = {
+			OR = {
+				tag = KRZ
+				tag = WLT
+				}
+		}
+		ai_chance = {
+			factor = 1
+		}
+		UNG = {
+			clr_country_flag = UNG_perkav_rebels # IDK what this means for UNG tbh
+		}
+		all_country = {
+		limit = {
+		has_idea = GENERIC_civil_war_isolation
+			OR = {
+				tag = KRZ
+				tag = WLT
+				tag = PRK
+				}
+			}
+		remove_ideas = GENERIC_civil_war_isolation
+		}
+		every_state = {
+			limit = {
+			has_state_flag = PRK_tribal_territory_krz
+			is_owned_by = ROOT
+			}
+		add_core_of = KRZ
+		remove_core_of = PRK
+		KRZ = {
+		transfer_state = PREV
+		}
+		}
+		every_state = {
+			limit = {
+			has_state_flag = PRK_tribal_territory_wlt
+			is_owned_by = ROOT
+			}
+		add_core_of = WLT
+		remove_core_of = PRK
+		WLT = {
+		transfer_state = PREV
+		}
+		}
+		every_state = {
+			limit = {
+			has_core_of = PRK
+			is_owned_by = ROOT
+				NOT = {
+					has_state_flag = PRK_tribal_territory_krz
+					has_state_flag = PRK_tribal_territory_wlt
+				}
+			}
+		add_core_of = KRL
+		remove_core_of = PRK
+		KRL = {
+		transfer_state = PREV
+		}
+	}
+	KRZ = {
+	set_cosmetic_tag = KRZ_Western_Alliance
+	}
+	WLT = {
+	set_cosmetic_tag = WLT_Dominion
+	}
+}
+
+	option = {#take over time
+		name = prk.105.b
+		trigger = {
+			OR = {
+				tag = VTZ
+				tag = VLN
+				}
+		}
+		ai_chance = {
+			factor = 1
+		}
+		UNG = {
+			clr_country_flag = UNG_perkav_rebels # IDK what this means for UNG tbh
+		}
+		all_country = {
+		limit = {
+		has_idea = GENERIC_civil_war_isolation
+			OR = {
+				tag = VTZ
+				tag = VLN
+				tag = PRK
+				}
+			}
+		remove_ideas = GENERIC_civil_war_isolation
+		}
+		if = {
+			limit = {
+			tag = VTZ
+			}
+			drop_cosmetic_tag = yes
+			PRK = {
+			transfer_state = 413
+			set_country_flag = PRK_VTZ_druidic_rebel_win
+			set_cosmetic_tag = PRK_druidic
+			annex_country = {
+   				 target = VTZ
+  				 transfer_troops = yes
+				}
+			set_variable = { var = vtz_var value = 100 }
+			retire_leader = yes
+			create_country_leader = {
+			name = "Tobiasz Janeczko"
+			desc = "politics_PRK_Janec_desc"
+			picture = "gfx/leaders/PRK/Portrait_PRK_Janec.dds"
+			ideology = monarchy_absolute_ideology
+			}
+			change_tag_from = VTZ
+			}
+		}
+		if = {
+			limit = {
+			tag = VLN
+			}
+			drop_cosmetic_tag = yes
+			PRK = {
+			transfer_state  = 413
+			set_country_flag = PRK_VLN_pirate_rebel_win
+			set_cosmetic_tag = PRK_pirate
+			annex_country = {
+   				 target = VLN
+  				 transfer_troops = yes
+				}
+			set_variable = { var = vln_var value = 100 }
+			retire_leader = yes
+			create_country_leader = {
+			name = "Wojskav Rekow"
+			desc = "politics_PRK_rekow_desc"
+			picture = "gfx/leaders/PRK/Portrait_PRK_Rekow.dds"
+			ideology = monarchy_absolute_ideology
+			}
+			change_tag_from = VLN
+			}
+		}
+		every_state = {
+			limit = {
+			OR = {
+				is_core_of = KRZ
+				is_core_of = WLT
+				is_core_of = VTZ
+				is_core_of = VLN
+				}
+			}
+		remove_core_of = KRZ
+		remove_core_of = WLT
+		remove_core_of = VTZ
+		remove_core_of = VLN
+		}
+	}
+}
+
+#####################################
+

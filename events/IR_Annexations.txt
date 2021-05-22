@@ -7321,7 +7321,14 @@ country_event = { #Conquest of Perkavland
 
 	trigger = {
 		NOT = {
+			or = {
 			original_tag = PRK
+			tag = KRZ
+			tag = WLT
+			tag = VTZ
+			tag = VLN
+			tag = KRL
+			}
 		}
 		OR = {
 			AND = {
