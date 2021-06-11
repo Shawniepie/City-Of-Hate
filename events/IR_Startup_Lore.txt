@@ -1,0 +1,326 @@
+﻿### GAME STARTUP LORE EVENTS
+
+add_namespace = lore
+
+country_event = { # General
+	id = lore.1
+	title = lore.1.t
+	desc = lore.1.d
+	picture = GFX_report_event_worldmap
+
+	is_triggered_only = yes
+
+	option = { # Accept world lore
+		name = lore.1.a
+		country_event = {
+			id = lore.2
+		}
+	}
+
+	option = { # Accept country lore
+		name = lore.1.b
+		country_event = {
+			id = lore.13
+		}
+	}
+
+	option = { # Accept world and country lore
+		name = lore.1.c
+		country_event = {
+			id = lore.2
+		}
+		set_country_flag = wants_country_lore
+	}
+	
+	option = { # Not interested
+		name = lore.1.e
+	}
+}
+
+country_event = { # Gate of the Gods
+	id = lore.2
+	title = lore.2.t
+	desc = lore.2.d
+	picture = GFX_report_event_kel
+	
+	is_triggered_only = yes
+	
+	option = { #Interesting
+		name = lore.2.a
+		country_event = {
+			id = lore.3
+		}
+	}
+}
+
+country_event = { # Ages
+	id = lore.3
+	title = lore.3.t
+	desc = lore.3.d
+	picture = GFX_report_event_generic_ruins
+	
+	is_triggered_only = yes
+	
+	option = { # Interesting - Conclude
+		trigger = {
+			NOT = {
+				has_country_flag = wants_country_lore
+			}
+		}
+		name = lore.3.a
+	}
+	
+	option = { # Interesting - Country lore now, please
+		trigger = {
+			has_country_flag = wants_country_lore
+		}
+		name = lore.3.a
+		country_event = {
+			id = lore.13
+		}
+	}
+	
+	option = { # Tell me of the Ages
+		name = lore.3.b
+		country_event = {
+			id = lore.4
+		}
+	}
+}
+
+country_event = { # Ages - Indepth
+	id = lore.4
+	title = lore.4.t
+	desc = lore.4.d
+	picture = GFX_report_event_generic_sign_treaty1
+	
+	is_triggered_only = yes
+	
+	option = { # Dawn
+		name = lore.4.a
+		country_event = {
+			id = lore.5
+		}
+	}
+	
+	option = { # Sundering
+		name = lore.4.b
+		country_event = {
+			id = lore.6
+		}
+	}
+	
+	option = { # Woe
+		name = lore.4.c
+		country_event = {
+			id = lore.7
+		}
+	}
+	
+	option = { # Part 2
+		name = lore.4.e
+		country_event = {
+			id = lore.8
+		}
+	}
+}
+
+country_event = { # Dawn
+	id = lore.5
+	title = lore.5.t
+	desc = lore.5.d
+	picture = GFX_report_event_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = lore.5.a
+		country_event = {
+			id = lore.3
+		}
+	}
+}
+
+country_event = { # Sundering
+	id = lore.6
+	title = lore.6.t
+	desc = lore.6.d
+	picture = GFX_report_event_chinese_soldiers_city_ruin
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = lore.6.a
+		country_event = {
+			id = lore.3
+		}
+	}
+}
+
+country_event = { # Woe
+	id = lore.7
+	title = lore.7.t
+	desc = lore.7.d
+	picture = GFX_report_event_ger_civil_war
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = lore.7.a
+		country_event = {
+			id = lore.3
+		}
+	}
+}
+
+country_event = { # Ages - Indepth 2
+	id = lore.8
+	title = lore.4.t
+	desc = lore.4.d
+	picture = GFX_report_event_generic_sign_treaty1
+
+	is_triggered_only = yes
+
+	option = { # Aether
+		name = lore.8.a
+		country_event = {
+			id = lore.9
+		}
+	}
+	
+	option = { # Void
+		name = lore.8.b
+		country_event = {
+			id = lore.10
+		}
+	}
+	
+	option = { # Autokratia
+		name = lore.8.c
+		country_event = {
+			id = lore.11
+		}
+	}
+	
+	option = { # Renewal
+		name = lore.8.e
+		country_event = {
+			id = lore.12
+		}
+	}
+}
+
+country_event = { # Aether
+	id = lore.9
+	title = lore.9.t
+	desc = lore.9.d
+	picture = GFX_report_event_physics_lab_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = lore.9.a
+		country_event = {
+			id = lore.3
+		}
+	}
+}
+
+country_event = { # Void
+	id = lore.10
+	title = lore.10.t
+	desc = lore.10.d
+	picture = GFX_report_event_spr_spanish_civil_war2
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = lore.10.a
+		country_event = {
+			id = lore.3
+		}
+	}
+}
+
+country_event = { # Autokratia
+	id = lore.11
+	title = lore.11.t
+	desc = lore.11.d
+	picture = GFX_report_event_yugoslavian_cavalry
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = lore.11.a
+		country_event = {
+			id = lore.3
+		}
+	}
+}
+
+country_event = { # Renewal
+	id = lore.12
+	title = lore.12.t
+	desc = lore.12.d
+	picture = GFX_report_event_military_planning
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = lore.12.a
+		country_event = {
+			id = lore.3
+		}
+	}
+}
+
+country_event = { # Full or Brief?
+	id = lore.13
+	title = lore.13.t
+	desc = lore.13.d
+	picture = GFX_report_event_generic_sign_treaty2
+	
+	is_triggered_only = yes
+	
+	option = { # Full Lore
+		name = lore.13.a
+		fire_full_lore_event = yes
+	}
+	
+	option = { # Brief Lore
+		name = lore.13.b
+		fire_brief_lore_event = yes
+	}
+}
+
+country_event = { # Ordoria - Ythelmare
+	id = lore.14
+	title = lore.14.t
+	desc = lore.14.d
+	picture = GFX_report_event_ord_banners
+	
+	is_triggered_only = yes
+	
+	option = { # Tell me about the Dwarven Wars
+		name = lore.14.a
+		country_event = {
+			id = lore.15
+		}
+	}
+}
+
+country_event = { # Ordoria - Dwarven Wars
+	id = lore.15
+	title = lore.15.t
+	desc = lore.15.d
+	picture = GFX_report_event_ord_banners
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = lore.15.a
+		country_event = {
+			id = lore.16
+		}
+	}
+}

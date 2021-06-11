@@ -1,0 +1,77 @@
+scripted_gui = {
+
+	lore_tab = {
+		context_type = player_context
+		
+		window_name = "lore_tab_container"
+		
+		visible = {
+			always = yes
+		}
+		
+		effects = {
+			lore_tab_button_click = {
+				set_country_flag = open_lore_tab_button_flag
+			}
+		}
+	}
+	
+	lore_tab_list = {
+		context_type = player_context
+		
+		window_name = "lore_tab_list"
+		
+		visible = {
+			has_country_flag = open_lore_tab_button_flag
+		}
+		
+		triggers = {
+			prev_button_visible = {
+				tag = ORD
+				OR = {
+					has_country_flag = country_history_text_flag
+					has_country_flag = country_history_text_2_flag
+				}
+			}
+			
+			next_button_visible = {
+				tag = ORD
+				OR = {
+					has_country_flag = country_history_text_flag
+					has_country_flag = country_history_text_2_flag
+				}
+			}
+		}
+		
+		effects = {
+			historical_context_button_click = {
+				set_country_flag = country_context_text_flag
+				clr_country_flag = country_history_text_flag
+				clr_country_flag = country_history_text_2_flag
+				clr_country_flag = world_history_text_flag
+			}
+			country_history_button_click = {
+				set_country_flag = country_history_text_flag
+				clr_country_flag = country_context_text_flag
+				clr_country_flag = world_history_text_flag
+			}
+			global_history_button_click = {
+				set_country_flag = world_history_text_flag
+				clr_country_flag = country_context_text_flag
+				clr_country_flag = country_history_text_2_flag
+				clr_country_flag = country_history_text_flag
+			}
+			close_button_click = {
+				clr_country_flag = open_lore_tab_button_flag
+			}
+			prev_button_click = {
+				set_country_flag = country_history_text_flag
+				clr_country_flag = country_history_text_2_flag
+			}
+			next_button_click = {
+				set_country_flag = country_history_text_2_flag
+				clr_country_flag = country_history_text_flag
+			}
+		}
+	}
+}

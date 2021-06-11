@@ -1,0 +1,5 @@
+#Fire Lore GUI
+fire_startup_lore_effects = {
+	set_country_flag = open_lore_tab_button_flag
+	set_country_flag = country_context_text_flag
+}

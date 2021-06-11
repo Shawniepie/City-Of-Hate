@@ -1,0 +1,38 @@
+spriteTypes = {
+	
+	spriteType = { 
+		 name = "GFX_lore_tab_button"
+		textureFile = "gfx/interface/lore_tab_button.dds" 
+		noOfFrames = 1
+	}
+	
+	spriteType = { 
+		 name = "GFX_lore_tab_bg"
+		textureFile = "gfx/interface/lore_tab_bg.dds" 
+		noOfFrames = 1
+	}
+	
+	spriteType = { 
+		 name = "GFX_large_button_generic"
+		textureFile = "gfx/interface/large_button_generic.dds" 
+		noOfFrames = 1
+	}
+	
+	spriteType = { 
+		 name = "GFX_lore_context_button"
+		textureFile = "gfx/interface/lore_context_button.dds" 
+		noOfFrames = 1
+	}
+	
+	spriteType = { 
+		 name = "GFX_lore_country_history_button"
+		textureFile = "gfx/interface/lore_country_history_button.dds" 
+		noOfFrames = 1
+	}
+	
+	spriteType = { 
+		 name = "GFX_lore_global_history_button"
+		textureFile = "gfx/interface/lore_global_history_button.dds" 
+		noOfFrames = 1
+	}
+}

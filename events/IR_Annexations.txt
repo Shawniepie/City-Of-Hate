@@ -8725,8 +8725,11 @@ country_event = { #Conquest of Lirothlind
 	}
 
 	trigger = {
-		NOT = {
-			original_tag = LIR
+		OR = {
+			NOT = {
+				original_tag = LIR
+			}
+			tag = LEX
 		}
 		OR = {
 			AND = {
@@ -8755,6 +8758,7 @@ country_event = { #Conquest of Lirothlind
 		trigger = {
 			NOT = {
 				OR = {
+					tag = LEX
 					tag = UNG
 					is_subject_of = UNG
 				}
@@ -8791,7 +8795,13 @@ country_event = { #Conquest of Lirothlind
 	
 	option = { # Annex
 		name = annex.33.b
-
+		
+		trigger = {
+			NOT = {
+				tag = LEX
+			}
+		}
+		
 		ai_chance = {
 			factor = 50
 			modifier = {
@@ -8864,6 +8874,62 @@ country_event = { #Conquest of Lirothlind
 				autonomy_state = autonomy_IR_freiprinztum
 			}
 		}
+	}
+	
+	option = {#Reclamation by the LEX
+		name = annex.33.e
+		trigger = {
+			tag = LEX
+		}
+		
+		ai_chance = {
+			factor = 100
+		}
+		
+		#hidden_effect = {
+			every_state = {
+				limit = {
+					is_core_of = LIR
+					is_controlled_by = ROOT
+					NOT = {
+						is_core_of = ROOT
+						is_claimed_by = ROOT
+					}
+				}
+				LIR = {
+					transfer_state = PREV
+				}
+			}
+			
+			every_state = {
+				limit = {
+					is_core_of = LEX
+				}
+				remove_core_of = LEX
+			}
+			
+			every_state = {
+				limit = {
+					is_claimed_by = LEX
+				}
+				remove_claim_by = LEX
+			}
+				
+			LIR = {
+				transfer_state = 393
+				transfer_state = 394
+				transfer_state = 395
+			}
+			puppet = LIR
+		
+			LIR = {
+				annex_country = {
+					target = LEX
+					transfer_troops = yes
+				}
+				change_tag_from = LEX
+			}
+		#}
 	}
 }
 

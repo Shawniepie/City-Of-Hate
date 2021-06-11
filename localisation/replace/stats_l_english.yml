@@ -1,0 +1,16 @@
+﻿l_english:
+ STAT_ARMY_HARDNESS:0 "Cavalry Ratio: "
+ STAT_ARMY_HARDNESS_DESC:0 "§T§HCavalry Ratio§! represents how much of your §HDivision§! is made up of cavalry or other mounted troops.\n\nWhen attacked, a Division adds together all Standard Attacks and Pike Attacks. A Division with high §HCavalry Ratio§! will suffer fewer §HStandard Attacks§! and more §HPike Attacks§! - and vice versa.§!"
+ STAT_ARMY_SOFT_ATTACK:0 "Standard attack: "
+ STAT_ARMY_SOFT_ATTACK_DESC:0 "How many attacks the unit can make versus enemies with low cavalry ratio."
+ STAT_ARMY_HARD_ATTACK:0 "Pike attack: "
+ STAT_ARMY_HARD_ATTACK_DESC:0 "How many attacks the unit can make versus enemies with high cavalry ratio."
+ STAT_ARMY_FUEL_CONSUMPTION:0 "Rations allotted: "
+ STAT_ARMY_FUEL_CONSUMPTION_DESC:0 "How many rations this unit consumes daily."
+ STAT_ARMY_FUEL_CAPACITY:0 "Ration Capacity: "
+ STAT_ARMY_FUEL_CAPACITY_DESC:0 "How many rations this unit can bring with it. Higher food capacity means that the unit will be able to operate at full capacity longer when it lacks rations."
+ 
+ STAT_COMMON_FUEL_CONSUMPTION:0 "Rations allotted: "
+ STAT_COMMON_FUEL_CONSUMPTION_DESC:0 "How many rations this unit consumes while it is operating. Air and Sea units will consume rations while on active missions or during training. Land units will consume rations in idle as well, but the combat, movement or training will further increase the consumption."
+ STAT_COMMON_FUEL_CONSUMPTION_FACTOR:0 "Rations allotted: "
+ STAT_COMMON_FUEL_CONSUMPTION_FACTOR_DESC:0 "How many rations this unit consumes while it is operating. Air and Sea units will consume rations while on active missions or during training. Land units will consume rations in idle as well, but the combat, movement or training will further increase the consumption."

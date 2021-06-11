@@ -13,12 +13,13 @@ guiTypes = {
 			quadTextureSprite = "GFX_steel_road_button"
 			position = {
 				x = 787
-				y = 780
+				y = 720
 			}
 			pdx_tooltip = GUI_steel_road_button_tt
 			pdx_tooltip_delayed = GUI_steel_road_button_tt_delayed
 			Orientation = UPPER_RIGHT
 			clicksound = ui_menu_over
+			shortcut = "s"
 		}
 	}
 	
@@ -79,7 +80,7 @@ guiTypes = {
 
 			verticalScrollbar = "right_vertical_slider"
 
-			# background is necesarry for scrollbars to work
+			# background is necessary for scrollbars to work
 			background = {
 				name = "Background"
 				quadTextureSprite = "GFX_tiled_window_1b_thin_border"

@@ -11,6 +11,21 @@ spriteTypes = {
 	}
 	
 	spriteType = {
+		name = "GFX_report_event_worldmap"
+		texturefile = "gfx/event_pictures/report_event_worldmap.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_kel"
+		texturefile = "gfx/event_pictures/report_event_kel.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_ord_banners"
+		texturefile = "gfx/event_pictures/report_event_ord_banners.dds"
+	}
+	
+	spriteType = {
 		name = "GFX_report_event_ung_civil_warning"
 		texturefile = "gfx/event_pictures/report_event_ung_civil_warning.dds"
 	}

@@ -1,12 +1,4 @@
--Rebalanced archers
--Tweaked cavalry side of the tribal land warfare tech tree
--Added medieval land warfare tech tree (WIP)
--Moved forges to the Land Warfare branch
--Fixed Lirothlind's Coronation of King Ansoudin not firing
--Fixed the Arkanisturm's Archmage Elections not firing
--Fixed some Stahlhof localization
--UNG focus for IRI marriage should now work allowing for them to ally them eventually
--SNF AI should prioritise things more correctly 
--ORD self-sufficient gives an 15% increased rations gain now
--FPT_declare_neutrality should force the fraiprinzt to leave any faction if they are part of one.
--VRG upon forming should now (hopefully) rejoin their active wars and factions
+-Told the AI that it should probably build farms if its armies are starving in the field
+-Added a shortcut key to the Steel Road tab
+-Added a GUI that explains the lore of whatever country you're playing as - in brief and in full - plus the world as a whole
+-Did some under-the-hood optimizing

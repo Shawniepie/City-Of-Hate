@@ -12,6 +12,18 @@
 	#	}
 	#}
 	
+	#Fires loredump events at the start of the game
+	on_startup = {
+		effect = {
+			every_country = {
+				limit = {
+					is_ai = no
+				}
+				fire_startup_lore_effects = yes
+			}
+		}
+	}
+	
 	#Sets fertility
 	on_startup = {
 		effect = {

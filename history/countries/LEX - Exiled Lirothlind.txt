@@ -1,0 +1,132 @@
+﻿capital = 394
+
+set_oob = "empty"
+
+
+set_technology = {
+	implements_war = 1
+	tribal_warbands = 1
+	sparring_fields = 1
+	war_artisans = 1
+	advanced_leatherworking = 1
+	gambesons = 1
+	brigandines = 1
+	alloy_creation = 1
+	steel_working = 1
+	fullered_blades = 1
+	peasant_levy = 1
+	mail_hauberks = 1
+	improved_woodworking = 1
+	recurve_bow = 1
+	broadhead_arrows = 1
+	horseback_riding = 1
+	mounted_warriors = 1
+	saddles = 1
+	stirrups = 1
+	cavalry_lances = 1
+	flanking_tactics = 1
+	skirmish_tactics = 1
+	scouting_parties = 1
+	astrolabe = 1
+	compass = 1
+	cartography = 1
+}
+
+1939.1.1 = {
+}
+
+set_politics = {
+	ruling_party = theocrat
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	monarchy_absolute = 12
+
+	monarchy_constitutional = 32
+
+	republic_peasant = 1
+
+	republic_aristocrat = 3
+
+	republic_merchant = 2
+
+	theocrat = 48
+
+	puritan = 2
+}
+
+add_ideas = {
+	elf_country
+	chivraism_religion
+}
+
+add_opinion_modifier = {
+	target = RMT
+	modifier = bitter_rivals
+}
+
+create_country_leader = {
+	name = "Jean-Philippe Ansoudin"
+	desc = "politics_LIR_ansoudin_desc"
+	picture = "gfx/leaders/LIR/Portrait_LIR_Ansoudin.dds"
+	ideology = monarchy_constitutional_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Robert Beaumanoir"
+	desc = "politics_LIR_beaumanoir_desc"
+	picture = "gfx/leaders/LIR/Portrait_LIR_Beaumanoir.dds"
+	ideology = republic_peasant_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Étienne Ancel"
+	desc = "politics_LIR_ancel_desc"
+	picture = "gfx/leaders/LIR/Portrait_LIR_Ancel.dds"
+	ideology = puritan_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Jean-Philippe Ansoudin"
+	desc = "politics_LIR_ansoudin_desc"
+	picture = "gfx/leaders/LIR/Portrait_LIR_Ansoudin.dds"
+	ideology = monarchy_absolute_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Charlène Morel"
+	desc = "politics_LIR_morel_desc"
+	picture = "gfx/leaders/LIR/Portrait_LIR_Morel.dds"
+	ideology = theocrat_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Jean-Philippe Ansoudin"
+	desc = "politics_LIR_ansoudin_desc"
+	picture = "gfx/leaders/LIR/Portrait_LIR_Ansoudin.dds"
+	ideology = republic_aristocrat_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Lucile Bachelot"
+	desc = "politics_LIR_bachelot_desc"
+	picture = "gfx/leaders/LIR/Portrait_LIR_Bachelot.dds"
+	ideology = republic_merchant_ideology
+	traits = {
+	}
+}

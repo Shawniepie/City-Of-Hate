@@ -54,8 +54,9 @@ very_infertile_land = {
 
 ongoing_border_conflict = {
     icon = GFX_modifier_ongoing_conflict
-    army_org_regain = -15
-    army_speed_factor = -15
+    local_org_regain = -1
+    army_speed_factor_for_controller = -1
+	disable_strategic_redeployment = 1
 }
 
 #civilian_food_consumption = { #Need to fix later

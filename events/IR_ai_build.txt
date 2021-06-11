@@ -95,3 +95,172 @@ country_event = {#Build Forges
 		}
 	}
 }
+
+country_event = {#Build Farms - Prioritize
+	id = ai_build.4
+	
+	hidden = yes
+	
+	trigger = {
+		is_ai = yes
+		any_controlled_state = {
+			free_building_slots = {
+				building = farm
+				size > 1
+				include_locked = no
+			}
+		}
+		check_variable = {
+			var = fuel_k
+			value = 1
+			compare = less_than
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	option = {
+		random_owned_controlled_state = {
+			limit = {
+				free_building_slots = {
+					building = farm
+					size > 1
+					include_locked = no
+				}
+			}
+			add_building_construction = {
+				type = farm
+				level = 1
+				instant_build = no
+			}
+		}
+		random_owned_controlled_state = {
+			limit = {
+				free_building_slots = {
+					building = farm
+					size > 1
+					include_locked = no
+				}
+			}
+			add_building_construction = {
+				type = farm
+				level = 1
+				instant_build = no
+			}
+		}
+		random_owned_controlled_state = {
+			limit = {
+				free_building_slots = {
+					building = farm
+					size > 1
+					include_locked = no
+				}
+			}
+			add_building_construction = {
+				type = farm
+				level = 1
+				instant_build = no
+			}
+		}
+		random_owned_controlled_state = {
+			limit = {
+				free_building_slots = {
+					building = farm
+					size > 1
+					include_locked = no
+				}
+			}
+			add_building_construction = {
+				type = farm
+				level = 1
+				instant_build = no
+			}
+		}
+		random_owned_controlled_state = {
+			limit = {
+				free_building_slots = {
+					building = farm
+					size > 1
+					include_locked = no
+				}
+			}
+			add_building_construction = {
+				type = farm
+				level = 1
+				instant_build = no
+			}
+		}
+		random_owned_controlled_state = {
+			limit = {
+				free_building_slots = {
+					building = farm
+					size > 1
+					include_locked = no
+				}
+			}
+			add_building_construction = {
+				type = farm
+				level = 1
+				instant_build = no
+			}
+		}
+		random_owned_controlled_state = {
+			limit = {
+				free_building_slots = {
+					building = farm
+					size > 1
+					include_locked = no
+				}
+			}
+			add_building_construction = {
+				type = farm
+				level = 1
+				instant_build = no
+			}
+		}
+		random_owned_controlled_state = {
+			limit = {
+				free_building_slots = {
+					building = farm
+					size > 1
+					include_locked = no
+				}
+			}
+			add_building_construction = {
+				type = farm
+				level = 1
+				instant_build = no
+			}
+		}
+		random_owned_controlled_state = {
+			limit = {
+				free_building_slots = {
+					building = farm
+					size > 1
+					include_locked = no
+				}
+			}
+			add_building_construction = {
+				type = farm
+				level = 1
+				instant_build = no
+			}
+		}
+		random_owned_controlled_state = {
+			limit = {
+				free_building_slots = {
+					building = farm
+					size > 1
+					include_locked = no
+				}
+			}
+			add_building_construction = {
+				type = farm
+				level = 1
+				instant_build = no
+			}
+		}
+	}
+}

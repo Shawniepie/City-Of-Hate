@@ -261,6 +261,11 @@ LIR = {
 	color_ui = rgb { 74 250 256 }
 }
 
+LEX = {
+	color = rgb { 70 247 253 }
+	color_ui = rgb { 77 254 256 }
+}
+
 MER = {
 	color = rgb { 0 250 144 }
 	color_ui = rgb { 7 255 150 }

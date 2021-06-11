@@ -1,0 +1,119 @@
+defined_text = { #Sets which text is supposed to show
+	name = GetCorrectLoreText
+	text = {
+		trigger = {
+			has_country_flag = country_context_text_flag
+		}
+		localization_key = [GetCountryContext]
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_country_flag = country_history_text_flag
+				has_country_flag = country_history_text_2_flag
+			}
+		}
+		localization_key = [GetCountryHistory]
+	}
+	text = {
+		trigger = {
+			has_country_flag = world_history_text_flag
+		}
+		localization_key = world_lore
+	}
+}
+
+defined_text = { #Sets which text header is supposed to show
+	name = GetCorrectLoreHeader
+	text = {
+		trigger = {
+			has_country_flag = country_context_text_flag
+		}
+		localization_key = "Historical Summary"
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_country_flag = country_history_text_flag
+				has_country_flag = country_history_text_2_flag
+			}
+		}
+		localization_key = "The History of [Root.GetName]"
+	}
+	text = {
+		trigger = {
+			has_country_flag = world_history_text_flag
+		}
+		localization_key = "The History of the World"
+	}
+}
+
+defined_text = { #Sets which text title is supposed to show
+	name = GetCorrectLoreTitle
+	text = {
+		trigger = {
+			has_country_flag = world_history_text_flag
+		}
+		localization_key = "Tharassian, the Plane Fluctuant"
+	}
+	text = {
+		trigger = {
+			original_tag = ORD
+			has_country_flag = country_context_text_flag
+		}
+		localization_key = "The Betrayed Land"
+	}
+	text = {
+		trigger = {
+			original_tag = ORD
+			OR = {
+				has_country_flag = country_history_text_flag
+				has_country_flag = country_history_text_2_flag
+			}
+		}
+		localization_key = "The New Elven Homeland"
+	}
+}
+
+
+defined_text = { # Country Lore
+    name = GetCountryHistory
+    text = {
+        trigger = {
+            original_tag = ORD
+			has_country_flag = country_history_text_flag
+        }
+        localization_key = ORD_lore
+    }
+	text = {
+		trigger = {
+			original_tag = ORD
+			has_country_flag = country_history_text_2_flag
+		}
+		localization_key = ORD_lore_2
+	}
+    text = {
+        trigger = {
+            original_tag = UNG
+        }
+        localization_key = UNG_lore
+    }
+}
+
+defined_text = { # Country Historical Context
+    name = GetCountryContext
+    text = {
+        trigger = {
+            original_tag = ORD
+        }
+        localization_key = ORD_context
+    }
+    text = {
+        trigger = {
+            original_tag = UNG
+        }
+        localization_key = UNG_context
+    }
+}
+
+#Don't need world history here since that's universal
